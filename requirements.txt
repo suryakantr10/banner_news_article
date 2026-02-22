@@ -1,0 +1,4 @@
+feedparser
+pandas
+python-dateutil
+supabase

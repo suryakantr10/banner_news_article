@@ -1,0 +1,43 @@
+name: Daily News Update
+
+# Runs every day at 09:00 UTC
+# To change the time, modify the cron schedule below (format: minute hour day month weekday)
+# Example: "0 14 * * *" = 2:00 PM UTC, "0 9 * * 1-5" = 9:00 AM UTC on weekdays only
+on:
+  schedule:
+    - cron: '0 9 * * *'  # 09:00 UTC daily
+  workflow_dispatch:  # Allows manual triggering from GitHub Actions tab
+
+permissions:
+  contents: write  # Required to commit and push files
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      
+      - name: Install dependencies
+        run: |
+          pip install feedparser pandas python-dateutil
+      
+      - name: Run news fetcher
+        run: python fetch_store_news.py
+      
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add latest_news.json
+          git add store_open_close_news_*.csv || true
+          git diff --staged --quiet || git commit -m "Auto-update: Daily news fetch $(date +'%Y-%m-%d')"
+          git push

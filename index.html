@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store News Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            min-height: 100vh;
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .badge-opening {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            box-shadow: 0 4px 14px 0 rgba(16, 185, 129, 0.3);
+        }
+        
+        .badge-closing {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            box-shadow: 0 4px 14px 0 rgba(239, 68, 68, 0.3);
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .pulse-dot {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .loading-spinner {
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-top: 3px solid #3b82f6;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .analyst-section {
+            scroll-margin-top: 100px;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            ring: 2px;
+            ring-color: #3b82f6;
+        }
+        
+        .stats-card {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="text-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-slate-900/80 backdrop-blur-md border-b border-slate-700/50 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-newspaper text-blue-400 text-2xl"></i>
+                    <h1 class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                        Store News Dashboard
+                    </h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="text-sm text-gray-400 hidden sm:inline-flex items-center">
+                        <span class="pulse-dot w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                        Auto-updated daily
+                    </span>
+                    <button onclick="refreshData()" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors flex items-center space-x-2">
+                        <i class="fas fa-sync-alt"></i>
+                        <span class="hidden sm:inline">Refresh</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="text-center mb-8 fade-in">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Retail Store News Tracker
+            </h2>
+            <p class="text-gray-400 text-lg mb-6">
+                Real-time tracking of store openings and closings across USA & Canada
+            </p>
+            <div id="lastUpdated" class="inline-flex items-center space-x-2 px-4 py-2 bg-slate-800/50 rounded-lg border border-slate-700">
+                <i class="fas fa-clock text-blue-400"></i>
+                <span class="text-sm">Last updated: <span id="updateDate" class="font-semibold text-blue-400">Loading...</span></span>
+            </div>
+        </div>
+
+        <!-- Stats Cards -->
+        <div id="statsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 fade-in" style="display: none;">
+            <div class="stats-card rounded-xl p-6 border border-slate-700/50">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-gray-400 text-sm mb-1">Total Articles</p>
+                        <p class="text-3xl font-bold" id="totalArticles">0</p>
+                    </div>
+                    <i class="fas fa-file-alt text-4xl text-blue-400 opacity-50"></i>
+                </div>
+            </div>
+            <div class="stats-card rounded-xl p-6 border border-slate-700/50">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-gray-400 text-sm mb-1">Openings</p>
+                        <p class="text-3xl font-bold text-green-400" id="totalOpenings">0</p>
+                    </div>
+                    <i class="fas fa-arrow-up text-4xl text-green-400 opacity-50"></i>
+                </div>
+            </div>
+            <div class="stats-card rounded-xl p-6 border border-slate-700/50">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-gray-400 text-sm mb-1">Closings</p>
+                        <p class="text-3xl font-bold text-red-400" id="totalClosings">0</p>
+                    </div>
+                    <i class="fas fa-arrow-down text-4xl text-red-400 opacity-50"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search and Filter -->
+        <div class="mb-6 fade-in">
+            <div class="flex flex-col sm:flex-row gap-4">
+                <div class="flex-1 relative">
+                    <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Search by store, analyst, or title..." 
+                        class="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 search-input transition-colors"
+                        oninput="filterArticles()"
+                    >
+                </div>
+                <select 
+                    id="typeFilter" 
+                    onchange="filterArticles()"
+                    class="px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white focus:border-blue-500 focus:outline-none"
+                >
+                    <option value="all">All Types</option>
+                    <option value="Opening">Opening</option>
+                    <option value="Closing">Closing</option>
+                </select>
+                <select 
+                    id="analystFilter" 
+                    onchange="filterArticles()"
+                    class="px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white focus:border-blue-500 focus:outline-none"
+                >
+                    <option value="all">All Analysts</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Loading State -->
+        <div id="loadingState" class="text-center py-20">
+            <div class="loading-spinner mx-auto mb-4"></div>
+            <p class="text-gray-400">Loading news data...</p>
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="text-center py-20 hidden">
+            <i class="fas fa-inbox text-6xl text-gray-600 mb-4"></i>
+            <h3 class="text-2xl font-semibold mb-2 text-gray-300">No news found</h3>
+            <p class="text-gray-500">No recent store opening or closing news in the last 2 days.</p>
+        </div>
+
+        <!-- Articles Container -->
+        <div id="articlesContainer" class="hidden">
+            <!-- Articles will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-16 py-8 border-t border-slate-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400 text-sm">
+                Built for my analysts • Data from Google News RSS
+            </p>
+            <p class="text-gray-500 text-xs mt-2">
+                <i class="fas fa-code"></i> Powered by GitHub Actions & Pages
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════════════════════════════
+        // REPLACE THIS URL WITH YOUR ACTUAL GITHUB RAW JSON URL
+        // Format: https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/latest_news.json
+        // Example: https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/latest_news.json
+        // ═══════════════════════════════════════════════════════════════
+        const JSON_URL = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/latest_news.json';
+        
+        let allArticles = [];
+        let filteredArticles = [];
+
+        // Load data on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            loadData();
+        });
+
+        async function loadData() {
+            try {
+                document.getElementById('loadingState').classList.remove('hidden');
+                document.getElementById('articlesContainer').classList.add('hidden');
+                document.getElementById('emptyState').classList.add('hidden');
+                document.getElementById('statsContainer').style.display = 'none';
+
+                const response = await fetch(JSON_URL + '?t=' + Date.now());
+                if (!response.ok) throw new Error('Failed to fetch data');
+                
+                const data = await response.json();
+                
+                // Update last updated date
+                document.getElementById('updateDate').textContent = data.last_updated || 'Unknown';
+                
+                // Flatten articles from all analysts
+                allArticles = [];
+                Object.keys(data.data || {}).forEach(analyst => {
+                    data.data[analyst].forEach(article => {
+                        allArticles.push({ ...article, Analyst: analyst });
+                    });
+                });
+
+                // Populate analyst filter
+                const analystFilter = document.getElementById('analystFilter');
+                const analysts = [...new Set(allArticles.map(a => a.Analyst))].sort();
+                analystFilter.innerHTML = '<option value="all">All Analysts</option>';
+                analysts.forEach(analyst => {
+                    const option = document.createElement('option');
+                    option.value = analyst;
+                    option.textContent = analyst;
+                    analystFilter.appendChild(option);
+                });
+
+                // Update stats
+                updateStats(allArticles);
+
+                // Render articles
+                filteredArticles = allArticles;
+                renderArticles();
+
+                document.getElementById('loadingState').classList.add('hidden');
+            } catch (error) {
+                console.error('Error loading data:', error);
+                document.getElementById('loadingState').classList.add('hidden');
+                document.getElementById('emptyState').classList.remove('hidden');
+                document.getElementById('updateDate').textContent = 'Error loading data';
+            }
+        }
+
+        function updateStats(articles) {
+            const total = articles.length;
+            const openings = articles.filter(a => a.Type === 'Opening').length;
+            const closings = articles.filter(a => a.Type === 'Closing').length;
+
+            document.getElementById('totalArticles').textContent = total;
+            document.getElementById('totalOpenings').textContent = openings;
+            document.getElementById('totalClosings').textContent = closings;
+            document.getElementById('statsContainer').style.display = 'grid';
+        }
+
+        function filterArticles() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const typeFilter = document.getElementById('typeFilter').value;
+            const analystFilter = document.getElementById('analystFilter').value;
+
+            filteredArticles = allArticles.filter(article => {
+                const matchesSearch = !searchTerm || 
+                    article.Store.toLowerCase().includes(searchTerm) ||
+                    article.Analyst.toLowerCase().includes(searchTerm) ||
+                    article.Title.toLowerCase().includes(searchTerm) ||
+                    (article.Summary && article.Summary.toLowerCase().includes(searchTerm));
+                
+                const matchesType = typeFilter === 'all' || article.Type === typeFilter;
+                const matchesAnalyst = analystFilter === 'all' || article.Analyst === analystFilter;
+
+                return matchesSearch && matchesType && matchesAnalyst;
+            });
+
+            updateStats(filteredArticles);
+            renderArticles();
+        }
+
+        function renderArticles() {
+            const container = document.getElementById('articlesContainer');
+            
+            if (filteredArticles.length === 0) {
+                container.classList.add('hidden');
+                document.getElementById('emptyState').classList.remove('hidden');
+                return;
+            }
+
+            document.getElementById('emptyState').classList.add('hidden');
+            container.classList.remove('hidden');
+            container.innerHTML = '';
+
+            // Group by analyst
+            const groupedByAnalyst = {};
+            filteredArticles.forEach(article => {
+                if (!groupedByAnalyst[article.Analyst]) {
+                    groupedByAnalyst[article.Analyst] = [];
+                }
+                groupedByAnalyst[article.Analyst].push(article);
+            });
+
+            // Render each analyst section
+            Object.keys(groupedByAnalyst).sort().forEach(analyst => {
+                const articles = groupedByAnalyst[analyst];
+                
+                const section = document.createElement('div');
+                section.className = 'analyst-section mb-12 fade-in';
+                section.id = `analyst-${analyst.replace(/\s+/g, '-')}`;
+                
+                section.innerHTML = `
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-2xl font-bold text-white flex items-center space-x-3">
+                            <i class="fas fa-user-tie text-blue-400"></i>
+                            <span>${analyst}</span>
+                            <span class="text-sm font-normal text-gray-400 bg-slate-800 px-3 py-1 rounded-full">
+                                ${articles.length} article${articles.length !== 1 ? 's' : ''}
+                            </span>
+                        </h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        ${articles.map(article => createArticleCard(article)).join('')}
+                    </div>
+                `;
+                
+                container.appendChild(section);
+            });
+        }
+
+        function createArticleCard(article) {
+            const badgeClass = article.Type === 'Opening' ? 'badge-opening' : 'badge-closing';
+            const badgeIcon = article.Type === 'Opening' ? 'fa-arrow-up' : 'fa-arrow-down';
+            const summary = article.Summary || 'No summary available';
+            const truncatedSummary = summary.length > 180 ? summary.substring(0, 180) + '...' : summary;
+            
+            // Format published date
+            let publishedDate = article.Published || 'Date not available';
+            try {
+                const date = new Date(publishedDate);
+                if (!isNaN(date.getTime())) {
+                    publishedDate = date.toLocaleDateString('en-US', { 
+                        year: 'numeric', 
+                        month: 'short', 
+                        day: 'numeric' 
+                    });
+                }
+            } catch (e) {
+                // Keep original if parsing fails
+            }
+
+            return `
+                <div class="card-hover bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50">
+                    <div class="flex items-start justify-between mb-3">
+                        <span class="${badgeClass} px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center space-x-1">
+                            <i class="fas ${badgeIcon}"></i>
+                            <span>${article.Type}</span>
+                        </span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 text-white">${escapeHtml(article.Store)}</h3>
+                    <a 
+                        href="${escapeHtml(article.Link)}" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="text-blue-400 hover:text-blue-300 font-medium mb-3 block line-clamp-2"
+                    >
+                        ${escapeHtml(article.Title)}
+                        <i class="fas fa-external-link-alt text-xs ml-1"></i>
+                    </a>
+                    <div class="flex items-center text-gray-400 text-sm mb-3">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        <span>${escapeHtml(publishedDate)}</span>
+                    </div>
+                    <p class="text-gray-300 text-sm line-clamp-3">${escapeHtml(truncatedSummary)}</p>
+                </div>
+            `;
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function refreshData() {
+            const btn = event.target.closest('button');
+            const icon = btn.querySelector('i');
+            icon.classList.add('fa-spin');
+            loadData().finally(() => {
+                setTimeout(() => icon.classList.remove('fa-spin'), 500);
+            });
+        }
+    </script>
+</body>
+</html>
