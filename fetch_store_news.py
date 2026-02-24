@@ -192,6 +192,7 @@ else:
 
 # ────────────────────────────────────────────────
 # Always create latest_news.json (even if no news found)
+# Also create a date-stamped archive JSON (latest_news_YYYY-MM-DD.json)
 # ────────────────────────────────────────────────
 today_str = date.today().strftime("%Y-%m-%d")
 
@@ -205,8 +206,14 @@ json_data = {
 for analyst, items in sorted(analyst_results.items()):
     json_data["data"][analyst] = items
 
-# Write JSON file
+# Write latest snapshot JSON file used by the dashboard
 with open('latest_news.json', 'w', encoding='utf-8') as f:
     json.dump(json_data, f, ensure_ascii=False, indent=2)
 
+# Write date-stamped archive JSON so historical days are preserved
+archive_filename = f"latest_news_{today_str}.json"
+with open(archive_filename, 'w', encoding='utf-8') as f:
+    json.dump(json_data, f, ensure_ascii=False, indent=2)
+
 print(f"\n✓ latest_news.json created/updated (last_updated: {today_str})")
+print(f"✓ {archive_filename} created as historical snapshot")

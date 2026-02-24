@@ -5,7 +5,7 @@ name: Daily News Update
 # Example: "0 14 * * *" = 2:00 PM UTC, "0 9 * * 1-5" = 9:00 AM UTC on weekdays only
 on:
   schedule:
-    - cron: '0 9 * * *'  # 09:00 UTC daily
+    - cron: '30 23 * * *'  # 5:00 IST daily
   workflow_dispatch:  # Allows manual triggering from GitHub Actions tab
 
 permissions:
@@ -38,6 +38,7 @@ jobs:
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add latest_news.json
+          git add latest_news_*.json || true
           git add store_open_close_news_*.csv || true
           git diff --staged --quiet || git commit -m "Auto-update: Daily news fetch $(date +'%Y-%m-%d')"
           git push
