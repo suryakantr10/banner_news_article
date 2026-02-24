@@ -7,6 +7,8 @@ from dateutil import parser as date_parser
 import pandas as pd
 from collections import defaultdict
 import json
+import re
+from html import unescape
 
 # ────────────────────────────────────────────────
 # Default fallback (only used if analysts.csv is missing)
@@ -57,8 +59,27 @@ else:
     analyst_map = {s: "Unassigned" for s in default_stores}
 
 # ────────────────────────────────────────────────
-# Helper functions (unchanged)
+# Helper functions
 # ────────────────────────────────────────────────
+_TAG_RE = re.compile(r"<[^>]+>")
+
+
+def clean_summary(summary: str) -> str:
+    """
+    Convert HTML summaries (e.g. <a href=\"...\">Title</a>) into plain text.
+    This keeps the text readable in CSV/JSON and on the dashboard.
+    """
+    if not summary:
+        return "No summary"
+    # Decode HTML entities first
+    text = unescape(str(summary))
+    # Strip HTML tags
+    text = _TAG_RE.sub("", text)
+    # Collapse extra whitespace
+    text = " ".join(text.split())
+    return text or "No summary"
+
+
 def is_recent(published_str, cutoff_date):
     if not published_str or published_str == 'Date not available':
         return False
@@ -108,11 +129,13 @@ def fetch_news_for_store(store, is_closure=False):
     for entry in feed.entries:
         published_str = entry.get('published', 'Date not available')
         if is_recent(published_str, cutoff_date):
+            raw_summary = entry.get('summary', 'No summary')
             results.append({
                 'title': entry.title,
                 'link': entry.link,
                 'published': published_str,
-                'summary': entry.get('summary', 'No summary'),
+                # Store a clean, plain-text summary (no HTML tags)
+                'summary': clean_summary(raw_summary),
                 'type': 'Closing' if is_closure else 'Opening'
             })
     
