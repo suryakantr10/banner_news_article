@@ -68,6 +68,15 @@
       {
         "Store": "Dick's Sporting Goods",
         "Analyst": "Ashwin Nair",
+        "Type": "Opening",
+        "Title": "New, 100,000-square-foot store coming to Valley River Center - The Register-Guard",
+        "Link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOY3Zpa1lmeEpaV1JDOC1MZ3RMOW81OXU1TzJPR0ZFNkxnblRhZkdncEFtQnJPdnhXaVlsS01kdE5Fc2h2WkdZNlBWYnZfWGp4UmpCbS0taXRBc3NEX2lWMVV5bzlpaHVfZTZxMkJ3SGRKY2s4QlNnMFB0LTVKM0F2NDJrSlYwcEdkMVlzdkF1R0lKYm5EZDdfVFdNTWRCQUZvNlhjRFlQTlhuSFROQmNRZGhFUQ?oc=5",
+        "Published": "Thu, 05 Mar 2026 00:19:00 GMT",
+        "Summary": "New, 100,000-square-foot store coming to Valley River Center The Register-Guard"
+      },
+      {
+        "Store": "Dick's Sporting Goods",
+        "Analyst": "Ashwin Nair",
         "Type": "Closing",
         "Title": "38-Year-Old Sporting Goods Giant Closing Stores - thestreet.com",
         "Link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNQmZDczhvaUxfZHpsYlhRMzFBY2lQR3pTM05uSEczTjM4RTd5dnVsSlU1NTFESGxfc0FpbkU4MXlYdVlTSW1pdHEwN3gtM1V3MmdmTEdua0FLUkhWUjIxYWhnWVo1U0o3c0pSaGlPdmpLcE9XLWdGN2ZXVnJKR2xPQ3R4WmtWMnpEVXFmcGhlSHFUWVduRFBoNnJVOU9sSklsWDlj?oc=5",
@@ -259,10 +268,19 @@
         "Store": "Neiman marcus",
         "Analyst": "Harsimranjeet Singh Ghelani",
         "Type": "Closing",
-        "Title": "Local Saks Fifth Avenue, Neiman Marcus Stores Closing - MyNewsLA.com",
-        "Link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOVWhsY1RDUjJUYmVOWkhXVGh5Sml5Q19NRURNcDM1X1FCcGhVZTU4a1Q3NDJUUTlnUGFDYXc0b0pvTDRycW1HMVZZN2RDeEVQYVNVX3ZsREpTUEVzd1hVNl9RMk0wUVQ5eVJzdUpVX25aV1lyeFB6elV6czl6ejRoTmItTzZlaW1nY0ZuVVVUUW1iMTBzQlNhUGx4T0ZHZ2FK?oc=5",
-        "Published": "Sat, 07 Mar 2026 19:42:04 GMT",
-        "Summary": "Local Saks Fifth Avenue, Neiman Marcus Stores Closing MyNewsLA.com"
+        "Title": "Saks Fifth Avenue closing in OC, Palm Desert, Neiman Marcus closing in Canoga Park - Los Angeles Daily News",
+        "Link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNZG1CcjNvSlNwVGRDenp4TGUyS044TjBaQ1RUUG9wSWRiMEE1YzFlREtPbFAyTU5EQzVqbXpMNkJBaXdURlBpdzdONjY1enk5b0pPWUtfYXNHdmtycXBHSU9neUg4aGt5cER3VlFsYUVUQjVvMVphYkRDNlpIVl93cVYtMUVCVDVRSW1mQjZZU1pfZnVJaW4xeGdxdFh4NXltRjBCM0pjLWw2WnZnaU5wQW1HTXJkeEVoNXc?oc=5",
+        "Published": "Sat, 07 Mar 2026 21:55:36 GMT",
+        "Summary": "Saks Fifth Avenue closing in OC, Palm Desert, Neiman Marcus closing in Canoga Park Los Angeles Daily News"
+      },
+      {
+        "Store": "Neiman marcus",
+        "Analyst": "Harsimranjeet Singh Ghelani",
+        "Type": "Closing",
+        "Title": "Saks Closing 15 More Stores by May—Here’s Where - inc.com",
+        "Link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQS1FQQ2VTOTZ5TUdId0FiU0hDYkZfZTdzVmVuM2FrRzZERXpBY0FwT1MzMHpkZnQzTWtZaGxPNGVPY3RKTTczbnozNF9Yc05VbncwR2wwM2E1MVJfd09IT2RxeElhVGtTaGdILXR6d3AzdktQeE9VdXBUVF9kODR6bVVmb1VyeHJMY1JxMngyNzBrZw?oc=5",
+        "Published": "Sat, 07 Mar 2026 20:11:36 GMT",
+        "Summary": "Saks Closing 15 More Stores by May—Here’s Where inc.com"
       },
       {
         "Store": "Neiman marcus",
@@ -430,6 +448,33 @@
         "Store": "Saks Fifth Avenue",
         "Analyst": "Harsimranjeet Singh Ghelani",
         "Type": "Closing",
+        "Title": "Major Luxury Department Store Chain To Shutter This IL Location - Patch",
+        "Link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNnVoQWYyR1Bab2xzWnhndFZUTHF4ZEdnV1RhN09YTC00RHBpTlNmVW4tM2ZmellTemV5Nm5aRVh5OTNHaUI1LURuYS0ta1hiOE0wX1hSQl9nU2lVSjlzNXR2alkyczJUYnRJcUxtcWJ6cHRuaG9wSkExM25XRzdKZl92VEJaNGRvWjFPTXcwXy0zQXlQ0gGwAUFVX3lxTE42cU9nc2xHZWZKWUlPSHp0M3B0R0NxQVFJMlktN3FvUG1LTmZUQUZlOXRuN1UzNlUyNkZwVFFJVmgwRmRxZFl3aFpTLWo5VnZ3YVJyRkM2R0FDRmdqZTVOakZvM1M1YzlSSHUwTlVjaGsxVVFKMGJDTHp4c25FVWludHQ4aUx6TURZTDFBSlFQTnYyU0N2c3JpOEc5eFdtNDM2ZE5sMHFrSWs5LUNELW05?oc=5",
+        "Published": "Sat, 07 Mar 2026 21:59:27 GMT",
+        "Summary": "Major Luxury Department Store Chain To Shutter This IL Location Patch"
+      },
+      {
+        "Store": "Saks Fifth Avenue",
+        "Analyst": "Harsimranjeet Singh Ghelani",
+        "Type": "Closing",
+        "Title": "Saks Fifth Avenue closing in OC, Palm Desert, Neiman Marcus closing in Canoga Park - Los Angeles Daily News",
+        "Link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNZG1CcjNvSlNwVGRDenp4TGUyS044TjBaQ1RUUG9wSWRiMEE1YzFlREtPbFAyTU5EQzVqbXpMNkJBaXdURlBpdzdONjY1enk5b0pPWUtfYXNHdmtycXBHSU9neUg4aGt5cER3VlFsYUVUQjVvMVphYkRDNlpIVl93cVYtMUVCVDVRSW1mQjZZU1pfZnVJaW4xeGdxdFh4NXltRjBCM0pjLWw2WnZnaU5wQW1HTXJkeEVoNXc?oc=5",
+        "Published": "Sat, 07 Mar 2026 21:55:36 GMT",
+        "Summary": "Saks Fifth Avenue closing in OC, Palm Desert, Neiman Marcus closing in Canoga Park Los Angeles Daily News"
+      },
+      {
+        "Store": "Saks Fifth Avenue",
+        "Analyst": "Harsimranjeet Singh Ghelani",
+        "Type": "Closing",
+        "Title": "Major Luxury Discount Retailer To Shutter 3 CA Stores In Latest Round Of Closures - Patch",
+        "Link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNbVB0WHBoSGMwcHRVNEIzbjROQnE0clRNUGotemN2UjNidXF0d2o0YjF1NnJGWWlVZnpNRE9vdWl4T0NXU0VicnMyTkdDbV8wY3RiZnRvYkh5SjQ3Skw1YS11VlFsYmh6cGNPNVJjMWxDa0pHekZ5RDB0RVlnbUhZQWZOS3dBLS1kNGNqRS1ybjVGRXhKa2JlanlHRWtPdEVXbmpiYzd1Nllqc3FXN1FiOdIBzgFBVV95cUxQemxLQm8tbkxlS0Ffd2JYUGdJVWNaVEp2UVQ5WkdTSDQyRUVXWHI3RkhnaER0a1A2TkhtTDROQzZndVBVLWZQN2FsV3pOa0hXaWxMc3NxOWNKS09vd3Z4QUNycEJsaFRnRmFqN21UTC12UzgtQTM5dUNHX2wyUkUtVEFKME9zcW1hWFdudWdDNWtrOTBrSGw0NW5sUmJ4MjlDRlNaVm9abGhPSXFLYjBVNkRiSlB4N0lFWWs4Tk8xVzVGYS12Q0lQZHpPaFY3Zw?oc=5",
+        "Published": "Sat, 07 Mar 2026 21:18:37 GMT",
+        "Summary": "Major Luxury Discount Retailer To Shutter 3 CA Stores In Latest Round Of Closures Patch"
+      },
+      {
+        "Store": "Saks Fifth Avenue",
+        "Analyst": "Harsimranjeet Singh Ghelani",
+        "Type": "Closing",
         "Title": "Saks Fifth Avenue on Palm Desert's El Paseo to close amid bankruptcy - The Desert Sun",
         "Link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPX09BUl9pNEYwdFNKVzJYbUNnS1ZTX1YtQURLOXFTdmZRcV83eUxDY3lWZk5NTDdwOHQxeUpVZUlhd1VsUEdlUWpxTmljemg2Skx4bmtJcXp5aWRPd0JwelVhRW9wUFp3UWtyRHlpZDYyb1BScEEtY0hKMnFZT3hMdDJqeGZRWUNnc1NKcnJzeGRCTUpiRFJ4UG5uS3VhTWF3aGhHZVpOcjB1TUdDQ2wzbTU0a0NJSDFnSWY1VURybTFTWmV5b0p1ZDJDYW90d3psNGpaNkJfRGdYUVc5bXlnQV9kOHBxeENfdElWUw?oc=5",
         "Published": "Sat, 07 Mar 2026 20:18:00 GMT",
@@ -441,7 +486,7 @@
         "Type": "Closing",
         "Title": "Saks Closing 15 More Stores by May—Here’s Where - inc.com",
         "Link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQS1FQQ2VTOTZ5TUdId0FiU0hDYkZfZTdzVmVuM2FrRzZERXpBY0FwT1MzMHpkZnQzTWtZaGxPNGVPY3RKTTczbnozNF9Yc05VbncwR2wwM2E1MVJfd09IT2RxeElhVGtTaGdILXR6d3AzdktQeE9VdXBUVF9kODR6bVVmb1VyeHJMY1JxMngyNzBrZw?oc=5",
-        "Published": "Sat, 07 Mar 2026 20:03:45 GMT",
+        "Published": "Sat, 07 Mar 2026 20:11:36 GMT",
         "Summary": "Saks Closing 15 More Stores by May—Here’s Where inc.com"
       },
       {
@@ -452,15 +497,6 @@
         "Link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQYXdBTGtUamlhWWd4ODZlc1VIVFYwU3pXeHhlWHlPUHlFX19CRW80ZlNvMExTOWthSmhYR2k0VU5GRTlZUUlvUmNBcnJQT0F0cFFwQzdCaW9lRFMtMzJldFVOY3UtVjdfQ1JoLUdFRHdGUi1Kb0ZQSlZQdm1jZW94XzYyYl9seWhoVnVF?oc=5",
         "Published": "Sat, 07 Mar 2026 19:42:15 GMT",
         "Summary": "Saks Fifth Avenue in Palm Desert Closing MyNewsLA.com"
-      },
-      {
-        "Store": "Saks Fifth Avenue",
-        "Analyst": "Harsimranjeet Singh Ghelani",
-        "Type": "Closing",
-        "Title": "Local Saks Fifth Avenue, Neiman Marcus Stores Closing - MyNewsLA.com",
-        "Link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOVWhsY1RDUjJUYmVOWkhXVGh5Sml5Q19NRURNcDM1X1FCcGhVZTU4a1Q3NDJUUTlnUGFDYXc0b0pvTDRycW1HMVZZN2RDeEVQYVNVX3ZsREpTUEVzd1hVNl9RMk0wUVQ5eVJzdUpVX25aV1lyeFB6elV6czl6ejRoTmItTzZlaW1nY0ZuVVVUUW1iMTBzQlNhUGx4T0ZHZ2FK?oc=5",
-        "Published": "Sat, 07 Mar 2026 19:42:04 GMT",
-        "Summary": "Local Saks Fifth Avenue, Neiman Marcus Stores Closing MyNewsLA.com"
       },
       {
         "Store": "Saks Fifth Avenue",
@@ -692,7 +728,7 @@
         "Analyst": "Harsimranjeet Singh Ghelani",
         "Type": "Closing",
         "Title": "Saks Fifth Avenue Is Shrinking to Half the Number of Stores in Bankruptcy - WSJ",
-        "Link": "https://news.google.com/rss/articles/CBMipwNBVV95cUxNS2NHZ21yb3dlR281bnNjaGc4dkZzQ3VDVEE4LU1EbkR1OG8tQlNxdVBNTVliRUpxTVEwSGdXcU9tM0JORDJzdUZDNVpzdXZGUkR2Vjh5RlAxXzBxakJzSFc3M2EyMHhLSGV1QVIyci1JYWwtWWMtNjItM0w5WHBxOXlXZTJfWXRsMThTWHlGZ0lJU3JvWlhidnBnY0MzdkVkT3ZRQlpJSlNjRC05T2ZWbjRqb2x2V0pyVEM1NUlLMjIwMFl3eFNiZmVTU2ROSGVNN21VMlNGa1pkQUNLV1EyeHhlQ200ckk5VXF2QVotdVlLQWFHbDZMb3A5Y3NXQWtpNDIyU28zS1RvY1RMLUhER2szU0hKbTNWdnRrWGIwUHZ3YXdJa0tFUFpJVTVhTTZfdXc2Zk1PelRVTXpHcC05amNjSlBmRTVrZ1hSZl9pa09JV2pCMmVtRFM0TEJ3UHBKaktVR2FWb0oyTWg0ZEhrWmRhSUhxdEFPOFBnTFZMS3FxbkRQZTJwS0xQVWZielNFRlZsQ0NXRW9VbURyem0wUjgyWHpGd1k?oc=5",
+        "Link": "https://news.google.com/rss/articles/CBMipwNBVV95cUxQY2ZNZG9lakI1WnBheVlZYVVBN3ItdW13ZjRwc3U4MHlKLUJZVHhFeFotV0dNRk5HdkMxWUpRaHlPdkh2eE9Zb2lxNnFMQmU2MGlKYWZFZ3EwMTZCRThGZDd4UDQ3U2dHQjlkRzJ0Ykk0b2xja3docXY5YnQzbU5La01KNk9SWlJkYjNZN3J3ZHNJSGkwV0tYcVpfaEZkR0xUNnNQcVhkNm9qRGpJODdaT1V0REhqLWVPOXhBdDZLODlTNGV6WTRYczBqcHFDc3BLMG13NkUtN0txTkYyank1Z18tN1ctMTZZX2JLdm93b21vXzROMkhPN01SdlhEU0otX3BnVm5VSnJFc0xxcHE3cUQzMWhNWHdKUTNCNDhUSXkwTHdPMjM1bzlyWmZ0MTQzbERlOGI0Q3hsYjc5SXpyeUdEREJLcUdFc1htdlpXeDFmdV9wbXEzSUpocXhJT0tybDJHU2IxT1FJN0RyTENfYmI3ZkFodmNGVkNHNzVVUnZ2M1B4Y0lYQVJhQ2h2ZjRCTllPQTFIR25JclMwSm9vVmxQekYyX2M?oc=5",
         "Published": "Fri, 06 Mar 2026 22:19:00 GMT",
         "Summary": "Saks Fifth Avenue Is Shrinking to Half the Number of Stores in Bankruptcy WSJ"
       },
@@ -890,7 +926,7 @@
         "Type": "Closing",
         "Title": "Kroger to Close 60 Locations. Here’s the List So Far - AOL.com",
         "Link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1nbjJ5RGxTTjdpc003czZWdy1iN1VSSTNONlNkcjhFeTlhQkJMQXhpdjRkRFZ5OFNmRXdlMHZyMzA4VGgtbmJoMWpTZnpHWlN0QklRYktkZmJZZ0lObzh1T0hCSFI1WldmTDlWMlhJOThmeU0?oc=5",
-        "Published": "Sat, 07 Mar 2026 20:55:20 GMT",
+        "Published": "Sat, 07 Mar 2026 21:54:01 GMT",
         "Summary": "Kroger to Close 60 Locations. Here’s the List So Far AOL.com"
       },
       {
@@ -1088,10 +1124,10 @@
         "Store": "Grocery Outlet",
         "Analyst": "Rishi Nagar",
         "Type": "Opening",
-        "Title": "Grocery Outlet closing 36 stores. Will Delaware be impacted? - Delawareonline.com",
+        "Title": "Grocery Outlet closing 36 stores. Will Delaware be impacted? - The News Journal",
         "Link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPUTFmalZnXy1xd2RzSWg4UDhtMGxsX29QVm1yd083dkx4amw3LU43LWFkQkJzUHZad1R2eVFFcHdSR2xKaEpyZktpNnU3Y2R4MlgyNXRPOTFzbDBCQlh4X3l3SFd5NWNucFh5NEZMc2t1MFB3TXQ0S2hyYTFLSXZ6d1FCUlZSZkl1emo2WVFtS3hfeXhSd2V1dTlTRWIyVDJWbDM2cXFQOVFNb09lQXk3RmE0Mkl5ZG1OdDlFa0Nxaw?oc=5",
         "Published": "Fri, 06 Mar 2026 10:41:00 GMT",
-        "Summary": "Grocery Outlet closing 36 stores. Will Delaware be impacted? Delawareonline.com"
+        "Summary": "Grocery Outlet closing 36 stores. Will Delaware be impacted? The News Journal"
       },
       {
         "Store": "Grocery Outlet",
@@ -1160,10 +1196,10 @@
         "Store": "Grocery Outlet",
         "Analyst": "Rishi Nagar",
         "Type": "Closing",
-        "Title": "Grocery Outlet plans store closures as part of 'optimization' plan - Chain Store Age",
-        "Link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNaUI4OGhuY0lhMU1fQlNrMXFqbklVajBHWVVsZk1sTWNsVWphc2NsNFAwVl9xbHBXdTlpNnhMc1hwbWY1aDZvM0xCNTdLUVFPVFB4dVN1aVdCRUdBdDJlUHhYMGZmMXhITkd5aVR0RVBkSXlKWFF5SXVkYXE3TWlydmpDUkZfd09GSVBiRg?oc=5",
+        "Title": "Grocery Outlet plans store closures, new openings as part of 'optimization' plan - Chain Store Age",
+        "Link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPejZOQVQ5TUhwYmhRTm8zeTc1ZXpCWDZIS3pyY011WlJ1YTdpdElNUFdwdlgyQmNlOHZ4VzVIZDNEWmpmUHNVWFRuekI3QkE3azlpZ2RHc3NYRlFrZXZZZkFPQWVNUl9iVV9aVXJhQndTM043dkVnOG5qNkV5aDdSc1lNTEpzcGxRQXUwT0tiWi0wa0h5U2RzSDZZNW1qdw?oc=5",
         "Published": "Thu, 05 Mar 2026 18:26:33 GMT",
-        "Summary": "Grocery Outlet plans store closures as part of 'optimization' plan Chain Store Age"
+        "Summary": "Grocery Outlet plans store closures, new openings as part of 'optimization' plan Chain Store Age"
       },
       {
         "Store": "Grocery Outlet",
@@ -1259,6 +1295,33 @@
         "Store": "Grocery Outlet",
         "Analyst": "Rishi Nagar",
         "Type": "Closing",
+        "Title": "Grocery Outlet Antioch store not one of 36 closing - Antioch Herald",
+        "Link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQN2RnXzU3ZklmTmR4UEpONG1uc2tJVVkyZ0xYN2d1bFF6QTRzNzE3TG40OU1YS3FDaEZJREtHMG9lNFRMNE5MdklGbEhxNmxCeGZRaWNBTElQM3lxSTV4SXFHbDVpS1BUV3poN1pxSnB4VW1UUXA3Y3d2X3pJelpjb1VMMi0wdGxFLVFYTHFR?oc=5",
+        "Published": "Sat, 07 Mar 2026 22:02:30 GMT",
+        "Summary": "Grocery Outlet Antioch store not one of 36 closing Antioch Herald"
+      },
+      {
+        "Store": "Grocery Outlet",
+        "Analyst": "Rishi Nagar",
+        "Type": "Closing",
+        "Title": "Grocery Outlet plans 36 store closures; see where - ABC27",
+        "Link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOY1plX293VWNLMkFYSVpFMU5ZbHBidUZHQmMwQlRPSEpBSTdKV3hkVzRGNkhBaHpDal9TcWxDZnFFc2hncTA3OVoxU0VETjV5N2p3SV9JQ1Q2cFphdjg1YkRlUmlQZG45WnAyYkZmX0VvXy01SVZBZjNaVXZwWVF6MjNKWHB3c3NuYUHSAY8BQVVfeXFMTXkyRUliZi1IYWtWYXNyQS1udHVRTDhBaEQycjNWREc3aFU2bVpjcHlWNEFSbVF4N2plN0RYRHM5RnBkTncwY0JsMkVTc2ZybkF4Q0s0RkN4cVZHWHRWVFNlTTVkS25NM04zOEJldGxmX1dfYUlfX3pTdmFGM29zNmNBTWVMZy1aN1B2M3pDRFE?oc=5",
+        "Published": "Sat, 07 Mar 2026 21:37:11 GMT",
+        "Summary": "Grocery Outlet plans 36 store closures; see where ABC27"
+      },
+      {
+        "Store": "Grocery Outlet",
+        "Analyst": "Rishi Nagar",
+        "Type": "Closing",
+        "Title": "Kroger to Close 60 Locations. Here’s the List So Far - AOL.com",
+        "Link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1nbjJ5RGxTTjdpc003czZWdy1iN1VSSTNONlNkcjhFeTlhQkJMQXhpdjRkRFZ5OFNmRXdlMHZyMzA4VGgtbmJoMWpTZnpHWlN0QklRYktkZmJZZ0lObzh1T0hCSFI1WldmTDlWMlhJOThmeU0?oc=5",
+        "Published": "Sat, 07 Mar 2026 19:55:03 GMT",
+        "Summary": "Kroger to Close 60 Locations. Here’s the List So Far AOL.com"
+      },
+      {
+        "Store": "Grocery Outlet",
+        "Analyst": "Rishi Nagar",
+        "Type": "Closing",
         "Title": "Grocery Outlet to close dozens of stores after overexpansion - AOL.com",
         "Link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOaG9SS0pOSlh3TzB5eDNuR3QyZnU2QWFyQVU5dXJHSEFxTlhyTlZQcGFIVDVsUEJjNUd1UHBDbERaV19BVUNTNGhKRThnM0RlVG1kWkM3M2tfZ2JkU2NnS2piRk9rdVE3Nk1mQVluOEtXc0J3WmxHZDhsa2dOMHh4dlhMWUo?oc=5",
         "Published": "Sat, 07 Mar 2026 11:30:12 GMT",
@@ -1286,15 +1349,6 @@
         "Store": "Grocery Outlet",
         "Analyst": "Rishi Nagar",
         "Type": "Closing",
-        "Title": "Discount Chain Grocery Outlet Closing Stores Across New Jersey - New Jersey 101.5",
-        "Link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5GNGl6V0hKcVNCVTk4ZHdhSWJmMUREVlJiZV83d05wa2FfMUJIajY3aU8tcTM2bnJlaG5MWGgxWlRkQjlaVmVDZk5hUng1alowRmswWms0OGdKeWRSMWo2YzhzNHc1VklibnZUdEZpWVM4dw?oc=5",
-        "Published": "Sat, 07 Mar 2026 11:00:35 GMT",
-        "Summary": "Discount Chain Grocery Outlet Closing Stores Across New Jersey New Jersey 101.5"
-      },
-      {
-        "Store": "Grocery Outlet",
-        "Analyst": "Rishi Nagar",
-        "Type": "Closing",
         "Title": "Grocery Outlet to close dozens of stores after overexpansion - Los Angeles Times - Los Angeles Times",
         "Link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOMUVwMm5OaVBiZFNEMkg2VnAyLXhhQU9YbkpTZFRlSXFzMHZTWm9zZ0hNYjJWU0tFd2F3ajNHcURHOGh1QWNmanBZZkVrVFo4am5JRGRMSVZJNENUc0ZoR3NFVkUwOGw4dFRhNDZ5aVlrZzVpSkZrRzhHVU8zMVpZRXNfZjJmZGQ3OWpyZTY5UWg5TTFFZzhHcmxremVJTGJhaGdrLVhMTHNKZ09PcUww?oc=5",
         "Published": "Sat, 07 Mar 2026 11:00:00 GMT",
@@ -1308,6 +1362,15 @@
         "Link": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNeWJnc1RoM25oV2JNUTR3RW0teUJSbzU4TW1LUWZwNUdsVW1kVk9ETG5yTlNhdHZqVl90RUlJTWFBVXd4SThKOU5GcGJaczRsVVFnS2N1dmxVNHhDbTdRQzJmcUVQR191ajQ3Q0Yta3FPX3F3U2daakY2WW1KTFo2RXFmYU9iczlZc1JNcGlhQlpxcmhYWFUwLVM4NEhZaVlBdjI4TU9hd1dYdlplV0o2RnAzMGNlMzZZeE1Ib3FldTcySWxyX01CVDc0LUNscEpOVlhsRElCMTFkVUFKSnVuMEJmNmdtLUZRLVhkQzhiTFZMa2hlbXJNVW5VdDUyRnpWSWJ4dTBkSVdoV3BHMmc2c2tn?oc=5",
         "Published": "Sat, 07 Mar 2026 08:46:23 GMT",
         "Summary": "Grocery Outlet outlines up to 33 new stores and $0.55 EPS target for 2026 as store closures and promotional investments reshape outlook MSN"
+      },
+      {
+        "Store": "Grocery Outlet",
+        "Analyst": "Rishi Nagar",
+        "Type": "Closing",
+        "Title": "Grocery Outlets in Pocatello and Idaho Falls to close - Local News 8",
+        "Link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPWDdqcWhzM3RDSTZ0UkNJR3JRb1hleHYzVVdhbzd5LVl5OVJhbS1POEowSzJZbTYxOEFLbi1LUGFOa1kyVm82ZjFFcFZ2VVVuRVd0ZzdWLVdEVi1zcnh0TE1DcWloam1KTlp1YmdxOWM4TFZJanVUMWhBZm1wRWRmRnlCUkwtTTBULWlQTWZ2azVMM3hOdF9QNg?oc=5",
+        "Published": "Sat, 07 Mar 2026 06:21:50 GMT",
+        "Summary": "Grocery Outlets in Pocatello and Idaho Falls to close Local News 8"
       },
       {
         "Store": "Grocery Outlet",
@@ -1574,6 +1637,15 @@
         "Store": "Grocery Outlet",
         "Analyst": "Rishi Nagar",
         "Type": "Closing",
+        "Title": "Discount Chain Grocery Outlet Closing Stores Across New Jersey - 94.3 The Point",
+        "Link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9BbHNXSHZNQ0ZxMDVtRU81RWRwTTZSak0ybDg3cE5vck5ZX3lUTkZ0d3Z4WHNYcEpqQ1l6OGJFRjJNdEs1QlExTlcwUnJWYXM1LUlTSnJQek05VkVIck1nZkh4azdzRXZHbTBB?oc=5",
+        "Published": "Fri, 06 Mar 2026 14:47:02 GMT",
+        "Summary": "Discount Chain Grocery Outlet Closing Stores Across New Jersey 94.3 The Point"
+      },
+      {
+        "Store": "Grocery Outlet",
+        "Analyst": "Rishi Nagar",
+        "Type": "Closing",
         "Title": "5 South Jersey Grocery Outlet Stores Closing Soon - WPG Talk Radio 95.5 FM",
         "Link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1IaE04SkhiaEVCanhQUEFJYU9SNGRVODRveEZZb0kwNl96OXo2YWtIZHdGWk1wUDR4WFJESThsNjRfdlZuLVFJOWljNm52S3hPNHZ6c2JfcEJWakpSUDJNY3FPbHB6VU4xQmxicDh3?oc=5",
         "Published": "Fri, 06 Mar 2026 14:35:39 GMT",
@@ -1664,10 +1736,10 @@
         "Store": "Grocery Outlet",
         "Analyst": "Rishi Nagar",
         "Type": "Closing",
-        "Title": "Grocery Outlet closing 36 stores. Will Delaware be impacted? - Delawareonline.com",
+        "Title": "Grocery Outlet closing 36 stores. Will Delaware be impacted? - The News Journal",
         "Link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPUTFmalZnXy1xd2RzSWg4UDhtMGxsX29QVm1yd083dkx4amw3LU43LWFkQkJzUHZad1R2eVFFcHdSR2xKaEpyZktpNnU3Y2R4MlgyNXRPOTFzbDBCQlh4X3l3SFd5NWNucFh5NEZMc2t1MFB3TXQ0S2hyYTFLSXZ6d1FCUlZSZkl1emo2WVFtS3hfeXhSd2V1dTlTRWIyVDJWbDM2cXFQOVFNb09lQXk3RmE0Mkl5ZG1OdDlFa0Nxaw?oc=5",
         "Published": "Fri, 06 Mar 2026 10:41:00 GMT",
-        "Summary": "Grocery Outlet closing 36 stores. Will Delaware be impacted? Delawareonline.com"
+        "Summary": "Grocery Outlet closing 36 stores. Will Delaware be impacted? The News Journal"
       },
       {
         "Store": "Grocery Outlet",
@@ -1722,6 +1794,15 @@
         "Link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQQmVXbk5ySjdsd3RVQUp6MW1ucklsVmQyTUhnUEV6OFFiUE1UODdtUWhraGpYLXFpZXBPdFZTSWdTb1JxSGRja1N2TEN4c0lDZmFTY01WZW1lRC1ESTJzY1AwempkbDVCWEVLSEgzbHI4eXRSSXVaeUs4RFVyWkk5MFJ4SDlrYmlXVUhMZ09pYWNCc2ZkSWVfNVlYeEpSc1duQ3ltSGZOUlZWaUNaaXhKVllxZU9QVlEycWlZaGI4b1hrQXNB?oc=5",
         "Published": "Fri, 06 Mar 2026 00:01:58 GMT",
         "Summary": "News | Grocery Outlet’s closing of three dozen US stores marks rare retreat among discounters CoStar"
+      },
+      {
+        "Store": "Grocery Outlet",
+        "Analyst": "Rishi Nagar",
+        "Type": "Closing",
+        "Title": "Grocery Outlet closing ‘underperforming’ stores. Will it impact Oregon? - KOIN.com",
+        "Link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPejNUZW4wWjVOVHQ5TlE4QjRDU1hVWXVBWUVudUNtM1phbGJvN2xVTXVmMnZiM0FMUHhSS1hFdDRVMkxzaE5XbENCT0VpUDlaQTNXSGVIMW5weG50dlhvcndIS1EzYmFCOVMtakdhSmU4NXBGVjVjdDl4Z1pKb0RJY1ZIVFZ5VkhEZExsRHVOV3luck5XdDRPU2ROYVFtSDFadDdYN2JBSldGdnoyQ1VCMjE5Z9IBqAFBVV95cUxQZzZndXR3bUkyYnV1R1JTQk13US1SZjVjeHRKZU02V0FMM2V0MVQtc19sdkYtcGZ6Y3RHMEdXVmpqdUxtNjJRczduNzNuSmhud1BBVmdRWUlKY1dTMlZjVlpUMVhRX0FabzhCZG1hMGU5cDdFa0FuQVJOOEEyWkM3YVA2R2JfUDBKVlVSTm9kMmJDRVdONGZFdFI1VFMxRTctVWh0WGVjbWw?oc=5",
+        "Published": "Fri, 06 Mar 2026 00:01:18 GMT",
+        "Summary": "Grocery Outlet closing ‘underperforming’ stores. Will it impact Oregon? KOIN.com"
       }
     ],
     "Vishwas Shah": [
