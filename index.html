@@ -125,85 +125,158 @@
             </div>
         </div>
 
-        <!-- Stats Cards -->
-        <div id="statsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 fade-in" style="display: none;">
-            <div class="stats-card rounded-xl p-6 border border-slate-700/50">
-                <div class="flex items-center justify-between">
-                    <div>
-                        <p class="text-gray-400 text-sm mb-1">Total Articles</p>
-                        <p class="text-3xl font-bold" id="totalArticles">0</p>
-                    </div>
-                    <i class="fas fa-file-alt text-4xl text-blue-400 opacity-50"></i>
-                </div>
-            </div>
-            <div class="stats-card rounded-xl p-6 border border-slate-700/50">
-                <div class="flex items-center justify-between">
-                    <div>
-                        <p class="text-gray-400 text-sm mb-1">Openings</p>
-                        <p class="text-3xl font-bold text-green-400" id="totalOpenings">0</p>
-                    </div>
-                    <i class="fas fa-arrow-up text-4xl text-green-400 opacity-50"></i>
-                </div>
-            </div>
-            <div class="stats-card rounded-xl p-6 border border-slate-700/50">
-                <div class="flex items-center justify-between">
-                    <div>
-                        <p class="text-gray-400 text-sm mb-1">Closings</p>
-                        <p class="text-3xl font-bold text-red-400" id="totalClosings">0</p>
-                    </div>
-                    <i class="fas fa-arrow-down text-4xl text-red-400 opacity-50"></i>
-                </div>
+        <!-- Tab Switcher -->
+        <div class="mb-8 flex justify-center">
+            <div class="inline-flex bg-slate-900/60 border border-slate-700 rounded-full p-1">
+                <button
+                    id="tabStoreBtn"
+                    class="px-4 py-2 text-sm sm:text-base rounded-full bg-slate-800 text-white font-medium shadow"
+                    onclick="switchTab('store')"
+                >
+                    Store News
+                </button>
+                <button
+                    id="tabScoopBtn"
+                    class="px-4 py-2 text-sm sm:text-base rounded-full text-gray-300 hover:text-white"
+                    onclick="switchTab('scoop')"
+                >
+                    Connecticut Scoop
+                </button>
             </div>
         </div>
 
-        <!-- Search and Filter -->
-        <div class="mb-6 fade-in">
-            <div class="flex flex-col sm:flex-row gap-4">
-                <div class="flex-1 relative">
-                    <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-                    <input 
-                        type="text" 
-                        id="searchInput" 
-                        placeholder="Search by store, analyst, or title..." 
-                        class="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 search-input transition-colors"
-                        oninput="filterArticles()"
+        <!-- Store News Tab Content -->
+        <div id="storeTabContent">
+            <!-- Stats Cards -->
+            <div id="statsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 fade-in" style="display: none;">
+                <div class="stats-card rounded-xl p-6 border border-slate-700/50">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-400 text-sm mb-1">Total Articles</p>
+                            <p class="text-3xl font-bold" id="totalArticles">0</p>
+                        </div>
+                        <i class="fas fa-file-alt text-4xl text-blue-400 opacity-50"></i>
+                    </div>
+                </div>
+                <div class="stats-card rounded-xl p-6 border border-slate-700/50">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-400 text-sm mb-1">Openings</p>
+                            <p class="text-3xl font-bold text-green-400" id="totalOpenings">0</p>
+                        </div>
+                        <i class="fas fa-arrow-up text-4xl text-green-400 opacity-50"></i>
+                    </div>
+                </div>
+                <div class="stats-card rounded-xl p-6 border border-slate-700/50">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-400 text-sm mb-1">Closings</p>
+                            <p class="text-3xl font-bold text-red-400" id="totalClosings">0</p>
+                        </div>
+                        <i class="fas fa-arrow-down text-4xl text-red-400 opacity-50"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search and Filter -->
+            <div class="mb-6 fade-in">
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <div class="flex-1 relative">
+                        <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            placeholder="Search by store, analyst, or title..." 
+                            class="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 search-input transition-colors"
+                            oninput="filterStoreArticles()"
+                        >
+                    </div>
+                    <select 
+                        id="typeFilter" 
+                        onchange="filterStoreArticles()"
+                        class="px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white focus:border-blue-500 focus:outline-none"
                     >
+                        <option value="all">All Types</option>
+                        <option value="Opening">Opening</option>
+                        <option value="Closing">Closing</option>
+                    </select>
+                    <select 
+                        id="analystFilter" 
+                        onchange="filterStoreArticles()"
+                        class="px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white focus:border-blue-500 focus:outline-none"
+                    >
+                        <option value="all">All Analysts</option>
+                    </select>
                 </div>
-                <select 
-                    id="typeFilter" 
-                    onchange="filterArticles()"
-                    class="px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white focus:border-blue-500 focus:outline-none"
-                >
-                    <option value="all">All Types</option>
-                    <option value="Opening">Opening</option>
-                    <option value="Closing">Closing</option>
-                </select>
-                <select 
-                    id="analystFilter" 
-                    onchange="filterArticles()"
-                    class="px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white focus:border-blue-500 focus:outline-none"
-                >
-                    <option value="all">All Analysts</option>
-                </select>
+            </div>
+
+            <!-- Loading State -->
+            <div id="loadingState" class="text-center py-20">
+                <div class="loading-spinner mx-auto mb-4"></div>
+                <p class="text-gray-400">Loading news data...</p>
+            </div>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="text-center py-20 hidden">
+                <i class="fas fa-inbox text-6xl text-gray-600 mb-4"></i>
+                <h3 class="text-2xl font-semibold mb-2 text-gray-300">No news found</h3>
+                <p class="text-gray-500">No recent store opening or closing news in the last 2 days.</p>
+            </div>
+
+            <!-- Articles Container -->
+            <div id="articlesContainer" class="hidden">
+                <!-- Articles will be dynamically inserted here -->
             </div>
         </div>
 
-        <!-- Loading State -->
-        <div id="loadingState" class="text-center py-20">
-            <div class="loading-spinner mx-auto mb-4"></div>
-            <p class="text-gray-400">Loading news data...</p>
-        </div>
+        <!-- Connecticut Scoop Tab Content -->
+        <div id="scoopTabContent" class="hidden">
+            <!-- Scoop Stats -->
+            <div id="scoopStatsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 fade-in" style="display: none;">
+                <div class="stats-card rounded-xl p-6 border border-slate-700/50">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-400 text-sm mb-1">Total Scoop Articles</p>
+                            <p class="text-3xl font-bold" id="scoopTotalArticles">0</p>
+                        </div>
+                        <i class="fas fa-bullhorn text-4xl text-blue-400 opacity-50"></i>
+                    </div>
+                </div>
+            </div>
 
-        <!-- Empty State -->
-        <div id="emptyState" class="text-center py-20 hidden">
-            <i class="fas fa-inbox text-6xl text-gray-600 mb-4"></i>
-            <h3 class="text-2xl font-semibold mb-2 text-gray-300">No news found</h3>
-            <p class="text-gray-500">No recent store opening or closing news in the last 2 days.</p>
-        </div>
+            <!-- Scoop Search -->
+            <div class="mb-6 fade-in">
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <div class="flex-1 relative">
+                        <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                        <input 
+                            type="text" 
+                            id="scoopSearchInput" 
+                            placeholder="Search by headline or town..." 
+                            class="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 search-input transition-colors"
+                            oninput="filterScoopArticles()"
+                        >
+                    </div>
+                </div>
+            </div>
 
-        <!-- Articles Container -->
-        <div id="articlesContainer" class="hidden">
-            <!-- Articles will be dynamically inserted here -->
+            <!-- Scoop Loading State -->
+            <div id="scoopLoadingState" class="text-center py-20 hidden">
+                <div class="loading-spinner mx-auto mb-4"></div>
+                <p class="text-gray-400">Loading Connecticut Scoop data...</p>
+            </div>
+
+            <!-- Scoop Empty State -->
+            <div id="scoopEmptyState" class="text-center py-20 hidden">
+                <i class="fas fa-inbox text-6xl text-gray-600 mb-4"></i>
+                <h3 class="text-2xl font-semibold mb-2 text-gray-300">No recent Scoop articles</h3>
+                <p class="text-gray-500">No Connecticut Scoop stories found in the last 2 days.</p>
+            </div>
+
+            <!-- Scoop Articles Container -->
+            <div id="scoopArticlesContainer" class="hidden">
+                <!-- Scoop articles will be dynamically inserted here -->
+            </div>
         </div>
     </div>
 
