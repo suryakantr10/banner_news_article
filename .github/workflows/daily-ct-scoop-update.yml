@@ -1,0 +1,49 @@
+name: Daily CT Scoop Update
+
+# Runs every day at 09:00 UTC
+# To change the time, modify the cron schedule below (format: minute hour day month weekday)
+# Example: "0 14 * * *" = 2:00 PM UTC, "0 9 * * 1-5" = 9:00 AM UTC on weekdays only
+
+on:
+  schedule:
+    - cron: '30 23 * * *'  # 5:00 IST daily
+  workflow_dispatch:  # Allows manual triggering from GitHub Actions tab
+
+permissions:
+  contents: write  # Required to commit and push files
+
+jobs:
+  update-ct-scoop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install selenium pandas python-dateutil
+
+      - name: Install Chrome and Chromedriver
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y chromium-browser chromium-chromedriver
+          sudo ln -s /usr/bin/chromium-browser /usr/bin/google-chrome
+
+      - name: Run CT Scoop scraper
+        run: python ct_scoop_scraper.py  # Assuming the provided code is saved as ct_scoop_scraper.py
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add ct_scoop_latest.json
+          git add ct_scoop_links_*.xlsx || true
+          git diff --staged --quiet || git commit -m "Auto-update: Daily CT Scoop fetch $(date +'%Y-%m-%d')"
+          git push
