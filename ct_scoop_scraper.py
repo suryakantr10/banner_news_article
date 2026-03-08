@@ -133,6 +133,7 @@ def main():
 
         cards = driver.find_elements(By.CSS_SELECTOR, "div.waddons-blog-card")
 
+        print(f"Found {len(cards)} card(s) on the page.")
         for card in cards:
 
             # ---- Heading ----
@@ -145,12 +146,18 @@ def main():
 
             if meta_elements:
                 meta_text = meta_elements[0].text.strip()
-                date_text = meta_text.split("-")[0].strip()
+                # Extract MM/DD/YYYY from the meta text
+                import re
 
-                try:
-                    article_date = datetime.strptime(date_text, "%m/%d/%Y").date()
-                except Exception:
-                    article_date = None
+                match = re.search(r"(\d{1,2}/\d{1,2}/\d{4})", meta_text)
+                if match:
+                    date_text = match.group(1)
+                    try:
+                        article_date = datetime.strptime(date_text, "%m/%d/%Y").date()
+                    except Exception:
+                        article_date = None
+                else:
+                    print("Warning: could not find a date in meta text:", repr(meta_text))
 
             # ---- Link ----
             link_elements = card.find_elements(By.CSS_SELECTOR, "a.waddons-blog-card-link-full")
