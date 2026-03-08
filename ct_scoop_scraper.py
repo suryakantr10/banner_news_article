@@ -226,11 +226,15 @@ def main():
             "openpyxl not installed (", exc, "); saved to CSV instead:", fallback_path
         )
 
-    # Save JSON for dashboard tab
+    # Save JSON for dashboard tab (convert date objects to strings)
     json_path = "ct_scoop_latest.json"
+    json_data = df.copy()
+    if "date" in json_data.columns:
+        json_data["date"] = json_data["date"].astype(str)
+
     json_payload = {
         "last_updated": today.strftime("%Y-%m-%d"),
-        "data": df.to_dict(orient="records"),
+        "data": json_data.to_dict(orient="records"),
     }
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(json_payload, f, ensure_ascii=False, indent=2)
