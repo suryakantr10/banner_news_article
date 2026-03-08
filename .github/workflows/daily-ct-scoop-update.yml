@@ -40,7 +40,11 @@ jobs:
           sudo ln -sf /snap/bin/chromium /usr/bin/google-chrome-stable
 
       - name: Run CT Scoop scraper
-        run: python ct_scoop_scraper.py  # Assuming the provided code is saved as ct_scoop_scraper.py
+        run: |
+          # Ensure the script sees the installed Chromium binary
+          export CHROME_BIN=/snap/bin/chromium
+          export GOOGLE_CHROME_BIN=/snap/bin/chromium
+          python ct_scoop_scraper.py  # Assuming the provided code is saved as ct_scoop_scraper.py
 
       - name: Commit and push changes
         run: |
