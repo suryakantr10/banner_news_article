@@ -42,6 +42,17 @@ jobs:
           # Ensure a common path exists for tools expecting /usr/bin/google-chrome
           sudo ln -sf /usr/bin/google-chrome-stable /usr/bin/google-chrome
 
+      - name: Debug chrome + chromedriver versions
+        run: |
+          echo "--- chrome ---"
+          /usr/bin/google-chrome-stable --version || true
+          echo "--- chromedriver ---"
+          chromedriver --version || true
+          echo "--- which chrome ---"
+          ls -l /usr/bin/google-chrome* || true
+          echo "--- which chromedriver ---"
+          which chromedriver || true
+
       - name: Run CT Scoop scraper
         run: |
           # Ensure the script sees the installed Chrome binary

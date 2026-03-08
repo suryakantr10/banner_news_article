@@ -5,6 +5,7 @@ This script is derived from `cs.ipynb`.
 """
 
 from selenium import webdriver
+from selenium.common.exceptions import SessionNotCreatedException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -70,7 +71,28 @@ def _make_driver() -> webdriver.Chrome:
         print("Warning: No Chrome/Chromium binary found; relying on system defaults.")
 
     # Selenium Manager will download a matching ChromeDriver if one is not available.
-    return webdriver.Chrome(options=options)
+    try:
+        return webdriver.Chrome(options=options)
+    except SessionNotCreatedException as exc:
+        print("First attempt to start Chrome failed; retrying with legacy headless mode...")
+        print(str(exc))
+
+        # Retry with the legacy headless flag (some environments/distro builds require it)
+        options = Options()
+        options.add_argument("--headless")
+        options.add_argument("--no-sandbox")
+        options.add_argument("--disable-dev-shm-usage")
+        options.add_argument("--disable-gpu")
+        options.add_argument("--disable-software-rasterizer")
+        options.add_argument("--disable-extensions")
+        options.add_argument("--disable-background-networking")
+        options.add_argument("--disable-sync")
+        options.add_argument("--disable-translate")
+        options.add_argument("--disable-features=VizDisplayCompositor")
+        if chrome_path:
+            options.binary_location = chrome_path
+
+        return webdriver.Chrome(options=options)
 
 
 def main():
