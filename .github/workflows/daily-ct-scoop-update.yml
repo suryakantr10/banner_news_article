@@ -30,18 +30,10 @@ jobs:
         run: |
           pip install selenium pandas python-dateutil
 
-      - name: Install Google Chrome
-        run: |
-          wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-          sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list'
-          sudo apt-get update
-          sudo apt-get install -y google-chrome-stable
-
       - name: Install Chrome and Chromedriver
         run: |
           sudo apt-get update
           sudo apt-get install -y chromium-browser chromium-chromedriver
-          sudo ln -sf /usr/bin/chromium-browser /usr/bin/google-chrome
 
       - name: Run CT Scoop scraper
         run: python ct_scoop_scraper.py  # Assuming the provided code is saved as ct_scoop_scraper.py
