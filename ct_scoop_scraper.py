@@ -169,11 +169,25 @@ def main():
     finally:
         driver.quit()
 
-    # Remove duplicates
-    df = pd.DataFrame(all_links).drop_duplicates(subset=["link"])
+    # Build DataFrame (handle case where no articles were found)
+    df = pd.DataFrame(all_links)
+    if df.empty:
+        print("Warning: no articles were found; producing empty output files.")
+        df = pd.DataFrame(columns=["heading", "date", "link"])
+    else:
+        if "link" not in df.columns:
+            df["link"] = ""
+        if "date" not in df.columns:
+            df["date"] = pd.NaT
 
-    # Sort newest first
-    df = df.sort_values(by="date", ascending=False)
+        # Remove duplicates
+        df = df.drop_duplicates(subset=["link"])
+
+        # Sort newest first
+        try:
+            df = df.sort_values(by="date", ascending=False)
+        except Exception as exc:
+            print("Warning: could not sort by date (missing or invalid values).", exc)
 
     print("Total articles found:", len(df))
 
