@@ -10,11 +10,20 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import pandas as pd
-from datetime import datetime, timedelta
+from datetime import datetime, date, timedelta
 import json
 from selenium.webdriver.chrome.options import Options
 import os
 import shutil
+
+
+class DateEncoder(json.JSONEncoder):
+    """JSON encoder that converts date/datetime objects to ISO strings."""
+
+    def default(self, obj):
+        if isinstance(obj, (datetime, date)):
+            return obj.isoformat()
+        return super().default(obj)
 
 
 def _find_chrome_binary() -> str | None:
@@ -237,7 +246,7 @@ def main():
         "data": json_data.to_dict(orient="records"),
     }
     with open(json_path, "w", encoding="utf-8") as f:
-        json.dump(json_payload, f, ensure_ascii=False, indent=2)
+        json.dump(json_payload, f, ensure_ascii=False, indent=2, cls=DateEncoder)
     print(f"Saved JSON to {json_path}")
 
 
