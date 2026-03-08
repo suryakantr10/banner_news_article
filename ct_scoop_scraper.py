@@ -112,9 +112,11 @@ def main():
 
     all_links = []
 
-    # ---- Date filter ----
+    # ---- Date filter (configurable via env var CT_SCOOP_DAYS) ----
     today = datetime.today().date()
-    two_days_ago = today - timedelta(days=2)
+    lookback_days = int(os.environ.get("CT_SCOOP_DAYS", "2"))
+    two_days_ago = today - timedelta(days=lookback_days)
+    print(f"Filtering articles from {two_days_ago.isoformat()} onwards (last {lookback_days} days)")
 
     # Create driver ONCE
     driver = _make_driver()
@@ -125,62 +127,62 @@ def main():
             print(f"Scraping: {url}")
             driver.get(url)
 
-        wait.until(
-            EC.presence_of_all_elements_located(
-                (By.CSS_SELECTOR, "div.waddons-blog-card")
+            wait.until(
+                EC.presence_of_all_elements_located(
+                    (By.CSS_SELECTOR, "div.waddons-blog-card")
+                )
             )
-        )
 
-        cards = driver.find_elements(By.CSS_SELECTOR, "div.waddons-blog-card")
+            cards = driver.find_elements(By.CSS_SELECTOR, "div.waddons-blog-card")
+            print(f"Found {len(cards)} card(s) on page: {url}")
 
-        print(f"Found {len(cards)} card(s) on the page.")
-        for card in cards:
+            for card in cards:
 
-            # ---- Heading ----
-            heading_elements = card.find_elements(By.CSS_SELECTOR, "div.waddons-blog-header")
-            heading = heading_elements[0].text.strip() if heading_elements else ""
+                # ---- Heading ----
+                heading_elements = card.find_elements(By.CSS_SELECTOR, "div.waddons-blog-header")
+                heading = heading_elements[0].text.strip() if heading_elements else ""
 
-            # ---- Date ----
-            meta_elements = card.find_elements(By.CSS_SELECTOR, "div.waddons-blog-meta")
-            article_date = None
+                # ---- Date ----
+                meta_elements = card.find_elements(By.CSS_SELECTOR, "div.waddons-blog-meta")
+                article_date = None
 
-            if meta_elements:
-                meta_text = meta_elements[0].text.strip()
-                # Extract MM/DD/YYYY from the meta text
-                import re
+                if meta_elements:
+                    meta_text = meta_elements[0].text.strip()
+                    # Extract MM/DD/YYYY from the meta text
+                    import re
 
-                match = re.search(r"(\d{1,2}/\d{1,2}/\d{4})", meta_text)
-                if match:
-                    date_text = match.group(1)
-                    try:
-                        article_date = datetime.strptime(date_text, "%m/%d/%Y").date()
-                    except Exception:
-                        article_date = None
-                else:
-                    print("Warning: could not find a date in meta text:", repr(meta_text))
+                    match = re.search(r"(\d{1,2}/\d{1,2}/\d{4})", meta_text)
+                    if match:
+                        date_text = match.group(1)
+                        try:
+                            article_date = datetime.strptime(date_text, "%m/%d/%Y").date()
+                        except Exception:
+                            article_date = None
+                    else:
+                        print("Warning: could not find a date in meta text:", repr(meta_text))
 
-            # DEBUG: show what we parsed for the card (helps in CI logs)
-            print("Card debug:", {
-                "heading": heading,
-                "meta_text": meta_text if meta_elements else None,
-                "date_text": locals().get("date_text"),
-                "article_date": article_date,
-                "link": link,
-            })
+                # ---- Link ----
+                link_elements = card.find_elements(By.CSS_SELECTOR, "a.waddons-blog-card-link-full")
+                link = link_elements[0].get_attribute("href") if link_elements else ""
 
-            # ---- Link ----
-            link_elements = card.find_elements(By.CSS_SELECTOR, "a.waddons-blog-card-link-full")
-            link = link_elements[0].get_attribute("href") if link_elements else ""
-
-            # ---- Filter last 2 days ----
-            if link and article_date and article_date >= two_days_ago:
-                print("Added:", heading, article_date)
-
-                all_links.append({
+                # DEBUG: show what we parsed for the card (helps in CI logs)
+                print("Card debug:", {
                     "heading": heading,
-                    "date": article_date,
+                    "meta_text": meta_text if meta_elements else None,
+                    "date_text": locals().get("date_text"),
+                    "article_date": article_date,
                     "link": link,
                 })
+
+                # ---- Filter last 2 days ----
+                if link and article_date and article_date >= two_days_ago:
+                    print("Added:", heading, article_date)
+
+                    all_links.append({
+                        "heading": heading,
+                        "date": article_date,
+                        "link": link,
+                    })
 
     finally:
         driver.quit()
