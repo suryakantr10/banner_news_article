@@ -175,6 +175,7 @@ def main():
         print("Warning: no articles were found; producing empty output files.")
         df = pd.DataFrame(columns=["heading", "date", "link"])
     else:
+        print("DataFrame columns before normalization:", df.columns.tolist())
         if "link" not in df.columns:
             df["link"] = ""
         if "date" not in df.columns:
@@ -185,6 +186,10 @@ def main():
 
         # Sort newest first
         try:
+            df = df.sort_values(by="date", ascending=False)
+        except KeyError as exc:
+            print("Warning: 'date' column missing when sorting; adding placeholder and retrying.")
+            df["date"] = pd.NaT
             df = df.sort_values(by="date", ascending=False)
         except Exception as exc:
             print("Warning: could not sort by date (missing or invalid values).", exc)
