@@ -34,7 +34,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y chromium-browser chromium-chromedriver
-          sudo ln -s /usr/bin/chromium-browser /usr/bin/google-chrome
+          sudo ln -sf /usr/bin/chromium-browser /usr/bin/google-chrome
 
       - name: Run CT Scoop scraper
         run: python ct_scoop_scraper.py  # Assuming the provided code is saved as ct_scoop_scraper.py
