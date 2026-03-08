@@ -214,10 +214,17 @@ def main():
 
     print("Total articles found:", len(df))
 
-    # Save to Excel
+    # Save to Excel (fallback to CSV if openpyxl is missing)
     export_path = f"ct_scoop_links_{datetime.now().strftime('%Y-%m-%d')}.xlsx"
-    df.to_excel(export_path, index=False)
-    print(f"Saved {len(df)} records to {export_path}")
+    try:
+        df.to_excel(export_path, index=False)
+        print(f"Saved {len(df)} records to {export_path}")
+    except ModuleNotFoundError as exc:
+        fallback_path = export_path.replace(".xlsx", ".csv")
+        df.to_csv(fallback_path, index=False)
+        print(
+            "openpyxl not installed (", exc, "); saved to CSV instead:", fallback_path
+        )
 
     # Save JSON for dashboard tab
     json_path = "ct_scoop_latest.json"
