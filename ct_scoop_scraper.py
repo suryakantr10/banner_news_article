@@ -12,11 +12,36 @@ import pandas as pd
 from datetime import datetime, timedelta
 import json
 from selenium.webdriver.chrome.options import Options
-options = Options()
-options.add_argument("--headless=new")
-options.add_argument("--no-sandbox")
-options.add_argument("--disable-dev-shm-usage")
-driver = webdriver.Chrome(options=options)
+import shutil
+
+
+def _find_chrome_binary() -> str | None:
+    """Return a usable Chrome/Chromium binary path for this environment."""
+    candidates = [
+        "/usr/bin/google-chrome",
+        "/usr/bin/google-chrome-stable",
+        "/usr/bin/chromium-browser",
+        "/usr/bin/chromium",
+        "/snap/bin/chromium",
+    ]
+    for path in candidates:
+        if shutil.which(path) or (path and shutil.os.path.exists(path)):
+            return path
+    return None
+
+
+def _make_driver() -> webdriver.Chrome:
+    options = Options()
+    options.add_argument("--headless=new")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+
+    chrome_path = _find_chrome_binary()
+    if chrome_path:
+        options.binary_location = chrome_path
+
+    return webdriver.Chrome(options=options)
+
 
 def main():
     # All links in a list
@@ -40,12 +65,13 @@ def main():
     two_days_ago = today - timedelta(days=2)
 
     # Create driver ONCE
-    driver = webdriver.Chrome()
+    driver = _make_driver()
     wait = WebDriverWait(driver, 15)
 
-    for url in links:
-        print(f"Scraping: {url}")
-        driver.get(url)
+    try:
+        for url in links:
+            print(f"Scraping: {url}")
+            driver.get(url)
 
         wait.until(
             EC.presence_of_all_elements_located(
@@ -88,7 +114,8 @@ def main():
                     "link": link,
                 })
 
-    driver.quit()
+    finally:
+        driver.quit()
 
     # Remove duplicates
     df = pd.DataFrame(all_links).drop_duplicates(subset=["link"])
