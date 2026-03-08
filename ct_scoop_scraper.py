@@ -159,6 +159,15 @@ def main():
                 else:
                     print("Warning: could not find a date in meta text:", repr(meta_text))
 
+            # DEBUG: show what we parsed for the card (helps in CI logs)
+            print("Card debug:", {
+                "heading": heading,
+                "meta_text": meta_text if meta_elements else None,
+                "date_text": locals().get("date_text"),
+                "article_date": article_date,
+                "link": link,
+            })
+
             # ---- Link ----
             link_elements = card.find_elements(By.CSS_SELECTOR, "a.waddons-blog-card-link-full")
             link = link_elements[0].get_attribute("href") if link_elements else ""

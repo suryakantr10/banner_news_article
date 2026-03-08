@@ -28,7 +28,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install selenium pandas python-dateutil
+          pip install selenium pandas python-dateutil openpyxl
 
       - name: Install Google Chrome Stable
         run: |
