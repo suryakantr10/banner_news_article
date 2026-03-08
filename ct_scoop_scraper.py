@@ -54,11 +54,22 @@ def _make_driver() -> webdriver.Chrome:
     options.add_argument("--headless=new")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--disable-software-rasterizer")
+    options.add_argument("--disable-extensions")
+    options.add_argument("--disable-background-networking")
+    options.add_argument("--disable-sync")
+    options.add_argument("--disable-translate")
+    options.add_argument("--disable-features=VizDisplayCompositor")
 
     chrome_path = _find_chrome_binary()
     if chrome_path:
+        print(f"Using Chrome/Chromium binary: {chrome_path}")
         options.binary_location = chrome_path
+    else:
+        print("Warning: No Chrome/Chromium binary found; relying on system defaults.")
 
+    # Selenium Manager will download a matching ChromeDriver if one is not available.
     return webdriver.Chrome(options=options)
 
 

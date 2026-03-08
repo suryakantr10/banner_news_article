@@ -30,20 +30,23 @@ jobs:
         run: |
           pip install selenium pandas python-dateutil
 
-      - name: Install Chromium + Chromedriver
+      - name: Install Google Chrome Stable
         run: |
           sudo apt-get update
-          sudo apt-get install -y chromium-browser chromium-chromedriver
-          # Ensure Selenium (and ChromeDriver) can find a browser binary
-          # (runner may expect /usr/bin/google-chrome)
-          sudo ln -sf /snap/bin/chromium /usr/bin/google-chrome
-          sudo ln -sf /snap/bin/chromium /usr/bin/google-chrome-stable
+          sudo apt-get install -y wget gnupg
+          # Add Google Chrome apt repository
+          wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmor -o /usr/share/keyrings/google-linux-signing-keyring.gpg
+          echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-linux-signing-keyring.gpg] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
+          # Ensure a common path exists for tools expecting /usr/bin/google-chrome
+          sudo ln -sf /usr/bin/google-chrome-stable /usr/bin/google-chrome
 
       - name: Run CT Scoop scraper
         run: |
-          # Ensure the script sees the installed Chromium binary
-          export CHROME_BIN=/snap/bin/chromium
-          export GOOGLE_CHROME_BIN=/snap/bin/chromium
+          # Ensure the script sees the installed Chrome binary
+          export CHROME_BIN=/usr/bin/google-chrome-stable
+          export GOOGLE_CHROME_BIN=/usr/bin/google-chrome-stable
           python ct_scoop_scraper.py  # Assuming the provided code is saved as ct_scoop_scraper.py
 
       - name: Commit and push changes
