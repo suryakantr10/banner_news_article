@@ -12,21 +12,40 @@ import pandas as pd
 from datetime import datetime, timedelta
 import json
 from selenium.webdriver.chrome.options import Options
+import os
 import shutil
 
 
 def _find_chrome_binary() -> str | None:
     """Return a usable Chrome/Chromium binary path for this environment."""
+    # Respect env vars used by some CI systems.
+    for env_var in ("CHROME_BIN", "GOOGLE_CHROME_BIN"):
+        path = os.environ.get(env_var)
+        if path and os.path.exists(path):
+            return path
+
+    # Try common executable names first, then absolute paths.
     candidates = [
+        "google-chrome",
+        "google-chrome-stable",
+        "chromium-browser",
+        "chromium",
+        "/snap/bin/chromium",
         "/usr/bin/google-chrome",
         "/usr/bin/google-chrome-stable",
         "/usr/bin/chromium-browser",
         "/usr/bin/chromium",
-        "/snap/bin/chromium",
     ]
-    for path in candidates:
-        if shutil.which(path) or (path and shutil.os.path.exists(path)):
-            return path
+
+    for candidate in candidates:
+        if os.path.isabs(candidate):
+            if os.path.exists(candidate):
+                return candidate
+        else:
+            found = shutil.which(candidate)
+            if found:
+                return found
+
     return None
 
 
