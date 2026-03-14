@@ -1,6 +1,16 @@
 {
-  "last_updated": "2026-03-13",
+  "last_updated": "2026-03-14",
   "data": [
+    {
+      "heading": "HARTFORD SCOOP: The Upstate Lounge & Cafe opens in Hartford",
+      "date": "2026-03-14",
+      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/hartford-scoop-the-upstate-lounge-cafe-opens-in-hartford"
+    },
+    {
+      "heading": "FOXWOODS SCOOP: The Bedford by Martha Stewart opens!",
+      "date": "2026-03-14",
+      "link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/foxwoods-scoop-the-bedford-by-martha-stewart-opens"
+    },
     {
       "heading": "MANCHESTER SCOOP: Woosmash under construction at The Shoppes at Buckland Hills",
       "date": "2026-03-13",
@@ -45,21 +55,6 @@
       "heading": "GROTON SCOOP: Kohr's Ice Cream & More coming to Groton",
       "date": "2026-03-12",
       "link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/groton-scoop-kohrs-ice-cream-more-coming-to-groton"
-    },
-    {
-      "heading": "STORRS SCOOP: Guac N Grill Halal Mexican Food coming to Storrs",
-      "date": "2026-03-11",
-      "link": "https://www.theconnecticutscoop.com/all-tolland-county-posts/storrs-scoop-guac-n-grill-halal-mexican-food-coming-to-storrs"
-    },
-    {
-      "heading": "MIDDLEBURY SCOOP: New coffee shop opening on March 21st!",
-      "date": "2026-03-11",
-      "link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/middlebury-scoop-new-coffee-shop-opening-on-march-21st"
-    },
-    {
-      "heading": "BRANFORD SCOOP: Moon Shots opens new location in Branford",
-      "date": "2026-03-11",
-      "link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/branford-scoop-moon-shots-opens-new-location-in-branford"
     }
   ]
 }
