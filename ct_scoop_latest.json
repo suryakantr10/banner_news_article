@@ -1,6 +1,36 @@
 {
-  "last_updated": "2026-03-16",
+  "last_updated": "2026-03-17",
   "data": [
+    {
+      "heading": "NEW BRITAIN SCOOP: Exclusive first look at Tous Les Jours",
+      "date": "2026-03-17",
+      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/new-britain-scoop-exclusive-first-look-at-tous-les-jours"
+    },
+    {
+      "heading": "WETHERSFIELD SCOOP: Jersey Mike's coming soon!",
+      "date": "2026-03-17",
+      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/wethersfield-scoop-jersey-mikes-coming-soon"
+    },
+    {
+      "heading": "WATERBURY SCOOP: Cozy Home Furniture coming to Brass Mill Center",
+      "date": "2026-03-17",
+      "link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/waterbury-scoop-cozy-home-furniture-coming-to-brass-mill-center"
+    },
+    {
+      "heading": "HAMDEN SCOOP: New luxury nail spa coming to Hamden",
+      "date": "2026-03-17",
+      "link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/hamden-scoop-new-luxury-nail-spa-coming-to-hamden"
+    },
+    {
+      "heading": "WATERBURY SCOOP: New ice cream shop & Mexican eatery opens in Waterbury",
+      "date": "2026-03-17",
+      "link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/waterbury-scoop-new-ice-cream-shop-mexican-eatery-opens-in-waterbury"
+    },
+    {
+      "heading": "GROTON SCOOP: 7 Brew eyeing new Groton location",
+      "date": "2026-03-17",
+      "link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/groton-scoop-7-brew-eyeing-new-groton-location"
+    },
     {
       "heading": "DANIELSON SCOOP: Amy's Cakery opens in Danielson",
       "date": "2026-03-16",
@@ -10,6 +40,11 @@
       "heading": "MANCHESTER SCOOP: Town eyes former church for new senior center!",
       "date": "2026-03-16",
       "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/manchester-scoop-town-eyes-former-church-for-new-senior-center"
+    },
+    {
+      "heading": "NEWINGTON SCOOP: New Halal market opens in Newington",
+      "date": "2026-03-16",
+      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/newington-scoop-new-halal-market-opens-in-newington"
     },
     {
       "heading": "WATERFORD SCOOP: Majority of mall operations to end March 31st",
@@ -45,16 +80,6 @@
       "heading": "TRUMBULL SCOOP: Trumbull Mall back on the market!",
       "date": "2026-03-15",
       "link": "https://www.theconnecticutscoop.com/all-fairfield-county-posts/trumbull-scoop-trumbull-mall-back-on-the-market"
-    },
-    {
-      "heading": "HARTFORD SCOOP: The Upstate Lounge & Cafe opens in Hartford",
-      "date": "2026-03-14",
-      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/hartford-scoop-the-upstate-lounge-cafe-opens-in-hartford"
-    },
-    {
-      "heading": "FOXWOODS SCOOP: The Bedford by Martha Stewart opens!",
-      "date": "2026-03-14",
-      "link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/foxwoods-scoop-the-bedford-by-martha-stewart-opens"
     }
   ]
 }
