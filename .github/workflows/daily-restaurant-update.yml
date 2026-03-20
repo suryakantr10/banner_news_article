@@ -1,0 +1,37 @@
+name: Daily Restaurant News Update
+
+on:
+  schedule:
+    - cron: '30 23 * * *'  # 5:00 IST daily
+  workflow_dispatch:         # allows manual trigger from GitHub Actions UI
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install selenium beautifulsoup4 requests pandas
+
+      - name: Install Chrome + ChromeDriver
+        uses: browser-actions/setup-chrome@v1
+
+      - name: Run restaurant scraper
+        run: python restaurant_scraper.py
+
+      - name: Commit and push JSON + CSV
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add restaurant_latest.json Daily_restaurants_*.csv
+          git diff --cached --quiet || git commit -m "chore: daily restaurant update $(date +'%Y-%m-%d')"
+          git push
