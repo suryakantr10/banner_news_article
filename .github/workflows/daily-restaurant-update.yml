@@ -2,28 +2,40 @@ name: Daily Restaurant News Update
 
 on:
   schedule:
-    - cron: '30 23 * * *'  # 5:00 IST daily
-  workflow_dispatch:         # allows manual trigger from GitHub Actions UI
+    - cron: '30 23 * * *'  # 11:30 PM UTC = 5:00 AM IST
+  workflow_dispatch:
 
 jobs:
   scrape:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04    # pin to specific version — ubuntu-latest can change unexpectedly
+
+    permissions:
+      contents: write        # required for git push — was missing, causes silent 403 errors
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4         # updated: fixes Node.js 20 deprecation warning
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5     # updated: fixes Node.js 20 deprecation warning
         with:
           python-version: '3.11'
+          cache: 'pip'                    # caches pip dependencies — speeds up reruns
 
-      - name: Install dependencies
-        run: |
-          pip install selenium beautifulsoup4 requests pandas
-
-      - name: Install Chrome + ChromeDriver
+      - name: Install Chrome + ChromeDriver (matched versions)
         uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: latest
+          install-chromedriver: true      # was missing — this was causing your SessionNotCreatedException
+          install-dependencies: true      # installs system libs Chrome needs (libnss3 etc.)
+
+      - name: Install Python dependencies
+        run: |
+          pip install --upgrade pip
+          pip install selenium beautifulsoup4 requests pandas openpyxl
 
       - name: Run restaurant scraper
         run: python restaurant_scraper.py
@@ -33,5 +45,6 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add restaurant_latest.json Daily_restaurants_*.csv
-          git diff --cached --quiet || git commit -m "chore: daily restaurant update $(date +'%Y-%m-%d')"
-          git push
+          git diff --cached --quiet && echo "No changes to commit" || \
+            git commit -m "chore: daily restaurant update $(date +'%Y-%m-%d %H:%M UTC')" && \
+            git push
