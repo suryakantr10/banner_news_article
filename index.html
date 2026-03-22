@@ -142,7 +142,6 @@
                 >
                     Connecticut Scoop
                 </button>
-                <!-- ── NEW: Restaurant tab button ── -->
                 <button
                     id="tabRestaurantBtn"
                     class="px-4 py-2 text-sm sm:text-base rounded-full text-gray-300 hover:text-white"
@@ -252,7 +251,7 @@
                 </div>
             </div>
 
-            <!-- Scoop Search -->
+            <!-- Scoop Search + Download CSV button (ADDED) -->
             <div class="mb-6 fade-in">
                 <div class="flex flex-col sm:flex-row gap-4">
                     <div class="flex-1 relative">
@@ -265,6 +264,13 @@
                             oninput="filterScoopArticles()"
                         >
                     </div>
+                    <button
+                        onclick="downloadScoopCSV()"
+                        class="px-5 py-3 bg-orange-600 hover:bg-orange-700 rounded-lg transition-colors flex items-center space-x-2 font-medium whitespace-nowrap"
+                    >
+                        <i class="fas fa-download"></i>
+                        <span>Download CSV</span>
+                    </button>
                 </div>
             </div>
 
@@ -287,9 +293,7 @@
             </div>
         </div>
 
-        <!-- ══════════════════════════════════════════════════════════
-             NEW: Restaurant News Tab Content
-             ══════════════════════════════════════════════════════════ -->
+        <!-- Restaurant News Tab Content -->
         <div id="restaurantTabContent" class="hidden">
 
             <!-- Restaurant Stats -->
@@ -375,7 +379,6 @@
                 </div>
             </div>
         </div>
-        <!-- ══ END Restaurant Tab ══ -->
 
     </div>
 
@@ -392,18 +395,14 @@
     </footer>
 
     <script>
-    // ═══════════════════════════════════════════════════════════════
-    // DATA SOURCES
-    // ═══════════════════════════════════════════════════════════════
-    const STORE_JSON_URL      = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/latest_news.json';
-    const SCOOP_JSON_URL      = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/ct_scoop_latest.json';
-    const REST_JSON_URL       = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/restaurant_latest.json';
+    const STORE_JSON_URL = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/latest_news.json';
+    const SCOOP_JSON_URL = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/ct_scoop_latest.json';
+    const REST_JSON_URL  = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/restaurant_latest.json';
 
     let storeArticles = [];
     let filteredStoreArticles = [];
     let scoopArticles = [];
     let filteredScoopArticles = [];
-    // ── NEW ──
     let restArticles = [];
     let filteredRestArticles = [];
     let restSortCol = 'date';
@@ -416,12 +415,8 @@
         loadStoreData();
     });
 
-    // ────────────────────────────────────────────────
-    // Tab handling  (extended to include 'restaurant')
-    // ────────────────────────────────────────────────
     function switchTab(tab) {
         activeTab = tab;
-
         const storeTab = document.getElementById('storeTabContent');
         const scoopTab = document.getElementById('scoopTabContent');
         const restTab  = document.getElementById('restaurantTabContent');
@@ -429,14 +424,12 @@
         const scoopBtn = document.getElementById('tabScoopBtn');
         const restBtn  = document.getElementById('tabRestaurantBtn');
 
-        // Hide all, deactivate all buttons
         [storeTab, scoopTab, restTab].forEach(t => t.classList.add('hidden'));
         [storeBtn, scoopBtn, restBtn].forEach(b => {
             b.classList.remove('bg-slate-800', 'text-white', 'shadow');
             b.classList.add('text-gray-300');
         });
 
-        // Show selected tab + activate its button
         if (tab === 'store') {
             storeTab.classList.remove('hidden');
             storeBtn.classList.add('bg-slate-800', 'text-white', 'shadow');
@@ -454,9 +447,7 @@
         }
     }
 
-    // ────────────────────────────────────────────────
-    // Store News
-    // ────────────────────────────────────────────────
+    // ── Store News ────────────────────────────────────────────────
     async function loadStoreData() {
         try {
             document.getElementById('loadingState').classList.remove('hidden');
@@ -490,7 +481,6 @@
             updateStoreStats(storeArticles);
             filteredStoreArticles = storeArticles;
             renderStoreArticles();
-
             document.getElementById('loadingState').classList.add('hidden');
         } catch (error) {
             console.error('Error loading store news:', error);
@@ -511,8 +501,8 @@
     }
 
     function filterStoreArticles() {
-        const searchTerm   = document.getElementById('searchInput').value.toLowerCase();
-        const typeFilter   = document.getElementById('typeFilter').value;
+        const searchTerm    = document.getElementById('searchInput').value.toLowerCase();
+        const typeFilter    = document.getElementById('typeFilter').value;
         const analystFilter = document.getElementById('analystFilter').value;
 
         filteredStoreArticles = storeArticles.filter(article => {
@@ -637,9 +627,7 @@
         }
     }
 
-    // ────────────────────────────────────────────────
-    // Connecticut Scoop
-    // ────────────────────────────────────────────────
+    // ── Connecticut Scoop ─────────────────────────────────────────
     async function loadScoopData() {
         try {
             document.getElementById('scoopLoadingState').classList.remove('hidden');
@@ -662,7 +650,6 @@
             filteredScoopArticles = scoopArticles;
             updateScoopStats(filteredScoopArticles);
             renderScoopArticles();
-
             document.getElementById('scoopLoadingState').classList.add('hidden');
         } catch (error) {
             console.error('Error loading scoop data:', error);
@@ -683,6 +670,22 @@
         );
         updateScoopStats(filteredScoopArticles);
         renderScoopArticles();
+    }
+
+    // NEW: Download CSV for Connecticut Scoop
+    function downloadScoopCSV() {
+        if (filteredScoopArticles.length === 0) return;
+        const headers = ['date', 'heading', 'link'];
+        const rows = filteredScoopArticles.map(r =>
+            headers.map(h => `"${(r[h] || '').replace(/"/g, '""')}"`).join(',')
+        );
+        const csv  = [headers.join(','), ...rows].join('\n');
+        const a    = document.createElement('a');
+        a.href     = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8;' }));
+        a.download = `ct_scoop_${new Date().toISOString().split('T')[0]}.csv`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
     }
 
     function renderScoopArticles() {
@@ -737,9 +740,7 @@
         `;
     }
 
-    // ────────────────────────────────────────────────
-    // NEW: Restaurant News
-    // ────────────────────────────────────────────────
+    // ── Restaurant News ───────────────────────────────────────────
     async function loadRestData() {
         try {
             document.getElementById('restLoadingState').classList.remove('hidden');
@@ -751,13 +752,11 @@
             if (!res.ok) throw new Error('fetch failed');
             const data = await res.json();
 
-            // Support flat array OR {data:[...]} wrapper
             restArticles = Array.isArray(data) ? data : (data.data || []);
             filteredRestArticles = [...restArticles];
             sortRestData();
             updateRestStats(filteredRestArticles);
             renderRestTable();
-
             document.getElementById('restLoadingState').classList.add('hidden');
         } catch (err) {
             console.error('Restaurant load error:', err);
@@ -880,9 +879,7 @@
         document.body.removeChild(a);
     }
 
-    // ────────────────────────────────────────────────
-    // Utilities
-    // ────────────────────────────────────────────────
+    // ── Utilities ─────────────────────────────────────────────────
     function escapeHtml(text) {
         const div = document.createElement('div');
         div.textContent = text;
