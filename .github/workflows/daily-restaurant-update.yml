@@ -25,24 +25,10 @@ jobs:
           python-version: '3.11'
           cache: 'pip'                    # caches pip dependencies — speeds up reruns
 
-      - name: Install Chrome + ChromeDriver (matched versions)
-        uses: browser-actions/setup-chrome@v1
-        id: setup-chrome                  # give it an id so we can read its outputs
-        with:
-          chrome-version: stable          # 'stable' keeps Chrome+ChromeDriver in sync
-          install-chromedriver: true
-          install-dependencies: true
-
-      - name: Verify Chrome and ChromeDriver versions match
-        run: |
-          echo "Chrome:      ${{ steps.setup-chrome.outputs.chrome-version }}"
-          echo "ChromeDriver: $(chromedriver --version)"
-          echo "Chrome path:  ${{ steps.setup-chrome.outputs.chrome-path }}"
-
       - name: Install Python dependencies
         run: |
           pip install --upgrade pip
-          pip install selenium beautifulsoup4 requests pandas openpyxl
+          pip install selenium beautifulsoup4 requests pandas openpyxl webdriver-manager
 
       - name: Run restaurant scraper
         run: python restaurant_scraper.py

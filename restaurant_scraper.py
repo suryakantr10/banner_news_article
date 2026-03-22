@@ -3,6 +3,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 import time
 from datetime import datetime, timezone, timedelta
@@ -25,14 +27,9 @@ def get_driver():
         "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
         "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
     )
-
-    # Explicitly use the chromedriver from PATH (installed by setup-chrome action)
-    # This avoids Selenium picking up the mismatched system chromedriver
-    from selenium.webdriver.chrome.service import Service
-    import shutil
-    chromedriver_path = shutil.which("chromedriver")
-    print(f"Using chromedriver: {chromedriver_path}")
-    service = Service(executable_path=chromedriver_path)
+    # webdriver-manager detects the installed Chrome version automatically
+    # and downloads the exactly matching ChromeDriver — no version mismatch possible
+    service = Service(ChromeDriverManager().install())
     return webdriver.Chrome(service=service, options=options)
 
 # ── Config ────────────────────────────────────────────────────────────────────
