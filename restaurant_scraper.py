@@ -2,62 +2,87 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 import time
 from datetime import datetime, timezone, timedelta
 import requests
 import pandas as pd
 import json
-from selenium.webdriver.chrome.options import Options
 
-url = "https://whatnow.com/category/restaurants/"
-user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+# ── Chrome setup (GitHub Actions compatible) ──────────────────────────────────
+def get_driver():
+    options = Options()
+    options.add_argument("--headless=new")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--window-size=1920,1080")
+    options.add_argument("--disable-blink-features=AutomationControlled")
+    options.add_experimental_option("excludeSwitches", ["enable-automation"])
+    options.add_experimental_option("useAutomationExtension", False)
+    options.add_argument(
+        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+    )
+    return webdriver.Chrome(options=options)
 
-options = Options()
-options.add_argument("user-agent=" + user_agent)
-driver = webdriver.Chrome(options=options)
-driver.get(url)
-time.sleep(3)
+# ── Config ────────────────────────────────────────────────────────────────────
+URL       = "https://whatnow.com/category/restaurants/"
+MAX_PAGES = 10
+now_utc   = datetime.now(timezone.utc)
+CUTOFF    = now_utc - timedelta(days=2)
 
-max_pages = 10
-pages_viewed = 1
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+    )
+}
 
-# ── Date filter ────────────────────────────────────────────────────────────────
-now_utc = datetime.now(timezone.utc)
-cutoff  = now_utc - timedelta(days=2)
-# ──────────────────────────────────────────────────────────────────────────────
-
-def count_posts():
-    return len(driver.find_elements(By.CLASS_NAME, "p-wrap"))
+# ── Scrape post listing ───────────────────────────────────────────────────────
+driver = get_driver()
 
 try:
-    WebDriverWait(driver, 10).until(
-        EC.presence_of_all_elements_located((By.CLASS_NAME, "p-wrap"))
-    )
-except:
-    print("No posts found on initial load")
+    driver.get(URL)
 
-while pages_viewed < max_pages:
-    prev_count = count_posts()
     try:
-        view_more = driver.find_element(By.XPATH, "//a[contains(@class, 'loadmore-trigger')]")
-    except:
-        print("No more VIEW MORE button found")
-        break
+        WebDriverWait(driver, 15).until(
+            EC.presence_of_all_elements_located((By.CLASS_NAME, "p-wrap"))
+        )
+    except Exception:
+        print("⚠️  No posts found on initial load — check if selector changed")
 
-    driver.execute_script("arguments[0].click();", view_more)
-    try:
-        WebDriverWait(driver, 10).until(lambda d: count_posts() > prev_count)
-        pages_viewed += 1
-        print(f"Viewed pages: {pages_viewed}/{max_pages}")
-        time.sleep(0.5)
-    except:
-        print("Click did not load new posts or timed out")
-        break
+    def count_posts():
+        return len(driver.find_elements(By.CLASS_NAME, "p-wrap"))
 
-page_source = driver.page_source
-driver.quit()
+    pages_viewed = 1
+    while pages_viewed < MAX_PAGES:
+        prev_count = count_posts()
+        try:
+            view_more = driver.find_element(
+                By.XPATH, "//a[contains(@class, 'loadmore-trigger')]"
+            )
+        except Exception:
+            print(f"No more 'View More' button — stopping at page {pages_viewed}")
+            break
 
+        driver.execute_script("arguments[0].click();", view_more)
+        try:
+            WebDriverWait(driver, 10).until(lambda d: count_posts() > prev_count)
+            pages_viewed += 1
+            print(f"  Loaded page {pages_viewed}/{MAX_PAGES}")
+            time.sleep(0.5)
+        except Exception:
+            print("Click did not load new posts or timed out")
+            break
+
+    page_source = driver.page_source
+
+finally:
+    driver.quit()   # always quit — even if scraping throws an error
+
+# ── Parse posts ───────────────────────────────────────────────────────────────
 soup  = BeautifulSoup(page_source, "html.parser")
 posts = soup.select("div.p-wrap")
 
@@ -82,51 +107,68 @@ for p in posts:
                 if post_dt.tzinfo is None:
                     post_dt = post_dt.replace(tzinfo=timezone.utc)
                 date_str = post_dt.strftime("%B %d, %Y")
-            except:
+            except Exception:
                 date_str = time_el.get_text(strip=True)
         else:
             date_str = time_el.get_text(strip=True)
 
-    if post_dt is None or post_dt < cutoff:
+    # Skip posts outside the 48-hour window
+    if post_dt is None or post_dt < CUTOFF:
         continue
 
     seen_urls.add(href)
     rows.append({"date": date_str, "url": href})
 
-print(f"Posts within last 2 days: {len(rows)}")
+print(f"\n📋 Posts within last 48 hours: {len(rows)}")
 
-headers = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-                  "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-}
+if not rows:
+    print("No posts found in window — exiting without writing files.")
+    exit(0)
 
-for row in rows:
-    response     = requests.get(row["url"], headers=headers)
-    soup         = BeautifulSoup(response.text, "html.parser")
-    row["title"] = soup.title.string.strip() if soup.title else ""
+# ── Fetch individual article pages ────────────────────────────────────────────
+for i, row in enumerate(rows, 1):
+    try:
+        resp = requests.get(row["url"], headers=HEADERS, timeout=15)
+        resp.raise_for_status()
+        article_soup = BeautifulSoup(resp.text, "html.parser")
 
-    address  = None
-    addr_div = soup.find("div", class_="bottom_infowindow bottom_infowindow0 only_one")
-    if addr_div:
-        h3 = addr_div.find("h3")
-        if h3:
-            address = h3.get_text(strip=True)
-    row["address"] = address or ""   # empty string instead of None for clean JSON
+        row["title"] = (
+            article_soup.title.string.strip() if article_soup.title else ""
+        )
 
-# ── Save CSV (daily archive) ───────────────────────────────────────────────────
+        address  = None
+        addr_div = article_soup.find(
+            "div", class_="bottom_infowindow bottom_infowindow0 only_one"
+        )
+        if addr_div:
+            h3 = addr_div.find("h3")
+            if h3:
+                address = h3.get_text(strip=True)
+        row["address"] = address or ""
+
+        print(f"  [{i}/{len(rows)}] ✓ {row['title'][:60]}")
+
+    except Exception as e:
+        row["title"]   = ""
+        row["address"] = ""
+        print(f"  [{i}/{len(rows)}] ✗ Failed to fetch {row['url']} — {e}")
+
+    time.sleep(0.3)   # polite delay between article requests
+
+# ── Save CSV ──────────────────────────────────────────────────────────────────
 today    = datetime.now().strftime("%Y-%m-%d")
 csv_file = f"Daily_restaurants_{today}.csv"
-df = pd.DataFrame(rows)
+df       = pd.DataFrame(rows, columns=["date", "title", "address", "url"])
 df.to_csv(csv_file, index=False, encoding="utf-8")
-print(f"CSV saved  → {csv_file} ({len(df)} rows)")
+print(f"\n✅ CSV  saved → {csv_file} ({len(df)} rows)")
 
-# ── Save JSON (this is what the website reads) ────────────────────────────────
+# ── Save JSON ─────────────────────────────────────────────────────────────────
 json_payload = {
-    "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M UTC"),
-    "data": rows   # list of {date, url, title, address}
+    "last_updated": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+    "total":        len(rows),
+    "data":         rows,
 }
-
 with open("restaurant_latest.json", "w", encoding="utf-8") as f:
     json.dump(json_payload, f, ensure_ascii=False, indent=2)
 
-print(f"JSON saved → restaurant_latest.json ({len(rows)} records)")
+print(f"✅ JSON saved → restaurant_latest.json ({len(rows)} records)")
