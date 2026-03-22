@@ -25,7 +25,15 @@ def get_driver():
         "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
         "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
     )
-    return webdriver.Chrome(options=options)
+
+    # Explicitly use the chromedriver from PATH (installed by setup-chrome action)
+    # This avoids Selenium picking up the mismatched system chromedriver
+    from selenium.webdriver.chrome.service import Service
+    import shutil
+    chromedriver_path = shutil.which("chromedriver")
+    print(f"Using chromedriver: {chromedriver_path}")
+    service = Service(executable_path=chromedriver_path)
+    return webdriver.Chrome(service=service, options=options)
 
 # ── Config ────────────────────────────────────────────────────────────────────
 URL       = "https://whatnow.com/category/restaurants/"

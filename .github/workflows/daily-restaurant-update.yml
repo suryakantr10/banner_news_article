@@ -27,10 +27,17 @@ jobs:
 
       - name: Install Chrome + ChromeDriver (matched versions)
         uses: browser-actions/setup-chrome@v1
+        id: setup-chrome                  # give it an id so we can read its outputs
         with:
-          chrome-version: latest
-          install-chromedriver: true      # was missing — this was causing your SessionNotCreatedException
-          install-dependencies: true      # installs system libs Chrome needs (libnss3 etc.)
+          chrome-version: stable          # 'stable' keeps Chrome+ChromeDriver in sync
+          install-chromedriver: true
+          install-dependencies: true
+
+      - name: Verify Chrome and ChromeDriver versions match
+        run: |
+          echo "Chrome:      ${{ steps.setup-chrome.outputs.chrome-version }}"
+          echo "ChromeDriver: $(chromedriver --version)"
+          echo "Chrome path:  ${{ steps.setup-chrome.outputs.chrome-path }}"
 
       - name: Install Python dependencies
         run: |
