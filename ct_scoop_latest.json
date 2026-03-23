@@ -1,6 +1,16 @@
 {
-  "last_updated": "2026-03-22",
+  "last_updated": "2026-03-23",
   "data": [
+    {
+      "heading": "GROTON SCOOP: Shah's Halal coming to Groton",
+      "date": "2026-03-23",
+      "link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/groton-scoop-shahs-halal-coming-to-groton"
+    },
+    {
+      "heading": "MIDDLEFIELD SCOOP: Hot Rock Pizza coming to old Pizzeria Da Vinci spot!",
+      "date": "2026-03-23",
+      "link": "https://www.theconnecticutscoop.com/all-middlesex-county-posts/middlefield-scoop-hot-rock-pizza-coming-to-old-pizzeria-da-vinci-spot"
+    },
     {
       "heading": "PUTNAM SCOOP: Agave Mexican Kitchen coming soon!",
       "date": "2026-03-22",
@@ -30,36 +40,6 @@
       "heading": "COLCHESTER SCOOP: In-N-Out coming to Colchester? Not so fast!",
       "date": "2026-03-21",
       "link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/colchester-scoop-in-n-out-coming-to-colchester-not-so-fast"
-    },
-    {
-      "heading": "MANCHESTER SCOOP: Eighth District Distilling Company is back open this weekend!",
-      "date": "2026-03-20",
-      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/manchester-scoop-eighth-district-distilling-company-is-back-open-this-weekend"
-    },
-    {
-      "heading": "BRISTOL SCOOP: Qdoba Mexican Eats coming soon to Bristol",
-      "date": "2026-03-20",
-      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/bristol-scoop-qdoba-mexican-eats-coming-soon-to-bristol"
-    },
-    {
-      "heading": "SOUTH WINDSOR SCOOP: Three Amigos Mexican Taqueria opens today, 03/20!",
-      "date": "2026-03-20",
-      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/south-windsor-scoop-three-amigos-mexican-taqueria-opens-today-0320"
-    },
-    {
-      "heading": "ORANGE SCOOP: Nan Xiang Soup Dumplings coming soon to former TGI Fridays space",
-      "date": "2026-03-20",
-      "link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/orange-scoop-nan-xiang-soup-dumplings-coming-soon-to-former-tgi-fridays-space"
-    },
-    {
-      "heading": "CLINTON SCOOP: Steward's Ace Hardware moving into former TJ Maxx space",
-      "date": "2026-03-20",
-      "link": "https://www.theconnecticutscoop.com/all-middlesex-county-posts/clinton-scoop-stewards-ace-hardware-moving-into-former-tj-maxx-space"
-    },
-    {
-      "heading": "CHICOPEE SCOOP: Ross Dress for Less plans first Massachusetts location!",
-      "date": "2026-03-20",
-      "link": "https://www.theconnecticutscoop.com/all-mass-posts/chicopee-scoop-ross-dress-for-less-plans-first-massachusetts-location"
     }
   ]
 }
