@@ -2,28 +2,33 @@ name: Daily Restaurant News Update
 
 on:
   schedule:
-    - cron: '30 23 * * *'  # 11:30 PM UTC = 5:00 AM IST
+    - cron: '30 23 * * *'
   workflow_dispatch:
 
 jobs:
   scrape:
-    runs-on: ubuntu-24.04    # pin to specific version — ubuntu-latest can change unexpectedly
+    runs-on: ubuntu-24.04
 
     permissions:
-      contents: write        # required for git push — was missing, causes silent 403 errors
+      contents: write
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4         # updated: fixes Node.js 20 deprecation warning
+        uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 1
 
+      - name: Install Chrome
+        uses: browser-actions/setup-chrome@v1   # ← ADD THIS
+        with:
+          chrome-version: stable
+
       - name: Set up Python
-        uses: actions/setup-python@v5     # updated: fixes Node.js 20 deprecation warning
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'                    # caches pip dependencies — speeds up reruns
+          cache: 'pip'
 
       - name: Install Python dependencies
         run: |

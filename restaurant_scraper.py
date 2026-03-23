@@ -5,14 +5,35 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.core.os_manager import ChromeType
 from bs4 import BeautifulSoup
 import time
+import subprocess
 from datetime import datetime, timezone, timedelta
 import requests
 import pandas as pd
 import json
 
 # ── Chrome setup (GitHub Actions compatible) ──────────────────────────────────
+def get_chrome_version():
+    """Detect installed Chrome version for webdriver-manager."""
+    for cmd in [
+        ["google-chrome", "--version"],
+        ["google-chrome-stable", "--version"],
+        ["chromium-browser", "--version"],
+        ["chromium", "--version"],
+    ]:
+        try:
+            out = subprocess.check_output(cmd, stderr=subprocess.DEVNULL).decode()
+            version = out.strip().split()[-1]   # e.g. "124.0.6367.91"
+            print(f"  Detected Chrome: {version} via '{cmd[0]}'")
+            return version
+        except Exception:
+            continue
+    print("  ⚠️  Could not detect Chrome version — letting webdriver-manager auto-detect")
+    return None
+
+
 def get_driver():
     options = Options()
     options.add_argument("--headless=new")
@@ -25,12 +46,17 @@ def get_driver():
     options.add_experimental_option("useAutomationExtension", False)
     options.add_argument(
         "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
     )
-    # webdriver-manager detects the installed Chrome version automatically
-    # and downloads the exactly matching ChromeDriver — no version mismatch possible
-    service = Service(ChromeDriverManager().install())
+
+    chrome_version = get_chrome_version()
+
+    # Pass the detected version so webdriver-manager downloads the exact
+    # matching ChromeDriver — prevents the localhost timeout on CI runners.
+    driver_path = ChromeDriverManager(driver_version=chrome_version).install()
+    service = Service(driver_path)
     return webdriver.Chrome(service=service, options=options)
+
 
 # ── Config ────────────────────────────────────────────────────────────────────
 URL       = "https://whatnow.com/category/restaurants/"
@@ -41,7 +67,7 @@ CUTOFF    = now_utc - timedelta(days=2)
 HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
     )
 }
 
