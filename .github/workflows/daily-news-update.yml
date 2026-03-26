@@ -14,25 +14,26 @@ permissions:
 jobs:
   update-news:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-      
+          fetch-depth: 0  # Fetch full history so rebase works correctly
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      
+
       - name: Install dependencies
         run: |
           pip install feedparser pandas python-dateutil
-      
+
       - name: Run news fetcher
         run: python fetch_store_news.py
-      
+
       - name: Commit and push changes
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -41,4 +42,5 @@ jobs:
           git add latest_news_*.json || true
           git add store_open_close_news_*.csv || true
           git diff --staged --quiet || git commit -m "Auto-update: Daily news fetch $(date +'%Y-%m-%d')"
-          git push
+          git pull --rebase origin main
+          git push origin main
