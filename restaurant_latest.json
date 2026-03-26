@@ -1,312 +1,78 @@
 {
-  "last_updated": "2026-03-24 23:58 UTC",
-  "total": 51,
+  "last_updated": "2026-03-26 00:01 UTC",
+  "total": 12,
   "data": [
     {
-      "date": "March 24, 2026",
-      "url": "https://whatnow.com/charleston/restaurants/coast-roast-coffee-debuts-in-port-royal-everybodys-so-nice-welcoming/",
-      "title": "Coast Roast Coffee Debuts in Port Royal",
-      "address": "1628 Paris Ave. Port Royal, SC 29935"
+      "date": "March 25, 2026",
+      "url": "https://whatnow.com/washington-dc/restaurants/the-ruxton-bringing-premium-steakhouse-experience-to-dc/",
+      "title": "The Ruxton Bringing Premium Steakhouse Experience to DC",
+      "address": "101 Constitution Ave. NW, Washington, DC 20001"
     },
     {
-      "date": "March 24, 2026",
-      "url": "https://whatnow.com/denver/restaurants/snarfs-sandwiches-to-open-location-in-montbello/",
-      "title": "Snarf's Sandwiches to Open Location in Montbello",
-      "address": "4505 Peoria St, Denver, CO 80239"
+      "date": "March 25, 2026",
+      "url": "https://whatnow.com/phoenix/restaurants/happy-good-will-open-in-phoenix-serving-bagels-and-cocktails/",
+      "title": "Happy Good Will Open in Phoenix, Serving Bagels and Cocktails",
+      "address": "310 E Buchanan St, Phoenix, AZ 85004"
     },
     {
-      "date": "March 24, 2026",
-      "url": "https://whatnow.com/miami/restaurants/ariete-hospitality-group-acquires-hoy-como-ayer/",
-      "title": "Ariete Hospitality Group Acquires Hoy Como Ayer",
-      "address": "2212 SW 8th St, Miami, FL 33135"
+      "date": "March 25, 2026",
+      "url": "https://whatnow.com/denver/restaurants/ziggis-coffee-is-opening-a-new-location-in-littleton/",
+      "title": "Ziggi's Coffee is Opening a New Location in Littleton",
+      "address": "8020 Sangre De Cristo Rd, Littleton, CO 80127"
     },
     {
-      "date": "March 24, 2026",
-      "url": "https://whatnow.com/seattle/restaurants/wallys-drive-in-and-chowder-house-set-to-change-ownership-theyre-old-school-thats-our-thing/",
-      "title": "Wally’s Chowder House and Drive-In Set to Change Ownership",
+      "date": "March 25, 2026",
+      "url": "https://whatnow.com/phoenix/restaurants/otra-pizzeria-and-better-days-to-open-inside-historic-phoenix-building/",
+      "title": "Otra Pizzeria and Better Days to Open Inside Historic Phoenix Building",
+      "address": "Buchanan St & 3rd Ave, Phoenix, AZ 85003"
+    },
+    {
+      "date": "March 25, 2026",
+      "url": "https://whatnow.com/orange-county/restaurants/smalls-smash-club-coming-to-laguna-beach/",
+      "title": "Small’s Smash Club Coming to Laguna Beach",
+      "address": "2794 Pacific Coast Hwy, Corona Del Mar, CA 92625"
+    },
+    {
+      "date": "March 25, 2026",
+      "url": "https://whatnow.com/detroit/restaurants/honey-dirt-coffee-to-debut-larger-cafe-on-livernois-in-ferndale/",
+      "title": "Honey Dirt Coffee to Debut Larger Cafe on Livernois in Ferndale",
+      "address": "359 Livernois, Ferndale, MI 48220"
+    },
+    {
+      "date": "March 25, 2026",
+      "url": "https://whatnow.com/san-francisco/restaurants/greystone-lounge-to-debut-in-novato-this-summer/",
+      "title": "Greystone Lounge to Debut in Novato this Summer",
+      "address": "7377 Redwood Blvd, Novato, CA 94945"
+    },
+    {
+      "date": "March 25, 2026",
+      "url": "https://whatnow.com/montreal/restaurants/juice-dudez-expanding-in-ottawa-with-new-location/",
+      "title": "Juice Dudez Expanding in Ottawa with New Location",
       "address": ""
     },
     {
-      "date": "March 24, 2026",
-      "url": "https://whatnow.com/detroit/restaurants/owner-of-farmingtons-apothecary-coffee-planning-new-wixom-cafe/",
-      "title": "Owner of Farmington’s Apothecary Coffee Planning New Wixom Cafe",
-      "address": "49348 Pontiac Trail, Wixom, MI 48393"
+      "date": "March 25, 2026",
+      "url": "https://whatnow.com/dallas/restaurants/iconic-fried-catfish-spot-in-lake-dallas-to-close-again-after-brief-revival/",
+      "title": "Iconic Fried Catfish Spot in Lake Dallas to Close Again After Brief Revival",
+      "address": "303 Alamo Ave Suite B, Lake Dallas, TX 75065, United States"
     },
     {
-      "date": "March 24, 2026",
-      "url": "https://whatnow.com/charlotte/restaurants/7-brew-targeting-concord-for-new-location/",
-      "title": "7 Brew Targeting Concord For New Location | What Now Charlotte",
-      "address": "1275 Concord Pkwy S, Concord, NC 28027"
+      "date": "March 25, 2026",
+      "url": "https://whatnow.com/boston/restaurants/mothers-east-tavern-nears-debut-in-south-bostons-former-telegraph-hill-space/",
+      "title": "Mother’s East Tavern Nears Debut in South Boston’s Former Telegraph Hill Space",
+      "address": "289 Dorchester St, Boston, MA 02127"
     },
     {
-      "date": "March 24, 2026",
-      "url": "https://whatnow.com/new-york/restaurants/a-new-eastern-mediterranean-dining-concept-is-opening-on-upper-east-side/",
-      "title": "A New Eastern Mediterranean Dining Concept is Opening on Upper East Side",
-      "address": "961 Lexington Ave, New York, NY 10021"
+      "date": "March 25, 2026",
+      "url": "https://whatnow.com/detroit/restaurants/onesto-mediterranean-cuisine-and-bar-space-on-the-way-to-ypsilanti/",
+      "title": "‘Onesto’ Mediterranean Cuisine and Bar Space on the Way to Ypsilanti",
+      "address": "17 N Washington St, Ypsilanti, MI 48197"
     },
     {
-      "date": "March 24, 2026",
-      "url": "https://whatnow.com/orlando/restaurants/olde-hearth-bread-company-opening-a-new-bakery/",
-      "title": "Olde Hearth Bread Company Opening a New Bakery",
-      "address": "1231 N Orange Ave, Orlando, FL 32804"
-    },
-    {
-      "date": "March 24, 2026",
-      "url": "https://whatnow.com/toronto/restaurants/slowhand-pizza-expanding-to-torontos-west-end/",
-      "title": "Slowhand Pizza Expanding to Toronto’s West End",
-      "address": "8 Waterloo Terrace, Toronto, ON M5V 3S4, Canada"
-    },
-    {
-      "date": "March 24, 2026",
-      "url": "https://whatnow.com/chicago/restaurants/activitea-and-coffee-brewing-new-shop-with-drive-thru-in-gilberts/",
-      "title": "Activitea and Coffee Brewing New Shop with Drive-Thru in Gilberts",
-      "address": ""
-    },
-    {
-      "date": "March 24, 2026",
-      "url": "https://whatnow.com/san-francisco/restaurants/il-porto-coming-to-san-franciscos-waterfront/",
-      "title": "Il Porto Coming to San Francisco’s Waterfront",
-      "address": ""
-    },
-    {
-      "date": "March 24, 2026",
-      "url": "https://whatnow.com/charlotte/restaurants/jaggers-heading-to-concord-permits-indicate/",
-      "title": "Jaggers Heading To Concord, Permits Indicate | What Now Charlotte",
-      "address": "985 Concord Pkwy S, Concord, NC 28027"
-    },
-    {
-      "date": "March 24, 2026",
-      "url": "https://whatnow.com/toronto/restaurants/rosetta-bringing-italian-inspired-steakhouse-to-picton/",
-      "title": "Rosetta Bringing Italian-Inspired Steakhouse to Picton",
-      "address": "279 Picton Main St, Picton, ON K0K 2T0, Canada"
-    },
-    {
-      "date": "March 24, 2026",
-      "url": "https://whatnow.com/toronto/restaurants/north-wine-cocktail-co-to-debut-in-haileybury/",
-      "title": "NORTH Wine & Cocktail Co. to Debut in Haileybury",
-      "address": ""
-    },
-    {
-      "date": "March 24, 2026",
-      "url": "https://whatnow.com/san-francisco/restaurants/rancho-cantina-expanding-to-downtown-danville/",
-      "title": "Rancho Cantina Expanding to Downtown Danville",
-      "address": "501 Hartz Ave, Danville, CA 94526"
-    },
-    {
-      "date": "March 24, 2026",
-      "url": "https://whatnow.com/orlando/restaurants/gold-crest-distillery-eyeing-new-location-with-tasting-room/",
-      "title": "Gold Crest Distillery Eyeing New Location With Tasting Room",
-      "address": "503 W Central Blvd, Orlando, FL 32801"
-    },
-    {
-      "date": "March 24, 2026",
-      "url": "https://whatnow.com/san-diego/restaurants/dudleys-bakery-under-new-ownership-in-santa-ysabel/",
-      "title": "Dudley’s Bakery Under New Ownership in Santa Ysabel",
-      "address": "30218 CA-78, Santa Ysabel, CA 92070"
-    },
-    {
-      "date": "March 24, 2026",
-      "url": "https://whatnow.com/philadelphia/restaurants/nothing-bundt-cakes-expands-in-new-jersey-with-manahawkin-and-wall-locations/",
-      "title": "Nothing Bundt Cakes to Open in Manahawkin and Wall",
-      "address": ""
-    },
-    {
-      "date": "March 24, 2026",
-      "url": "https://whatnow.com/los-angeles/restaurants/after-118-years-las-french-dip-sandwich-legend-prepares-for-final-farewell/",
-      "title": "After 118 Years, LA's French Dip Sandwich Legend Prepares for Final Farewell",
-      "address": "118 E 6th St, Los Angeles, CA 90014, United States"
-    },
-    {
-      "date": "March 24, 2026",
-      "url": "https://whatnow.com/orlando/restaurants/ellianos-headed-to-st-cloud/",
-      "title": "Ellianos Headed to St. Cloud",
-      "address": "4949 E Irlo Bronson Memorial Hwy, St Cloud, FL 34771"
-    },
-    {
-      "date": "March 24, 2026",
-      "url": "https://whatnow.com/san-francisco/restaurants/andytown-coffee-roasters-coming-to-downtown/",
-      "title": "Andytown Coffee Roasters Coming to Downtown",
-      "address": "66 Kearny St, San Francisco, CA 94108"
-    },
-    {
-      "date": "March 24, 2026",
-      "url": "https://whatnow.com/new-york/restaurants/delmonicos-to-open-a-restaurant-in-midtown/",
-      "title": "After Nearly 200 Years, Steakhouse Delmonico's is Opening a Second Location",
-      "address": "1330 6th Ave, New York, NY 10019"
-    },
-    {
-      "date": "March 24, 2026",
-      "url": "https://whatnow.com/san-francisco/restaurants/popular-livermore-cafe-closes-after-12-years-in-business/",
-      "title": "Popular Livermore Cafe Closes After 12 Years in Business",
-      "address": "51 Wright Brothers Ave, Livermore, CA 94551, United States"
-    },
-    {
-      "date": "March 24, 2026",
-      "url": "https://whatnow.com/chicago/restaurants/all-well-concept-to-debut-at-former-lolas-restaurant-and-bar-space/",
-      "title": "'All Well' Concept Moving into Former Lola’s Restaurant and Bar Space",
-      "address": "111 N Carpenter St, Chicago, IL 60607"
-    },
-    {
-      "date": "March 24, 2026",
-      "url": "https://whatnow.com/portland/restaurants/pelican-brewing-to-open-location-in-yachats/",
-      "title": "Pelican Brewing to Open Location in Yachats",
-      "address": "580 Hwy 101 N, Yachats, OR 97498"
-    },
-    {
-      "date": "March 24, 2026",
-      "url": "https://whatnow.com/atlanta/restaurants/two-new-restaurants-one-kitchen-innovative-dining-experience-opens-in-the-outlet-shoppes-at-atlanta/",
-      "title": "Two New Restaurants, One Kitchen: Innovative Dining Experience Opens in the Outlet Shoppes at Atlanta | What Now Atlanta",
-      "address": "915 Ridgewalk Pkwy, Woodstock, GA 30188"
-    },
-    {
-      "date": "March 23, 2026",
-      "url": "https://whatnow.com/nashville/restaurants/jos-coffee-targeting-downtown-nashville-for-first-location-outside-of-texas/",
-      "title": "Jo’s Coffee Targeting Downtown Nashville For First Location Outside of Texas | What Now Nashville",
-      "address": "210 4th Ave N, Nashville, TN 37219"
-    },
-    {
-      "date": "March 23, 2026",
-      "url": "https://whatnow.com/miami/restaurants/lynoras-is-coming-to-royal-palm-beach/",
-      "title": "Lynora's is Coming to Royal Palm Beach",
-      "address": "580 N State Rd 7, Royal Palm Beach, FL 33411"
-    },
-    {
-      "date": "March 23, 2026",
-      "url": "https://whatnow.com/orlando/restaurants/lynoras-to-open-in-melbourne/",
-      "title": "Lynora's to Open in Melbourne",
-      "address": "529 E New Haven Ave, Melbourne, FL 32901"
-    },
-    {
-      "date": "March 23, 2026",
-      "url": "https://whatnow.com/denver/restaurants/p-f-changs-lands-location-in-denver-international-airport/",
-      "title": "P.F. Chang's Lands Location in Denver International Airport",
-      "address": "8700 Peña Blvd, Denver, CO 80249"
-    },
-    {
-      "date": "March 23, 2026",
-      "url": "https://whatnow.com/columbus/restaurants/ace-of-cups-owner-bringing-cocktail-bar-to-short-north/",
-      "title": "Ace of Cups Owner Bringing Cocktail Bar to Short North",
-      "address": "132 E 5th Ave, Columbus, OH 43201"
-    },
-    {
-      "date": "March 23, 2026",
-      "url": "https://whatnow.com/philadelphia/restaurants/tommys-tavern-tap-brings-its-popular-bar-and-grill-to-toms-river/",
-      "title": "Tommy’s Tavern + Tap to Expand to Toms River",
-      "address": "1279 Hooper Ave. Toms River, NJ 08753"
-    },
-    {
-      "date": "March 23, 2026",
-      "url": "https://whatnow.com/orlando/restaurants/chubby-cattle-bbq-by-david-zhao-is-opening-on-i-drive/",
-      "title": "Chubby Cattle BBQ by David Zhao is Opening on I-Drive",
-      "address": "9101 International Dr, Orlando, FL 32819"
-    },
-    {
-      "date": "March 23, 2026",
-      "url": "https://whatnow.com/chicago/restaurants/astor-club-opening-second-supper-club-at-mansion-in-near-north-side/",
-      "title": "Astor Club Opening Full-Service Venue at Mansion in Near North Side",
-      "address": "1516 N Lake Shore Dr, Chicago, IL 60610"
-    },
-    {
-      "date": "March 23, 2026",
-      "url": "https://whatnow.com/miami/restaurants/passion-restaurant-group-to-open-new-concept-in-brickell/",
-      "title": "Passion Restaurant Group to Open New Concept in Brickell",
-      "address": "1000 S Miami Ave, Miami, FL 33130"
-    },
-    {
-      "date": "March 23, 2026",
-      "url": "https://whatnow.com/philadelphia/restaurants/wawa-prepares-wildwood-debut-with-retro-doo-wop-location/",
-      "title": "Wawa Prepares Wildwood Debut With Retro 'Doo-Wop' Location",
-      "address": "3400 New Jersey Ave. Wildwood, NJ 08260"
-    },
-    {
-      "date": "March 23, 2026",
-      "url": "https://whatnow.com/miami/restaurants/coopers-hawk-is-coming-to-delray-beach/",
-      "title": "Cooper's Hawk is Coming to Delray Beach",
-      "address": "1750 S Federal Hwy, Delray Beach, FL 33483"
-    },
-    {
-      "date": "March 23, 2026",
-      "url": "https://whatnow.com/las-vegas/restaurants/a-go-to-breakfast-destination-in-las-vegas-is-preparing-to-shut-its-doors-after-28-years/",
-      "title": "A Go-To Breakfast Destination in Las Vegas Is Preparing to Shut Its Doors After 28 Years",
-      "address": "6960 S Rainbow Blvd, Las Vegas, NV 89118, United States"
-    },
-    {
-      "date": "March 23, 2026",
-      "url": "https://whatnow.com/philadelphia/restaurants/7th-street-burger-to-open-philly-locations-in-fishtown-and-rittenhouse-square/",
-      "title": "7th Street Burger Flips Into Philly with Two New Locations",
-      "address": ""
-    },
-    {
-      "date": "March 23, 2026",
-      "url": "https://whatnow.com/new-york/restaurants/hoboken-loses-a-neighborhood-favorite-after-10-years/",
-      "title": "Hoboken Loses a Neighborhood Favorite After 10 Years",
-      "address": "55 1st St, Hoboken, NJ 07030"
-    },
-    {
-      "date": "March 23, 2026",
-      "url": "https://whatnow.com/san-francisco/restaurants/a-beloved-bay-area-juice-spot-will-close-its-doors-this-april/",
-      "title": "A Beloved Bay Area Juice Spot Will Close Its Doors This April",
-      "address": "Ferry Plz, San Francisco, CA 94105, United States"
-    },
-    {
-      "date": "March 23, 2026",
-      "url": "https://whatnow.com/houston/restaurants/this-east-downtown-taproom-is-saying-goodbye-after-years-of-growth/",
-      "title": "This East Downtown Taproom Is Saying Goodbye After Years of Growth",
-      "address": "2012 Dallas St, Houston, TX 77003, United States"
-    },
-    {
-      "date": "March 23, 2026",
-      "url": "https://whatnow.com/new-york/restaurants/chama-mama-opens-bushwick-location-and-launches-new-georgian-bakery-concept/",
-      "title": "Chama Mama Opens Bushwick Location and Launches New Georgian Bakery Concept | What Now New York",
-      "address": "81 Morgan Ave, Brooklyn, NY 11237"
-    },
-    {
-      "date": "March 23, 2026",
-      "url": "https://whatnow.com/orlando/restaurants/first-watch-opens-new-restaurant-on-wickham-road/",
-      "title": "First Watch Opens New Restaurant on Wickham Road | What Now Orlando",
-      "address": "5195 N Wickham Rd, Melbourne, FL 32940"
-    },
-    {
-      "date": "March 23, 2026",
-      "url": "https://whatnow.com/jacksonville/restaurants/bubba-gump-shrimp-co-opens-new-jacksonville-beach-location/",
-      "title": "Bubba Gump Shrimp Co. Opens New Jacksonville Beach Location | What Now Jacksonville",
-      "address": "6 Beach Blvd, Jacksonville Beach, FL 32250"
-    },
-    {
-      "date": "March 23, 2026",
-      "url": "https://whatnow.com/atlanta/restaurants/nadc-burger-and-5-more-upcoming-restaurants-we-uncovered-in-atlanta-last-week-mar-16-20/",
-      "title": "NADC Burger and 5 More Upcoming Restaurants We Uncovered in Atlanta Last Week (Mar 16-20)",
-      "address": ""
-    },
-    {
-      "date": "March 22, 2026",
-      "url": "https://whatnow.com/memphis/restaurants/bar-billares-las-traviesas-headed-to-memphis/",
-      "title": "Bar Billares las Traviesas Headed to Memphis",
-      "address": "4330 American Way, Memphis, TN 38118"
-    },
-    {
-      "date": "March 22, 2026",
-      "url": "https://whatnow.com/memphis/restaurants/new-memphis-family-haven-aims-for-auspicious-opening-date/",
-      "title": "New Memphis Family Haven Aims for Auspicious Opening Date",
-      "address": "2166 Central Ave, Memphis, TN 38104"
-    },
-    {
-      "date": "March 22, 2026",
-      "url": "https://whatnow.com/memphis/restaurants/new-fried-chicken-restaurant-planned-for-cordova/",
-      "title": "New Fried Chicken Restaurant Planned for Cordova",
-      "address": "1204 N Houston Levee Rd, Cordova, TN 38018"
-    },
-    {
-      "date": "March 22, 2026",
-      "url": "https://whatnow.com/dallas/restaurants/more-wonder-headed-to-dfw/",
-      "title": "More Wonder Headed to DFW",
-      "address": "1801 Preston Rd, Plano, TX 75093"
-    },
-    {
-      "date": "March 22, 2026",
-      "url": "https://whatnow.com/dallas/restaurants/cold-stone-creamery-headed-to-new-fort-worth-storefront/",
-      "title": "Cold Stone Creamery Headed to New Fort Worth Storefront",
-      "address": "3400 TX-114 #105, Fort Worth, TX 76177"
+      "date": "March 25, 2026",
+      "url": "https://whatnow.com/phoenix/restaurants/popular-italian-dining-staple-in-phoenix-closes-doors-after-24-year-run/",
+      "title": "Popular Italian Dining Staple in Phoenix Closes Doors After 24-Year Run",
+      "address": "2824 E Indian School Rd, Phoenix, AZ 85016, United States"
     }
   ]
 }
