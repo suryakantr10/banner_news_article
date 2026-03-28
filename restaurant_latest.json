@@ -1,7 +1,103 @@
 {
-  "last_updated": "2026-03-27 23:56 UTC",
-  "total": 77,
+  "last_updated": "2026-03-28 23:58 UTC",
+  "total": 64,
   "data": [
+    {
+      "date": "March 27, 2026",
+      "url": "https://whatnow.com/austin/restaurants/after-almost-two-years-on-the-pop-up-circuit-foodie-tina-plans-first-brick-and-mortar/",
+      "title": "After Almost Two Years on the Pop-Up Circuit, Foodie & Tina Plans First Brick-and-Mortar",
+      "address": "2153 S Lamar Blvd, Austin, TX 78704"
+    },
+    {
+      "date": "March 27, 2026",
+      "url": "https://whatnow.com/austin/restaurants/texas-french-bread-returning-to-brick-and-mortar/",
+      "title": "Texas French Bread Returning to Brick and Mortar",
+      "address": "2900 Rio Grande St, Austin, TX 78705"
+    },
+    {
+      "date": "March 27, 2026",
+      "url": "https://whatnow.com/austin/restaurants/honest-marys-is-headed-downtown/",
+      "title": "Honest Mary’s Is Headed Downtown",
+      "address": "222 West Ave, Austin, TX 78701"
+    },
+    {
+      "date": "March 27, 2026",
+      "url": "https://whatnow.com/austin/restaurants/katzs-never-kloses-is-making-an-austin-comeback/",
+      "title": "Katz’s Never Kloses Is Making an Austin Comeback",
+      "address": "618 W 6th St, Austin, TX 78701"
+    },
+    {
+      "date": "March 27, 2026",
+      "url": "https://whatnow.com/austin/restaurants/tc4-co-hospitality-breaks-ground-on-two-new-restaurants-in-georgetown/",
+      "title": "TC4 & Co. Hospitality Breaks Ground on Two New Restaurants in Georgetown",
+      "address": "1411 I-35, Georgetown, TX 78626"
+    },
+    {
+      "date": "March 27, 2026",
+      "url": "https://whatnow.com/las-vegas/restaurants/laderach-chocolate-set-to-debut-on-the-las-vegas-strip/",
+      "title": "Läderach Chocolate Set to Debut on the Las Vegas Strip",
+      "address": "3200 Las Vegas Blvd S Ste. 600, Las Vegas, NV 89109"
+    },
+    {
+      "date": "March 27, 2026",
+      "url": "https://whatnow.com/jacksonville/restaurants/davos-philly-cheesesteaks-bringing-authentic-philadelphia-flavor-to-st-augustine/",
+      "title": "Davo’s Philly Cheesesteaks Bringing Authentic Philadelphia Flavor to St Augustine",
+      "address": ""
+    },
+    {
+      "date": "March 27, 2026",
+      "url": "https://whatnow.com/jacksonville/restaurants/permits-submitted-for-grafton-flecks-steakhouse-replacing-ragtime-tavern/",
+      "title": "Permits Submitted for Grafton & Fleck’s Steakhouse, Replacing Ragtime Tavern",
+      "address": "207 Atlantic Blvd, Atlantic Beach, FL 32233"
+    },
+    {
+      "date": "March 27, 2026",
+      "url": "https://whatnow.com/jacksonville/restaurants/la-vinotinto-express-opening-with-mobile-venezuelan-cuisine/",
+      "title": "La Vinotinto Express Opening with Mobile Venezuelan Cuisine",
+      "address": "3813 University Blvd W, Jacksonville, FL 32217"
+    },
+    {
+      "date": "March 27, 2026",
+      "url": "https://whatnow.com/jacksonville/restaurants/new-bakery-on-wheels-planned-for-jacksonville/",
+      "title": "New Bakery on Wheels Planned for Jacksonville",
+      "address": "10584 Old St Augustine Rd, Jacksonville, FL 32257"
+    },
+    {
+      "date": "March 27, 2026",
+      "url": "https://whatnow.com/washington-dc/restaurants/the-oak-room-bringing-elevated-dining-to-georgetown/",
+      "title": "The Oak Room Bringing Elevated Dining to Georgetown",
+      "address": "1218 Wisconsin Ave NW, Washington, DC 20007"
+    },
+    {
+      "date": "March 27, 2026",
+      "url": "https://whatnow.com/jacksonville/restaurants/two-jacksonville-area-harveys-supermarkets-to-rebrand-as-winn-dixie-locations/",
+      "title": "Two Jacksonville-Area Harveys Supermarkets to Rebrand as Winn-Dixie Locations",
+      "address": ""
+    },
+    {
+      "date": "March 27, 2026",
+      "url": "https://whatnow.com/tampa/restaurants/bad-ass-coffee-of-hawaii-on-its-way-to-new-port-richey-next/",
+      "title": "Bad Ass Coffee of Hawaii on Its Way to New Port Richey Next",
+      "address": "5243 Little Rd #1, New Port Richey, FL 34653"
+    },
+    {
+      "date": "March 27, 2026",
+      "url": "https://whatnow.com/tampa/restaurants/chens-duck-dumplings-headed-to-lakeland/",
+      "title": "Chen’s Duck & Dumplings Headed to Lakeland",
+      "address": "5125 Florida Ave S, Lakeland, FL 33813"
+    },
+    {
+      "date": "March 27, 2026",
+      "url": "https://whatnow.com/tampa/restaurants/zephyr-chills-planned-for-zephyrhills/",
+      "title": "Zephyr Chills Planned for Zephyrhills",
+      "address": "6536 Stadium Dr, Suite H, Zephyrhills, FL 33542"
+    },
+    {
+      "date": "March 27, 2026",
+      "url": "https://whatnow.com/sacramento/restaurants/dapper-doughnut-dials-in-elk-grove-address-as-norcal-expansion-takes-shape/",
+      "title": "Dapper Doughnut Dials In Elk Grove Address as NorCal Expansion Takes Shape",
+      "address": "9624 Bruceville Rd, Suite 100, Elk Grove, CA 95757"
+    },
     {
       "date": "March 27, 2026",
       "url": "https://whatnow.com/sacramento/restaurants/diamond-springs-based-kings-meats-plans-el-dorado-hills-expansion/",
@@ -289,180 +385,6 @@
       "url": "https://whatnow.com/los-angeles/restaurants/izakaya-osen-relocating-in-silverlake/",
       "title": "Izakaya Osen Relocating In Silverlake | What Now Los Angeles",
       "address": "2861 Sunset Blvd, Los Angeles, CA 90026"
-    },
-    {
-      "date": "March 26, 2026",
-      "url": "https://whatnow.com/orange-county/restaurants/the-taco-stand-working-on-new-irvine-location/",
-      "title": "The Taco Stand Working on New Irvine Location",
-      "address": ""
-    },
-    {
-      "date": "March 26, 2026",
-      "url": "https://whatnow.com/miami/restaurants/a-pasta-bar-is-bringing-its-family-recipes-to-sunset-harbour/",
-      "title": "A Pasta Bar is Bringing its Family Recipes to Sunset Harbour",
-      "address": "1784 West Ave, Miami Beach, FL 33139"
-    },
-    {
-      "date": "March 26, 2026",
-      "url": "https://whatnow.com/los-angeles/restaurants/makenna-koffee-planning-location-in-northridge/",
-      "title": "Makenna Koffee Planning Location In Northridge | What Now Los Angeles",
-      "address": "9255 Reseda Blvd, Northridge, CA 91324"
-    },
-    {
-      "date": "March 26, 2026",
-      "url": "https://whatnow.com/portland/restaurants/new-thai-restaurant-kha-moo-is-headed-to-southeast-portland/",
-      "title": "New Thai Restaurant Kha Moo is Headed to Southeast Portland",
-      "address": "6618 SE Powell Blvd, Portland, OR 97206"
-    },
-    {
-      "date": "March 26, 2026",
-      "url": "https://whatnow.com/atlanta/restaurants/fayetteville-spot-fridas-grill-and-bar-opening-in-sharpsburg/",
-      "title": "Fayetteville Spot Frida's Grill and Bar Opening In Sharpsburg | What Now Atlanta",
-      "address": "15 Thomas Grace Annex Ln, Sharpsburg, GA 30277"
-    },
-    {
-      "date": "March 26, 2026",
-      "url": "https://whatnow.com/orange-county/restaurants/shootz-expanding-to-irvines-canopy-at-great-park/",
-      "title": "Shootz Expanding to Irvine’s Canopy at Great Park",
-      "address": ""
-    },
-    {
-      "date": "March 26, 2026",
-      "url": "https://whatnow.com/chicago/restaurants/urbanbelly-moving-to-fulton-market-following-hattie-bs-location-takeover/",
-      "title": "Urbanbelly Moving to Fulton Market Following Hattie B’s Location Takeover",
-      "address": "950 W Fulton St, Chicago, IL 60607"
-    },
-    {
-      "date": "March 26, 2026",
-      "url": "https://whatnow.com/denver/restaurants/a-pure-green-is-coming-to-boulder/",
-      "title": "A Pure Green is Coming to Boulder",
-      "address": "2255 31st St #120, Boulder, CO 80301"
-    },
-    {
-      "date": "March 26, 2026",
-      "url": "https://whatnow.com/boston/restaurants/sunflower-organic-pizza-secures-burlington-planning-board-approval/",
-      "title": "Sunflower Organic Pizza Secures Burlington Planning Board Approval",
-      "address": "1 Wheeler Rd, Burlington, MA 01803"
-    },
-    {
-      "date": "March 26, 2026",
-      "url": "https://whatnow.com/seattle/restaurants/chicko-chicken-expands-its-footprint-with-new-seattle-area-locations/",
-      "title": "Chicko Chicken Expands Across the Seattle Area",
-      "address": ""
-    },
-    {
-      "date": "March 26, 2026",
-      "url": "https://whatnow.com/columbus/restaurants/nasu-japanese-steakhouse-heading-north-to-cincinnati-this-summer/",
-      "title": "Nasu Japanese Steakhouse Heading North to Cincinnati This Summer",
-      "address": "555 Glenway Ave, Cincinnati, OH 45238"
-    },
-    {
-      "date": "March 26, 2026",
-      "url": "https://whatnow.com/charleston/restaurants/corner-perk-cafe-eyes-buckwalter-for-new-location/",
-      "title": "Corner Perk Cafe Eyes Buckwalter for New Location",
-      "address": ""
-    },
-    {
-      "date": "March 26, 2026",
-      "url": "https://whatnow.com/houston/restaurants/banh-mi-saigon-to-open-another-location/",
-      "title": "Banh Mi Saigon to Open Another Location",
-      "address": "10204 Almeda Genoa Rd a, Houston, TX 77075"
-    },
-    {
-      "date": "March 26, 2026",
-      "url": "https://whatnow.com/charlotte/restaurants/charlottes-first-korean-style-bar-announces-closure/",
-      "title": "Charlotte’s First Korean-Style Bar Announces Closure",
-      "address": "8320 Pineville-Matthews Rd #607, Charlotte, NC 28226, United States"
-    },
-    {
-      "date": "March 26, 2026",
-      "url": "https://whatnow.com/houston/restaurants/golden-corral-to-open-in-baytown/",
-      "title": "Golden Corral to Open in Baytown",
-      "address": "4343 East Fwy I-10, Baytown, TX 77521"
-    },
-    {
-      "date": "March 26, 2026",
-      "url": "https://whatnow.com/sacramento/restaurants/tulsa-based-sugar-llamas-to-debut-two-dessert-shops-in-roseville-and-rocklin/",
-      "title": "Tulsa-Based Sugar Llamas to Debut Two Dessert Shops in Roseville and Rocklin",
-      "address": ""
-    },
-    {
-      "date": "March 26, 2026",
-      "url": "https://whatnow.com/san-antonio/restaurants/well-known-burger-joint-shuts-down-east-side-location-abruptly/",
-      "title": "Well-Known Burger Joint Shuts Down East Side Location Abruptly",
-      "address": "2118 I-35 Frontage Rd, San Antonio, TX 78208, United States"
-    },
-    {
-      "date": "March 26, 2026",
-      "url": "https://whatnow.com/new-york/restaurants/montclair-mexican-dining-spot-to-shut-down-on-march-28/",
-      "title": "Montclair Mexican Dining Spot to Shut Down On March 28",
-      "address": "2 Erie St, Montclair, NJ 07042, United States"
-    },
-    {
-      "date": "March 26, 2026",
-      "url": "https://whatnow.com/las-vegas/restaurants/poke-house-to-debut-in-las-vegas/",
-      "title": "Poke House to Debut in Las Vegas",
-      "address": "7175 W Lake Mead Blvd, Las Vegas, NV 89128"
-    },
-    {
-      "date": "March 26, 2026",
-      "url": "https://whatnow.com/nashville/restaurants/local-favorite-craft-brewery-in-nashville-to-end-run-after-almost-a-decade/",
-      "title": "Local Favorite Craft Brewery in Nashville to End Run After Almost a Decade",
-      "address": "30 Oldham St, Nashville, TN 37213, United States"
-    },
-    {
-      "date": "March 26, 2026",
-      "url": "https://whatnow.com/jacksonville/restaurants/ponte-vedra-wine-bar-invites-you-to-celebrate-wine-and-friendship/",
-      "title": "Ponte Vedra Wine Bar Invites You to Celebrate Wine and Friendship",
-      "address": "262 Solana Rd, Ponte Vedra Beach, FL 32082"
-    },
-    {
-      "date": "March 26, 2026",
-      "url": "https://whatnow.com/seattle/restaurants/once-or-twice-bar-saddles-up-in-downtown-yakima-with-western-vibes/",
-      "title": "Once or Twice Bar to Saddle Up in Downtown Yakima",
-      "address": "31 N Front St. E Yakima, WA 98901"
-    },
-    {
-      "date": "March 26, 2026",
-      "url": "https://whatnow.com/chicago/restaurants/fat-milk-coffee-heading-to-naperville-for-second-location/",
-      "title": "Fat Miilk Coffee Heading to Naperville for Second Location",
-      "address": ""
-    },
-    {
-      "date": "March 26, 2026",
-      "url": "https://whatnow.com/san-antonio/restaurants/beloved-plant-based-restaurant-in-san-antonio-to-close-after-19-years/",
-      "title": "Beloved Plant-Based Restaurant in San Antonio to Close After 19 Years",
-      "address": "255 E Basse Rd, San Antonio, TX 78209, United States"
-    },
-    {
-      "date": "March 26, 2026",
-      "url": "https://whatnow.com/phoenix/restaurants/the-shop-beer-co-is-opening-a-phoenix-taproom/",
-      "title": "The Shop Beer Co. is Planning a Phoenix Taproom",
-      "address": "3002 E Washington St, Phoenix, AZ 85034"
-    },
-    {
-      "date": "March 26, 2026",
-      "url": "https://whatnow.com/phoenix/restaurants/oreganos-is-coming-to-buckeye/",
-      "title": "Oregano's is Coming to Buckeye",
-      "address": "1045 N Verrado Way, Buckeye, AZ 85326"
-    },
-    {
-      "date": "March 26, 2026",
-      "url": "https://whatnow.com/chicago/restaurants/apothecary-cocktail-lounge-to-open-this-may-reimagining-the-bar-as-a-place-of-care/",
-      "title": "Apothecary Cocktail Lounge to Open this May, Reimagining the Bar as a Place of Care | What Now Chicago",
-      "address": "3242 N Clark St, Chicago, IL 60657"
-    },
-    {
-      "date": "March 25, 2026",
-      "url": "https://whatnow.com/dallas/restaurants/coco-shrimp-to-heat-up-dallas-dining-scene-this-summer/",
-      "title": "Coco Shrimp to Heat up Dallas Dining Scene this Summer",
-      "address": "2525 Wycliff Ave, Dallas, TX 75219"
-    },
-    {
-      "date": "March 25, 2026",
-      "url": "https://whatnow.com/boston/restaurants/kyuramen-teams-up-with-popular-japanese-eatery-for-upscale-burlington-location/",
-      "title": "Kyuramen Teams Up With Popular Japanese Eatery for Upscale Burlington Location",
-      "address": "1 Wheeler Rd, Burlington, MA 01803"
     }
   ]
 }
