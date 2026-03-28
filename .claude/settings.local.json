@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(claude-api)",
+      "Skill(claude-api:*)",
+      "Bash(python -c \"import json; nb=json.load\\(open\\(''cs.ipynb''\\)\\); [print\\(i, c[''cell_type''], repr\\(c[''source''][:1] if c[''source''] else []\\)\\) for i, c in enumerate\\(nb[''cells'']\\)]\")",
+      "WebFetch(domain:www.theconnecticutscoop.com)"
+    ]
+  }
+}

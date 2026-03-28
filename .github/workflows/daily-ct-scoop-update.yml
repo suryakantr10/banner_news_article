@@ -58,7 +58,7 @@ jobs:
           # Ensure the script sees the installed Chrome binary
           export CHROME_BIN=/usr/bin/google-chrome-stable
           export GOOGLE_CHROME_BIN=/usr/bin/google-chrome-stable
-          python ct_scoop_scraper.py  # Assuming the provided code is saved as ct_scoop_scraper.py
+          python ct_scoop_scraper.py
 
       - name: Commit and push changes
         run: |
