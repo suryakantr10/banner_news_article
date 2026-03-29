@@ -149,6 +149,13 @@
                 >
                     Restaurant News
                 </button>
+                <button
+                    id="tabBizBtn"
+                    class="px-4 py-2 text-sm sm:text-base rounded-full text-gray-300 hover:text-white"
+                    onclick="switchTab('biz')"
+                >
+                    Business Debut
+                </button>
             </div>
         </div>
 
@@ -636,6 +643,189 @@
 
     </div>
 
+        <!-- Business Debut Tab Content -->
+        <div id="bizTabContent" class="hidden">
+
+            <!-- Sub-tab Switcher: Articles | Extraction -->
+            <div class="mb-6 flex justify-center">
+                <div class="inline-flex bg-slate-900/60 border border-slate-700 rounded-full p-1">
+                    <button
+                        id="bizSubTabArticlesBtn"
+                        class="px-5 py-2 text-sm rounded-full bg-slate-800 text-white font-medium shadow transition-colors"
+                        onclick="switchBizSubTab('articles')"
+                    >
+                        <i class="fas fa-briefcase mr-1"></i> Articles
+                    </button>
+                    <button
+                        id="bizSubTabExtractionBtn"
+                        class="px-5 py-2 text-sm rounded-full text-gray-300 hover:text-white transition-colors"
+                        onclick="switchBizSubTab('extraction')"
+                    >
+                        <i class="fas fa-table mr-1"></i> Extraction
+                    </button>
+                </div>
+            </div>
+
+            <!-- ── Articles Sub-tab ── -->
+            <div id="bizArticlesSubTab">
+                <!-- Biz Stats -->
+                <div id="bizStatsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 fade-in" style="display: none;">
+                    <div class="stats-card rounded-xl p-6 border border-slate-700/50">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-400 text-sm mb-1">Total Articles</p>
+                                <p class="text-3xl font-bold" id="bizTotalArticles">0</p>
+                            </div>
+                            <i class="fas fa-briefcase text-4xl text-indigo-400 opacity-50"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Biz Search + Download CSV -->
+                <div class="mb-6 fade-in">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <div class="flex-1 relative">
+                            <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                            <input
+                                type="text"
+                                id="bizSearchInput"
+                                placeholder="Search by title..."
+                                class="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:border-indigo-500 search-input transition-colors"
+                                oninput="filterBizArticles()"
+                            >
+                        </div>
+                        <button
+                            onclick="downloadBizCSV()"
+                            class="px-5 py-3 bg-orange-600 hover:bg-orange-700 rounded-lg transition-colors flex items-center space-x-2 font-medium whitespace-nowrap"
+                        >
+                            <i class="fas fa-download"></i>
+                            <span>Download CSV</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Biz Loading State -->
+                <div id="bizLoadingState" class="text-center py-20 hidden">
+                    <div class="loading-spinner mx-auto mb-4"></div>
+                    <p class="text-gray-400">Loading Business Debut data...</p>
+                </div>
+
+                <!-- Biz Empty State -->
+                <div id="bizEmptyState" class="text-center py-20 hidden">
+                    <i class="fas fa-inbox text-6xl text-gray-600 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-2 text-gray-300">No recent Business Debut articles</h3>
+                    <p class="text-gray-500">No Business Debut stories found in the last 2 days.</p>
+                </div>
+
+                <!-- Biz Articles Container -->
+                <div id="bizArticlesContainer" class="hidden">
+                    <!-- Business Debut articles will be dynamically inserted here -->
+                </div>
+            </div>
+
+            <!-- ── Extraction Sub-tab ── -->
+            <div id="bizExtractionSubTab" class="hidden">
+                <!-- Extraction Stats -->
+                <div id="bizExtStatsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 fade-in" style="display: none;">
+                    <div class="stats-card rounded-xl p-6 border border-slate-700/50">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-400 text-sm mb-1">Total Rows</p>
+                                <p class="text-3xl font-bold" id="bizExtTotal">0</p>
+                            </div>
+                            <i class="fas fa-table text-4xl text-indigo-400 opacity-50"></i>
+                        </div>
+                    </div>
+                    <div class="stats-card rounded-xl p-6 border border-slate-700/50">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-400 text-sm mb-1">Openings</p>
+                                <p class="text-3xl font-bold text-green-400" id="bizExtOpenings">0</p>
+                            </div>
+                            <i class="fas fa-arrow-up text-4xl text-green-400 opacity-50"></i>
+                        </div>
+                    </div>
+                    <div class="stats-card rounded-xl p-6 border border-slate-700/50">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-400 text-sm mb-1">Closings</p>
+                                <p class="text-3xl font-bold text-red-400" id="bizExtClosings">0</p>
+                            </div>
+                            <i class="fas fa-arrow-down text-4xl text-red-400 opacity-50"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Extraction Search + Filter + Download -->
+                <div class="mb-6 fade-in">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <div class="flex-1 relative">
+                            <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                            <input
+                                type="text"
+                                id="bizExtSearchInput"
+                                placeholder="Search by store, location, or description..."
+                                class="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:border-indigo-500 search-input transition-colors"
+                                oninput="filterBizExtractionRows()"
+                            >
+                        </div>
+                        <select
+                            id="bizExtTypeFilter"
+                            onchange="filterBizExtractionRows()"
+                            class="px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white focus:border-indigo-500 focus:outline-none"
+                        >
+                            <option value="all">All Types</option>
+                            <option value="Opening">Opening</option>
+                            <option value="Closing">Closing</option>
+                        </select>
+                        <button
+                            onclick="downloadBizExtractionCSV()"
+                            class="px-5 py-3 bg-green-600 hover:bg-green-700 rounded-lg transition-colors flex items-center space-x-2 font-medium whitespace-nowrap"
+                        >
+                            <i class="fas fa-download"></i>
+                            <span>Download CSV</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Extraction Loading State -->
+                <div id="bizExtLoadingState" class="text-center py-20 hidden">
+                    <div class="loading-spinner mx-auto mb-4"></div>
+                    <p class="text-gray-400">Loading extraction data...</p>
+                </div>
+
+                <!-- Extraction Empty State -->
+                <div id="bizExtEmptyState" class="text-center py-20 hidden">
+                    <i class="fas fa-table text-6xl text-gray-600 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-2 text-gray-300">No extraction data found</h3>
+                    <p class="text-gray-500">Run the extractor script to generate data.</p>
+                </div>
+
+                <!-- Extraction Table -->
+                <div id="bizExtTableContainer" class="hidden overflow-x-auto rounded-xl border border-slate-700/50 fade-in">
+                    <table class="w-full text-sm text-left table-fixed">
+                        <thead class="bg-slate-800 text-gray-300 uppercase text-xs tracking-wider">
+                            <tr>
+                                <th class="px-3 py-3 whitespace-nowrap w-14">S.No</th>
+                                <th class="px-3 py-3">Store / Restaurant</th>
+                                <th class="px-3 py-3">Location</th>
+                                <th class="px-3 py-3 whitespace-nowrap w-28">Event Type</th>
+                                <th class="px-3 py-3 w-40">Event Date</th>
+                                <th class="px-3 py-3 w-44">Status</th>
+                                <th class="px-3 py-3">Short Description</th>
+                                <th class="px-3 py-3">Article</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bizExtTableBody" class="divide-y divide-slate-700/50"></tbody>
+                    </table>
+                    <div class="px-4 py-3 bg-slate-800/50 text-gray-400 text-xs border-t border-slate-700/50">
+                        Showing <span id="bizExtRowCount">0</span> records &nbsp;•&nbsp; Last updated: <span id="bizExtLastUpdated">—</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     <!-- Footer -->
     <footer class="mt-16 py-8 border-t border-slate-700/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -654,6 +844,8 @@
     const REST_JSON_URL       = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/restaurant_latest.json';
     const SCOOP_EXTRACTION_URL = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/ct_scoop_extraction_latest.json';
     const REST_EXTRACTION_URL  = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/restaurant_extraction_latest.json';
+    const BIZ_JSON_URL         = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/businessdebut_latest.json';
+    const BIZ_EXTRACTION_URL   = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/businessdebut_extraction_latest.json';
 
     let storeArticles = [];
     let filteredStoreArticles = [];
@@ -669,8 +861,13 @@
     let activeTab = 'store';
     let activeScoopSubTab = 'articles';
     let activeRestSubTab  = 'articles';
+    let activeBizSubTab   = 'articles';
     let restExtractionRows = [];
     let filteredRestExtractionRows = [];
+    let bizArticles = [];
+    let filteredBizArticles = [];
+    let bizExtractionRows = [];
+    let filteredBizExtractionRows = [];
 
     window.addEventListener('DOMContentLoaded', () => {
         switchTab('store');
@@ -682,12 +879,14 @@
         const storeTab = document.getElementById('storeTabContent');
         const scoopTab = document.getElementById('scoopTabContent');
         const restTab  = document.getElementById('restaurantTabContent');
+        const bizTab   = document.getElementById('bizTabContent');
         const storeBtn = document.getElementById('tabStoreBtn');
         const scoopBtn = document.getElementById('tabScoopBtn');
         const restBtn  = document.getElementById('tabRestaurantBtn');
+        const bizBtn   = document.getElementById('tabBizBtn');
 
-        [storeTab, scoopTab, restTab].forEach(t => t.classList.add('hidden'));
-        [storeBtn, scoopBtn, restBtn].forEach(b => {
+        [storeTab, scoopTab, restTab, bizTab].forEach(t => t.classList.add('hidden'));
+        [storeBtn, scoopBtn, restBtn, bizBtn].forEach(b => {
             b.classList.remove('bg-slate-800', 'text-white', 'shadow');
             b.classList.add('text-gray-300');
         });
@@ -708,6 +907,12 @@
             restBtn.classList.remove('text-gray-300');
             if (activeRestSubTab === 'articles' && restArticles.length === 0) loadRestData();
             if (activeRestSubTab === 'extraction' && restExtractionRows.length === 0) loadRestExtractionData();
+        } else if (tab === 'biz') {
+            bizTab.classList.remove('hidden');
+            bizBtn.classList.add('bg-slate-800', 'text-white', 'shadow');
+            bizBtn.classList.remove('text-gray-300');
+            if (activeBizSubTab === 'articles' && bizArticles.length === 0) loadBizData();
+            if (activeBizSubTab === 'extraction' && bizExtractionRows.length === 0) loadBizExtractionData();
         }
     }
 
@@ -1443,6 +1648,268 @@
         document.body.removeChild(a);
     }
 
+    // ── Business Debut Sub-tab Switcher ──────────────────────────
+    function switchBizSubTab(subTab) {
+        activeBizSubTab = subTab;
+        const articlesDiv   = document.getElementById('bizArticlesSubTab');
+        const extractionDiv = document.getElementById('bizExtractionSubTab');
+        const articlesBtn   = document.getElementById('bizSubTabArticlesBtn');
+        const extractionBtn = document.getElementById('bizSubTabExtractionBtn');
+
+        if (subTab === 'articles') {
+            articlesDiv.classList.remove('hidden');
+            extractionDiv.classList.add('hidden');
+            articlesBtn.classList.add('bg-slate-800', 'text-white', 'shadow');
+            articlesBtn.classList.remove('text-gray-300');
+            extractionBtn.classList.remove('bg-slate-800', 'text-white', 'shadow');
+            extractionBtn.classList.add('text-gray-300');
+            if (bizArticles.length === 0) loadBizData();
+        } else {
+            extractionDiv.classList.remove('hidden');
+            articlesDiv.classList.add('hidden');
+            extractionBtn.classList.add('bg-slate-800', 'text-white', 'shadow');
+            extractionBtn.classList.remove('text-gray-300');
+            articlesBtn.classList.remove('bg-slate-800', 'text-white', 'shadow');
+            articlesBtn.classList.add('text-gray-300');
+            if (bizExtractionRows.length === 0) loadBizExtractionData();
+        }
+    }
+
+    // ── Business Debut Articles ───────────────────────────────────
+    async function loadBizData() {
+        try {
+            document.getElementById('bizLoadingState').classList.remove('hidden');
+            document.getElementById('bizArticlesContainer').classList.add('hidden');
+            document.getElementById('bizEmptyState').classList.add('hidden');
+            document.getElementById('bizStatsContainer').style.display = 'none';
+
+            const response = await fetch(BIZ_JSON_URL + '?t=' + Date.now());
+            if (!response.ok) throw new Error('Failed to fetch Business Debut data');
+
+            const data = await response.json();
+            document.getElementById('updateDate').textContent = data.last_updated || 'Unknown';
+
+            bizArticles = (data.data || []).map(item => ({
+                title: item.title || item.Title || '',
+                date:  item.date  || item.Date  || '',
+                link:  item.link  || item.Link  || ''
+            }));
+
+            filteredBizArticles = bizArticles;
+            updateBizStats(filteredBizArticles);
+            renderBizArticles();
+            document.getElementById('bizLoadingState').classList.add('hidden');
+        } catch (error) {
+            console.error('Error loading Business Debut data:', error);
+            document.getElementById('bizLoadingState').classList.add('hidden');
+            document.getElementById('bizEmptyState').classList.remove('hidden');
+        }
+    }
+
+    function updateBizStats(articles) {
+        document.getElementById('bizTotalArticles').textContent = articles.length;
+        document.getElementById('bizStatsContainer').style.display = articles.length ? 'grid' : 'none';
+    }
+
+    function filterBizArticles() {
+        const term = document.getElementById('bizSearchInput').value.toLowerCase();
+        filteredBizArticles = bizArticles.filter(article =>
+            !term || (article.title || '').toLowerCase().includes(term)
+        );
+        updateBizStats(filteredBizArticles);
+        renderBizArticles();
+    }
+
+    function downloadBizCSV() {
+        if (filteredBizArticles.length === 0) return;
+        const headers = ['date', 'title', 'link'];
+        const rows = filteredBizArticles.map(r =>
+            headers.map(h => `"${(r[h] || '').replace(/"/g, '""')}"`).join(',')
+        );
+        const csv  = [headers.join(','), ...rows].join('\n');
+        const a    = document.createElement('a');
+        a.href     = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8;' }));
+        a.download = `businessdebut_${new Date().toISOString().split('T')[0]}.csv`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
+
+    function renderBizArticles() {
+        const container = document.getElementById('bizArticlesContainer');
+        if (filteredBizArticles.length === 0) {
+            container.classList.add('hidden');
+            document.getElementById('bizEmptyState').classList.remove('hidden');
+            return;
+        }
+        document.getElementById('bizEmptyState').classList.add('hidden');
+        container.classList.remove('hidden');
+        container.innerHTML = '';
+
+        const grid = document.createElement('div');
+        grid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6';
+        filteredBizArticles.forEach(article => {
+            const wrapper = document.createElement('div');
+            wrapper.innerHTML = createBizCard(article);
+            if (wrapper.firstElementChild) grid.appendChild(wrapper.firstElementChild);
+        });
+        container.appendChild(grid);
+    }
+
+    function createBizCard(article) {
+        let dateText = article.date || 'Date not available';
+        try {
+            const dt = new Date(dateText);
+            if (!isNaN(dt.getTime())) {
+                dateText = dt.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+            }
+        } catch (e) {}
+
+        return `
+            <div class="card-hover bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-indigo-500/50">
+                <div class="flex items-start justify-between mb-3">
+                    <span class="px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center space-x-1" style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); box-shadow: 0 4px 14px 0 rgba(99,102,241,0.3);">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Business</span>
+                    </span>
+                </div>
+                <h3 class="font-bold text-lg mb-3 text-white">${escapeHtml(article.title || '')}</h3>
+                <a href="${escapeHtml(article.link || '#')}" target="_blank" rel="noopener noreferrer"
+                   class="text-indigo-400 hover:text-indigo-300 font-medium mb-3 block line-clamp-2">
+                    View full story
+                    <i class="fas fa-external-link-alt text-xs ml-1"></i>
+                </a>
+                <div class="flex items-center text-gray-400 text-sm mt-2">
+                    <i class="fas fa-calendar-alt mr-2"></i>
+                    <span>${escapeHtml(dateText)}</span>
+                </div>
+            </div>
+        `;
+    }
+
+    // ── Business Debut Extraction ─────────────────────────────────
+    async function loadBizExtractionData() {
+        try {
+            document.getElementById('bizExtLoadingState').classList.remove('hidden');
+            document.getElementById('bizExtTableContainer').classList.add('hidden');
+            document.getElementById('bizExtEmptyState').classList.add('hidden');
+            document.getElementById('bizExtStatsContainer').style.display = 'none';
+
+            const res = await fetch(BIZ_EXTRACTION_URL + '?t=' + Date.now());
+            if (!res.ok) throw new Error('fetch failed');
+            const data = await res.json();
+
+            document.getElementById('bizExtLastUpdated').textContent = data.last_updated || '—';
+            bizExtractionRows = (data.data || []);
+            filteredBizExtractionRows = [...bizExtractionRows];
+            updateBizExtStats(filteredBizExtractionRows);
+            renderBizExtractionTable();
+            document.getElementById('bizExtLoadingState').classList.add('hidden');
+        } catch (err) {
+            console.error('Biz extraction load error:', err);
+            document.getElementById('bizExtLoadingState').classList.add('hidden');
+            document.getElementById('bizExtEmptyState').classList.remove('hidden');
+        }
+    }
+
+    function updateBizExtStats(rows) {
+        const total    = rows.filter(r => r.store_name !== 'No qualifying business found').length;
+        const openings = rows.filter(r => r.event_type === 'Opening').length;
+        const closings = rows.filter(r => r.event_type === 'Closing').length;
+        document.getElementById('bizExtTotal').textContent    = total;
+        document.getElementById('bizExtOpenings').textContent = openings;
+        document.getElementById('bizExtClosings').textContent = closings;
+        document.getElementById('bizExtStatsContainer').style.display = rows.length ? 'grid' : 'none';
+    }
+
+    function filterBizExtractionRows() {
+        const term = document.getElementById('bizExtSearchInput').value.toLowerCase();
+        const type = document.getElementById('bizExtTypeFilter').value;
+        filteredBizExtractionRows = bizExtractionRows.filter(r => {
+            const matchSearch = !term ||
+                (r.store_name        || '').toLowerCase().includes(term) ||
+                (r.location          || '').toLowerCase().includes(term) ||
+                (r.short_description || '').toLowerCase().includes(term) ||
+                (r.status            || '').toLowerCase().includes(term);
+            const matchType = type === 'all' || r.event_type === type;
+            return matchSearch && matchType;
+        });
+        updateBizExtStats(filteredBizExtractionRows);
+        renderBizExtractionTable();
+    }
+
+    function renderBizExtractionTable() {
+        const tbody     = document.getElementById('bizExtTableBody');
+        const container = document.getElementById('bizExtTableContainer');
+
+        if (filteredBizExtractionRows.length === 0) {
+            container.classList.add('hidden');
+            document.getElementById('bizExtEmptyState').classList.remove('hidden');
+            return;
+        }
+        document.getElementById('bizExtEmptyState').classList.add('hidden');
+        container.classList.remove('hidden');
+
+        tbody.innerHTML = filteredBizExtractionRows.map((r, i) => {
+            const isOpening = r.event_type === 'Opening';
+            const isClosing = r.event_type === 'Closing';
+            const noData    = r.store_name === 'No qualifying business found';
+
+            const typeBadge = noData
+                ? `<span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-gray-400">N/A</span>`
+                : isOpening
+                ? `<span class="badge-opening px-2 py-1 rounded-full text-xs font-semibold text-white"><i class="fas fa-arrow-up mr-1"></i>Opening</span>`
+                : isClosing
+                ? `<span class="badge-closing px-2 py-1 rounded-full text-xs font-semibold text-white"><i class="fas fa-arrow-down mr-1"></i>Closing</span>`
+                : `<span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-gray-400">${escapeHtml(r.event_type || 'N/A')}</span>`;
+
+            const linkCell = (r.article_link && r.article_link !== 'N/A')
+                ? `<a href="${escapeHtml(r.article_link)}" target="_blank" rel="noopener noreferrer"
+                      class="px-3 py-1 bg-slate-700 hover:bg-indigo-600 rounded-lg text-xs transition-colors inline-flex items-center gap-1 whitespace-nowrap">
+                       <i class="fas fa-external-link-alt"></i> Visit
+                   </a>`
+                : `<span class="text-gray-600 text-xs">—</span>`;
+
+            return `
+            <tr class="hover:bg-slate-700/30 transition-colors ${i % 2 === 0 ? '' : 'bg-slate-800/20'} ${noData ? 'opacity-50' : ''}">
+                <td class="px-3 py-3 text-gray-500 text-xs font-semibold whitespace-nowrap">${i + 1}</td>
+                <td class="px-3 py-3 font-medium text-white max-w-[140px]">
+                    <span class="line-clamp-2 block" title="${escapeHtml(r.store_name || '')}">${escapeHtml(r.store_name || '—')}</span>
+                </td>
+                <td class="px-3 py-3 text-gray-300 text-xs max-w-[160px]">
+                    <span class="line-clamp-2 block" title="${escapeHtml(r.location || '')}">${escapeHtml(r.location || '—')}</span>
+                </td>
+                <td class="px-3 py-3 whitespace-nowrap">${typeBadge}</td>
+                <td class="px-3 py-3 text-gray-300 text-xs max-w-[160px] break-words">${escapeHtml(r.event_date || '—')}</td>
+                <td class="px-3 py-3 text-gray-300 text-xs max-w-[180px] break-words" title="${escapeHtml(r.status || '')}">
+                    <span class="line-clamp-2 block">${escapeHtml(r.status || '—')}</span>
+                </td>
+                <td class="px-3 py-3 text-gray-400 text-xs max-w-[220px]">
+                    <span class="line-clamp-3 block" title="${escapeHtml(r.short_description || '')}">${escapeHtml(r.short_description || '—')}</span>
+                </td>
+                <td class="px-3 py-3">${linkCell}</td>
+            </tr>`;
+        }).join('');
+
+        document.getElementById('bizExtRowCount').textContent = filteredBizExtractionRows.length;
+    }
+
+    function downloadBizExtractionCSV() {
+        if (filteredBizExtractionRows.length === 0) return;
+        const headers = ['store_name','location','event_type','event_date','status','short_description','article_link'];
+        const labels  = ['Store/Restaurant Name','Location or Full Address','Event Type','Event Date','Status','Short Description','Article Link'];
+        const rows = filteredBizExtractionRows.map(r =>
+            headers.map(h => `"${(r[h] || '').replace(/"/g, '""')}"`).join(',')
+        );
+        const csv = [labels.join(','), ...rows].join('\n');
+        const a   = document.createElement('a');
+        a.href    = URL.createObjectURL(new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8;' }));
+        a.download = `businessdebut_extraction_${new Date().toISOString().split('T')[0]}.csv`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
+
     // ── Utilities ─────────────────────────────────────────────────
     function escapeHtml(text) {
         const div = document.createElement('div');
@@ -1463,12 +1930,18 @@
             loader = activeScoopSubTab === 'extraction'
                 ? loadScoopExtractionData()
                 : loadScoopData();
-        } else {
+        } else if (activeTab === 'restaurant') {
             restArticles = [];
             restExtractionRows = [];
             loader = activeRestSubTab === 'extraction'
                 ? loadRestExtractionData()
                 : loadRestData();
+        } else {
+            bizArticles = [];
+            bizExtractionRows = [];
+            loader = activeBizSubTab === 'extraction'
+                ? loadBizExtractionData()
+                : loadBizData();
         }
         Promise.resolve(loader).finally(() => {
             setTimeout(() => icon.classList.remove('fa-spin'), 500);
