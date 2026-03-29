@@ -1256,19 +1256,19 @@
             return `
             <tr class="hover:bg-slate-700/30 transition-colors ${i % 2 === 0 ? '' : 'bg-slate-800/20'} ${noData ? 'opacity-50' : ''}">
                 <td class="px-3 py-3 text-gray-500 text-xs font-semibold whitespace-nowrap">${i + 1}</td>
-                <td class="px-3 py-3 font-medium text-white max-w-[160px]">
-                    <span title="${escapeHtml(r.store_name || '')}">${escapeHtml(r.store_name || '—')}</span>
+                <td class="px-3 py-3 font-medium text-white max-w-[140px]">
+                    <span class="line-clamp-2 block" title="${escapeHtml(r.store_name || '')}">${escapeHtml(r.store_name || '—')}</span>
                 </td>
-                <td class="px-3 py-3 text-gray-300 text-xs max-w-[180px]">
-                    ${escapeHtml(r.location || '—')}
+                <td class="px-3 py-3 text-gray-300 text-xs max-w-[160px]">
+                    <span class="line-clamp-2 block" title="${escapeHtml(r.location || '')}">${escapeHtml(r.location || '—')}</span>
                 </td>
                 <td class="px-3 py-3 whitespace-nowrap">${typeBadge}</td>
                 <td class="px-3 py-3 text-gray-300 text-xs whitespace-nowrap">${escapeHtml(r.event_date || '—')}</td>
-                <td class="px-3 py-3 text-gray-300 text-xs max-w-[160px]" title="${escapeHtml(r.status || '')}">
-                    ${escapeHtml(r.status || '—')}
+                <td class="px-3 py-3 text-gray-300 text-xs max-w-[150px]" title="${escapeHtml(r.status || '')}">
+                    <span class="line-clamp-2 block">${escapeHtml(r.status || '—')}</span>
                 </td>
-                <td class="px-3 py-3 text-gray-400 text-xs max-w-[260px]">
-                    ${escapeHtml(r.short_description || '—')}
+                <td class="px-3 py-3 text-gray-400 text-xs max-w-[220px]">
+                    <span class="line-clamp-3 block" title="${escapeHtml(r.short_description || '')}">${escapeHtml(r.short_description || '—')}</span>
                 </td>
                 <td class="px-3 py-3">${linkCell}</td>
             </tr>`;
@@ -1406,16 +1406,20 @@
             return `
             <tr class="hover:bg-slate-700/30 transition-colors ${i % 2 === 0 ? '' : 'bg-slate-800/20'} ${noData ? 'opacity-50' : ''}">
                 <td class="px-3 py-3 text-gray-500 text-xs font-semibold whitespace-nowrap">${i + 1}</td>
-                <td class="px-3 py-3 font-medium text-white max-w-[160px]">
-                    <span title="${escapeHtml(r.store_name || '')}">${escapeHtml(r.store_name || '—')}</span>
+                <td class="px-3 py-3 font-medium text-white max-w-[140px]">
+                    <span class="line-clamp-2 block" title="${escapeHtml(r.store_name || '')}">${escapeHtml(r.store_name || '—')}</span>
                 </td>
-                <td class="px-3 py-3 text-gray-300 text-xs max-w-[180px]">${escapeHtml(r.location || '—')}</td>
+                <td class="px-3 py-3 text-gray-300 text-xs max-w-[160px]">
+                    <span class="line-clamp-2 block" title="${escapeHtml(r.location || '')}">${escapeHtml(r.location || '—')}</span>
+                </td>
                 <td class="px-3 py-3 whitespace-nowrap">${typeBadge}</td>
                 <td class="px-3 py-3 text-gray-300 text-xs whitespace-nowrap">${escapeHtml(r.event_date || '—')}</td>
-                <td class="px-3 py-3 text-gray-300 text-xs max-w-[160px]" title="${escapeHtml(r.status || '')}">
-                    ${escapeHtml(r.status || '—')}
+                <td class="px-3 py-3 text-gray-300 text-xs max-w-[150px]" title="${escapeHtml(r.status || '')}">
+                    <span class="line-clamp-2 block">${escapeHtml(r.status || '—')}</span>
                 </td>
-                <td class="px-3 py-3 text-gray-400 text-xs max-w-[260px]">${escapeHtml(r.short_description || '—')}</td>
+                <td class="px-3 py-3 text-gray-400 text-xs max-w-[220px]">
+                    <span class="line-clamp-3 block" title="${escapeHtml(r.short_description || '')}">${escapeHtml(r.short_description || '—')}</span>
+                </td>
                 <td class="px-3 py-3">${linkCell}</td>
             </tr>`;
         }).join('');
