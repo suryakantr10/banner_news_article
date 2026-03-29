@@ -4,7 +4,28 @@
       "Skill(claude-api)",
       "Skill(claude-api:*)",
       "Bash(python -c \"import json; nb=json.load\\(open\\(''cs.ipynb''\\)\\); [print\\(i, c[''cell_type''], repr\\(c[''source''][:1] if c[''source''] else []\\)\\) for i, c in enumerate\\(nb[''cells'']\\)]\")",
-      "WebFetch(domain:www.theconnecticutscoop.com)"
+      "WebFetch(domain:www.theconnecticutscoop.com)",
+      "WebFetch(domain:whatnow.com)",
+      "WebSearch",
+      "Bash(where python:*)",
+      "Bash(where python3:*)",
+      "Bash(where node:*)",
+      "Bash(where powershell:*)",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://whatnow.com/sacramento/restaurants/diamond-springs-based-kings-meats-plans-el-dorado-hills-expansion/\")",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://whatnow.com/washington-dc/restaurants/right-proper-kitchen-headed-to-brookland/\")",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://whatnow.com/boston/restaurants/florentine-sandwich-shop-allantico-vinaio-could-be-headed-to-bostons-downtown-crossing/\")",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://whatnow.com/dallas/restaurants/agave-ember-bringing-passion-hope-and-delicious-dining-to-allen/\")",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://whatnow.com/toronto/restaurants/rosies-burgers-coming-to-whitby-next-month/\")",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://whatnow.com/atlanta/restaurants/mister-eater-slated-to-join-buckhead-this-spring/\")",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://whatnow.com/atlanta/restaurants/fork-u-concepts-shuffling-concepts-in-vinings/\")",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://whatnow.com/orange-county/restaurants/hh-bagels-to-open-first-orange-county-site-in-irvine/\")",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://whatnow.com/san-antonio/restaurants/fork-to-fit-kitchen-rio-grand-valley-based-brand-to-expand-to-san-antonio/\")",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://whatnow.com/columbus/restaurants/star-lanes-eying-sites-near-ohio-state-for-second-location/\")",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://whatnow.com/houston/restaurants/octane-cafe-to-fuel-up-houstons-historic-second-ward/\")",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://whatnow.com/seattle/restaurants/yella-beak-saloon-in-enumclaw-under-new-ownership-set-to-reopen/\")",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://whatnow.com/atlanta/restaurants/board-game-cafe-planned-for-the-beacon-in-grant-park/\")",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://whatnow.com/boston/restaurants/a-street-hospitality-to-open-new-restaurant-at-the-four-seasons-hotel-in-bostons-back-bay/\")",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://whatnow.com/las-vegas/restaurants/inclusivity-focused-coffee-spot-in-las-vegas-to-shut-down/\")"
     ]
   }
 }

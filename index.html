@@ -422,6 +422,29 @@
         <!-- Restaurant News Tab Content -->
         <div id="restaurantTabContent" class="hidden">
 
+            <!-- Sub-tab Switcher: Articles | Extraction -->
+            <div class="mb-6 flex justify-center">
+                <div class="inline-flex bg-slate-900/60 border border-slate-700 rounded-full p-1">
+                    <button
+                        id="restSubTabArticlesBtn"
+                        class="px-5 py-2 text-sm rounded-full bg-slate-800 text-white font-medium shadow transition-colors"
+                        onclick="switchRestSubTab('articles')"
+                    >
+                        <i class="fas fa-utensils mr-1"></i> Articles
+                    </button>
+                    <button
+                        id="restSubTabExtractionBtn"
+                        class="px-5 py-2 text-sm rounded-full text-gray-300 hover:text-white transition-colors"
+                        onclick="switchRestSubTab('extraction')"
+                    >
+                        <i class="fas fa-table mr-1"></i> Extraction
+                    </button>
+                </div>
+            </div>
+
+            <!-- ── Articles Sub-tab ── -->
+            <div id="restArticlesSubTab">
+
             <!-- Restaurant Stats -->
             <div id="restStatsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 fade-in" style="display:none;">
                 <div class="stats-card rounded-xl p-6 border border-slate-700/50">
@@ -504,6 +527,111 @@
                     Showing <span id="restRowCount">0</span> records
                 </div>
             </div>
+            </div><!-- end restArticlesSubTab -->
+
+            <!-- ── Extraction Sub-tab ── -->
+            <div id="restExtractionSubTab" class="hidden">
+
+                <!-- Extraction Stats -->
+                <div id="restExtStatsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 fade-in" style="display: none;">
+                    <div class="stats-card rounded-xl p-6 border border-slate-700/50">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-400 text-sm mb-1">Total Rows</p>
+                                <p class="text-3xl font-bold" id="restExtTotal">0</p>
+                            </div>
+                            <i class="fas fa-table text-4xl text-orange-400 opacity-50"></i>
+                        </div>
+                    </div>
+                    <div class="stats-card rounded-xl p-6 border border-slate-700/50">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-400 text-sm mb-1">Openings</p>
+                                <p class="text-3xl font-bold text-green-400" id="restExtOpenings">0</p>
+                            </div>
+                            <i class="fas fa-arrow-up text-4xl text-green-400 opacity-50"></i>
+                        </div>
+                    </div>
+                    <div class="stats-card rounded-xl p-6 border border-slate-700/50">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-400 text-sm mb-1">Closings</p>
+                                <p class="text-3xl font-bold text-red-400" id="restExtClosings">0</p>
+                            </div>
+                            <i class="fas fa-arrow-down text-4xl text-red-400 opacity-50"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Search + Filter + Download -->
+                <div class="mb-6 fade-in">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <div class="flex-1 relative">
+                            <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                            <input
+                                type="text"
+                                id="restExtSearchInput"
+                                placeholder="Search by restaurant, location, or description..."
+                                class="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:border-orange-500 search-input transition-colors"
+                                oninput="filterRestExtractionRows()"
+                            >
+                        </div>
+                        <select
+                            id="restExtTypeFilter"
+                            onchange="filterRestExtractionRows()"
+                            class="px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white focus:border-orange-500 focus:outline-none"
+                        >
+                            <option value="all">All Types</option>
+                            <option value="Opening">Opening</option>
+                            <option value="Closing">Closing</option>
+                        </select>
+                        <button
+                            onclick="downloadRestExtractionCSV()"
+                            class="px-5 py-3 bg-green-600 hover:bg-green-700 rounded-lg transition-colors flex items-center space-x-2 font-medium whitespace-nowrap"
+                        >
+                            <i class="fas fa-download"></i>
+                            <span>Download CSV</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Loading State -->
+                <div id="restExtLoadingState" class="text-center py-20 hidden">
+                    <div class="loading-spinner mx-auto mb-4"></div>
+                    <p class="text-gray-400">Loading extraction data...</p>
+                </div>
+
+                <!-- Empty State -->
+                <div id="restExtEmptyState" class="text-center py-20 hidden">
+                    <i class="fas fa-table text-6xl text-gray-600 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-2 text-gray-300">No extraction data found</h3>
+                    <p class="text-gray-500">Run the extraction to generate data.</p>
+                </div>
+
+                <!-- Extraction Table -->
+                <div id="restExtTableContainer" class="hidden overflow-x-auto rounded-xl border border-slate-700/50 fade-in">
+                    <table class="w-full text-sm text-left">
+                        <thead class="bg-slate-800 text-gray-300 uppercase text-xs tracking-wider">
+                            <tr>
+                                <th class="px-3 py-3 whitespace-nowrap">#</th>
+                                <th class="px-3 py-3">Store / Restaurant</th>
+                                <th class="px-3 py-3">Location</th>
+                                <th class="px-3 py-3 whitespace-nowrap">Event Type</th>
+                                <th class="px-3 py-3 whitespace-nowrap">Event Date</th>
+                                <th class="px-3 py-3">Status</th>
+                                <th class="px-3 py-3">Short Description</th>
+                                <th class="px-3 py-3">Article</th>
+                            </tr>
+                        </thead>
+                        <tbody id="restExtTableBody" class="divide-y divide-slate-700/50"></tbody>
+                    </table>
+                    <div class="px-4 py-3 bg-slate-800/50 text-gray-400 text-xs border-t border-slate-700/50">
+                        Showing <span id="restExtRowCount">0</span> records &nbsp;•&nbsp; Last updated: <span id="restExtLastUpdated">—</span>
+                    </div>
+                </div>
+
+            </div><!-- end restExtractionSubTab -->
+
         </div>
 
     </div>
@@ -525,6 +653,7 @@
     const SCOOP_JSON_URL      = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/ct_scoop_latest.json';
     const REST_JSON_URL       = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/restaurant_latest.json';
     const SCOOP_EXTRACTION_URL = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/ct_scoop_extraction_latest.json';
+    const REST_EXTRACTION_URL  = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/restaurant_extraction_latest.json';
 
     let storeArticles = [];
     let filteredStoreArticles = [];
@@ -539,6 +668,9 @@
 
     let activeTab = 'store';
     let activeScoopSubTab = 'articles';
+    let activeRestSubTab  = 'articles';
+    let restExtractionRows = [];
+    let filteredRestExtractionRows = [];
 
     window.addEventListener('DOMContentLoaded', () => {
         switchTab('store');
@@ -574,7 +706,8 @@
             restTab.classList.remove('hidden');
             restBtn.classList.add('bg-slate-800', 'text-white', 'shadow');
             restBtn.classList.remove('text-gray-300');
-            if (restArticles.length === 0) loadRestData();
+            if (activeRestSubTab === 'articles' && restArticles.length === 0) loadRestData();
+            if (activeRestSubTab === 'extraction' && restExtractionRows.length === 0) loadRestExtractionData();
         }
     }
 
@@ -1160,6 +1293,152 @@
         document.body.removeChild(a);
     }
 
+    // ── Restaurant Sub-tab Switcher ───────────────────────────────
+    function switchRestSubTab(subTab) {
+        activeRestSubTab = subTab;
+        const articlesDiv   = document.getElementById('restArticlesSubTab');
+        const extractionDiv = document.getElementById('restExtractionSubTab');
+        const articlesBtn   = document.getElementById('restSubTabArticlesBtn');
+        const extractionBtn = document.getElementById('restSubTabExtractionBtn');
+
+        if (subTab === 'articles') {
+            articlesDiv.classList.remove('hidden');
+            extractionDiv.classList.add('hidden');
+            articlesBtn.classList.add('bg-slate-800', 'text-white', 'shadow');
+            articlesBtn.classList.remove('text-gray-300');
+            extractionBtn.classList.remove('bg-slate-800', 'text-white', 'shadow');
+            extractionBtn.classList.add('text-gray-300');
+            if (restArticles.length === 0) loadRestData();
+        } else {
+            extractionDiv.classList.remove('hidden');
+            articlesDiv.classList.add('hidden');
+            extractionBtn.classList.add('bg-slate-800', 'text-white', 'shadow');
+            extractionBtn.classList.remove('text-gray-300');
+            articlesBtn.classList.remove('bg-slate-800', 'text-white', 'shadow');
+            articlesBtn.classList.add('text-gray-300');
+            if (restExtractionRows.length === 0) loadRestExtractionData();
+        }
+    }
+
+    // ── Restaurant Extraction ─────────────────────────────────────
+    async function loadRestExtractionData() {
+        try {
+            document.getElementById('restExtLoadingState').classList.remove('hidden');
+            document.getElementById('restExtTableContainer').classList.add('hidden');
+            document.getElementById('restExtEmptyState').classList.add('hidden');
+            document.getElementById('restExtStatsContainer').style.display = 'none';
+
+            const res = await fetch(REST_EXTRACTION_URL + '?t=' + Date.now());
+            if (!res.ok) throw new Error('fetch failed');
+            const data = await res.json();
+
+            document.getElementById('restExtLastUpdated').textContent = data.last_updated || '—';
+            restExtractionRows = (data.data || []);
+            filteredRestExtractionRows = [...restExtractionRows];
+            updateRestExtStats(filteredRestExtractionRows);
+            renderRestExtractionTable();
+            document.getElementById('restExtLoadingState').classList.add('hidden');
+        } catch (err) {
+            console.error('Rest extraction load error:', err);
+            document.getElementById('restExtLoadingState').classList.add('hidden');
+            document.getElementById('restExtEmptyState').classList.remove('hidden');
+        }
+    }
+
+    function updateRestExtStats(rows) {
+        const total    = rows.filter(r => r.store_name !== 'No qualifying business found').length;
+        const openings = rows.filter(r => r.event_type === 'Opening').length;
+        const closings = rows.filter(r => r.event_type === 'Closing').length;
+        document.getElementById('restExtTotal').textContent    = total;
+        document.getElementById('restExtOpenings').textContent = openings;
+        document.getElementById('restExtClosings').textContent = closings;
+        document.getElementById('restExtStatsContainer').style.display = rows.length ? 'grid' : 'none';
+    }
+
+    function filterRestExtractionRows() {
+        const term = document.getElementById('restExtSearchInput').value.toLowerCase();
+        const type = document.getElementById('restExtTypeFilter').value;
+        filteredRestExtractionRows = restExtractionRows.filter(r => {
+            const matchSearch = !term ||
+                (r.store_name        || '').toLowerCase().includes(term) ||
+                (r.location          || '').toLowerCase().includes(term) ||
+                (r.short_description || '').toLowerCase().includes(term) ||
+                (r.status            || '').toLowerCase().includes(term);
+            const matchType = type === 'all' || r.event_type === type;
+            return matchSearch && matchType;
+        });
+        updateRestExtStats(filteredRestExtractionRows);
+        renderRestExtractionTable();
+    }
+
+    function renderRestExtractionTable() {
+        const tbody     = document.getElementById('restExtTableBody');
+        const container = document.getElementById('restExtTableContainer');
+
+        if (filteredRestExtractionRows.length === 0) {
+            container.classList.add('hidden');
+            document.getElementById('restExtEmptyState').classList.remove('hidden');
+            return;
+        }
+        document.getElementById('restExtEmptyState').classList.add('hidden');
+        container.classList.remove('hidden');
+
+        tbody.innerHTML = filteredRestExtractionRows.map((r, i) => {
+            const isOpening = r.event_type === 'Opening';
+            const isClosing = r.event_type === 'Closing';
+            const noData    = r.store_name === 'No qualifying business found';
+
+            const typeBadge = noData
+                ? `<span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-gray-400">N/A</span>`
+                : isOpening
+                ? `<span class="badge-opening px-2 py-1 rounded-full text-xs font-semibold text-white"><i class="fas fa-arrow-up mr-1"></i>Opening</span>`
+                : isClosing
+                ? `<span class="badge-closing px-2 py-1 rounded-full text-xs font-semibold text-white"><i class="fas fa-arrow-down mr-1"></i>Closing</span>`
+                : `<span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-gray-400">${escapeHtml(r.event_type || 'N/A')}</span>`;
+
+            const linkCell = (r.article_link && r.article_link !== 'N/A')
+                ? `<a href="${escapeHtml(r.article_link)}" target="_blank" rel="noopener noreferrer"
+                      class="px-3 py-1 bg-slate-700 hover:bg-orange-600 rounded-lg text-xs transition-colors inline-flex items-center gap-1 whitespace-nowrap">
+                       <i class="fas fa-external-link-alt"></i> Visit
+                   </a>`
+                : `<span class="text-gray-600 text-xs">—</span>`;
+
+            return `
+            <tr class="hover:bg-slate-700/30 transition-colors ${i % 2 === 0 ? '' : 'bg-slate-800/20'} ${noData ? 'opacity-50' : ''}">
+                <td class="px-3 py-3 text-gray-500 text-xs font-semibold whitespace-nowrap">${i + 1}</td>
+                <td class="px-3 py-3 font-medium text-white max-w-[160px]">
+                    <span title="${escapeHtml(r.store_name || '')}">${escapeHtml(r.store_name || '—')}</span>
+                </td>
+                <td class="px-3 py-3 text-gray-300 text-xs max-w-[180px]">${escapeHtml(r.location || '—')}</td>
+                <td class="px-3 py-3 whitespace-nowrap">${typeBadge}</td>
+                <td class="px-3 py-3 text-gray-300 text-xs whitespace-nowrap">${escapeHtml(r.event_date || '—')}</td>
+                <td class="px-3 py-3 text-gray-300 text-xs max-w-[160px]" title="${escapeHtml(r.status || '')}">
+                    ${escapeHtml(r.status || '—')}
+                </td>
+                <td class="px-3 py-3 text-gray-400 text-xs max-w-[260px]">${escapeHtml(r.short_description || '—')}</td>
+                <td class="px-3 py-3">${linkCell}</td>
+            </tr>`;
+        }).join('');
+
+        document.getElementById('restExtRowCount').textContent = filteredRestExtractionRows.length;
+    }
+
+    function downloadRestExtractionCSV() {
+        if (filteredRestExtractionRows.length === 0) return;
+        const headers = ['store_name','location','event_type','event_date','status','short_description','article_link'];
+        const labels  = ['Store/Restaurant Name','Location or Full Address','Event Type','Event Date','Status','Short Description','Article Link'];
+        const rows = filteredRestExtractionRows.map(r =>
+            headers.map(h => `"${(r[h] || '').replace(/"/g, '""')}"`).join(',')
+        );
+        const csv = [labels.join(','), ...rows].join('\n');
+        const a   = document.createElement('a');
+        a.href    = URL.createObjectURL(new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8;' }));
+        a.download = `restaurant_extraction_${new Date().toISOString().split('T')[0]}.csv`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
+
     // ── Utilities ─────────────────────────────────────────────────
     function escapeHtml(text) {
         const div = document.createElement('div');
@@ -1181,7 +1460,11 @@
                 ? loadScoopExtractionData()
                 : loadScoopData();
         } else {
-            loader = loadRestData();
+            restArticles = [];
+            restExtractionRows = [];
+            loader = activeRestSubTab === 'extraction'
+                ? loadRestExtractionData()
+                : loadRestData();
         }
         Promise.resolve(loader).finally(() => {
             setTimeout(() => icon.classList.remove('fa-spin'), 500);
