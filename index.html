@@ -396,15 +396,15 @@
 
                 <!-- Extraction Table -->
                 <div id="extTableContainer" class="hidden overflow-x-auto rounded-xl border border-slate-700/50 fade-in">
-                    <table class="w-full text-sm text-left">
+                    <table class="w-full text-sm text-left table-fixed">
                         <thead class="bg-slate-800 text-gray-300 uppercase text-xs tracking-wider">
                             <tr>
-                                <th class="px-3 py-3 whitespace-nowrap">#</th>
+                                <th class="px-3 py-3 whitespace-nowrap w-14">S.No</th>
                                 <th class="px-3 py-3">Store / Restaurant</th>
                                 <th class="px-3 py-3">Location</th>
-                                <th class="px-3 py-3 whitespace-nowrap">Event Type</th>
-                                <th class="px-3 py-3 whitespace-nowrap">Event Date</th>
-                                <th class="px-3 py-3">Status</th>
+                                <th class="px-3 py-3 whitespace-nowrap w-28">Event Type</th>
+                                <th class="px-3 py-3 w-40">Event Date</th>
+                                <th class="px-3 py-3 w-44">Status</th>
                                 <th class="px-3 py-3">Short Description</th>
                                 <th class="px-3 py-3">Article</th>
                             </tr>
@@ -610,15 +610,15 @@
 
                 <!-- Extraction Table -->
                 <div id="restExtTableContainer" class="hidden overflow-x-auto rounded-xl border border-slate-700/50 fade-in">
-                    <table class="w-full text-sm text-left">
+                    <table class="w-full text-sm text-left table-fixed">
                         <thead class="bg-slate-800 text-gray-300 uppercase text-xs tracking-wider">
                             <tr>
-                                <th class="px-3 py-3 whitespace-nowrap">#</th>
+                                <th class="px-3 py-3 whitespace-nowrap w-14">S.No</th>
                                 <th class="px-3 py-3">Store / Restaurant</th>
                                 <th class="px-3 py-3">Location</th>
-                                <th class="px-3 py-3 whitespace-nowrap">Event Type</th>
-                                <th class="px-3 py-3 whitespace-nowrap">Event Date</th>
-                                <th class="px-3 py-3">Status</th>
+                                <th class="px-3 py-3 whitespace-nowrap w-28">Event Type</th>
+                                <th class="px-3 py-3 w-40">Event Date</th>
+                                <th class="px-3 py-3 w-44">Status</th>
                                 <th class="px-3 py-3">Short Description</th>
                                 <th class="px-3 py-3">Article</th>
                             </tr>
@@ -1263,8 +1263,8 @@
                     <span class="line-clamp-2 block" title="${escapeHtml(r.location || '')}">${escapeHtml(r.location || '—')}</span>
                 </td>
                 <td class="px-3 py-3 whitespace-nowrap">${typeBadge}</td>
-                <td class="px-3 py-3 text-gray-300 text-xs whitespace-nowrap">${escapeHtml(r.event_date || '—')}</td>
-                <td class="px-3 py-3 text-gray-300 text-xs max-w-[150px]" title="${escapeHtml(r.status || '')}">
+                <td class="px-3 py-3 text-gray-300 text-xs max-w-[160px] break-words">${escapeHtml(r.event_date || '—')}</td>
+                <td class="px-3 py-3 text-gray-300 text-xs max-w-[180px] break-words" title="${escapeHtml(r.status || '')}">
                     <span class="line-clamp-2 block">${escapeHtml(r.status || '—')}</span>
                 </td>
                 <td class="px-3 py-3 text-gray-400 text-xs max-w-[220px]">
@@ -1413,8 +1413,8 @@
                     <span class="line-clamp-2 block" title="${escapeHtml(r.location || '')}">${escapeHtml(r.location || '—')}</span>
                 </td>
                 <td class="px-3 py-3 whitespace-nowrap">${typeBadge}</td>
-                <td class="px-3 py-3 text-gray-300 text-xs whitespace-nowrap">${escapeHtml(r.event_date || '—')}</td>
-                <td class="px-3 py-3 text-gray-300 text-xs max-w-[150px]" title="${escapeHtml(r.status || '')}">
+                <td class="px-3 py-3 text-gray-300 text-xs max-w-[160px] break-words">${escapeHtml(r.event_date || '—')}</td>
+                <td class="px-3 py-3 text-gray-300 text-xs max-w-[180px] break-words" title="${escapeHtml(r.status || '')}">
                     <span class="line-clamp-2 block">${escapeHtml(r.status || '—')}</span>
                 </td>
                 <td class="px-3 py-3 text-gray-400 text-xs max-w-[220px]">
