@@ -60,9 +60,7 @@ def get_driver():
 
 # ── Config ────────────────────────────────────────────────────────────────────
 URL       = "https://whatnow.com/category/restaurants/"
-MAX_PAGES = 10
-now_utc   = datetime.now(timezone.utc)
-CUTOFF    = now_utc - timedelta(days=2)
+MAX_PAGES = 5
 
 HEADERS = {
     "User-Agent": (
@@ -142,10 +140,6 @@ for p in posts:
                 date_str = time_el.get_text(strip=True)
         else:
             date_str = time_el.get_text(strip=True)
-
-    # Skip posts outside the 48-hour window
-    if post_dt is None or post_dt < CUTOFF:
-        continue
 
     seen_urls.add(href)
     rows.append({"date": date_str, "url": href})
