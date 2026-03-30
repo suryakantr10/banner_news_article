@@ -4,6 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
+from selenium.common.exceptions import TimeoutException, WebDriverException
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.core.os_manager import ChromeType
 from bs4 import BeautifulSoup
@@ -55,7 +56,9 @@ def get_driver():
     # matching ChromeDriver — prevents the localhost timeout on CI runners.
     driver_path = ChromeDriverManager(driver_version=chrome_version).install()
     service = Service(driver_path)
-    return webdriver.Chrome(service=service, options=options)
+    driver = webdriver.Chrome(service=service, options=options)
+    driver.set_page_load_timeout(180)
+    return driver
 
 
 # ── Config ────────────────────────────────────────────────────────────────────
@@ -73,7 +76,14 @@ HEADERS = {
 driver = get_driver()
 
 try:
-    driver.get(URL)
+    try:
+        driver.get(URL)
+    except (TimeoutException, WebDriverException) as err:
+        print(f"⚠️  Page load timeout or driver error: {err}")
+        try:
+            driver.execute_script("window.stop();")
+        except Exception:
+            pass
 
     try:
         WebDriverWait(driver, 15).until(
