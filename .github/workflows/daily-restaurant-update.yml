@@ -43,31 +43,12 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Fetch latest remote changes
-          git fetch origin main
-
-          # Try to rebase; if it fails, reset and retry
-          if ! git rebase origin/main; then
-            echo "Rebase conflict detected, resetting..."
-            git rebase --abort
-            git reset --hard origin/main
-          fi
-
           git add restaurant_latest.json Daily_restaurants_*.csv
 
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
             git commit -m "chore: daily restaurant update $(date -u '+%Y-%m-%d %H:%M UTC')"
-
-            # Retry push up to 3 times
-            for i in 1 2 3; do
-              if git push origin main; then
-                echo "Push successful"
-                break
-              fi
-              echo "Push failed (attempt $i/3), rebasing and retrying..."
-              git pull --rebase origin main
-              sleep $((5 * i))
-            done
+            git pull --rebase origin main
+            git push origin main
           fi
