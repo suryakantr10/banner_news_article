@@ -6,7 +6,7 @@ name: Daily CT Scoop Update
 
 on:
   schedule:
-    - cron: '30 23 * * *'  # 5:00 IST daily
+    - cron: '35 23 * * *'  # 5:00 IST daily
   workflow_dispatch:  # Allows manual triggering from GitHub Actions tab
 
 permissions:

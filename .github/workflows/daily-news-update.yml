@@ -42,5 +42,6 @@ jobs:
           git add latest_news_*.json || true
           git add store_open_close_news_*.csv || true
           git diff --staged --quiet || git commit -m "Auto-update: Daily news fetch $(date +'%Y-%m-%d')"
-          git pull --rebase origin main
+          git fetch origin main
+          git rebase origin/main
           git push origin main
