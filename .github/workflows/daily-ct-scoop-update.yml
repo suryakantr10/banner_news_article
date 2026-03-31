@@ -67,4 +67,5 @@ jobs:
           git add ct_scoop_latest.json
           git add ct_scoop_links_*.xlsx || true
           git diff --staged --quiet || git commit -m "Auto-update: Daily CT Scoop fetch $(date +'%Y-%m-%d')"
-          git push
+          git pull --rebase origin main
+          git push origin main

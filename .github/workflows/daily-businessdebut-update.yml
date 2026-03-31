@@ -41,4 +41,5 @@ jobs:
           git add businessdebut_latest.json
           git add businessdebut_articles_*.csv || true
           git diff --staged --quiet || git commit -m "Auto-update: Daily Business Debut fetch $(date +'%Y-%m-%d')"
-          git push
+          git pull --rebase origin main
+          git push origin main

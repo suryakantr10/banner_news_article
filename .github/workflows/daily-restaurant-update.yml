@@ -58,17 +58,16 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: daily restaurant update 2026-03-31 10:49:42 UTC"
+            git commit -m "chore: daily restaurant update $(date -u '+%Y-%m-%d %H:%M UTC')"
 
             # Retry push up to 3 times
             for i in 1 2 3; do
               if git push origin main; then
-                echo "✅ Push successful"
+                echo "Push successful"
                 break
               fi
-              echo "⚠️  Push failed (attempt $i/3), fetching latest and retrying..."
-              git fetch origin main
-              git reset --hard origin/main
-              sleep $((5 * i))  # Exponential backoff
+              echo "Push failed (attempt $i/3), rebasing and retrying..."
+              git pull --rebase origin main
+              sleep $((5 * i))
             done
           fi
