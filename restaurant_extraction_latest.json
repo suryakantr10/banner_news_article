@@ -216,12 +216,196 @@
       "status": "permanently closed (implied; last date confirmed March 28)",
       "short_description": "Miami seafood restaurant announced its closure after over ten years in business since 2014. Owner Danny Serfer shared the news in a heartfelt social media post thanking staff and loyal customers.",
       "article_link": "https://whatnow.com/miami/restaurants/prominent-seafood-eatery-bids-farewell-after-over-10-years/"
+    },
+    {
+      "store_name": "Block Craft Beer + Kitchen",
+      "location": "7485 Rush River Dr, Suite 650, Sacramento, CA 95831",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "\"getting ready to pour its first pints\"",
+      "short_description": "Block Craft Beer + Kitchen is taking over the former Device Brewing Co. space at 7485 Rush River Drive, Suite 650 in Sacramento's Pocket neighborhood, led by local partners Jason Jokerst and Tim Giordano. The concept is a community-minded New American restaurant featuring the brand's own Block beer, elevated food, a family-friendly environment with video games for kids, and a large outdoor seating area. No opening date has been announced.",
+      "article_link": "https://whatnow.com/sacramento/restaurants/block-craft-beer-kitchen-preparing-to-debut-in-sacramentos-pocket-neighborhood/"
+    },
+    {
+      "store_name": "Neveria La Delicia (second location)",
+      "location": "1725 W Mississippi Ave, Denver, CO 80223",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "\"opening a second location\" / \"doesn't have an opening date as of yet\"",
+      "short_description": "Neveria La Delicia, a family-run ice cream and snack shop based in Edgewood, is opening a second location at 1725 W Mississippi Ave in Athmar Park, according to a food license filing with the City of Denver. The space currently houses a car dealership. No opening date has been announced.",
+      "article_link": "https://whatnow.com/denver/restaurants/ice-cream-shop-neveria-la-delicia-to-open-a-second-location-in-athmar-park/"
+    },
+    {
+      "store_name": "Nobibi (Huntington Beach)",
+      "location": "Huntington Beach, CA (exact address not yet publicly disclosed)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "\"expected to serve as a flagship for future coastal growth\" / \"exact opening date has yet to be announced\"",
+      "short_description": "Nobibi, a fast-growing dessert brand known for soft-serve creations and specialty drinks, is preparing to open its first Huntington Beach location under franchise operator RoseJano Investment Group LLC, with immediate plans to further expand into Newport Beach and Laguna Beach. No exact address or opening date has been announced.",
+      "article_link": "https://whatnow.com/orange-county/restaurants/nobibi-expanding-to-huntington-beach-with-plans-for-newport-beach-and-laguna-beach/"
+    },
+    {
+      "store_name": "Voodoo Doughnut",
+      "location": "2702 6th Ave, Tacoma, WA 98406",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "\"set to sweeten up\" / \"An official opening date for the Tacoma location has not been announced\"",
+      "short_description": "Voodoo Doughnut, the Portland-based eccentric doughnut chain, is set to open a new location at 2702 6th Ave in Tacoma, marking its third Puget Sound area outpost. Construction has not yet begun, with plans calling for a full interior buildout along with permits for signage, a mural, and exterior upgrades. No opening date has been announced.",
+      "article_link": "https://whatnow.com/seattle/restaurants/voodoo-doughnut-to-open-new-location-in-tacoma/"
+    },
+    {
+      "store_name": "Ba Banh Mi",
+      "location": "128 Washington St, Salem, MA 01970",
+      "event_type": "Opening",
+      "event_date": "Early May 2026",
+      "status": "\"slated to debut in early May 2026\"",
+      "short_description": "Ba Banh Mi is a fast-casual Vietnamese restaurant set to open at 128 Washington Street in Salem, operated by local restaurateur Ba Pho, known for his previous concept Calibasil. The menu will feature bánh mì sandwiches, rice and vermicelli bowls, pho wraps, spring and egg rolls, and Vietnamese beverages. Final preparations including electrical work, menu testing, and permit approvals are nearing completion.",
+      "article_link": "https://whatnow.com/boston/restaurants/ba-banh-mi-to-serve-vietnamese-sandwiches-soups-and-more-in-salem/"
+    },
+    {
+      "store_name": "The Crispy Coop",
+      "location": "1717 Northwest Blvd, Columbus, OH 43212",
+      "event_type": "Closing",
+      "event_date": "End of March 2026 (\"end of this month\")",
+      "status": "\"will close the restaurant at the end of this month\"",
+      "short_description": "The Crispy Coop, a Southern-style fried chicken restaurant in Grandview, announced on social media that it will close at the end of this month after a 12-year run in Columbus. The closure was announced by the restaurant citing the time had come to move on, with a farewell message thanking customers, staff, and supporters.",
+      "article_link": "https://whatnow.com/columbus/restaurants/popular-fried-chicken-restaurant-in-columbus-to-shut-doors-after-12-year-run/"
+    },
+    {
+      "store_name": "Aperitivo",
+      "location": "200 S Ashley St, Ann Arbor, MI 48104",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "\"under construction right now\" / \"Staff have not announced an opening date\"",
+      "short_description": "Aperitivo is a new cocktail and wine bar coming to 200 S Ashley Street in downtown Ann Arbor, described as a \"new after work destination\" serving wine, light beer, and spirits. The 1,000-square-foot space is currently under construction with bar seating being installed, and a food truck and new outdoor patio are also planned for the space. No opening date has been announced.",
+      "article_link": "https://whatnow.com/detroit/restaurants/cocktail-and-wine-bar-moving-to-popular-corner-in-downtown-ann-arbor/"
+    },
+    {
+      "store_name": "Jolene Jolene",
+      "location": "Atlanta, GA (exact location not yet revealed)",
+      "event_type": "Opening",
+      "event_date": "Summer 2026 (targeted)",
+      "status": "\"hoping to open Jolene Jolene by summer\"",
+      "short_description": "Jolene Jolene, a women's sports bar that has operated as a pop-up and residency for the past two years, has secured a permanent location in Atlanta, with owner Chelsea Fishman planning to reveal the exact address within the next month. A Kickstarter campaign seeking $50,000 by April 22 has been launched to support the opening. No exact address has been disclosed.",
+      "article_link": "https://whatnow.com/atlanta/restaurants/jolene-jolene-secures-permanent-location-launches-kickstarter/"
+    },
+    {
+      "store_name": "Monday Night Brewing (South End expansion)",
+      "location": "2217 S Tryon St, Charlotte, NC 28203",
+      "event_type": "Remodel",
+      "event_date": "Not specified",
+      "status": "\"looking to expand its operations\" / \"recently filed a permit to add a shipping container\"",
+      "short_description": "Monday Night Brewing has filed a permit to add a shipping container outdoor bar to its South End location at 2217 S. Tryon Street, with the expansion also set to feature a large screen for sports viewing. The brand opened its South End Charlotte location in 2023 and operates additional locations in Atlanta, Birmingham, Nashville, and Knoxville. No completion date has been specified.",
+      "article_link": "https://whatnow.com/charlotte/restaurants/monday-night-brewing-expanding-south-end-spot/"
+    },
+    {
+      "store_name": "Bacari",
+      "location": "41 Hugus Aly, Pasadena, CA 91103",
+      "event_type": "Opening",
+      "event_date": "2027",
+      "status": "\"plans to open in 2027\" / \"in the early stages of development\"",
+      "short_description": "Bacari, a local Los Angeles-area chain currently with 10 locations, is planning to open a new spot at One Colorado shopping center in Old Town Pasadena, taking over the former Sage Regenerative Kitchen space. The 5,000-square-foot location is in the early stages of development, with an opening planned for 2027.",
+      "article_link": "https://whatnow.com/los-angeles/restaurants/bacari-expanding-to-old-town-pasadena/"
+    },
+    {
+      "store_name": "Rick's Tavern",
+      "location": "201 W 7th Ave, Conshohocken, PA 19428",
+      "event_type": "Opening",
+      "event_date": "Spring 2026",
+      "status": "\"set to open a modern Italian restaurant this spring\"",
+      "short_description": "Rick's Tavern, a modern Italian restaurant from restaurateurs Rick and Gale Mahoney, is set to open this spring at 201 W. 7th Ave. in Conshohocken, taking over the former Pizza Time Saloon space. The two-floor venue will accommodate approximately 100 guests per floor, featuring a renovated interior with industrial-style elements, booth seating, and a racing theme throughout.",
+      "article_link": "https://whatnow.com/philadelphia/restaurants/restaurateurs-revive-neighborhood-favorite-with-ricks-tavern-its-inviting-its-comfortable/"
+    },
+    {
+      "store_name": "Airi Ramen",
+      "location": "11910 US-290 #220, Manor, TX 78653",
+      "event_type": "Opening",
+      "event_date": "By December 15, 2026 (construction end date)",
+      "status": "\"new Airi Ramen opening in Manor\"",
+      "short_description": "Airi Ramen, a Houston-area ramen restaurant with six current locations, is opening a new location in Manor, TX at 11910 US-290, Suite 220, confirmed by owner Mingfeng Cai. A filing with the Texas Department of Licensing and Regulation shows a $400,000 construction project expected to run from June 15 to December 15. Details on the Manor menu are not yet available.",
+      "article_link": "https://whatnow.com/austin/restaurants/houstons-airi-ramen-is-coming-to-the-austin-area/"
+    },
+    {
+      "store_name": "Kula Wine Bar and Restaurant",
+      "location": "10 N Washington St, Ypsilanti, MI 48197",
+      "event_type": "Opening",
+      "event_date": "End of summer 2026 (targeted)",
+      "status": "\"hoping to open by the end of the summer\"",
+      "short_description": "Kula is a new small-scale restaurant and wine bar with 12 seats coming to 10 N Washington Street in downtown Ypsilanti, sharing the building with Beara Bakes and Cold Comfort Ice Cream. Owner Nina Shahin is developing a rotating menu of smaller plates inspired by Eastern Italy, the Balkan countries, and parts of North Africa, paired with intentional wine selections. No exact opening date has been confirmed.",
+      "article_link": "https://whatnow.com/detroit/restaurants/kula-wine-bar-and-restaurant-joining-beara-bakes-space-in-ypsilanti/"
+    },
+    {
+      "store_name": "Salento Steakhouse",
+      "location": "11018 Old St Augustine Rd, Jacksonville, FL 32257",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "\"planning to reopen soon\"",
+      "short_description": "Salento Steakhouse, a Colombian restaurant established in 2014 at 11018 Old St. Augustine Road in Mandarin Central Shopping Center, is currently closed but is planning to reopen soon, confirmed by one of the owners. The ownership confirmed the reopening but declined to provide further details at the time of publication.",
+      "article_link": "https://whatnow.com/jacksonville/restaurants/salento-steakhouse-reopening-in-mandarin/"
+    },
+    {
+      "store_name": "Ay Que Rico (second location)",
+      "location": "3419 E County Rd 542, Lakeland, FL 33801",
+      "event_type": "Opening",
+      "event_date": "Approximately 2.5 months from publication (Not specified exactly)",
+      "status": "\"should be about two and a half months\"",
+      "short_description": "Ay Que Rico, a Cuban-American restaurant based in Brandon, FL, is preparing to open a second location at 3419 E County Rd 542 in Lakeland, approximately four times the size of the original, with seating for more than 140 guests. The new location will feature a more diverse menu with additional items beyond those at the Brandon location, along with outdoor seating and continued Karaoke Saturdays. No exact start or opening date has been confirmed.",
+      "article_link": "https://whatnow.com/tampa/restaurants/brandons-ay-que-rico-expanding-to-lakeland-this-summer/"
+    },
+    {
+      "store_name": "Wingnutz",
+      "location": "1037 Dixieland Mall Ln, Lakeland, FL 33803",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "\"new Wingnutz opening in Lakeland\"",
+      "short_description": "Wingnutz, a Buffalo-based wing chain founded in 2005 with locations in Williamsville and Buffalo, NY, is opening a new location in Lakeland, FL at 1037 Dixieland Mall Lane, based on submitted plan review documents. The brand is targeting several cities across the country for growth starting in Florida and plans to begin accepting franchise offers later this spring. No opening date has been specified.",
+      "article_link": "https://whatnow.com/tampa/restaurants/buffalo-based-wing-chain-makes-its-way-to-tampa-bay/"
+    },
+    {
+      "store_name": "Gin Khao",
+      "location": "750 W Main St, Bartow, FL 33830",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "\"preparing to launch its first brick-and-mortar restaurant\"",
+      "short_description": "Gin Khao, a Thai cuisine food truck operating in Polk County locales including Bartow, Lakeland, and Winter Haven, is opening its first brick-and-mortar restaurant at 750 W Main Street in Bartow, confirmed by owner Thomas Klug. The menu will be based on the food truck's existing offerings of Thai entrees including Pineapple Fried Rice, Pad Thai, and Pad Kee Mao, though changes for the brick-and-mortar are not yet known. No opening date has been specified.",
+      "article_link": "https://whatnow.com/tampa/restaurants/gin-khao-food-truck-opening-first-brick-and-mortar/"
+    },
+    {
+      "store_name": "Tampa Joe's",
+      "location": "26951 Halter Lp, Wesley Chapel, FL 33544",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "\"new Tampa Joe's in the works\" / \"looks to be reopening\"",
+      "short_description": "Tampa Joe's, a sports bar concept formerly located in Westchase Tampa, appears to be reopening at 26951 Halter Loop in Wesley Chapel based on plan review paperwork, joining upcoming restaurant and entertainment spots including Cinnaholic and The Clubhouse. Further details are being sought from owner Mike Goodwin and were not yet available at time of publication. No opening date has been specified.",
+      "article_link": "https://whatnow.com/tampa/restaurants/tampa-joes-looks-to-be-reopening-in-wesley-chapel/"
+    },
+    {
+      "store_name": "Smalls Sliders",
+      "location": "19105 Wingshooter Wy, Lutz, FL 33558",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "\"new Smalls Sliders planned for\"",
+      "short_description": "Smalls Sliders, the Baton Rouge-founded slider chain known for its distinctive prefab \"can\" structures, is planning a new location at 19105 Wingshooter Way in Lutz, FL, based on submitted plan review paperwork. The chain has seen recent expansion news across Jacksonville, Orlando, and Miami markets, and this location would join restaurants including Swig, Andy's Frozen Custard, and Greenlane. No opening date has been specified.",
+      "article_link": "https://whatnow.com/tampa/restaurants/another-smalls-sliders-can-looks-to-be-dropping-in-lutz/"
+    },
+    {
+      "store_name": "SMP Steaks (sister location of SMP Mini Mart)",
+      "location": "1050 Schadt Ave, Whitehall Township, PA 18052",
+      "event_type": "Opening",
+      "event_date": "Summer 2026",
+      "status": "\"expanding to enhance the customer experience this summer\"",
+      "short_description": "SMP Mini Mart, owned by the Sankari family, is opening a sister location at 1050 Schadt Ave directly across from its original store, to be operated under the name SMP Steaks, focused on phone and delivery orders to reduce wait times at both locations. The new space will function as a dedicated delivery and phone-order hub while the original continues in-person dining. No exact opening date has been specified beyond \"this summer.\"",
+      "article_link": "https://whatnow.com/philadelphia/restaurants/smp-mini-mart-expands-to-boost-service-cut-wait-times-better-the-experience/"
     }
   ],
   "non_working": [
     {
       "identifier": "Article 15",
       "reason": "Multi-business roundup article; extracted all four named businesses (Atlanta Golf & Social ×2, Frida's Grill and Bar, Cotto Modern Italian) as separate rows. Note: the article excerpt is cut off and may contain a fifth business not fully visible in the provided text."
+    },
+    {
+      "identifier": "None",
+      "reason": ""
     }
   ]
 }
