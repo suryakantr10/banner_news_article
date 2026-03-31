@@ -14,18 +14,18 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4.2.2        # ← Node.js 24 compatible
+        uses: actions/checkout@v4.2.2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 1
+          fetch-depth: 0          # ← CHANGED: full clone so rebase works properly
 
       - name: Install Chrome
-        uses: browser-actions/setup-chrome@v2  # ← Node.js 24 compatible
+        uses: browser-actions/setup-chrome@v2
         with:
           chrome-version: stable
 
       - name: Set up Python
-        uses: actions/setup-python@v5.6.0     # ← Node.js 24 compatible
+        uses: actions/setup-python@v5.6.0
         with:
           python-version: '3.11'
           cache: 'pip'
@@ -42,7 +42,22 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Pull latest remote changes BEFORE committing
+          git pull --rebase origin main       # ← CHANGED: pull first, then commit
+
           git add restaurant_latest.json Daily_restaurants_*.csv
-          git diff --cached --quiet && echo "No changes to commit" || \
-            git commit -m "chore: daily restaurant update $(date +'%Y-%m-%d %H:%M UTC')" && \
-            git push
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: daily restaurant update $(date +'%Y-%m-%d %H:%M UTC')"
+
+            # Retry push up to 3 times in case of a race condition
+            for i in 1 2 3; do
+              git push origin main && echo "✅ Push successful" && break
+              echo "⚠️  Push failed (attempt $i/3), pulling and retrying..."
+              git pull --rebase origin main
+              sleep 5
+            done
+          fi
