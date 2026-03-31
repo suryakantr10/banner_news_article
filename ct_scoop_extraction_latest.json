@@ -1,114 +1,96 @@
 {
-  "last_updated": "2026-03-28",
+  "last_updated": "2026-03-31",
   "data": [
     {
-      "store_name": "Rose Dairy",
-      "location": "906 South Main Street, Cheshire, CT",
+      "store_name": "Coastal Cone Creamery",
+      "location": "270 Captain Thomas Boulevard, West Haven, CT",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "Coming soon (renovations underway)",
+      "short_description": "A new ice cream shop called Coastal Cone Creamery is preparing to open in West Haven at the former Savin Rock Surf Shop location. The business will occupy approximately 1,187 square feet and plans to serve ice cream along with other frozen treats. Renovations are actively underway as of late March 2026.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/west-haven-scoop-coastal-cone-creamery-coming-soon"
+    },
+    {
+      "store_name": "Club Studio",
+      "location": "761 Main Avenue, Norwalk, CT",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "Planned (opening date TBD)",
+      "short_description": "Club Studio, a luxury gym chain owned by Fitness International, is eyeing the former LA Fitness location in Norwalk after that gym closes on April 7, 2026. The concept features boutique fitness studios offering yoga, boxing, pilates, and cryotherapy alongside a traditional open gym. The chain currently operates 18 locations nationwide with 23 more in development.",
+      "article_link": "https://www.theconnecticutscoop.com/all-fairfield-county-posts/norwalk-scoop-club-studio-eyeing-new-location-in-norwalk"
+    },
+    {
+      "store_name": "Mystic River Inn",
+      "location": "3 Gravel Street, Mystic, CT",
+      "event_type": "Opening",
+      "event_date": "March 30, 2026",
+      "status": "Now open",
+      "short_description": "A new luxury boutique hotel has opened in downtown Mystic, steps from local shops, restaurants, and attractions. The property features upscale suites with waterfront views in select rooms and a tranquil atmosphere despite its proximity to the bustling downtown district. Accommodations can be booked through mysticriverinn.com.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/mystic-scoop-new-luxury-boutique-hotel-opens-near-downtown-mystic"
+    },
+    {
+      "store_name": "Frisbie's Dairy Barn",
+      "location": "195 Charlton Road (Noble Gas Station), Sturbridge, MA",
+      "event_type": "Opening",
+      "event_date": "March 30, 2026",
+      "status": "Now open",
+      "short_description": "An ice cream shop called Frisbie's Dairy Barn has opened at the Noble travel center in Sturbridge, Massachusetts, offering nearly two dozen flavors plus sundaes, cones, and flights. Additionally, The Bol Place, a health-focused fast-casual eatery specializing in grain and protein bowls, is arriving soon to the same location.",
+      "article_link": "https://www.theconnecticutscoop.com/all-mass-posts/sturbridge-scoop-new-ice-cream-shop-opens-at-noble-new-eatery-coming-soon"
+    },
+    {
+      "store_name": "Ragozzino's Deli & Catering",
+      "location": "245 Summer Street, Plantsville, CT",
+      "event_type": "New Owner",
+      "event_date": "Late February 2026",
+      "status": "Now open under new ownership",
+      "short_description": "Ragozzino's Deli & Catering has transitioned to new ownership under Robert Bongiolatti and Maggie Garcia, reopening in late February 2026 with the traditional menu maintained alongside fresh offerings. The Italian deli provides sandwiches, pizza, breakfast items, catering services, imported specialty goods, soups, and salads. Hours are Tuesday-Friday 9am-4pm and Saturday 9am-3pm.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/plantsville-scoop-longtime-deli-gets-new-owner"
+    },
+    {
+      "store_name": "The Vintage Vault",
+      "location": "50 Depot Street, Collinsville, Canton, CT",
+      "event_type": "Opening",
+      "event_date": "April 1, 2026 (soft open); April 18, 2026 (grand opening)",
+      "status": "Opening April 2026",
+      "short_description": "A new vintage cooperative shop is debuting in Canton's historic Collinsville factory district at the Collins Company Axe Factory. The venue features multiple local vendors selling vintage furniture, decor, clothing, and miscellaneous items. The grand opening on April 18 includes live vinyl DJing, beverages from a local brewery, and complimentary cookies.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/canton-scoop-the-vintage-vault-sets-opening-date"
+    },
+    {
+      "store_name": "Crystal Mall",
+      "location": "Waterford, CT",
+      "event_type": "Closing",
+      "event_date": "March 31, 2026",
+      "status": "Closing March 31, 2026",
+      "short_description": "Crystal Mall is closing its doors on March 31, 2026, with owner General Dynamics Electric Boat announcing the end of majority operations. The property will be repurposed as an EB facility featuring offices, a training center, and support services, with renovations beginning in the former Macy's space. A hiring event is scheduled for April 11, 2026.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/waterford-scoop-take-a-look-at-the-final-days-of-crystal-mall"
+    },
+    {
+      "store_name": "LuAnn's Bakery & Cafe",
+      "location": "190 Trumbull Street, Hartford, CT",
+      "event_type": "Opening",
+      "event_date": "March 31, 2026",
+      "status": "Opening March 31, 2026",
+      "short_description": "LuAnn's Bakery & Cafe will open its Hartford location on March 31, 2026 at 7am in the former Citizens Bank building, offering coffees, freshly baked pastries, breakfast, and lunch items. The first 100 customers receive a commemorative opening-day pin. This marks the fourth location for the bakery, joining existing operations in Ellington and Stafford.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/hartford-scoop-luanns-bakery-cafe-sets-opening-date-in-hartford"
+    },
+    {
+      "store_name": "Angel Land",
+      "location": "1445 New Britain Avenue, Corbin's Corner, West Hartford, CT",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "Coming soon (hiring phase)",
+      "short_description": "Angel Land, a kids' entertainment center, is preparing to open its second U.S. location at Corbin's Corner in West Hartford. The facility will feature climbing structures, obstacle courses, ball pits, slides, foam areas, and imagination play areas designed for children 10 and under, with private party rooms available. The company is currently recruiting staff.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/west-hartford-scoop-sneak-peek-at-the-new-angel-land"
+    },
+    {
+      "store_name": "Shah's Halal Food",
+      "location": "1051 Wolcott Street, Waterbury, CT",
       "event_type": "Opening",
       "event_date": "March 28, 2026",
-      "status": "opening for the season this Saturday",
-      "short_description": "Rose Dairy, a seasonal ice cream and burger stand originally established in 1951, will reopen for the season on Saturday, March 28th at 906 South Main Street in Cheshire. The roadside stand serves hand-pressed charbroiled hamburgers, hot dogs, milkshakes, soft serve and hard serve ice cream, and lobster rolls. The business operates seasonally from March until November.",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-rose-dairy-opening-for-the-season-this-saturday"
-    },
-    {
-      "store_name": "Bounce X Fun Zone",
-      "location": "50 Providence Pike, Putnam, CT (former Big Lots space)",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "under construction",
-      "short_description": "Bounce X Fun Zone is under construction at 50 Providence Pike in Putnam, occupying the remainder of the former Big Lots space next to Montana Nights Axe Throwing. The children's entertainment complex will feature trampolines, a multi-sports court, climbing structures, arcade games, a Ninja warrior course, a toddler area, and two party rooms. No opening date has been announced.",
-      "article_link": "https://www.theconnecticutscoop.com/all-windham-county-posts/putnam-scoop-bounce-x-fun-zone-coming-soon-to-putnam"
-    },
-    {
-      "store_name": "Starbucks",
-      "location": "363 Roberts Street, East Hartford, CT",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "appears to be cancelled",
-      "short_description": "The Starbucks location planned for the new TownePlace & Fairfield Inn & Suites at 363 Roberts Street in East Hartford appears to be cancelled, as the 2,650 sq ft space has been listed for lease. The Connecticut Scoop reached out to Starbucks and the broker for confirmation but received no response. The space is described as a quick-service drive-thru restaurant opportunity.",
-      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/east-hartford-starbucks-might-not-be-coming-to-east-hartford"
-    },
-    {
-      "store_name": "7th Street Burger",
-      "location": "1054 Chapel Street, New Haven, CT (former Avocado Haven)",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "coming soon",
-      "short_description": "7th Street Burger is coming soon to 1054 Chapel Street in Downtown New Haven, taking over the former Avocado Haven space. The chain specializes in smash burgers, loaded fries, and late-night bites and currently has dozens of locations across New York, Washington DC, Massachusetts, Maryland, New Jersey, and Pennsylvania. Signs have recently been installed on the exterior of the new space.",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/new-haven-scoop-7th-street-burger-coming-to-chapel-street"
-    },
-    {
-      "store_name": "Shogun X Revolving Sushi",
-      "location": "1483 Pleasant Valley Road, Manchester, CT (former Hooters)",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "eyeing soft open this weekend",
-      "short_description": "Shogun X Revolving Sushi is planning a soft opening at 1483 Pleasant Valley Road in Manchester, the former Hooters location, pending final town approvals. The all-you-can-eat restaurant will feature a conveyor belt system delivering sushi, sashimi, and other Japanese favorites to tables. A grand opening date has not yet been announced.",
-      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/manchester-scoop-new-revolving-sushi-restaurant-eyeing-soft-open-this-weekend"
-    },
-    {
-      "store_name": "Mozz & Co.",
-      "location": "22 Raymond Road, West Hartford, CT (former Toro Mexican Street Food)",
-      "event_type": "Opening",
-      "event_date": "April 8, 2026",
-      "status": "opening on April 8th",
-      "short_description": "Mozz & Co., an upscale Italian delicatessen, will open on April 8th at 22 Raymond Road in West Hartford, occupying the former Toro Mexican Street Food space. The menu includes chicken cutlets, porchetta, broccoli rabe, house-made meats, salads, desserts, and espresso, with Italian dinner service on Saturdays and Sundays. The business is owned by chef Joey Cusano, formerly of Le Mazet.",
-      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/west-hartford-scoop-mozz-co-opening-on-april-8th-in-weha"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "N/A",
-      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/new-britain-scoop-former-averys-soda-property-listed-for-sale"
-    },
-    {
-      "store_name": "Cinnabon",
-      "location": "Brass Mill Center, 495 Union Street, Waterbury, CT (food court, second level)",
-      "event_type": "Opening",
-      "event_date": "March 31, 2026",
-      "status": "set opening date at Brass Mill Center",
-      "short_description": "Cinnabon will open at Brass Mill Center's food court at 495 Union Street in Waterbury on Tuesday, March 31st at 12:00pm, marking the brand's return to the mall after operating there until early 2025. The bakery chain specializes in cinnamon rolls, coffees, Chillattas, and other sweets. It will share a space with Auntie Anne's Pretzels.",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/waterbury-scoop-cinnabon-auntie-annes-set-opening-date-at-brass-mill-center"
-    },
-    {
-      "store_name": "Auntie Anne's Pretzels",
-      "location": "Brass Mill Center, 495 Union Street, Waterbury, CT (food court, second level)",
-      "event_type": "Opening",
-      "event_date": "March 31, 2026",
-      "status": "set opening date at Brass Mill Center",
-      "short_description": "Auntie Anne's Pretzels will open alongside Cinnabon in a shared food court space at Brass Mill Center on March 31st at 12:00pm, representing a new tenant for the mall. The chain serves soft-baked pretzels, pretzel dogs, lemonades, and other items. A similar pretzel franchise, Pretzelmaker, previously operated at the mall.",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/waterbury-scoop-cinnabon-auntie-annes-set-opening-date-at-brass-mill-center"
-    },
-    {
-      "store_name": "Deep 6 Arcade",
-      "location": "2505 Main Street, Stratford, CT (former Olde Dog Tavern, Station House Square)",
-      "event_type": "Opening",
-      "event_date": "Summer 2026",
-      "status": "expected to open during the summer",
-      "short_description": "Deep 6 Arcade will open at 2505 Main Street in Stratford, taking over the former Olde Dog Tavern space directly across from the Stratford Train Station. The venue will combine a restaurant, bar, and arcade featuring carefully restored classic machines from former Connecticut arcades, including Pac-Man, Galaga, Tempest, and pinball games. It will also offer live music, private event rooms, and arcade game sales and repair.",
-      "article_link": "https://www.theconnecticutscoop.com/all-fairfield-county-posts/stratford-scoop-new-arcade-restaurant-bar-venue-coming-soon"
-    },
-    {
-      "store_name": "Thena Pita Bar",
-      "location": "25 Falls Road, Moodus section, East Haddam, CT (former Pizzeria da Vinci)",
-      "event_type": "Opening",
-      "event_date": "Late spring 2026",
-      "status": "planned to open in late spring",
-      "short_description": "Thena Pita Bar will open at 25 Falls Road in the Moodus section of East Haddam, occupying the former Pizzeria da Vinci space near HomeTown Market at The Old Lumberyard. The restaurant will serve authentic Greek street food including gyros, souvlaki, and baklava, and will be owned by Niko Papathanasiou and Sarah Turker, who have operated the Greekin' Out food truck since 2015. No exact opening date has been set.",
-      "article_link": "https://www.theconnecticutscoop.com/all-middlesex-county-posts/moodus-scoop-thena-pita-bar-bring-greek-street-food-to-moodus"
+      "status": "Now open",
+      "short_description": "Shah's Halal Food has opened its second Waterbury location at 1051 Wolcott Street in a space formerly occupied by a 7-Eleven and smoke shop. The restaurant serves gyros, platters, falafel, burgers, wings, salads, hummus, and more, operating daily from 11am to 11pm with online ordering coming soon. This expands the chain's growing presence across Connecticut.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/waterbury-scoop-shahs-halal-opens-second-waterbury-location"
     }
   ],
-  "non_working": [
-    {
-      "url": "https://www.theconnecticutscoop.com/all-hartford-county-posts/new-britain-scoop-former-averys-soda-property-listed-for-sale",
-      "reason": "Real estate listing article — no business opening or closure event; Avery's Soda relocation already occurred in 2025 prior to this article"
-    },
-    {
-      "url": "https://www.theconnecticutscoop.com/all-hartford-county-posts/east-hartford-starbucks-might-not-be-coming-to-east-hartford",
-      "reason": "Cancelled opening plan — no confirmed opening or closing, space listed for lease with no new tenant confirmed"
-    }
-  ]
+  "non_working": []
 }
