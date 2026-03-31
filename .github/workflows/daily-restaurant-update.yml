@@ -43,21 +43,32 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Pull latest remote changes BEFORE committing
-          git pull --rebase origin main       # ← CHANGED: pull first, then commit
+          # Fetch latest remote changes
+          git fetch origin main
+
+          # Try to rebase; if it fails, reset and retry
+          if ! git rebase origin/main; then
+            echo "Rebase conflict detected, resetting..."
+            git rebase --abort
+            git reset --hard origin/main
+          fi
 
           git add restaurant_latest.json Daily_restaurants_*.csv
 
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: daily restaurant update $(date +'%Y-%m-%d %H:%M UTC')"
+            git commit -m "chore: daily restaurant update 2026-03-31 10:49:42 UTC"
 
-            # Retry push up to 3 times in case of a race condition
+            # Retry push up to 3 times
             for i in 1 2 3; do
-              git push origin main && echo "✅ Push successful" && break
-              echo "⚠️  Push failed (attempt $i/3), pulling and retrying..."
-              git pull --rebase origin main
-              sleep 5
+              if git push origin main; then
+                echo "✅ Push successful"
+                break
+              fi
+              echo "⚠️  Push failed (attempt $i/3), fetching latest and retrying..."
+              git fetch origin main
+              git reset --hard origin/main
+              sleep $((5 * i))  # Exponential backoff
             done
           fi

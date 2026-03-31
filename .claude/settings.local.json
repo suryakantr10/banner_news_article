@@ -25,7 +25,8 @@
       "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://whatnow.com/seattle/restaurants/yella-beak-saloon-in-enumclaw-under-new-ownership-set-to-reopen/\")",
       "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://whatnow.com/atlanta/restaurants/board-game-cafe-planned-for-the-beacon-in-grant-park/\")",
       "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://whatnow.com/boston/restaurants/a-street-hospitality-to-open-new-restaurant-at-the-four-seasons-hotel-in-bostons-back-bay/\")",
-      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://whatnow.com/las-vegas/restaurants/inclusivity-focused-coffee-spot-in-las-vegas-to-shut-down/\")"
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://whatnow.com/las-vegas/restaurants/inclusivity-focused-coffee-spot-in-las-vegas-to-shut-down/\")",
+      "Bash(python -c \"from pathlib import Path; p=Path\\(''ct_scoop_articles_ready.txt''\\); print\\(f''exists: {p.exists\\(\\)}, size: {p.stat\\(\\).st_size if p.exists\\(\\) else 0} bytes''\\)\")"
     ]
   }
 }
