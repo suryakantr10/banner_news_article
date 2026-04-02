@@ -8,101 +8,252 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-        
-        * {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        }
-        
+        * { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+
         body {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            background: #0a0f1e;
             min-height: 100vh;
+            overflow-x: hidden;
         }
-        
-        .card-hover {
+
+        /* ── Animated Background ── */
+        .bg-animated {
+            position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
+        }
+        .orb {
+            position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.18;
+            animation: orbFloat 12s ease-in-out infinite;
+        }
+        .orb-1 { width: 600px; height: 600px; background: #3b82f6; top: -200px; left: -150px; animation-delay: 0s; }
+        .orb-2 { width: 500px; height: 500px; background: #8b5cf6; top: 30%; right: -200px; animation-delay: -4s; }
+        .orb-3 { width: 400px; height: 400px; background: #06b6d4; bottom: -100px; left: 30%; animation-delay: -8s; }
+        @keyframes orbFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -40px) scale(1.05); }
+            66% { transform: translate(-20px, 20px) scale(0.97); }
+        }
+        .grid-overlay {
+            position: fixed; inset: 0; z-index: 0; pointer-events: none;
+            background-image: linear-gradient(rgba(59,130,246,0.04) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(59,130,246,0.04) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* ── Layout ── */
+        .content-wrap { position: relative; z-index: 1; }
+
+        /* ── Glassmorphism ── */
+        .glass {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255,255,255,0.07);
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.06);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
-        .card-hover:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+        .glass-card:hover {
+            background: rgba(20, 30, 55, 0.8);
+            border-color: rgba(99, 130, 246, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(99,130,246,0.1);
         }
-        
-        .badge-opening {
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            box-shadow: 0 4px 14px 0 rgba(16, 185, 129, 0.3);
-        }
-        
-        .badge-closing {
-            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-            box-shadow: 0 4px 14px 0 rgba(239, 68, 68, 0.3);
-        }
-        
-        .fade-in {
-            animation: fadeIn 0.5s ease-in;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .pulse-dot {
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-        
-        .loading-spinner {
-            border: 3px solid rgba(255, 255, 255, 0.1);
-            border-top: 3px solid #3b82f6;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .analyst-section {
-            scroll-margin-top: 100px;
-        }
-        
-        .search-input:focus {
-            outline: none;
-            ring: 2px;
-            ring-color: #3b82f6;
-        }
-        
+
+        /* ── Cards with gradient top accent ── */
+        .card-accent-blue  { border-top: 2px solid transparent; background-image: linear-gradient(rgba(15,23,42,0.6), rgba(15,23,42,0.6)), linear-gradient(90deg, #3b82f6, #8b5cf6); background-origin: border-box; background-clip: padding-box, border-box; }
+        .card-accent-green { border-top: 2px solid transparent; background-image: linear-gradient(rgba(15,23,42,0.6), rgba(15,23,42,0.6)), linear-gradient(90deg, #10b981, #06b6d4); background-origin: border-box; background-clip: padding-box, border-box; }
+        .card-accent-orange{ border-top: 2px solid transparent; background-image: linear-gradient(rgba(15,23,42,0.6), rgba(15,23,42,0.6)), linear-gradient(90deg, #f97316, #ef4444); background-origin: border-box; background-clip: padding-box, border-box; }
+        .card-accent-indigo{ border-top: 2px solid transparent; background-image: linear-gradient(rgba(15,23,42,0.6), rgba(15,23,42,0.6)), linear-gradient(90deg, #6366f1, #8b5cf6); background-origin: border-box; background-clip: padding-box, border-box; }
+
+        /* ── Stats Cards ── */
         .stats-card {
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%);
-            backdrop-filter: blur(10px);
+            background: rgba(15,23,42,0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.06);
+            transition: all 0.3s ease;
         }
+        .stats-card:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,0.3); }
+
+        /* ── Badges ── */
+        .badge-opening { background: linear-gradient(135deg, #10b981, #059669); box-shadow: 0 4px 14px rgba(16,185,129,0.35); }
+        .badge-closing  { background: linear-gradient(135deg, #ef4444, #dc2626); box-shadow: 0 4px 14px rgba(239,68,68,0.35); }
+
+        /* ── Tabs ── */
+        .tab-btn {
+            position: relative; padding: 10px 18px; border-radius: 999px;
+            font-size: 0.875rem; font-weight: 500; color: #94a3b8;
+            transition: all 0.2s ease; white-space: nowrap;
+        }
+        .tab-btn:hover { color: #e2e8f0; }
+        .tab-btn.active {
+            background: linear-gradient(135deg, #3b82f6, #6366f1);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(99,102,241,0.4);
+        }
+        .sub-tab-btn { padding: 8px 20px; border-radius: 999px; font-size: 0.8rem; font-weight: 500; color: #94a3b8; transition: all 0.2s; }
+        .sub-tab-btn:hover { color: #e2e8f0; }
+        .sub-tab-btn.active { background: rgba(99,102,241,0.2); color: #a5b4fc; border: 1px solid rgba(99,102,241,0.3); }
+
+        /* ── Animations ── */
+        .fade-in { animation: fadeIn 0.4s ease-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .slide-in { animation: slideIn 0.35s ease-out; }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-10px); }
+            to   { opacity: 1; transform: translateX(0); }
+        }
+        .pulse-dot { animation: pulseDot 2s ease-in-out infinite; }
+        @keyframes pulseDot {
+            0%,100% { opacity:1; transform:scale(1); }
+            50% { opacity:0.5; transform:scale(0.85); }
+        }
+        .spin-anim { animation: spin 1s linear infinite; }
+        @keyframes spin { to { transform:rotate(360deg); } }
+
+        /* ── Skeleton Loading ── */
+        .skeleton {
+            background: linear-gradient(90deg, rgba(30,41,59,0.8) 25%, rgba(51,65,85,0.6) 50%, rgba(30,41,59,0.8) 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+            border-radius: 8px;
+        }
+        @keyframes shimmer {
+            0%   { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* ── Search highlight ── */
+        mark { background: rgba(251,191,36,0.3); color: #fcd34d; border-radius: 2px; padding: 0 2px; }
+
+        /* ── NEW badge ── */
+        .badge-new {
+            display: inline-flex; align-items: center; gap: 3px;
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            color: #fff; font-size: 0.6rem; font-weight: 700;
+            padding: 2px 7px; border-radius: 999px;
+            box-shadow: 0 2px 8px rgba(245,158,11,0.5);
+            animation: newPulse 2s ease-in-out infinite;
+            letter-spacing: 0.05em; text-transform: uppercase;
+        }
+        @keyframes newPulse {
+            0%,100% { box-shadow: 0 2px 8px rgba(245,158,11,0.5); }
+            50% { box-shadow: 0 2px 16px rgba(245,158,11,0.8); }
+        }
+
+        /* ── Toast ── */
+        #toast-container { position: fixed; bottom: 24px; right: 24px; z-index: 9999; display: flex; flex-direction: column; gap: 10px; }
+        .toast {
+            display: flex; align-items: center; gap: 10px;
+            padding: 14px 18px; border-radius: 12px; min-width: 260px;
+            background: rgba(15,23,42,0.95); border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(16px); color: #e2e8f0; font-size: 0.875rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+            animation: toastIn 0.3s ease-out;
+        }
+        .toast.out { animation: toastOut 0.3s ease-in forwards; }
+        @keyframes toastIn  { from { opacity:0; transform:translateX(30px); } to { opacity:1; transform:none; } }
+        @keyframes toastOut { to   { opacity:0; transform:translateX(30px); } }
+
+        /* ── Scroll to top ── */
+        #scrollTop {
+            position: fixed; bottom: 24px; left: 24px; z-index: 9999;
+            width: 44px; height: 44px; border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #6366f1);
+            color: #fff; border: none; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 16px rgba(99,102,241,0.5);
+            opacity: 0; pointer-events: none;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        #scrollTop.visible { opacity: 1; pointer-events: auto; }
+        #scrollTop:hover { transform: translateY(-3px); }
+
+        /* ── Inputs ── */
+        .input-field {
+            background: rgba(15,23,42,0.7); border: 1px solid rgba(255,255,255,0.08);
+            color: #e2e8f0; border-radius: 10px; transition: all 0.2s;
+        }
+        .input-field:focus { outline: none; border-color: rgba(99,102,246,0.6); box-shadow: 0 0 0 3px rgba(99,102,246,0.15); }
+        .input-field::placeholder { color: #64748b; }
+
+        /* ── Select ── */
+        select { appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2394a3b8' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 36px; }
+
+        /* ── Navbar total badge ── */
+        .nav-total { background: rgba(99,102,246,0.15); border: 1px solid rgba(99,102,246,0.3); color: #a5b4fc; font-size: 0.75rem; font-weight: 600; padding: 2px 10px; border-radius: 999px; }
+
+        /* ── Table ── */
+        .data-table tbody tr { border-bottom: 1px solid rgba(255,255,255,0.04); transition: background 0.15s; }
+        .data-table tbody tr:hover { background: rgba(99,102,246,0.06); }
+        .data-table thead th { background: rgba(15,20,40,0.9); color: #94a3b8; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+        /* ── Analyst section heading ── */
+        .analyst-section { scroll-margin-top: 90px; }
+        .analyst-heading {
+            display: inline-flex; align-items: center; gap: 12px;
+            padding: 8px 20px 8px 14px; border-radius: 999px;
+            background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.2);
+        }
+
+        /* ── Hero gradient text ── */
+        .hero-gradient { background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 40%, #f472b6 80%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+        /* ── Keyboard shortcut badge ── */
+        .kbd { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 16px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 3px; font-size: 0.6rem; color: #94a3b8; }
+
+        /* ── Refresh btn ── */
+        .btn-primary { background: linear-gradient(135deg, #3b82f6, #6366f1); transition: all 0.2s; }
+        .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(99,102,246,0.4); }
+
+        .btn-download { background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.3); color: #34d399; transition: all 0.2s; }
+        .btn-download:hover { background: rgba(16,185,129,0.25); }
     </style>
 </head>
 <body class="text-gray-100">
+
+    <!-- Animated background -->
+    <div class="bg-animated">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+    <div class="grid-overlay"></div>
+
+    <!-- Toast container -->
+    <div id="toast-container"></div>
+
+    <!-- Scroll to top -->
+    <button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">
+        <i class="fas fa-chevron-up text-sm"></i>
+    </button>
+
     <!-- Navbar -->
-    <nav class="bg-slate-900/80 backdrop-blur-md border-b border-slate-700/50 sticky top-0 z-50">
+    <nav class="glass sticky top-0 z-50 border-b border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <div class="flex items-center space-x-3">
-                    <i class="fas fa-newspaper text-blue-400 text-2xl"></i>
-                    <h1 class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                        Store News Dashboard
-                    </h1>
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg">
+                        <i class="fas fa-newspaper text-white text-sm"></i>
+                    </div>
+                    <span class="text-lg font-bold hero-gradient">Store News Dashboard</span>
                 </div>
-                <div class="flex items-center space-x-4">
-                    <span class="text-sm text-gray-400 hidden sm:inline-flex items-center">
-                        <span class="pulse-dot w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                <div class="flex items-center gap-3">
+                    <span id="navTotalBadge" class="nav-total hidden items-center gap-1.5">
+                        <i class="fas fa-circle-dot text-xs text-emerald-400"></i>
+                        <span id="navTotalCount">0</span> articles
+                    </span>
+                    <span class="text-xs text-gray-500 hidden sm:flex items-center gap-2">
+                        <span class="pulse-dot w-2 h-2 bg-emerald-400 rounded-full inline-block"></span>
                         Auto-updated daily
                     </span>
-                    <button onclick="refreshData()" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors flex items-center space-x-2">
-                        <i class="fas fa-sync-alt"></i>
+                    <button onclick="refreshData()" class="btn-primary px-4 py-2 rounded-xl font-medium flex items-center gap-2 text-sm text-white">
+                        <i class="fas fa-sync-alt" id="refreshIcon"></i>
                         <span class="hidden sm:inline">Refresh</span>
                     </button>
                 </div>
@@ -110,813 +261,630 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div class="text-center mb-8 fade-in">
-            <h2 class="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Retail Store News Tracker
+    <div class="content-wrap max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <!-- Hero -->
+        <div class="text-center mb-10 fade-in">
+            <h2 class="text-4xl sm:text-5xl font-extrabold mb-3 hero-gradient tracking-tight">
+                Retail Intelligence Tracker
             </h2>
-            <p class="text-gray-400 text-lg mb-6">
-                Real-time tracking of store openings and closings across USA & Canada
+            <p class="text-slate-400 text-base mb-5 max-w-xl mx-auto">
+                Real-time store openings &amp; closings across USA &amp; Canada — updated daily
             </p>
-            <div id="lastUpdated" class="inline-flex items-center space-x-2 px-4 py-2 bg-slate-800/50 rounded-lg border border-slate-700">
+            <div class="inline-flex items-center gap-2 px-4 py-2 glass rounded-xl text-sm">
                 <i class="fas fa-clock text-blue-400"></i>
-                <span class="text-sm">Last updated: <span id="updateDate" class="font-semibold text-blue-400">Loading...</span></span>
+                <span class="text-gray-400">Last updated:</span>
+                <span id="updateDate" class="font-semibold text-blue-300">Loading…</span>
+            </div>
+            <div class="mt-3 text-xs text-gray-600 flex items-center justify-center gap-4">
+                <span><kbd class="kbd">1</kbd>–<kbd class="kbd">4</kbd> switch tabs</span>
+                <span><kbd class="kbd">R</kbd> refresh</span>
             </div>
         </div>
 
-        <!-- Tab Switcher -->
+        <!-- Main Tabs -->
         <div class="mb-8 flex justify-center">
-            <div class="inline-flex bg-slate-900/60 border border-slate-700 rounded-full p-1">
-                <button
-                    id="tabStoreBtn"
-                    class="px-4 py-2 text-sm sm:text-base rounded-full bg-slate-800 text-white font-medium shadow"
-                    onclick="switchTab('store')"
-                >
-                    Store News
+            <div class="glass rounded-2xl p-1 flex gap-1 flex-wrap justify-center">
+                <button id="tabStoreBtn" class="tab-btn active" onclick="switchTab('store')">
+                    <i class="fas fa-store mr-1.5"></i>Store News
                 </button>
-                <button
-                    id="tabScoopBtn"
-                    class="px-4 py-2 text-sm sm:text-base rounded-full text-gray-300 hover:text-white"
-                    onclick="switchTab('scoop')"
-                >
-                    Connecticut Scoop
+                <button id="tabScoopBtn" class="tab-btn" onclick="switchTab('scoop')">
+                    <i class="fas fa-bullhorn mr-1.5"></i>CT Scoop
                 </button>
-                <button
-                    id="tabRestaurantBtn"
-                    class="px-4 py-2 text-sm sm:text-base rounded-full text-gray-300 hover:text-white"
-                    onclick="switchTab('restaurant')"
-                >
-                    Restaurant News
+                <button id="tabRestaurantBtn" class="tab-btn" onclick="switchTab('restaurant')">
+                    <i class="fas fa-utensils mr-1.5"></i>Restaurant
                 </button>
-                <button
-                    id="tabBizBtn"
-                    class="px-4 py-2 text-sm sm:text-base rounded-full text-gray-300 hover:text-white"
-                    onclick="switchTab('biz')"
-                >
-                    Business Debut
+                <button id="tabBizBtn" class="tab-btn" onclick="switchTab('biz')">
+                    <i class="fas fa-briefcase mr-1.5"></i>Biz Debut
                 </button>
             </div>
         </div>
 
-        <!-- Store News Tab Content -->
+        <!-- ══════════════ STORE NEWS TAB ══════════════ -->
         <div id="storeTabContent">
-            <!-- Stats Cards -->
-            <div id="statsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 fade-in" style="display: none;">
-                <div class="stats-card rounded-xl p-6 border border-slate-700/50">
+            <div id="statsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 fade-in" style="display:none;">
+                <div class="stats-card rounded-2xl p-6 card-accent-blue">
                     <div class="flex items-center justify-between">
                         <div>
-                            <p class="text-gray-400 text-sm mb-1">Total Articles</p>
-                            <p class="text-3xl font-bold" id="totalArticles">0</p>
+                            <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Total Articles</p>
+                            <p class="text-3xl font-bold text-white" id="totalArticles">0</p>
                         </div>
-                        <i class="fas fa-file-alt text-4xl text-blue-400 opacity-50"></i>
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center">
+                            <i class="fas fa-file-alt text-blue-400 text-xl"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="stats-card rounded-xl p-6 border border-slate-700/50">
+                <div class="stats-card rounded-2xl p-6 card-accent-green">
                     <div class="flex items-center justify-between">
                         <div>
-                            <p class="text-gray-400 text-sm mb-1">Openings</p>
-                            <p class="text-3xl font-bold text-green-400" id="totalOpenings">0</p>
+                            <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Openings</p>
+                            <p class="text-3xl font-bold text-emerald-400" id="totalOpenings">0</p>
                         </div>
-                        <i class="fas fa-arrow-up text-4xl text-green-400 opacity-50"></i>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center">
+                            <i class="fas fa-arrow-trend-up text-emerald-400 text-xl"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="stats-card rounded-xl p-6 border border-slate-700/50">
+                <div class="stats-card rounded-2xl p-6 card-accent-orange">
                     <div class="flex items-center justify-between">
                         <div>
-                            <p class="text-gray-400 text-sm mb-1">Closings</p>
+                            <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Closings</p>
                             <p class="text-3xl font-bold text-red-400" id="totalClosings">0</p>
                         </div>
-                        <i class="fas fa-arrow-down text-4xl text-red-400 opacity-50"></i>
+                        <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center">
+                            <i class="fas fa-arrow-trend-down text-red-400 text-xl"></i>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Search and Filter -->
-            <div class="mb-6 fade-in">
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <div class="flex-1 relative">
-                        <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-                        <input 
-                            type="text" 
-                            id="searchInput" 
-                            placeholder="Search by store, analyst, or title..." 
-                            class="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 search-input transition-colors"
-                            oninput="filterStoreArticles()"
-                        >
+            <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3">
+                <div class="flex-1 relative">
+                    <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
+                    <input type="text" id="searchInput" placeholder="Search by store, analyst, or title…"
+                        class="input-field w-full pl-11 pr-4 py-3 text-sm"
+                        oninput="debounce(filterStoreArticles, 250)()">
+                </div>
+                <select id="typeFilter" onchange="filterStoreArticles()" class="input-field px-4 py-3 text-sm">
+                    <option value="all">All Types</option>
+                    <option value="Opening">Opening</option>
+                    <option value="Closing">Closing</option>
+                </select>
+                <select id="analystFilter" onchange="filterStoreArticles()" class="input-field px-4 py-3 text-sm">
+                    <option value="all">All Analysts</option>
+                </select>
+            </div>
+
+            <div id="loadingState" class="py-20">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    ${skeletonCards(6)}
+                </div>
+            </div>
+            <div id="emptyState" class="text-center py-20 hidden">
+                <div class="w-20 h-20 rounded-full bg-slate-800/80 flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-inbox text-3xl text-gray-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-gray-300">No news found</h3>
+                <p class="text-gray-500 text-sm">No recent store opening or closing news in the last 2 days.</p>
+            </div>
+            <div id="articlesContainer" class="hidden"></div>
+        </div>
+
+        <!-- ══════════════ CT SCOOP TAB ══════════════ -->
+        <div id="scoopTabContent" class="hidden">
+            <div class="mb-6 flex justify-center">
+                <div class="glass rounded-2xl p-1 flex gap-1">
+                    <button id="subTabArticlesBtn" class="sub-tab-btn active" onclick="switchScoopSubTab('articles')">
+                        <i class="fas fa-bullhorn mr-1"></i> Articles
+                    </button>
+                    <button id="subTabExtractionBtn" class="sub-tab-btn" onclick="switchScoopSubTab('extraction')">
+                        <i class="fas fa-table mr-1"></i> Extraction
+                    </button>
+                </div>
+            </div>
+
+            <div id="scoopArticlesSubTab">
+                <div id="scoopStatsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 fade-in" style="display:none;">
+                    <div class="stats-card rounded-2xl p-6 card-accent-blue">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Total Articles</p>
+                                <p class="text-3xl font-bold text-white" id="scoopTotalArticles">0</p>
+                            </div>
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center">
+                                <i class="fas fa-bullhorn text-blue-400 text-xl"></i>
+                            </div>
+                        </div>
                     </div>
-                    <select 
-                        id="typeFilter" 
-                        onchange="filterStoreArticles()"
-                        class="px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white focus:border-blue-500 focus:outline-none"
-                    >
+                </div>
+                <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3">
+                    <div class="flex-1 relative">
+                        <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
+                        <input type="text" id="scoopSearchInput" placeholder="Search by headline or town…"
+                            class="input-field w-full pl-11 pr-4 py-3 text-sm"
+                            oninput="debounce(filterScoopArticles, 250)()">
+                    </div>
+                    <button onclick="downloadScoopCSV()" class="btn-download px-5 py-3 rounded-xl font-medium flex items-center gap-2 text-sm whitespace-nowrap">
+                        <i class="fas fa-download"></i><span>Download CSV</span>
+                    </button>
+                </div>
+                <div id="scoopLoadingState" class="hidden py-20">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${skeletonCards(3)}</div>
+                </div>
+                <div id="scoopEmptyState" class="text-center py-20 hidden">
+                    <div class="w-20 h-20 rounded-full bg-slate-800/80 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-inbox text-3xl text-gray-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-300">No recent Scoop articles</h3>
+                    <p class="text-gray-500 text-sm">No Connecticut Scoop stories found in the last 2 days.</p>
+                </div>
+                <div id="scoopArticlesContainer" class="hidden"></div>
+            </div>
+
+            <div id="scoopExtractionSubTab" class="hidden">
+                <div id="extStatsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 fade-in" style="display:none;">
+                    <div class="stats-card rounded-2xl p-6 card-accent-blue">
+                        <div class="flex items-center justify-between">
+                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Total Rows</p><p class="text-3xl font-bold text-white" id="extTotal">0</p></div>
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center"><i class="fas fa-table text-blue-400 text-xl"></i></div>
+                        </div>
+                    </div>
+                    <div class="stats-card rounded-2xl p-6 card-accent-green">
+                        <div class="flex items-center justify-between">
+                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Openings</p><p class="text-3xl font-bold text-emerald-400" id="extOpenings">0</p></div>
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center"><i class="fas fa-arrow-trend-up text-emerald-400 text-xl"></i></div>
+                        </div>
+                    </div>
+                    <div class="stats-card rounded-2xl p-6 card-accent-orange">
+                        <div class="flex items-center justify-between">
+                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Closings</p><p class="text-3xl font-bold text-red-400" id="extClosings">0</p></div>
+                            <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center"><i class="fas fa-arrow-trend-down text-red-400 text-xl"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3">
+                    <div class="flex-1 relative">
+                        <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
+                        <input type="text" id="extSearchInput" placeholder="Search by store, location, or description…"
+                            class="input-field w-full pl-11 pr-4 py-3 text-sm" oninput="debounce(filterExtractionRows,250)()">
+                    </div>
+                    <select id="extTypeFilter" onchange="filterExtractionRows()" class="input-field px-4 py-3 text-sm">
                         <option value="all">All Types</option>
                         <option value="Opening">Opening</option>
                         <option value="Closing">Closing</option>
                     </select>
-                    <select 
-                        id="analystFilter" 
-                        onchange="filterStoreArticles()"
-                        class="px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white focus:border-blue-500 focus:outline-none"
-                    >
-                        <option value="all">All Analysts</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- Loading State -->
-            <div id="loadingState" class="text-center py-20">
-                <div class="loading-spinner mx-auto mb-4"></div>
-                <p class="text-gray-400">Loading news data...</p>
-            </div>
-
-            <!-- Empty State -->
-            <div id="emptyState" class="text-center py-20 hidden">
-                <i class="fas fa-inbox text-6xl text-gray-600 mb-4"></i>
-                <h3 class="text-2xl font-semibold mb-2 text-gray-300">No news found</h3>
-                <p class="text-gray-500">No recent store opening or closing news in the last 2 days.</p>
-            </div>
-
-            <!-- Articles Container -->
-            <div id="articlesContainer" class="hidden">
-                <!-- Articles will be dynamically inserted here -->
-            </div>
-        </div>
-
-        <!-- Connecticut Scoop Tab Content -->
-        <div id="scoopTabContent" class="hidden">
-
-            <!-- Sub-tab Switcher: Articles | Extraction -->
-            <div class="mb-6 flex justify-center">
-                <div class="inline-flex bg-slate-900/60 border border-slate-700 rounded-full p-1">
-                    <button
-                        id="subTabArticlesBtn"
-                        class="px-5 py-2 text-sm rounded-full bg-slate-800 text-white font-medium shadow transition-colors"
-                        onclick="switchScoopSubTab('articles')"
-                    >
-                        <i class="fas fa-bullhorn mr-1"></i> Articles
-                    </button>
-                    <button
-                        id="subTabExtractionBtn"
-                        class="px-5 py-2 text-sm rounded-full text-gray-300 hover:text-white transition-colors"
-                        onclick="switchScoopSubTab('extraction')"
-                    >
-                        <i class="fas fa-table mr-1"></i> Extraction
+                    <button onclick="downloadExtractionCSV()" class="btn-download px-5 py-3 rounded-xl font-medium flex items-center gap-2 text-sm whitespace-nowrap">
+                        <i class="fas fa-download"></i><span>Download CSV</span>
                     </button>
                 </div>
-            </div>
-
-            <!-- ── Articles Sub-tab ── -->
-            <div id="scoopArticlesSubTab">
-                <!-- Scoop Stats -->
-                <div id="scoopStatsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 fade-in" style="display: none;">
-                    <div class="stats-card rounded-xl p-6 border border-slate-700/50">
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <p class="text-gray-400 text-sm mb-1">Total Scoop Articles</p>
-                                <p class="text-3xl font-bold" id="scoopTotalArticles">0</p>
-                            </div>
-                            <i class="fas fa-bullhorn text-4xl text-blue-400 opacity-50"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Scoop Search + Download CSV -->
-                <div class="mb-6 fade-in">
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <div class="flex-1 relative">
-                            <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-                            <input
-                                type="text"
-                                id="scoopSearchInput"
-                                placeholder="Search by headline or town..."
-                                class="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 search-input transition-colors"
-                                oninput="filterScoopArticles()"
-                            >
-                        </div>
-                        <button
-                            onclick="downloadScoopCSV()"
-                            class="px-5 py-3 bg-orange-600 hover:bg-orange-700 rounded-lg transition-colors flex items-center space-x-2 font-medium whitespace-nowrap"
-                        >
-                            <i class="fas fa-download"></i>
-                            <span>Download CSV</span>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Scoop Loading State -->
-                <div id="scoopLoadingState" class="text-center py-20 hidden">
-                    <div class="loading-spinner mx-auto mb-4"></div>
-                    <p class="text-gray-400">Loading Connecticut Scoop data...</p>
-                </div>
-
-                <!-- Scoop Empty State -->
-                <div id="scoopEmptyState" class="text-center py-20 hidden">
-                    <i class="fas fa-inbox text-6xl text-gray-600 mb-4"></i>
-                    <h3 class="text-2xl font-semibold mb-2 text-gray-300">No recent Scoop articles</h3>
-                    <p class="text-gray-500">No Connecticut Scoop stories found in the last 2 days.</p>
-                </div>
-
-                <!-- Scoop Articles Container -->
-                <div id="scoopArticlesContainer" class="hidden">
-                    <!-- Scoop articles will be dynamically inserted here -->
-                </div>
-            </div>
-
-            <!-- ── Extraction Sub-tab ── -->
-            <div id="scoopExtractionSubTab" class="hidden">
-                <!-- Extraction Stats -->
-                <div id="extStatsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 fade-in" style="display: none;">
-                    <div class="stats-card rounded-xl p-6 border border-slate-700/50">
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <p class="text-gray-400 text-sm mb-1">Total Rows</p>
-                                <p class="text-3xl font-bold" id="extTotal">0</p>
-                            </div>
-                            <i class="fas fa-table text-4xl text-blue-400 opacity-50"></i>
-                        </div>
-                    </div>
-                    <div class="stats-card rounded-xl p-6 border border-slate-700/50">
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <p class="text-gray-400 text-sm mb-1">Openings</p>
-                                <p class="text-3xl font-bold text-green-400" id="extOpenings">0</p>
-                            </div>
-                            <i class="fas fa-arrow-up text-4xl text-green-400 opacity-50"></i>
-                        </div>
-                    </div>
-                    <div class="stats-card rounded-xl p-6 border border-slate-700/50">
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <p class="text-gray-400 text-sm mb-1">Closings</p>
-                                <p class="text-3xl font-bold text-red-400" id="extClosings">0</p>
-                            </div>
-                            <i class="fas fa-arrow-down text-4xl text-red-400 opacity-50"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Extraction Search + Filter + Download -->
-                <div class="mb-6 fade-in">
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <div class="flex-1 relative">
-                            <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-                            <input
-                                type="text"
-                                id="extSearchInput"
-                                placeholder="Search by store, location, or description..."
-                                class="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 search-input transition-colors"
-                                oninput="filterExtractionRows()"
-                            >
-                        </div>
-                        <select
-                            id="extTypeFilter"
-                            onchange="filterExtractionRows()"
-                            class="px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white focus:border-blue-500 focus:outline-none"
-                        >
-                            <option value="all">All Types</option>
-                            <option value="Opening">Opening</option>
-                            <option value="Closing">Closing</option>
-                        </select>
-                        <button
-                            onclick="downloadExtractionCSV()"
-                            class="px-5 py-3 bg-green-600 hover:bg-green-700 rounded-lg transition-colors flex items-center space-x-2 font-medium whitespace-nowrap"
-                        >
-                            <i class="fas fa-download"></i>
-                            <span>Download CSV</span>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Extraction Loading State -->
-                <div id="extLoadingState" class="text-center py-20 hidden">
-                    <div class="loading-spinner mx-auto mb-4"></div>
-                    <p class="text-gray-400">Loading extraction data...</p>
-                </div>
-
-                <!-- Extraction Empty State -->
+                <div id="extLoadingState" class="text-center py-20 hidden"><div class="loading-spinner mx-auto mb-4"></div><p class="text-gray-400 text-sm">Loading…</p></div>
                 <div id="extEmptyState" class="text-center py-20 hidden">
-                    <i class="fas fa-table text-6xl text-gray-600 mb-4"></i>
-                    <h3 class="text-2xl font-semibold mb-2 text-gray-300">No extraction data found</h3>
-                    <p class="text-gray-500">Run the extractor script to generate data.</p>
+                    <div class="w-20 h-20 rounded-full bg-slate-800/80 flex items-center justify-center mx-auto mb-4"><i class="fas fa-table text-3xl text-gray-600"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-300">No extraction data found</h3>
+                    <p class="text-gray-500 text-sm">Run the extractor script to generate data.</p>
                 </div>
-
-                <!-- Extraction Table -->
-                <div id="extTableContainer" class="hidden overflow-x-auto rounded-xl border border-slate-700/50 fade-in">
-                    <table class="w-full text-sm text-left table-fixed">
-                        <thead class="bg-slate-800 text-gray-300 uppercase text-xs tracking-wider">
-                            <tr>
-                                <th class="px-3 py-3 whitespace-nowrap w-14">S.No</th>
-                                <th class="px-3 py-3">Store / Restaurant</th>
-                                <th class="px-3 py-3">Location</th>
-                                <th class="px-3 py-3 whitespace-nowrap w-28">Event Type</th>
-                                <th class="px-3 py-3 w-40">Event Date</th>
-                                <th class="px-3 py-3 w-44">Status</th>
-                                <th class="px-3 py-3">Short Description</th>
-                                <th class="px-3 py-3">Article</th>
-                            </tr>
-                        </thead>
-                        <tbody id="extTableBody" class="divide-y divide-slate-700/50"></tbody>
+                <div id="extTableContainer" class="hidden overflow-x-auto rounded-2xl border border-white/5 fade-in">
+                    <table class="w-full text-sm text-left data-table table-fixed">
+                        <thead><tr>
+                            <th class="px-3 py-3 whitespace-nowrap w-12">#</th>
+                            <th class="px-3 py-3">Store / Restaurant</th>
+                            <th class="px-3 py-3">Location</th>
+                            <th class="px-3 py-3 w-28">Event Type</th>
+                            <th class="px-3 py-3 w-36">Event Date</th>
+                            <th class="px-3 py-3 w-40">Status</th>
+                            <th class="px-3 py-3">Description</th>
+                            <th class="px-3 py-3 w-20">Link</th>
+                        </tr></thead>
+                        <tbody id="extTableBody"></tbody>
                     </table>
-                    <div class="px-4 py-3 bg-slate-800/50 text-gray-400 text-xs border-t border-slate-700/50">
-                        Showing <span id="extRowCount">0</span> records &nbsp;•&nbsp; Last updated: <span id="extLastUpdated">—</span>
+                    <div class="px-4 py-3 glass text-gray-500 text-xs border-t border-white/5 flex justify-between">
+                        <span>Showing <span id="extRowCount" class="text-gray-300 font-semibold">0</span> records</span>
+                        <span>Updated: <span id="extLastUpdated" class="text-gray-300">—</span></span>
                     </div>
                 </div>
             </div>
-
         </div>
 
-        <!-- Restaurant News Tab Content -->
+        <!-- ══════════════ RESTAURANT TAB ══════════════ -->
         <div id="restaurantTabContent" class="hidden">
-
-            <!-- Sub-tab Switcher: Articles | Extraction -->
             <div class="mb-6 flex justify-center">
-                <div class="inline-flex bg-slate-900/60 border border-slate-700 rounded-full p-1">
-                    <button
-                        id="restSubTabArticlesBtn"
-                        class="px-5 py-2 text-sm rounded-full bg-slate-800 text-white font-medium shadow transition-colors"
-                        onclick="switchRestSubTab('articles')"
-                    >
+                <div class="glass rounded-2xl p-1 flex gap-1">
+                    <button id="restSubTabArticlesBtn" class="sub-tab-btn active" onclick="switchRestSubTab('articles')">
                         <i class="fas fa-utensils mr-1"></i> Articles
                     </button>
-                    <button
-                        id="restSubTabExtractionBtn"
-                        class="px-5 py-2 text-sm rounded-full text-gray-300 hover:text-white transition-colors"
-                        onclick="switchRestSubTab('extraction')"
-                    >
+                    <button id="restSubTabExtractionBtn" class="sub-tab-btn" onclick="switchRestSubTab('extraction')">
                         <i class="fas fa-table mr-1"></i> Extraction
                     </button>
                 </div>
             </div>
 
-            <!-- ── Articles Sub-tab ── -->
             <div id="restArticlesSubTab">
-
-            <!-- Restaurant Stats -->
-            <div id="restStatsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 fade-in" style="display:none;">
-                <div class="stats-card rounded-xl p-6 border border-slate-700/50">
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <p class="text-gray-400 text-sm mb-1">Total Articles</p>
-                            <p class="text-3xl font-bold" id="restTotal">0</p>
+                <div id="restStatsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 fade-in" style="display:none;">
+                    <div class="stats-card rounded-2xl p-6 card-accent-orange">
+                        <div class="flex items-center justify-between">
+                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Total Articles</p><p class="text-3xl font-bold text-white" id="restTotal">0</p></div>
+                            <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center"><i class="fas fa-utensils text-orange-400 text-xl"></i></div>
                         </div>
-                        <i class="fas fa-utensils text-4xl text-orange-400 opacity-50"></i>
+                    </div>
+                    <div class="stats-card rounded-2xl p-6 card-accent-green">
+                        <div class="flex items-center justify-between">
+                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">With Address</p><p class="text-3xl font-bold text-emerald-400" id="restWithAddr">0</p></div>
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center"><i class="fas fa-map-marker-alt text-emerald-400 text-xl"></i></div>
+                        </div>
+                    </div>
+                    <div class="stats-card rounded-2xl p-6" style="background:rgba(15,23,42,0.7);border:1px solid rgba(255,255,255,0.06);">
+                        <div class="flex items-center justify-between">
+                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">No Address</p><p class="text-3xl font-bold text-yellow-400" id="restNoAddr">0</p></div>
+                            <div class="w-12 h-12 rounded-xl bg-yellow-500/10 flex items-center justify-center"><i class="fas fa-map-marker-alt text-yellow-400 text-xl"></i></div>
+                        </div>
                     </div>
                 </div>
-                <div class="stats-card rounded-xl p-6 border border-slate-700/50">
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <p class="text-gray-400 text-sm mb-1">With Address</p>
-                            <p class="text-3xl font-bold text-green-400" id="restWithAddr">0</p>
-                        </div>
-                        <i class="fas fa-map-marker-alt text-4xl text-green-400 opacity-50"></i>
+                <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3">
+                    <div class="flex-1 relative">
+                        <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
+                        <input type="text" id="restSearchInput" placeholder="Search by title, address, or date…"
+                            class="input-field w-full pl-11 pr-4 py-3 text-sm" oninput="debounce(filterRestArticles,250)()">
                     </div>
+                    <button onclick="downloadRestCSV()" class="btn-download px-5 py-3 rounded-xl font-medium flex items-center gap-2 text-sm whitespace-nowrap">
+                        <i class="fas fa-download"></i><span>Download CSV</span>
+                    </button>
                 </div>
-                <div class="stats-card rounded-xl p-6 border border-slate-700/50">
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <p class="text-gray-400 text-sm mb-1">No Address</p>
-                            <p class="text-3xl font-bold text-yellow-400" id="restNoAddr">0</p>
-                        </div>
-                        <i class="fas fa-map-marker-alt text-4xl text-yellow-400 opacity-50"></i>
-                    </div>
+                <div id="restLoadingState" class="text-center py-20 hidden"><div class="loading-spinner mx-auto mb-4"></div><p class="text-gray-400 text-sm">Loading…</p></div>
+                <div id="restEmptyState" class="text-center py-20 hidden">
+                    <div class="w-20 h-20 rounded-full bg-slate-800/80 flex items-center justify-center mx-auto mb-4"><i class="fas fa-utensils text-3xl text-gray-600"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-300">No restaurant news found</h3>
+                    <p class="text-gray-500 text-sm">No recent restaurant stories in the last 2 days.</p>
                 </div>
-            </div>
-
-            <!-- Restaurant Search + Download -->
-            <div class="mb-6 fade-in flex flex-col sm:flex-row gap-4">
-                <div class="flex-1 relative">
-                    <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-                    <input
-                        type="text"
-                        id="restSearchInput"
-                        placeholder="Search by title, address, or date..."
-                        class="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:border-orange-500 search-input transition-colors"
-                        oninput="filterRestArticles()"
-                    >
-                </div>
-                <button
-                    onclick="downloadRestCSV()"
-                    class="px-5 py-3 bg-orange-600 hover:bg-orange-700 rounded-lg transition-colors flex items-center space-x-2 font-medium whitespace-nowrap"
-                >
-                    <i class="fas fa-download"></i>
-                    <span>Download CSV</span>
-                </button>
-            </div>
-
-            <!-- Restaurant Loading State -->
-            <div id="restLoadingState" class="text-center py-20 hidden">
-                <div class="loading-spinner mx-auto mb-4"></div>
-                <p class="text-gray-400">Loading restaurant news...</p>
-            </div>
-
-            <!-- Restaurant Empty State -->
-            <div id="restEmptyState" class="text-center py-20 hidden">
-                <i class="fas fa-utensils text-6xl text-gray-600 mb-4"></i>
-                <h3 class="text-2xl font-semibold mb-2 text-gray-300">No restaurant news found</h3>
-                <p class="text-gray-500">No recent restaurant stories in the last 2 days.</p>
-            </div>
-
-            <!-- Restaurant Table -->
-            <div id="restTableContainer" class="hidden overflow-x-auto rounded-xl border border-slate-700/50 fade-in">
-                <table class="w-full text-sm text-left">
-                    <thead class="bg-slate-800 text-gray-300 uppercase text-xs tracking-wider">
-                        <tr>
-                            <th class="px-4 py-3 cursor-pointer select-none hover:text-orange-400 transition-colors" onclick="sortRestTable('date')"># &nbsp;Date <i id="sort-date" class="fas fa-sort text-gray-500 ml-1"></i></th>
-                            <th class="px-4 py-3 cursor-pointer select-none hover:text-orange-400 transition-colors" onclick="sortRestTable('title')">Title <i id="sort-title" class="fas fa-sort text-gray-500 ml-1"></i></th>
-                            <th class="px-4 py-3 cursor-pointer select-none hover:text-orange-400 transition-colors" onclick="sortRestTable('address')">Address <i id="sort-address" class="fas fa-sort text-gray-500 ml-1"></i></th>
+                <div id="restTableContainer" class="hidden overflow-x-auto rounded-2xl border border-white/5 fade-in">
+                    <table class="w-full text-sm text-left data-table">
+                        <thead><tr>
+                            <th class="px-4 py-3 cursor-pointer hover:text-orange-400 transition-colors" onclick="sortRestTable('date')"># Date <i id="sort-date" class="fas fa-sort text-gray-600 ml-1"></i></th>
+                            <th class="px-4 py-3 cursor-pointer hover:text-orange-400 transition-colors" onclick="sortRestTable('title')">Title <i id="sort-title" class="fas fa-sort text-gray-600 ml-1"></i></th>
+                            <th class="px-4 py-3 cursor-pointer hover:text-orange-400 transition-colors" onclick="sortRestTable('address')">Address <i id="sort-address" class="fas fa-sort text-gray-600 ml-1"></i></th>
                             <th class="px-4 py-3">Link</th>
-                        </tr>
-                    </thead>
-                    <tbody id="restTableBody" class="divide-y divide-slate-700/50"></tbody>
-                </table>
-                <div class="px-4 py-3 bg-slate-800/50 text-gray-400 text-xs border-t border-slate-700/50">
-                    Showing <span id="restRowCount">0</span> records
+                        </tr></thead>
+                        <tbody id="restTableBody"></tbody>
+                    </table>
+                    <div class="px-4 py-3 glass text-gray-500 text-xs border-t border-white/5">
+                        Showing <span id="restRowCount" class="text-gray-300 font-semibold">0</span> records
+                    </div>
                 </div>
             </div>
-            </div><!-- end restArticlesSubTab -->
 
-            <!-- ── Extraction Sub-tab ── -->
             <div id="restExtractionSubTab" class="hidden">
-
-                <!-- Extraction Stats -->
-                <div id="restExtStatsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 fade-in" style="display: none;">
-                    <div class="stats-card rounded-xl p-6 border border-slate-700/50">
+                <div id="restExtStatsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 fade-in" style="display:none;">
+                    <div class="stats-card rounded-2xl p-6 card-accent-orange">
                         <div class="flex items-center justify-between">
-                            <div>
-                                <p class="text-gray-400 text-sm mb-1">Total Rows</p>
-                                <p class="text-3xl font-bold" id="restExtTotal">0</p>
-                            </div>
-                            <i class="fas fa-table text-4xl text-orange-400 opacity-50"></i>
+                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Total Rows</p><p class="text-3xl font-bold text-white" id="restExtTotal">0</p></div>
+                            <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center"><i class="fas fa-table text-orange-400 text-xl"></i></div>
                         </div>
                     </div>
-                    <div class="stats-card rounded-xl p-6 border border-slate-700/50">
+                    <div class="stats-card rounded-2xl p-6 card-accent-green">
                         <div class="flex items-center justify-between">
-                            <div>
-                                <p class="text-gray-400 text-sm mb-1">Openings</p>
-                                <p class="text-3xl font-bold text-green-400" id="restExtOpenings">0</p>
-                            </div>
-                            <i class="fas fa-arrow-up text-4xl text-green-400 opacity-50"></i>
+                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Openings</p><p class="text-3xl font-bold text-emerald-400" id="restExtOpenings">0</p></div>
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center"><i class="fas fa-arrow-trend-up text-emerald-400 text-xl"></i></div>
                         </div>
                     </div>
-                    <div class="stats-card rounded-xl p-6 border border-slate-700/50">
+                    <div class="stats-card rounded-2xl p-6 card-accent-orange" style="background:rgba(15,23,42,0.7)">
                         <div class="flex items-center justify-between">
-                            <div>
-                                <p class="text-gray-400 text-sm mb-1">Closings</p>
-                                <p class="text-3xl font-bold text-red-400" id="restExtClosings">0</p>
-                            </div>
-                            <i class="fas fa-arrow-down text-4xl text-red-400 opacity-50"></i>
+                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Closings</p><p class="text-3xl font-bold text-red-400" id="restExtClosings">0</p></div>
+                            <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center"><i class="fas fa-arrow-trend-down text-red-400 text-xl"></i></div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Search + Filter + Download -->
-                <div class="mb-6 fade-in">
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <div class="flex-1 relative">
-                            <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-                            <input
-                                type="text"
-                                id="restExtSearchInput"
-                                placeholder="Search by restaurant, location, or description..."
-                                class="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:border-orange-500 search-input transition-colors"
-                                oninput="filterRestExtractionRows()"
-                            >
-                        </div>
-                        <select
-                            id="restExtTypeFilter"
-                            onchange="filterRestExtractionRows()"
-                            class="px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white focus:border-orange-500 focus:outline-none"
-                        >
-                            <option value="all">All Types</option>
-                            <option value="Opening">Opening</option>
-                            <option value="Closing">Closing</option>
-                        </select>
-                        <button
-                            onclick="downloadRestExtractionCSV()"
-                            class="px-5 py-3 bg-green-600 hover:bg-green-700 rounded-lg transition-colors flex items-center space-x-2 font-medium whitespace-nowrap"
-                        >
-                            <i class="fas fa-download"></i>
-                            <span>Download CSV</span>
-                        </button>
+                <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3">
+                    <div class="flex-1 relative">
+                        <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
+                        <input type="text" id="restExtSearchInput" placeholder="Search by restaurant, location, or description…"
+                            class="input-field w-full pl-11 pr-4 py-3 text-sm" oninput="debounce(filterRestExtractionRows,250)()">
                     </div>
+                    <select id="restExtTypeFilter" onchange="filterRestExtractionRows()" class="input-field px-4 py-3 text-sm">
+                        <option value="all">All Types</option>
+                        <option value="Opening">Opening</option>
+                        <option value="Closing">Closing</option>
+                    </select>
+                    <button onclick="downloadRestExtractionCSV()" class="btn-download px-5 py-3 rounded-xl font-medium flex items-center gap-2 text-sm whitespace-nowrap">
+                        <i class="fas fa-download"></i><span>Download CSV</span>
+                    </button>
                 </div>
-
-                <!-- Loading State -->
-                <div id="restExtLoadingState" class="text-center py-20 hidden">
-                    <div class="loading-spinner mx-auto mb-4"></div>
-                    <p class="text-gray-400">Loading extraction data...</p>
-                </div>
-
-                <!-- Empty State -->
+                <div id="restExtLoadingState" class="text-center py-20 hidden"><div class="loading-spinner mx-auto mb-4"></div><p class="text-gray-400 text-sm">Loading…</p></div>
                 <div id="restExtEmptyState" class="text-center py-20 hidden">
-                    <i class="fas fa-table text-6xl text-gray-600 mb-4"></i>
-                    <h3 class="text-2xl font-semibold mb-2 text-gray-300">No extraction data found</h3>
-                    <p class="text-gray-500">Run the extraction to generate data.</p>
+                    <div class="w-20 h-20 rounded-full bg-slate-800/80 flex items-center justify-center mx-auto mb-4"><i class="fas fa-table text-3xl text-gray-600"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-300">No extraction data found</h3>
+                    <p class="text-gray-500 text-sm">Run the extraction to generate data.</p>
                 </div>
-
-                <!-- Extraction Table -->
-                <div id="restExtTableContainer" class="hidden overflow-x-auto rounded-xl border border-slate-700/50 fade-in">
-                    <table class="w-full text-sm text-left table-fixed">
-                        <thead class="bg-slate-800 text-gray-300 uppercase text-xs tracking-wider">
-                            <tr>
-                                <th class="px-3 py-3 whitespace-nowrap w-14">S.No</th>
-                                <th class="px-3 py-3">Store / Restaurant</th>
-                                <th class="px-3 py-3">Location</th>
-                                <th class="px-3 py-3 whitespace-nowrap w-28">Event Type</th>
-                                <th class="px-3 py-3 w-40">Event Date</th>
-                                <th class="px-3 py-3 w-44">Status</th>
-                                <th class="px-3 py-3">Short Description</th>
-                                <th class="px-3 py-3">Article</th>
-                            </tr>
-                        </thead>
-                        <tbody id="restExtTableBody" class="divide-y divide-slate-700/50"></tbody>
+                <div id="restExtTableContainer" class="hidden overflow-x-auto rounded-2xl border border-white/5 fade-in">
+                    <table class="w-full text-sm text-left data-table table-fixed">
+                        <thead><tr>
+                            <th class="px-3 py-3 w-12">#</th>
+                            <th class="px-3 py-3">Restaurant</th>
+                            <th class="px-3 py-3">Location</th>
+                            <th class="px-3 py-3 w-28">Event Type</th>
+                            <th class="px-3 py-3 w-36">Event Date</th>
+                            <th class="px-3 py-3 w-40">Status</th>
+                            <th class="px-3 py-3">Description</th>
+                            <th class="px-3 py-3 w-20">Link</th>
+                        </tr></thead>
+                        <tbody id="restExtTableBody"></tbody>
                     </table>
-                    <div class="px-4 py-3 bg-slate-800/50 text-gray-400 text-xs border-t border-slate-700/50">
-                        Showing <span id="restExtRowCount">0</span> records &nbsp;•&nbsp; Last updated: <span id="restExtLastUpdated">—</span>
+                    <div class="px-4 py-3 glass text-gray-500 text-xs border-t border-white/5 flex justify-between">
+                        <span>Showing <span id="restExtRowCount" class="text-gray-300 font-semibold">0</span> records</span>
+                        <span>Updated: <span id="restExtLastUpdated" class="text-gray-300">—</span></span>
                     </div>
                 </div>
-
-            </div><!-- end restExtractionSubTab -->
-
+            </div>
         </div>
 
-    </div>
-
-        <!-- Business Debut Tab Content -->
+        <!-- ══════════════ BUSINESS DEBUT TAB ══════════════ -->
         <div id="bizTabContent" class="hidden">
-
-            <!-- Sub-tab Switcher: Articles | Extraction -->
             <div class="mb-6 flex justify-center">
-                <div class="inline-flex bg-slate-900/60 border border-slate-700 rounded-full p-1">
-                    <button
-                        id="bizSubTabArticlesBtn"
-                        class="px-5 py-2 text-sm rounded-full bg-slate-800 text-white font-medium shadow transition-colors"
-                        onclick="switchBizSubTab('articles')"
-                    >
+                <div class="glass rounded-2xl p-1 flex gap-1">
+                    <button id="bizSubTabArticlesBtn" class="sub-tab-btn active" onclick="switchBizSubTab('articles')">
                         <i class="fas fa-briefcase mr-1"></i> Articles
                     </button>
-                    <button
-                        id="bizSubTabExtractionBtn"
-                        class="px-5 py-2 text-sm rounded-full text-gray-300 hover:text-white transition-colors"
-                        onclick="switchBizSubTab('extraction')"
-                    >
+                    <button id="bizSubTabExtractionBtn" class="sub-tab-btn" onclick="switchBizSubTab('extraction')">
                         <i class="fas fa-table mr-1"></i> Extraction
                     </button>
                 </div>
             </div>
 
-            <!-- ── Articles Sub-tab ── -->
             <div id="bizArticlesSubTab">
-                <!-- Biz Stats -->
-                <div id="bizStatsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 fade-in" style="display: none;">
-                    <div class="stats-card rounded-xl p-6 border border-slate-700/50">
+                <div id="bizStatsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 fade-in" style="display:none;">
+                    <div class="stats-card rounded-2xl p-6 card-accent-indigo">
                         <div class="flex items-center justify-between">
-                            <div>
-                                <p class="text-gray-400 text-sm mb-1">Total Articles</p>
-                                <p class="text-3xl font-bold" id="bizTotalArticles">0</p>
-                            </div>
-                            <i class="fas fa-briefcase text-4xl text-indigo-400 opacity-50"></i>
+                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Total Articles</p><p class="text-3xl font-bold text-white" id="bizTotalArticles">0</p></div>
+                            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center"><i class="fas fa-briefcase text-indigo-400 text-xl"></i></div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Biz Search + Download CSV -->
-                <div class="mb-6 fade-in">
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <div class="flex-1 relative">
-                            <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-                            <input
-                                type="text"
-                                id="bizSearchInput"
-                                placeholder="Search by title..."
-                                class="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:border-indigo-500 search-input transition-colors"
-                                oninput="filterBizArticles()"
-                            >
-                        </div>
-                        <button
-                            onclick="downloadBizCSV()"
-                            class="px-5 py-3 bg-orange-600 hover:bg-orange-700 rounded-lg transition-colors flex items-center space-x-2 font-medium whitespace-nowrap"
-                        >
-                            <i class="fas fa-download"></i>
-                            <span>Download CSV</span>
-                        </button>
+                <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3">
+                    <div class="flex-1 relative">
+                        <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
+                        <input type="text" id="bizSearchInput" placeholder="Search by title…"
+                            class="input-field w-full pl-11 pr-4 py-3 text-sm" oninput="debounce(filterBizArticles,250)()">
                     </div>
+                    <button onclick="downloadBizCSV()" class="btn-download px-5 py-3 rounded-xl font-medium flex items-center gap-2 text-sm whitespace-nowrap">
+                        <i class="fas fa-download"></i><span>Download CSV</span>
+                    </button>
                 </div>
-
-                <!-- Biz Loading State -->
-                <div id="bizLoadingState" class="text-center py-20 hidden">
-                    <div class="loading-spinner mx-auto mb-4"></div>
-                    <p class="text-gray-400">Loading Business Debut data...</p>
+                <div id="bizLoadingState" class="hidden py-20">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${skeletonCards(3)}</div>
                 </div>
-
-                <!-- Biz Empty State -->
                 <div id="bizEmptyState" class="text-center py-20 hidden">
-                    <i class="fas fa-inbox text-6xl text-gray-600 mb-4"></i>
-                    <h3 class="text-2xl font-semibold mb-2 text-gray-300">No recent Business Debut articles</h3>
-                    <p class="text-gray-500">No Business Debut stories found in the last 2 days.</p>
+                    <div class="w-20 h-20 rounded-full bg-slate-800/80 flex items-center justify-center mx-auto mb-4"><i class="fas fa-inbox text-3xl text-gray-600"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-300">No recent Business Debut articles</h3>
+                    <p class="text-gray-500 text-sm">No Business Debut stories found.</p>
                 </div>
-
-                <!-- Biz Articles Container -->
-                <div id="bizArticlesContainer" class="hidden">
-                    <!-- Business Debut articles will be dynamically inserted here -->
-                </div>
+                <div id="bizArticlesContainer" class="hidden"></div>
             </div>
 
-            <!-- ── Extraction Sub-tab ── -->
             <div id="bizExtractionSubTab" class="hidden">
-                <!-- Extraction Stats -->
-                <div id="bizExtStatsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 fade-in" style="display: none;">
-                    <div class="stats-card rounded-xl p-6 border border-slate-700/50">
+                <div id="bizExtStatsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 fade-in" style="display:none;">
+                    <div class="stats-card rounded-2xl p-6 card-accent-indigo">
                         <div class="flex items-center justify-between">
-                            <div>
-                                <p class="text-gray-400 text-sm mb-1">Total Rows</p>
-                                <p class="text-3xl font-bold" id="bizExtTotal">0</p>
-                            </div>
-                            <i class="fas fa-table text-4xl text-indigo-400 opacity-50"></i>
+                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Total Rows</p><p class="text-3xl font-bold text-white" id="bizExtTotal">0</p></div>
+                            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center"><i class="fas fa-table text-indigo-400 text-xl"></i></div>
                         </div>
                     </div>
-                    <div class="stats-card rounded-xl p-6 border border-slate-700/50">
+                    <div class="stats-card rounded-2xl p-6 card-accent-green">
                         <div class="flex items-center justify-between">
-                            <div>
-                                <p class="text-gray-400 text-sm mb-1">Openings</p>
-                                <p class="text-3xl font-bold text-green-400" id="bizExtOpenings">0</p>
-                            </div>
-                            <i class="fas fa-arrow-up text-4xl text-green-400 opacity-50"></i>
+                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Openings</p><p class="text-3xl font-bold text-emerald-400" id="bizExtOpenings">0</p></div>
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center"><i class="fas fa-arrow-trend-up text-emerald-400 text-xl"></i></div>
                         </div>
                     </div>
-                    <div class="stats-card rounded-xl p-6 border border-slate-700/50">
+                    <div class="stats-card rounded-2xl p-6 card-accent-orange">
                         <div class="flex items-center justify-between">
-                            <div>
-                                <p class="text-gray-400 text-sm mb-1">Closings</p>
-                                <p class="text-3xl font-bold text-red-400" id="bizExtClosings">0</p>
-                            </div>
-                            <i class="fas fa-arrow-down text-4xl text-red-400 opacity-50"></i>
+                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Closings</p><p class="text-3xl font-bold text-red-400" id="bizExtClosings">0</p></div>
+                            <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center"><i class="fas fa-arrow-trend-down text-red-400 text-xl"></i></div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Extraction Search + Filter + Download -->
-                <div class="mb-6 fade-in">
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <div class="flex-1 relative">
-                            <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-                            <input
-                                type="text"
-                                id="bizExtSearchInput"
-                                placeholder="Search by store, location, or description..."
-                                class="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:border-indigo-500 search-input transition-colors"
-                                oninput="filterBizExtractionRows()"
-                            >
-                        </div>
-                        <select
-                            id="bizExtTypeFilter"
-                            onchange="filterBizExtractionRows()"
-                            class="px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white focus:border-indigo-500 focus:outline-none"
-                        >
-                            <option value="all">All Types</option>
-                            <option value="Opening">Opening</option>
-                            <option value="Closing">Closing</option>
-                        </select>
-                        <button
-                            onclick="downloadBizExtractionCSV()"
-                            class="px-5 py-3 bg-green-600 hover:bg-green-700 rounded-lg transition-colors flex items-center space-x-2 font-medium whitespace-nowrap"
-                        >
-                            <i class="fas fa-download"></i>
-                            <span>Download CSV</span>
-                        </button>
+                <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3">
+                    <div class="flex-1 relative">
+                        <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
+                        <input type="text" id="bizExtSearchInput" placeholder="Search by store, location, or description…"
+                            class="input-field w-full pl-11 pr-4 py-3 text-sm" oninput="debounce(filterBizExtractionRows,250)()">
                     </div>
+                    <select id="bizExtTypeFilter" onchange="filterBizExtractionRows()" class="input-field px-4 py-3 text-sm">
+                        <option value="all">All Types</option>
+                        <option value="Opening">Opening</option>
+                        <option value="Closing">Closing</option>
+                    </select>
+                    <button onclick="downloadBizExtractionCSV()" class="btn-download px-5 py-3 rounded-xl font-medium flex items-center gap-2 text-sm whitespace-nowrap">
+                        <i class="fas fa-download"></i><span>Download CSV</span>
+                    </button>
                 </div>
-
-                <!-- Extraction Loading State -->
-                <div id="bizExtLoadingState" class="text-center py-20 hidden">
-                    <div class="loading-spinner mx-auto mb-4"></div>
-                    <p class="text-gray-400">Loading extraction data...</p>
-                </div>
-
-                <!-- Extraction Empty State -->
+                <div id="bizExtLoadingState" class="text-center py-20 hidden"><div class="loading-spinner mx-auto mb-4"></div><p class="text-gray-400 text-sm">Loading…</p></div>
                 <div id="bizExtEmptyState" class="text-center py-20 hidden">
-                    <i class="fas fa-table text-6xl text-gray-600 mb-4"></i>
-                    <h3 class="text-2xl font-semibold mb-2 text-gray-300">No extraction data found</h3>
-                    <p class="text-gray-500">Run the extractor script to generate data.</p>
+                    <div class="w-20 h-20 rounded-full bg-slate-800/80 flex items-center justify-center mx-auto mb-4"><i class="fas fa-table text-3xl text-gray-600"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-300">No extraction data found</h3>
+                    <p class="text-gray-500 text-sm">Run the extractor script to generate data.</p>
                 </div>
-
-                <!-- Extraction Table -->
-                <div id="bizExtTableContainer" class="hidden overflow-x-auto rounded-xl border border-slate-700/50 fade-in">
-                    <table class="w-full text-sm text-left table-fixed">
-                        <thead class="bg-slate-800 text-gray-300 uppercase text-xs tracking-wider">
-                            <tr>
-                                <th class="px-3 py-3 whitespace-nowrap w-14">S.No</th>
-                                <th class="px-3 py-3">Store / Restaurant</th>
-                                <th class="px-3 py-3">Location</th>
-                                <th class="px-3 py-3 whitespace-nowrap w-28">Event Type</th>
-                                <th class="px-3 py-3 w-40">Event Date</th>
-                                <th class="px-3 py-3 w-44">Status</th>
-                                <th class="px-3 py-3">Short Description</th>
-                                <th class="px-3 py-3">Article</th>
-                            </tr>
-                        </thead>
-                        <tbody id="bizExtTableBody" class="divide-y divide-slate-700/50"></tbody>
+                <div id="bizExtTableContainer" class="hidden overflow-x-auto rounded-2xl border border-white/5 fade-in">
+                    <table class="w-full text-sm text-left data-table table-fixed">
+                        <thead><tr>
+                            <th class="px-3 py-3 w-12">#</th>
+                            <th class="px-3 py-3">Store / Business</th>
+                            <th class="px-3 py-3">Location</th>
+                            <th class="px-3 py-3 w-28">Event Type</th>
+                            <th class="px-3 py-3 w-36">Event Date</th>
+                            <th class="px-3 py-3 w-40">Status</th>
+                            <th class="px-3 py-3">Description</th>
+                            <th class="px-3 py-3 w-20">Link</th>
+                        </tr></thead>
+                        <tbody id="bizExtTableBody"></tbody>
                     </table>
-                    <div class="px-4 py-3 bg-slate-800/50 text-gray-400 text-xs border-t border-slate-700/50">
-                        Showing <span id="bizExtRowCount">0</span> records &nbsp;•&nbsp; Last updated: <span id="bizExtLastUpdated">—</span>
+                    <div class="px-4 py-3 glass text-gray-500 text-xs border-t border-white/5 flex justify-between">
+                        <span>Showing <span id="bizExtRowCount" class="text-gray-300 font-semibold">0</span> records</span>
+                        <span>Updated: <span id="bizExtLastUpdated" class="text-gray-300">—</span></span>
                     </div>
                 </div>
             </div>
-
         </div>
 
+    </div><!-- end content-wrap -->
+
     <!-- Footer -->
-    <footer class="mt-16 py-8 border-t border-slate-700/50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-gray-400 text-sm">
-                Built for my analysts • Data from Google News RSS
-            </p>
-            <p class="text-gray-500 text-xs mt-2">
-                <i class="fas fa-code"></i> Powered by GitHub Actions & Pages
-            </p>
+    <footer class="relative z-10 mt-16 py-8 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-gray-500 text-sm">Built for my analysts • Data from Google News RSS</p>
+            <p class="text-gray-600 text-xs mt-1"><i class="fas fa-code mr-1"></i>Powered by GitHub Actions &amp; Pages</p>
         </div>
     </footer>
 
     <script>
-    const STORE_JSON_URL      = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/latest_news.json';
-    const SCOOP_JSON_URL      = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/ct_scoop_latest.json';
-    const REST_JSON_URL       = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/restaurant_latest.json';
+    // ── Skeleton helper (called during HTML render via template literal trick — but we do it in JS) ──
+    function skeletonCards(n) {
+        return Array(n).fill('').map(() =>
+            `<div class="rounded-2xl p-6 border border-white/5" style="background:rgba(15,23,42,0.6)">
+                <div class="skeleton h-5 w-20 mb-4"></div>
+                <div class="skeleton h-6 w-3/4 mb-3"></div>
+                <div class="skeleton h-4 w-full mb-2"></div>
+                <div class="skeleton h-4 w-5/6"></div>
+            </div>`
+        ).join('');
+    }
+
+    // Fix: replace placeholder skeletonCards calls in static HTML (they were template literal calls)
+    document.getElementById('loadingState').innerHTML = `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${skeletonCards(6)}</div>`;
+    document.getElementById('scoopLoadingState').innerHTML = `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${skeletonCards(3)}</div>`;
+    document.getElementById('bizLoadingState').innerHTML   = `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${skeletonCards(3)}</div>`;
+
+    // ── Spinner CSS (for table-based loading states) ──
+    (function(){
+        const style = document.createElement('style');
+        style.textContent = '.loading-spinner{border:3px solid rgba(255,255,255,0.1);border-top:3px solid #6366f1;border-radius:50%;width:36px;height:36px;animation:spin 0.8s linear infinite;margin:0 auto;}';
+        document.head.appendChild(style);
+    })();
+
+    // ── Data URLs ──
+    const STORE_JSON_URL       = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/latest_news.json';
+    const SCOOP_JSON_URL       = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/ct_scoop_latest.json';
+    const REST_JSON_URL        = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/restaurant_latest.json';
     const SCOOP_EXTRACTION_URL = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/ct_scoop_extraction_latest.json';
     const REST_EXTRACTION_URL  = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/restaurant_extraction_latest.json';
     const BIZ_JSON_URL         = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/businessdebut_latest.json';
     const BIZ_EXTRACTION_URL   = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/businessdebut_extraction_latest.json';
 
-    let storeArticles = [];
-    let filteredStoreArticles = [];
-    let scoopArticles = [];
-    let filteredScoopArticles = [];
-    let extractionRows = [];
-    let filteredExtractionRows = [];
-    let restArticles = [];
-    let filteredRestArticles = [];
-    let restSortCol = 'date';
-    let restSortDir = 'desc';
+    // ── State ──
+    let storeArticles = [], filteredStoreArticles = [];
+    let scoopArticles = [], filteredScoopArticles = [];
+    let extractionRows = [], filteredExtractionRows = [];
+    let restArticles = [], filteredRestArticles = [];
+    let restSortCol = 'date', restSortDir = 'desc';
+    let restExtractionRows = [], filteredRestExtractionRows = [];
+    let bizArticles = [], filteredBizArticles = [];
+    let bizExtractionRows = [], filteredBizExtractionRows = [];
+    let activeTab = 'store', activeScoopSubTab = 'articles';
+    let activeRestSubTab = 'articles', activeBizSubTab = 'articles';
 
-    let activeTab = 'store';
-    let activeScoopSubTab = 'articles';
-    let activeRestSubTab  = 'articles';
-    let activeBizSubTab   = 'articles';
-    let restExtractionRows = [];
-    let filteredRestExtractionRows = [];
-    let bizArticles = [];
-    let filteredBizArticles = [];
-    let bizExtractionRows = [];
-    let filteredBizExtractionRows = [];
+    const TODAY = new Date().toISOString().split('T')[0];
 
-    window.addEventListener('DOMContentLoaded', () => {
-        switchTab('store');
-        loadStoreData();
+    // ── Debounce ──
+    const _debounceTimers = {};
+    function debounce(fn, ms) {
+        return function(...args) {
+            clearTimeout(_debounceTimers[fn.name]);
+            _debounceTimers[fn.name] = setTimeout(() => fn.apply(this, args), ms);
+        };
+    }
+
+    // ── Toast ──
+    function showToast(msg, type = 'success') {
+        const icon = type === 'success' ? 'fa-check-circle text-emerald-400' : 'fa-exclamation-circle text-red-400';
+        const el = document.createElement('div');
+        el.className = 'toast';
+        el.innerHTML = `<i class="fas ${icon}"></i><span>${msg}</span>`;
+        document.getElementById('toast-container').appendChild(el);
+        setTimeout(() => {
+            el.classList.add('out');
+            setTimeout(() => el.remove(), 300);
+        }, 2800);
+    }
+
+    // ── Count-up animation ──
+    function animateCount(el, target) {
+        const start = parseInt(el.textContent) || 0;
+        if (start === target) return;
+        const dur = 600, step = 16;
+        const steps = Math.ceil(dur / step);
+        const inc = (target - start) / steps;
+        let cur = start, count = 0;
+        const timer = setInterval(() => {
+            count++;
+            cur += inc;
+            el.textContent = Math.round(count >= steps ? target : cur);
+            if (count >= steps) clearInterval(timer);
+        }, step);
+    }
+
+    function setCount(id, val) {
+        const el = document.getElementById(id);
+        if (el) animateCount(el, val);
+    }
+
+    // ── Scroll to top button ──
+    window.addEventListener('scroll', () => {
+        const btn = document.getElementById('scrollTop');
+        btn.classList.toggle('visible', window.scrollY > 400);
     });
 
+    // ── Keyboard shortcuts ──
+    document.addEventListener('keydown', (e) => {
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA') return;
+        const map = { '1': 'store', '2': 'scoop', '3': 'restaurant', '4': 'biz' };
+        if (map[e.key]) { switchTab(map[e.key]); return; }
+        if (e.key.toLowerCase() === 'r' && !e.ctrlKey && !e.metaKey) refreshData();
+    });
+
+    // ── isNew helper ──
+    function isNew(dateStr) {
+        if (!dateStr) return false;
+        try {
+            const d = new Date(dateStr);
+            return d.toISOString().split('T')[0] >= TODAY;
+        } catch { return false; }
+    }
+
+    // ── Highlight search term ──
+    function highlight(text, term) {
+        if (!term || !text) return escapeHtml(text || '');
+        const escaped = escapeHtml(text);
+        const escapedTerm = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        return escaped.replace(new RegExp('(' + escapedTerm + ')', 'gi'), '<mark>$1</mark>');
+    }
+
+    // ── Tab switcher ──
     function switchTab(tab) {
         activeTab = tab;
-        const storeTab = document.getElementById('storeTabContent');
-        const scoopTab = document.getElementById('scoopTabContent');
-        const restTab  = document.getElementById('restaurantTabContent');
-        const bizTab   = document.getElementById('bizTabContent');
-        const storeBtn = document.getElementById('tabStoreBtn');
-        const scoopBtn = document.getElementById('tabScoopBtn');
-        const restBtn  = document.getElementById('tabRestaurantBtn');
-        const bizBtn   = document.getElementById('tabBizBtn');
-
-        [storeTab, scoopTab, restTab, bizTab].forEach(t => t.classList.add('hidden'));
-        [storeBtn, scoopBtn, restBtn, bizBtn].forEach(b => {
-            b.classList.remove('bg-slate-800', 'text-white', 'shadow');
-            b.classList.add('text-gray-300');
-        });
-
-        if (tab === 'store') {
-            storeTab.classList.remove('hidden');
-            storeBtn.classList.add('bg-slate-800', 'text-white', 'shadow');
-            storeBtn.classList.remove('text-gray-300');
-        } else if (tab === 'scoop') {
-            scoopTab.classList.remove('hidden');
-            scoopBtn.classList.add('bg-slate-800', 'text-white', 'shadow');
-            scoopBtn.classList.remove('text-gray-300');
+        const tabs = { store: 'storeTabContent', scoop: 'scoopTabContent', restaurant: 'restaurantTabContent', biz: 'bizTabContent' };
+        const btns = { store: 'tabStoreBtn', scoop: 'tabScoopBtn', restaurant: 'tabRestaurantBtn', biz: 'tabBizBtn' };
+        Object.values(tabs).forEach(id => document.getElementById(id).classList.add('hidden'));
+        Object.values(btns).forEach(id => document.getElementById(id).classList.remove('active'));
+        document.getElementById(tabs[tab]).classList.remove('hidden');
+        document.getElementById(btns[tab]).classList.add('active');
+        if (tab === 'scoop') {
             if (activeScoopSubTab === 'articles' && scoopArticles.length === 0) loadScoopData();
             if (activeScoopSubTab === 'extraction' && extractionRows.length === 0) loadScoopExtractionData();
         } else if (tab === 'restaurant') {
-            restTab.classList.remove('hidden');
-            restBtn.classList.add('bg-slate-800', 'text-white', 'shadow');
-            restBtn.classList.remove('text-gray-300');
             if (activeRestSubTab === 'articles' && restArticles.length === 0) loadRestData();
             if (activeRestSubTab === 'extraction' && restExtractionRows.length === 0) loadRestExtractionData();
         } else if (tab === 'biz') {
-            bizTab.classList.remove('hidden');
-            bizBtn.classList.add('bg-slate-800', 'text-white', 'shadow');
-            bizBtn.classList.remove('text-gray-300');
             if (activeBizSubTab === 'articles' && bizArticles.length === 0) loadBizData();
             if (activeBizSubTab === 'extraction' && bizExtractionRows.length === 0) loadBizExtractionData();
         }
     }
 
-    // ── Store News ────────────────────────────────────────────────
+    // ── Update nav total ──
+    function updateNavTotal() {
+        const total = storeArticles.length + scoopArticles.length + restArticles.length + bizArticles.length;
+        const badge = document.getElementById('navTotalBadge');
+        document.getElementById('navTotalCount').textContent = total;
+        badge.classList.toggle('hidden', total === 0);
+        badge.classList.toggle('inline-flex', total > 0);
+    }
+
+    // ══════════════ STORE NEWS ══════════════
     async function loadStoreData() {
         try {
             document.getElementById('loadingState').classList.remove('hidden');
@@ -924,35 +892,32 @@
             document.getElementById('emptyState').classList.add('hidden');
             document.getElementById('statsContainer').style.display = 'none';
 
-            const response = await fetch(STORE_JSON_URL + '?t=' + Date.now());
-            if (!response.ok) throw new Error('Failed to fetch store news');
+            const res = await fetch(STORE_JSON_URL + '?t=' + Date.now());
+            if (!res.ok) throw new Error('fetch failed');
+            const data = await res.json();
 
-            const data = await response.json();
             document.getElementById('updateDate').textContent = data.last_updated || 'Unknown';
-
             storeArticles = [];
             Object.keys(data.data || {}).forEach(analyst => {
-                (data.data[analyst] || []).forEach(article => {
-                    storeArticles.push({ ...article, Analyst: analyst });
-                });
+                (data.data[analyst] || []).forEach(a => storeArticles.push({ ...a, Analyst: analyst }));
             });
 
-            const analystFilter = document.getElementById('analystFilter');
+            const sel = document.getElementById('analystFilter');
             const analysts = [...new Set(storeArticles.map(a => a.Analyst))].sort();
-            analystFilter.innerHTML = '<option value="all">All Analysts</option>';
-            analysts.forEach(analyst => {
-                const option = document.createElement('option');
-                option.value = analyst;
-                option.textContent = analyst;
-                analystFilter.appendChild(option);
+            sel.innerHTML = '<option value="all">All Analysts</option>';
+            analysts.forEach(name => {
+                const opt = document.createElement('option');
+                opt.value = opt.textContent = name;
+                sel.appendChild(opt);
             });
 
-            updateStoreStats(storeArticles);
             filteredStoreArticles = storeArticles;
+            updateStoreStats(storeArticles);
             renderStoreArticles();
+            updateNavTotal();
             document.getElementById('loadingState').classList.add('hidden');
-        } catch (error) {
-            console.error('Error loading store news:', error);
+        } catch (err) {
+            console.error(err);
             document.getElementById('loadingState').classList.add('hidden');
             document.getElementById('emptyState').classList.remove('hidden');
             document.getElementById('updateDate').textContent = 'Error loading data';
@@ -960,37 +925,27 @@
     }
 
     function updateStoreStats(articles) {
-        const total = articles.length;
-        const openings = articles.filter(a => a.Type === 'Opening').length;
-        const closings = articles.filter(a => a.Type === 'Closing').length;
-        document.getElementById('totalArticles').textContent = total;
-        document.getElementById('totalOpenings').textContent = openings;
-        document.getElementById('totalClosings').textContent = closings;
+        setCount('totalArticles', articles.length);
+        setCount('totalOpenings', articles.filter(a => a.Type === 'Opening').length);
+        setCount('totalClosings', articles.filter(a => a.Type === 'Closing').length);
         document.getElementById('statsContainer').style.display = 'grid';
     }
 
     function filterStoreArticles() {
-        const searchTerm    = document.getElementById('searchInput').value.toLowerCase();
-        const typeFilter    = document.getElementById('typeFilter').value;
-        const analystFilter = document.getElementById('analystFilter').value;
-
-        filteredStoreArticles = storeArticles.filter(article => {
-            const matchesSearch = !searchTerm ||
-                (article.Store   || '').toLowerCase().includes(searchTerm) ||
-                (article.Analyst || '').toLowerCase().includes(searchTerm) ||
-                (article.Title   || '').toLowerCase().includes(searchTerm) ||
-                (article.Summary && article.Summary.toLowerCase().includes(searchTerm));
-            const matchesType    = typeFilter    === 'all' || article.Type    === typeFilter;
-            const matchesAnalyst = analystFilter === 'all' || article.Analyst === analystFilter;
-            return matchesSearch && matchesType && matchesAnalyst;
+        const term     = document.getElementById('searchInput').value.toLowerCase();
+        const typeF    = document.getElementById('typeFilter').value;
+        const analystF = document.getElementById('analystFilter').value;
+        filteredStoreArticles = storeArticles.filter(a => {
+            const ms = !term || ['Store','Analyst','Title','Summary'].some(k => (a[k] || '').toLowerCase().includes(term));
+            return ms && (typeF === 'all' || a.Type === typeF) && (analystF === 'all' || a.Analyst === analystF);
         });
-
         updateStoreStats(filteredStoreArticles);
         renderStoreArticles();
     }
 
     function renderStoreArticles() {
         const container = document.getElementById('articlesContainer');
+        const term = document.getElementById('searchInput').value.toLowerCase();
         if (filteredStoreArticles.length === 0) {
             container.classList.add('hidden');
             document.getElementById('emptyState').classList.remove('hidden');
@@ -1000,103 +955,94 @@
         container.classList.remove('hidden');
         container.innerHTML = '';
 
-        const groupedByAnalyst = {};
-        filteredStoreArticles.forEach(article => {
-            if (!groupedByAnalyst[article.Analyst]) groupedByAnalyst[article.Analyst] = [];
-            groupedByAnalyst[article.Analyst].push(article);
-        });
+        const grouped = {};
+        filteredStoreArticles.forEach(a => { (grouped[a.Analyst] = grouped[a.Analyst] || []).push(a); });
 
-        Object.keys(groupedByAnalyst).sort().forEach(analyst => {
-            const articles = groupedByAnalyst[analyst];
-            const section = document.createElement('div');
-            section.className = 'analyst-section mb-12 fade-in';
-            section.id = `analyst-${analyst.replace(/\s+/g, '-')}`;
-            section.innerHTML = `
-                <div class="flex items-center justify-between mb-6">
-                    <h2 class="text-2xl font-bold text-white flex items-center space-x-3">
-                        <i class="fas fa-user-tie text-blue-400"></i>
-                        <span>${analyst}</span>
-                        <span class="text-sm font-normal text-gray-400 bg-slate-800 px-3 py-1 rounded-full">
-                            ${articles.length} article${articles.length !== 1 ? 's' : ''}
-                        </span>
-                    </h2>
+        Object.keys(grouped).sort().forEach(analyst => {
+            const articles = grouped[analyst];
+            const sec = document.createElement('div');
+            sec.className = 'analyst-section mb-12 fade-in';
+            sec.id = `analyst-${analyst.replace(/\s+/g, '-')}`;
+            sec.innerHTML = `
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="analyst-heading">
+                        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
+                            <i class="fas fa-user-tie text-white text-xs"></i>
+                        </div>
+                        <span class="font-bold text-white">${escapeHtml(analyst)}</span>
+                        <span class="text-xs text-blue-400 font-semibold bg-blue-500/10 px-2.5 py-1 rounded-full">${articles.length}</span>
+                    </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative">
-                    ${articles.map(article => createStoreArticleCard(article)).join('')}
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    ${articles.map(a => createStoreArticleCard(a, term)).join('')}
                 </div>
             `;
-            container.appendChild(section);
+            container.appendChild(sec);
         });
     }
 
-    function createStoreArticleCard(article) {
-        const badgeClass = article.Type === 'Opening' ? 'badge-opening' : 'badge-closing';
-        const badgeIcon  = article.Type === 'Opening' ? 'fa-arrow-up' : 'fa-arrow-down';
+    function createStoreArticleCard(article, term = '') {
+        const isOpening = article.Type === 'Opening';
         const summary = article.Summary || 'No summary available';
-        const truncatedSummary = summary.length > 180 ? summary.substring(0, 180) + '...' : summary;
+        const trunc = summary.length > 180 ? summary.substring(0, 180) + '…' : summary;
 
-        let publishedDate = article.Published || 'Date not available';
+        let pubDate = article.Published || 'Date not available';
         try {
-            const date = new Date(publishedDate);
-            if (!isNaN(date.getTime())) {
-                publishedDate = date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
-            }
-        } catch (e) {}
+            const d = new Date(pubDate);
+            if (!isNaN(d.getTime())) pubDate = d.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' });
+        } catch {}
 
-        const articleKey = 'done-' + (article.Link || article.Title || 'unknown-' + Math.random().toString(36).slice(2));
+        const articleKey = 'done-' + (article.Link || article.Title || 'x' + Math.random().toString(36).slice(2));
         const isDone = localStorage.getItem(articleKey) === 'true';
+        const newBadge = isNew(article.Published) ? `<span class="badge-new"><i class="fas fa-star" style="font-size:0.5rem"></i>New</span>` : '';
+        const accentClass = isOpening ? 'card-accent-green' : 'card-accent-orange';
 
         return `
-            <div class="card-hover bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 relative">
-                <div 
-                    class="absolute top-3 right-3 w-8 h-8 rounded-md cursor-pointer flex items-center justify-center transition-all z-10 shadow-sm"
-                    style="${isDone ? 'background: #10b981; border: 2px solid #059669;' : 'background: rgba(30,41,59,0.8); border: 2px solid #4b5563;'}"
-                    onclick="toggleDoneStatus('${escapeHtml(articleKey)}', this)"
-                    title="${isDone ? 'Marked as done' : 'Mark as done'}"
-                >
-                    <i class="fas fa-check text-white text-base ${isDone ? 'opacity-100' : 'opacity-0'} transition-opacity duration-200"></i>
+            <div class="glass-card ${accentClass} rounded-2xl p-5 relative">
+                <div class="absolute top-3.5 right-3.5 flex items-center gap-2">
+                    ${newBadge}
+                    <div class="w-8 h-8 rounded-lg cursor-pointer flex items-center justify-center transition-all shadow-sm"
+                        style="${isDone ? 'background:linear-gradient(135deg,#10b981,#059669);' : 'background:rgba(30,41,59,0.9);border:1.5px solid rgba(255,255,255,0.1);'}"
+                        onclick="toggleDoneStatus('${escapeHtml(articleKey)}', this)"
+                        title="${isDone ? 'Marked as done — click to undo' : 'Mark as done'}">
+                        <i class="fas fa-check text-white text-xs ${isDone ? 'opacity-100' : 'opacity-0'} transition-opacity duration-200"></i>
+                    </div>
                 </div>
-                <div class="flex items-start justify-between mb-3">
-                    <span class="${badgeClass} px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center space-x-1">
-                        <i class="fas ${badgeIcon}"></i>
-                        <span>${article.Type}</span>
+                <div class="flex items-start gap-2 mb-3">
+                    <span class="${isOpening ? 'badge-opening' : 'badge-closing'} px-3 py-1 rounded-full text-xs font-bold text-white flex items-center gap-1">
+                        <i class="fas ${isOpening ? 'fa-arrow-up' : 'fa-arrow-down'} text-xs"></i>${article.Type}
                     </span>
                 </div>
-                <h3 class="font-bold text-lg mb-2 text-white">${escapeHtml(article.Store || '')}</h3>
+                <h3 class="font-bold text-base mb-1.5 text-white pr-16">${highlight(article.Store || '', term)}</h3>
                 <a href="${escapeHtml(article.Link || '#')}" target="_blank" rel="noopener noreferrer"
-                   class="text-blue-400 hover:text-blue-300 font-medium mb-3 block line-clamp-2">
-                    ${escapeHtml(article.Title || '')}
-                    <i class="fas fa-external-link-alt text-xs ml-1"></i>
+                   class="text-blue-400 hover:text-blue-300 text-sm font-medium mb-3 block line-clamp-2 transition-colors">
+                    ${highlight(article.Title || '', term)}
+                    <i class="fas fa-external-link-alt text-xs ml-1 opacity-60"></i>
                 </a>
-                <div class="flex items-center text-gray-400 text-sm mb-3">
-                    <i class="fas fa-calendar-alt mr-2"></i>
-                    <span>${escapeHtml(publishedDate)}</span>
+                <div class="flex items-center text-gray-500 text-xs mb-2.5">
+                    <i class="fas fa-calendar-alt mr-1.5 text-gray-600"></i>
+                    <span>${escapeHtml(pubDate)}</span>
                 </div>
-                <p class="text-gray-300 text-sm line-clamp-3">${escapeHtml(truncatedSummary)}</p>
-            </div>
-        `;
+                <p class="text-gray-400 text-xs line-clamp-3 leading-relaxed">${highlight(trunc, term)}</p>
+            </div>`;
     }
 
-    function toggleDoneStatus(key, element) {
-        const currentlyDone = localStorage.getItem(key) === 'true';
-        if (currentlyDone) {
+    function toggleDoneStatus(key, el) {
+        const isDone = localStorage.getItem(key) === 'true';
+        if (isDone) {
             localStorage.removeItem(key);
-            element.style.background = 'rgba(30,41,59,0.8)';
-            element.style.border = '2px solid #4b5563';
-            element.querySelector('i').classList.remove('opacity-100');
-            element.querySelector('i').classList.add('opacity-0');
-            element.title = 'Mark as done';
+            el.style = 'background:rgba(30,41,59,0.9);border:1.5px solid rgba(255,255,255,0.1);';
+            el.querySelector('i').className = 'fas fa-check text-white text-xs opacity-0 transition-opacity duration-200';
+            el.title = 'Mark as done';
         } else {
             localStorage.setItem(key, 'true');
-            element.style.background = '#10b981';
-            element.style.border = '2px solid #059669';
-            element.querySelector('i').classList.remove('opacity-0');
-            element.querySelector('i').classList.add('opacity-100');
-            element.title = 'Marked as done';
+            el.style = 'background:linear-gradient(135deg,#10b981,#059669);';
+            el.querySelector('i').className = 'fas fa-check text-white text-xs opacity-100 transition-opacity duration-200';
+            el.title = 'Marked as done — click to undo';
         }
     }
 
-    // ── Connecticut Scoop ─────────────────────────────────────────
+    // ══════════════ CT SCOOP ══════════════
     async function loadScoopData() {
         try {
             document.getElementById('scoopLoadingState').classList.remove('hidden');
@@ -1104,10 +1050,9 @@
             document.getElementById('scoopEmptyState').classList.add('hidden');
             document.getElementById('scoopStatsContainer').style.display = 'none';
 
-            const response = await fetch(SCOOP_JSON_URL + '?t=' + Date.now());
-            if (!response.ok) throw new Error('Failed to fetch scoop data');
-
-            const data = await response.json();
+            const res = await fetch(SCOOP_JSON_URL + '?t=' + Date.now());
+            if (!res.ok) throw new Error('fetch failed');
+            const data = await res.json();
             document.getElementById('updateDate').textContent = data.last_updated || 'Unknown';
 
             scoopArticles = (data.data || []).map(item => ({
@@ -1115,101 +1060,85 @@
                 date:    item.date    || item.Date    || '',
                 link:    item.link    || item.Link    || ''
             }));
-
             filteredScoopArticles = scoopArticles;
             updateScoopStats(filteredScoopArticles);
             renderScoopArticles();
+            updateNavTotal();
             document.getElementById('scoopLoadingState').classList.add('hidden');
-        } catch (error) {
-            console.error('Error loading scoop data:', error);
+        } catch (err) {
+            console.error(err);
             document.getElementById('scoopLoadingState').classList.add('hidden');
             document.getElementById('scoopEmptyState').classList.remove('hidden');
         }
     }
 
     function updateScoopStats(articles) {
-        document.getElementById('scoopTotalArticles').textContent = articles.length;
+        setCount('scoopTotalArticles', articles.length);
         document.getElementById('scoopStatsContainer').style.display = articles.length ? 'grid' : 'none';
     }
 
     function filterScoopArticles() {
         const term = document.getElementById('scoopSearchInput').value.toLowerCase();
-        filteredScoopArticles = scoopArticles.filter(article =>
-            !term || (article.heading || '').toLowerCase().includes(term)
-        );
+        filteredScoopArticles = scoopArticles.filter(a => !term || (a.heading || '').toLowerCase().includes(term));
         updateScoopStats(filteredScoopArticles);
         renderScoopArticles();
     }
 
-    // NEW: Download CSV for Connecticut Scoop
     function downloadScoopCSV() {
-        if (filteredScoopArticles.length === 0) return;
-        const headers = ['date', 'heading', 'link'];
-        const rows = filteredScoopArticles.map(r =>
-            headers.map(h => `"${(r[h] || '').replace(/"/g, '""')}"`).join(',')
-        );
-        const csv  = [headers.join(','), ...rows].join('\n');
-        const a    = document.createElement('a');
-        a.href     = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8;' }));
-        a.download = `ct_scoop_${new Date().toISOString().split('T')[0]}.csv`;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
+        if (!filteredScoopArticles.length) return;
+        const h = ['date','heading','link'];
+        const csv = [h.join(','), ...filteredScoopArticles.map(r => h.map(k => `"${(r[k]||'').replace(/"/g,'""')}"`).join(','))].join('\n');
+        dlCSV(csv, `ct_scoop_${TODAY}.csv`);
+        showToast('CT Scoop CSV downloaded!');
     }
 
     function renderScoopArticles() {
         const container = document.getElementById('scoopArticlesContainer');
-        if (filteredScoopArticles.length === 0) {
+        const term = document.getElementById('scoopSearchInput').value.toLowerCase();
+        if (!filteredScoopArticles.length) {
             container.classList.add('hidden');
             document.getElementById('scoopEmptyState').classList.remove('hidden');
             return;
         }
         document.getElementById('scoopEmptyState').classList.add('hidden');
         container.classList.remove('hidden');
-        container.innerHTML = '';
-
         const grid = document.createElement('div');
-        grid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6';
-        filteredScoopArticles.forEach(article => {
-            const wrapper = document.createElement('div');
-            wrapper.innerHTML = createScoopCard(article);
-            if (wrapper.firstElementChild) grid.appendChild(wrapper.firstElementChild);
+        grid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5';
+        filteredScoopArticles.forEach(a => {
+            const w = document.createElement('div');
+            w.innerHTML = createScoopCard(a, term);
+            if (w.firstElementChild) grid.appendChild(w.firstElementChild);
         });
+        container.innerHTML = '';
         container.appendChild(grid);
     }
 
-    function createScoopCard(article) {
+    function createScoopCard(article, term = '') {
         let dateText = article.date || 'Date not available';
         try {
-            const dt = new Date(dateText);
-            if (!isNaN(dt.getTime())) {
-                dateText = dt.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
-            }
-        } catch (e) {}
-
+            const d = new Date(dateText);
+            if (!isNaN(d.getTime())) dateText = d.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' });
+        } catch {}
+        const newBadge = isNew(article.date) ? `<span class="badge-new ml-2"><i class="fas fa-star" style="font-size:0.5rem"></i>New</span>` : '';
         return `
-            <div class="card-hover bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50">
-                <div class="flex items-start justify-between mb-3">
-                    <span class="badge-opening px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center space-x-1">
-                        <i class="fas fa-bullhorn"></i>
-                        <span>Scoop</span>
-                    </span>
+            <div class="glass-card card-accent-blue rounded-2xl p-5">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="badge-opening px-3 py-1 rounded-full text-xs font-bold text-white flex items-center gap-1">
+                        <i class="fas fa-bullhorn text-xs"></i>Scoop
+                    </span>${newBadge}
                 </div>
-                <h3 class="font-bold text-lg mb-3 text-white">${escapeHtml(article.heading || '')}</h3>
+                <h3 class="font-bold text-base mb-3 text-white leading-snug">${highlight(article.heading || '', term)}</h3>
                 <a href="${escapeHtml(article.link || '#')}" target="_blank" rel="noopener noreferrer"
-                   class="text-blue-400 hover:text-blue-300 font-medium mb-3 block line-clamp-2">
-                    View full story
-                    <i class="fas fa-external-link-alt text-xs ml-1"></i>
+                   class="text-blue-400 hover:text-blue-300 text-sm font-medium mb-3 block transition-colors">
+                    View full story <i class="fas fa-external-link-alt text-xs ml-1 opacity-60"></i>
                 </a>
-                <div class="flex items-center text-gray-400 text-sm mt-2">
-                    <i class="fas fa-calendar-alt mr-2"></i>
-                    <span>${escapeHtml(dateText)}</span>
+                <div class="flex items-center text-gray-500 text-xs">
+                    <i class="fas fa-calendar-alt mr-1.5 text-gray-600"></i>${escapeHtml(dateText)}
                 </div>
-            </div>
-        `;
+            </div>`;
     }
 
-    // ── Restaurant News ───────────────────────────────────────────
+    // ══════════════ RESTAURANT ══════════════
     async function loadRestData() {
         try {
             document.getElementById('restLoadingState').classList.remove('hidden');
@@ -1220,40 +1149,34 @@
             const res = await fetch(REST_JSON_URL + '?t=' + Date.now());
             if (!res.ok) throw new Error('fetch failed');
             const data = await res.json();
-
             restArticles = Array.isArray(data) ? data : (data.data || []);
             filteredRestArticles = [...restArticles];
             sortRestData();
             updateRestStats(filteredRestArticles);
             renderRestTable();
+            updateNavTotal();
             document.getElementById('restLoadingState').classList.add('hidden');
         } catch (err) {
-            console.error('Restaurant load error:', err);
+            console.error(err);
             document.getElementById('restLoadingState').classList.add('hidden');
             document.getElementById('restEmptyState').classList.remove('hidden');
         }
     }
 
     function updateRestStats(rows) {
-        const total    = rows.length;
         const withAddr = rows.filter(r => (r.address || '').trim()).length;
-        document.getElementById('restTotal').textContent    = total;
-        document.getElementById('restWithAddr').textContent = withAddr;
-        document.getElementById('restNoAddr').textContent   = total - withAddr;
-        document.getElementById('restStatsContainer').style.display = total ? 'grid' : 'none';
+        setCount('restTotal', rows.length);
+        setCount('restWithAddr', withAddr);
+        setCount('restNoAddr', rows.length - withAddr);
+        document.getElementById('restStatsContainer').style.display = rows.length ? 'grid' : 'none';
     }
 
     function filterRestArticles() {
         const term = document.getElementById('restSearchInput').value.toLowerCase();
         filteredRestArticles = restArticles.filter(r =>
-            !term ||
-            (r.title   || '').toLowerCase().includes(term) ||
-            (r.address || '').toLowerCase().includes(term) ||
-            (r.date    || '').toLowerCase().includes(term)
+            !term || ['title','address','date'].some(k => (r[k]||'').toLowerCase().includes(term))
         );
-        sortRestData();
-        updateRestStats(filteredRestArticles);
-        renderRestTable();
+        sortRestData(); updateRestStats(filteredRestArticles); renderRestTable();
     }
 
     function sortRestTable(col) {
@@ -1264,149 +1187,110 @@
             if (!el) return;
             el.className = c === restSortCol
                 ? 'fas ' + (restSortDir === 'asc' ? 'fa-sort-up' : 'fa-sort-down') + ' text-orange-400 ml-1'
-                : 'fas fa-sort text-gray-500 ml-1';
+                : 'fas fa-sort text-gray-600 ml-1';
         });
-        sortRestData();
-        renderRestTable();
+        sortRestData(); renderRestTable();
     }
 
     function sortRestData() {
         filteredRestArticles.sort((a, b) => {
             if (restSortCol === 'date') {
-                const va = new Date(a.date || 0).getTime();
-                const vb = new Date(b.date || 0).getTime();
+                const va = new Date(a.date || 0).getTime(), vb = new Date(b.date || 0).getTime();
                 return restSortDir === 'asc' ? va - vb : vb - va;
             }
-            const va = (a[restSortCol] || '').toLowerCase();
-            const vb = (b[restSortCol] || '').toLowerCase();
+            const va = (a[restSortCol]||'').toLowerCase(), vb = (b[restSortCol]||'').toLowerCase();
             return restSortDir === 'asc' ? va.localeCompare(vb) : vb.localeCompare(va);
         });
     }
 
     function renderRestTable() {
-        const tbody     = document.getElementById('restTableBody');
+        const tbody = document.getElementById('restTableBody');
         const container = document.getElementById('restTableContainer');
-
-        if (filteredRestArticles.length === 0) {
+        const term = document.getElementById('restSearchInput').value.toLowerCase();
+        if (!filteredRestArticles.length) {
             container.classList.add('hidden');
             document.getElementById('restEmptyState').classList.remove('hidden');
             return;
         }
         document.getElementById('restEmptyState').classList.add('hidden');
         container.classList.remove('hidden');
-
         tbody.innerHTML = filteredRestArticles.map((r, i) => {
-            const addr     = (r.address || '').trim();
-            const mapsUrl  = addr ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(addr)}` : null;
+            const addr = (r.address || '').trim();
+            const mapsUrl = addr ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(addr)}` : null;
             const addrCell = addr
-                ? `<a href="${mapsUrl}" target="_blank" rel="noopener noreferrer"
-                      class="hover:text-orange-400 transition-colors flex items-start gap-1">
-                       <i class="fas fa-map-marker-alt text-orange-400 mt-0.5 shrink-0"></i>
-                       <span class="text-gray-200">${escapeHtml(addr)}</span>
+                ? `<a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="hover:text-orange-400 transition-colors flex items-start gap-1">
+                       <i class="fas fa-map-marker-alt text-orange-400 mt-0.5 shrink-0 text-xs"></i>
+                       <span class="text-gray-300 text-xs">${highlight(addr, term)}</span>
                    </a>`
-                : `<span class="flex items-center gap-1 text-yellow-500 italic text-xs">
-                       <i class="fas fa-map-marker-alt text-gray-600 shrink-0"></i>No address
-                   </span>`;
-
+                : `<span class="text-yellow-600 italic text-xs flex items-center gap-1"><i class="fas fa-map-marker-alt text-gray-600 text-xs"></i>No address</span>`;
+            const newTag = isNew(r.date) ? `<span class="badge-new ml-2" style="font-size:0.55rem">New</span>` : '';
             return `
-            <tr class="hover:bg-slate-700/30 transition-colors ${i % 2 === 0 ? '' : 'bg-slate-800/20'}">
-                <td class="px-4 py-3 whitespace-nowrap text-gray-400 text-xs">
-                    <span class="font-semibold text-gray-500 mr-2">${i + 1}</span>
-                    ${escapeHtml(r.date || '')}
+            <tr>
+                <td class="px-4 py-3 text-gray-600 text-xs whitespace-nowrap">
+                    <span class="text-gray-600 mr-2 font-semibold">${i+1}</span>${escapeHtml(r.date||'')}${newTag}
                 </td>
                 <td class="px-4 py-3 max-w-xs">
-                    <a href="${escapeHtml(r.url || '#')}" target="_blank" rel="noopener noreferrer"
-                       class="text-white font-medium hover:text-orange-400 transition-colors line-clamp-2">
-                        ${escapeHtml(r.title || '')}
+                    <a href="${escapeHtml(r.url||'#')}" target="_blank" rel="noopener noreferrer"
+                       class="text-white text-sm font-medium hover:text-orange-400 transition-colors line-clamp-2">
+                        ${highlight(r.title||'', term)}
                     </a>
                 </td>
                 <td class="px-4 py-3 max-w-xs text-sm">${addrCell}</td>
-                <td class="px-4 py-3 whitespace-nowrap">
-                    <a href="${escapeHtml(r.url || '#')}" target="_blank" rel="noopener noreferrer"
-                       class="px-3 py-1 bg-slate-700 hover:bg-orange-600 rounded-lg text-xs transition-colors inline-flex items-center gap-1">
-                        <i class="fas fa-external-link-alt"></i> Visit
+                <td class="px-4 py-3">
+                    <a href="${escapeHtml(r.url||'#')}" target="_blank" rel="noopener noreferrer"
+                       class="px-3 py-1.5 bg-slate-700/80 hover:bg-orange-600 rounded-lg text-xs transition-colors inline-flex items-center gap-1">
+                        <i class="fas fa-external-link-alt text-xs"></i>Visit
                     </a>
                 </td>
             </tr>`;
         }).join('');
-
         document.getElementById('restRowCount').textContent = filteredRestArticles.length;
     }
 
     function downloadRestCSV() {
-        if (filteredRestArticles.length === 0) return;
-        const headers = ['date','title','address','url'];
-        const rows = filteredRestArticles.map(r =>
-            headers.map(h => `"${(r[h] || '').replace(/"/g, '""')}"`).join(',')
-        );
-        const csv  = [headers.join(','), ...rows].join('\n');
-        const a    = document.createElement('a');
-        a.href     = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8;' }));
-        a.download = `restaurant_news_${new Date().toISOString().split('T')[0]}.csv`;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
+        if (!filteredRestArticles.length) return;
+        const h = ['date','title','address','url'];
+        const csv = [h.join(','), ...filteredRestArticles.map(r => h.map(k => `"${(r[k]||'').replace(/"/g,'""')}"`).join(','))].join('\n');
+        dlCSV(csv, `restaurant_news_${TODAY}.csv`);
+        showToast('Restaurant CSV downloaded!');
     }
 
-    // ── CT Scoop Sub-tab Switcher ─────────────────────────────────
+    // ══════════════ CT SCOOP SUB-TAB ══════════════
     function switchScoopSubTab(subTab) {
         activeScoopSubTab = subTab;
-        const articlesDiv   = document.getElementById('scoopArticlesSubTab');
-        const extractionDiv = document.getElementById('scoopExtractionSubTab');
-        const articlesBtn   = document.getElementById('subTabArticlesBtn');
-        const extractionBtn = document.getElementById('subTabExtractionBtn');
-
-        if (subTab === 'articles') {
-            articlesDiv.classList.remove('hidden');
-            extractionDiv.classList.add('hidden');
-            articlesBtn.classList.add('bg-slate-800', 'text-white', 'shadow');
-            articlesBtn.classList.remove('text-gray-300');
-            extractionBtn.classList.remove('bg-slate-800', 'text-white', 'shadow');
-            extractionBtn.classList.add('text-gray-300');
-            if (scoopArticles.length === 0) loadScoopData();
-        } else {
-            extractionDiv.classList.remove('hidden');
-            articlesDiv.classList.add('hidden');
-            extractionBtn.classList.add('bg-slate-800', 'text-white', 'shadow');
-            extractionBtn.classList.remove('text-gray-300');
-            articlesBtn.classList.remove('bg-slate-800', 'text-white', 'shadow');
-            articlesBtn.classList.add('text-gray-300');
-            if (extractionRows.length === 0) loadScoopExtractionData();
-        }
+        toggleSubTab('scoopArticlesSubTab', 'scoopExtractionSubTab', 'subTabArticlesBtn', 'subTabExtractionBtn', subTab === 'articles');
+        if (subTab === 'articles' && scoopArticles.length === 0) loadScoopData();
+        if (subTab === 'extraction' && extractionRows.length === 0) loadScoopExtractionData();
     }
 
-    // ── CT Scoop Extraction ───────────────────────────────────────
+    // ══════════════ CT SCOOP EXTRACTION ══════════════
     async function loadScoopExtractionData() {
         try {
             document.getElementById('extLoadingState').classList.remove('hidden');
             document.getElementById('extTableContainer').classList.add('hidden');
             document.getElementById('extEmptyState').classList.add('hidden');
             document.getElementById('extStatsContainer').style.display = 'none';
-
             const res = await fetch(SCOOP_EXTRACTION_URL + '?t=' + Date.now());
             if (!res.ok) throw new Error('fetch failed');
             const data = await res.json();
-
             document.getElementById('extLastUpdated').textContent = data.last_updated || '—';
-            extractionRows = (data.data || []);
+            extractionRows = data.data || [];
             filteredExtractionRows = [...extractionRows];
             updateExtStats(filteredExtractionRows);
             renderExtractionTable();
             document.getElementById('extLoadingState').classList.add('hidden');
         } catch (err) {
-            console.error('Extraction load error:', err);
+            console.error(err);
             document.getElementById('extLoadingState').classList.add('hidden');
             document.getElementById('extEmptyState').classList.remove('hidden');
         }
     }
 
     function updateExtStats(rows) {
-        const total    = rows.filter(r => r.store_name !== 'No qualifying business found').length;
-        const openings = rows.filter(r => r.event_type === 'Opening').length;
-        const closings = rows.filter(r => r.event_type === 'Closing').length;
-        document.getElementById('extTotal').textContent    = total;
-        document.getElementById('extOpenings').textContent = openings;
-        document.getElementById('extClosings').textContent = closings;
+        const valid = rows.filter(r => r.store_name !== 'No qualifying business found');
+        setCount('extTotal', valid.length);
+        setCount('extOpenings', rows.filter(r => r.event_type === 'Opening').length);
+        setCount('extClosings', rows.filter(r => r.event_type === 'Closing').length);
         document.getElementById('extStatsContainer').style.display = rows.length ? 'grid' : 'none';
     }
 
@@ -1414,149 +1298,68 @@
         const term = document.getElementById('extSearchInput').value.toLowerCase();
         const type = document.getElementById('extTypeFilter').value;
         filteredExtractionRows = extractionRows.filter(r => {
-            const matchSearch = !term ||
-                (r.store_name         || '').toLowerCase().includes(term) ||
-                (r.location           || '').toLowerCase().includes(term) ||
-                (r.short_description  || '').toLowerCase().includes(term) ||
-                (r.status             || '').toLowerCase().includes(term);
-            const matchType = type === 'all' || r.event_type === type;
-            return matchSearch && matchType;
+            const ms = !term || ['store_name','location','short_description','status'].some(k => (r[k]||'').toLowerCase().includes(term));
+            return ms && (type === 'all' || r.event_type === type);
         });
         updateExtStats(filteredExtractionRows);
         renderExtractionTable();
     }
 
     function renderExtractionTable() {
-        const tbody     = document.getElementById('extTableBody');
-        const container = document.getElementById('extTableContainer');
-
-        if (filteredExtractionRows.length === 0) {
+        const tbody = document.getElementById('extTableBody'), container = document.getElementById('extTableContainer');
+        const term = document.getElementById('extSearchInput').value.toLowerCase();
+        if (!filteredExtractionRows.length) {
             container.classList.add('hidden');
             document.getElementById('extEmptyState').classList.remove('hidden');
             return;
         }
         document.getElementById('extEmptyState').classList.add('hidden');
         container.classList.remove('hidden');
-
-        tbody.innerHTML = filteredExtractionRows.map((r, i) => {
-            const isOpening = r.event_type === 'Opening';
-            const isClosing = r.event_type === 'Closing';
-            const noData    = r.store_name === 'No qualifying business found';
-
-            const typeBadge = noData
-                ? `<span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-gray-400">N/A</span>`
-                : isOpening
-                ? `<span class="badge-opening px-2 py-1 rounded-full text-xs font-semibold text-white"><i class="fas fa-arrow-up mr-1"></i>Opening</span>`
-                : isClosing
-                ? `<span class="badge-closing px-2 py-1 rounded-full text-xs font-semibold text-white"><i class="fas fa-arrow-down mr-1"></i>Closing</span>`
-                : `<span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-gray-400">${escapeHtml(r.event_type || 'N/A')}</span>`;
-
-            const linkCell = (r.article_link && r.article_link !== 'N/A')
-                ? `<a href="${escapeHtml(r.article_link)}" target="_blank" rel="noopener noreferrer"
-                      class="px-3 py-1 bg-slate-700 hover:bg-blue-600 rounded-lg text-xs transition-colors inline-flex items-center gap-1 whitespace-nowrap">
-                       <i class="fas fa-external-link-alt"></i> Visit
-                   </a>`
-                : `<span class="text-gray-600 text-xs">—</span>`;
-
-            return `
-            <tr class="hover:bg-slate-700/30 transition-colors ${i % 2 === 0 ? '' : 'bg-slate-800/20'} ${noData ? 'opacity-50' : ''}">
-                <td class="px-3 py-3 text-gray-500 text-xs font-semibold whitespace-nowrap">${i + 1}</td>
-                <td class="px-3 py-3 font-medium text-white max-w-[140px]">
-                    <span class="line-clamp-2 block" title="${escapeHtml(r.store_name || '')}">${escapeHtml(r.store_name || '—')}</span>
-                </td>
-                <td class="px-3 py-3 text-gray-300 text-xs max-w-[160px]">
-                    <span class="line-clamp-2 block" title="${escapeHtml(r.location || '')}">${escapeHtml(r.location || '—')}</span>
-                </td>
-                <td class="px-3 py-3 whitespace-nowrap">${typeBadge}</td>
-                <td class="px-3 py-3 text-gray-300 text-xs max-w-[160px] break-words">${escapeHtml(r.event_date || '—')}</td>
-                <td class="px-3 py-3 text-gray-300 text-xs max-w-[180px] break-words" title="${escapeHtml(r.status || '')}">
-                    <span class="line-clamp-2 block">${escapeHtml(r.status || '—')}</span>
-                </td>
-                <td class="px-3 py-3 text-gray-400 text-xs max-w-[220px]">
-                    <span class="line-clamp-3 block" title="${escapeHtml(r.short_description || '')}">${escapeHtml(r.short_description || '—')}</span>
-                </td>
-                <td class="px-3 py-3">${linkCell}</td>
-            </tr>`;
-        }).join('');
-
+        tbody.innerHTML = filteredExtractionRows.map((r, i) => buildExtractionRow(r, i, term, 'blue')).join('');
         document.getElementById('extRowCount').textContent = filteredExtractionRows.length;
     }
 
     function downloadExtractionCSV() {
-        if (filteredExtractionRows.length === 0) return;
-        const headers = ['store_name','location','event_type','event_date','status','short_description','article_link'];
-        const headerLabels = ['Store/Restaurant Name','Location or Full Address','Event Type','Event Date','Status','Short Description','Article Link'];
-        const rows = filteredExtractionRows.map(r =>
-            headers.map(h => `"${(r[h] || '').replace(/"/g, '""')}"`).join(',')
-        );
-        const csv = [headerLabels.join(','), ...rows].join('\n');
-        const a   = document.createElement('a');
-        a.href    = URL.createObjectURL(new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8;' }));
-        a.download = `ct_scoop_extraction_${new Date().toISOString().split('T')[0]}.csv`;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
+        if (!filteredExtractionRows.length) return;
+        csvDownloadExtraction(filteredExtractionRows, `ct_scoop_extraction_${TODAY}.csv`);
+        showToast('CT Scoop Extraction CSV downloaded!');
     }
 
-    // ── Restaurant Sub-tab Switcher ───────────────────────────────
+    // ══════════════ RESTAURANT SUB-TAB ══════════════
     function switchRestSubTab(subTab) {
         activeRestSubTab = subTab;
-        const articlesDiv   = document.getElementById('restArticlesSubTab');
-        const extractionDiv = document.getElementById('restExtractionSubTab');
-        const articlesBtn   = document.getElementById('restSubTabArticlesBtn');
-        const extractionBtn = document.getElementById('restSubTabExtractionBtn');
-
-        if (subTab === 'articles') {
-            articlesDiv.classList.remove('hidden');
-            extractionDiv.classList.add('hidden');
-            articlesBtn.classList.add('bg-slate-800', 'text-white', 'shadow');
-            articlesBtn.classList.remove('text-gray-300');
-            extractionBtn.classList.remove('bg-slate-800', 'text-white', 'shadow');
-            extractionBtn.classList.add('text-gray-300');
-            if (restArticles.length === 0) loadRestData();
-        } else {
-            extractionDiv.classList.remove('hidden');
-            articlesDiv.classList.add('hidden');
-            extractionBtn.classList.add('bg-slate-800', 'text-white', 'shadow');
-            extractionBtn.classList.remove('text-gray-300');
-            articlesBtn.classList.remove('bg-slate-800', 'text-white', 'shadow');
-            articlesBtn.classList.add('text-gray-300');
-            if (restExtractionRows.length === 0) loadRestExtractionData();
-        }
+        toggleSubTab('restArticlesSubTab', 'restExtractionSubTab', 'restSubTabArticlesBtn', 'restSubTabExtractionBtn', subTab === 'articles');
+        if (subTab === 'articles' && restArticles.length === 0) loadRestData();
+        if (subTab === 'extraction' && restExtractionRows.length === 0) loadRestExtractionData();
     }
 
-    // ── Restaurant Extraction ─────────────────────────────────────
+    // ══════════════ RESTAURANT EXTRACTION ══════════════
     async function loadRestExtractionData() {
         try {
             document.getElementById('restExtLoadingState').classList.remove('hidden');
             document.getElementById('restExtTableContainer').classList.add('hidden');
             document.getElementById('restExtEmptyState').classList.add('hidden');
             document.getElementById('restExtStatsContainer').style.display = 'none';
-
             const res = await fetch(REST_EXTRACTION_URL + '?t=' + Date.now());
             if (!res.ok) throw new Error('fetch failed');
             const data = await res.json();
-
             document.getElementById('restExtLastUpdated').textContent = data.last_updated || '—';
-            restExtractionRows = (data.data || []);
+            restExtractionRows = data.data || [];
             filteredRestExtractionRows = [...restExtractionRows];
             updateRestExtStats(filteredRestExtractionRows);
             renderRestExtractionTable();
             document.getElementById('restExtLoadingState').classList.add('hidden');
         } catch (err) {
-            console.error('Rest extraction load error:', err);
+            console.error(err);
             document.getElementById('restExtLoadingState').classList.add('hidden');
             document.getElementById('restExtEmptyState').classList.remove('hidden');
         }
     }
 
     function updateRestExtStats(rows) {
-        const total    = rows.filter(r => r.store_name !== 'No qualifying business found').length;
-        const openings = rows.filter(r => r.event_type === 'Opening').length;
-        const closings = rows.filter(r => r.event_type === 'Closing').length;
-        document.getElementById('restExtTotal').textContent    = total;
-        document.getElementById('restExtOpenings').textContent = openings;
-        document.getElementById('restExtClosings').textContent = closings;
+        setCount('restExtTotal', rows.filter(r => r.store_name !== 'No qualifying business found').length);
+        setCount('restExtOpenings', rows.filter(r => r.event_type === 'Opening').length);
+        setCount('restExtClosings', rows.filter(r => r.event_type === 'Closing').length);
         document.getElementById('restExtStatsContainer').style.display = rows.length ? 'grid' : 'none';
     }
 
@@ -1564,261 +1367,163 @@
         const term = document.getElementById('restExtSearchInput').value.toLowerCase();
         const type = document.getElementById('restExtTypeFilter').value;
         filteredRestExtractionRows = restExtractionRows.filter(r => {
-            const matchSearch = !term ||
-                (r.store_name        || '').toLowerCase().includes(term) ||
-                (r.location          || '').toLowerCase().includes(term) ||
-                (r.short_description || '').toLowerCase().includes(term) ||
-                (r.status            || '').toLowerCase().includes(term);
-            const matchType = type === 'all' || r.event_type === type;
-            return matchSearch && matchType;
+            const ms = !term || ['store_name','location','short_description','status'].some(k => (r[k]||'').toLowerCase().includes(term));
+            return ms && (type === 'all' || r.event_type === type);
         });
         updateRestExtStats(filteredRestExtractionRows);
         renderRestExtractionTable();
     }
 
     function renderRestExtractionTable() {
-        const tbody     = document.getElementById('restExtTableBody');
-        const container = document.getElementById('restExtTableContainer');
-
-        if (filteredRestExtractionRows.length === 0) {
+        const tbody = document.getElementById('restExtTableBody'), container = document.getElementById('restExtTableContainer');
+        const term = document.getElementById('restExtSearchInput').value.toLowerCase();
+        if (!filteredRestExtractionRows.length) {
             container.classList.add('hidden');
             document.getElementById('restExtEmptyState').classList.remove('hidden');
             return;
         }
         document.getElementById('restExtEmptyState').classList.add('hidden');
         container.classList.remove('hidden');
-
-        tbody.innerHTML = filteredRestExtractionRows.map((r, i) => {
-            const isOpening = r.event_type === 'Opening';
-            const isClosing = r.event_type === 'Closing';
-            const noData    = r.store_name === 'No qualifying business found';
-
-            const typeBadge = noData
-                ? `<span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-gray-400">N/A</span>`
-                : isOpening
-                ? `<span class="badge-opening px-2 py-1 rounded-full text-xs font-semibold text-white"><i class="fas fa-arrow-up mr-1"></i>Opening</span>`
-                : isClosing
-                ? `<span class="badge-closing px-2 py-1 rounded-full text-xs font-semibold text-white"><i class="fas fa-arrow-down mr-1"></i>Closing</span>`
-                : `<span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-gray-400">${escapeHtml(r.event_type || 'N/A')}</span>`;
-
-            const linkCell = (r.article_link && r.article_link !== 'N/A')
-                ? `<a href="${escapeHtml(r.article_link)}" target="_blank" rel="noopener noreferrer"
-                      class="px-3 py-1 bg-slate-700 hover:bg-orange-600 rounded-lg text-xs transition-colors inline-flex items-center gap-1 whitespace-nowrap">
-                       <i class="fas fa-external-link-alt"></i> Visit
-                   </a>`
-                : `<span class="text-gray-600 text-xs">—</span>`;
-
-            return `
-            <tr class="hover:bg-slate-700/30 transition-colors ${i % 2 === 0 ? '' : 'bg-slate-800/20'} ${noData ? 'opacity-50' : ''}">
-                <td class="px-3 py-3 text-gray-500 text-xs font-semibold whitespace-nowrap">${i + 1}</td>
-                <td class="px-3 py-3 font-medium text-white max-w-[140px]">
-                    <span class="line-clamp-2 block" title="${escapeHtml(r.store_name || '')}">${escapeHtml(r.store_name || '—')}</span>
-                </td>
-                <td class="px-3 py-3 text-gray-300 text-xs max-w-[160px]">
-                    <span class="line-clamp-2 block" title="${escapeHtml(r.location || '')}">${escapeHtml(r.location || '—')}</span>
-                </td>
-                <td class="px-3 py-3 whitespace-nowrap">${typeBadge}</td>
-                <td class="px-3 py-3 text-gray-300 text-xs max-w-[160px] break-words">${escapeHtml(r.event_date || '—')}</td>
-                <td class="px-3 py-3 text-gray-300 text-xs max-w-[180px] break-words" title="${escapeHtml(r.status || '')}">
-                    <span class="line-clamp-2 block">${escapeHtml(r.status || '—')}</span>
-                </td>
-                <td class="px-3 py-3 text-gray-400 text-xs max-w-[220px]">
-                    <span class="line-clamp-3 block" title="${escapeHtml(r.short_description || '')}">${escapeHtml(r.short_description || '—')}</span>
-                </td>
-                <td class="px-3 py-3">${linkCell}</td>
-            </tr>`;
-        }).join('');
-
+        tbody.innerHTML = filteredRestExtractionRows.map((r, i) => buildExtractionRow(r, i, term, 'orange')).join('');
         document.getElementById('restExtRowCount').textContent = filteredRestExtractionRows.length;
     }
 
     function downloadRestExtractionCSV() {
-        if (filteredRestExtractionRows.length === 0) return;
-        const headers = ['store_name','location','event_type','event_date','status','short_description','article_link'];
-        const labels  = ['Store/Restaurant Name','Location or Full Address','Event Type','Event Date','Status','Short Description','Article Link'];
-        const rows = filteredRestExtractionRows.map(r =>
-            headers.map(h => `"${(r[h] || '').replace(/"/g, '""')}"`).join(',')
-        );
-        const csv = [labels.join(','), ...rows].join('\n');
-        const a   = document.createElement('a');
-        a.href    = URL.createObjectURL(new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8;' }));
-        a.download = `restaurant_extraction_${new Date().toISOString().split('T')[0]}.csv`;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
+        if (!filteredRestExtractionRows.length) return;
+        csvDownloadExtraction(filteredRestExtractionRows, `restaurant_extraction_${TODAY}.csv`);
+        showToast('Restaurant Extraction CSV downloaded!');
     }
 
-    // ── Business Debut Sub-tab Switcher ──────────────────────────
+    // ══════════════ BIZ DEBUT SUB-TAB ══════════════
     function switchBizSubTab(subTab) {
         activeBizSubTab = subTab;
-        const articlesDiv   = document.getElementById('bizArticlesSubTab');
-        const extractionDiv = document.getElementById('bizExtractionSubTab');
-        const articlesBtn   = document.getElementById('bizSubTabArticlesBtn');
-        const extractionBtn = document.getElementById('bizSubTabExtractionBtn');
-
-        if (subTab === 'articles') {
-            articlesDiv.classList.remove('hidden');
-            extractionDiv.classList.add('hidden');
-            articlesBtn.classList.add('bg-slate-800', 'text-white', 'shadow');
-            articlesBtn.classList.remove('text-gray-300');
-            extractionBtn.classList.remove('bg-slate-800', 'text-white', 'shadow');
-            extractionBtn.classList.add('text-gray-300');
-            if (bizArticles.length === 0) loadBizData();
-        } else {
-            extractionDiv.classList.remove('hidden');
-            articlesDiv.classList.add('hidden');
-            extractionBtn.classList.add('bg-slate-800', 'text-white', 'shadow');
-            extractionBtn.classList.remove('text-gray-300');
-            articlesBtn.classList.remove('bg-slate-800', 'text-white', 'shadow');
-            articlesBtn.classList.add('text-gray-300');
-            if (bizExtractionRows.length === 0) loadBizExtractionData();
-        }
+        toggleSubTab('bizArticlesSubTab', 'bizExtractionSubTab', 'bizSubTabArticlesBtn', 'bizSubTabExtractionBtn', subTab === 'articles');
+        if (subTab === 'articles' && bizArticles.length === 0) loadBizData();
+        if (subTab === 'extraction' && bizExtractionRows.length === 0) loadBizExtractionData();
     }
 
-    // ── Business Debut Articles ───────────────────────────────────
+    // ══════════════ BIZ DEBUT ARTICLES ══════════════
     async function loadBizData() {
         try {
             document.getElementById('bizLoadingState').classList.remove('hidden');
             document.getElementById('bizArticlesContainer').classList.add('hidden');
             document.getElementById('bizEmptyState').classList.add('hidden');
             document.getElementById('bizStatsContainer').style.display = 'none';
-
-            const response = await fetch(BIZ_JSON_URL + '?t=' + Date.now());
-            if (!response.ok) throw new Error('Failed to fetch Business Debut data');
-
-            const data = await response.json();
+            const res = await fetch(BIZ_JSON_URL + '?t=' + Date.now());
+            if (!res.ok) throw new Error('fetch failed');
+            const data = await res.json();
             document.getElementById('updateDate').textContent = data.last_updated || 'Unknown';
-
             bizArticles = (data.data || []).map(item => ({
                 title: item.title || item.Title || '',
                 date:  item.date  || item.Date  || '',
                 link:  item.link  || item.Link  || ''
             }));
-
             filteredBizArticles = bizArticles;
             updateBizStats(filteredBizArticles);
             renderBizArticles();
+            updateNavTotal();
             document.getElementById('bizLoadingState').classList.add('hidden');
-        } catch (error) {
-            console.error('Error loading Business Debut data:', error);
+        } catch (err) {
+            console.error(err);
             document.getElementById('bizLoadingState').classList.add('hidden');
             document.getElementById('bizEmptyState').classList.remove('hidden');
         }
     }
 
     function updateBizStats(articles) {
-        document.getElementById('bizTotalArticles').textContent = articles.length;
+        setCount('bizTotalArticles', articles.length);
         document.getElementById('bizStatsContainer').style.display = articles.length ? 'grid' : 'none';
     }
 
     function filterBizArticles() {
         const term = document.getElementById('bizSearchInput').value.toLowerCase();
-        filteredBizArticles = bizArticles.filter(article =>
-            !term || (article.title || '').toLowerCase().includes(term)
-        );
+        filteredBizArticles = bizArticles.filter(a => !term || (a.title||'').toLowerCase().includes(term));
         updateBizStats(filteredBizArticles);
         renderBizArticles();
     }
 
     function downloadBizCSV() {
-        if (filteredBizArticles.length === 0) return;
-        const headers = ['date', 'title', 'link'];
-        const rows = filteredBizArticles.map(r =>
-            headers.map(h => `"${(r[h] || '').replace(/"/g, '""')}"`).join(',')
-        );
-        const csv  = [headers.join(','), ...rows].join('\n');
-        const a    = document.createElement('a');
-        a.href     = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8;' }));
-        a.download = `businessdebut_${new Date().toISOString().split('T')[0]}.csv`;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
+        if (!filteredBizArticles.length) return;
+        const h = ['date','title','link'];
+        const csv = [h.join(','), ...filteredBizArticles.map(r => h.map(k => `"${(r[k]||'').replace(/"/g,'""')}"`).join(','))].join('\n');
+        dlCSV(csv, `businessdebut_${TODAY}.csv`);
+        showToast('Business Debut CSV downloaded!');
     }
 
     function renderBizArticles() {
         const container = document.getElementById('bizArticlesContainer');
-        if (filteredBizArticles.length === 0) {
+        const term = document.getElementById('bizSearchInput').value.toLowerCase();
+        if (!filteredBizArticles.length) {
             container.classList.add('hidden');
             document.getElementById('bizEmptyState').classList.remove('hidden');
             return;
         }
         document.getElementById('bizEmptyState').classList.add('hidden');
         container.classList.remove('hidden');
-        container.innerHTML = '';
-
         const grid = document.createElement('div');
-        grid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6';
-        filteredBizArticles.forEach(article => {
-            const wrapper = document.createElement('div');
-            wrapper.innerHTML = createBizCard(article);
-            if (wrapper.firstElementChild) grid.appendChild(wrapper.firstElementChild);
+        grid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5';
+        filteredBizArticles.forEach(a => {
+            const w = document.createElement('div');
+            w.innerHTML = createBizCard(a, term);
+            if (w.firstElementChild) grid.appendChild(w.firstElementChild);
         });
+        container.innerHTML = '';
         container.appendChild(grid);
     }
 
-    function createBizCard(article) {
+    function createBizCard(article, term = '') {
         let dateText = article.date || 'Date not available';
         try {
-            const dt = new Date(dateText);
-            if (!isNaN(dt.getTime())) {
-                dateText = dt.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
-            }
-        } catch (e) {}
-
+            const d = new Date(dateText);
+            if (!isNaN(d.getTime())) dateText = d.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' });
+        } catch {}
+        const newBadge = isNew(article.date) ? `<span class="badge-new ml-2"><i class="fas fa-star" style="font-size:0.5rem"></i>New</span>` : '';
         return `
-            <div class="card-hover bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-indigo-500/50">
-                <div class="flex items-start justify-between mb-3">
-                    <span class="px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center space-x-1" style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); box-shadow: 0 4px 14px 0 rgba(99,102,241,0.3);">
-                        <i class="fas fa-briefcase"></i>
-                        <span>Business</span>
-                    </span>
+            <div class="glass-card card-accent-indigo rounded-2xl p-5">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="px-3 py-1 rounded-full text-xs font-bold text-white flex items-center gap-1"
+                          style="background:linear-gradient(135deg,#6366f1,#4f46e5);box-shadow:0 4px 14px rgba(99,102,241,0.35)">
+                        <i class="fas fa-briefcase text-xs"></i>Business
+                    </span>${newBadge}
                 </div>
-                <h3 class="font-bold text-lg mb-3 text-white">${escapeHtml(article.title || '')}</h3>
-                <a href="${escapeHtml(article.link || '#')}" target="_blank" rel="noopener noreferrer"
-                   class="text-indigo-400 hover:text-indigo-300 font-medium mb-3 block line-clamp-2">
-                    View full story
-                    <i class="fas fa-external-link-alt text-xs ml-1"></i>
+                <h3 class="font-bold text-base mb-3 text-white leading-snug">${highlight(article.title||'', term)}</h3>
+                <a href="${escapeHtml(article.link||'#')}" target="_blank" rel="noopener noreferrer"
+                   class="text-indigo-400 hover:text-indigo-300 text-sm font-medium mb-3 block transition-colors">
+                    View full story <i class="fas fa-external-link-alt text-xs ml-1 opacity-60"></i>
                 </a>
-                <div class="flex items-center text-gray-400 text-sm mt-2">
-                    <i class="fas fa-calendar-alt mr-2"></i>
-                    <span>${escapeHtml(dateText)}</span>
+                <div class="flex items-center text-gray-500 text-xs">
+                    <i class="fas fa-calendar-alt mr-1.5 text-gray-600"></i>${escapeHtml(dateText)}
                 </div>
-            </div>
-        `;
+            </div>`;
     }
 
-    // ── Business Debut Extraction ─────────────────────────────────
+    // ══════════════ BIZ EXTRACTION ══════════════
     async function loadBizExtractionData() {
         try {
             document.getElementById('bizExtLoadingState').classList.remove('hidden');
             document.getElementById('bizExtTableContainer').classList.add('hidden');
             document.getElementById('bizExtEmptyState').classList.add('hidden');
             document.getElementById('bizExtStatsContainer').style.display = 'none';
-
             const res = await fetch(BIZ_EXTRACTION_URL + '?t=' + Date.now());
             if (!res.ok) throw new Error('fetch failed');
             const data = await res.json();
-
             document.getElementById('bizExtLastUpdated').textContent = data.last_updated || '—';
-            bizExtractionRows = (data.data || []);
+            bizExtractionRows = data.data || [];
             filteredBizExtractionRows = [...bizExtractionRows];
             updateBizExtStats(filteredBizExtractionRows);
             renderBizExtractionTable();
             document.getElementById('bizExtLoadingState').classList.add('hidden');
         } catch (err) {
-            console.error('Biz extraction load error:', err);
+            console.error(err);
             document.getElementById('bizExtLoadingState').classList.add('hidden');
             document.getElementById('bizExtEmptyState').classList.remove('hidden');
         }
     }
 
     function updateBizExtStats(rows) {
-        const total    = rows.filter(r => r.store_name !== 'No qualifying business found').length;
-        const openings = rows.filter(r => r.event_type === 'Opening').length;
-        const closings = rows.filter(r => r.event_type === 'Closing').length;
-        document.getElementById('bizExtTotal').textContent    = total;
-        document.getElementById('bizExtOpenings').textContent = openings;
-        document.getElementById('bizExtClosings').textContent = closings;
+        setCount('bizExtTotal', rows.filter(r => r.store_name !== 'No qualifying business found').length);
+        setCount('bizExtOpenings', rows.filter(r => r.event_type === 'Opening').length);
+        setCount('bizExtClosings', rows.filter(r => r.event_type === 'Closing').length);
         document.getElementById('bizExtStatsContainer').style.display = rows.length ? 'grid' : 'none';
     }
 
@@ -1826,127 +1531,130 @@
         const term = document.getElementById('bizExtSearchInput').value.toLowerCase();
         const type = document.getElementById('bizExtTypeFilter').value;
         filteredBizExtractionRows = bizExtractionRows.filter(r => {
-            const matchSearch = !term ||
-                (r.store_name        || '').toLowerCase().includes(term) ||
-                (r.location          || '').toLowerCase().includes(term) ||
-                (r.short_description || '').toLowerCase().includes(term) ||
-                (r.status            || '').toLowerCase().includes(term);
-            const matchType = type === 'all' || r.event_type === type;
-            return matchSearch && matchType;
+            const ms = !term || ['store_name','location','short_description','status'].some(k => (r[k]||'').toLowerCase().includes(term));
+            return ms && (type === 'all' || r.event_type === type);
         });
         updateBizExtStats(filteredBizExtractionRows);
         renderBizExtractionTable();
     }
 
     function renderBizExtractionTable() {
-        const tbody     = document.getElementById('bizExtTableBody');
-        const container = document.getElementById('bizExtTableContainer');
-
-        if (filteredBizExtractionRows.length === 0) {
+        const tbody = document.getElementById('bizExtTableBody'), container = document.getElementById('bizExtTableContainer');
+        const term = document.getElementById('bizExtSearchInput').value.toLowerCase();
+        if (!filteredBizExtractionRows.length) {
             container.classList.add('hidden');
             document.getElementById('bizExtEmptyState').classList.remove('hidden');
             return;
         }
         document.getElementById('bizExtEmptyState').classList.add('hidden');
         container.classList.remove('hidden');
-
-        tbody.innerHTML = filteredBizExtractionRows.map((r, i) => {
-            const isOpening = r.event_type === 'Opening';
-            const isClosing = r.event_type === 'Closing';
-            const noData    = r.store_name === 'No qualifying business found';
-
-            const typeBadge = noData
-                ? `<span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-gray-400">N/A</span>`
-                : isOpening
-                ? `<span class="badge-opening px-2 py-1 rounded-full text-xs font-semibold text-white"><i class="fas fa-arrow-up mr-1"></i>Opening</span>`
-                : isClosing
-                ? `<span class="badge-closing px-2 py-1 rounded-full text-xs font-semibold text-white"><i class="fas fa-arrow-down mr-1"></i>Closing</span>`
-                : `<span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-gray-400">${escapeHtml(r.event_type || 'N/A')}</span>`;
-
-            const linkCell = (r.article_link && r.article_link !== 'N/A')
-                ? `<a href="${escapeHtml(r.article_link)}" target="_blank" rel="noopener noreferrer"
-                      class="px-3 py-1 bg-slate-700 hover:bg-indigo-600 rounded-lg text-xs transition-colors inline-flex items-center gap-1 whitespace-nowrap">
-                       <i class="fas fa-external-link-alt"></i> Visit
-                   </a>`
-                : `<span class="text-gray-600 text-xs">—</span>`;
-
-            return `
-            <tr class="hover:bg-slate-700/30 transition-colors ${i % 2 === 0 ? '' : 'bg-slate-800/20'} ${noData ? 'opacity-50' : ''}">
-                <td class="px-3 py-3 text-gray-500 text-xs font-semibold whitespace-nowrap">${i + 1}</td>
-                <td class="px-3 py-3 font-medium text-white max-w-[140px]">
-                    <span class="line-clamp-2 block" title="${escapeHtml(r.store_name || '')}">${escapeHtml(r.store_name || '—')}</span>
-                </td>
-                <td class="px-3 py-3 text-gray-300 text-xs max-w-[160px]">
-                    <span class="line-clamp-2 block" title="${escapeHtml(r.location || '')}">${escapeHtml(r.location || '—')}</span>
-                </td>
-                <td class="px-3 py-3 whitespace-nowrap">${typeBadge}</td>
-                <td class="px-3 py-3 text-gray-300 text-xs max-w-[160px] break-words">${escapeHtml(r.event_date || '—')}</td>
-                <td class="px-3 py-3 text-gray-300 text-xs max-w-[180px] break-words" title="${escapeHtml(r.status || '')}">
-                    <span class="line-clamp-2 block">${escapeHtml(r.status || '—')}</span>
-                </td>
-                <td class="px-3 py-3 text-gray-400 text-xs max-w-[220px]">
-                    <span class="line-clamp-3 block" title="${escapeHtml(r.short_description || '')}">${escapeHtml(r.short_description || '—')}</span>
-                </td>
-                <td class="px-3 py-3">${linkCell}</td>
-            </tr>`;
-        }).join('');
-
+        tbody.innerHTML = filteredBizExtractionRows.map((r, i) => buildExtractionRow(r, i, term, 'indigo')).join('');
         document.getElementById('bizExtRowCount').textContent = filteredBizExtractionRows.length;
     }
 
     function downloadBizExtractionCSV() {
-        if (filteredBizExtractionRows.length === 0) return;
-        const headers = ['store_name','location','event_type','event_date','status','short_description','article_link'];
-        const labels  = ['Store/Restaurant Name','Location or Full Address','Event Type','Event Date','Status','Short Description','Article Link'];
-        const rows = filteredBizExtractionRows.map(r =>
-            headers.map(h => `"${(r[h] || '').replace(/"/g, '""')}"`).join(',')
-        );
-        const csv = [labels.join(','), ...rows].join('\n');
-        const a   = document.createElement('a');
-        a.href    = URL.createObjectURL(new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8;' }));
-        a.download = `businessdebut_extraction_${new Date().toISOString().split('T')[0]}.csv`;
+        if (!filteredBizExtractionRows.length) return;
+        csvDownloadExtraction(filteredBizExtractionRows, `businessdebut_extraction_${TODAY}.csv`);
+        showToast('Business Debut Extraction CSV downloaded!');
+    }
+
+    // ══════════════ SHARED HELPERS ══════════════
+    function buildExtractionRow(r, i, term, accentColor) {
+        const isOpening = r.event_type === 'Opening';
+        const isClosing = r.event_type === 'Closing';
+        const noData    = r.store_name === 'No qualifying business found';
+        const hoverColor = { blue: 'hover:bg-blue-600', orange: 'hover:bg-orange-600', indigo: 'hover:bg-indigo-600' }[accentColor] || 'hover:bg-blue-600';
+
+        const typeBadge = noData
+            ? `<span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-gray-500">N/A</span>`
+            : isOpening
+            ? `<span class="badge-opening px-2 py-1 rounded-full text-xs font-bold text-white"><i class="fas fa-arrow-up mr-1 text-xs"></i>Opening</span>`
+            : isClosing
+            ? `<span class="badge-closing px-2 py-1 rounded-full text-xs font-bold text-white"><i class="fas fa-arrow-down mr-1 text-xs"></i>Closing</span>`
+            : `<span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-gray-400">${escapeHtml(r.event_type||'N/A')}</span>`;
+
+        const linkCell = (r.article_link && r.article_link !== 'N/A')
+            ? `<a href="${escapeHtml(r.article_link)}" target="_blank" rel="noopener noreferrer"
+                  class="px-2.5 py-1.5 bg-slate-700/80 ${hoverColor} rounded-lg text-xs transition-colors inline-flex items-center gap-1">
+                   <i class="fas fa-external-link-alt text-xs"></i>Visit
+               </a>`
+            : `<span class="text-gray-600 text-xs">—</span>`;
+
+        return `
+        <tr class="${noData ? 'opacity-40' : ''}">
+            <td class="px-3 py-3 text-gray-600 text-xs font-semibold">${i+1}</td>
+            <td class="px-3 py-3 max-w-[140px]">
+                <span class="font-medium text-white text-sm line-clamp-2 block" title="${escapeHtml(r.store_name||'')}">${highlight(r.store_name||'—', term)}</span>
+            </td>
+            <td class="px-3 py-3 max-w-[160px]">
+                <span class="text-gray-400 text-xs line-clamp-2 block" title="${escapeHtml(r.location||'')}">${highlight(r.location||'—', term)}</span>
+            </td>
+            <td class="px-3 py-3">${typeBadge}</td>
+            <td class="px-3 py-3 text-gray-400 text-xs">${escapeHtml(r.event_date||'—')}</td>
+            <td class="px-3 py-3 max-w-[180px]" title="${escapeHtml(r.status||'')}">
+                <span class="text-gray-400 text-xs line-clamp-2 block">${highlight(r.status||'—', term)}</span>
+            </td>
+            <td class="px-3 py-3 max-w-[220px]" title="${escapeHtml(r.short_description||'')}">
+                <span class="text-gray-500 text-xs line-clamp-3 block">${highlight(r.short_description||'—', term)}</span>
+            </td>
+            <td class="px-3 py-3">${linkCell}</td>
+        </tr>`;
+    }
+
+    function toggleSubTab(artId, extId, artBtnId, extBtnId, showArticles) {
+        document.getElementById(artId).classList.toggle('hidden', !showArticles);
+        document.getElementById(extId).classList.toggle('hidden', showArticles);
+        document.getElementById(artBtnId).classList.toggle('active', showArticles);
+        document.getElementById(extBtnId).classList.toggle('active', !showArticles);
+    }
+
+    function csvDownloadExtraction(rows, filename) {
+        const h = ['store_name','location','event_type','event_date','status','short_description','article_link'];
+        const labels = ['Store/Restaurant Name','Location or Full Address','Event Type','Event Date','Status','Short Description','Article Link'];
+        const csv = [labels.join(','), ...rows.map(r => h.map(k => `"${(r[k]||'').replace(/"/g,'""')}"`).join(','))].join('\n');
+        dlCSV('\uFEFF' + csv, filename);
+    }
+
+    function dlCSV(csv, filename) {
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8;' }));
+        a.download = filename;
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
+        setTimeout(() => URL.revokeObjectURL(a.href), 1000);
     }
 
-    // ── Utilities ─────────────────────────────────────────────────
     function escapeHtml(text) {
-        const div = document.createElement('div');
-        div.textContent = text;
-        return div.innerHTML;
+        const d = document.createElement('div');
+        d.textContent = text;
+        return d.innerHTML;
     }
 
     function refreshData() {
-        const btn  = event.target.closest('button');
-        const icon = btn.querySelector('i');
-        icon.classList.add('fa-spin');
+        const icon = document.getElementById('refreshIcon');
+        icon.classList.add('spin-anim');
         let loader;
         if (activeTab === 'store') {
-            loader = loadStoreData();
+            storeArticles = []; loader = loadStoreData();
         } else if (activeTab === 'scoop') {
-            scoopArticles  = [];
-            extractionRows = [];
-            loader = activeScoopSubTab === 'extraction'
-                ? loadScoopExtractionData()
-                : loadScoopData();
+            scoopArticles = []; extractionRows = [];
+            loader = activeScoopSubTab === 'extraction' ? loadScoopExtractionData() : loadScoopData();
         } else if (activeTab === 'restaurant') {
-            restArticles = [];
-            restExtractionRows = [];
-            loader = activeRestSubTab === 'extraction'
-                ? loadRestExtractionData()
-                : loadRestData();
+            restArticles = []; restExtractionRows = [];
+            loader = activeRestSubTab === 'extraction' ? loadRestExtractionData() : loadRestData();
         } else {
-            bizArticles = [];
-            bizExtractionRows = [];
-            loader = activeBizSubTab === 'extraction'
-                ? loadBizExtractionData()
-                : loadBizData();
+            bizArticles = []; bizExtractionRows = [];
+            loader = activeBizSubTab === 'extraction' ? loadBizExtractionData() : loadBizData();
         }
-        Promise.resolve(loader).finally(() => {
-            setTimeout(() => icon.classList.remove('fa-spin'), 500);
-        });
+        Promise.resolve(loader).finally(() => setTimeout(() => icon.classList.remove('spin-anim'), 500));
     }
+
+    // ── Init ──
+    window.addEventListener('DOMContentLoaded', () => {
+        switchTab('store');
+        loadStoreData();
+    });
     </script>
 </body>
 </html>
