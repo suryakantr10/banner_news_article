@@ -62,11 +62,11 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(99,130,246,0.1);
         }
 
-        /* ── Cards with gradient top accent ── */
-        .card-accent-blue  { border-top: 2px solid transparent; background-image: linear-gradient(rgba(15,23,42,0.6), rgba(15,23,42,0.6)), linear-gradient(90deg, #3b82f6, #8b5cf6); background-origin: border-box; background-clip: padding-box, border-box; }
-        .card-accent-green { border-top: 2px solid transparent; background-image: linear-gradient(rgba(15,23,42,0.6), rgba(15,23,42,0.6)), linear-gradient(90deg, #10b981, #06b6d4); background-origin: border-box; background-clip: padding-box, border-box; }
-        .card-accent-orange{ border-top: 2px solid transparent; background-image: linear-gradient(rgba(15,23,42,0.6), rgba(15,23,42,0.6)), linear-gradient(90deg, #f97316, #ef4444); background-origin: border-box; background-clip: padding-box, border-box; }
-        .card-accent-indigo{ border-top: 2px solid transparent; background-image: linear-gradient(rgba(15,23,42,0.6), rgba(15,23,42,0.6)), linear-gradient(90deg, #6366f1, #8b5cf6); background-origin: border-box; background-clip: padding-box, border-box; }
+        /* ── Cards with neutral top accent ── */
+        .card-accent-blue,
+        .card-accent-green,
+        .card-accent-orange,
+        .card-accent-indigo { border-top: 2px solid rgba(255,255,255,0.07); background: rgba(15,23,42,0.6); }
 
         /* ── Stats Cards ── */
         .stats-card {
@@ -78,8 +78,8 @@
         .stats-card:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,0.3); }
 
         /* ── Badges ── */
-        .badge-opening { background: linear-gradient(135deg, #10b981, #059669); box-shadow: 0 4px 14px rgba(16,185,129,0.35); }
-        .badge-closing  { background: linear-gradient(135deg, #ef4444, #dc2626); box-shadow: 0 4px 14px rgba(239,68,68,0.35); }
+        .badge-opening { background: linear-gradient(135deg, #64748b, #475569); box-shadow: 0 4px 14px rgba(100,116,139,0.35); }
+        .badge-closing  { background: linear-gradient(135deg, #64748b, #475569); box-shadow: 0 4px 14px rgba(100,116,139,0.35); }
 
         /* ── Tabs ── */
         .tab-btn {
@@ -134,16 +134,16 @@
         /* ── NEW badge ── */
         .badge-new {
             display: inline-flex; align-items: center; gap: 3px;
-            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            background: linear-gradient(135deg, #64748b, #475569);
             color: #fff; font-size: 0.6rem; font-weight: 700;
             padding: 2px 7px; border-radius: 999px;
-            box-shadow: 0 2px 8px rgba(245,158,11,0.5);
+            box-shadow: 0 2px 8px rgba(100,116,139,0.5);
             animation: newPulse 2s ease-in-out infinite;
             letter-spacing: 0.05em; text-transform: uppercase;
         }
         @keyframes newPulse {
-            0%,100% { box-shadow: 0 2px 8px rgba(245,158,11,0.5); }
-            50% { box-shadow: 0 2px 16px rgba(245,158,11,0.8); }
+            0%,100% { box-shadow: 0 2px 8px rgba(100,116,139,0.5); }
+            50% { box-shadow: 0 2px 16px rgba(100,116,139,0.8); }
         }
 
         /* ── Toast ── */
@@ -245,11 +245,11 @@
                 </div>
                 <div class="flex items-center gap-3">
                     <span id="navTotalBadge" class="nav-total hidden items-center gap-1.5">
-                        <i class="fas fa-circle-dot text-xs text-emerald-400"></i>
+                        <i class="fas fa-circle-dot text-xs text-gray-400"></i>
                         <span id="navTotalCount">0</span> articles
                     </span>
                     <span class="text-xs text-gray-500 hidden sm:flex items-center gap-2">
-                        <span class="pulse-dot w-2 h-2 bg-emerald-400 rounded-full inline-block"></span>
+                        <span class="pulse-dot w-2 h-2 bg-gray-400 rounded-full inline-block"></span>
                         Auto-updated daily
                     </span>
                     <button onclick="refreshData()" class="btn-primary px-4 py-2 rounded-xl font-medium flex items-center gap-2 text-sm text-white">
@@ -318,10 +318,10 @@
                     <div class="flex items-center justify-between">
                         <div>
                             <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Openings</p>
-                            <p class="text-3xl font-bold text-emerald-400" id="totalOpenings">0</p>
+                            <p class="text-3xl font-bold text-gray-300" id="totalOpenings">0</p>
                         </div>
-                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center">
-                            <i class="fas fa-arrow-trend-up text-emerald-400 text-xl"></i>
+                        <div class="w-12 h-12 rounded-xl bg-gray-700/20 flex items-center justify-center">
+                            <i class="fas fa-arrow-trend-up text-gray-400 text-xl"></i>
                         </div>
                     </div>
                 </div>
@@ -329,10 +329,10 @@
                     <div class="flex items-center justify-between">
                         <div>
                             <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Closings</p>
-                            <p class="text-3xl font-bold text-red-400" id="totalClosings">0</p>
+                            <p class="text-3xl font-bold text-gray-300" id="totalClosings">0</p>
                         </div>
-                        <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center">
-                            <i class="fas fa-arrow-trend-down text-red-400 text-xl"></i>
+                        <div class="w-12 h-12 rounded-xl bg-gray-700/20 flex items-center justify-center">
+                            <i class="fas fa-arrow-trend-down text-gray-400 text-xl"></i>
                         </div>
                     </div>
                 </div>
@@ -431,14 +431,14 @@
                     </div>
                     <div class="stats-card rounded-2xl p-6 card-accent-green">
                         <div class="flex items-center justify-between">
-                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Openings</p><p class="text-3xl font-bold text-emerald-400" id="extOpenings">0</p></div>
-                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center"><i class="fas fa-arrow-trend-up text-emerald-400 text-xl"></i></div>
+                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Openings</p><p class="text-3xl font-bold text-gray-300" id="extOpenings">0</p></div>
+                            <div class="w-12 h-12 rounded-xl bg-gray-700/20 flex items-center justify-center"><i class="fas fa-arrow-trend-up text-gray-400 text-xl"></i></div>
                         </div>
                     </div>
                     <div class="stats-card rounded-2xl p-6 card-accent-orange">
                         <div class="flex items-center justify-between">
-                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Closings</p><p class="text-3xl font-bold text-red-400" id="extClosings">0</p></div>
-                            <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center"><i class="fas fa-arrow-trend-down text-red-400 text-xl"></i></div>
+                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Closings</p><p class="text-3xl font-bold text-gray-300" id="extClosings">0</p></div>
+                            <div class="w-12 h-12 rounded-xl bg-gray-700/20 flex items-center justify-center"><i class="fas fa-arrow-trend-down text-gray-400 text-xl"></i></div>
                         </div>
                     </div>
                 </div>
@@ -503,19 +503,19 @@
                     <div class="stats-card rounded-2xl p-6 card-accent-orange">
                         <div class="flex items-center justify-between">
                             <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Total Articles</p><p class="text-3xl font-bold text-white" id="restTotal">0</p></div>
-                            <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center"><i class="fas fa-utensils text-orange-400 text-xl"></i></div>
+                            <div class="w-12 h-12 rounded-xl bg-gray-700/20 flex items-center justify-center"><i class="fas fa-utensils text-gray-400 text-xl"></i></div>
                         </div>
                     </div>
                     <div class="stats-card rounded-2xl p-6 card-accent-green">
                         <div class="flex items-center justify-between">
-                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">With Address</p><p class="text-3xl font-bold text-emerald-400" id="restWithAddr">0</p></div>
-                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center"><i class="fas fa-map-marker-alt text-emerald-400 text-xl"></i></div>
+                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">With Address</p><p class="text-3xl font-bold text-gray-300" id="restWithAddr">0</p></div>
+                            <div class="w-12 h-12 rounded-xl bg-gray-700/20 flex items-center justify-center"><i class="fas fa-map-marker-alt text-gray-400 text-xl"></i></div>
                         </div>
                     </div>
                     <div class="stats-card rounded-2xl p-6" style="background:rgba(15,23,42,0.7);border:1px solid rgba(255,255,255,0.06);">
                         <div class="flex items-center justify-between">
-                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">No Address</p><p class="text-3xl font-bold text-yellow-400" id="restNoAddr">0</p></div>
-                            <div class="w-12 h-12 rounded-xl bg-yellow-500/10 flex items-center justify-center"><i class="fas fa-map-marker-alt text-yellow-400 text-xl"></i></div>
+                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">No Address</p><p class="text-3xl font-bold text-gray-300" id="restNoAddr">0</p></div>
+                            <div class="w-12 h-12 rounded-xl bg-gray-700/20 flex items-center justify-center"><i class="fas fa-map-marker-alt text-gray-400 text-xl"></i></div>
                         </div>
                     </div>
                 </div>
@@ -538,9 +538,9 @@
                 <div id="restTableContainer" class="hidden overflow-x-auto rounded-2xl border border-white/5 fade-in">
                     <table class="w-full text-sm text-left data-table">
                         <thead><tr>
-                            <th class="px-4 py-3 cursor-pointer hover:text-orange-400 transition-colors" onclick="sortRestTable('date')"># Date <i id="sort-date" class="fas fa-sort text-gray-600 ml-1"></i></th>
-                            <th class="px-4 py-3 cursor-pointer hover:text-orange-400 transition-colors" onclick="sortRestTable('title')">Title <i id="sort-title" class="fas fa-sort text-gray-600 ml-1"></i></th>
-                            <th class="px-4 py-3 cursor-pointer hover:text-orange-400 transition-colors" onclick="sortRestTable('address')">Address <i id="sort-address" class="fas fa-sort text-gray-600 ml-1"></i></th>
+                            <th class="px-4 py-3 cursor-pointer hover:text-gray-300 transition-colors" onclick="sortRestTable('date')"># Date <i id="sort-date" class="fas fa-sort text-gray-600 ml-1"></i></th>
+                            <th class="px-4 py-3 cursor-pointer hover:text-gray-300 transition-colors" onclick="sortRestTable('title')">Title <i id="sort-title" class="fas fa-sort text-gray-600 ml-1"></i></th>
+                            <th class="px-4 py-3 cursor-pointer hover:text-gray-300 transition-colors" onclick="sortRestTable('address')">Address <i id="sort-address" class="fas fa-sort text-gray-600 ml-1"></i></th>
                             <th class="px-4 py-3">Link</th>
                         </tr></thead>
                         <tbody id="restTableBody"></tbody>
@@ -556,19 +556,19 @@
                     <div class="stats-card rounded-2xl p-6 card-accent-orange">
                         <div class="flex items-center justify-between">
                             <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Total Rows</p><p class="text-3xl font-bold text-white" id="restExtTotal">0</p></div>
-                            <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center"><i class="fas fa-table text-orange-400 text-xl"></i></div>
+                            <div class="w-12 h-12 rounded-xl bg-gray-700/20 flex items-center justify-center"><i class="fas fa-table text-gray-400 text-xl"></i></div>
                         </div>
                     </div>
                     <div class="stats-card rounded-2xl p-6 card-accent-green">
                         <div class="flex items-center justify-between">
-                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Openings</p><p class="text-3xl font-bold text-emerald-400" id="restExtOpenings">0</p></div>
-                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center"><i class="fas fa-arrow-trend-up text-emerald-400 text-xl"></i></div>
+                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Openings</p><p class="text-3xl font-bold text-gray-300" id="restExtOpenings">0</p></div>
+                            <div class="w-12 h-12 rounded-xl bg-gray-700/20 flex items-center justify-center"><i class="fas fa-arrow-trend-up text-gray-400 text-xl"></i></div>
                         </div>
                     </div>
                     <div class="stats-card rounded-2xl p-6 card-accent-orange" style="background:rgba(15,23,42,0.7)">
                         <div class="flex items-center justify-between">
-                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Closings</p><p class="text-3xl font-bold text-red-400" id="restExtClosings">0</p></div>
-                            <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center"><i class="fas fa-arrow-trend-down text-red-400 text-xl"></i></div>
+                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Closings</p><p class="text-3xl font-bold text-gray-300" id="restExtClosings">0</p></div>
+                            <div class="w-12 h-12 rounded-xl bg-gray-700/20 flex items-center justify-center"><i class="fas fa-arrow-trend-down text-gray-400 text-xl"></i></div>
                         </div>
                     </div>
                 </div>
@@ -668,14 +668,14 @@
                     </div>
                     <div class="stats-card rounded-2xl p-6 card-accent-green">
                         <div class="flex items-center justify-between">
-                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Openings</p><p class="text-3xl font-bold text-emerald-400" id="bizExtOpenings">0</p></div>
-                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center"><i class="fas fa-arrow-trend-up text-emerald-400 text-xl"></i></div>
+                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Openings</p><p class="text-3xl font-bold text-gray-300" id="bizExtOpenings">0</p></div>
+                            <div class="w-12 h-12 rounded-xl bg-gray-700/20 flex items-center justify-center"><i class="fas fa-arrow-trend-up text-gray-400 text-xl"></i></div>
                         </div>
                     </div>
                     <div class="stats-card rounded-2xl p-6 card-accent-orange">
                         <div class="flex items-center justify-between">
-                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Closings</p><p class="text-3xl font-bold text-red-400" id="bizExtClosings">0</p></div>
-                            <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center"><i class="fas fa-arrow-trend-down text-red-400 text-xl"></i></div>
+                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Closings</p><p class="text-3xl font-bold text-gray-300" id="bizExtClosings">0</p></div>
+                            <div class="w-12 h-12 rounded-xl bg-gray-700/20 flex items-center justify-center"><i class="fas fa-arrow-trend-down text-gray-400 text-xl"></i></div>
                         </div>
                     </div>
                 </div>
@@ -791,7 +791,7 @@
 
     // ── Toast ──
     function showToast(msg, type = 'success') {
-        const icon = type === 'success' ? 'fa-check-circle text-emerald-400' : 'fa-exclamation-circle text-red-400';
+        const icon = type === 'success' ? 'fa-check-circle text-gray-400' : 'fa-exclamation-circle text-gray-400';
         const el = document.createElement('div');
         el.className = 'toast';
         el.innerHTML = `<i class="fas ${icon}"></i><span>${msg}</span>`;
@@ -1002,7 +1002,7 @@
                 <div class="absolute top-3.5 right-3.5 flex items-center gap-2">
                     ${newBadge}
                     <div class="w-8 h-8 rounded-lg cursor-pointer flex items-center justify-center transition-all shadow-sm"
-                        style="${isDone ? 'background:linear-gradient(135deg,#10b981,#059669);' : 'background:rgba(30,41,59,0.9);border:1.5px solid rgba(255,255,255,0.1);'}"
+                        style="${isDone ? 'background:rgba(100,116,139,0.8);' : 'background:rgba(30,41,59,0.9);border:1.5px solid rgba(255,255,255,0.1);'}"
                         onclick="toggleDoneStatus('${escapeHtml(articleKey)}', this)"
                         title="${isDone ? 'Marked as done — click to undo' : 'Mark as done'}">
                         <i class="fas fa-check text-white text-xs ${isDone ? 'opacity-100' : 'opacity-0'} transition-opacity duration-200"></i>
@@ -1036,7 +1036,7 @@
             el.title = 'Mark as done';
         } else {
             localStorage.setItem(key, 'true');
-            el.style = 'background:linear-gradient(135deg,#10b981,#059669);';
+            el.style = 'background:rgba(100,116,139,0.8);';
             el.querySelector('i').className = 'fas fa-check text-white text-xs opacity-100 transition-opacity duration-200';
             el.title = 'Marked as done — click to undo';
         }
@@ -1186,7 +1186,7 @@
             const el = document.getElementById('sort-' + c);
             if (!el) return;
             el.className = c === restSortCol
-                ? 'fas ' + (restSortDir === 'asc' ? 'fa-sort-up' : 'fa-sort-down') + ' text-orange-400 ml-1'
+                ? 'fas ' + (restSortDir === 'asc' ? 'fa-sort-up' : 'fa-sort-down') + ' text-gray-400 ml-1'
                 : 'fas fa-sort text-gray-600 ml-1';
         });
         sortRestData(); renderRestTable();
@@ -1218,11 +1218,11 @@
             const addr = (r.address || '').trim();
             const mapsUrl = addr ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(addr)}` : null;
             const addrCell = addr
-                ? `<a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="hover:text-orange-400 transition-colors flex items-start gap-1">
-                       <i class="fas fa-map-marker-alt text-orange-400 mt-0.5 shrink-0 text-xs"></i>
+                ? `<a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="hover:text-gray-200 transition-colors flex items-start gap-1">
+                       <i class="fas fa-map-marker-alt text-gray-400 mt-0.5 shrink-0 text-xs"></i>
                        <span class="text-gray-300 text-xs">${highlight(addr, term)}</span>
                    </a>`
-                : `<span class="text-yellow-600 italic text-xs flex items-center gap-1"><i class="fas fa-map-marker-alt text-gray-600 text-xs"></i>No address</span>`;
+                : `<span class="text-gray-500 italic text-xs flex items-center gap-1"><i class="fas fa-map-marker-alt text-gray-600 text-xs"></i>No address</span>`;
             const newTag = isNew(r.date) ? `<span class="badge-new ml-2" style="font-size:0.55rem">New</span>` : '';
             return `
             <tr>
@@ -1231,14 +1231,14 @@
                 </td>
                 <td class="px-4 py-3 max-w-xs">
                     <a href="${escapeHtml(r.url||'#')}" target="_blank" rel="noopener noreferrer"
-                       class="text-white text-sm font-medium hover:text-orange-400 transition-colors line-clamp-2">
+                       class="text-white text-sm font-medium hover:text-gray-300 transition-colors line-clamp-2">
                         ${highlight(r.title||'', term)}
                     </a>
                 </td>
                 <td class="px-4 py-3 max-w-xs text-sm">${addrCell}</td>
                 <td class="px-4 py-3">
                     <a href="${escapeHtml(r.url||'#')}" target="_blank" rel="noopener noreferrer"
-                       class="px-3 py-1.5 bg-slate-700/80 hover:bg-orange-600 rounded-lg text-xs transition-colors inline-flex items-center gap-1">
+                       class="px-3 py-1.5 bg-slate-700/80 hover:bg-slate-600 rounded-lg text-xs transition-colors inline-flex items-center gap-1">
                         <i class="fas fa-external-link-alt text-xs"></i>Visit
                     </a>
                 </td>
@@ -1563,7 +1563,7 @@
         const isOpening = r.event_type === 'Opening';
         const isClosing = r.event_type === 'Closing';
         const noData    = r.store_name === 'No qualifying business found';
-        const hoverColor = { blue: 'hover:bg-blue-600', orange: 'hover:bg-orange-600', indigo: 'hover:bg-indigo-600' }[accentColor] || 'hover:bg-blue-600';
+        const hoverColor = { blue: 'hover:bg-slate-600', orange: 'hover:bg-slate-600', indigo: 'hover:bg-slate-600' }[accentColor] || 'hover:bg-slate-600';
 
         const typeBadge = noData
             ? `<span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-gray-500">N/A</span>`
