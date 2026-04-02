@@ -1,6 +1,16 @@
 {
-  "last_updated": "2026-04-01",
+  "last_updated": "2026-04-02",
   "data": [
+    {
+      "heading": "SOUTHINGTON SCOOP: Couch Potato opens in Southington",
+      "date": "2026-04-01",
+      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/southington-scoop-couch-potato-opens-in-southington"
+    },
+    {
+      "heading": "PRESTON SCOOP: Lu-Mac's relocating to new building with Jimmies!",
+      "date": "2026-04-01",
+      "link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/preston-scoop-lu-macs-relocating-to-new-building-with-jimmies"
+    },
     {
       "heading": "EAST WINDSOR SCOOP: Molly's Sweet Spot coming soon!",
       "date": "2026-03-31",
@@ -25,31 +35,6 @@
       "heading": "WEST SPRINGFIELD SCOOP: Ross Dress for Less eyeing former Big Lots for new location!",
       "date": "2026-03-31",
       "link": "https://www.theconnecticutscoop.com/all-mass-posts/west-springfield-scoop-ross-dress-for-less-eyeing-former-big-lots-for-new-location"
-    },
-    {
-      "heading": "BRISTOL SCOOP: Walmart eyeing former Walmart Neighborhood Market for new project",
-      "date": "2026-03-30",
-      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/bristol-scoop-walmart-eyeing-former-walmart-neighborhood-market-for-new-project"
-    },
-    {
-      "heading": "WEST HAVEN SCOOP: Coastal Cone Creamery coming soon!",
-      "date": "2026-03-30",
-      "link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/west-haven-scoop-coastal-cone-creamery-coming-soon"
-    },
-    {
-      "heading": "NORWALK SCOOP: Club Studio eyeing new location in Norwalk",
-      "date": "2026-03-30",
-      "link": "https://www.theconnecticutscoop.com/all-fairfield-county-posts/norwalk-scoop-club-studio-eyeing-new-location-in-norwalk"
-    },
-    {
-      "heading": "MYSTIC SCOOP: New luxury boutique hotel opens near  Downtown Mystic!",
-      "date": "2026-03-30",
-      "link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/mystic-scoop-new-luxury-boutique-hotel-opens-near-downtown-mystic"
-    },
-    {
-      "heading": "STURBRIDGE SCOOP: New ice cream shop opens at Noble, new eatery coming soon!",
-      "date": "2026-03-30",
-      "link": "https://www.theconnecticutscoop.com/all-mass-posts/sturbridge-scoop-new-ice-cream-shop-opens-at-noble-new-eatery-coming-soon"
     }
   ]
 }
