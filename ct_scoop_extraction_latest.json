@@ -1,95 +1,68 @@
 {
-  "last_updated": "2026-03-31",
+  "last_updated": "2026-04-02",
   "data": [
     {
-      "store_name": "Coastal Cone Creamery",
-      "location": "270 Captain Thomas Boulevard, West Haven, CT",
+      "store_name": "Couch Potato",
+      "location": "1 Eden Avenue, Southington, CT",
+      "event_type": "Opening",
+      "event_date": "April 1, 2026",
+      "status": "Now open",
+      "short_description": "Couch Potato, a restaurant specializing in baked potatoes, walking tacos, hot dogs, and spudwiches, has opened at 1 Eden Avenue in Southington in a historic 1941 building previously home to Southington News and Dominic's Men's Shop. The eatery previously operated in Waterbury and Wallingford. Hours are Monday–Saturday 10:30 AM–9:00 PM, closed Sunday.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/southington-scoop-couch-potato-opens-in-southington"
+    },
+    {
+      "store_name": "Lu-Mac's Package Store / Jimmies Ice Cream Shoppe",
+      "location": "356 Route 2, Preston, CT",
+      "event_type": "Relocation",
+      "event_date": "Not specified",
+      "status": "Under construction",
+      "short_description": "Lu-Mac's Package Store and Jimmies Ice Cream Shoppe are relocating to a new farmhouse/country barn-style building adjacent to their current location at 356 Route 2 in Preston. The new building will feature a full-sized NASCAR race car suspended from the ceiling. Construction is actively underway as of April 2026.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/preston-scoop-lu-macs-relocating-to-new-building-with-jimmies"
+    },
+    {
+      "store_name": "Molly's Sweet Spot",
+      "location": "122 Prospect Hill Road, Sophia's Plaza, East Windsor, CT",
+      "event_type": "Opening",
+      "event_date": "June 2026",
+      "status": "Coming soon (opening June 2026)",
+      "short_description": "Molly's Sweet Spot, a bakery owned by local resident Molly Francia, is opening in June 2026 at Sophia's Plaza in East Windsor. The shop will offer custom cakes, cupcakes, gourmet cookies, cakesicles, brownies, dirty sodas, and more with both walk-in and custom order options.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/east-windsor-scoop-mollys-sweet-spot-coming-soon"
+    },
+    {
+      "store_name": "CollectUConn featuring The Gampel Collection",
+      "location": "501 Evergreen Way, The Shops at Evergreen Walk, South Windsor, CT",
       "event_type": "Opening",
       "event_date": "Not specified",
-      "status": "Coming soon (renovations underway)",
-      "short_description": "A new ice cream shop called Coastal Cone Creamery is preparing to open in West Haven at the former Savin Rock Surf Shop location. The business will occupy approximately 1,187 square feet and plans to serve ice cream along with other frozen treats. Renovations are actively underway as of late March 2026.",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/west-haven-scoop-coastal-cone-creamery-coming-soon"
+      "status": "Coming soon (opening date TBD)",
+      "short_description": "CollectUConn featuring The Gampel Collection is opening at The Shops at Evergreen Walk in South Windsor, adjacent to Disibio Shoes and across from Old Navy. The store will sell game-used lockers, limited-edition seats, championship banner tote bags, and commemorative pieces from Gampel Pavilion's renovation. A portion of proceeds benefits UConn Athletics; online shopping is also available at collectuconn.com.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/south-windsor-scoop-new-uconn-gampel-pavilion-merchandise-store-opening"
     },
     {
-      "store_name": "Club Studio",
-      "location": "761 Main Avenue, Norwalk, CT",
+      "store_name": "7 Brew Coffee",
+      "location": "1447 Whalley Avenue, Whalley Commons, New Haven, CT",
+      "event_type": "Opening",
+      "event_date": "April 13, 2026",
+      "status": "Opening April 13, 2026",
+      "short_description": "7 Brew Coffee is opening its New Haven location on April 13, 2026 at Whalley Commons on Whalley Avenue. Pre-opening events include a charity weekend (April 3–5), a friends and family free drink weekend (April 10–12), and community free drink hours during opening week. The drive-through chain serves flavored coffees, energy drinks, and smoothies.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/new-haven-scoop-7-brew-sets-opening-date"
+    },
+    {
+      "store_name": "Sprouts Farmers Market",
+      "location": "1052 Boston Post Road, Milford, CT",
       "event_type": "Opening",
       "event_date": "Not specified",
-      "status": "Planned (opening date TBD)",
-      "short_description": "Club Studio, a luxury gym chain owned by Fitness International, is eyeing the former LA Fitness location in Norwalk after that gym closes on April 7, 2026. The concept features boutique fitness studios offering yoga, boxing, pilates, and cryotherapy alongside a traditional open gym. The chain currently operates 18 locations nationwide with 23 more in development.",
-      "article_link": "https://www.theconnecticutscoop.com/all-fairfield-county-posts/norwalk-scoop-club-studio-eyeing-new-location-in-norwalk"
+      "status": "Planned (in site planning phase)",
+      "short_description": "Sprouts Farmers Market is planning a 26,000+ square foot store at 1052 Boston Post Road in Milford on the site of the former Hooters restaurant and an adjacent Genesis dealership property. This would be the first CT Sprouts location, with another planned for Westport. The project is currently in the site plan phase with no opening date announced.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/milford-scoop-sprouts-farmers-market-coming-to-hooters-site"
     },
     {
-      "store_name": "Mystic River Inn",
-      "location": "3 Gravel Street, Mystic, CT",
+      "store_name": "Ross Dress for Less",
+      "location": "1150 Union Street, West Springfield, MA",
       "event_type": "Opening",
-      "event_date": "March 30, 2026",
-      "status": "Now open",
-      "short_description": "A new luxury boutique hotel has opened in downtown Mystic, steps from local shops, restaurants, and attractions. The property features upscale suites with waterfront views in select rooms and a tranquil atmosphere despite its proximity to the bustling downtown district. Accommodations can be booked through mysticriverinn.com.",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/mystic-scoop-new-luxury-boutique-hotel-opens-near-downtown-mystic"
-    },
-    {
-      "store_name": "Frisbie's Dairy Barn",
-      "location": "195 Charlton Road (Noble Gas Station), Sturbridge, MA",
-      "event_type": "Opening",
-      "event_date": "March 30, 2026",
-      "status": "Now open",
-      "short_description": "An ice cream shop called Frisbie's Dairy Barn has opened at the Noble travel center in Sturbridge, Massachusetts, offering nearly two dozen flavors plus sundaes, cones, and flights. Additionally, The Bol Place, a health-focused fast-casual eatery specializing in grain and protein bowls, is arriving soon to the same location.",
-      "article_link": "https://www.theconnecticutscoop.com/all-mass-posts/sturbridge-scoop-new-ice-cream-shop-opens-at-noble-new-eatery-coming-soon"
-    },
-    {
-      "store_name": "Ragozzino's Deli & Catering",
-      "location": "245 Summer Street, Plantsville, CT",
-      "event_type": "New Owner",
-      "event_date": "Late February 2026",
-      "status": "Now open under new ownership",
-      "short_description": "Ragozzino's Deli & Catering has transitioned to new ownership under Robert Bongiolatti and Maggie Garcia, reopening in late February 2026 with the traditional menu maintained alongside fresh offerings. The Italian deli provides sandwiches, pizza, breakfast items, catering services, imported specialty goods, soups, and salads. Hours are Tuesday-Friday 9am-4pm and Saturday 9am-3pm.",
-      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/plantsville-scoop-longtime-deli-gets-new-owner"
-    },
-    {
-      "store_name": "The Vintage Vault",
-      "location": "50 Depot Street, Collinsville, Canton, CT",
-      "event_type": "Opening",
-      "event_date": "April 1, 2026 (soft open); April 18, 2026 (grand opening)",
-      "status": "Opening April 2026",
-      "short_description": "A new vintage cooperative shop is debuting in Canton's historic Collinsville factory district at the Collins Company Axe Factory. The venue features multiple local vendors selling vintage furniture, decor, clothing, and miscellaneous items. The grand opening on April 18 includes live vinyl DJing, beverages from a local brewery, and complimentary cookies.",
-      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/canton-scoop-the-vintage-vault-sets-opening-date"
-    },
-    {
-      "store_name": "Crystal Mall",
-      "location": "Waterford, CT",
-      "event_type": "Closing",
-      "event_date": "March 31, 2026",
-      "status": "Closing March 31, 2026",
-      "short_description": "Crystal Mall is closing its doors on March 31, 2026, with owner General Dynamics Electric Boat announcing the end of majority operations. The property will be repurposed as an EB facility featuring offices, a training center, and support services, with renovations beginning in the former Macy's space. A hiring event is scheduled for April 11, 2026.",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/waterford-scoop-take-a-look-at-the-final-days-of-crystal-mall"
-    },
-    {
-      "store_name": "LuAnn's Bakery & Cafe",
-      "location": "190 Trumbull Street, Hartford, CT",
-      "event_type": "Opening",
-      "event_date": "March 31, 2026",
-      "status": "Opening March 31, 2026",
-      "short_description": "LuAnn's Bakery & Cafe will open its Hartford location on March 31, 2026 at 7am in the former Citizens Bank building, offering coffees, freshly baked pastries, breakfast, and lunch items. The first 100 customers receive a commemorative opening-day pin. This marks the fourth location for the bakery, joining existing operations in Ellington and Stafford.",
-      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/hartford-scoop-luanns-bakery-cafe-sets-opening-date-in-hartford"
-    },
-    {
-      "store_name": "Angel Land",
-      "location": "1445 New Britain Avenue, Corbin's Corner, West Hartford, CT",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "Coming soon (hiring phase)",
-      "short_description": "Angel Land, a kids' entertainment center, is preparing to open its second U.S. location at Corbin's Corner in West Hartford. The facility will feature climbing structures, obstacle courses, ball pits, slides, foam areas, and imagination play areas designed for children 10 and under, with private party rooms available. The company is currently recruiting staff.",
-      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/west-hartford-scoop-sneak-peek-at-the-new-angel-land"
-    },
-    {
-      "store_name": "Shah's Halal Food",
-      "location": "1051 Wolcott Street, Waterbury, CT",
-      "event_type": "Opening",
-      "event_date": "March 28, 2026",
-      "status": "Now open",
-      "short_description": "Shah's Halal Food has opened its second Waterbury location at 1051 Wolcott Street in a space formerly occupied by a 7-Eleven and smoke shop. The restaurant serves gyros, platters, falafel, burgers, wings, salads, hummus, and more, operating daily from 11am to 11pm with online ordering coming soon. This expands the chain's growing presence across Connecticut.",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/waterbury-scoop-shahs-halal-opens-second-waterbury-location"
+      "event_date": "Fall 2026 (tentative)",
+      "status": "Planned (lease pending finalization)",
+      "short_description": "Ross Dress for Less is eyeing a ~30,000 square foot former Big Lots space at 1150 Union Street in West Springfield, MA, with a tentative opening in Fall 2026. The opening is contingent on lease finalization and construction permits. Ross has also signed a lease for a Chicopee location as part of its broader East Coast expansion.",
+      "article_link": "https://www.theconnecticutscoop.com/all-mass-posts/west-springfield-scoop-ross-dress-for-less-eyeing-former-big-lots-for-new-location"
     }
   ],
   "non_working": []
