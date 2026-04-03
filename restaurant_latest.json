@@ -1,7 +1,13 @@
 {
-  "last_updated": "2026-04-02 23:09 UTC",
+  "last_updated": "2026-04-03 00:04 UTC",
   "total": 60,
   "data": [
+    {
+      "date": "April 02, 2026",
+      "url": "https://whatnow.com/houston/restaurants/carlo-and-casa-carlo-two-charles-clark-concepts-to-open-in-montrose/",
+      "title": "Carlo and Casa Carlo, Two Charles Clark Concepts, to Open in Montrose",
+      "address": ""
+    },
     {
       "date": "April 02, 2026",
       "url": "https://whatnow.com/las-vegas/restaurants/wetzels-pretzels-to-undergo-a-change-on-the-henderson-food-truck/",
@@ -355,12 +361,6 @@
       "url": "https://whatnow.com/chicago/restaurants/scooters-coffee-building-new-drive-thru-location-in-bourbonnais/",
       "title": "Scooter’s Coffee Building New Drive-Thru Location in Bourbonnais",
       "address": "530 S Main St, Bourbonnais, IL 60914"
-    },
-    {
-      "date": "April 01, 2026",
-      "url": "https://whatnow.com/charlotte/restaurants/knowledge-perk-coffee-announces-york-location/",
-      "title": "Knowledge Perk Coffee Announces York Location | What Now Charlotte",
-      "address": "1530 Alexander Love Hwy, York, SC 29745"
     }
   ]
 }
