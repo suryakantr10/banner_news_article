@@ -1,7 +1,31 @@
 {
-  "last_updated": "2026-04-05 00:01 UTC",
+  "last_updated": "2026-04-06 00:03 UTC",
   "total": 60,
   "data": [
+    {
+      "date": "April 05, 2026",
+      "url": "https://whatnow.com/memphis/restaurants/buffalo-wild-wings-go-joining-memphis-area-dunkin/",
+      "title": "Buffalo Wild Wings Go Joining Memphis-Area Dunkin",
+      "address": "5150 Poplar Ave, Memphis, TN 38117"
+    },
+    {
+      "date": "April 04, 2026",
+      "url": "https://whatnow.com/memphis/restaurants/the-scoop-dipping-into-memphis-ice-cream-scene/",
+      "title": "The Scoop Dipping into Memphis Ice Cream Scene",
+      "address": "1350 Concourse Ave, Memphis, TN 38104"
+    },
+    {
+      "date": "April 04, 2026",
+      "url": "https://whatnow.com/memphis/restaurants/el-veracruz-to-serve-superior-mexican-fare-to-millington/",
+      "title": "El Veracruz to Serve Superior Mexican Fare to Millington",
+      "address": "4816 Navy Rd, Millington, TN 38053"
+    },
+    {
+      "date": "April 04, 2026",
+      "url": "https://whatnow.com/memphis/restaurants/jacques-louise-bakery-preparing-for-move/",
+      "title": "Jacques Louise Bakery Preparing for Move",
+      "address": "585 Cooper St, Memphis, TN 38104"
+    },
     {
       "date": "April 04, 2026",
       "url": "https://whatnow.com/san-antonio/restaurants/the-brass-tap-to-make-its-alamo-city-return/",
@@ -125,7 +149,7 @@
     {
       "date": "April 03, 2026",
       "url": "https://whatnow.com/new-orleans/restaurants/metairie-couple-behind-meaux-jeaux-pizza-bringing-dream-concept-to-the-cbd/",
-      "title": "Metairie Couple Behind Meaux Jeaux Pizza Bringing 'Dream Concept' to the CBD",
+      "title": "The Couple Behind Meaux Jeaux Pizza Bringing 'Dream Concept' to the CBD",
       "address": "401 Carondelet St, New Orleans, LA 70130"
     },
     {
@@ -337,30 +361,6 @@
       "url": "https://whatnow.com/houston/restaurants/carlo-and-casa-carlo-two-charles-clark-concepts-to-open-in-montrose/",
       "title": "Carlo and Casa Carlo, Two Charles Clark Concepts, to Open in Montrose",
       "address": ""
-    },
-    {
-      "date": "April 02, 2026",
-      "url": "https://whatnow.com/las-vegas/restaurants/wetzels-pretzels-to-undergo-a-change-on-the-henderson-food-truck/",
-      "title": "Wetzel's Pretzels to Undergo a Change on the Henderson Food Truck",
-      "address": "949 Empire Mesa Way, Henderson, NV 89011"
-    },
-    {
-      "date": "April 02, 2026",
-      "url": "https://whatnow.com/miami/restaurants/7-brew-is-eyeing-a-miami-expansion/",
-      "title": "7 Brew is Eyeing a Miami Expansion",
-      "address": ""
-    },
-    {
-      "date": "April 02, 2026",
-      "url": "https://whatnow.com/dallas/restaurants/saucy-by-kfc-bringing-extra-flavor-to-dfw/",
-      "title": "Saucy! by KFC Bringing Extra Flavor to DFW",
-      "address": ""
-    },
-    {
-      "date": "April 02, 2026",
-      "url": "https://whatnow.com/los-angeles/restaurants/bacio-di-latte-opening-in-glendale-at-the-americana-at-brand/",
-      "title": "Bacio di Latte Opening In Glendale At The Americana At Brand | What Now Los Angeles",
-      "address": "889 Americana Way, Glendale, CA 91210"
     }
   ]
 }
