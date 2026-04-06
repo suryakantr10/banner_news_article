@@ -16,7 +16,6 @@
             overflow-x: hidden;
         }
 
-        /* ── Animated Background ── */
         .bg-animated {
             position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
         }
@@ -39,10 +38,8 @@
             background-size: 40px 40px;
         }
 
-        /* ── Layout ── */
         .content-wrap { position: relative; z-index: 1; }
 
-        /* ── Glassmorphism ── */
         .glass {
             background: rgba(15, 23, 42, 0.7);
             backdrop-filter: blur(16px);
@@ -62,13 +59,11 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(99,130,246,0.1);
         }
 
-        /* ── Cards with neutral top accent ── */
         .card-accent-blue,
         .card-accent-green,
         .card-accent-orange,
         .card-accent-indigo { border-top: 2px solid rgba(255,255,255,0.07); background: rgba(15,23,42,0.6); }
 
-        /* ── Stats Cards ── */
         .stats-card {
             background: rgba(15,23,42,0.7);
             backdrop-filter: blur(12px);
@@ -77,11 +72,16 @@
         }
         .stats-card:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,0.3); }
 
-        /* ── Badges ── */
-        .badge-opening { background: linear-gradient(135deg, #64748b, #475569); box-shadow: 0 4px 14px rgba(100,116,139,0.35); }
-        .badge-closing  { background: linear-gradient(135deg, #64748b, #475569); box-shadow: 0 4px 14px rgba(100,116,139,0.35); }
+        /* ── UPDATED: Opening = green, Closing = red ── */
+        .badge-opening {
+            background: linear-gradient(135deg, #16a34a, #15803d);
+            box-shadow: 0 4px 14px rgba(22, 163, 74, 0.35);
+        }
+        .badge-closing {
+            background: linear-gradient(135deg, #dc2626, #b91c1c);
+            box-shadow: 0 4px 14px rgba(220, 38, 38, 0.35);
+        }
 
-        /* ── Tabs ── */
         .tab-btn {
             position: relative; padding: 10px 18px; border-radius: 999px;
             font-size: 0.875rem; font-weight: 500; color: #94a3b8;
@@ -97,7 +97,6 @@
         .sub-tab-btn:hover { color: #e2e8f0; }
         .sub-tab-btn.active { background: rgba(99,102,241,0.2); color: #a5b4fc; border: 1px solid rgba(99,102,241,0.3); }
 
-        /* ── Animations ── */
         .fade-in { animation: fadeIn 0.4s ease-out; }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(12px); }
@@ -116,7 +115,6 @@
         .spin-anim { animation: spin 1s linear infinite; }
         @keyframes spin { to { transform:rotate(360deg); } }
 
-        /* ── Skeleton Loading ── */
         .skeleton {
             background: linear-gradient(90deg, rgba(30,41,59,0.8) 25%, rgba(51,65,85,0.6) 50%, rgba(30,41,59,0.8) 75%);
             background-size: 200% 100%;
@@ -128,10 +126,8 @@
             100% { background-position: -200% 0; }
         }
 
-        /* ── Search highlight ── */
         mark { background: rgba(251,191,36,0.3); color: #fcd34d; border-radius: 2px; padding: 0 2px; }
 
-        /* ── NEW badge ── */
         .badge-new {
             display: inline-flex; align-items: center; gap: 3px;
             background: linear-gradient(135deg, #64748b, #475569);
@@ -146,7 +142,6 @@
             50% { box-shadow: 0 2px 16px rgba(100,116,139,0.8); }
         }
 
-        /* ── Toast ── */
         #toast-container { position: fixed; bottom: 24px; right: 24px; z-index: 9999; display: flex; flex-direction: column; gap: 10px; }
         .toast {
             display: flex; align-items: center; gap: 10px;
@@ -160,7 +155,6 @@
         @keyframes toastIn  { from { opacity:0; transform:translateX(30px); } to { opacity:1; transform:none; } }
         @keyframes toastOut { to   { opacity:0; transform:translateX(30px); } }
 
-        /* ── Scroll to top ── */
         #scrollTop {
             position: fixed; bottom: 24px; left: 24px; z-index: 9999;
             width: 44px; height: 44px; border-radius: 50%;
@@ -174,7 +168,6 @@
         #scrollTop.visible { opacity: 1; pointer-events: auto; }
         #scrollTop:hover { transform: translateY(-3px); }
 
-        /* ── Inputs ── */
         .input-field {
             background: rgba(15,23,42,0.7); border: 1px solid rgba(255,255,255,0.08);
             color: #e2e8f0; border-radius: 10px; transition: all 0.2s;
@@ -182,18 +175,14 @@
         .input-field:focus { outline: none; border-color: rgba(99,102,246,0.6); box-shadow: 0 0 0 3px rgba(99,102,246,0.15); }
         .input-field::placeholder { color: #64748b; }
 
-        /* ── Select ── */
         select { appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2394a3b8' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 36px; }
 
-        /* ── Navbar total badge ── */
         .nav-total { background: rgba(99,102,246,0.15); border: 1px solid rgba(99,102,246,0.3); color: #a5b4fc; font-size: 0.75rem; font-weight: 600; padding: 2px 10px; border-radius: 999px; }
 
-        /* ── Table ── */
         .data-table tbody tr { border-bottom: 1px solid rgba(255,255,255,0.04); transition: background 0.15s; }
         .data-table tbody tr:hover { background: rgba(99,102,246,0.06); }
         .data-table thead th { background: rgba(15,20,40,0.9); color: #94a3b8; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; }
 
-        /* ── Analyst section heading ── */
         .analyst-section { scroll-margin-top: 90px; }
         .analyst-heading {
             display: inline-flex; align-items: center; gap: 12px;
@@ -201,13 +190,10 @@
             background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.2);
         }
 
-        /* ── Hero gradient text ── */
         .hero-gradient { background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 40%, #f472b6 80%); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-        /* ── Keyboard shortcut badge ── */
         .kbd { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 16px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 3px; font-size: 0.6rem; color: #94a3b8; }
 
-        /* ── Refresh btn ── */
         .btn-primary { background: linear-gradient(135deg, #3b82f6, #6366f1); transition: all 0.2s; }
         .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(99,102,246,0.4); }
 
@@ -217,7 +203,6 @@
 </head>
 <body class="text-gray-100">
 
-    <!-- Animated background -->
     <div class="bg-animated">
         <div class="orb orb-1"></div>
         <div class="orb orb-2"></div>
@@ -225,15 +210,12 @@
     </div>
     <div class="grid-overlay"></div>
 
-    <!-- Toast container -->
     <div id="toast-container"></div>
 
-    <!-- Scroll to top -->
     <button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">
         <i class="fas fa-chevron-up text-sm"></i>
     </button>
 
-    <!-- Navbar -->
     <nav class="glass sticky top-0 z-50 border-b border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
@@ -263,7 +245,6 @@
 
     <div class="content-wrap max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
-        <!-- Hero -->
         <div class="text-center mb-10 fade-in">
             <h2 class="text-4xl sm:text-5xl font-extrabold mb-3 hero-gradient tracking-tight">
                 Retail Intelligence Tracker
@@ -282,7 +263,6 @@
             </div>
         </div>
 
-        <!-- Main Tabs -->
         <div class="mb-8 flex justify-center">
             <div class="glass rounded-2xl p-1 flex gap-1 flex-wrap justify-center">
                 <button id="tabStoreBtn" class="tab-btn active" onclick="switchTab('store')">
@@ -300,7 +280,7 @@
             </div>
         </div>
 
-        <!-- ══════════════ STORE NEWS TAB ══════════════ -->
+        <!-- STORE NEWS TAB -->
         <div id="storeTabContent">
             <div id="statsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 fade-in" style="display:none;">
                 <div class="stats-card rounded-2xl p-6 card-accent-blue">
@@ -355,11 +335,7 @@
                 </select>
             </div>
 
-            <div id="loadingState" class="py-20">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    ${skeletonCards(6)}
-                </div>
-            </div>
+            <div id="loadingState" class="py-20"></div>
             <div id="emptyState" class="text-center py-20 hidden">
                 <div class="w-20 h-20 rounded-full bg-slate-800/80 flex items-center justify-center mx-auto mb-4">
                     <i class="fas fa-inbox text-3xl text-gray-600"></i>
@@ -370,7 +346,7 @@
             <div id="articlesContainer" class="hidden"></div>
         </div>
 
-        <!-- ══════════════ CT SCOOP TAB ══════════════ -->
+        <!-- CT SCOOP TAB -->
         <div id="scoopTabContent" class="hidden">
             <div class="mb-6 flex justify-center">
                 <div class="glass rounded-2xl p-1 flex gap-1">
@@ -408,9 +384,7 @@
                         <i class="fas fa-download"></i><span>Download CSV</span>
                     </button>
                 </div>
-                <div id="scoopLoadingState" class="hidden py-20">
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${skeletonCards(3)}</div>
-                </div>
+                <div id="scoopLoadingState" class="hidden py-20"></div>
                 <div id="scoopEmptyState" class="text-center py-20 hidden">
                     <div class="w-20 h-20 rounded-full bg-slate-800/80 flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-inbox text-3xl text-gray-600"></i>
@@ -485,7 +459,7 @@
             </div>
         </div>
 
-        <!-- ══════════════ RESTAURANT TAB ══════════════ -->
+        <!-- RESTAURANT TAB -->
         <div id="restaurantTabContent" class="hidden">
             <div class="mb-6 flex justify-center">
                 <div class="glass rounded-2xl p-1 flex gap-1">
@@ -615,7 +589,7 @@
             </div>
         </div>
 
-        <!-- ══════════════ BUSINESS DEBUT TAB ══════════════ -->
+        <!-- BUSINESS DEBUT TAB -->
         <div id="bizTabContent" class="hidden">
             <div class="mb-6 flex justify-center">
                 <div class="glass rounded-2xl p-1 flex gap-1">
@@ -647,9 +621,7 @@
                         <i class="fas fa-download"></i><span>Download CSV</span>
                     </button>
                 </div>
-                <div id="bizLoadingState" class="hidden py-20">
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${skeletonCards(3)}</div>
-                </div>
+                <div id="bizLoadingState" class="hidden py-20"></div>
                 <div id="bizEmptyState" class="text-center py-20 hidden">
                     <div class="w-20 h-20 rounded-full bg-slate-800/80 flex items-center justify-center mx-auto mb-4"><i class="fas fa-inbox text-3xl text-gray-600"></i></div>
                     <h3 class="text-xl font-semibold mb-2 text-gray-300">No recent Business Debut articles</h3>
@@ -722,9 +694,8 @@
             </div>
         </div>
 
-    </div><!-- end content-wrap -->
+    </div>
 
-    <!-- Footer -->
     <footer class="relative z-10 mt-16 py-8 border-t border-white/5">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <p class="text-gray-500 text-sm">Built for my analysts • Data from Google News RSS</p>
@@ -733,7 +704,6 @@
     </footer>
 
     <script>
-    // ── Skeleton helper (called during HTML render via template literal trick — but we do it in JS) ──
     function skeletonCards(n) {
         return Array(n).fill('').map(() =>
             `<div class="rounded-2xl p-6 border border-white/5" style="background:rgba(15,23,42,0.6)">
@@ -745,19 +715,16 @@
         ).join('');
     }
 
-    // Fix: replace placeholder skeletonCards calls in static HTML (they were template literal calls)
     document.getElementById('loadingState').innerHTML = `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${skeletonCards(6)}</div>`;
     document.getElementById('scoopLoadingState').innerHTML = `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${skeletonCards(3)}</div>`;
     document.getElementById('bizLoadingState').innerHTML   = `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${skeletonCards(3)}</div>`;
 
-    // ── Spinner CSS (for table-based loading states) ──
     (function(){
         const style = document.createElement('style');
         style.textContent = '.loading-spinner{border:3px solid rgba(255,255,255,0.1);border-top:3px solid #6366f1;border-radius:50%;width:36px;height:36px;animation:spin 0.8s linear infinite;margin:0 auto;}';
         document.head.appendChild(style);
     })();
 
-    // ── Data URLs ──
     const STORE_JSON_URL       = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/latest_news.json';
     const SCOOP_JSON_URL       = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/ct_scoop_latest.json';
     const REST_JSON_URL        = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/restaurant_latest.json';
@@ -766,7 +733,6 @@
     const BIZ_JSON_URL         = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/businessdebut_latest.json';
     const BIZ_EXTRACTION_URL   = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/businessdebut_extraction_latest.json';
 
-    // ── State ──
     let storeArticles = [], filteredStoreArticles = [];
     let scoopArticles = [], filteredScoopArticles = [];
     let extractionRows = [], filteredExtractionRows = [];
@@ -780,7 +746,10 @@
 
     const TODAY = new Date().toISOString().split('T')[0];
 
-    // ── Debounce ──
+    /* ── green checkmark style constants ── */
+    const DONE_STYLE   = 'background:linear-gradient(135deg,#16a34a,#15803d);box-shadow:0 4px 12px rgba(22,163,74,0.45);border:none;';
+    const UNDONE_STYLE = 'background:rgba(30,41,59,0.9);border:1.5px solid rgba(255,255,255,0.1);';
+
     const _debounceTimers = {};
     function debounce(fn, ms) {
         return function(...args) {
@@ -789,30 +758,23 @@
         };
     }
 
-    // ── Toast ──
     function showToast(msg, type = 'success') {
         const icon = type === 'success' ? 'fa-check-circle text-gray-400' : 'fa-exclamation-circle text-gray-400';
         const el = document.createElement('div');
         el.className = 'toast';
         el.innerHTML = `<i class="fas ${icon}"></i><span>${msg}</span>`;
         document.getElementById('toast-container').appendChild(el);
-        setTimeout(() => {
-            el.classList.add('out');
-            setTimeout(() => el.remove(), 300);
-        }, 2800);
+        setTimeout(() => { el.classList.add('out'); setTimeout(() => el.remove(), 300); }, 2800);
     }
 
-    // ── Count-up animation ──
     function animateCount(el, target) {
         const start = parseInt(el.textContent) || 0;
         if (start === target) return;
-        const dur = 600, step = 16;
-        const steps = Math.ceil(dur / step);
+        const dur = 600, step = 16, steps = Math.ceil(dur / step);
         const inc = (target - start) / steps;
         let cur = start, count = 0;
         const timer = setInterval(() => {
-            count++;
-            cur += inc;
+            count++; cur += inc;
             el.textContent = Math.round(count >= steps ? target : cur);
             if (count >= steps) clearInterval(timer);
         }, step);
@@ -823,13 +785,10 @@
         if (el) animateCount(el, val);
     }
 
-    // ── Scroll to top button ──
     window.addEventListener('scroll', () => {
-        const btn = document.getElementById('scrollTop');
-        btn.classList.toggle('visible', window.scrollY > 400);
+        document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 400);
     });
 
-    // ── Keyboard shortcuts ──
     document.addEventListener('keydown', (e) => {
         if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA') return;
         const map = { '1': 'store', '2': 'scoop', '3': 'restaurant', '4': 'biz' };
@@ -837,16 +796,11 @@
         if (e.key.toLowerCase() === 'r' && !e.ctrlKey && !e.metaKey) refreshData();
     });
 
-    // ── isNew helper ──
     function isNew(dateStr) {
         if (!dateStr) return false;
-        try {
-            const d = new Date(dateStr);
-            return d.toISOString().split('T')[0] >= TODAY;
-        } catch { return false; }
+        try { return new Date(dateStr).toISOString().split('T')[0] >= TODAY; } catch { return false; }
     }
 
-    // ── Highlight search term ──
     function highlight(text, term) {
         if (!term || !text) return escapeHtml(text || '');
         const escaped = escapeHtml(text);
@@ -854,7 +808,6 @@
         return escaped.replace(new RegExp('(' + escapedTerm + ')', 'gi'), '<mark>$1</mark>');
     }
 
-    // ── Tab switcher ──
     function switchTab(tab) {
         activeTab = tab;
         const tabs = { store: 'storeTabContent', scoop: 'scoopTabContent', restaurant: 'restaurantTabContent', biz: 'bizTabContent' };
@@ -875,7 +828,6 @@
         }
     }
 
-    // ── Update nav total ──
     function updateNavTotal() {
         const total = storeArticles.length + scoopArticles.length + restArticles.length + bizArticles.length;
         const badge = document.getElementById('navTotalBadge');
@@ -884,7 +836,7 @@
         badge.classList.toggle('inline-flex', total > 0);
     }
 
-    // ══════════════ STORE NEWS ══════════════
+    // ══ STORE NEWS ══
     async function loadStoreData() {
         try {
             document.getElementById('loadingState').classList.remove('hidden');
@@ -997,15 +949,19 @@
         const newBadge = isNew(article.Published) ? `<span class="badge-new"><i class="fas fa-star" style="font-size:0.5rem"></i>New</span>` : '';
         const accentClass = isOpening ? 'card-accent-green' : 'card-accent-orange';
 
+        /* ── UPDATED: green style when done, grey border when undone ── */
+        const btnStyle = isDone ? DONE_STYLE : UNDONE_STYLE;
+        const iconOpacity = isDone ? 'opacity-100' : 'opacity-0';
+
         return `
             <div class="glass-card ${accentClass} rounded-2xl p-5 relative">
                 <div class="absolute top-3.5 right-3.5 flex items-center gap-2">
                     ${newBadge}
                     <div class="w-8 h-8 rounded-lg cursor-pointer flex items-center justify-center transition-all shadow-sm"
-                        style="${isDone ? 'background:rgba(100,116,139,0.8);' : 'background:rgba(30,41,59,0.9);border:1.5px solid rgba(255,255,255,0.1);'}"
+                        style="${btnStyle}"
                         onclick="toggleDoneStatus('${escapeHtml(articleKey)}', this)"
                         title="${isDone ? 'Marked as done — click to undo' : 'Mark as done'}">
-                        <i class="fas fa-check text-white text-xs ${isDone ? 'opacity-100' : 'opacity-0'} transition-opacity duration-200"></i>
+                        <i class="fas fa-check text-white text-xs ${iconOpacity} transition-opacity duration-200"></i>
                     </div>
                 </div>
                 <div class="flex items-start gap-2 mb-3">
@@ -1027,22 +983,23 @@
             </div>`;
     }
 
+    /* ── UPDATED: toggleDoneStatus — green when ticked ── */
     function toggleDoneStatus(key, el) {
         const isDone = localStorage.getItem(key) === 'true';
         if (isDone) {
             localStorage.removeItem(key);
-            el.style = 'background:rgba(30,41,59,0.9);border:1.5px solid rgba(255,255,255,0.1);';
+            el.style.cssText = UNDONE_STYLE;
             el.querySelector('i').className = 'fas fa-check text-white text-xs opacity-0 transition-opacity duration-200';
             el.title = 'Mark as done';
         } else {
             localStorage.setItem(key, 'true');
-            el.style = 'background:rgba(100,116,139,0.8);';
+            el.style.cssText = DONE_STYLE;
             el.querySelector('i').className = 'fas fa-check text-white text-xs opacity-100 transition-opacity duration-200';
             el.title = 'Marked as done — click to undo';
         }
     }
 
-    // ══════════════ CT SCOOP ══════════════
+    // ══ CT SCOOP ══
     async function loadScoopData() {
         try {
             document.getElementById('scoopLoadingState').classList.remove('hidden');
@@ -1138,7 +1095,7 @@
             </div>`;
     }
 
-    // ══════════════ RESTAURANT ══════════════
+    // ══ RESTAURANT ══
     async function loadRestData() {
         try {
             document.getElementById('restLoadingState').classList.remove('hidden');
@@ -1255,7 +1212,7 @@
         showToast('Restaurant CSV downloaded!');
     }
 
-    // ══════════════ CT SCOOP SUB-TAB ══════════════
+    // ══ CT SCOOP SUB-TAB ══
     function switchScoopSubTab(subTab) {
         activeScoopSubTab = subTab;
         toggleSubTab('scoopArticlesSubTab', 'scoopExtractionSubTab', 'subTabArticlesBtn', 'subTabExtractionBtn', subTab === 'articles');
@@ -1263,7 +1220,7 @@
         if (subTab === 'extraction' && extractionRows.length === 0) loadScoopExtractionData();
     }
 
-    // ══════════════ CT SCOOP EXTRACTION ══════════════
+    // ══ CT SCOOP EXTRACTION ══
     async function loadScoopExtractionData() {
         try {
             document.getElementById('extLoadingState').classList.remove('hidden');
@@ -1325,7 +1282,7 @@
         showToast('CT Scoop Extraction CSV downloaded!');
     }
 
-    // ══════════════ RESTAURANT SUB-TAB ══════════════
+    // ══ RESTAURANT SUB-TAB ══
     function switchRestSubTab(subTab) {
         activeRestSubTab = subTab;
         toggleSubTab('restArticlesSubTab', 'restExtractionSubTab', 'restSubTabArticlesBtn', 'restSubTabExtractionBtn', subTab === 'articles');
@@ -1333,7 +1290,7 @@
         if (subTab === 'extraction' && restExtractionRows.length === 0) loadRestExtractionData();
     }
 
-    // ══════════════ RESTAURANT EXTRACTION ══════════════
+    // ══ RESTAURANT EXTRACTION ══
     async function loadRestExtractionData() {
         try {
             document.getElementById('restExtLoadingState').classList.remove('hidden');
@@ -1394,7 +1351,7 @@
         showToast('Restaurant Extraction CSV downloaded!');
     }
 
-    // ══════════════ BIZ DEBUT SUB-TAB ══════════════
+    // ══ BIZ DEBUT SUB-TAB ══
     function switchBizSubTab(subTab) {
         activeBizSubTab = subTab;
         toggleSubTab('bizArticlesSubTab', 'bizExtractionSubTab', 'bizSubTabArticlesBtn', 'bizSubTabExtractionBtn', subTab === 'articles');
@@ -1402,7 +1359,7 @@
         if (subTab === 'extraction' && bizExtractionRows.length === 0) loadBizExtractionData();
     }
 
-    // ══════════════ BIZ DEBUT ARTICLES ══════════════
+    // ══ BIZ DEBUT ARTICLES ══
     async function loadBizData() {
         try {
             document.getElementById('bizLoadingState').classList.remove('hidden');
@@ -1497,7 +1454,7 @@
             </div>`;
     }
 
-    // ══════════════ BIZ EXTRACTION ══════════════
+    // ══ BIZ EXTRACTION ══
     async function loadBizExtractionData() {
         try {
             document.getElementById('bizExtLoadingState').classList.remove('hidden');
@@ -1558,12 +1515,11 @@
         showToast('Business Debut Extraction CSV downloaded!');
     }
 
-    // ══════════════ SHARED HELPERS ══════════════
+    // ══ SHARED HELPERS ══
     function buildExtractionRow(r, i, term, accentColor) {
         const isOpening = r.event_type === 'Opening';
         const isClosing = r.event_type === 'Closing';
         const noData    = r.store_name === 'No qualifying business found';
-        const hoverColor = { blue: 'hover:bg-slate-600', orange: 'hover:bg-slate-600', indigo: 'hover:bg-slate-600' }[accentColor] || 'hover:bg-slate-600';
 
         const typeBadge = noData
             ? `<span class="px-2 py-1 rounded-full text-xs bg-slate-700 text-gray-500">N/A</span>`
@@ -1575,7 +1531,7 @@
 
         const linkCell = (r.article_link && r.article_link !== 'N/A')
             ? `<a href="${escapeHtml(r.article_link)}" target="_blank" rel="noopener noreferrer"
-                  class="px-2.5 py-1.5 bg-slate-700/80 ${hoverColor} rounded-lg text-xs transition-colors inline-flex items-center gap-1">
+                  class="px-2.5 py-1.5 bg-slate-700/80 hover:bg-slate-600 rounded-lg text-xs transition-colors inline-flex items-center gap-1">
                    <i class="fas fa-external-link-alt text-xs"></i>Visit
                </a>`
             : `<span class="text-gray-600 text-xs">—</span>`;
@@ -1650,7 +1606,6 @@
         Promise.resolve(loader).finally(() => setTimeout(() => icon.classList.remove('spin-anim'), 500));
     }
 
-    // ── Init ──
     window.addEventListener('DOMContentLoaded', () => {
         switchTab('store');
         loadStoreData();
