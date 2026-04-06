@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-02",
+  "last_updated": "2026-04-06",
   "data": [
     {
       "store_name": "Couch Potato",
@@ -63,6 +63,42 @@
       "status": "Planned (lease pending finalization)",
       "short_description": "Ross Dress for Less is eyeing a ~30,000 square foot former Big Lots space at 1150 Union Street in West Springfield, MA, with a tentative opening in Fall 2026. The opening is contingent on lease finalization and construction permits. Ross has also signed a lease for a Chicopee location as part of its broader East Coast expansion.",
       "article_link": "https://www.theconnecticutscoop.com/all-mass-posts/west-springfield-scoop-ross-dress-for-less-eyeing-former-big-lots-for-new-location"
+    },
+    {
+      "store_name": "Toor Wine & Liquor",
+      "location": "212 Talcottville Road, Vernon, CT",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "Now open",
+      "short_description": "Toor Wine & Liquor has opened at 212 Talcottville Road in Vernon, part of a brand new plaza. The store offers a large selection of wine, liquors, beer, and single cans. Hours: Monday–Saturday 9am–9pm, Sunday 10am–6pm.",
+      "article_link": "https://www.theconnecticutscoop.com/all-tolland-county-posts/vernon-scoop-toor-wine-liquor-opens"
+    },
+    {
+      "store_name": "Shogun X Sushi",
+      "location": "1483 Pleasant Valley Road, Manchester, CT",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "Now open",
+      "short_description": "Shogun X Sushi has opened at 1483 Pleasant Valley Road in Manchester, across from The Plaza at Buckland Hills, in the former Hooters space. All-you-can-eat Japanese restaurant featuring a conveyor belt and train food delivery system, IPad ordering, and claw machines. Adult Lunch $27.99, Adult Dinner $37.99. Hours: Mon–Thu 11am–10pm, Fri–Sun 11am–10:30pm.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/manchester-scoop-shogun-x-sushi-opens-in-manchester"
+    },
+    {
+      "store_name": "Mozz & Co",
+      "location": "22 Raymond Road, West Hartford, CT",
+      "event_type": "Opening",
+      "event_date": "April 8, 2026",
+      "status": "Opening April 8, 2026",
+      "short_description": "Mozz & Co, an upscale-casual Italian deli, is opening April 8, 2026 at 22 Raymond Road in West Hartford. Owned by chef Joey Cusano (former executive chef at Le Mazet). Serves chicken cutlets, porchetta, broccoli rabe, house-made meats, salads, and Italian desserts. Hours: Mon–Sat 11am–5pm, Sun 11am–3pm.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/west-hartford-scoop-mozz-co-sneak-peek-opens-wednesday-0408"
+    },
+    {
+      "store_name": "Pandora",
+      "location": "The Shops at Evergreen Walk, South Windsor, CT (former Lux Bond & Green space)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "Under construction",
+      "short_description": "Pandora jewelry store is under construction at The Shops at Evergreen Walk in South Windsor, in the former Lux Bond & Green space next to Brighton Collectibles. Construction permit valued at ~$100,000. Opening date TBD.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/south-windsor-scoop-pandora-starts-construction-at-evergreen-walk"
     }
   ],
   "non_working": []

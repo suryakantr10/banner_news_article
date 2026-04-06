@@ -130,17 +130,52 @@
 
         .badge-new {
             display: inline-flex; align-items: center; gap: 3px;
-            background: linear-gradient(135deg, #64748b, #475569);
-            color: #fff; font-size: 0.6rem; font-weight: 700;
-            padding: 2px 7px; border-radius: 999px;
-            box-shadow: 0 2px 8px rgba(100,116,139,0.5);
-            animation: newPulse 2s ease-in-out infinite;
-            letter-spacing: 0.05em; text-transform: uppercase;
+            background: linear-gradient(135deg, #f59e0b, #ef4444, #ec4899);
+            background-size: 200% 200%;
+            color: #fff; font-size: 0.6rem; font-weight: 800;
+            padding: 2px 8px; border-radius: 999px;
+            letter-spacing: 0.08em; text-transform: uppercase;
+            animation: badgeShimmer 2.5s linear infinite, badgeGlow 1.8s ease-in-out infinite;
+            position: relative; overflow: hidden;
         }
-        @keyframes newPulse {
-            0%,100% { box-shadow: 0 2px 8px rgba(100,116,139,0.5); }
-            50% { box-shadow: 0 2px 16px rgba(100,116,139,0.8); }
+        .badge-new::after {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
+            transform: translateX(-100%);
+            animation: badgeSweep 2.5s linear infinite;
         }
+        @keyframes badgeShimmer {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @keyframes badgeSweep {
+            0% { transform: translateX(-100%); }
+            60%, 100% { transform: translateX(200%); }
+        }
+        @keyframes badgeGlow {
+            0%, 100% { box-shadow: 0 0 6px rgba(245,158,11,0.7), 0 0 14px rgba(245,158,11,0.35); }
+            50% { box-shadow: 0 0 12px rgba(245,158,11,1), 0 0 24px rgba(239,68,68,0.55); }
+        }
+        .card-new-glow {
+            border-color: rgba(245,158,11,0.35) !important;
+            animation: cardNewGlow 3s ease-in-out infinite !important;
+        }
+        @keyframes cardNewGlow {
+            0%, 100% { box-shadow: 0 0 0 1px rgba(245,158,11,0.18), 0 8px 24px rgba(0,0,0,0.3); }
+            50% { box-shadow: 0 0 0 1px rgba(245,158,11,0.38), 0 0 28px rgba(245,158,11,0.14), 0 8px 24px rgba(0,0,0,0.3); }
+        }
+        .tab-new-dot {
+            display: inline-flex; align-items: center; justify-content: center;
+            min-width: 17px; height: 17px; padding: 0 4px;
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            color: #fff; font-size: 0.55rem; font-weight: 800;
+            border-radius: 999px; margin-left: 5px; vertical-align: middle;
+            box-shadow: 0 2px 8px rgba(245,158,11,0.55);
+            animation: badgeGlow 1.8s ease-in-out infinite;
+        }
+        tr.row-new { background: rgba(245,158,11,0.04) !important; }
+        tr.row-new td:first-child { border-left: 2px solid rgba(245,158,11,0.4); }
 
         #toast-container { position: fixed; bottom: 24px; right: 24px; z-index: 9999; display: flex; flex-direction: column; gap: 10px; }
         .toast {
@@ -234,6 +269,10 @@
                         <span class="pulse-dot w-2 h-2 bg-gray-400 rounded-full inline-block"></span>
                         Auto-updated daily
                     </span>
+                    <button id="markAllReadBtn" onclick="markAllRead()" class="hidden px-4 py-2 rounded-xl font-medium flex items-center gap-2 text-sm" style="background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.3);color:#fbbf24;transition:all 0.2s;" title="Mark all articles as read">
+                        <i class="fas fa-check-double"></i>
+                        <span class="hidden sm:inline">Mark Read</span>
+                    </button>
                     <button onclick="refreshData()" class="btn-primary px-4 py-2 rounded-xl font-medium flex items-center gap-2 text-sm text-white">
                         <i class="fas fa-sync-alt" id="refreshIcon"></i>
                         <span class="hidden sm:inline">Refresh</span>
@@ -266,16 +305,16 @@
         <div class="mb-8 flex justify-center">
             <div class="glass rounded-2xl p-1 flex gap-1 flex-wrap justify-center">
                 <button id="tabStoreBtn" class="tab-btn active" onclick="switchTab('store')">
-                    <i class="fas fa-store mr-1.5"></i>Store News
+                    <i class="fas fa-store mr-1.5"></i>Store News<span id="tabStoreNewCount" class="tab-new-dot hidden"></span>
                 </button>
                 <button id="tabScoopBtn" class="tab-btn" onclick="switchTab('scoop')">
-                    <i class="fas fa-bullhorn mr-1.5"></i>CT Scoop
+                    <i class="fas fa-bullhorn mr-1.5"></i>CT Scoop<span id="tabScoopNewCount" class="tab-new-dot hidden"></span>
                 </button>
                 <button id="tabRestaurantBtn" class="tab-btn" onclick="switchTab('restaurant')">
-                    <i class="fas fa-utensils mr-1.5"></i>Restaurant
+                    <i class="fas fa-utensils mr-1.5"></i>Restaurant<span id="tabRestaurantNewCount" class="tab-new-dot hidden"></span>
                 </button>
                 <button id="tabBizBtn" class="tab-btn" onclick="switchTab('biz')">
-                    <i class="fas fa-briefcase mr-1.5"></i>Biz Debut
+                    <i class="fas fa-briefcase mr-1.5"></i>Biz Debut<span id="tabBizNewCount" class="tab-new-dot hidden"></span>
                 </button>
             </div>
         </div>
@@ -746,6 +785,69 @@
 
     const TODAY = new Date().toISOString().split('T')[0];
 
+    // ── Smart "New" tracking ──────────────────────────────────────────────────
+    // PREV_VISIT_DATE: what the user saw on their last session
+    const PREV_VISIT_DATE = localStorage.getItem('lastVisitDate') || '1970-01-01';
+    // Record today so next session knows what was already seen
+    if (PREV_VISIT_DATE !== TODAY) localStorage.setItem('lastVisitDate', TODAY);
+    // Per-article seen set (URL/key → dismissed)
+    const seenSet = new Set(JSON.parse(localStorage.getItem('seenArticles') || '[]'));
+
+    function markArticleSeen(key, event) {
+        if (!key) return;
+        seenSet.add(key);
+        localStorage.setItem('seenArticles', JSON.stringify([...seenSet]));
+        // Real-time DOM removal: strip badge + glow from the clicked card
+        const src = event && (event.currentTarget || event.target);
+        if (src) {
+            const card = src.closest('.glass-card') || src.closest('tr');
+            if (card) {
+                card.querySelectorAll('.badge-new').forEach(b => b.remove());
+                card.classList.remove('card-new-glow');
+                card.classList.remove('row-new');
+            }
+        }
+        setTimeout(updateTabNewCounts, 80);
+    }
+
+    function markAllRead() {
+        // Add all currently known article keys to seenSet
+        storeArticles.forEach(a => seenSet.add(a.Link || a.Title || ''));
+        scoopArticles.forEach(a => seenSet.add(a.link || ''));
+        restArticles.forEach(a => seenSet.add(a.url || ''));
+        bizArticles.forEach(a => seenSet.add(a.link || ''));
+        localStorage.setItem('seenArticles', JSON.stringify([...seenSet]));
+        // Remove all badges and glows from current DOM
+        document.querySelectorAll('.badge-new').forEach(b => b.remove());
+        document.querySelectorAll('.card-new-glow').forEach(c => c.classList.remove('card-new-glow'));
+        document.querySelectorAll('.row-new').forEach(r => r.classList.remove('row-new'));
+        updateTabNewCounts();
+        showToast('All articles marked as read');
+    }
+
+    function updateTabNewCounts() {
+        const counts = {
+            store: storeArticles.filter(a => isNew(a.Published, a.Link || a.Title || '')).length,
+            scoop: scoopArticles.filter(a => isNew(a.date, a.link || '')).length,
+            restaurant: restArticles.filter(a => isNew(a.date, a.url || '')).length,
+            biz: bizArticles.filter(a => isNew(a.date, a.link || '')).length,
+        };
+        const updateDot = (id, n) => {
+            const el = document.getElementById(id);
+            if (!el) return;
+            el.textContent = n > 99 ? '99+' : n;
+            el.classList.toggle('hidden', n === 0);
+        };
+        updateDot('tabStoreNewCount',      counts.store);
+        updateDot('tabScoopNewCount',      counts.scoop);
+        updateDot('tabRestaurantNewCount', counts.restaurant);
+        updateDot('tabBizNewCount',        counts.biz);
+        const totalNew = Object.values(counts).reduce((s, v) => s + v, 0);
+        const markAllBtn = document.getElementById('markAllReadBtn');
+        if (markAllBtn) markAllBtn.classList.toggle('hidden', totalNew === 0);
+    }
+    // ─────────────────────────────────────────────────────────────────────────
+
     /* ── green checkmark style constants ── */
     const DONE_STYLE   = 'background:linear-gradient(135deg,#16a34a,#15803d);box-shadow:0 4px 12px rgba(22,163,74,0.45);border:none;';
     const UNDONE_STYLE = 'background:rgba(30,41,59,0.9);border:1.5px solid rgba(255,255,255,0.1);';
@@ -796,9 +898,14 @@
         if (e.key.toLowerCase() === 'r' && !e.ctrlKey && !e.metaKey) refreshData();
     });
 
-    function isNew(dateStr) {
+    function isNew(dateStr, key) {
         if (!dateStr) return false;
-        try { return new Date(dateStr).toISOString().split('T')[0] >= TODAY; } catch { return false; }
+        if (key && seenSet.has(key)) return false;
+        try {
+            const d = new Date(dateStr).toISOString().split('T')[0];
+            // New if: published today OR published since the user's last visit
+            return d >= TODAY || d > PREV_VISIT_DATE;
+        } catch { return false; }
     }
 
     function highlight(text, term) {
@@ -867,6 +974,7 @@
             updateStoreStats(storeArticles);
             renderStoreArticles();
             updateNavTotal();
+            updateTabNewCounts();
             document.getElementById('loadingState').classList.add('hidden');
         } catch (err) {
             console.error(err);
@@ -946,15 +1054,18 @@
 
         const articleKey = 'done-' + (article.Link || article.Title || 'x' + Math.random().toString(36).slice(2));
         const isDone = localStorage.getItem(articleKey) === 'true';
-        const newBadge = isNew(article.Published) ? `<span class="badge-new"><i class="fas fa-star" style="font-size:0.5rem"></i>New</span>` : '';
+        const _seenKey = article.Link || article.Title || '';
+        const articleIsNew = isNew(article.Published, _seenKey);
+        const newBadge = articleIsNew ? `<span class="badge-new"><i class="fas fa-bolt" style="font-size:0.5rem"></i>NEW</span>` : '';
         const accentClass = isOpening ? 'card-accent-green' : 'card-accent-orange';
+        const newGlowClass = articleIsNew ? ' card-new-glow' : '';
 
         /* ── UPDATED: green style when done, grey border when undone ── */
         const btnStyle = isDone ? DONE_STYLE : UNDONE_STYLE;
         const iconOpacity = isDone ? 'opacity-100' : 'opacity-0';
 
         return `
-            <div class="glass-card ${accentClass} rounded-2xl p-5 relative">
+            <div class="glass-card${newGlowClass} ${accentClass} rounded-2xl p-5 relative">
                 <div class="absolute top-3.5 right-3.5 flex items-center gap-2">
                     ${newBadge}
                     <div class="w-8 h-8 rounded-lg cursor-pointer flex items-center justify-center transition-all shadow-sm"
@@ -971,6 +1082,7 @@
                 </div>
                 <h3 class="font-bold text-base mb-1.5 text-white pr-16">${highlight(article.Store || '', term)}</h3>
                 <a href="${escapeHtml(article.Link || '#')}" target="_blank" rel="noopener noreferrer"
+                   onclick="markArticleSeen('${escapeHtml(_seenKey)}', event)"
                    class="text-blue-400 hover:text-blue-300 text-sm font-medium mb-3 block line-clamp-2 transition-colors">
                     ${highlight(article.Title || '', term)}
                     <i class="fas fa-external-link-alt text-xs ml-1 opacity-60"></i>
@@ -1021,6 +1133,7 @@
             updateScoopStats(filteredScoopArticles);
             renderScoopArticles();
             updateNavTotal();
+            updateTabNewCounts();
             document.getElementById('scoopLoadingState').classList.add('hidden');
         } catch (err) {
             console.error(err);
@@ -1076,9 +1189,12 @@
             const d = new Date(dateText);
             if (!isNaN(d.getTime())) dateText = d.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' });
         } catch {}
-        const newBadge = isNew(article.date) ? `<span class="badge-new ml-2"><i class="fas fa-star" style="font-size:0.5rem"></i>New</span>` : '';
+        const _scoopKey = article.link || '';
+        const scoopIsNew = isNew(article.date, _scoopKey);
+        const newBadge = scoopIsNew ? `<span class="badge-new ml-2"><i class="fas fa-bolt" style="font-size:0.5rem"></i>NEW</span>` : '';
+        const newGlowClass = scoopIsNew ? ' card-new-glow' : '';
         return `
-            <div class="glass-card card-accent-blue rounded-2xl p-5">
+            <div class="glass-card${newGlowClass} card-accent-blue rounded-2xl p-5">
                 <div class="flex items-center gap-2 mb-3">
                     <span class="badge-opening px-3 py-1 rounded-full text-xs font-bold text-white flex items-center gap-1">
                         <i class="fas fa-bullhorn text-xs"></i>Scoop
@@ -1086,6 +1202,7 @@
                 </div>
                 <h3 class="font-bold text-base mb-3 text-white leading-snug">${highlight(article.heading || '', term)}</h3>
                 <a href="${escapeHtml(article.link || '#')}" target="_blank" rel="noopener noreferrer"
+                   onclick="markArticleSeen('${escapeHtml(_scoopKey)}', event)"
                    class="text-blue-400 hover:text-blue-300 text-sm font-medium mb-3 block transition-colors">
                     View full story <i class="fas fa-external-link-alt text-xs ml-1 opacity-60"></i>
                 </a>
@@ -1112,6 +1229,7 @@
             updateRestStats(filteredRestArticles);
             renderRestTable();
             updateNavTotal();
+            updateTabNewCounts();
             document.getElementById('restLoadingState').classList.add('hidden');
         } catch (err) {
             console.error(err);
@@ -1180,9 +1298,11 @@
                        <span class="text-gray-300 text-xs">${highlight(addr, term)}</span>
                    </a>`
                 : `<span class="text-gray-500 italic text-xs flex items-center gap-1"><i class="fas fa-map-marker-alt text-gray-600 text-xs"></i>No address</span>`;
-            const newTag = isNew(r.date) ? `<span class="badge-new ml-2" style="font-size:0.55rem">New</span>` : '';
+            const _restKey = r.url || '';
+            const restRowIsNew = isNew(r.date, _restKey);
+            const newTag = restRowIsNew ? `<span class="badge-new ml-2" style="font-size:0.55rem"><i class="fas fa-bolt" style="font-size:0.45rem"></i>NEW</span>` : '';
             return `
-            <tr>
+            <tr class="${restRowIsNew ? 'row-new' : ''}" onclick="if(event.target.tagName==='A'||event.target.closest('a'))markArticleSeen('${_restKey}',event)">
                 <td class="px-4 py-3 text-gray-600 text-xs whitespace-nowrap">
                     <span class="text-gray-600 mr-2 font-semibold">${i+1}</span>${escapeHtml(r.date||'')}${newTag}
                 </td>
@@ -1379,6 +1499,7 @@
             updateBizStats(filteredBizArticles);
             renderBizArticles();
             updateNavTotal();
+            updateTabNewCounts();
             document.getElementById('bizLoadingState').classList.add('hidden');
         } catch (err) {
             console.error(err);
@@ -1434,9 +1555,12 @@
             const d = new Date(dateText);
             if (!isNaN(d.getTime())) dateText = d.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' });
         } catch {}
-        const newBadge = isNew(article.date) ? `<span class="badge-new ml-2"><i class="fas fa-star" style="font-size:0.5rem"></i>New</span>` : '';
+        const _bizKey = article.link || '';
+        const bizIsNew = isNew(article.date, _bizKey);
+        const newBadge = bizIsNew ? `<span class="badge-new ml-2"><i class="fas fa-bolt" style="font-size:0.5rem"></i>NEW</span>` : '';
+        const newGlowClass = bizIsNew ? ' card-new-glow' : '';
         return `
-            <div class="glass-card card-accent-indigo rounded-2xl p-5">
+            <div class="glass-card${newGlowClass} card-accent-indigo rounded-2xl p-5">
                 <div class="flex items-center gap-2 mb-3">
                     <span class="px-3 py-1 rounded-full text-xs font-bold text-white flex items-center gap-1"
                           style="background:linear-gradient(135deg,#6366f1,#4f46e5);box-shadow:0 4px 14px rgba(99,102,241,0.35)">
@@ -1445,6 +1569,7 @@
                 </div>
                 <h3 class="font-bold text-base mb-3 text-white leading-snug">${highlight(article.title||'', term)}</h3>
                 <a href="${escapeHtml(article.link||'#')}" target="_blank" rel="noopener noreferrer"
+                   onclick="markArticleSeen('${escapeHtml(_bizKey)}', event)"
                    class="text-indigo-400 hover:text-indigo-300 text-sm font-medium mb-3 block transition-colors">
                     View full story <i class="fas fa-external-link-alt text-xs ml-1 opacity-60"></i>
                 </a>
