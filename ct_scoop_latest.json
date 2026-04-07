@@ -1,10 +1,30 @@
 {
-  "last_updated": "2026-04-06",
+  "last_updated": "2026-04-07",
   "data": [
+    {
+      "heading": "CANTON SCOOP: CAVA coming soon to The Shops at Farmington Valley",
+      "date": "2026-04-06",
+      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/canton-scoop-cava-coming-soon-to-the-shops-at-farmington-valley"
+    },
+    {
+      "heading": "BRISTOL SCOOP: American Liquidations coming to Bristol",
+      "date": "2026-04-06",
+      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/bristol-scoop-american-liquidations-coming-to-bristol"
+    },
+    {
+      "heading": "NORTH HAVEN SCOOP: Olde World Apizza sold to group of seasoned restaurateurs",
+      "date": "2026-04-06",
+      "link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/north-haven-scoop-olde-world-apizza-sold-to-group-of-seasoned-restaurateurs"
+    },
     {
       "heading": "VERNON SCOOP: Toor Wine & Liquor opens",
       "date": "2026-04-05",
       "link": "https://www.theconnecticutscoop.com/all-tolland-county-posts/vernon-scoop-toor-wine-liquor-opens"
+    },
+    {
+      "heading": "AVON SCOOP: Michaels Jewelers opening first Estate Jewelry store in Avon",
+      "date": "2026-04-05",
+      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/avon-scoop-michaels-jewelers-opening-first-estate-jewelry-store-in-avon"
     },
     {
       "heading": "MANCHESTER SCOOP: Shogun X Sushi opens in Manchester",
@@ -20,6 +40,16 @@
       "heading": "SOUTH WINDSOR SCOOP: Pandora starts construction at Evergreen Walk",
       "date": "2026-04-05",
       "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/south-windsor-scoop-pandora-starts-construction-at-evergreen-walk"
+    },
+    {
+      "heading": "WATERFORD SCOOP: Dave's Hot Chicken sets opening date for Waterford location!",
+      "date": "2026-04-05",
+      "link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/waterford-scoop-daves-hot-chicken-sets-opening-date-for-waterford-location"
+    },
+    {
+      "heading": "MOHEGAN SUN SCOOP: The Secret Garden Bar opens at Mohegan Sun",
+      "date": "2026-04-05",
+      "link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/mohegan-sun-scoop-the-secret-garden-bar-opens-at-mohegan-sun"
     }
   ]
 }
