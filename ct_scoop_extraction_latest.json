@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-06",
+  "last_updated": "2026-04-08",
   "data": [
     {
       "store_name": "Couch Potato",
@@ -99,6 +99,69 @@
       "status": "Under construction",
       "short_description": "Pandora jewelry store is under construction at The Shops at Evergreen Walk in South Windsor, in the former Lux Bond & Green space next to Brighton Collectibles. Construction permit valued at ~$100,000. Opening date TBD.",
       "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/south-windsor-scoop-pandora-starts-construction-at-evergreen-walk"
+    },
+    {
+      "store_name": "Mansfield Drive-In",
+      "location": "228 Stafford Road, Mansfield, CT",
+      "event_type": "Opening",
+      "event_date": "April 5, 2026",
+      "status": "Now open",
+      "short_description": "Mansfield Drive-In has opened for its 72nd consecutive season. Double features shown nightly. Adult tickets: $14.50; Children/Military/Seniors: $10.50. Flea market Sundays 8 AM–2 PM, $3/vehicle. Online ticket pre-purchase available.",
+      "article_link": "https://www.theconnecticutscoop.com/all-tolland-county-posts/mansfield-scoop-mansfield-drive-in-opens-for-the-season"
+    },
+    {
+      "store_name": "Manchester Roundabout Project",
+      "location": "Main Street & Center Street, Manchester, CT",
+      "event_type": "Development",
+      "event_date": "Not specified",
+      "status": "Conceptual/planning stage",
+      "short_description": "Manchester is eyeing a roundabout at Main Street and Center Street to improve safety, reduce congestion, and create a welcoming downtown gateway. Conceptual rendering shared via community Facebook groups. Town is applying for state LOTCIP funding and seeking community feedback.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/manchester-scoop-town-eyeing-possible-round-about-on-main-street-conceptual-rendering-shared"
+    },
+    {
+      "store_name": "PopUp Bagels",
+      "location": "Cedar Corner, 930 High Ridge Road, Stamford, CT",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "Coming soon",
+      "short_description": "PopUp Bagels is opening its 5th Connecticut location at Cedar Corner in Stamford, between Open Rice and NP Jewelers. Offers fresh daily bagels (plain, everything, poppyseed, salt, sesame), schmears, butters, salmon, coffee, and juices. Chain has 25+ national locations. No opening date announced.",
+      "article_link": "https://www.theconnecticutscoop.com/all-fairfield-county-posts/stamford-scoop-popup-bagels-coming-soon-to-stamford"
+    },
+    {
+      "store_name": "Crystal Mall / Electric Boat",
+      "location": "Crystal Mall, Waterford, CT",
+      "event_type": "Redevelopment",
+      "event_date": "Ongoing",
+      "status": "Under renovation with restricted access",
+      "short_description": "Crystal Mall in Waterford is undergoing major restructuring. Temporary construction walls limit access to 5 remaining active retailers: Men's Wearhouse, Sakura Japan, H&R Block, Lenscrafters, and Buffalo Wild Wings. Electric Boat is constructing a new facility inside for office space, research capabilities, and training operations, replacing the traditional open concourse.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/waterford-scoop-crystal-mall-update"
+    },
+    {
+      "store_name": "CAVA",
+      "location": "The Shops at Farmington Valley, 110 Albany Turnpike, Canton, CT",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "Coming soon",
+      "short_description": "CAVA Mediterranean fast-casual restaurant is opening at The Shops at Farmington Valley in Canton, taking over part of the former Talbots space. Serves customizable bowls and wraps with falafel, shawarma, lamb, grilled chicken, and steak. CAVA's 8th CT location (others in Newington, Westport, Greenwich, Danbury, Shelton, plus Glastonbury under construction). Opening date TBD.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/canton-scoop-cava-coming-soon-to-the-shops-at-farmington-valley"
+    },
+    {
+      "store_name": "American Liquidations",
+      "location": "Former Big Lots location, Bristol, CT",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "Coming soon",
+      "short_description": "American Liquidations, a high-quality discount retailer (not a bin store), is coming to the former Big Lots location in Bristol, sharing the ~45,000 sq ft building with Aldi (~25,000 sq ft each). Will carry furniture, tools, appliances, hardware, and merchandise pallets (new/overstock/open-box/returns). Currently operates in Waterbury and Milford.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/bristol-scoop-american-liquidations-coming-to-bristol"
+    },
+    {
+      "store_name": "Olde World Apizza",
+      "location": "1957 Whitney Avenue, North Haven, CT",
+      "event_type": "Ownership Change",
+      "event_date": "Not specified",
+      "status": "Ownership transferred",
+      "short_description": "Olde World Apizza in North Haven has been sold to three seasoned restaurateurs: Robert Marcarelli (30 years culinary experience, Pi Restaurant Consulting), Jared Schulefand (owner of Home restaurant, 14 years), and Israel Lopez (Grand Apizza North Haven background). The 30-year legacy, recipes, traditions, and existing staff are being maintained.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/north-haven-scoop-olde-world-apizza-sold-to-group-of-seasoned-restaurateurs"
     }
   ],
   "non_working": []
