@@ -1,0 +1,1500 @@
+============================================================
+PASTE INTO CLAUDE.AI — Part 1 of 11
+============================================================
+
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+1. URL: https://news.google.com/rss/articles/CBMiYkFVX3lxTFBYTnphem54N1V2RDVpdktYdmlUc3FCNDBCT2dNa3FXWkc4ZHJHWDQ3Q3gwS1FaaUNDVExPWUlRMWxWM2pJMWd3THdEYkhpdHZpSDUtS0Y2R2NSN01TVVhHdU13?oc=5
+   Title: Now Open: 1926 Heritage Hotel Penang Brings Living Heritage to a New Generation
+   Status hint: Opening | Industry: Hospitality
+2. URL: https://news.google.com/rss/articles/CBMixwFBVV95cUxQS2MyaUtCREsyODMwMkFKaDFBdmlYREtVOUdsSjdiYXZQM21oTWxvNVhTYzUzX3RDSjZIME1nUGUwaGNDWlNLcHR3X0k5VzI0dERUdzFDQTNvLVJTN0dtdkNVWnJBSTluTmd1cWJaTm9ja3NtSk85QVptbkxJQktZMmtxLTdDcjFhbm13ZmNRZmZtbHYxd3hLbk1ja3lOVFBHNVBIekpqM1BlZVp4UkhaWF9zUHVSeGN3dkZjZUNCWWh0UGdtanpv?oc=5
+   Title: Opening Soon: Bridge Street Breakfast & Lunch in Tylerville, A New Restaurant with a Touch of History
+   Status hint: Opening | Industry: Restaurants
+3. URL: https://news.google.com/rss/articles/CBMiiwNBVV95cUxPdnpSOGZ0SXpnMEhJeVBTQXpwYjlIb2NYODVEXzR4eGVLQ1JVYTF6TW8zQ3VIR2JUVUZYajlMcG5GbXIwUmF2QnExd3dnNHhZYWNkWTU5THl5ZmZTRFAzekZjZkQteFAxME9vSkR6Zi11cVF1RDNWekFybm5TZkMxb1d0eVVIekEySFFlQVVqU0dpejJyTlNyTzVsTEVXWnF6VElpS1ZGMGVCdGdZV1d2ZzNEU1VwbFdWT2ZhNGx1Ny1Mc0NvVWhFTnpqUEdqb2NDR2RzbDFJV3hGYzRsSnpPNFVJdlY2NFdxenBqNC1EM2dPcXNoVW9GV1JsQXliVkNoYkpXSjFSQUxXdVpibzdjeC1ZdlRVclNHN0pOYTRUZlpEcnhxR1JOMmdScTd5YkNkWFYtTy14QW9WVE03MGItZ1Q1QXJyekhMU3VsT0o1SDRlVXJSOUkzUTFNSmc3Qy1uc1gxdDZ6aEt6UFNKdDNaRE9SbVgwcGtPVllkQ01HLW93LUZCbkxON1VIZw?oc=5
+   Title: Gina Maria’s Pizza bankruptcy shines light on why the cherished restaurant closed: See full list of locations
+   Status hint: Closing | Industry: Restaurants
+4. URL: https://news.google.com/rss/articles/CBMi3gFBVV95cUxNekhuTkRlQ3dmanEwUmxWVzJFZ2l6NTlRVmhHbzA1WDhwaU1pLXByWlFjb09XdWZrQ1pGelB0Sm9TWjBGdjJzcEpMaVRtQzNWb3U2MU5DV2FhcTd5cUVURnhIaWhNM3cwMm5SNkxkT0ZseEE1SGVJWjkwYUl6RURReVpWdkRjRVdhbVZIZFVYUVdHQTdXREdDUVRxVEI5LXl3RDFfT25nMGc0WEV2MnJtQ0hwUzAzVUNkVHZpdE12XzFrUGZhR2RNUHJISG8tQ1ZtS2xtSlRENklNREhIOHc?oc=5
+   Title: Restaurant chain with 3,193 locations shut down after bankruptcy filing
+   Status hint: Closing | Industry: Restaurants
+5. URL: https://news.google.com/rss/articles/CBMitgFBVV95cUxPTFdQcUtsLUpLTXFfNWVQUEZJZ2FWYnNlMDRJQ3o0UjNEUjRSMDFEZlFGaEVOdTRha25BdlJoemxVZjdRdnBWNWp0Zmc5MlF5c0NUcXlpTlpoVUxsdGd5dHlndHdMUHRCMUJTNElxODl1SlVGZk5saUdtejMyRW1BNVN4U0h4SWV4SExZa0hhMXZSVVhwYzktdkZLZkNnUlJROG9YYjNWXzVGNnlTaS1LT08zNGliQQ?oc=5
+   Title: Gene Simmons Attends Royal Oak Restaurant's Grand Opening
+   Status hint: Opening | Industry: Restaurants
+6. URL: https://news.google.com/rss/articles/CBMiwgFBVV95cUxQSVFqcVpoRnpDQk5iYXNkNE5heDBqVmZ0NlBsdkNKTEVRZExCbjV2d1o4bzNDV0pvWEJxZXBwUFZSaGZxdGU2b3JJNVNKenB3RzVRR0hOWFc1NVdsVWxDVFRKaWFhTVp3MTdFSnRuQkVzRzh3Z29FeHdhUGxVYXJ0Q1d4ZWhhZUdBTUFCR25Jd3RFOEFmNmg0YmhINThFZjFUZGNQbU1CTU5aeG43cjhkWXlZbFV3NkpMMWs0dWIxbWhEd9IB1gFBVV95cUxQZDB4UkFxWjBKckxkcDBnOEtzQzl0X0pzaVY3ZXRDbG9TcW1laWNGUEhJa2NKSllXWjZTckpuZGNWMUplRXIzM3lrY01TVHpubFUzNkVHNmJMSEZvNmkxdzdKT3luWHZNS0c2cjFpb0k0M2VZajU4X0VoRzVON21tc1RPS1AzcTNJbERYTG5VLXItSmgyZU5FcExmQldaMlZmWi1FVmF2NXQ1RzBfWG5ZLW9aVTJhalNRWjZXNnE3V1NRQ3ZNZGJETzQ1REF3MUotcm5haXd3?oc=5
+   Title: New Filipino restaurant Adobo Boy to celebrate roots with grand opening
+   Status hint: Opening | Industry: Restaurants
+7. URL: https://news.google.com/rss/articles/CBMiiAFBVV95cUxQM3cwOXVxX0RmSkNmUEw5LUs4czVJYzZ4bHBVZnBNTUxONWJyT0JUU2ptSEZHenNBbmVPVTZ6WlVLR0h4ODhTQ0VHQWhTOGh1NDB3b1l5S1VzLU5YUEhnLTVCdEc5TTNKOEhCMTc5eFdpVmIyZmF5X3A2T1F3bm9HVTdiN0VnbE9D?oc=5
+   Title: New shawarma restaurant in Orangeville hosts grand opening
+   Status hint: Opening | Industry: Restaurants
+8. URL: https://news.google.com/rss/articles/CBMivAFBVV95cUxQbFB2aGl5dVVlWFdBZ1kzcmkwOEhRR0ZMQU4tdXkxbDlaOHJJcVRrYlF2YjgxeW5oSTNaNGIyZTNtOFJrcXhBd2NUelBfblFhZ1RJend6X0padHAzQWlpX013YkhZbGtQb0hjdk1MRzI3OWExZExEU29MSmdSa0g3Ny1iNXBBSnk1ZU14UzYwcExUamljWU9EVzRiNlhMUGMxcTdYZVRodTdaT0JSSDh5clgyQ05sY2phMHdOaNIB0AFBVV95cUxOU3NISS1WemF5WkxsV3dCVzNzNUV0bENYbFF4MUl6OFhubDNRQndianBJTFRad0YxLTlzUmZneWtaMXFWOU1sc3EyM1RCa3pyakFWaDZVei1wUjNFeHo0d0Npa1hUWGptSnlQY2xxTEdORndqWWhuNEVoRUQ5TFRpdDc3QlI3eXhjZVNLQlRQN3FfcXhkX3lVby1KN2w2NFY5TjNCNDNTU1EtS1FtRFplX1N1dmx1cGlWZUFkSVVMd1NLT1ltSkRyYWNraG9QSHZS?oc=5
+   Title: Gene Simmons comes to Royal Oak rock city for grand opening of his restaurant
+   Status hint: Opening | Industry: Restaurants
+9. URL: https://news.google.com/rss/articles/CBMiiAFBVV95cUxQTjlIOXZqaERfUmNrU0wzT0g1dzl5RTRwVUxpOWd6VVZzLVpiQjZGdTJTOFdSaHBrUmE1VUZUOHctS2JpenZOQXpIUm5sVllNWXdxOHRyV3I5VDliakFPTHdfbzdoQ0MxR2lmTXN5dnZNeUUyZDVCalQ0WnpUOFdtVFdrUHpMUmtr?oc=5
+   Title: New Mexican restaurant Agaves now open in Olathe
+   Status hint: Opening | Industry: Restaurants
+10. URL: https://news.google.com/rss/articles/CBMidkFVX3lxTE1Na29qVFFjaDJVZlZ0Mlptam9kYmRtR1gxSk9iUmM3d1owNzRDUEE2cnZndE5RRUZab3FkQ1hWNEdMeHRMRVd2dHN1Vlhod3ZlOWhGNFlPalVqdzNRbnhmYWg2MTQzcG52NnBEVG9Cb1lIQng5Q2c?oc=5
+   Title: Get free hot dogs at grand opening for this North Jersey restaurant
+   Status hint: Opening | Industry: Restaurants
+11. URL: https://news.google.com/rss/articles/CBMiwgFBVV95cUxQX0pxaE51a2VLZ2RyYV9WeDNyTjBGUk5zeHBXWTRNbEN3TzdXTGJMWjlKN1Rpdk84MDI3aG5PMWFDcVNQY05raUNtbkp4em1KTmI0RXcyR0Rtbm9MODNLa1lfVnNQX3hNSGRUY3dWd01INGFwZ21PYlFMSHhndEI2M1BMWVV0MF9OaFc5ZDN4SUZuV2FPUlBhbS1DWEVBVHdBZ0R0a3NVZWNWYjlsaFNGYzVlYjVacUtXNEhDYXNzbVhSd9IBxwFBVV95cUxNemVLRmFxaVJVQUhsdUp6QUFxeHVLaGZwVE12eHZxSmRCR3kxdFdIZ2stYlFoVENjREZha2M3a3dBQk1pTXdNWTdMbGF3ZTA5MERiRWh4TTE4dUg1dy1zOU5NTEhfRk01cmUtYThPQ2psNllncVB4dHEzTEU0bU1YVXNQTXZBSnQzOEt1RGUxcEk2czJvVGxJcmxKUFFHVTJnSHZSWVpvNkFjRFRmaDY0d0dZWkhfVndQem9taHNhcEtFa1VKc3pV?oc=5
+   Title: Which new restaurants are open now or coming soon on the Mississippi Coast? See 2026 list.
+   Status hint: Opening | Industry: Restaurants
+12. URL: https://news.google.com/rss/articles/CBMixAFBVV95cUxOWl92ZnpIbGdUcEpWcTJfdkMycnBqOXk2MUZTNEZQODU1UjFETldCYy1zUnc4TzNfNVNkTGZNNEtNcThpTnEtOC0tUmhTSnFNTFpqTjhjWlI5UU53UXo5TWNnVHNDWHREdmJ3cU9TN1JCeUtWU2t1bXEzWlU3aDFreUZ3WnJwNWwtM3RvbjhxSGtkWnRuLTVsZktoNEU0VHhNSGhtd2l3c1pTNF9aVUY3Tlk5N013eDMxTlBNcEk1TG1CbzNE?oc=5
+   Title: Check In To The Louis Vuitton Hotel Pop-Up Experience, Set To Open Later This Month
+   Status hint: Opening | Industry: Hospitality
+13. URL: https://news.google.com/rss/articles/CBMirwFBVV95cUxPOVdBcFVyaDBxOEVZV1UzbVB6SnNrcTlkbE9wTEFFTERtNWJmRmItRlRtZzNkUmh4Q2xMQXNrdXRGSmludFRMN0JPNldOQ3A4LW5Hd2c4ZHNGdERtV3JJbElUa2JTUnU5Wnh1RmV6c2Rjb0xKSWFoZXFDZFIzMWg4ZGtFcnRjUWVwTFNkcHFnRm1GOU5teXpTVHZsSktSeTk1TDN5a3lWdzFYSzZuVDVR?oc=5
+   Title: 'Upmarket' restaurant and bar set to open in Chester city centre
+   Status hint: Opening | Industry: Restaurants
+14. URL: https://news.google.com/rss/articles/CBMiywFBVV95cUxNd2hUQjh0bk1tMmdzRVp0ZGdmel96WnZiY3ozNXpzYTg2dEdTTVZHdFhYR19UUGtidzNxNW5qXzBGTk10eUtGSjFxc2I3LVFrby02aDBIQ29UaWdwY3Q5QUFmR3VvenNpLTM2VTdfdXRFcmNaQmcwZk5QZXpqS1FoYVZZaDBpb0YzTUU0blBMWjVoNWtxTVZyLUVuVnBnQUNHVHBjWUZmamRZb3RpVzVha2xkOWNFOUNwWVRvS3pEZWQ0SGZfQ044ZEFjaw?oc=5
+   Title: PHS Cosmetology Salon Opening Soon
+   Status hint: Opening | Industry: Health / Beauty
+15. URL: https://news.google.com/rss/articles/CBMitgFBVV95cUxPZEMyOHlWTWRFUldwc3lBLVBHZ01DR2xYSHcxVVNITk44M0s4SGE5ZjF6NVlkOHlaTnZTdTE2eGpmZzU2bmZhR283NG41dTNhcDJpUWpmWjRiZHdoUnZDQW12MzBjZHBVMDRoOUgtbWwwZktpclNJeklNYUU3aEhaMW5yOE50MUZFQlhFazlCU0R3LWRmM052aU1pLVVYYlJqNW1ieXlzUERJUEFyWEgtZXJ2bktlZw?oc=5
+   Title: THE MEXICAN: A NEW BRICKELL KEY RESTAURANT NOW OPEN IN MIAMI
+   Status hint: Opening | Industry: Restaurants
+16. URL: https://news.google.com/rss/articles/CBMiowFBVV95cUxOWk4yQVpzcFpmcEMwYWVVd3V5U1J3TFBEMGJyMFlwNjdSRVFNVWl1LTFCbHpmNkJXM3AxOS1NY1pDVDNta3JNbXlWaG9CZl9LTkxiZlAxS2dSaHFkM2NPQ1k4U3BiZ1VGcy02Yi1XbU5rS2Q5V3RlR0Z4OU9uWkJqN1NwdC1XVEZBMUhpR2pyd2RUWjFxQVFEXy01OFRfb0psMGww?oc=5
+   Title: Exciting new restaurant set to open in Leeds city centre
+   Status hint: Opening | Industry: Restaurants
+17. URL: https://news.google.com/rss/articles/CBMiywFBVV95cUxQaGZfakl1dHAtOHdZOVd4aTRpM1JKVmprWDE1S3ozVm9DWkgwbmxGT2oycE9aVGtlVDJqdHRmWXdkZVhjZ01kUXJBUGx6LV9aSmxVUFhXb2ozWl93WU9qaHFoUXpJNVBHSHA4dXZTUHlMQ0pqTkZYODI1YXNwV0NSZFdrVVI0TVd6R2FjeWFXYmthUWlBVThQM2I3dFF5V2xZS0F6OHlRQ205UGRGV1JudnZGWmI4TEg3b3JsVGNOSzBKUXI0aW9CMW41Yw?oc=5
+   Title: Shuttered brewpub chain to revive with Philly restaurant opening soon: reports
+   Status hint: Opening | Industry: Restaurants
+18. URL: https://news.google.com/rss/articles/CBMicEFVX3lxTE5zdnJEWF9CRUd5ZzVmZXFDNmJZdFh5bU5TelBUV0YtYlBuTDNfc21SMDRIWXhESHA0WEI3eUNuV1BVdkwwZ05zRU9HS0Z3MF83RjJwcUp4cmpHSURua0NCV3RFRzZVOFhZVnFVQ1hDN2Y?oc=5
+   Title: The Gym Group set to open new gym in Salisbury retail park as plans approved
+   Status hint: Opening | Industry: Gyms / Fitness
+19. URL: https://news.google.com/rss/articles/CBMirAFBVV95cUxNbTNXTE9iTzFJRmJqY1FOcUhvejI1czItaG5ieVFyTjdQNVdTcnpwY3JZZ3BWMll2TmJPR09tTGNrMzhTT2oyV2UwRGhWZGlQRWE5NWJPLTRKanROSC1uZEN4a2FIelNvMGJJdGpHYTBJS2lSMXhSWFZya210TXdhdzdtUUdSUjVFOWVtNDVRanF1WFhCRWNhc0VWZklYaFE4eUZrUm9KYTJNdnhh0gG0AUFVX3lxTE80Rl9JaTUzY3NlaVFlT212TGdGNDRTNDdSZm44aU9yUzRuSzFUbGhXd0JVLTFTODFZSHZpR0lIOWUzczh1UTdUX1lDNXVtdkNNOXFLc2U3TFNxNFpSUkg4V2FfajJGX3ctVUJBOVZOS2tqNkJKb0NGcjQ4MkJXTVo3NU1LazFKcmFReWJXTEJHaHY5QVNOWnpZNk5vSmQ3MVNkX3I2SEo3NExSWklsbHE4c3lrLQ?oc=5
+   Title: Chennai Corporation's women-only gym now open at Millenium Park
+   Status hint: Opening | Industry: Gyms / Fitness
+20. URL: https://news.google.com/rss/articles/CBMifkFVX3lxTE5SeTdzNmRpRTg2Y2twd292T3haRC1vbmROX1NpbFY2YlJ0SVdTTmdHMllrVDNjNXRsWjZWMm55dmUybWtWNXc4M2NBNXB5QlZuVlFwYnJ3VXFMSEdPN1MwSGNVZUt5aVUyNnE3Sk1yUk8wOHpvUThOU296NVV5UQ?oc=5
+   Title: Fresno furniture store closing after 40+ years
+   Status hint: Closing | Industry: Furniture / Mattress
+21. URL: https://news.google.com/rss/articles/CBMiZEFVX3lxTE85bXpibEFEbHFRbFY2NWVFeUlFUGpKRzVTX0RHUTQyTzhtRXltNGJPZFdhRTBkNjZWNFFHTHNhSHV5TnY5c2w4NGQ0c0NDNHpmb09LNVVjclNXYmhlQ1I4MU1aWko?oc=5
+   Title: $68m Aura Hotel set to open 2027
+   Status hint: Opening | Industry: Hospitality
+22. URL: https://news.google.com/rss/articles/CBMiogFBVV95cUxQY2dsN0JLaTA5SXFyWXJuZHhRRURZemJVN0F4TC1nQW1yUEt3c00tMTBYd1NWRDhiM1JjcHJpOGJMeXo5MEdDU3J5OUFvQ3drNVlqbW94enp5a2NPMEN4TkJXQ1k2ZGk3eGd1NkdHdTU1Z3lWdFFtVm8tSUlYRTRuQWtKTThVZHJSNW9leG9XVkZkY016aWhEa0diaFF3dE4zOUE?oc=5
+   Title: Aerial fitness studio opens in Shotton with grand opening event on 18 April |
+   Status hint: Opening | Industry: Gyms / Fitness
+23. URL: https://news.google.com/rss/articles/CBMipgFBVV95cUxNUy13dHJDVnE5ajBQX3pOWEZockplSWVubVVGVHNtMVhlLXVjUndnNGZOS2tqVmhzMDFxdjJBRjBTYkZDVXFtQ25hMWRTVG41MmU4clJvd29qZEdreDdUSEFGUktLYy05bVJNSVNtRG9EcnpnYmhBRTN3ZDlMUVNQdk5ETmVfRHdzUE9FYnpzenV0TTBENFVFdmRwS1lhbXJLYUtXT0Jn?oc=5
+   Title: Maury Regional Health Celebrates Grand Opening of Lawrence Health Center
+   Status hint: Opening | Industry: Pharmaceutical / Medical
+24. URL: https://news.google.com/rss/articles/CBMiogFBVV95cUxNVFdwTzdreWs5MlFXVFpqTk5pM1JrekQ3Sng5LTFESWVwMGNMTlQzY0tCOXZteGs0TmtFQjh2bk9Vc19YNnNrNFh1NGUtTHBINlRpbVBFMUdqZnlIRHpkdVpMcmZQUExsUXZMOURoUjJPc3pCZ1BZNTFONnQ4T2hSODlVRk52NXpOWEtnNWwtdGY4RERSSXZKc1NEM0tQbDJFV0E?oc=5
+   Title: San Angelo Furniture Store Closing After 31 Years
+   Status hint: Closing | Industry: Furniture / Mattress
+25. URL: https://news.google.com/rss/articles/CBMib0FVX3lxTE9lRkNtUzBfUTNsWEY5QWhzcURlemhpRFNsejZ6bVFDbm16Wkh2ZWk3OTBaZmk4bHpQa3lTcXNQdEFCSjBseDd0NDBpS1V5cUdBcm5MQmNES3dNQ3RwNHBZbnQ2M09hV2VTMW1fdmU5cw?oc=5
+   Title: Clothing store and coffee shop to close in Merced. Here are last days to stop by
+   Status hint: Closing | Industry: Apparel
+26. URL: https://news.google.com/rss/articles/CBMif0FVX3lxTE51V21Vb2tib0xtVUoxNzdJU21ELXJvbnNaZzhTeHpmYjk5QXFnYVVCYnlJVjJfQll0ZS1YMHJsUlJNWEg0bmFDOEtBS1l2NHA2bHNKcWlCUFZIbGE0RnNnM2Jubnh4Q1lTWk83UmhPWGJ2U25wd29SMmJQNERBbVE?oc=5
+   Title: A new Sprouts grocery store is opening soon in Phoenix. What we know
+   Status hint: Opening | Industry: Grocery
+27. URL: https://news.google.com/rss/articles/CBMimAFBVV95cUxNRVdCN1BaMWpQMllERjYzVlVlMnR1WE1jQ3lwbHJGdGEyZlhmOUF0aWxiZWNHRWRiODd2OU5SSXlYWFc2Ri1iZkF5b0ZmUnVFb1BfYWRrNFdkcXRndVVTbjY5bEltYjdTaWJqeHh6R0JiaUVJTW45NzdEYWtXQ0R4dDB0eHNoRTBmZlM4TUJ3OWxxOVU2V2k0WQ?oc=5
+   Title: El Super grocery store opening in North Long Beach. And they’re hiring.
+   Status hint: Opening | Industry: Grocery
+28. URL: https://news.google.com/rss/articles/CBMi8wFBVV95cUxNUFk1RTc5akNMQmZDWnlDanF5RV8tanF3WVRnaUppQ3JteExTM1hILUNadGVCRUtjMElkOEpQbUZ1dnVhNy0waFN3N1FkM2lqNjZDYUJXMlM3SVBhVkJ6YWZya3VRSDNoelJSbkUzTVNSMjJkdHNocnpJTVUzSUxGcFRTSUc0R3JwdjZsMHdCMXM2WnRtOUVDV3M0ZG9sLVlnUEFzTzJST1dIYUJtWVJodzZqc0RYZjVPTUFfR0tqalhBSTZjREdsbFlZLS15QXE2ckp6dXV5S0w5bE9oNEF1TjVPdWdodzVKaEtKZmh0djFyclk?oc=5
+   Title: Marrakech, Morocco to Become a Global Luxury Destination with the Grand Opening of Nikki Beach Resort & Spa in 2028
+   Status hint: Opening | Industry: Hospitality
+29. URL: https://news.google.com/rss/articles/CBMijgFBVV95cUxQd1V6S3ZseWFwY0pNVzlTOFVQbkhPRmg2NHdpUzhxQk9SSXhPUklxQ0UzVEtDYlRmYW8xUERmblpBMUxzUEVZb1lBeEREREFzdjRVcEhKRFVNS3dFbmRiUGllenBjaFRFaXpNTFZFVnRpZkZ3bjZDV3UyX010cDZPN1F3NjdiSzR1N21hWmp3?oc=5
+   Title: Grand opening of Belfast's newest hotel
+   Status hint: Opening | Industry: Hospitality
+30. URL: https://news.google.com/rss/articles/CBMifkFVX3lxTFBOd0JIV1h4RE5xcjdrNDRFME51ckUyTFBURm94ZUdkMU5RdDBURjZlUHJXT2s2eTVUaS1sSmljX2lWMll2OTB3ZjAtcWozR2xoenpxaktHNEZpQk42ZHVhOFBVbHpLaHZJNGhCT2lxc3VHa0NZay1OX1hoX2dPZw?oc=5
+   Title: New Harlequin store Space NK set to open this week
+   Status hint: Opening | Industry: Health / Beauty
+
+============================================================
+END — copy Claude's Markdown table into claude_response.txt
+============================================================
+
+============================================================
+PASTE INTO CLAUDE.AI — Part 2 of 11
+============================================================
+
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+1. URL: https://news.google.com/rss/articles/CBMi1gFBVV95cUxPZnBPZWEtNExuaDRHSEI0eWFzaUhiSm5PUm44OXFpZWxYRDNnOVpTb3NGQUItRFNVNUhSWXk0UUlTZXdCVGI0TU5RbnBNcnNVZERXSlZUczlSdS1MYm92RWtEWjZnVW1FUzV4SmlVczJ2d2xVazB3UXVZY2NTdjdYb1daRkdjQi1wbTZGcU5zWGpXSXZJQmZsVl93TDR2aVFhNkRjOEdLb3RDSWFqNWlsQnBxcmZHaXpOWGtISFVycVFKT0RYR1MyYVlwLUhwcy1zVjRnNjh3?oc=5
+   Title: Independent Blackpool restaurant celebrates special grand opening night
+   Status hint: Opening | Industry: Restaurants
+2. URL: https://news.google.com/rss/articles/CBMifEFVX3lxTE5HNlNaLUJSMnNMVzlkWjM4VG1RY0hFS2RpSGlwWHNfektOU29DNVd6bjV3Um9lU01FNk90aEZsSExRZUJLTnlmMGhhUTNWZjBZNU9pN0dxMVZBa216U3RfSXRRVnFzQmpNa3pUZEt6Sm9WVkdMTlZyR1F3T0I?oc=5
+   Title: Fast-Food Chain Operator With 65 Locations Files for Bankruptcy
+   Status hint: Closing | Industry: Restaurants
+3. URL: https://news.google.com/rss/articles/CBMixAFBVV95cUxQSVBIcG5ER29wVHVxaXM3X3VUbVQwUHZjTFVEU2hBVTVxT2lfdEV5dGZhZzBaeElVSHBXbDVSRGJOM3lMYldwc0tFQmtHOG91ZDNBT2w4OU1xSnZoT1JqckxrLUNxbWt3T3dsQndGa2VYTy1mb2J2Mll2dFh4TDU3TUc4MGltblZEcEhKSi1td1lyOU5GNndJc3lEb3VVSWo5ejYxU25GNWt5M2loWEt1NEl6RnlQSDUtX2dJem9kcWZRYW9Q?oc=5
+   Title: Silverado Resort Announces Grand Opening Of Newly Renovated Spa And Longevity Center
+   Status hint: Opening | Industry: Hospitality
+4. URL: https://news.google.com/rss/articles/CBMihAFBVV95cUxNTVo2OFZoR250QzZVUy1DQ0FrM1pyaUd0YUQtSnVOWm1SU3BGaEdlR2sxajNDeUJmbjdtSk5haTMwbGZ6N1E2NnJjcmQyODd0MmJ1QWNSTDVpbHg0R2RpaWJaNU93cmNjemtVcUxwazBMMERsN0g2elRnTnpiN25GYmRzNE4?oc=5
+   Title: Jacksonville bouldering gym's grand opening will offer competitions aimed at building climbing culture
+   Status hint: Opening | Industry: Gyms / Fitness
+5. URL: https://news.google.com/rss/articles/CBMi2gFBVV95cUxOb0tDVV9PX0tIcGN6UkxBZ3hweExZN01LRHcxWk9IQnhlUnNabXdlVm9VRUdRNU5LVDFiUUl1Ym9JaTNDeUZfMUZ3ZzNYa2J4V0lrMFo0enZVS1BvYWhtMVhkc3lPOWhxY2phYjdRXy1XOFoySkFIWXF3N0xaSmNVbm5tbGhoY3JOZldOLVJpMDNwbE1KYnBieXR2Q0RNSlE3YnhMRGdJVWMtcmtkTm1hek1PUkV3YnQ2aXp1WXo1LWw2azFjaWZwdGUweFVNc013RVhOVXBtaUZHQQ?oc=5
+   Title: Invitation given to grand opening on Monday, April 13, of Winn Community Health Center’s new complex
+   Status hint: Opening | Industry: Pharmaceutical / Medical
+6. URL: https://news.google.com/rss/articles/CBMigwFBVV95cUxQMnVXOHppYXpoajJiVUdyZ3dNS3I5aThLa3dWbXNNX1pJRU1oUnNmMXdPOWJrNjdjWEt2RG4zbHh1cHFzM0JrclJ5N2V0M2h6VVpXWXF2ZFNZZVR3dy1SZkRfSUthVmNqNTFPQ1ZPenJiaElNbGxNS2htcmRPaFlpSjJ5NA?oc=5
+   Title: New Disney Theme Park Princess Dining is Now Open
+   Status hint: Opening | Industry: Specialty / Other
+7. URL: https://news.google.com/rss/articles/CBMixAJBVV95cUxQcVJ2Rnh1eExRckZBb01HWVplUjAybGo3UnVKT1RiT3pTVFhER19mV0dSVU9oakx0N0FGR09HOVFDbk5wakhfanp5TU9KVFpwN2stQ0JLdzJvWW1IdlhhNTZCUVhIQVVPSWNIUFNya2pBdHU4eWk1U25NRmV1cG5MS3E0clFlNE9ZSWh3U0NNclBWczJPTm9RMVctMVJhMUdpcmZqVDctM1VNVXVSWi01UGFIMWlzaGZpOWU4R21iaDhnSGQzYTFmRnF3VkQ4c2tjNFlRSWtlRzVFUWh0Q18wcVd6U0UyX3haRDJ6cENFU3prazY3ZUlrWDZNQUphRTQ1ZXNNSm5seHk1TG9yU0dzaXYzVnppUUNYQUtTSnFIeVVBTGw4Q3NFcElodTlxVi1zT3JvT0FCcmZxRklPbE0zaFpGM3U?oc=5
+   Title: Tui opening its first hotel resort in the 'land of happiness'
+   Status hint: Opening | Industry: Hospitality
+8. URL: https://news.google.com/rss/articles/CBMiuwFBVV95cUxPYnBVdTBsNElUZWhKTWNxeWF2d2o2UmM0WEJkdWY1NHdlWGdPSzBnYjR5ZVNKQ3p6OU1QREZxUEg2bk1DSHVjQ01WcTRFRmNicTFuUlF6NEN6bXBjQm1hR3h4VW1RbUdQR0RsZURRckhnUWJDRTRCRzZSYXItbk9tODRIeHdSR0JMdVA1UVQxQUVCOVJBMHhXckpzcDFOM1hUb0t0enJ5Z3RIVFFfeXdsWElsSktMUGhfbFdJ?oc=5
+   Title: Nick the Greek giving free lunch for 2nd Reno store opening
+   Status hint: Opening | Industry: Specialty / Other
+9. URL: https://news.google.com/rss/articles/CBMixwJBVV95cUxPeU9IaVhQS3F1YkQtY3U1Q0h3T2IxWE9GNTJqdEItVThqa0NPVnNfMVlEUlNYM3dMS0NIWHBZdW45eGtNU2pLWkVXYmU2S2dwVDdJUWJFRFdDbE5XaUpyR010amNJZHhzMVBvVDBnNWt6R0NFQmhndUhKU0M0X1lhQ2xtTEltUnBfQnpNQnU3el9zR0tBdG9JM1VFVExuNnNZVTBUaHR4SExlQmJtaUxxZ25uamZEenBHMWZYNmxBNmVxdzJvdlFLV3J6OGdtNzdwczE4U3ltdG0zSWRmeUVRbzUwVFg2bzM1NlpHbWNxTVZDYXV0ZG9BSkZOSUtqbGIyU0p3bmRhY3o3OXhUNmVfWEdGeUpKeU9rRlZHU0oxV0hqSkxUYUl2ampkVkoxNUlwZ21OX3NyTXUzWi10V2NkZnFyeU1ZS0E?oc=5
+   Title: LEGO store opening in Temecula, first for Riverside County
+   Status hint: Opening | Industry: Specialty / Other
+10. URL: https://news.google.com/rss/articles/CBMiiAFBVV95cUxNdjVvdEZRSll1VF9scE02UG5iekJ3NzhZX053bDg2ZDdqRHdIY1RjYXN3YU42QVgycklYTURvYTBCZTdMSHlvQ2tyWFYwanp0Z09XSGJrR2JDS2phWGlyZi1Hc3lhbkVCdHY2YUJQU2lIc2hwV2RVOHdGTk53NUw4UTlDa3lYWkJv?oc=5
+   Title: Grant’s Crabs Seafood & Grille Opening Soon in Havana
+   Status hint: Opening | Industry: Specialty / Other
+11. URL: https://news.google.com/rss/articles/CBMiwAFBVV95cUxQWTlLS0YyOW5KQUpDZHc5Nmp0b0RNUG42MDdMb0EyTTJuMmFObm9uTWZnNF9DZ29NVTg5MkwyUHk4UTBIclE0cC1yZXlrZmVoUXVkR3o1RDFEbGxmd2lhQWpRNVlpbVNuVTNkcy1WTDhzTGtYeGdULTNnT2V2MUxzY0NuRlF5RG9IaXRTT0NYb0E0YzFOV3NSSmR4d2lRQ3RmRmdDcy13amVMc0RxaGJTV1dleVhvdE80UHZoa3BMNUY?oc=5
+   Title: New primary care clinic run by nurse practitioners set to open in Whitehorse
+   Status hint: Opening | Industry: Specialty / Other
+12. URL: https://news.google.com/rss/articles/CBMitAFBVV95cUxOeW80dW41MUJmaEpTRUloS1ZSTGxIdmhaODdCMlpTeGVyMGFvMjZnMUlROXd0alJQVmJjZ1Z1VloxQlEyLU1QWVIyNHZMSGVOZHdhSjlnZnFxZ0RLNGJ6Q2gxVE1VbnRrUmlyYzQ5V1dtaG9YVkprYV80OUQ0bjVxSXFjSWZDNzN3djlWRVdWYUV0RXY3RE5jVDRUQ2UybmduRmRFMFoxQkZVWXZYN3RSeE42RUg?oc=5
+   Title: TRUMBULL SCOOP: Apple Store closing at Trumbull Mall
+   Status hint: Closing | Industry: Specialty / Other
+13. URL: https://news.google.com/rss/articles/CBMi6wFBVV95cUxPNGZOcDdqSWlXX0FZa3M5ZHdfOEhpYnEtbk5BNmVrbzdNUy01ZWFaU05zTENFZUtyYmVHRkk5Y3ZROEZwTWlTcDlBQm9DczdTN2xoVGE0cFJSVjNQMFdfMURkZ0FlR2JfNnlTaTlNV00zR1ZEcjAtaFp5QjlEa0dmNVN1LVJLNUtDY0wtYlpRNGptUEJkN3ZGaXhCQ29rdGdnanNBcWtyWGZHSVhoNHVwT0I3LWxGQjdIOFRHaldZWGIyX09xOC0zbEZ3YXlrSllsRkIxTjctRjhyOVhlOFN1X1drX3V4d3ZjVDBz?oc=5
+   Title: Lake Havasu City Papa Murphy’s location hit with sudden permanent closure
+   Status hint: Closing | Industry: Specialty / Other
+14. URL: https://news.google.com/rss/articles/CBMiqAFBVV95cUxPRkJNTng4YnV4QndZSHFGb1NXdFd5QzNFbElYX1B2clNrUklhcWVReEc4YjNzU3B4a1p4TUQ0cDhWUU95SEVXMURHR2I3NXA1TG1oc05kSlNwNXZFS19nUTVJLVZobFpTaDRBb3VtYlNVaXpUREd3dnpZUnBPNkpNNzB0T2djem5Bek9Ca256NDNwUk9ISDFNZmlNdXFrOWN3ZkpqR0Fodlg?oc=5
+   Title: New Asian American convenience store opening Friday in Davenport
+   Status hint: Opening | Industry: Specialty / Other
+15. URL: https://news.google.com/rss/articles/CBMinwFBVV95cUxNTDladnAzbGJ6MU9rOG5TZjJyMEpadFR2UmdFSGwxazFTbnNKVkxFVkFOTGd5RVBGbmZLMnBxVjk1NjBDbnE3cXBYYlhsbmgyU0R5QldqRWdweTlQYkZ6LXk1OWxyWDNid2FKem95MnlQYU8zdURTRmtfcHZzSnZNc0JDYXJmN1hIdDhsNDJuSE9FVU9mbG0yc08ybUc5S0k?oc=5
+   Title: Nick the Greek serving free lunch for 2nd Reno store opening
+   Status hint: Opening | Industry: Specialty / Other
+16. URL: https://news.google.com/rss/articles/CBMiqAFBVV95cUxPQ04tYy1yUTRSMGhQTlFINklPenFEYUZCZWlsdHBEZFdxS1FhajE2MzhMUlVuaTU2U1BHWlByb3JJYVVMdEVRZnNqRlBRVmJCLTZ1bnVObjBiNW95OF8zNndpYTVfNG5Id2wyZVBFRXFSRU92cHhObzdmTDN2NEVBYkVEc3YtWFVHdndjaHg2ay1mdDVXZjlxbUo2Uzk5ajlXemwtYWZha1E?oc=5
+   Title: Once-booming cookie chain closes all stores after Chapter 11 filing
+   Status hint: Closing | Industry: Specialty / Other
+17. URL: https://news.google.com/rss/articles/CBMikAFBVV95cUxOS0tpRS03bUMtek9jd2s2a0JpcTc0VEhKUVluTUtvMXpnY3NER01DMmcwLUc5ZTk0M0k0MWRUTlh0X1Nkb05udFFmWllGNHFsNEI0RjB6cjd4dHJYUVNUM0d6MVhTUGQ1eGRfZmhfVmZnUzNQcEg4T1VGRlZack52Mzl1aEptUWNHdU9KZzA3Y0Q?oc=5
+   Title: Huntsville summer camps set to open registration (Video)
+   Status hint: Opening | Industry: Specialty / Other
+18. URL: https://news.google.com/rss/articles/CBMia0FVX3lxTE5wb1ZlYXJwYXdDWWFwTjQ5ODZfUkRsMTBMSDF2NnVjZjNwamFCZGhsaGlIc1lVd2R5cVpWQVEzdjF6bGc2VFhrTzM0VW85RnV3elZidV9LTE9mZ2xEdUF4Z1N1RkR6M2xFSmVn?oc=5
+   Title: Resort Set to Open Tiki Bar in The Maine Woods This July
+   Status hint: Opening | Industry: Specialty / Other
+19. URL: https://news.google.com/rss/articles/CBMiwAFBVV95cUxQTHR5emVoaTZPelJmQ0hYdkZzUlRtYXJLeFNVaDFpTnQtcTRGeExNNWFfczVCd1p6YTFJTkIwWXNQaG5wQzkyTTRkWXFQX3dnUkptV1ZrU2l0Sm54d1RXV3VqdHZ2anBpalQ2a1BkNXplenFIZl82Q0taTlhsdDFEeUhuNHB4OXpFeGhUT1h3cldaNFpqdndidkMyQXdwOHBBd25rYVRvT1ZzeHpQb0ZzYmxkbEk2bldsalhTc3NfTVLSAZMDQVVfeXFMTjI3dHNpYU1yWTEzNVNsa2RLV042Rm9NWUdIb0d0azd1QWROa0lXN1VEY3YzR25rNHBuV3ItejR6VHdaYzFRa1hXeG1Zd0hWOUNIdEhMbkljd2xNUlRENnd5MUxBNlFnV1NqaktUeGZnUXlYUTRQU3FGWUFvdV9RejZhMjZ0R3o3SlpWUjNpQkd6ZUp2ZFBNYXBMWi1BZGw3R2txUTM4MXcyS1pOdnNpMkJDOGMtOE5WS3RvRFZOVGJfak1DX1c2bFBGX0htVUdtdXdkb1k3Z2dyOGQtRXZlaDA1eTI4T281WHZ2RkprTjluUkpER2o0ODVnbmNjalBwQUFsYTZFNG9kWU9pRVZjNDZIaVZDUjJ4TklOYnkxVDNIWFZkRVhpa0JWdmRWbW93UHloRENoZkZwckxQZHRfZnV0Q1h3bzdIc2l1dzVNUTg1SFp5ZzF6MkpBVC0tUXZrSlhxX0ExZ2FUb0oyMEk4Ni1ONU9RSXF1SEpBc1Z2RVFvT3RmZFlfTHpuM3A2TGp4cHVvRQ?oc=5
+   Title: KISS’ GENE SIMMONS Attends Grand Opening Of New Rock & Brews Location In Royal Oak, Michigan; Video
+   Status hint: Opening | Industry: Specialty / Other
+20. URL: https://news.google.com/rss/articles/CBMi2gFBVV95cUxQOGYyUWdaXzk2NFVSMGhDSDRCLXI0S0RsSGtrSjdnUG9WQlJKSXdpcHBkbTREQnFFMUFGWkx3UlZmOXNjS2RDQjU2Z1U5Z3VzZkpRcDdDLU1EeTk5ZW43dmVTMWpEYUVidUFQNnZGVDQzN3pUMjhXVmdPOGoyRjFnYmd4X1FlWjZaUUVCS1JFSWcwU1VsNWtKZWozSmNNRVZGUEpKOTZBaU1hVGFrS3B1VGQ0YmhsYVlaRHFuMVRzRVdzMVMwNXd0OUg0d21GRG51SHZDbmhfYVpRUQ?oc=5
+   Title: New life for landmark Limerick building as popular fast food outlet looks set to open
+   Status hint: Opening | Industry: Specialty / Other
+21. URL: https://news.google.com/rss/articles/CBMifkFVX3lxTE1sN3VDdldNTG9LZGZDNm9IOWI4TUpqQVlMNmVoV3JiZlRTM1A3cnp4Zlh6R0dxMkxKS3Rhc1FvSFhCTWkwTEQ4ZGQ3ZkgwQk4yY0ozc1EzMXBIVGhJaGRqd3R3SE15bHczaXhlVWhVaFd5cXdJckhTV0gyOUpvQQ?oc=5
+   Title: Score free food at Pensacola's newest Chick-fil-A, opening soon on Mobile Hwy
+   Status hint: Opening | Industry: Specialty / Other
+22. URL: https://news.google.com/rss/articles/CBMid0FVX3lxTFBmeW5TUnVNSDF6a0tCRkRSRkctWmhHY21FS2RHUk8wVlRUeVptbVUxNGRuQWF6QnNYMVJWU1hZWUw1Yi1TcF9vRmxxb1JwRW5BejFPLVp4YmdMcTVDZ241RnpzM01WQnVOQ3NPMEpYMkFuX3Bac2ow0gF3QVVfeXFMUGpPQWhsdnJyZ3E1UExBdHJPRVdfSmdnTndNSEYtaHd0MDNIWlBCLUlTU3dqUllPMkQ0X3lZMjNHVXZwQnBEeXktRUVTMG5OZFNZSFozRzJCTWdxdnhHN0Y0VEFjOTVNaHFkX1hLRjZ6RzRSSTdEdGM?oc=5
+   Title: Raleigh’s first Whataburger is now open. Here’s what to know
+   Status hint: Opening | Industry: Specialty / Other
+23. URL: https://news.google.com/rss/articles/CBMinwFBVV95cUxPZ3B4QzNIXy13RkZkQUVMcFlqcE01UENWYzFzcmkyRE0zSVBrWUYwc29ZbWV3cVNnSGR2UWpHNVNGaGxBVjhvV2x2WnNRMnIybmh2eEN4OVVha2RhSThKbU9Hd21EcFN0elkyVkZQU0VrMjE3bTltQzg4RThKWm4wNVpCdmMxWVc3SVBrcVFjMmtLejNJd3hsM3QycXpUX0U?oc=5
+   Title: Primark Continues Dubai Growth with New Mirdif Store Opening
+   Status hint: Opening | Industry: Specialty / Other
+24. URL: https://news.google.com/rss/articles/CBMiiAFBVV95cUxPTExFbHoyYmtNaDFHOXY0S3RkX25Lal9KeDBwaHR6Q0NBbW9pZEtXd0g5em9xeDFvamYzYm5Vcm1EWWhyZ2hTb2Fqd2xSNm10QlJfVEVVMURzSGR5Wlp3dFp2Vkx2S0M2SHFCWEZhSW00bnVIX0R6VC1IZ291N1lyd3Jwajg2MzRo?oc=5
+   Title: After 6 years in the sand, new Whalehouse Point set to open at Watch Hill
+   Status hint: Opening | Industry: Specialty / Other
+25. URL: https://news.google.com/rss/articles/CBMif0FVX3lxTE44TFZOUHFuZzd3aDZwa2k4S0FreWthQk1wMTBqb2QwY3hTNmJfa0FyempVM1IzZHV5UWdrdERtWnVWSWdTNUUwcHNhWFlJNl9XZ3hud0I0dlJJbjRNdW9aWWN2ak84TzRXV3FhcVFmZ1lfdUp2QkF4UWszVkZDOUk?oc=5
+   Title: The five exciting new businesses now open at Basildon Market and what they offer
+   Status hint: Opening | Industry: Specialty / Other
+26. URL: https://news.google.com/rss/articles/CBMiwAFBVV95cUxPcWFqVEVSTnAyZXhhV2l4cnc2S2RPVE8yT3REMTlWVkNHbEVWTlgtbGgydWlQUXBKb2xzOS1QSnJtY2V3LTlGdkYzcmJHR1dBc3Nja3Y5SkR4SF9oUDBDWWtfdlRacUtWemhUc2tQbnlUZU1vVktndnNTVzN3aDJOS0RZb2wyZFJ3UENRck9mODZmTzVXbHhlT3BYSGpRX3dBbXBoZEpveEdMVkxUclJ1bzhSeDBxaWxZVVFpVG5uSHI?oc=5
+   Title: Inside Bulloch Business with DeWayne Grice: Boro's Panda Express set to open Saturday
+   Status hint: Opening | Industry: Specialty / Other
+27. URL: https://news.google.com/rss/articles/CBMiwgJBVV95cUxQcDRDTnlzc01FczBRMGxtRWlwbWFxamxZazhkZUxFNTRkMW1wQXM5dnhsSlBqVExIUjlHUlBIUmh2czJCQVllTTAxRHZEZnZKZDBSSFV1dDRqb3IwUTlOb3lQMWFmVnBEQ1g1dHk4Ukl3ZEFuUXkzYUdobGkyUUJyZDNvWXpYOTJOTFlzeWpFeHZMb1ZCaURUN1BmQnVJYkJ5ZmxTc2ZJNUw5NlRLTEZONEtRUVB1LWdLZy1EUTl1RzE1VFVxVFpBcGlhd0hrWVI4dk5fdjZMYU13Sk5MczlkazVrb3paUTExeTFXN29qb01rb05Fandtb1VBY3ZpN0dwUTFQei00WENPN19sUVBqMEx1Q0dmRzBOcXdLNjhhTGtpbU5JeE9kSzJwaFVtczNqNzB4ZWNtemdfQ0xDb2MyUG93?oc=5
+   Title: Popeyes closure ticks up after largest franchise files for bankruptcy
+   Status hint: Closing | Industry: Specialty / Other
+28. URL: https://news.google.com/rss/articles/CBMilgFBVV95cUxOLTFFRlJIXzY0NDNHT3h6QjI0eU5oT3Q3T2RNZloxRTdWWkxNTDRqZzE3bUxPeS1JNU5HRlMxSmZqaDdBamk4OHU2N084OVV2MEV5eEJxM0wzVmlVSThiNUstNUdERlZYeE9mbjNEOTFFRS1oYlh4MzFOZzhpTW82U0QzOVBrNFkyTUxjdjRyZFd3QThmLWc?oc=5
+   Title: Fate is sealed for Denny’s 24-hour restaurant after diner chain confirms permanent closure after 55 years of service
+   Status hint: Closing | Industry: Restaurants
+29. URL: https://news.google.com/rss/articles/CBMiowFBVV95cUxQQWpjaFZUSjFaR2tlME4ybnBBR3d6R3pZN2pXd3owNEdmdDk1N2NFRlhhZGpUVUpodmw3NEhveEhEZVVkb1RIREpoTnNRWjctZ0Z4MFhzY1kyUFBiUmMzNU9LN19lVkNKR2dLcXlFOGxOdW9OdEJHNnEzeDRhRnlvSFh3dXBlTk5FT1NlQmo5c3d3cndhUzc2MGZmWGFBSWpXeXRJ0gGoAUFVX3lxTE50bVp5TTNLdWQwcGdtZm5abU82NGMxWFhFeHFaM3l0eGVSLXlGaTVaR0ZjeFdzSENiTHMtMGdHRG5WYmowU1BHMXgwcENDTC1EUEVoZkJienI0TURDdVFaWHNxUy04emxXb0pXQ2RVUXp6QUgwRmUzOEtNd2dRN2NIZDY0T3R4VHh1ZHZGYWtQYUlnYzRkLWhVdHdVcUhPS2x3RUFmdTkxZg?oc=5
+   Title: Gene Simmons visiting Royal Oak Rock & Brews for grand opening celebration
+   Status hint: Opening | Industry: Specialty / Other
+30. URL: https://news.google.com/rss/articles/CBMizwFBVV95cUxPZ2JYai1qT29qZkZHMlA1V2N2S3lQaUYteWt1SXQ3VUNldTFtNGZMc2hIQ05adWpHS0pXTzkxQV92NC1OQlV0c2U5bFY1emZKY1FQaHVpRFZRMXBGb0pCMDBhNEhPWGNTazRXVWRVemRyelBOVlpiQklYczI3U29FYXJ3cmx4bGNibjJVWTNWYUI4THEzTnp0S1gyYWNHTUZrY2xpMFJrV2VtQUxJYW81S3MtUlVxQm5iVkFWQlhHaFJVTlFacy1RWW9BcHdMTWM?oc=5
+   Title: US pizza chain Gina Maria’s closes all US outlets after 50 years, files for bankruptcy
+   Status hint: Closing | Industry: Specialty / Other
+
+============================================================
+END — copy Claude's Markdown table into claude_response.txt
+============================================================
+
+============================================================
+PASTE INTO CLAUDE.AI — Part 3 of 11
+============================================================
+
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+1. URL: https://news.google.com/rss/articles/CBMilwFBVV95cUxPR1B3SFZrcjJ3R1RETXUyQVBSOFMyYTl1emlkUVlPZmZibFpoSFJicFZmQVlxb2ZTTWlMc2pYU0R2bDZmVFB2RjJUODl6dHlyVFpwZEZURlFrZ1FUZ0k5MW51RjhXSGRJVURrYk1xTExuTkh6VGVXVlJrTXplTVFwTzAwV2ZNeExCVFo4Q3hhWmRmM011ZzVF?oc=5
+   Title: £5m new Home Bargains store opening date revealed?
+   Status hint: Opening | Industry: Specialty / Other
+2. URL: https://news.google.com/rss/articles/CBMiogFBVV95cUxNVE15U2EzcmR1VmQwaTY1VnduUFBJU3ZGR2FOZG0zX0hfV2Zaa05Ed2VKenRIeVhrbUlaT3VQUnNHbnIxVmFqYWZmWXRqRE1xQ3BZcXRkb3MxYkFUd1RVbHE0cjBjamdzLURaQmpmZnZUbTlMSG5wSnlaSFVxWUstMGxZaW1oYlF4N0JEaXAwQVlLVWpBblZQUW5oY0JHWk8wYnc?oc=5
+   Title: Huge queues for Glasgow's first ever Wendy's store opening
+   Status hint: Opening | Industry: Specialty / Other
+3. URL: https://news.google.com/rss/articles/CBMiowJBVV95cUxQN19XUDVaVzc2TjFmWWFFYnpuNG1aMWJmVGRMZ2h2ZUxRYWg4Q3p1NHVJVlZDaDhWd3JuZ2pxajRKQ202bmlqeklFX1BubXd6VWoxZmJHME5DanVzZ3puRkQ3MGZFRkVNU054N1RMQ3VkX05pY3lGUjVmaGpPOEQ1U2o3M0lNVU5ieHFpWlR1TVFkZEYxQ3FwS050dEJJQ1lqUGZfYmdkRFRUdUR5T2toVUlVNXptaVBFQTNhWjZLcUdVYnZCckRpbTc5Qk80OEVzMG41ZzJsUXFRMFl2X0NaV3lCUWJRd0NxUGo1OFRDck9XX2dlZ3l4NFF6Y1UtTHBGcURNTS1BVEh2RWsxS3pvSkw1ajExaWRPdWZnN0YxZE5OT28?oc=5
+   Title: Happy Belly Food Group's Rosie's Burgers Announces the Grand Opening of its Newest Location in Whitby, Ontario
+   Status hint: Opening | Industry: Specialty / Other
+4. URL: https://news.google.com/rss/articles/CBMimgFBVV95cUxNRUkwNktfdnBoNFl6QTF4c0dTMjNaSkp0N0tkSjJmN1RmcDlxYjJCV0dRY1VWek96OTlNYl9OTjBzUE1aM2FXcU1MdUVydkY3VTYzb3U5TWZOZzgzUkJSekRJNWNyT0ZIc1pkMGgyMk9yY0g5Z3NXWkJCU0QxcXNjQUQ3TmNWSUlNU0l6YzVhQU8tQWdWRTNmUVlR?oc=5
+   Title: Nominations now open for 2026 Digital Construction Awards
+   Status hint: Opening | Industry: Specialty / Other
+5. URL: https://news.google.com/rss/articles/CBMiwgFBVV95cUxORFJfOEN2d0ZTTTVjTkY0cGVUckRKX2s4SFdGVlVHLXMwbWprdjhIS3gtUXU4aTQyT2VObkJQYTNYVkp1MFBpMDc2OG15MzJuWlRWZDJoZEtTY25OT2FHU3ZoTW5nM1RCRXduRF9vWkgwa1RQb2loRzJfVFJHVlhuaGtuT3Q1TkZ4VG9Mbml6Nno3c2dSdk1oOUJYTFBBTXdMb1Bxa2ExQXMtaDd6dWlCZ29OSXFMS2RzN2VfSktBeEE1UdIBwgFBVV95cUxORFJfOEN2d0ZTTTVjTkY0cGVUckRKX2s4SFdGVlVHLXMwbWprdjhIS3gtUXU4aTQyT2VObkJQYTNYVkp1MFBpMDc2OG15MzJuWlRWZDJoZEtTY25OT2FHU3ZoTW5nM1RCRXduRF9vWkgwa1RQb2loRzJfVFJHVlhuaGtuT3Q1TkZ4VG9Mbml6Nno3c2dSdk1oOUJYTFBBTXdMb1Bxa2ExQXMtaDd6dWlCZ29OSXFMS2RzN2VfSktBeEE1UQ?oc=5
+   Title: Prologue Bookshop to mark relocation with ‘human book chain’ grand opening
+   Status hint: Opening | Industry: Specialty / Other
+6. URL: https://news.google.com/rss/articles/CBMimwFBVV95cUxQZnB0Qm5ZbzFoMUR6X2JKTUh3dENxVXc4TkQ5Z3Nnd1pQa1lwdDlmdUJ4TWRxNTYxLWNFY1RxNk9rR0VRdklwcWhtV0stRXdXNi1FUlp3emNGLXFXNHZIcnVHWlhhNVlrdWRhQVJXN2FCcWNfZXktOU1mZzBPOWdsRHZWU053ZkV2SHhlS2NoMTVzWnozdFZfaDRVSQ?oc=5
+   Title: Skin deep as Julia gets set to open new clinic in Dunfermline
+   Status hint: Opening | Industry: Specialty / Other
+7. URL: https://news.google.com/rss/articles/CBMitAFBVV95cUxPTXd6d3Y2aUgwYWVEQjN1UklxNXFkUVVOb3N6NWM3RVdsa3ZFN0hYNWgxU2JQU2FRdHZmNUJGaWQ3cjBWNndDdUdDSjFSN3E1LTZXMVN3RzRiNnkyM3M2dHpTZGhGR2Q0eHhLUUhWUjFpb2hETkRmOVM5OEFJT0h5dUxmZW82SnRVTkRtdkc3N1BxampWa2dCLXFlWnJrWHlRdGVxaUItcm5ybDlMVFU5MWxuQ1M?oc=5
+   Title: Moulin Rouge set to open temporary casino; sportsbook expanding again
+   Status hint: Opening | Industry: Specialty / Other
+8. URL: https://news.google.com/rss/articles/CBMisAFBVV95cUxNMXFrYkgxVHV0MXAwcWJ3Q2VTTnRXdE9rMFloOUZ2cGJkWVVsMXZydDJmQmVpeERnNzZxMzNRX0pXcHVjLV9PNVVBTnNTOFo0WTZKT0RQeGVSTDlGSU9rOXUycjJJWU1qTTFTYm81NTJ1QmxyU0xENDhQdnA2dS1NUEp1ckx6MC1ZY2MxRjBKdXlpY3NTdldna0JiYVNwRHJPbG43dUJmVVZLNkgwRzFJZA?oc=5
+   Title: Anticipated Opening: The First Cortina by The Pavilions Hotels & Resorts
+   Status hint: Opening | Industry: Hospitality
+9. URL: https://news.google.com/rss/articles/CBMieEFVX3lxTE83VUJkdXQ5RlpCa2J5d196dU56UTB4SVN1Wk5kbkp3Ny12YmctMk9rYkdVa1hYbUs2VnplczlZWlJtS1gyWm5WWVJUX1pYcms3U2FJNC1hM2tzdFJYOEpfR2JibGdoUjV3dWhsQ3ZRQ2VKNG9NZzRvdw?oc=5
+   Title: What we know about J. Crew Factory store opening in Vestal
+   Status hint: Opening | Industry: Specialty / Other
+10. URL: https://news.google.com/rss/articles/CBMi9gFBVV95cUxPN1RCNUl1aHV2NE0xM1JfUDhsREZLaHZ6QUtJdXotQzh5X21Tb0Ezd01XSV9WNUtVVzBRWmdmTzhmVzRVVVVreFFJWlB0UGpfb2hSaXFodUx3MGJTUWRMWWJScXZ0dFB4Y2hxUjBXbzZxMkstWXFqZjl2V1FFamFfMV90NkJueUpoRVh5N2VyRWlBeUd4bE1SYWdRVTBNU3VkNDBRZFdLMzZNa2l3VWJvMDdzUTMxd0dLRzRZMUtDUDlOcFJ2RV9RWUFWbnkyV2dCSFdkdVZaSjJGZnI3akl6cFlGaHFJdkdzcHRJLUVIWmIwV2ZfeUE?oc=5
+   Title: Company to open its 19th branch of this fast food chain on May 19 in PCB
+   Status hint: Opening | Industry: Restaurants
+11. URL: https://news.google.com/rss/articles/CBMioAFBVV95cUxNa1VRTjZ2LUZSdjcwRHVkRnVXeUo0WC1vZnVSTzVwaE9EOV9CMVZWYnh2cnlQZE54TEQtZDZlOGlQSkV4QmZNb0Mxekhjb3NwdGFnalFiSHVKRTNVSnJFS05rcWx0ekZDQW5YNjZsMHRvSkR3UjE1YnpwOU5Gek9ReldJalVxdEFnUlBrUVdnX0xTZ0pSaGd5NWZOcG1uenhy?oc=5
+   Title: New parking on West Main Street set to open next week
+   Status hint: Opening | Industry: Specialty / Other
+12. URL: https://news.google.com/rss/articles/CBMilwFBVV95cUxOdC1rS3ZIVkxUdWZ6eUlPWUFXODdDTmpHdnhqUUlod1U1ZTBKNF9sWm9oMl9PSXVULVZYdG9KM0MyVkx6QW1IYXJuSS1NZGozN09NNFVuVFdkX0VHLUdFYWZjV0RLUHdVWkxFZHVLeEtldy1vVTBWLUxwOEhfRmxvM3J3Qk5wTDYyY1JPcVF5UzhRWlU2YU5v?oc=5
+   Title: The Monteleone Now Open in Rural Umbria
+   Status hint: Opening | Industry: Specialty / Other
+13. URL: https://news.google.com/rss/articles/CBMi3AFBVV95cUxOZUs0WklOb29zdHBSWTRpN3ZqdWk4WDMxQ0RfNlowamptNFZNTXpDRzJKZW1ORUNHaXNtU2ExX0xHSXoxTFBYR19GQ0tHXzlqZGZMZ2h3MVVfMFpUSExnOVJZZmlRTklBaTE5bGs4UjNjUUI4bU80aXpuOEJLUkNhMjBOdWlRem54WldPMkxtYXk2NWJYRDl5ckhRc0RWUTEtTTdyTmdxOHZCWV94ME9MSjF2clE2aHgtRGtJWWJ1eEJVUnNWSTJoQ1QtNk12MzBfSEx2aGNwMklhTEhs?oc=5
+   Title: Palovista Collection Model Home Grand Opening in Reno, Nevada
+   Status hint: Opening | Industry: Specialty / Other
+14. URL: https://news.google.com/rss/articles/CBMisAFBVV95cUxOdUJMSUxnODBNTE1kYmZkR2hmZlJ6cUo4SlJfWWp4dWYtYVBhQ29LTFBKbmZjUWxINkhKeHZ1Q2VVOHpWLU5BdVRXbmZ5SUZQLUVaUGZYdk02MkFvU2hIQkhQeTBiOEVSTVU1YlhBQ1Iza2pkLVljMXlvQXNKaHlXNG1nWDZIa0dkbjh3bi1LNlVVVE1oWnlYbTB4eTdsMkFRUGdjYjVWMGVXbEhLM1k1MA?oc=5
+   Title: Too Thai Street Eats now open in Frisco
+   Status hint: Opening | Industry: Specialty / Other
+15. URL: https://news.google.com/rss/articles/CBMivgFBVV95cUxOaXdwLUtLNksydmNOeTN4TUtpY3o5eHQ0MlRvVk1PT2hnTlM5Y0x5M2xOMFBuUk9hU05ZZ3cwaURHV2hhU3hDaUo4NFA2TFF5bmxWTzZlOWlPUmVKeHE2azkzd18zbGZRclo2UlZVS2NMLUJvT1lFOHI1YWFjWmVYZVJhWm9SSDhjaXdncVFEMTVibkNpZkYyZTEwMUwwQkhwam0zV0o0cWdLNEZ3WEd4cng0U3Frd2lWU25DNHR30gG-AUFVX3lxTE5pd3AtS0s2SzJ2Y055M3hNS2ljejl4dDQyVG9WTU9PaGdOUzljTHkzbE4wUG5ST2FTTllndzBpREdXaGFTeENpSjg0UDZMUXlubFZPNmU5aU9SZUp4cTZrOTN3XzNsZlFyWjZSVlVLY0wtQm9PWUU4cjVhYWNaZVhlUmFab1JIOGNpd2dxUUQxNWJuQ2lmRjJlMTAxTDBCSHBqbTNXSjRxZ0s0RndYR3hyeDRTcWt3aVZTbkM0dHc?oc=5
+   Title: ‘A-Game Wellness’ grand opening brings first-of-its-kind services to community
+   Status hint: Opening | Industry: Specialty / Other
+16. URL: https://news.google.com/rss/articles/CBMi6wJBVV95cUxOaGp5ZGNkckVVZWRCRW0tZ1BCb1RYV05nOXBuTVhTWC00eWdyMGYyQ3BFc0dNV3paa0wwa0VxWV9jT2kyU2xJazdsT3h1MjN3Skx4Z08xWHNlNzlPSlNBUnJtV2NpYW52OGp1LWoxT1BwZXY0SGNsMXI5ek1fcTZQdnQ0c0FPdFJLZzVQbnNHZE1ZREpfZ0FReGstdGFlN2NLa211WE1TYTBaN1ZFQ2tRUmJZY1RqTU5JRFMyUmZnTGd0dDVUa2ZOVUtfRGgtZXBveDhOY2RheUV4Rjk5X0NIT2wyc2pxb1FMME5Rd0N2N1dXYkNyTDlaVTdyRlhlM3ZQSWtESkk5NGM4a3d2Qkhhek0tQ2R0cGhCZ2VsQ0hlSWNsWmhEaVJIU0V6MG1MSU1BZWY2VmFYdE5qRUhfc1NmTHRULXppZDBmNWJnV2NYTFB3YjQ3OFRJc1U3ZE0xQmtOVjZiRC1GZTNXbWc?oc=5
+   Title: Carl's Jr. franchisee with 65 locations files for Chapter 11 bankruptcy in California
+   Status hint: Closing | Industry: Specialty / Other
+17. URL: https://news.google.com/rss/articles/CBMiogFBVV95cUxQaF9RSF9pLTBSdlU0OTdKcjI5M1R5cjhZWHFnd0NxSl9uZkwyNmNzOTJsaS05el9YQVFJNXNEckdaWHFRQlFEekpNaWU5WFlnTlByZmwtRnVSUktqYjlPTHJiSTdGZ2xHbUF1amNFR2ctcHJBRnlzZGtVZXNCQlRCMEYzaDNMdmxqUzgwb09xSXpPRFA4ODVfY3p6dmFZYlpCVGc?oc=5
+   Title: Love Columbia hosts grand opening of new transitional housing facility
+   Status hint: Opening | Industry: Specialty / Other
+18. URL: https://news.google.com/rss/articles/CBMiZEFVX3lxTE56RmF2NlhVZVgzUnd1czBKSFNBSHB0c3dOMU5JdW0wYTBJbVV6LWNwaE9SeXNvQ2RVVnFPMUFtME5rNDJ4LURaRWpmeDBxbjdwVkRMaUxtVjZZTFdaVDBtSlI2aFo?oc=5
+   Title: Shinsegae Duty Free Welcomes Medicube with Official Store Opening at Myeongdong Branch
+   Status hint: Opening | Industry: Specialty / Other
+19. URL: https://news.google.com/rss/articles/CBMi3wFBVV95cUxOZzVoTmlKd0lmZlY4T1U3dlhQZGVQTXJvcGc1cDFsOWkyYk5kcGN5LXVkMmoyM3pweGtJakNVdWVBejNlaWRHZFM4ekxIb3JqM2NKU1ZsbHNHTkRtUU5MaG1YSnc1UTRjZEQ3NktReXVINmVyTl9OVXJxRFBiN1h4Y2NNOVZIR0lmTzFVYm13QWtnUXhYdXZDdHdWYk85TGJ2NlZ5Ny1OemtmdFM1X1BjblhMRTFIb1FWUHJKcDdUTkl5SnNvN1cyTldmQUh1UEdmZXZUUnFtVVducGpzU2Z3?oc=5
+   Title: Market Square vendors say they face permanent closure if Rey Feo group charges $5 Fiesta admission
+   Status hint: Closing | Industry: Specialty / Other
+20. URL: https://news.google.com/rss/articles/CBMiwAFBVV95cUxQdjFOV2c0YXFEN0t5Q190aV80VTN2dm1ZZ2RIT2xwdnE5NHJVYXdXUGItRV9WVm9xRTRCdURXeV85N3pYNGpkb3RJODR2em54UGFaQ3Fac1ZKQ0laRlB2WUtUUm5oNUVGdnExQWp3Y2x6ZTAwbkF4UzFUc2gyWWJUb1JENXVkSGtaZTV6X09DSkxOMUFoWlJSSkZnbjZnLWR1OVNvdlN3cFV5SWJBeV9Jd0V3ZHRnT1NVbVNJZ2pqVWw?oc=5
+   Title: LGI Homes Celebrates Grand Opening of Topaz at Skye Canyon Townhome Community in Las Vegas
+   Status hint: Opening | Industry: Specialty / Other
+21. URL: https://news.google.com/rss/articles/CBMitwJBVV95cUxQZXBpUk5sYThTQjU5YnM4elBET044XzY4V0tzTEJJbGl4WGNJeWEzenlUOUlOcm4tLXNUSzZUS21wOXBxQldsZmNFYS1lNHJibHpPdXhCRXhKVWo3WnNPOUpncWtOX2psbHZTcjZDaGdPV0JZelRVSXBGV0JaUmJFZjBnSmxXTlMteXhNS1hhcTA0d2RqdVo0ZFd3Tm9NZjdlQnJaTF9tVWVvMmVwVV9DRktadzdwM0pGY1Fxd3lQd0dwT09tRlRwdGlWbU9qVnA1RzV1aXZXb2hiQWtLYzBFMW1DalVscmdLbm56c3MxQ1hiemZteXNhUjhYOGRMcmxCczlFX2JRclFJQXpqb29KVmFRQjhIVmlIUmR1YTZsTldGSWhTdnkxZlIwb2xQNi1HMVcxQkNsbw?oc=5
+   Title: Bengaluru cafe in Northern Liberties now open
+   Status hint: Opening | Industry: Specialty / Other
+22. URL: https://news.google.com/rss/articles/CBMihwFBVV95cUxQQ2MxdXlnTGZHcTJRMkFqUlB3cktDT1NMcWlnSzZYQ2N3c1dWM05DcTBUbzByREV4NEp1NE1pSmRIbVRLZ3UxQmlzNmQ0OWRRNW96QWp6RzI4anZ2bGVqNTNSdzR6ZlBuV0FJclhHSzJONm9FWXRySGdYSFpvYlZnMVdKMzRkQjQ?oc=5
+   Title: NEX Now Open on Fourth Avenue [PHOTO FEATURE]
+   Status hint: Opening | Industry: Specialty / Other
+23. URL: https://news.google.com/rss/articles/CBMipAFBVV95cUxPZFp6OE1BdkdJSGlyckVGRzdyM0NlZTdVU0lHMXppSFdWSEt0QjJON1BtSXpOX3B1MmpqTzRlZ1lsMF96eVl1WkRBUVFWY3NvLW1ZUmdwQmFISDBDLThreElDWWZrUTlqRDVYVXdSeVVEdHcwS0ZyRGwtalZxSllZMTdQZkRTWkk5TUtISVI5blc3SlM5T2Y1OFVfYVlmQTVMZXJKaw?oc=5
+   Title: Park Side Bakery & Deli Now Open in Lakeside, Cardiff
+   Status hint: Opening | Industry: Specialty / Other
+24. URL: https://news.google.com/rss/articles/CBMi1AFBVV95cUxQMmZvTWhnQzhpZzYwakFRelg2bldXT0h6cnZ3SnFnSldkZnRJNXRReEdhek1HTHk0bjVXOGV4RGlxZTQtRVk1MmdiME1nWXVWSnVYUmpuSlJvWmJ3T0YtYTM4QThzcGJaaWIySExqVzlMVE9uMVdLQTVMWUt3X1J2U0ZRNUVGWWExYkdyaWo0RzhIczZvNC0yNkFEQmEtNThNdlRZMlV6MzliWjhfTlYyeFVVcS1oUldxUHh4bk5CaGQ5aEZ1UEt4a2QyRllsSW5xZlRzbA?oc=5
+   Title: Beloved Toronto designer dress store closing this weekend is offering flowers, coffee and major discounts
+   Status hint: Closing | Industry: Specialty / Other
+25. URL: https://news.google.com/rss/articles/CBMijwFBVV95cUxORkpSWVJzcS0xemNqMFJERUxJcUJvSGNLaFlhVEFycms1d1FGM1pLNlFmNmNOOWhRbTRZLU45dUFNdFNTUHA1VERKV2cwU1J1UzhVc2dHTjhON3o0X0hkcWt0a2JEVkdfV3ZueGZrTUNMN0RmbVdBVmtQQlc0Sk9HQ0QyR0RwMThwN3A1amhfNNIBpAFBVV95cUxNYmducERRcm8tbGwwU29aV1hVeFNUTmdBWmxxZXRMRU0zYzhkemI5YUFLWDc0WHJfNXpOcm5LLUpSaTQ4T2JBR3kySjVZTHRXakc3c1lBSDFvUzFpNmliWktlZ2RMSm95VVhaclg1UEtJcGpfQUh4M25YcU5EQkY0UGFWX1RZS05ZbEc3VEdsVVpnQ2t5R0tNMTVZc3VNRUJmeVlNZg?oc=5
+   Title: Breakfast, Brunch Eatery Now Open In Burlington
+   Status hint: Opening | Industry: Specialty / Other
+26. URL: https://news.google.com/rss/articles/CBMipwFBVV95cUxNVWZXWWR4ajNqNjJ1cTdHTXNGcVZyR3JtMnQ1S0JvYXZQYm4zWHA1blhZTVZMTkNXc0dvYjZ6TzdhRnh4clJzTFFhSXpldWtBTE9nZzJlUWw5bFJHVHF2RGJWZTZoV3g3MFZCYWN2Qm1UUXYtRlQ0c3YxQkRzVk9FRWUtUjNoYU9OQUtFOThTRG4wZGdLM05jRU5Fd2R3ZXo4WUJjc3V4OA?oc=5
+   Title: Another fast-food franchise owner has filed for Chapter 11 bankruptcy. Will the burger joint close any locations?
+   Status hint: Closing | Industry: Specialty / Other
+27. URL: https://news.google.com/rss/articles/CBMimAFBVV95cUxOeVJiTFR4X2JzNFUxdW1vb214RXB6cHU5Tk1hYTYwLTk5cHQ5TEhuX0VnMjNRc2VyZmwyOUdkdEhpOWhuRS03bVZXS0JoYkhXMVQ2YV9jeklSa1U3dExxaUppQnVrbFN2M3Z1d0xuNXphdnA5V1hRTlV0TUlfMTVtLWtHUjJYX2J6Z0lqS3hsc0llbzNNOHNQRQ?oc=5
+   Title: Happy Valley Casino Set to Open in Former Macy’s This Spring
+   Status hint: Opening | Industry: Specialty / Other
+28. URL: https://news.google.com/rss/articles/CBMimwFBVV95cUxPSWhqS2RKQUtWQnNhdkRXQ1pxVjlYYVlMbkhSTm1zRlFYejhWMmlUWW9XWkRfeE9CSXFleXprM0hhOG44TmZOakJoTW9jNEdQZDJ5TjNsdExRXy04VExQZXR5VW1LeHZPdkFabVBmdVRPSE40Uk1pMVNaanRvRERtTzhYdGswckNnRVE5TGR4T3FxUEVTck9sQ25LOA?oc=5
+   Title: 65 Carl’s Jr. Locations at Risk After Major Franchisee Files for Chapter 11
+   Status hint: Closing | Industry: Specialty / Other
+29. URL: https://news.google.com/rss/articles/CBMif0FVX3lxTE1KQzZCdTgyQ0RIbnM0dkh4YjF0YTE2Y2RnaW9pYWZMeGg4OFpqZVR4WExuYWd2blhGU0hQRVJyX0drQnZSZ3dFMzFnSG5pa1A2ZE9wc3U5Nk9id3B6WVFJN0NjSS1zdFNpZ1R0LW9BZUdiMXNZRHByeWtjME5oUjQ?oc=5
+   Title: The Derby, London City now open
+   Status hint: Opening | Industry: Specialty / Other
+30. URL: https://news.google.com/rss/articles/CBMiW0FVX3lxTE9Xc2paS3plVFRzeE9RUm4tRUJHYnlQcTctXzdYTE5IR054cG0zWWNvTmNMZ0wwN0VqZmJXT0JfZDFKVF9fM3hBcUFwSV9OSUUyeTlsbTJXdm0tZDA?oc=5
+   Title: Popular Central Maine Chinese Eatery Announces Permanent Closure
+   Status hint: Closing | Industry: Specialty / Other
+
+============================================================
+END — copy Claude's Markdown table into claude_response.txt
+============================================================
+
+============================================================
+PASTE INTO CLAUDE.AI — Part 4 of 11
+============================================================
+
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+1. URL: https://news.google.com/rss/articles/CBMikAFBVV95cUxNaExkT21Vdlc4SFhjVExoelFKOEstQWt0SklCRENQemxDbEhQTlRWUVhJcVh6ZUFrRURfNkVDc3pxbS14SloxaWM2M3FuMnEyNHZndk9IZS1BSnhEeURwTzF1bmNPem1pYno4eHFoQVVOUHUtQmh1UUE1bi1BVmlUYnhRWTdVS2ZGQ21yMnpNcXI?oc=5
+   Title: Tahoe Heavenly Pho now open in South Lake Tahoe
+   Status hint: Opening | Industry: Specialty / Other
+2. URL: https://news.google.com/rss/articles/CBMiuAFBVV95cUxQVmlIc3NCWDl4NWtxaURDQV9LeVJpZXM5c1dlM3hMWF83WXlKNTdsWEUzRzZVVUpjcDRUUGRkb0NJM0hMZVdVR0R5ZTBGQTF3N3VzaDNtUkY4ZXFWWi1Za2VWM3d1OFhhemNydTVfYkZSY1NNaVZhV2hlQXJCSm5BbUNkOTRwd3lJSklMV0ctQW1BUmJRU0xiLUYySjRFWDdzSnNVaUNJWW9lV2VpeHhZNVZhN3lCb1lD?oc=5
+   Title: STORRS SCOOP: Dog House Subs is NOW OPEN in Storrs Center
+   Status hint: Opening | Industry: Specialty / Other
+3. URL: https://news.google.com/rss/articles/CBMi2AFBVV95cUxOMVlKQkZVeWRyR0kwcGJjM3ZMeV8tQzNXZzhmTmRId2JvaDk0SkdSZkF2U3Z0ZkVmOE8zdmU2UnYxeF9sajRzckNvWG1nWkNZQ1FaUHVXTzRRUG5OekxSYjZIQUVnanR3cG5uOHhPVUpTN1ZpNGJZR3FvdnBjRF9wUERBLUsxY3hGVXhfQ3NrdG9lMm03OE5tSXZjQzhoalRpZk9xNXZ5TFZHR3o1cjN4QVl0TWRLQlNJMXVVMHdBU2Znckk3U2VfMl9oYTh6WWZoTGNQTUoxXy0?oc=5
+   Title: Almal’s Al Marjan Island Project: A New Luxury Landmark for Ras Al Khaimah Set to Open in 2027
+   Status hint: Opening | Industry: Specialty / Other
+4. URL: https://news.google.com/rss/articles/CBMirgFBVV95cUxQa0NYR1BHM2FxcU5aM29YMGJDRnpCa3p6VFphTVlXbkFneldLaVFuMk5ZcUN3VUE0NFpzZG9keWRzUXg5Q0U3TEFrZG5EcWFLTzZWRU5UYm5NdlU3YTVDZ0piY0VXUGxkN0V5dmN6Tk96LWtOUE50bTBJdm9Ld2E3ZVhOOGFjT0NMcmF5TklqeDR2ZFlpLTdVd3VvaUNOeldWMzJhSGl4cWZiVjNPaUE?oc=5
+   Title: The Derby London City, Curio Collection by Hilton: Now Open
+   Status hint: Opening | Industry: Specialty / Other
+5. URL: https://news.google.com/rss/articles/CBMi2gFBVV95cUxNb2JBWVk3eHBzNGNUcU82RDdHSkdNVGRVYk9iVzBZWDdpU0FjVjNIdUJkZUZvVVZpLWZUSzQwb0Q2T1NDWjNLLVVta1NzLWhuNU9IYUhDQi1JNDgyNDRiMXl2bWt4XzNDRVpKREFlS2pYbFVWRmRCUks0SXQ3VTFid1o1UGctZDUtVDE1a0pQT0ZHQkVoWWRKenk4VlVta01aQUxSUzQ4VGVlcXQ5NXdIVDZrMERWeThOUGFKeWNfdUJqX0hEZ1JaVDJ3cEVma1FNNS14SVJ6S09nQQ?oc=5
+   Title: Leeds supermarket chain Abu Bakr to launch all-day dining concept ‘Aura’ in Roundhay as part of major expansion plans
+   Status hint: Opening | Industry: Grocery
+6. URL: https://news.google.com/rss/articles/CBMi1wFBVV95cUxPUS1rdERRNEMzazExUzFWY0NHa1ZhMU94bnNkQU9XUzMtNDBkVTVLWFhYOXRJWThQaVpIdWY4NU5FNzlEZDF6clJlU0xfRFdUdXJLa2tDdXZOU1pCbmFRa3ZSNFByNDc1WnNYSllTNUxDRl9IMFdhYXd2Q0cwNlI2M1RiSFgzSjF6QWxOUzZhMFBQNl9DdzhmM3Z4bUhEQjhwYkVyUTFDT1RGWVJHLWJxSFk2NTNXS09MZXFLYWJ1dEo5NGIwZERVWWJMVnV5MGZIczBXaVItTQ?oc=5
+   Title: Hotworx Chillicothe holds grand opening, see how you can join now
+   Status hint: Opening | Industry: Specialty / Other
+7. URL: https://news.google.com/rss/articles/CBMigwFBVV95cUxOSlIzM1pvd2oyUllYR3hSY2hyWm1iOVExb29QbHptdHdacXJRMTBtMVdscHpQUlZlU1dLYklRWFE2LUJiOHY4WEwtdDR2bGV4Y044T21rWVNQZlRzMVg2LWg5dFFQRkw4NnVGSVBkbGYtd2RXQlB0MXVQVGgxd0p3VjBvOA?oc=5
+   Title: Shein’s Paris Store Opening Sparks Backlash
+   Status hint: Opening | Industry: Specialty / Other
+8. URL: https://news.google.com/rss/articles/CBMi2AFBVV95cUxOTWIwd3NYZTlncC11djdhTTZERnJ6a0lQdnR1WGk1bEljQkpMTzRZYlYybnNrN1J5Tzk1TUZwRldvcXh6SE9VVHBRV2lIM2JXSkVxNDE0ampNZzBpYXQ2VUtwSF9EeE9VQjRRbEhvbEViRnhBNDE5SWRYRmhVWFA4V0VTcWl4Zlo3X1dzZHFGWFVhbWJia1FQWlo0dFRON0xlMnROY2QySUtWWk9ydDI1LUwxUDNUTjBlb3VVMGFaODBRSm1qREltdFVuVEpfVWtXVWZ4enppcnY?oc=5
+   Title: The Monarch Hotel to Open in New Orleans as Part of sbe's HQ Hotels & Residences Collection
+   Status hint: Opening | Industry: Hospitality
+9. URL: https://news.google.com/rss/articles/CBMiwwFBVV95cUxOWFNEOXJlb1FHWER2T1cySjRhMXVHUWlxWlFnVkNfeXhfcVlxdjlPcm9qZ0ppRnVpek5EaXR5b3Zwb2JWTjJPVHdvaFRCXzNFc3B2V0lrZWJwU05IVjkxSDlTNlBZZUpiMHdGZ1AxdkZiTy1aNGItM2E2WG9tOEZ2T1lVLVRvU01DQUZmRjM4YlRqdkQ2UXlIaUM5TkxTQkdrTWs5bVowU0N5OEktSVpGZ05DVXJMUG5oUk5aNF8tM19DMk0?oc=5
+   Title: Say goodbye to gyros, empanadas from 3 closed Westchester restaurants
+   Status hint: Closing | Industry: Restaurants
+10. URL: https://news.google.com/rss/articles/CBMi7wJBVV95cUxObm15UVZpWTQxUjdMX2x2Zm11NWZtZDdnVVo5Tk5VY3JfazEyTFlfM1RBWUdsN3c4TWFhVkpTczU2UVpFY2VfdHB0RlgyTjQyQ0lHa1M3QS1DT0VoT3p3Z2lLMlZTN0FpOWFFRW1vby1RWEVubVZpaDFjRFRCdDk4cmZjTW00RC1QRzBjMXJoTXQ4UmpRai0xbTR4XzZNSmpCdWZTMTRmRTZ2RTNfZWtHRDlaYmI1eDhBUGFkbmZrUmlreGdtck9mMkxIUmJXSmhxd0wzTGxWRmR0NHZUdklUNkYta0dCTXRMQ3ZBbEp6a3FmdWo3MHlKZFcxYTJWeFM2YXM1QkhPQXVycWdEc2RQekprUFJjWDdRSVYteE5fS2diMGI0eWd4S1ppajVwOFk1NGVZczZ4MkRQbU1TdW9sNHR1Uk94MUJSV0hWcGJRWVVzejJSX3VjWW9ncDNUdzY5THFEZTV1SUpCRG8zUmtv?oc=5
+   Title: 93-year-old sandwich chain has closed half of its restaurants
+   Status hint: Closing | Industry: Restaurants
+11. URL: https://news.google.com/rss/articles/CBMi7AFBVV95cUxNdFRUYzE3eW12VFpwRDVhX2VIOWVOQm85OFN0UEZ5OWNTbTgyanJOS3cwQzI2MEJHOGlCYTZscjRlVklwUU1UVkZDZlBPWW9WQmppRUdwWmJVU2dmNktsa2IwNXZ3QlBTRGxVbzJTcERXTmtHOFVKSW13UWhld3hOTkFlaC0zR2RkMGl1UVhmclVwOXVZZEotZ1lIR2dTQ2ZDMWY0NXZhal9GRDltSUNOdUFTUF9yNVhHbzM5cEJsYVhWWnNVd09BNXFISzE1VmFZd05tT0RndHloQy1xaXlQS3J2azBoSWFxR1p4LQ?oc=5
+   Title: Today in history: Auto parts store demolished to make way for Blockbuster
+   Status hint: Opening | Industry: Auto Parts
+12. URL: https://news.google.com/rss/articles/CBMieEFVX3lxTFBjY2FBLUxkSVpGRlhlMkpsMVZNWHVfMXBqYnoxWXVsUEpLNDdFSm9pT3RjQWF0NWNQVUd1amZMTlZsVVJTcmJvdmVOaVlFZHA2ZklVOFZCbzFjb1dJVTZXVXk0U0JjZUY5U3NTVjI3STZlYVpxcUhBNg?oc=5
+   Title: Cinema closed after car crashes into it
+   Status hint: Opening | Industry: Movie Theatres
+13. URL: https://news.google.com/rss/articles/CBMi1wFBVV95cUxQUDV3ckZYTmRkck50SW1vMTY1R3FyeDZ1UzVaSzZHeTRjcHZHYjdVenZpZEtuYk56V0hUTTRaZHltVWpRb2RCUWM4RHlwQUJLMFpPelBiWWtSY3JsMU5IdV9LM0ZvVHRZNEhKWnRyNURZM2pseGI4SEQ2aWNaU3ZsUlU2RnhiWkRiSlZtZkY5Qk5OR3A4Q3FvVFd2aV9meEtsUVV1LUo2eTRmT3hYcnN2NV9Xc3ZmWlZfbV9nczlrZkRLUUZZRHhKc1JxQm4zbTZQOEdPMGd2UQ?oc=5
+   Title: Oliver's Market to open third Santa Rosa store after $25M shopping center purchase
+   Status hint: Closing | Industry: Retail REITs
+14. URL: https://news.google.com/rss/articles/CBMi0AFBVV95cUxOZW9PR0gzOWU0b1FrdXR5aF95djMyV3RrODJJQzVTWUVzVXlnSXNFc0lRMm9SclF2eGhteUUtd0pFcE92M2dtemhzVFUzbU51WHVMZF94dm9IbWNUQ1hETDl2cmhELVVaV2VrdjVVbEV1RzZ2eklHS0NKcXBhLUtFWHBwQWdIckVJMFNzVlFMd0lsT0ZNdUhVY1FOWGtQa21uTUxpX2tBcjhaT1pHMXVQSUZOVjdBOGtOR1VTOC1rRUxIX29KTzFRVWV5UjJlZGlT?oc=5
+   Title: Landlords Object to Burlington Replacing Saks Off 5th at Georgia Outlet Mall
+   Status hint: Closing | Industry: Retail REITs
+15. URL: https://news.google.com/rss/articles/CBMi0AFBVV95cUxQRmYwMXdiRkZnYTlSOUFHMmZnM2JHWHNDXzE1TlhiSVhNZXlJSlBlTzNLbWpHNktsclhFUnFkVVRmU1RQeTB5QmYwVDZ3WU9jREtxS3FwYXZZWm8xekNVMHl6N19nd3R5VjFUTzdIVHM1WnpuVzFSZnR6bGRPMV81Tzh3Y3A5ZFRfWC16RDFqZXZfVjNNWV92czRJQThyTFZLQ3BaeXdyZmV1VE93enNaQnpHV3diMkRzaXpsZjB0dFNMek5PN3RZU0F1ZjlJZkd2?oc=5
+   Title: Exclusive: Cafe and flower shop to replace shuttered 88-year-old SF hardware store
+   Status hint: Opening | Industry: Home Improvement / Building Materials
+16. URL: https://news.google.com/rss/articles/CBMi5AFBVV95cUxOU3pyazZOQ1dtMFJPX2ZaMlh1SUJ0ZWJwcEJhdmpuTnotbmVYcGYzaWRxMVZiQ0NndnpuZ1ZiUjRrcl9fNkdBdkZvYzc4UElsVnh1VnRyYUJMNDVJUUw4VU9LTVJxTFQ4VGFNRmttc2tmUWU3MU1lNHRfamJDcXVUSy03WkNJSUtUZjhHRzJSbWpOMnl6QVZKRkxJMi1LdXBpUVRTaklWQWpXaUF5LTkyd3Z4UkdTZm9jOEgyQkR0SmFxMDJWb181b192dm1IYUsxNEY0WHpuSkRJWE9odTRVaVNoYlA?oc=5
+   Title: Gene Simmons of Kiss visits Detroit Rock City to open new restaurant location
+   Status hint: Opening | Industry: Restaurants
+17. URL: https://news.google.com/rss/articles/CBMiiwFBVV95cUxOR1VLSGNJUzNkZzQzNXJuVF8zczlEWldYOXFYZ1U3Y1NodElJS2doRTdzZXl4VzVKNV9GN0hDZS0xTXVDMFN5d0gtZEFiUzNoTmk0a0hTRDZDeEcyZTd4VjhTblM5RDROVmF4SFFRRFNrd1I2QjBKaklMM3lWSlM3WXhoRlBXanAyWXFZ?oc=5
+   Title: Cinema halls to open in Assam following strict SOP
+   Status hint: Opening | Industry: Movie Theatres
+18. URL: https://news.google.com/rss/articles/CBMifEFVX3lxTFBqSk5FUHV2aDRDWGFIb24yc2NhdVhGTUZMQmRSMFFfRlplS0lzYTRrTDJrZjdSNnU4dXQxaDZvUmxmZWROQ3JlTjVDVm9hTHREbVRmLWJHOWhCUk9peU8wOG55ZUs2dm8tMC0zcWREempmLV9UTjJBQTNreWE?oc=5
+   Title: All stores at risk as high street fashion retailer in administration countdown
+   Status hint: Closing | Industry: Apparel
+19. URL: https://news.google.com/rss/articles/CBMi7AJBVV95cUxOam1ZZmtoRnlRWTRiOGNJdm56b2ZKbXNUaVFNdzdoNFl2UlF2QjNTNmR6QlEzeVFsQkNwMDNpZmNpLWRaRjFyMkRzSlJHam5nalhsdHp5aE01SGg0ZlZnWE55RUlBNWRPTmNlM0hObzV2X1RGWjR4TUdpRUtodk1LUmR6QkRkTm55bFI5UkZaRzBrb290UVdXaldDSjQ5cTJOSU52MXRuOW90dWdES1RlU3AtWGZpcFg0b2xsMFEyVjdWSVhpWTAyS3k3T1liSHRfaExHU0RFZlhxcTFIbndYcGZVVW15OXBvQThISElDU0dfOUtvVHVfZXB5N1J6OU9nTUQyenMyX3JuazRnUzZDTFBrZ05qNEdXS2YtRzBHSXBXdkNxN0NMQ01LVHMyMjRpV2NhSFk3TmYxc29NVGxBMWJuZUYyUjg2YzlsRnFXeGVvYzV1QXlNcFVxTkd2SjZYWWpScjNEa1kzVlJo?oc=5
+   Title: New Nordstrom Rack store coming to busy South Texas shopping center
+   Status hint: Opening | Industry: Retail REITs
+20. URL: https://news.google.com/rss/articles/CBMihAFBVV95cUxOSWswbHJVMGFJMVhyclJhdGx1Q0VvWEhGMnVMZi1TTW9UUzhUWTZwQklLbUZvTzVldl8tbzRna0JwY1pTd3A1NWcwa0hLOW11T1ZEd1AzUUZ6cnpEdDVtZXdYamJvWGhQT1ZkcGxZVXZNamRsSEgtNzJiY2dWQWZ0dkxuYVY?oc=5
+   Title: 'It's bittersweet': Owners reflect on The Clock Family Restaurant of Duncan set to close Friday
+   Status hint: Closing | Industry: Restaurants
+21. URL: https://news.google.com/rss/articles/CBMiwwFBVV95cUxOd3MwSXV4djhHcVZYUjFDMzdZMEJvcnRZX3RJX2MxUERtZTdjVVVNZzctRjBwbkxFbTNKZlB2NWMyc1AtT1NGcFBVUm45NE1zeGtlRDZibGstUEpGcEdTQUN5V3FPMV9fUWVHOHJBU0M4WTZSZ3o1cEpvNW9MX3ROSjFPVGsyTXRCWTJmV0tMLVUtQzA5clFEM0UtTTZyX1lheENtSHJTVUhKZDNkRGJ6aDJKMjZTZTh1em9ub3RfTVhxU2M?oc=5
+   Title: Gold's Gym closing in New Braunfels? Here's what's taking over
+   Status hint: Closing | Industry: Gyms / Fitness
+22. URL: https://news.google.com/rss/articles/CBMikgFBVV95cUxPOU5LMThtdmhJVDczTE0wdWV0d0pMVkM2UmJEcmZ1ekRzcHMtSTA4Y19MRjh0MHdxZ3NacktkUEMtVzBjUnlMTFNwaVJMRjhRQnRKcnNJYWF0QXd3ODhjMGdIRTRqNzI2S05SZjhBckJYT29JVXl0X0hBMURVdUtMNmVrM2huU2piZWJqX3lHMUJsUQ?oc=5
+   Title: Nikki Beach Resort & Spa Marrakech to open in 2028
+   Status hint: Opening | Industry: Hospitality
+23. URL: https://news.google.com/rss/articles/CBMiuAFBVV95cUxQV3RlY1kxN2ZKMjRoaW1ITzBERy0wT2NrNTJMMmN3NWVOcVZDRlprZ1Vod1BVU1A5QWNPbmRjTEN5WHEtcl9rdU82UFhNSi1jTWVxaHRTNDlBWnlYSzVmM3dIWXRKOTVvYndMTE5ROUMwNmFvSEstLUR4NW42UzFHZ3BYREpwYzFPUXgzb25hdXFxZDNsbmpwTlIxSlhFWDBiWWRNdHJ3RGV1NHJHVVdQeHBKNUxZWG1m?oc=5
+   Title: Gene Simmons Brings Kiss to Detroit for Restaurant Opening
+   Status hint: Opening | Industry: Restaurants
+24. URL: https://news.google.com/rss/articles/CBMieEFVX3lxTFB4cGczOEdsazBjVkloaDFRLVdvNHlsM0VMQ0U2THdPcXBIdGdvVlpXX3k2SkZqUXNCOTZWeGNsaGNZWjBnNUo2SmVPMWN5dXhVT3RLMDdiR1k0TWVjNHg0X0tqeUlFTFFoakQ4SFJwb3dDcmptb19Ddg?oc=5
+   Title: New 159-room Hyatt hotel to open next to Metrotown SkyTrain station this spring
+   Status hint: Opening | Industry: Hospitality
+25. URL: https://news.google.com/rss/articles/CBMivAFBVV95cUxNQjR1QmhMU1lieVJ3Q3FzV2tDYnRvRnZKTW83VUFQMlFWRTg5bnBXRW8zZVF0M3p4bWJQUU1nMEhkMUZPeTVHUFI4RTFqX1NvRWZWOFpfcVhvbW5VWENMbmdyWnpUV2Z2RUJpWUxzMHl0cHVzcWVLRlFDckNCZW10SGhsREhNVGlaUUREMDlSSmxJTGpBelJPQkN0TV9fNkJ5Mzh1VTZudGhQVmk2MHhtV1pBTFRWN2h4dnJSOA?oc=5
+   Title: Gene Simmons of Kiss Celebrates Detroit Restaurant Opening
+   Status hint: Opening | Industry: Restaurants
+26. URL: https://news.google.com/rss/articles/CBMiiwNBVV95cUxPcUZSLUhiREVPTlJKLTFNbDJuOV9tYXBMRmExaklpMUZoN0ZCWTNOWXg0QUNkZnhNNjRTX213SzNRbFBDSXlBUGNyZmdmTVhOcFp4VWJORWdwR0dQZHUyalVOal9lTUJqWmp4UGFZbFZMRUxPZGw5NmI3OG5Ea3JFTktFTmIzaG5BSTJJWkliZlFYNXVCbVQ0d2N0NGhnbmJOUHdiRHF6M2xvOHNBMjY0LUU4VzE0bVljZVRJcF9VZVhlbjY4SlU1RnEwNkpSM1pmZ2RCdEpHLTFmTi1ZclNtdkZSOXptNzU5R3g2X3hxZWpnNlRpN0Nfa0RyMTRQZGNnRWhTOWZjaXE1QUJtWWl4YTNWbkVrU0JLU1BVdzM0MXZNYmIyQlkwZndFbzJSSlpjMEdxYU1IT3l3VG1kN0JUNkF1UnowNnh6eTdNNUhZYm5hN0RObVRqNk5sYmpOX0wtb1V1MzBjcUZfaU9PSUFGOER6WFhhTW0xeEdxNTZ3aXZGTkwxZEhwS0Rxcw?oc=5
+   Title: Aldi Easter Sunday 2026 Opening & Closing Times: Are Supermarkets Open or Close Today? All You Need to Know
+   Status hint: Closing | Industry: Grocery
+27. URL: https://news.google.com/rss/articles/CBMikAJBVV95cUxPVXAzSUJteDBzbnQ1UXVyZW5aVE82TUZIdFBESDNBUUFVdmZNYXE2Ynl4RXlzQ3pESmFkdWh3TXlSZzlJX2NfdGw5LU5pSlJoQmRvN3R5b2w5V1dMbmNDejFSSzJUYThHUkExQThYdHZfRzNjYURrZ0lUUTAxMWNqS1d0N2JJNkZSMjZBZ2xfcmszb2dyTmVnZVJ0bGtCd1Ntb3dZLWVfVGRCMUh4UmZEcThUVjBtdXZZVWV1cDBCR1RUcU5kdVZPa0R2RkNfRlpSVUNLeVJVUjFHamJMajVvaE1SbVBjTk1rRnVLRVpjLWJSOGhHMnJPQmZXX1FoNGp2RV9xbHh1YjU4QVZOUXh0Zw?oc=5
+   Title: ‘Excited to serve more people‘: Popular Mexican restaurant to open 2nd Lehigh Valley location
+   Status hint: Opening | Industry: Restaurants
+28. URL: https://news.google.com/rss/articles/CBMif0FVX3lxTE1rdHN2RFIxM3NsSGpiVDZZaTI4V05YMEdwYVNsVlFxTE1wdDU0MlprNlJtWVBHbWttcDEyd0pPMW50cFV4cXRjcDdFTlAxUVZJS1FuSTlFRmtTNllaMVMzT0lXWERtWVk1cFNLMVlEVm50Z1BBV1pTdUx6VTdLOTQ?oc=5
+   Title: Deer Park convenience store sells $2M Mega Millions ticket
+   Status hint: Opening | Industry: Convenience Stores / Distributors
+29. URL: https://news.google.com/rss/articles/CBMipgFBVV95cUxOQVZUSUZtUlpGekVaaGg5Wnc4ajdGLWVKeElYMXZWcUc0RjNDU0ZBQVdlcnBYTW5VQUtndnd2VWFDRlBYWTJHejlVZXBBdkRPaHRETVFQeURWUlA4YkFlMTRhb0x0cERsT3R5ZEk2ME9STFRvUFNuOWZhbUNXUUJHLWFSOXQyZzNTTGk3NkotcGlQRVRsOGhJTHBld00wN1IwSU9hZEJR?oc=5
+   Title: Salem Valley 8 movie theater to permanently close its doors
+   Status hint: Closing | Industry: Movie Theatres
+30. URL: https://news.google.com/rss/articles/CBMirAFBVV95cUxQQ1Y5dmRYNVpuYzhFdGRJUS05Z01KN0xHWjgtbmtjcVlYckJtcUlSUS1zUElfTGIySGJtTmdNZWRaQ0U1bEdJbVBrU0pTVnViSzFISUxVaWx2aGpveGZjNHdTby0ySTJKNkhra045cU9pOXFhdlJoRFhIbnBwSG5NbHlYWU9ycUI5VkVoWUpxU1lCZUx5R3hJZDBzNXB4TjZua2t6dC1CaW5tUDlP?oc=5
+   Title: Gene Simmons visits Detroit Rock City to open new restaurant location
+   Status hint: Opening | Industry: Restaurants
+
+============================================================
+END — copy Claude's Markdown table into claude_response.txt
+============================================================
+
+============================================================
+PASTE INTO CLAUDE.AI — Part 5 of 11
+============================================================
+
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+1. URL: https://news.google.com/rss/articles/CBMigAFBVV95cUxNSDA0ajlkeVREc0RMMWFNQ0hYOXVCalhncTJPcHlObEpvRU4zRHA2YS11bmZMWnQtYlREbTI0bzctdkVJZi02d3AtZmhLOWFUQUZmYzUzT3dOc3F5UTZVb0hTOVFRdGxRVjI2T0dzZ2lLYzVLV25oZnhfR21FWlozSg?oc=5
+   Title: NYT-lauded seafood chef to open new restaurant in Point Reyes Station
+   Status hint: Opening | Industry: Restaurants
+2. URL: https://news.google.com/rss/articles/CBMipAFBVV95cUxNNlNfZUNscHZhWlRqNlFyclhMNzF2T0xrQ2l4V2V4V3RnNlJ3cWpqT0J5VHpRX2IzT3FSejlTaUg5UGg2MXQ0M1Jrb2p2WGU2SHJ0QnhfaGxrOUFTWFh4ZnVkcDBBdmIxbWI3dWhMcDJzRl9QaUV3SXpBejZNLU5ianZIaXRLLXJZZmJkT3RjOEt1SXM4NElRdmI3bTEyblVrcjg5LQ?oc=5
+   Title: New Mediterranean restaurant and cafe just opened its doors in Toronto
+   Status hint: Opening | Industry: Restaurants
+3. URL: https://news.google.com/rss/articles/CBMikAFBVV95cUxOa1E2b1d0ZHhVSzdrdkhuTDVTaWkzN20zV3RIeE14QmJDb2NFYjc4UEdoMW5tOTlaTjRVd3hrYkRqM1k3X3hvV1drTms2LXNWYm5wa3o4c21FN01Sd0VIcjRyY2dNSXFqcE9VOFNsTkZCaU1kblZxMEJBSTBtVTJwRzU2TkdKNGhPMUVtQjJwNWY?oc=5
+   Title: NEWS: Pool at Disney’s Pop Century Resort Will Close Next Week
+   Status hint: Opening | Industry: Hospitality
+4. URL: https://news.google.com/rss/articles/CBMirAFBVV95cUxQWWdjUUZtdjN6eXNYYmFMNVpPdkM2a05PQVBpRWppM0FJSElZNElQVkRGa2RSYXljNG9tTmNIUzNIVjhiNHRZckpCODlmdGp1d3I4dkJpc19sT1E5c29OZW92WmVhMVlnUi0ybUgzWDhmS201WGJYcGk0dEJKZHVHYUVvQ3BaZWtvMzRpT3U4MkVFdnpxQVZBTWtQamRtZVhiT3I4SDZ2NzBqQjhX?oc=5
+   Title: Experiential fine dining restaurant opening at secret western Maine location
+   Status hint: Opening | Industry: Restaurants
+5. URL: https://news.google.com/rss/articles/CBMingFBVV95cUxNM19BYnhRMFVRNFU4N000U3d2U1JIUHE1VVRaSENiOGpmT1pQTndEY0V1YnVWV0lKZUZSdWlqYjVCSWNfMDNuUm9rcmJ2dnFzbHBTMl94Mk9zek11VmdPbC10a3EzYU0xMGY3MGNVaHpWUzBMcnhQZXBrNTlFWTZpNGNMTExVVE40Y3FqMFlqaXdsdnp5X2tOVEZCUGtPUQ?oc=5
+   Title: Trendy restaurant to open new location in Distillery District in Toronto
+   Status hint: Opening | Industry: Restaurants
+6. URL: https://news.google.com/rss/articles/CBMi6wFBVV95cUxNUDhORnlLbkVKTGhXNUtHbXFZZnNUTnN2dTE5dDRKTUQxQnV6ZjVFcTBkRVBTRkdKeGU1QnJvYmUwYkUxTk1SM255eEMwUEk4VkdWNHBYV3VOZGpnUXUtU1hjRUlDYW90MTdqTmdEVDNueV83RGY5RmoxRFMxTXlKSG1YT1ZtT1F4UWFoZDlDVkV3MWFPcTlmVXVwSFM4Uk9wRGo2eENVTlczamdEb1M4QVE5d1NJcDZ5VTlMUF9jRnBNQjVsNVJrQnZLaEo4RXFBTmV5Ql9JdWtNbUJuZ09lYVEybW1jVS0zYVFn?oc=5
+   Title: Revitalization efforts bring new shops, apartments, and a grocery store to Briarwood Mall area in Ann Arbor
+   Status hint: Opening | Industry: Grocery
+7. URL: https://news.google.com/rss/articles/CBMi_wJBVV95cUxOYlBYMU9qNDNsWHNWUkRrd2VPSXUtSUk5bjhwR1NxbVl4d2ZYdkl1Uk9GOEZCdkRSb2FqWDlMcXJUTGxWd3FVWlZrWHRRbDJyQkg0MXBScFVnb1VwaW4wQ1V5dV9zTWM0Wm9NemJWcnl4REhvQ05fT0dSdVRBazlHZjBUYUpYZnctS21ZZ0JyaGRnX3ZhZzkybUxNQ0JVRkNWX2Y5cnRBRXhLX0ZxbFdQUWVaQUFvVmYydHppb0lZMFJZWEJSQlZQZ0Z3TVpZRVU5UGtRU2g3ZzdxM3FQR3pTSnVLdzhpZFJaSGtUazd3Q2FlcG9BZXlkeXBoeDBPakRBYWpQdUhoOWg4Zkh2RjBhdFhWSm1OTVd6WVROMWt4QTI2OXFlV3BpeE9pd2gySVVrZGNWV3hyX0Z6WjdaR0NHS2wtTzlFNUtSZEdmajJPOFRqNVlaQjNaYWN5eEU2c1RvWFVVejJCeUx3ZjZQcGk4d3F5UlRDZnFNM0kwdmo4UQ?oc=5
+   Title: Customers say this grocery store's rotisserie chicken fell victim to shrinkflation
+   Status hint: Closing | Industry: Grocery
+8. URL: https://news.google.com/rss/articles/CBMilgFBVV95cUxPOGtycVlxRkJxTmxjSzJONTBoSEQ5OUtZYnF0RGhZU3Ayd2hsZjYxZVdCaTY3OXVnemtaUktoTTM5djVNbXRfTXdVUGxXLUtqcXZxREdzNEg1LWh2bGVDdl85UEZHVnRSQmdoRV9QekJJYVRiemM5TWsyaC1hWEljXzZHOE5NcXpJZ1M5TVpXU2RuTDVRenc?oc=5
+   Title: Award-winning Scots restaurant firm calls in liquidators after closing its doors
+   Status hint: Closing | Industry: Restaurants
+9. URL: https://news.google.com/rss/articles/CBMiuAFBVV95cUxNRjY3d19wM3ZYRkJnbm82LXo4eGJsS0ZjYzBYSW9uY09JclJjVHJKOTlvWmg5V0dLandVRVhqQnhUZlk3MjJwOEI5SWh3WmVITk9qZjcyaVpKTXpEZmtnb05mZTBqRHFwTEFPSlhCdGVzaFppWXcxbUwxQ0lGX3FSS1NQSEpEQWZPdEpMaUg1c3F5ZjRtTGRjeDdmVWJueTA2R3lFaE1tejlMRWlaRUdVcDIySHhXYmdO?oc=5
+   Title: Gene Simmons of Kiss Attends Rock & Brews Restaurant Opening
+   Status hint: Opening | Industry: Restaurants
+10. URL: https://news.google.com/rss/articles/CBMilAFBVV95cUxPSlFsYzVBQnlERS1GMHlkUGtxU3hwa205OXZFaXZaeWZoZDgwZV9ia2ZXU2l3U1l0akJJSzUwSV9ETmU5X3lmWXB5OVZ0bnZ5cmZQUDA3SUxqLTBlaVN1RWNOOXlLelAwVWdlY3pGakJ5QjMySTNTQ0NCN1dweVhJNEQ1cUFMQlhCd2tUd0VYcGxjR0hn?oc=5
+   Title: Boutique restaurant to open new location in historic Toronto area
+   Status hint: Opening | Industry: Restaurants
+11. URL: https://news.google.com/rss/articles/CBMi5AJBVV95cUxQWXNPZU5KSDFjSlhMcEVzN0RCaTYyWkduZkZ4LUxQZFBpdjlxTlgyckxHS0hra3lneVpHMXI0N1dTMlc3Z3NMVkgwNE4tamlpR0l5Z0hERXZMQUhYZDVrUzhEc2RPQWpPcmRHdUhkTXg4bzZ1MndIOG51eXpsSmRpZ29YN3F0SVVDOWFFemVuYkV4bkVZZTR0THNXellsUy1mRmtNOUFrMUpONW15TGVZa1hub3BnLVZ5M0poT3FCYVdRbjNxcjc0M19UMklCdEFwWXc4dWpmNHFvX2xBLWJja2Mtb0tvVFBCckR0S0ZvU1c5WjhOUnB6ZWczcWpqVm9mR25NY0VxbHZibHVkV2M2UEhia1V4ZldRaTBSRThtcXhrSUwyY29mYTd1dUFrU3JjeU1NSXBPMV8xRV9hZ1NET2R0LU5TNG1JT2M1VTVEOVFuRTIyMWxpYzdWdzdRcjY3dzNFTQ?oc=5
+   Title: What restaurant is opening on Mockingbird Lane in East Dallas, near all that construction?
+   Status hint: Opening | Industry: Restaurants
+12. URL: https://news.google.com/rss/articles/CBMibEFVX3lxTE5rajFXcGE0RThlSUFDLVRGWTRYRU1OTzhGVTBuVjhibUtBSE1sUkF4LUVYRy1RQjhydXhjaF9wWS1EWkhvVWE4VjZCczMyeFBJZzA1ZC1hcDlkcXRIM2lPYk10S2w5UUJiQVhoNNIBbEFVX3lxTE1pdzNFcURuUUcteDF6aVNIU1BzU2dtc09YaTlDWmU2cy14THNUbkxnUlgwNXlRdDliX2x2d2Z6VVU0X3ZmaUN6bnNESGZnWWtGcnRvQi1fWkF3YVd3UmpvTWVwRGJsU3cyRVgydQ?oc=5
+   Title: Fast-growing grocery chain is opening in Camden. Here are the details
+   Status hint: Opening | Industry: Grocery
+13. URL: https://news.google.com/rss/articles/CBMixgFBVV95cUxPZFBXMEh0MzFwYUZrU3JtelVabzZoQ0VnUmhxc2RGemZ0MmtFTlRfdUU2Tks1emVDSktnRWhHckllSDEyN2ZudjMtVG5pamJzN1I5UW9RV20xYmJMQWl3RG5UVnV3cFBLRnExR3NhMUIwR3g2blZiNGdycTVvWFk0Yk14bTM1RUsyUHBuN0hQSzloU1ROQ3hnbGlxQ2hXNFlPQjVtdW9DMmpuTEt4NzNVbFpNY1lPalQxNzJMLUttRDQyeGZNMHc?oc=5
+   Title: Amy Yip to open durian-themed hotel in Penang
+   Status hint: Opening | Industry: Hospitality
+14. URL: https://news.google.com/rss/articles/CBMiowFBVV95cUxNX1ZkMmZfM3JteHdsVUtYYS1VV01Qek5FblBkRjl2aXN5VXdlYkU4YzVMc1hqeERYOWJRUGIzOWxCUVBsTVAwOHZfZnBRLXZqWnRMOTVVWG01UVBYLXRwbGZSU2V2N1ZFYS1acjVaN25LTXltbWRVMDFFZm9KT1VLWW9ZczRSWHhiSm55UFBiWDN4eEYtZ01qbWZOTDBLbE95WjI4?oc=5
+   Title: What new restaurant is opening on Mockingbird Lane in East Dallas?
+   Status hint: Opening | Industry: Restaurants
+15. URL: https://news.google.com/rss/articles/CBMiqAFBVV95cUxORm4tYms1c1F3Z3FyVkU2a0Q3TFRZNHItOEs5LTdqVGNqQjlFWmEwV3lPVkM2cm9jMFB6T0VxUzZ1dUVkVWF4RkFpZTMwOEJHMm9VQmRsTmg3NDhCTzNjMk56cUpzWTRya2phdUtRV1FMRkNHTjVlamhZcTJScFlMb0Y4NDNqMmRBT3lJOS1ocHREQWtkeWdEdnhGNmpGSXpMcDl2eTlQVUjSAa4BQVVfeXFMTVNIaS1PZlNkaVZpbFlFbmRBMmlzU0JCUFZiUVpZVXJOWm9PMTk5MVg4bURvS1JmRk82Zk1BS19BdDNucXRvTlRJeUNOY0YwNGpYMGg3NkV5UkI1N1FvSERRWHJGbFc2QkRrdkNYMG9Lb3RoRk15cUJxTjhQeG9rZ3k0aFN3REtuUWVxOUk5d0s2NUk0bngySVZJeUJjTG9lUGUtS08tSFFVRFRZdkxn?oc=5
+   Title: Award-winning sushi restaurant founder 'extremely excited' to be opening St Ives branch
+   Status hint: Opening | Industry: Restaurants
+16. URL: https://news.google.com/rss/articles/CBMiowFBVV95cUxOemxpYzBpb1k0WGphTHo2bTAxekFVNURPVHIza1lLRC1xTWlubmI3OVUtbUFPZlhPRGxKVzdTZUxLc3h4ZnZuNzUyTVY2VDhtYmdSSkxWcGx0SkxYa0Q4bTRpblhVUEYzYjhNbmtPcXV5M3dIUjh2WFQ1dzA0Vm16d0NhejFJQm9tU0NuX3pfTmRrSlJtRDFFQ0gzVEhGaVcydWQ4?oc=5
+   Title: Two Arizona icons are opening an Italian restaurant, market and bar
+   Status hint: Opening | Industry: Restaurants
+17. URL: https://news.google.com/rss/articles/CBMijgFBVV95cUxQbVFjYUcwangxMktlZTVKSERPMlYtVTRkLTkwV05GUXM4TUtPdWl6OTVpdHliYlBTWDZDMHkzaTdvcVJrZTNpSG9Uc3VMWjM3NWZDYlhYVkVheEVidGdFQm1UWC1MazhxcllZNHVDUjJzVkVfNmV0c3RfVTBzbXp3VTdoTXlNMDBfNEQ3TTJB?oc=5
+   Title: International retailer opening first Ohio location
+   Status hint: Opening | Industry: International
+18. URL: https://news.google.com/rss/articles/CBMikAFBVV95cUxNV1dZQTBwdk5fYXVPT3BRWFVlWW1sQzRHaHdtTGc2NjlPUzZUVW5hOHdnOHFiT3BlX0pEUjl2QlByQUU5ak5ScW1fb003OFN0YjFfeFNxaWd6Z3RvMEZZdmJMTEd5VGxYRVB0bGlMa3JIaGdXT0dFN3UyT0pMY0FKUlE4YkZvUG1hVFNJN25iSkI?oc=5
+   Title: America’s Furniture Stores Struggle to Survive a Frozen Housing Market
+   Status hint: Closing | Industry: Furniture / Mattress
+19. URL: https://news.google.com/rss/articles/CBMinwFBVV95cUxQSy01Z2pubk52VDVOVVBTM21ESDBOZjVjZTZDRlB2ZkxHeHlyRWtCMnhFa0paS0c0TFJWSzdxSXM2OVhtX0lMLU5UcDNQZnRPbnRjaXdYdDZNZ3NILUxNdjctZG1GcEMxVFIweHVLcUUyYVNIaGN1SGdvaG1KTENuaC1KZ25iNzZWeHhyanJKM0phbWFlUHZhQmxyUWpuNU0?oc=5
+   Title: Something NEW Is Happening at Disney World’s CLOSED Star Wars Hotel
+   Status hint: Opening | Industry: Hospitality
+20. URL: https://news.google.com/rss/articles/CBMieEFVX3lxTFBEWG10SDdJWm83MU9kYkM5WHgwQTEwQ0t1eGlZMlZiXzVqSC1sM1hOOGVMck9mVDFDYTJwSGhGN3pZR3VKZHJ6ZUtPM2g0WFZIMHBwVk9la1M1ZDc0ZTVZX1VWbjZ6OUVXRmg0T3JTbzVYQnQ3QldEWg?oc=5
+   Title: Iconic furniture store closes for good leaving 10,000 orders unfulfilled
+   Status hint: Closing | Industry: Furniture / Mattress
+21. URL: https://news.google.com/rss/articles/CBMitgFBVV95cUxPOVR4bm9DaEJhdHNWWm9GUWU0TmNIaGdsRGVOSVNoMTI0a1RlZW13Z0NSc3BYUTJLcjc5ZjZONXI3dGk1T3lhN3FKbGE4eHA1cGVCNW56a2ZXeDhOeGI1QWNndjJFclZWYWRyMjhmRXUzM2xZOEdpZTlwakF1bk12ZG40V2I0eDlWaWI4alhYbjVuQVlwRjgxdC1vSFA5Q21kODVLTUlDY000OVVjamFqS09GR2FJUQ?oc=5
+   Title: Popular Caribbean-Inspired Restaurant Chain to Lay Off 86 at Brandon Location
+   Status hint: Closing | Industry: Restaurants
+22. URL: https://news.google.com/rss/articles/CBMiggFBVV95cUxPQjZILW5OQlVCUTFscGdlNWtkUzJRXzBBa2RjZDZHaDNuWjRHZHdIcTJyZXdIeTcwYWM1YVlfbDlMR29MOGhVNWhjMUdYOWI4YmMtNmEwZFZEazRDWjNQSUdkNFJ6Wm81ZjJ0ZXZVS0JtSnNrMF9pdnIzcjRicXh0dmJ3?oc=5
+   Title: C-Store Dive
+   Status hint: Opening | Industry: Convenience Stores / Distributors
+23. URL: https://news.google.com/rss/articles/CBMiqAFBVV95cUxPekF1VjBtLV9LdDBsQXpfSFctcUlDOE1WWjBmUGdsMFB0TjAtUVFqdmxyblN5ME1uanl4aDN5SVBVa0Z0U3gzbDUxS1VMYXdPdHllSHg0Qk9VVzFydmNrYWptZjM1RWdmTzRJckoyYVNMSEwyc1VPaVlPaWRhOWN4WE9kWnEtY2dlVHcweWtfanRwVWpWaWR0MGFmSG93RVNHTUJ2V1JJMHo?oc=5
+   Title: 7-Eleven owner delays plan to list US convenience store unit
+   Status hint: Opening | Industry: Convenience Stores / Distributors
+24. URL: https://news.google.com/rss/articles/CBMiyAFBVV95cUxNSW5tdHZNaDZLWUlYQloySWIybjhZdU5JY3p3d2E1V3pUSXdaYnpNdmptWFlUOTd0RWRIQTAtRlZYeE16NHZic1lKSmhBWFR6WHJZMi0zM0thczd2ejVIUnJzOVJtNVotWkhQYTBRZ0hpTGtwR2kwbFcwQlRZdnlDZTlWMGtyczhFdXVHbGpNaXJ0d3V3SHBueUJEdjl6dVZ6TDg0bVk3Yzdqb1BQb1VTdXZ1ZG90Z3puTjBPS1hjeEVEVWhyMl9KaA?oc=5
+   Title: ‘Who would’ve thought?’ A new vintage clothing store is coming to downtown Birmingham
+   Status hint: Opening | Industry: Apparel
+25. URL: https://news.google.com/rss/articles/CBMiXkFVX3lxTE5qLVBvSlRwVTcySE9rWUY3MWlicU9NdkNCRFE2SXdRbDI4bmRXYWQ4QlZiTno3alBWclZOMVI1QWVnYWUybURTZEEyVk1HZk9XM3VuLTFXRkxwRHVfaXc?oc=5
+   Title: A New Restaurant Offering Colombian Street Food Has Opened in the Corridor
+   Status hint: Opening | Industry: Restaurants
+26. URL: https://news.google.com/rss/articles/CBMirAFBVV95cUxOWHk5Q2g0ZmJ3Rk5jVmZRSnQ4WjVyaHl6VnZKU1FLOHJMc1htaUNzUzc2cF9SZW1EdF93Y0VGd1pPV0ltMGRhSGd0YVY2TW55RGVKaFlPcmFmV3VKV1Rocl9FUDFDaXNQVG45dnZPU0N2R0RpZ055X2Myc2ZnbFoyRm5zUURPNEdEdUc3ZXVoUmxZdU9KdFRibDM0cDNwZUI3bG9wMnJKX1ZkR1Nm?oc=5
+   Title: Columbus is getting a Korean-style convenience store and “ramen library”
+   Status hint: Opening | Industry: Convenience Stores / Distributors
+27. URL: https://news.google.com/rss/articles/CBMioAFBVV95cUxPUnQ3akhrc18xWjNxWktEMzlnX256bTZxeU45UEZ1V3liWUFGQU1kRnpxenBhSk55dDM1bkJkVXdvd1IwcTI3bFdqWE4yYzY3WWpiZjBDV1RnOXlGemFaWEdtaFd5VkhnYXJua1RpZVVkbHJoTTcxRjRfbVFYTUdLeFE0YUVPTjZkcWNfRVFIa2owYW1JTkJ6OUJKRm9SaHJm?oc=5
+   Title: New all-ages entertainment venue opening in Fens
+   Status hint: Opening | Industry: Experiential
+28. URL: https://news.google.com/rss/articles/CBMijgFBVV95cUxQWS1tRk9DeHhzUk5sdklzRmxHemNYMXZzOHhLemVJdEY3Nmp6aWZLd3BuTExQTHJvbTBtdTFsYWRHajNTbFdHM0laaXhjVENXVG1tT01ma1lrdjd2bEhkYTN6WmM0cFB0czhlcmpPYWhZV1QwckUxdTBSSXFNX21aQUZpYkd4ZmZEOTBQdGdn?oc=5
+   Title: Austin grocery store without the store part temporarily closed
+   Status hint: Opening | Industry: Grocery
+29. URL: https://news.google.com/rss/articles/CBMiogFBVV95cUxQeG1VTE45Vkk0dTVGV0FpaFVPeGppRHYtbG1mNEhqNG5JS1VmVzlDbFgxQTNpWWROUERuanYzTDVUYmNtQ2gwb2dCN0FhYVFBdWR4WDh0WDJzWl80ZnMxbzJLbHlDdklDczR6VnBOQUd2bWtGV1lUZzJFdnpmMlZmZ2dKOFBBdl9RV0ZTMjZvY0Z3cW9Nai1VekF4TTFBWmUxQnc?oc=5
+   Title: Do it Best hardware store closes, no bankruptcy
+   Status hint: Closing | Industry: Home Improvement / Building Materials
+30. URL: https://news.google.com/rss/articles/CBMiXEFVX3lxTE5wUjU2LWZtUllSWEdQVTJvVXBiSlRVMU5EVTM0bVpGcHB1QUhMdDg1WEdHSXZrWWxMOXRiLXdpSmY0ZU14ckxGcUw5QmVIYkxKUnltU2RYR1RkQnpo?oc=5
+   Title: Grocery Store Paid Parking Is Coming for NJ Shoppers?
+   Status hint: Opening | Industry: Grocery
+
+============================================================
+END — copy Claude's Markdown table into claude_response.txt
+============================================================
+
+============================================================
+PASTE INTO CLAUDE.AI — Part 6 of 11
+============================================================
+
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+1. URL: https://news.google.com/rss/articles/CBMisAFBVV95cUxOeFhveHRsaDNrVHlZN3pQcWtaRmNCR0w5UGR3cFYyQWtxMUpzQ0xLdDQ5MzJuTFFiaDUzYzRFQ3BYVjRmcEZJcF9ISTdMLW94UFMyT3RoLUZGNDhRZmhORG1UQUtwTVVkeTlPWFgwWTlxX1ZtY2JMREJwR3RZYnMxVjM0ZzVCYW9xRU5GNkNpWEgyVHpYWnBBMDdSTTVEbkt0VDF4YnpKTlktd3ZVdTV0bg?oc=5
+   Title: The Granola Bar, NYC-Area Restaurant Group, Taps Bialow Real Estate for Nationwide Expansion
+   Status hint: Opening | Industry: Restaurants
+2. URL: https://news.google.com/rss/articles/CBMimAFBVV95cUxNcVViTENqTF9BSTJ4d245RkJ2cF9XUE9ySWpsNGpSeV9JUV9Vc2N2TU1SdUUwR1NfS1RkZXp3cFRpaXl3bG9SN2lOZW0taHlFUlRZZ3VJa1pxNDRUM1lCeDQyaURndEhCRXlkR0lXeFhXR1lwNGpKSm1DaGx3Z0lFQkNPSE1oZHVsc0dRQnd2SGZZa1dVWlJKQQ?oc=5
+   Title: Nammos to open Mayfair restaurant in May
+   Status hint: Opening | Industry: Restaurants
+3. URL: https://news.google.com/rss/articles/CBMipgFBVV95cUxPaHp2Vi0xMzFhb1ZTSzF2aHJjN0REV2lXbUN0c0tkSFI2RmNydzlyMzRoSHdMNkM4akJ0aDFXT0ZtTmw2c3EtVGtjckcwcWxfbkxJdEJJZ0FycWhrd1VsOHRmT3EyRVk5bzJmUkRPSEJCY2dicVZYWTZTWEY4RTZCalhHWURYQ0N1c0I2S1VINjAwN1ZHamsxcm96SWJUd3lMZ3hLQjBB?oc=5
+   Title: Budget supermarket Lidl in £600 million 50-plus store expansion
+   Status hint: Opening | Industry: Grocery
+4. URL: https://news.google.com/rss/articles/CBMi5gFBVV95cUxNWXNFOUROaHM0WDA5WFVCUkVQcTZ2TUNfajBMVjBvcmFRbTBwd3RPT1ZRc3lNT1B6NHpMd2pCUWFsLTdKZ0JYQVlsblR4ZGNkdHBfcUVXU3RfOWl4Z1R2Q3lYTDcxY0ROczh1NjNVYTJoRXlqbG9oaUU4cEg2ZWZtUFE0UTlFNkJmdDVod25ZUE9hV0VSWDlWWWNjQUJJQllSRmxXZnZmVGIwV1dodThQTUpsY3dHRkdpRVZZT1BEc1VCcHpWNmlPdWZVT0cwTDMzNWFuYXhrS2FOZzBDbzIxSjN3dldUZw?oc=5
+   Title: A ‘toast’ to a new restaurant in South County: Mario’s Early Toast is open for business
+   Status hint: Opening | Industry: Restaurants
+5. URL: https://news.google.com/rss/articles/CBMiqwFBVV95cUxQaHl2aDVLOWx0azNMNnNyR09CVG1pdlZqUU1jSzUxb0FwYnlHRUVoVGQwOE95QTdGT0tKdExIXzE2bkdqaEJWaXdrVWEyUUR1QUVSdWdkU2w0Q2NLYVBuY1NRcU9ZZWwxZUd4cUNVUnVZTHhiYjJERGFzd21PZjJSOHhucXFUcTd1OGNmXzNpaDFIOEpqVEtMUjBCb203Ui1ZVWRSUFR0eUMzTlU?oc=5
+   Title: German furniture retailer to close all stores after 75 years
+   Status hint: Closing | Industry: Furniture / Mattress
+6. URL: https://news.google.com/rss/articles/CBMivgFBVV95cUxPWTdVcTdwUEgwNXpkWWQ3TDZnY0szZWtzdm41ekpKbUpTVDV5Y3EwX1g0ZUN6SE9LRk1NTndBc0FxSzV4N2dDbnloTV90VVBOVkNLaU1VRWU4clk0QktuODktNXlnVHhvdjlTUkRyMHpJaFJMbFNHTG5lQXJ5WTlyRE5BcUNHYjlMbVhRNS1OQVZXdmFNell0WWxGcFpoanFqbG1OS2JPdU9XNUQ1LVNqZEdwZEdvMHBEN0tQbHBR?oc=5
+   Title: This convenience store trumps Buc-ee’s as the most satisfying in Florida
+   Status hint: Opening | Industry: Convenience Stores / Distributors
+7. URL: https://news.google.com/rss/articles/CBMi9AJBVV95cUxNY1NlSS1WYWJfc1lBaWppb3BzMjZ3WDJ1WGVQZHNmQk52OVRJbWI0blo1bWtHNlhmWmQwWVpwMXpILXNLdm5MRjFFZGZoRTh2MmhhS2diU3FzMUg0MUtoc09pWTF6cFhPZEJtS1IzM0VWc1ljeXJpenE5Mlg4TGt1YmZtaVFfSFhrUEkxRXVPU2lPb3lVS096X3RjSGtWNDB5WTVhWWs0V29PU3ZiYmV4Wkw2STRPWk95MUcyTTV3b2ZXa2xiLTFlUDlTY0tkaF9Oc2F5WlREczVacGJQbEc2RkhYRTZ0T3NIVW9kX19MRlNkUmJFSjRYMHo1SDJWZkdOR3pDTFFOWEdDVVlxMmtMMUp6dml5bndWTjRGRHhXMV80ZzJQcU9WOXVPN01QSXhKaFhSNE11VXFpTW8wMHRrVmhqNG5ycmxsSEF0cnhGSjY2MWxaRUlYS05hQ3pUQkd5WHZnV1RoUjQtRHVSVXBqTG12Qng?oc=5
+   Title: Spitz Mediterranean street food restaurant to open in Roseville in June 2026
+   Status hint: Opening | Industry: Restaurants
+8. URL: https://news.google.com/rss/articles/CBMiigFBVV95cUxOUmMwRzJGbnlxWVlWQjAxSGdMeVJQQXM3YkdkUFNhbU80aUhxNi1GQnlLcFp1UjhSN0NIV1ZLMFpjcDYtSHJDYXB4QlRkakkza1hoZ29JdU1zRDY4MmYyNW5rLW5rSmN4QXFRY3RLNDI5SlpFNGp1SnpaQ29UWUF6aG5UbVhxZGZjMnc?oc=5
+   Title: Toronto's first-ever 100% Indigenous-owned department store closing with huge sale
+   Status hint: Opening | Industry: Department Stores
+9. URL: https://news.google.com/rss/articles/CBMimAFBVV95cUxNQnlmOUw2RHgzdVppVDcwOThlbEJ3UUhLcklCc1JuTXNzNVBsQWtFZjhCQW9LTGVRa2FqVmpRWGdLMXFjWWRpTG0tUkd4anR5RGlNMi1HeTRJcmVkTldBeGRTd2xTYnRwcnFvRHRVZW5FQUFNa1liZ2lrSmFyRmlMaERObVlsNV9HalRNeDduZ19CRXVuZ0wtNA?oc=5
+   Title: 'Exciting changes' promised after sudden closure of Swindon restaurant
+   Status hint: Opening | Industry: Restaurants
+10. URL: https://news.google.com/rss/articles/CBMikgFBVV95cUxNb3ladkFIdWlvUkEzdUZ1Q1ViY2daRkY0a0RQd1p1Z0tEWWJlLTNKRWFEM3ZDNlVVOHo0QXlySVROLVVZMkN2UmhLVlI1OHp2TVpHdGNJNkxrM1d1eEd5d28zOE9GOVhDQkhHYXVxci0yMk9nSkJYeE5URnNOM1VxTHZLbWNzNmJUT202cXA0WWk4Zw?oc=5
+   Title: Statesboro Christian Bookstore to close Saturday
+   Status hint: Closing | Industry: Books / Toys / Gaming
+11. URL: https://news.google.com/rss/articles/CBMizgJBVV95cUxQOW9NUnNpcHVUNWNlVFJMdTdOblNLclVPMWVqMWk2bUxtWmFSbE5zTGN6NmVSb2VFeUVuTkpNRXJSVE9IZ2djcGpPQkRBcmpLeEVBSUQ0bHhaekxMNHVELXM3eUxFRmhMZDNaQ2ZiM3ZhTFo5T3lnR0ZZV2Q5ZHNZd2tKSF9MM3NpX2ZCdzRJSFF0c0tBZzFUVFhfNWVwLTQycU54R2oxTG5zeHpJNkdKR2ZmT3hZMkFLVFVxeFJ3WjRzY1U4WTcyaElabExacGU5VE82RW1jNEVCVW4zbWcwVDFvY3BGNUUwNmpKWFFvZFk1WUQ3Vk0xS25Oekg0Q21xS3lxSXljRUYzOW5GZUNCQ2F3ZWNRSGhwRV9ZaUZQTEFUUkp1bUQ4b3prak9hY08xdHZJOVRjRDlNNGhTVnRqMl9ERElQS19XUzdNMjB3?oc=5
+   Title: Two central Iowa grocery stores close, leaving two towns with a commute
+   Status hint: Closing | Industry: Grocery
+12. URL: https://news.google.com/rss/articles/CBMihwFBVV95cUxQX3JVTHVzQUpfa3RYVDc2MjM0Ym1mWXVSZUY4RDJjT3hpLURwWWFySzFHM1lRMExFRkJYekZiYVhyOXREVDUwYjM2WThSbTNKaWxVbWhPcFBDSlg0dENNOFIzeFBjQUtGeW9xa1M1WWpvMkFtcmk0YjdodWVoRTlybTFueUpaWUE?oc=5
+   Title: New York’s Most Popular Convenience Store Expanding in Ulster County
+   Status hint: Opening | Industry: Convenience Stores / Distributors
+13. URL: https://news.google.com/rss/articles/CBMi1AFBVV95cUxQQTd1RHY4aTAwaEJjRjVBVzRERy0yTG9uNkhiM0hNUmhYUG51NkpCcFdGZlR3emVpMV9lQ3ZnQk1idjNpQzI0ZWVjMVRnLTRBZi1qMGdldU5qcWloTzZPR1dMX3NMMmNUSXJlTzVHMzEwSWUwaW54Zlo3RjZrRlJ1dl9nRElIUGt3Tl80MGViQzdIMEp5c3B1QUQwdWdrY0NodktJTDNnQlhnUzlYTUVDcTBpS0Uzc2U3OG52Zk9sQ290WlN5Ym8wN2hEVW80MXl3OUl3WNIB2gFBVV95cUxObU1pSWF2MUZVYmF1V1paU21PajkyVEJCTVdGRDVEV1dUZVVoZFlzbkFzYU45eEMzRkxLOWFDZWZUbE1yRlhJbWZESU4zcTFJU28xb1dSOEgtYkdyQThudEVlZU9qLWtHazhCNUxRZHpIUWtNWVNTc0g3RkNPN2dBOWgwd3pNSi1mZnllQVVobF9ka3dWZmR2N2RIQVdDdkFnYnIyT1VRTlNGaEhwYWNYaVVYeUJxUmE3ZmlhTmM4MTNkUVI3cV9GVFBsYkhQVmZCM1ktajhhNFpLQQ?oc=5
+   Title: Bookstore Faces Closure
+   Status hint: Opening | Industry: Books / Toys / Gaming
+14. URL: https://news.google.com/rss/articles/CBMiigFBVV95cUxPZGRZTGZvc2ljSGI0dVJyVlZCWEVWckMtZTZ3eGVTNmlPTjZTQjUtVGpCNl9LV3ktNUlaWC10MHJieXFDMHJRUUlncDcyVnNQQnFZV0tyVlRkSFY5bHJZTmRickVWaUpiUVJaNzZSWVQ0VXNwbGFkZVlia0ZPZmNVUEdqZVhJNXFnSXc?oc=5
+   Title: 'Sopranos' star celebrates opening of Mangia restaurant at Live Casino
+   Status hint: Opening | Industry: Restaurants
+15. URL: https://news.google.com/rss/articles/CBMiqAFBVV95cUxOU2FIWVBneGNhUF9NaV8zLWtLRHBpeGc4elFRN2ZoUEhyQVR2ZE9xcnAwNG1YR2paQ0o4LWdiOEUtTDBmbTktV3ZrVG5iRl9hQlFPSnM0NjlNMUxfVTVUTmRHaEttYlJSUmE5ek0yRHcyaWpLcktBNnprUlZLQ21TY2ZqY041QnV5VXBkZWQ2QUlDTFJhX2VMTHFfUXVETzZwNTBhdTlzUnfSAbwBQVVfeXFMTlllVW1vUHhISWY2MERMa0NDTVJDLUZ6RndmRG9zU1V2SUp3QWFOcE1MaVcybVl1b2lXLWdTenNnQ0FqNW5pSTk2YmFoSGdweDRtQl9WRmtEa2dDSlgwcTlVbzFoV0xDOWJaT0ZkSlVhcnhydS1EdktpQlR1VUprRGtoS1hPajc2ZG50MTFfcHJzaWVLOG5HdGRDbHkwcGc4V1VnM295ZV9YRlVMQTNPbHRWT2JMS2phNVcwMlk?oc=5
+   Title: Charlottesville sets aside $3.8M for Fifeville grocery store and housing project
+   Status hint: Opening | Industry: Grocery
+16. URL: https://news.google.com/rss/articles/CBMiggFBVV95cUxPZXhURjBrT29zUjg4NkdkWnlZeE04UEhGNHpPdkZNTXZrbncyYk1ualhGaUVIMmxtQjVlcTV1M0tWYzFMY09YaXJIRFg4Z29KRk9VVHJaVk01YzRHWEIycV9hb3ltZGRuRzNTbV9wUkl6X2FwTG5aRWZJVXllNl9BVDZR?oc=5
+   Title: Chase Bank branch robbed in Edgewater
+   Status hint: Opening | Industry: Financial Services
+17. URL: https://news.google.com/rss/articles/CBMiogFBVV95cUxPQ2ZBakg1MHlCMlFneWJSZnRSZHhqVS1GZXlMOEZ5QUhITHFjd1Z4bDFTUzltdFkyMGgxVWVMdnd4LW8wWWJIamVnNDB1dkNTZ2NhZ25Oek0xNG50Ui1xNDcyMGx1cWtRMGVrRkhQMG04bWpneXhPSTE2VHNJSFJsNDdOSDg3OXhOQ2p2eUJzc1lTZVFGTXBTQUEyRnBHcEEwNlE?oc=5
+   Title: San Antonio's ‘Largest Asian Supermarket’ expected to open in 2027, developers say
+   Status hint: Opening | Industry: Grocery
+18. URL: https://news.google.com/rss/articles/CBMigAFBVV95cUxPYXlSQnpZQTh1bkhDYXlmaUhNbURwT3JDR0txa1Y3M1oxRFA1d1pMZWUxRFlBanVBNkdQMTh6LVN2RmNwRDR4aURpX0tGWDRfeHY5TTRqT3ExbEN3bDlxM2lqQk5JM0EyUE5Kc3ZFNk9KYnVXRUVXQjNNTWN0UzY4Sg?oc=5
+   Title: 5 new retailers, restaurant to open at Haywood Mall this spring
+   Status hint: Opening | Industry: Restaurants
+19. URL: https://news.google.com/rss/articles/CBMi4AFBVV95cUxQRktER3pvZ0s3R3lwTVlFOHZKQmVjQ1dYRWJnRUcyVkZ3S0wxTXcwLU5qSVd1djIzb2VqbDA2amhsRWxobG50UWhkYUNMTjg0cUlzUG1ZRE1ReDdSU3Y1aTZnWUUxTzY2VEZSN2tTTG44VXljOFo5X3dhMU9iSHdnT0JSWk53Sjc4bENVd19hcWNVdklNVTQ1WnUyQnFIQkJmN0RoaU43T0ZBNnhrcTRaWjNGbkE5R3BtSXREeldZaEYtQTVoQ0ZscFRTUnktQkVMTnRzVVJVdFI1RzA5VmhOUA?oc=5
+   Title: RESTAURANT TRANSITIONS: Iriana’s is closing; third Fidel location to be Loca Luna’s Riverdale neighbor
+   Status hint: Opening | Industry: Restaurants
+20. URL: https://news.google.com/rss/articles/CBMi2AJBVV95cUxPOHR3U09jTk5YNUJMTW4zRk1MLXF0YV96LVN0WlVpMXhYV08tTE9yNnRpYUM3ejF0SDdObTV0dDJtc1lENS1QdVFyVXl0WGxfYkg2VnZ6Um1FNFJnT0JmX1dLRzBDamJtU3BmUnNFdDN6NVlnNTZ5aFU2UC1rNWUyZElqNEhIZHZkYXFVMXpGbjNISU5MSnFVWk1hem9VbFRUQmEtR0xIb0JvT2p4LUQydXpMeG5tRE10Y01ncW9BX2VaSGRHV1d5S2FpRUxCNnZHcWU0N0pJaEVjVmpySEdoQ0huMy1MbTBGNDM5NklFSGwyd1Fjb3VNTUF0SkJ5SnVWT0laSk9qWlVGY0pQOUtXQ0U1SWlDblltNUtNNEFhWUQzZmVFVkFWMnJxTExPQzJVSFBHWXFpZVQzcUk3UU5iNW9OWTQxdzlNVnJqZFJvcG0xUENMNkFxMQ?oc=5
+   Title: Major luxury department store chain to keep Sarasota store open: report
+   Status hint: Closing | Industry: Department Stores
+21. URL: https://news.google.com/rss/articles/CBMitgFBVV95cUxNTm1ieUQyM2g4MEVtWXRyMVRpSEw5T2szeEV0QzZfOUtXODY4cHFsN1BXZ0Q1Z1dhanpSWFA1WkJVS0oxeUJKMW94YTV1M1BMNjJNek1IR093aGpGbTVWcWVDblVMcm1TT1NyV2dZUU9oTWJUWFpJRFB4aUhIbmNxMnI0Z2hoRDJFUDdZU2N5X01hY3F5Vmh4ZjAtLXByaVhiQ1N2UjVmMlZCZk91cXdRSjBMVDZkZw?oc=5
+   Title: Hooky, New Experiential Entertainment Venue & Cinema, to open at Nashville Yards on April 29
+   Status hint: Opening | Industry: Experiential, Movie Theatres
+22. URL: https://news.google.com/rss/articles/CBMimwFBVV95cUxNNER2amNUTnAyWWlsa1B3VTZqUDh4amdqYVhHWFVVRy05alozaGlnM05GRHVsQXAybXNJbDc0WVJWQlZCeWFmdW1CLVlLWmpNcWRsMWRndXVSOWxXaFVVWC03YVpEV0VUdzVEdmFvbmItNEVBWlVacDYwWFo1T2RPRWw3ODcxM1RfUmhXazZHR3pFTW01SFozNkRkSQ?oc=5
+   Title: Sopranos star helps cut oversized noodle at Live! Casino Pittsburgh's new restaurant opening
+   Status hint: Opening | Industry: Restaurants
+23. URL: https://news.google.com/rss/articles/CBMiyAFBVV95cUxNUGJpZ21Ua3lHbTYwWDg1NkZKMDZ1dmN4TF9CTFA2dTcxS3AxTUZQa3ZJckpjUHhkengwVUljSFpQMmJyYlZEQjVBcUQxSXFfWmdudmg5Rk1CYktaR2lDVjR1TGdGSEszc2xVZVMyV1ppbmJ3QWpxRE1jLURvZklzQ2R0bTBFTllJOUVHQjNhXzRoT3lPb0dtTkJaa1k0TEN2akdnWVJqbFIxR3JHNzNnVGoyRDhrblBDMjJHd2VYa1lFQ2Y3bzVMZA?oc=5
+   Title: Critically acclaimed East Bay vegan restaurant closing after 31 years
+   Status hint: Closing | Industry: Restaurants
+24. URL: https://news.google.com/rss/articles/CBMiowFBVV95cUxNSHdHNlpfVFNPTDFxeHk0Z0tUT2l2SHZ0YkE4SWVpVWxzLVBsUVFtVll5T3hiQTFwMHdLSUZkRm1Jd1licHRBT2h6SXllTG9yYzlyc2RrM1NvQ05KNWpMUVpzeFRXUmdNdHhBOVhNQlQ0bXFoN3pteW1qUXNaTVRPSmdJZE1UbFpNeUJPMWJjZktRSkkwd3JPa2lyU0MxZGNiQ0NF0gG3AUFVX3lxTFBYMXQ4Z0xBZm8yemFvOVNrbU9GT3F3Wm5aZTllcGNtR0xqV0l3aU9aWmVYbmlEeEcwZExTYThCOWx4WmtCMjhZQWZMNjVZNVhmVVJhUkRQdlhCRk9YekV5U3M4REltREQwRWliSkFmYnVBNkt4ODZDQ3JVRUJ6dDQ1anBDbmhRbk8wcmk1OUM2WHVjMmdXaW1kRVBPNkR2NFpEcGlHbkhKQUVwbG5DNlA2cmUxZ1FBaw?oc=5
+   Title: Ecolibrium3 to host open house for ‘sneak-peak’ of LNPK Grocery store
+   Status hint: Opening | Industry: Grocery
+25. URL: https://news.google.com/rss/articles/CBMickFVX3lxTE1DZGw5Ti1ySHNiaUNOSHBMN2MtYnJIZTNqZ0loWGJvblBSQ1ZLLUlhQ2RuUzNtYmVEbzhDc3FjSTExWnZ1VmI4bXprYm1oTEVya29ieDNPS044clkwcWxfVlM5aV9PazRwZnZkajJCX3Rzd9IBckFVX3lxTE1JZVRTU1NsZzFzSWhwYzN6QUVWYllkaWozSGR2Y2JYa0QzMnM4SW9IRGQ5ZkxCUHhtdEltRWhrdDlDUTQ1T2V5bkJVQldIa3FwMzNqcFpLV1BaaTdTVWx4X3otQU5ZSjRlS2dHaHdxMUI5Zw?oc=5
+   Title: New grocery store plans first NC location in a former Lidl in Cary. What to know
+   Status hint: Opening | Industry: Grocery
+26. URL: https://news.google.com/rss/articles/CBMivwFBVV95cUxOdHNzOUJfejRrZjdFV3R4SVEzblFrR3RaV1JBUmNPMElQNUhsWUNHc2xicGFyWGRvRF9manh1N2Zrc2ZLbmlhWU1sUGgyUmd1T19tR1VMbUNpRGM4RGEwNE53UGhEZkdqMjBPR2pMeXpFd0RuZUFnVVVUdE9IMXlGOS1HODZKYlpUN0NGV0dBWUpUQk81Tlcydmg4dTA5S1dOdWJIV24yWjdvQmRfcURNaURTVUEtckNrdzJVZjRNcw?oc=5
+   Title: Burger King hiring 60,000 workers at 6,500 stores as it modernizes restaurants
+   Status hint: Opening | Industry: Restaurants
+27. URL: https://news.google.com/rss/articles/CBMihwFBVV95cUxQYmJKeXVRUnNsNGltdzItQkRwTEtVTHBST3JVcFlWaXk0YkR1ZnJIdmdZRHI1bV9FN0EzdFd2Rjlrb1FXY09QZTRaRGF5clRMS09SVlRhNzBjQi1PLUNRVnYtUVE0N0RDY05ZMXpfdzdpQndDNFFXc2FlSlNpUEJSQTFhRFNIdDQ?oc=5
+   Title: 4 Triangle restaurants & breweries are closing. Here’s why & what to know
+   Status hint: Closing | Industry: Restaurants
+28. URL: https://news.google.com/rss/articles/CBMilgFBVV95cUxOT0VNNWplUmJGYkpYbUlycjQtaGExa0VKUmtxQll0dkJWZ0hlZGpnYUM2MWFmN0NrLUpNdXgwZlg1UFpXNGFSUGEwRURaeG5ncEhNUFk0X1Y4ZHotRUlDMmtLZXNFcmxCU3Y1RGN1Rm0tTTlDREpwRVI2YW56QjlKUWJ2QW9wRmlpU3dfWWZFeWZEVkdYM3c?oc=5
+   Title: Clock Family Restaurant of Duncan to close after 30 years
+   Status hint: Closing | Industry: Restaurants
+29. URL: https://news.google.com/rss/articles/CBMi4AFBVV95cUxNRFRDRlFvZE54czA0QktIRXdybDlJQ0ZnVzdQM0JvcG9DcVNqY29hTFFDOUVabTRjUm1MTF9OV0tzSHBWTjk1cXNUTUxEdTRsQjVxZHlCcXdoSV9YLXo2WGJ3TFNtcHBPRDVjRzBYaHNmandDOHF4VmJ6T0w5ajlVUVhfR3NKTW10ZjFGMmJHTnFha2FpR05tbS1UNEhpQm5xaUw5U25uM3RMSlNYMTltR0xaejlCSkt3cEZHWFh5OEI0QkY2WGd1dkNjUklqOU1ielBuVWRYb01vX2tlVXROQg?oc=5
+   Title: Whole Foods headed to Simi Valley at site of long-closed home goods store
+   Status hint: Opening | Industry: Housewares & Home Furnishings
+30. URL: https://news.google.com/rss/articles/CBMirgFBVV95cUxNcGdFZG9YUW1jNG1LUl80MGc5MHhQQUJ0REhXZmR5ZHZ1QWVNcTVWcjdfMDhRVXlxd1NPOVNVVlVxazdBcW9hcWdoWURHSlhXV1A0Zk9GVjZpaWRBUDFuSldNRkVueDJuTVAtTkYxWFhnNHhVQlFWVktJY0NrakdHNnM2SkdJX3VFaENEUTlQXzNfaDZkRDl3T1NOUXh0b3BmdDA3NnhzTXZmY2hPbmc?oc=5
+   Title: Luxembourg’s latest Burger King restaurant to open next week
+   Status hint: Opening | Industry: Restaurants
+
+============================================================
+END — copy Claude's Markdown table into claude_response.txt
+============================================================
+
+============================================================
+PASTE INTO CLAUDE.AI — Part 7 of 11
+============================================================
+
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+1. URL: https://news.google.com/rss/articles/CBMiakFVX3lxTE9aODF3MlUwX09KTEtrdkRPcVJ2djVkU2d4Tk03RXdJQXNkYjlDd0lvb2l5WjVSMFJMa25aOUs3MU9MOFlfZG8zMWtlQWlQOU9hMEF0ZXJkRHJNVTdsd3lTRzk2R3JOT1VVb1E?oc=5
+   Title: Convenience Store News
+   Status hint: Opening | Industry: Convenience Stores / Distributors
+2. URL: https://news.google.com/rss/articles/CBMickFVX3lxTFBqVWtJcllxdm5pdmJ0aG04N01yOVIxV21sMmswZ3pHbWUtanNCX0dVZWIzSzgyUEdDbl9tanhCTm5Hc0lYMVR3RjllR2VWSS1id3hKa1hHeXpnYm1aaVd3Mlk3T1BYRnlVYzExbG9rTGQtUQ?oc=5
+   Title: Another Furniture Store Closes On 28th Street, Following Art Van's Legacy
+   Status hint: Closing | Industry: Furniture / Mattress
+3. URL: https://news.google.com/rss/articles/CBMiigFBVV95cUxQZEh3ZF85UW0zOEljWkxmeW9RbkN6UDdlNUtZb3ZqektnTmNDelMwQjBJOER5M2Q2M1RFT0phSE1PVVFQRngxYjd2M3lOeXVWV0RqQTQzZ0FmSVRpYkZXaVdJaTJpeGJEUGd3ZjVxZUpLUWhPY1NrakJFNlgyd2tVMU9kSExqV2czNFE?oc=5
+   Title: BJ's Wholesale Club expands store hours on Long Island, nationwide
+   Status hint: Opening | Industry: Grocery Wholesale
+4. URL: https://news.google.com/rss/articles/CBMipwFBVV95cUxNOWQ5LUZvMlVrZnA2TkZMSDB1NjNpSG1VMkIzR0pGcDU5R2hOSVotaWpMRUZTb2ZNd1RDQWhINWpjVEZWUTRNX2c4MnBiNW9tU09HcnJKQ3BlVi1MUlpmNGszYVZQQVFfNlA3aEpDeHdwNF9NdjBHSkxuM0NTdnBRNUpKc2JaOC1EM3pqVkszTUc2OFJxV1VNRTRGZFFkNWRxQ1RJQ0VWUQ?oc=5
+   Title: New Turkish restaurant Lokal to open in Fitzrovia
+   Status hint: Opening | Industry: Restaurants
+5. URL: https://news.google.com/rss/articles/CBMiuAFBVV95cUxQcTJqSEgwMDJKcW94RUJkbEpDa0oxTS1DeHJVT0FSQlB1dHBKZlpRV2FsWlZvajZ4QnkySE1KSVlGV2YzTi1tLWpYOTRFYXk0OFl5UlVQLXBDSGpXd3N5T29rR2ZRS2pXbDdmVm5kZ2NGaHdaR3c5M3ZCeS1TVXgyR1d2d05XcmdESjZzN3p6RWE4bWY0djN5RzgxZ0hsbVFOX29hMmZxYWpNZ0djb1NOS1lFbEMyM3I4?oc=5
+   Title: Sneak peek inside Glasgow's first Wendy's restaurant due to open tomorrow
+   Status hint: Opening | Industry: Restaurants
+6. URL: https://news.google.com/rss/articles/CBMikAFBVV95cUxQM1RXS2RKYUh2dGI4UV8yU21CWHBtcUZVZWp3UjFKTjZZXzV2LWFGbnBraGswQVFoVWMzUjA4aURGVUw5eTBUXzc3Z3lROGJHRTJlbTRSdThMbXczY1lmRXdqR1JUX2FjREdDcE1nTm1QT29hc1RDUjk5UHRaMHh0aVRlaVVGTUlCSHVrQ3U0Ymw?oc=5
+   Title: Island Pacific Supermarket in Oxnard to Open Filipino Food Hall
+   Status hint: Opening | Industry: Grocery
+7. URL: https://news.google.com/rss/articles/CBMidkFVX3lxTE1ZT0RKNGRIT3FVTGdmZ21kS1k4UXMyQ18wZ3RmdlltMUJHWWFPZFFFUTNpaXJEZEJiQW15YkgtV0ZYdHpvR3AxVlhORmxLMFhGUUR5ZHZSbGo1UGpyOHFCdHJRZEpOYi01OTVLYVF6WVNzZ2dCRFE?oc=5
+   Title: Nominations open for the Boutique Hotelier Power List 2026
+   Status hint: Opening | Industry: Hospitality
+8. URL: https://news.google.com/rss/articles/CBMiYEFVX3lxTE5ORXdOMERfUmpSM29jRmppTk9WdHpjQUpNQXpIQVRCQk9PTnpfdTlRbzQtVDZLdGxzY1VKS3otUnlub1BDNE9nY0Rrb0hTUUZMQU5pTGxwNy1LeFpDLWpMVg?oc=5
+   Title: Grand Blanc’s Crossbow Inn Is Closing
+   Status hint: Closing | Industry: Hospitality
+9. URL: https://news.google.com/rss/articles/CBMiugFBVV95cUxQLUlHb0FmWGVPQUpVa1JaV0s0X1lFTkZLTTN0WkxwTmRMZHBvcW1DTGhYOHlqTF81ZGpuaU1hcWdjd1JvVms2MTBuQ3gzekxNckI4eERRLU9qMXg2US1HaGRRQzAwaUNiajlWUDljakpiMXVuaS1uUWNrT2lTUnk0SG1JZHRBNU5CY3Y1Y0xhNHY0dnlGLWZiUkItbWlNMlZjTVdGUDJTRDE5a1l0Vl8zc0NiQXBHMHR4clE?oc=5
+   Title: New Mediterranean restaurant to open on Dallas' Katy Trail
+   Status hint: Opening | Industry: Restaurants
+10. URL: https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUUR2OHF2d29Oc1lseEE4S3gwOGdqcjdxNnZPaHlNcnFXeEd4N3RTdUtLWmEyR0x5dURfOWQzTkxKSkdqNGh6Nm9XUTJQSTg3Q1pMZEZKaDhTbjVjWUtURUVwVnZZSnF0d3VaN3ZNcERKV0dfalU2NEZ0cVlmQmlCMGFFT0FubDlPbU1Nbl9lcTVBX2xlNWxQVmdQZlR2TndzdUZtMmpReUdIdw?oc=5
+   Title: 5 things: Furniture retailer 7th Avenue opening in Roseville Galleria this week
+   Status hint: Opening | Industry: Furniture / Mattress
+11. URL: https://news.google.com/rss/articles/CBMisAFBVV95cUxOVmp3VzBQbVNNVzhScWF3TkRaRkVLS1VHdnIyZU9OZEM1UUdKN3JtdDVPY0VTamtkSVAzcFZOUDZvandvTVBib1hDczhHalpJRHJBZm5fWTVhaWUyZHNweVhXWTBDV1JheUFuMkJtYnB2VER3cVRGVktURWw0ckRZMVVCZnptZWNabXBVeElDdlZwXzRjOTBubHEtOUhvbE9saW9JZGlPWU5uZ083dGpQNQ?oc=5
+   Title: Sneak peek inside Birmingham’s Blacklock chophouse restaurant ahead of opening
+   Status hint: Opening | Industry: Restaurants
+12. URL: https://news.google.com/rss/articles/CBMif0FVX3lxTE02dDBCUnJiZ1hkYkFvSjlWZkQ0OGQwS3ZELXdsdFgtNENvLWNtVkh0ZnVvbFpTRHp0MHJJQndFR1NxMlpQbnB0aE1qLUNmTmxOU3hSc2JDcUFzU25pdWp5SllDYkxLeTlmNTNnVXNvODZILS1waGxFS1FkemllNDg?oc=5
+   Title: Six months after fire, Danish furniture store Lanoba to reopen in Clinton Hill
+   Status hint: Opening | Industry: Furniture / Mattress
+13. URL: https://news.google.com/rss/articles/CBMingFBVV95cUxPMUZIQUthQ25ieFhZR2pSSXVFSkFoVjhqU0UwTGR2S1ZDZXY5aWZyRDMwMjdHeDlGMDc2NnNCdEZfYkhRSk95c3IwLWhjVU51eDNwci12Z1AzOEIwVkJhNzVzNnVBVVN1RThmOTJSQlJ4bzFUQ2NjcjI0a01OLUNyRjk1aGJjWEdiN2VSNzl0cW9tajlHYTZtX3kyektSUQ?oc=5
+   Title: Opening hours of city centre convenience store upheld despite residents' fears
+   Status hint: Opening | Industry: Convenience Stores / Distributors
+14. URL: https://news.google.com/rss/articles/CBMisAFBVV95cUxQUGIzLVEydmlIN0tUc2czZU53dE1tZHNZb2psc0Z2aUxoazdVVmRIQ25SS19iMVZta09qbnRNOFpOU2lxRGk4aVRPaFFyR2EzWG9hT1ltbVlwYl9BbkNIWFNzOE1Wc291RHBaN3A0aFU5amY2WEt1VEJUQUJjcnp5ckZHWEFoNW5TV0ZlcEVKdnctc1Z4aHhmd1VnaUVFREZrOEE1Vk16eTRVMm1sbEJHUtIBxAFBVV95cUxQUkxvRXNjdnNUd25leTROaGR3bnFVekpFZm5rVVdQRjFSZkExZkVhbjduY214TV9fQnc3N1dGQ29lNmFzQkVvb2tibHhnVmtMMU5WUEV1Z1Y2RjA2NUZjWXQ3UTk4eXc1dmhVbkV4eHNHTFQ1SHNKbW0xd0NWZUpITV9BOTFoT21qZjFlNmx0ZmhjYjEtOGl5NjJhR1h6T2tCNEtpRjJoM0NvWDYtaDhRYmdYX3VYdlhsdERDT3M4eENfTHBk?oc=5
+   Title: Popular discount store Five Below coming to Bay County
+   Status hint: Opening | Industry: Mass Merchandisers
+15. URL: https://news.google.com/rss/articles/CBMiekFVX3lxTE9hdlROWlFqUk9wVm9qREh5UDVsRVhVS2s5bXNvR00tYWpEQVZEbF94TElaWGExSHBIU3pOb05INjdVS0VpM2VUMWhnNVV3MVR5bWMxNEtWR0N4R3J6NEVxSC1oVGZvYVRneUhzU0x1Q2ZPMHhYQU81Q0R3?oc=5
+   Title: 5 Best Frozen Breakfast Skillets in Grocery Stores
+   Status hint: Opening | Industry: Grocery
+16. URL: https://news.google.com/rss/articles/CBMidkFVX3lxTE5QWXc1bENPSEZTYjF4UGtCZTcwbHkwNEtGMXFDclQyZTAxVU1tR1M2VEdyZGp0LTZIdFlvNTdoRExIUHVVcHZHNFkwV2RnZEs1OEpRWmE4dk9Pc3BtdUZSa2dyZXR1dHJlUmpCcW1fVlRvcFlJSmc?oc=5
+   Title: The Store, Oxford: A proudly historic hotel in the heart of a historic city
+   Status hint: Closing | Industry: Hospitality
+17. URL: https://news.google.com/rss/articles/CBMi2wFBVV95cUxNS0puendFLTFWdFdfdFliMldUUUdqb0JqNEhFcmdaVi05SGQtdWNXUGNQalo5aVU0MHBZQTduT3lCTWZJMUFUUHU0a3dZREZLWWxQanc2dk1wWDhqdlJjNFBsT3UyVUxicTk0N0t1Y3YtQVpXYVl4QzMtTXJJenpNaWFDcGpDMTRxTkY2RTBpbTNjdHdBR09RMGZ1NENyMWJYVEtFOTQybHp3VkczbUpMdmV5eUJ2QThpeG5SUGRkRUxkM2ZwektwNDlfQ0hoQVJrdkdtRFFnT1BzR0k?oc=5
+   Title: Popular downtown Sarasota restaurant returns at new location
+   Status hint: Opening | Industry: Restaurants
+18. URL: https://news.google.com/rss/articles/CBMihwFBVV95cUxNcDlmTVNZYTRIOWFESTlhLTR1MjdRdzIwQ1diU3FUWkVkMkJhTW1MeFpUTDFwTC10QTBOaDFPbVhtakMxaHBleFgtTmpoUlU1N1ZNMXh1VFB6MnR2Z0ZZOU0zTFZBY2d6Zi1wSW5TLUc0OXBVclV6M2h4QnlRbll2QkRLNG9hRm8?oc=5
+   Title: New furniture store coming to Clarksville. Here's what to expect
+   Status hint: Opening | Industry: Furniture / Mattress
+19. URL: https://news.google.com/rss/articles/CBMilwFBVV95cUxQMFBPRTNhcndjQVlBa3lfZWpYWWRmdER1ZXJ6dVBKaTRFOW9GMHNxSW51bDFxak5aWDBGZ0lEcndhNzFyYXpGSGYwYUNTVFJnVzBBM2l4NFN2cXZ1SWJaTXk3dnNmd2J6bTJuYkI3QXJDSEwwSUF0aXhqZU9jSURnR1dhRUEyUFpvQUs1UUFXVnl5dlB1U0xn?oc=5
+   Title: New beauty salon to open in premises formerly occupied by eco-friendly store
+   Status hint: Opening | Industry: Health / Beauty
+20. URL: https://news.google.com/rss/articles/CBMivgFBVV95cUxPaWE3dlhiM3FiTUZ3TV9RbGpPOGI3TUd3REl3c2ptXzhhYi1VS1NZZlhYNmc3Q25nbjR2c0RodlN4Ty03Y2tiekxzcy1wMkI5dzhfbElISFJIdFY3em8xak9uRWtrMmMxbFp0MDB1Q01KVG1YWWhhZ2JGX2VJYmU5Ql96aFlsV2paT3ZNbkJKVjBLc05NbUQya3pVR1doMHdfRVJPMkhqbFBKSkJxc2Q5b1oyRGxXS0NIdnBQSHhB?oc=5
+   Title: Nikki Beach Resort & Spa planned in Marrakech, to open in 2028
+   Status hint: Opening | Industry: Hospitality
+21. URL: https://news.google.com/rss/articles/CBMi8gJBVV95cUxPQmU1ZXdYcnhyQlkwVEZ3d2oxQ1ktQ0tqSzZ5cTBCWE9aNXV1SnRta2hYS3JyQ0RIYm9xSUdzNXNYcU5TcWctQl9OeTVpWm9ycF92U0NKbVBfcmM1QWExdmo1RXBFajI0NlJjVEhRNy1XeFFSQVRaTk5IUEg2XzVrU1pQdWVwd2otVEo5bk0tdWxEdVZheG45RTN2NXBwX1AzWmFkTXZYRF8zRDhZTWs5WGpKbzZ0NDVkUHI2R0d3MDFCbGpWQjN4eFE5d0JEYnNldHpfZW1UNVBjNlB1dWdoVmVrc1liSGpQTHEzUjF6YWx4c205cDlFWXZVOWdhdmJ0dmtnVGFLS3czYWE1VE1OeU5oQjhKRWxEVVdrWF9Ea211U2RLY2xrdVZnUmNxNlZTSDBJdDBXc3hEdDZBRlBBaE1mSU1oZlhxeEpYeDYxQkpzQl9vQ3l3cW50N3dFM0d4UXR5bzVFTmNERTUtakhBTVBB?oc=5
+   Title: Easter Monday supermarket opening hours at Tesco, Co-op, Asda, Morrisons, Sainsbury's, Lidl, and Aldi
+   Status hint: Opening | Industry: Grocery
+22. URL: https://news.google.com/rss/articles/CBMi8AFBVV95cUxONERoU1NORHhDSGJMUXcwZ2FpYms4aV96Y2IwQU1jS1NyVG9WSHdOemZ6Wmc3dGxEU01YTVc0UUN6ZXE2SGZMczFPUk9lOHprV1Q5RWFpNzNpWk5nTV9lejVTN3Z3Wm1CbTJ1MEh6Q01rdXhCYUx4VlFlS0tFeF9xYjFXdmxDeXdrSkJWUEJ2R3V6NnNRRnNPa056X29sMUtSZ1oyS1ltR1NNUWxHOUpZSGJpTzhOUEFxUEJMdXo0ZWFKTG5jWE5XdzhjMm82VXh1TW16RWJCTjZaYXpuLWZnbGxlODlMZjdWUGFyNHAydHQ?oc=5
+   Title: Four months into the year, 7 restaurants have closed in Baton Rouge. See which ones.
+   Status hint: Closing | Industry: Restaurants
+23. URL: https://news.google.com/rss/articles/CBMiiwFBVV95cUxPd1YzNkRUMDJ4X204TThtQjh6U0Vmd3dpN284S3BRRHpMRDBSU0xrRThKcGZvcThzUlhsRUZFSUZRU0hoZTF2VFh3R0FaUEhsU3JaR05BaDBJRENUYjFmLWpYN1BvUXN5ZlJ2cUFWWnNOWEpsb1ZqSVhVbGJXQm9ta0FMQUU2WEVUc2440gGLAUFVX3lxTE93VjM2RFQwMnhfbThNOG1COHpTRWZ3d2k3bzhLcFFEekxEMFJTTGtFOEpwZm9xOHNSWGxFRkVJRlFTSGhlMXZUWHdHQVpQSGxTclpHTkFoMElEQ1RiMWYtalg3UG9Rc3lmUnZxQVZac05YSmxvVmpJWFVsYldCb21rQUxBRTZYRVRzbjg?oc=5
+   Title: New discount store Ollies opens in DuBois
+   Status hint: Opening | Industry: Mass Merchandisers
+24. URL: https://news.google.com/rss/articles/CBMid0FVX3lxTE5KbXFGMkRHajZ3aXMwNVF5ZUhNLTd4OEdGRVFqbWFTb0Z1a2FqaV83cm1mVWxub3JJU2ZYeFpHbFp4QTBQbkxwUTlZeHBOM0RnM0p1TnVmZ2dqaVd6N0lLTlVCek9pR09CYjc2N3hLR1MzbDBvcnB3?oc=5
+   Title: Monroe man turns garage sale into discount store
+   Status hint: Opening | Industry: Mass Merchandisers
+25. URL: https://news.google.com/rss/articles/CBMiwwFBVV95cUxNSGRVVi1HT3phU0stRFR0LTEzS05LUV82dzJZSDdIS2hVNHpxV0pIMmFqdjg3dkFZRjJ2VzhfN3BvVG9oRWY1OEdJWDJBRDBTdU5yOEU1QkhRVWFrbUxDektEbThTM01jYlh4SkYzcWJ0QndUQ243c1B0LW9hUXpYSUNMR3ZNaUNmUm54WHE5cndhdDh0MElncTZ3VHJtSzdydnFmQlZzZGFBT2I2TDB4YXI4c2JBaXdPa3BrOU1mVUI1RVU?oc=5
+   Title: Boot Barn to Open First Jersey Shore Location in Mays Landing
+   Status hint: Opening | Industry: Specialty / Other
+26. URL: https://news.google.com/rss/articles/CBMiogFBVV95cUxQYlhWOU8xUTB1Qll0UmxxNDY4cTZvZEpCaHo5ZVpZRGtDTjZKejhUczNPSkVaMXpRbkJscUpGYTZ6LWxMOHhxdWNxUGdRVk02cFFzY2NhX2VadTdTQlNSTmQ2RjVtRmFYcVNIb3VtVEIxaUhKN3Z2Ym4wZ0FLcTFmX0pya0hCWjBhNEJtUHpBZVVFQVNuMXdOXzJvSWswTnlFbFE?oc=5
+   Title: Meet the woman opening County Durham's newest pilates studio next month
+   Status hint: Opening | Industry: Specialty / Other
+27. URL: https://news.google.com/rss/articles/CBMic0FVX3lxTE5wM3V0X2pnYVRKMlE5cVdUQS1DT192VEVkdUZkVEtmaGliYnZ3U001SmN5MjZzM3VmVExQZWpQUnpjU2VYUmx4TlVscjRzWFJadlhVUVltUHhpWjNMX2FuTlNDbVlxVEI1Y3MwSlBEUngzNzQ?oc=5
+   Title: Walgreens and 9 Other Major Stores That Are Closing in April
+   Status hint: Closing | Industry: Specialty / Other
+28. URL: https://news.google.com/rss/articles/CBMijwFBVV95cUxPQXZBb1BqZ19zVFRYSGVWclZKUlJOVFJyU0w2SV9iNVBlcG5NekYtNW1iSWhDaVp6RVZ5YXh1dnN0WVNkSUhQLUxfM0NlNlAxZWNsd2ZfRUpQazZlYUY2dGxYZkltNWpBdHVHcjNRamY1eWpZVkdEdUgxUWJsdC1xR1pndzFmNHpSbXBkc3RqVdIBlAFBVV95cUxQVW5GLUJNSFFjRjdzNEo1Q0UyNkttYkRWbl9jQkdiSkp3MnBWX285d2d6M1J0aU5zMGVfQXFjeWFnVVF6UThKMnB5eWxrVzc1MzI5QVVGbTc2MjRJeGZFczRPcmYyUXVDZ0JDRVU1ZXZScUNZZHJTN0ZUeHAyZzVnY3pIc3I5bUZBN3h1ZjVKUFFSQm9v?oc=5
+   Title: Golf, karaoke, and cocktail venue opening in town with 'nothing quite like it'
+   Status hint: Opening | Industry: Specialty / Other
+29. URL: https://news.google.com/rss/articles/CBMilgFBVV95cUxPRHh4YkdGeFFIUXgtdy1GWWxHb1dDbVEzWUZJTHZ6S0pTazJiWXQ2NFJGZ0Y5NWhyY1JENm9hM2ZvU1FSVlNmR1lZNjhpdnlibTJ4TkFfZ2tvVVJQUjZlMVNITHhNejRJbTg2VEtZYjlPejlfMUduWFNTYlkzYkItTy1wY0ZpdUlUeE54Z3RTZjN3WFBvNmc?oc=5
+   Title: Walmart to close Illinois fulfillment center
+   Status hint: Opening | Industry: Specialty / Other
+30. URL: https://news.google.com/rss/articles/CBMi6gJBVV95cUxQZ0hHZlNCdjF2RG91Y2pKLURqdjduYmhOd2d5WmJSbUlPRHlUa00xdjFqUmlQOXZQTkwzVFNqWmREUzZrZUtQaXl3Q18xMkVIN1Y4aUUyc1VnenY4OEY1a3lWVFg2QkV3RXBwZ0YzeklFUGJHTVo3QXBqRXh5aThNQkhNSDdfQTRNRE11d0RFVzhpbXJoWkNOMkw4SXhNOXJIenFkUXFxSjF5cDRacHk3U05oaDgta2dEdjlYR19UaUxsR1B2RlJGRkhwVXZ5MG1pN1VzNkFjN2JKTDliYS00S2M4X3NEc3FUZHB5dVVyaS1xdkk2LXZhZXFWQ01UWHBGck9odWpzaWZhSHdNdmtlUWtvdVlyNVc0MlF6WXo4dGFHWmNiTUtKRnJCQ0VvYjRqNzhuR3lVV1RpWEVUbEtRSThpRkpIZnZDam5qQ1RpUzB5c0twUzlxdlNRMVZ1UlZ5ZlVzajFxQk5rdw?oc=5
+   Title: Slick City, an indoor slide park for kids, is set to open in Colleyville this spring
+   Status hint: Opening | Industry: Specialty / Other
+
+============================================================
+END — copy Claude's Markdown table into claude_response.txt
+============================================================
+
+============================================================
+PASTE INTO CLAUDE.AI — Part 8 of 11
+============================================================
+
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+1. URL: https://news.google.com/rss/articles/CBMiogFBVV95cUxPckpZSTZWSk04ZUc5RERNZlVkVGw3czZaNGVoOGRidmcwQkt0ZlVNTWR1ZXM3WFJYaVE1d1EyWEV6TUkzbUdxTjFNN2pFUjhYdktkWjdxLVRxUktyYTNQejA3cC1NZFJGaXVrcVdSWm1yWEpvYXViZHQ4WG83U3Jpdk5jSW54R2lyZTFwa1JpT1BIMlF5T2tDS3JZWlQ4WXJ5Wmc?oc=5
+   Title: Opening Day Freebies!
+   Status hint: Opening | Industry: Specialty / Other
+2. URL: https://news.google.com/rss/articles/CBMihgFBVV95cUxNb0xWUHBXdkpoUHc5Q1lTVzJzd2RrSVpuZVBtTllQQ0dZYkc1bEZJUEhSc1NOWXdTNGxCdVU5OURKWGNBRlo5ZWtFRTBmNWE4cW43T3ZrNHIyVzZoQzlsempyLVlIbUZ2SnNQYVdVcGNmY3hVWWd0cENUazhvM3RrWWVaSHlXd9IBhgFBVV95cUxNb0xWUHBXdkpoUHc5Q1lTVzJzd2RrSVpuZVBtTllQQ0dZYkc1bEZJUEhSc1NOWXdTNGxCdVU5OURKWGNBRlo5ZWtFRTBmNWE4cW43T3ZrNHIyVzZoQzlsempyLVlIbUZ2SnNQYVdVcGNmY3hVWWd0cENUazhvM3RrWWVaSHlXdw?oc=5
+   Title: Apple (AAPL) is closing its first unionized store
+   Status hint: Closing | Industry: Specialty / Other
+3. URL: https://news.google.com/rss/articles/CBMihwFBVV95cUxOU3VZVlBwZGNMMmJRcGJubnNJM3VRQlY0VlMxZ0VucXQ5ZGZyVGlyYkxXVXVRYWdibDRTTjNjWFlNYm9VZTBsTFlkemtuVzM2SW5fWTNiZThQemFraDNKUnBJbHpRLWJ6MG4yT2lkS0NHMmJWT3h1aDVfbFZySUpJN1NJLWZhaEE?oc=5
+   Title: Istanbul: kinu café opening
+   Status hint: Opening | Industry: Specialty / Other
+4. URL: https://news.google.com/rss/articles/CBMisAFBVV95cUxNaFVEZDhsNVp6cHhXdGQzaWZoSjFHN1JCSHQ5d2gzUENsQTJVaDZ3SUtRcU9mT3VPbVQxRHBnNzQxb3lCYXdMc0g3Q1NiMFhnZnFVM2w4NVd3TXF5NklkTlpINTl1N0hrTmM5TDJYZEU3WWJIM3h6ZWMwNUU0bTRxRlhndnFJM2dxck5pU0tWcEI3LVBGUHZhdHZzb0p4VjRhWlVUZ3Q4b2RIcWZ1TUZCNg?oc=5
+   Title: Hollywood Video closing
+   Status hint: Closing | Industry: Specialty / Other
+5. URL: https://news.google.com/rss/articles/CBMinwFBVV95cUxPU1RIaFg1aDhqTDFRMTJpVjNyQm1sMUFtYjVzOG41aldiMUptUVVVVFhyaHItS0tKcnBJdnJjbHA5LVROTEdxTmdoVzZjRlRvd3VPYjNkWXJYQ08yM3pRYi1xUHJ2RVdrNXNkbGMwNUxuR0tQb0FYeW9hS0Zlbzg1by1KTENYbWJEcXVQQXlOMEstcFh4U2hCQXBNTUNRb00?oc=5
+   Title: Supply chain issues delay opening of H Mart in Haltom City
+   Status hint: Opening | Industry: Specialty / Other
+6. URL: https://news.google.com/rss/articles/CBMipwFBVV95cUxONGE1bXRwWUJ5NlYyc0ZTektQVmwtZFVta3VPQzhmcDNES2dNb0tSUWZJWG4yRHFfWEk1WUcyOHBLUl9QOF9VWlFudlloQ0czVHNkSkJwUlpDYmIySzBjaUdZVUFJbk1hMHozOF9ES1dwdzZ1NWI5N0VXV3FJd09LSUd5Vm55STl6X0poNG9xN1otYm9RdFhPMXEzZmZncFJJdnlnanRKQQ?oc=5
+   Title: Dakota Chappy Relocates Store to Dakota Square Mall
+   Status hint: Opening | Industry: Specialty / Other
+7. URL: https://news.google.com/rss/articles/CBMiygFBVV95cUxNeV9aREZjZHNZa1JhdmozWlhWUjJvUVZvRWpWQWJqalB0R3Z1S0VuRU5YcXp5UGtYS0NNQmhTWlJxNHloeFh1TnZNMXdtblhKQlJMVEdVQ0dTZ2JYaE9nRWE5VUk1M3F2QzNQV09oTW55dXhJdU45OUV4RGRhWE13dmdBZ2I4SHV4emZucDg1Uks4ZUh5QmJ2NGxOZHlvUGItcVVydnZHTUFGUlN4Q0RHeDd6aU1TNkxZa3FoZmNEOUtxRXE2WXAtaXVR?oc=5
+   Title: Buc-ee's opens its first Ohio location. See which states are next
+   Status hint: Opening | Industry: Specialty / Other
+8. URL: https://news.google.com/rss/articles/CBMiwgFBVV95cUxOM2VZNXBHQndDQl8zRnpKZGlwVkFmaFBRbC1KMkxURVA3VVpGTDFwOC1SVEEwZV84eTFaTkVBWXpfRGdmaEtpNHFtZmlxTnlENi1LLThFMW5fWmlNSDZHSmwzYUpRQ2ZiZ0pkZThJLU9ObnFXekZ0bEJwa1pSd2xGaWt5V1Z2YkdtMXFBX2lmMnBYZjBBdW42RlFPWDJDRFVsbG1ndkZrVk1GdlpJZ09vbWNKTlRfVElSSEhUR3ZTa0FFQQ?oc=5
+   Title: Five Below now open in Corbin
+   Status hint: Opening | Industry: Specialty / Other
+9. URL: https://news.google.com/rss/articles/CBMingFBVV95cUxPYktPRGdOVzh2aHRLNWdadDRzV2tOR0JiZkJiN3dxWWZOdm9vY0hYVnctZ3VrUTFOOVpVaHROOG42X2hKa3hBTFo2ampNckN6bmpzc3BqZ0w4ako2U19qQnhJMHVRdm1QSHFKdFdYUHltM2FwbWdDSDVjUHZrV2Zva3M1M25NTVNGSENVNEZqVkRVem5MS0ZNR29oRlVSQQ?oc=5
+   Title: Trumbull Mall's Apple Store to close, one of three nationwide
+   Status hint: Closing | Industry: Specialty / Other
+10. URL: https://news.google.com/rss/articles/CBMibEFVX3lxTE5BLUx0WUc0ZDM5RnczQXVrM2xoekkyYXlwdjVsSzhocmdWeXBqVmtrS3pRSVItT1BiMHNIWno3UHpMMjlORzB1d0o1cXhuQ3ZEU0RQRHAzNklXZWpuckJJSDI4RUEtSjdCbjk2aA?oc=5
+   Title: Middle Eastern fast-casual Naya to open Sea Girt location
+   Status hint: Opening | Industry: Specialty / Other
+11. URL: https://news.google.com/rss/articles/CBMiuwFBVV95cUxNOENOWDJoQWl3d3JlQlZvVzJQcUhUa25IWUpPazlDdnUybFJXMVZHWlRLR0hRZ3VNMndVYzktY0hpc3VvZ1JvMXp4dlFiSllrZW9PQmhLSFZOVlJCbUQwWm9IdjZKQTdUOE9XNkVBVldXYVk3NHdOSE1MSks0R3hlOGNZNG9PWkt3U0EzV19wNVdLcHF6cTdZRW4xM2J6T0xDcGZPd2ZQdUhDazJkS0FZdGFWd0pnZkdOVnA0?oc=5
+   Title: Apple to close its unionized store at Towson Town Center
+   Status hint: Closing | Industry: Specialty / Other
+12. URL: https://news.google.com/rss/articles/CBMi2wFBVV95cUxNLTFkbVNnSW13Rmgwb3F1WTh3bElBa1ZiRHRDMDNuanNOM2ZsbTJrcjZLR3ZoZ2xLVzdua1RSdkpFMFFEM0VESUVDNndLbldra0VkOC1FcjBzc0FxNHB1eDd1SmJVVUw2Q092djF1dGo5eGNNLVpDcjZqd1JsLWZxQ2ZTY3FCeXo5QWdYZ0Z3Q0d6SlhhVzVlUEFNZm9IMjRHSGZ5d1JMY2NKUTdMT3JzdktYOFZHMEtsb01ycFh3RTdTSk16cVV5MExDRFBIOTVzMExValh2RGw1Wlk?oc=5
+   Title: Raising Cane's Planning To Open New Triad Location Soon
+   Status hint: Opening | Industry: Specialty / Other
+13. URL: https://news.google.com/rss/articles/CBMilgFBVV95cUxPajJHVFBXLTQxOEItd05TRWxjcUljRXcwTHk1SnJkTUxzeFFGcnE4Ym14b0YtSTFtb292UXFRanpoZFNSUjRlYWZsYmJxVU9mdlRUN2F1bFNBazZCTW5MYmFpcE1qWFBlQ0J4RmpOMU5UUF9JY3BxdFVtY2R0eTc3ekxLLXFydGdkMW55SzRNSkY1dTFxdXc?oc=5
+   Title: Trellis Hospitality to open Copper & Rye restaurant in Eagan's Viking Lakes next month
+   Status hint: Opening | Industry: Specialty / Other
+14. URL: https://news.google.com/rss/articles/CBMivwFBVV95cUxQYjVYUzFmU05OQktQTkpiOWdvZmVfV3Q1ZHBCWlAxNm05MUo4bWtSODVLVDZmWUZvRVE1QXJCVUFkVFhxaDJ4dWtCc0dxVE5kNmJxNXgtZ1ZHQk5YT2hoajhheTE1THhVYTN0czhDZHU5anEtcU5XMzJtSE1BUGh6U2NQNXBfUlVYbF9fT3ZRdjlDeEFVWkNENkVJM3l2X1Baa2xxVk5IYXRzeEp3d1NEN1hCRjhxMERnXzg4aUZ3aw?oc=5
+   Title: Waterdown FreshCo store opens with ribbon cutting, community donations
+   Status hint: Opening | Industry: Specialty / Other
+15. URL: https://news.google.com/rss/articles/CBMiiwFBVV95cUxQV2c3Y1BmeFA3dkZOQUQxdGRHcEtOUDlkNy1XTXZ6a0dfQW9oZmZFOVpGbUw0dkJhcXJjY3FWVnY0Yzl4RDRmRmFfcllVVndIUUliMDQwNkZrY2x4dWdCNERZeG8tUzNqU1Y2N2k0ZGhQS1VBbHpLQTQ4YlQtVlZfU0c2c2dGZVdPX2Jz?oc=5
+   Title: Six Senses Beijing to Open in the Haidian District
+   Status hint: Opening | Industry: Specialty / Other
+16. URL: https://news.google.com/rss/articles/CBMiggFBVV95cUxPbksxWnh2YU40cWdHM0VSNnBPU1NpYW1KOWxnNVJjaDdDWnhvbzNDS3JrUnA4a0RLZ2d4V3hydWZOc3ZPOWJuSU9vRlllNlNtckZrLUc5RGF4MVpzTGQ4VmNvd3d0MFliMFN5N3oyeUJZY2FwQVJfdmxhWUlZN2MwZHhn?oc=5
+   Title: 'We hope you’ll come down to drink us dry': Beloved pub to close doors as landlord blames 'rising costs'
+   Status hint: Closing | Industry: Specialty / Other
+17. URL: https://news.google.com/rss/articles/CBMilgFBVV95cUxQb2UzZVgtZlN2d2x4SWc3VW42aWVjVm0yeWJESHZtVHJuSUJDWEYta2ZLUWNuTXljZUlnczlRV0FuLU9KN0VJLVFwX0FSbWVHaDRrQ1FvdzVkSGhBMlZnM0ZWeWN4NnVBanRHVVRHczNfZFFKTzliQjJUeGRyNEEzeG1rWHZfaG85OW9BdE51TV9lQWNUM1E?oc=5
+   Title: Shoe brand once worth $4B closes all stores, avoids bankruptcy
+   Status hint: Closing | Industry: Specialty / Other
+18. URL: https://news.google.com/rss/articles/CBMimwFBVV95cUxPVllVV3NRTzRHTnF3RlpzS2djOHlWekZZb0xDa01XandQM0RSS19OWWhHYXlfUmpZbUp3bzFqbWhUVHhiNUtFQllISDRuRFZmNkg2Z0N4ZEVjeDdfcHhyYTZGNnpLOTF5MEN1TVRHamtkUG1vU3VZZFZxN2xac2JzSTdCRGM2b2pZNG16TDEzOVRCc1J5eEZmb3FWSQ?oc=5
+   Title: Dawson Creek pharmacy to close doors after almost 50 years
+   Status hint: Closing | Industry: Specialty / Other
+19. URL: https://news.google.com/rss/articles/CBMimgFBVV95cUxQQUxIaFZKMG1VelZVYjBlTEZsWkxGckIzVUVHUEdxQkFkMmQyR2ljOS1FcS1LYjJMRHE0b3doZnh5Nkw4TDB0VWoxdWYtcUZ4WWxBRUFZT19YRHZpWXVCOUlPd3NzYWN1ZUxzak94Y3JIX2h5ZkpkV0t4NmxGTXlwbnkzUUUxdFE5VDNJTXQ5eHM1VExmSEZDVFd3?oc=5
+   Title: Wayfair plans to open its 1st Florida store in Broward
+   Status hint: Closing | Industry: Specialty / Other
+20. URL: https://news.google.com/rss/articles/CBMiwgFBVV95cUxNcE1hUl9pcWNiZFFfcGF6bENKMkw4UnRROVJ2dlROU1BmVE1OOXlEa2NOLUJ2Mk53OGkwNlVORFpVTTdEUlFDQ3E0RnBfbDZ0OWpIeU8wSmtyN3dSTDg2X29pUXpnTG5GLURCZHJRc0ZUZXppZXRkX1JtaFVMQ1ZmOV9Fdk5zSVZMUm9WWEtscjMtQ0ZMeHJVUy1hM1BDblpjSHV3NUpRQkNidDY3U196TFd4SUFUYWI5VTY0OFpoc3QxQdIB1gFBVV95cUxPYU1fd3EwYktjRDRlZy01VmZrNkdfZklFc2xJT0VpQ09zdDYwbWJBcW5FZF96eVAxbERVUm90R1BfMDdpSUVDM083b3RTcUVWOU9iejIwU3dWN0hTTXkwWjQtaDVsd0JBTXpYQ3NYUndKd1NxaHpyLXluUkJpMElPR0NhUTZUemFQTXVXQ1pnNFQySlhCcEZUV0VQQmQ3aDlyWnVCenNUUkc5Z2ZMNWVnYi1hQTNLV3g3TzhzSXcyXy1HZy1HX21Ya3BvWk5PNkFnd3ZBMldn?oc=5
+   Title: ‘Elevated coffee shop experience’ to open in Eastwood spot left by original Kubal
+   Status hint: Opening | Industry: Specialty / Other
+21. URL: https://news.google.com/rss/articles/CBMilAFBVV95cUxOY2dMdERWR0RVeDFrMVZUaHZHTnZITmlCRUFyWnBDd180RmV4X1hhMGZLb1RXQmNBZF9EdkxTYkZ5cTNtSzVoRUREUFZPYTJ6VGt4NTJPaVI2YkE0aXZvazlKYjl5eU14bFpnWE5iX1pmdFluYzQwOTAtRUQ4U0VseUVja0pyYlVsWEhsckN5UFlPN0V0?oc=5
+   Title: Closing sales up to 50% as furniture chain to close last store after 75 years
+   Status hint: Closing | Industry: Specialty / Other
+22. URL: https://news.google.com/rss/articles/CBMi0AFBVV95cUxNU1lvX3JtVl9rdDYycW5DLUxmbGJrY2FCbEVLbGJVdEhTZjdfaVlkQmgxNWFHZ1pwbldkMFJJeVJmWFQxS3lHb2xCWlBuZEV3a0VmOEZWNGNXMTk5ZGxHZjFTTkV4b3ZfZTVpQktpVnZadURNNzdQcE0zcEhfQ3FITzRNRzR5cXJvaklVaWlnLWtGekJwUEUyOUNQRFFsZUtsaWZ5S0VUQjEwd1VCTGJjdTNyQ1Z6S1BEQ0FVN3VGMHhOQzhMcG4tdDgzZjRQbm1p?oc=5
+   Title: Saigon Hustle to blend heritage, hustle in new Cinco Ranch location
+   Status hint: Opening | Industry: Specialty / Other
+23. URL: https://news.google.com/rss/articles/CBMisgFBVV95cUxPU0otbzRlbkkzU25KaXVTbmdVWW5SOUtWb0huWGE4cXBvbkh3LWh3U1RpR2NiOE5iZjdPY2Vxcm94TV91bzlrSWxoRmdmb2RqUjFUWTJ4Q040a3puWGFjOGVVMFpuaTRLaF85d291Z0R5blVWUVBvTTFmOUQ2aTZOV0ZmX3pudWdMeDdZbFVrZ1l6TVZfRzJWNGZJY3FTTzNGUnVEUy1pclBmS2NIdmNFX0dB?oc=5
+   Title: Sheetz plans 100 stores in Indiana. How many are coming to Michigan?
+   Status hint: Opening | Industry: Specialty / Other
+24. URL: https://news.google.com/rss/articles/CBMiXkFVX3lxTE40UDRkdXVoTmxUVGYwY1ZUZjMzOU1ObHN5SGVTQW9mdEF0YTBFd2c4MGNIbC13MmJ1TW02d0trWS1wWEY2UEdtc1VsZjVDa2ZYSkMzY3RfTEo4aE4wY1E?oc=5
+   Title: Calgary cafe that was forced to close is set to reopen in a new location
+   Status hint: Opening | Industry: Specialty / Other
+25. URL: https://news.google.com/rss/articles/CBMi0AFBVV95cUxPX0F3XzM1XzRMb2JUc1ZKZVZudTNKeXpJTG1yR29WQ3dZQ2IwLWhVbS1BT2xBZE1fc2R4Q2VtNElTZWxkRjF1aTQ4RUxVcVVacnNIaWJHUGRjNDNNU1BVM01xcFRZUC1ZSHRhQmJ5T0xLb0Q2c0N5Wmd1T0NxR0tIX09sT0FVR19FRW04Vy1sM3RvdG5USlU2QnpvRXBEOVA1NXpqdU4xY0ROSFRiZW5jNFdhRk50S094ZmUwTmo4MThMRlkzSU8xZl9FRHJtckUx0gHQAUFVX3lxTE9fQXdfMzVfNExvYlRzVkplVm51M0p5eklMbXJHb1ZDd1lDYjAtaFVtLUFPbEFkTV9zZHhDZW00SVNlbGRGMXVpNDhFTFVxVVpyc0hpYkdQZGM0M01TUFUzTXFwVFlQLVlIdGFCYnlPTEtvRDZzQ3laZ3VPQ3FHS0hfT2xPQVVHX0VFbThXLWwzdG90blRKVTZCem9FcEQ5UDU1emp1TjFjRE5IVGJlbmM0V2FGTnRLT3hmZTBOajgxOExGWTNJTzFmX0VEcm1yRTE?oc=5
+   Title: What’s In Store? Lucky Penny brings books and gifts to heart of Fairport
+   Status hint: Opening | Industry: Specialty / Other
+26. URL: https://news.google.com/rss/articles/CBMihgFBVV95cUxQOGtVRjF1M2FjdU0xOU1kbDJ4bHhlTjRQcG51R0JiZmtaTmFTRzZqZWJVNjBBMkRoX1JLVlZMM3JoZWt6LVVkdVpQSndMRDczeElUWXl1czRRRmxVYjhxU3BaZmdDUEVsT3FBa2o2SUJfU0NkWXRwX0x6YXROYk1HaTl6SDkxZw?oc=5
+   Title: Asian grocery giant H Mart reveals new timeline for Haltom City store
+   Status hint: Opening | Industry: Specialty / Other
+27. URL: https://news.google.com/rss/articles/CBMidEFVX3lxTE9PckczTnFPbzBSOHNRN2ZvdTllSzd1UkZkdl82aE5Majhwc291MUFQV29KMTgtTDhkZTFQbzdMYjdkOGd1Qkx6anRnYjBBa1dScFdzZVpCWVQycW11LS1UUFhfQzJ3WUFXWDBSZXYzWk43Q1B2?oc=5
+   Title: Carl's Jr. Franchisee Files for Bankruptcy, Threatening 65 Locations
+   Status hint: Closing | Industry: Specialty / Other
+28. URL: https://news.google.com/rss/articles/CBMiqgFBVV95cUxPMzVXaGVIUHBkMlpMU0ppdHhJUWFEUjBkMmhaSllxWFo1Z1o0aUV0WEk1ajFMbGNxZ05ycEVzSjdEYi1oV2E4T0hSMzhROExmeDJUTlVSRWFNeW5JLXQxbkt1RkdjNlo4RzFISHBpczBfZnBTMUpCU0NoN3l3UWYzeTFjSnFDczNtNmVhS2pTTGVqcEJ5TzFjdElvVG43TXZxQ0NVQlRzNnhnQQ?oc=5
+   Title: New Sports Direct city centre store’s opening date revealed
+   Status hint: Opening | Industry: Specialty / Other
+29. URL: https://news.google.com/rss/articles/CBMirAFBVV95cUxPZ09ZaTFJeVB0Z2thMGdHS1E3OEJ5R2Zva3l5ZkdVNG1aZ3h2anlRR3J0OXR6RWxUbHhJQUowSHlVOGlZMXc3a2xEMTdva3g1anRpZFRGRF82Mk50MVdPeGRZWjQ0U3Vxb0VOOXhGOGRDN2RhVFRONXNfZE5yMEh5ODNjNEE0NkYtSHhBWnk5RHlFam5aSGhsQktIa3FwM3JwOHdfRkdxZ2FPTHk0?oc=5
+   Title: 72-year-old mall retailer to close more stores in 2026
+   Status hint: Closing | Industry: Specialty / Other
+30. URL: https://news.google.com/rss/articles/CBMiekFVX3lxTE92eVlGSGt5MDM4TlFXdUxrcmI0QlBETWZFaVc0UlBlTzZWdVdXTTdlbE1NVUFyeVF2VE9JVjhqS3BTS3lWNWhsN1VITFRDdTRSVHNtUDZMeDFOaEw2NEgxZUlSZENFdXNObEVKekR5WS1NbEFhVjZ2cE5R?oc=5
+   Title: Royal Farms Unveils New Maryland Location
+   Status hint: Opening | Industry: Specialty / Other
+
+============================================================
+END — copy Claude's Markdown table into claude_response.txt
+============================================================
+
+============================================================
+PASTE INTO CLAUDE.AI — Part 9 of 11
+============================================================
+
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+1. URL: https://news.google.com/rss/articles/CBMiiwFBVV95cUxOdHA5OWJoMEREbE4tRURfRjh1LVpEVWFoNFpEcFViR1JMek5ScDQ0YnpuLXRuYmxibnE2MzhSYTlqa3NYcFZmN2s1aVdPQnAycEJqNHc2SmpyUHdoTHVfV3hDNHlrX25ib1RZNWRacDhqeGx3alBHM205T2Y3V1NSa3haMjRUNFZ3VzhR?oc=5
+   Title: Red Lobster hits point of no return as vacant location officially gets replaced after closure
+   Status hint: Closing | Industry: Specialty / Other
+2. URL: https://news.google.com/rss/articles/CBMixAFBVV95cUxQM0s0SmsyTWRQeXpIMGkzX1Z0b2JmMVNSTzV4MlkyYkhvaW93NmdPdlkwdFlzeUZFS3VHS0Qwak5QbmlhUFh1cTNXSGpoYTRleTBqQXVjOXVmWHBMQmNBcXg5cG9DU0xaUzVPWi1oQUdqQ3dTRWxybERXaGFrekNpM0YxMHZrY2F2SklGZzZ5RUVwWnd4QVNJWkRoakRnVmNVbTFDWlRLTDhvMHViVGRhQkhueHo0amtRVFpQdlJPeWE0bmY5?oc=5
+   Title: Whataburger opening second Tampa Bay-area location this month
+   Status hint: Opening | Industry: Specialty / Other
+3. URL: https://news.google.com/rss/articles/CBMiowFBVV95cUxNRTlGRjVabEdWbGU2eEY1Y243a09qdm5scmJpRDdXekRlMDhEWXY0NEk3WGZzR2ZRMjJBSHpocGU3SWswb0NEVklGallRaUwzMnNKdC1CSDRXTVc0Q0oxWUpvdXNwb1Rneno5eUQzMWJvRUctdDQzZzVJa2VFazZVNUlwZDhaQmRlUzY3cnY4ZWpfQUpNQU9QbzFDamZuSmZrSVQ40gGoAUFVX3lxTE0zRGRYTElXT0EyTHEtR25qVy1uYklKN0ZUQ2M5UGZnOFNzQ2pUQWpSRkFYWFl5VVRCZGJmTW9STC1ucjQyVkZyQjM1ODhRNy1oMEVpY3pIakt3TzdrU1pJbFQ0SzJQZGcxUkwtaXFDWGJhczBadVA1YlFnQlljMG5oU2NQbkx2UlQ1ZnpfM0NLSHA2X1o4MFdCNngxeV92RzdEN1BoU19yeQ?oc=5
+   Title: Nisa opens new store at site of former Lane Ends Booths branch
+   Status hint: Opening | Industry: Specialty / Other
+4. URL: https://news.google.com/rss/articles/CBMigwFBVV95cUxOc1JwWkw3R2FSU0dLZlE3SlhDLV8waXFEYWJNZ0RsUjlyQks4bm1xenpuNkJLakFCVjJTenlOX1JEeVRtQ2FLbUktbENZV3ZxNzRFNVIxRVNHVjhrc0VYalUxVTdocFgyQnh5amRYXzR0UmliU2Z3THdtaGxPa2JQOGRuVQ?oc=5
+   Title: Downtown Appleton's Pollen to close. Here's what to know
+   Status hint: Closing | Industry: Specialty / Other
+5. URL: https://news.google.com/rss/articles/CBMimwFBVV95cUxNZTJuSXcweGRCZ0pMcHFsNWFkM0xGODFiRTQ0REVZV3ZuS3lFSHJ0WG5GZjNOd0NRa1lWUGhUd2UyRmhpMVR3TlR3em8zSmlIOGJNU05Od01HYnNEbGZFdEFGR2ZraUN5Uk5DTFh0SWwwc2hXVThVQzBvcWhYQXUyclNQemNYMDdSSUJPczFiWDBsZFNwZkY2UE9WMNIBmwFBVV95cUxNZTJuSXcweGRCZ0pMcHFsNWFkM0xGODFiRTQ0REVZV3ZuS3lFSHJ0WG5GZjNOd0NRa1lWUGhUd2UyRmhpMVR3TlR3em8zSmlIOGJNU05Od01HYnNEbGZFdEFGR2ZraUN5Uk5DTFh0SWwwc2hXVThVQzBvcWhYQXUyclNQemNYMDdSSUJPczFiWDBsZFNwZkY2UE9WMA?oc=5
+   Title: Carl's Jr franchisee files bankruptcy with 65 locations at risk
+   Status hint: Closing | Industry: Specialty / Other
+6. URL: https://news.google.com/rss/articles/CBMioAFBVV95cUxNZ0dEWFljVjdGNG5sYkp5bFduZVY5QWJKcFIzUFRGYksxZXVaSjY4dENzaWFQeXhoTzlnSzhvbkptUWYtTlhYcWlRWTNJX1J3YlBTYWhtY09pa3gxRU0tWS1qeUd1b1pCaGZEZjhablFBR1FkUEJlVi05WE5rRzMxdlpFZjlwamFhNC1IWlk1amgySFZqMElKbWtkSmVreWpF?oc=5
+   Title: Costa Coffee opens new London branch in former bank building
+   Status hint: Opening | Industry: Specialty / Other
+7. URL: https://news.google.com/rss/articles/CBMitAFBVV95cUxQd1pEam9zQ01LbUF4Zy1GeXJTWlIxVUt1UEQwNWZLY1BySFpRdFp0VFFrRlh4X0lPczhhdHFhMVFfU2txR2RBaGRLMEU5TWpHSVpWUmpJNEhISnAtdXlUcVhSeGVHN0RqNVB3NkFKYmUySUsydllRdkZrLXBYQlQ0cG83VnlnUWZMWXJXRUM3NEV1U1FvUDM0aUlKdXljck5iQVpHM1FKbGJVV2NOWmhXRFJqWTI?oc=5
+   Title: Popular Pittsburgh BBQ Spot Closing Amid Corporate Restructuring
+   Status hint: Closing | Industry: Specialty / Other
+8. URL: https://news.google.com/rss/articles/CBMi-wJBVV95cUxQXzh6ZUVvcHFHTEljWGhYN2tuS2s0dGtjeDFIVHBpaVVqZ1luTlNtNHlpc0w1dGYwa2VfUmZPODY0LWZXVlI0ODh2anBlWHc1WkFZYU04OUpLRXJkbFVVcHNvT1l4VEg3MFB6TUphMkxrM2Y5WTFoNHJjY01PSVpGb21RSkhUTXFBMDA3NjJJMDdGeEcteDBJcjhXdUlfeWtoZkVyd1lOdU9zZnRXRUZMeDdGVGRMTFVwcVpMSWlBYm9GYVBEVV9iZFluZ2dZb2Itb2NyeGlVZF9peU9adkdCQS03OHdmMEViMXhNOWtUX0hGUzNTNXhlZU12dWM2U3p4Y1JZNGI2WUJfRU1Fd3JENEUwR3dSZjlXaWhmdjdiSTE2X1ZiSTdTTGRBal90X1AxV0dqTXRhN2Z0ZEpNM0hHTWpHR0hDNmJudk1CTFl2Z3lXNHpXdG45SHZWXzVaT3NjUG1SM2IzdVdNNE81MkUxN2lzd2xxSjlMS0hr?oc=5
+   Title: Japantown-favorite ramen spot opening at Serramonte in Daly City
+   Status hint: Opening | Industry: Specialty / Other
+9. URL: https://news.google.com/rss/articles/CBMilgFBVV95cUxQcWVFTXhzQW95b2NvTWt6ZVNEMTBqb1FLZGM4VWJGTjdpMnl3QThjZFk1bEZkQl8xcWlyc0NfOUp4M05zSDRfUEdWcVdGYVl0Tkhwbmxxa1pBR1Bkbjc0NTZtWHF6dkdtQ3lVWV9DbFZQS1ZTSGI5RTRLeW40d2NHU2J2dk1sQXhYVTV6U0M4eU9wV3p6YkE?oc=5
+   Title: Two new spots will open at former O’Charley’s Burlington location
+   Status hint: Opening | Industry: Specialty / Other
+10. URL: https://news.google.com/rss/articles/CBMi0AJBVV95cUxPQS1LWTZVVC01cWZYQjZuUHZucGVNNW1XV1A4SkNHM2lPYjdoUE1TR3ZYUERDTUpsZ0RrcDdzVi1YVTl1cWc3RXY1Z3NhdGRoZXRJYjVFcmpFOXFfMEJaN3JoWHFtRjBTNDNuMjB4THhXeFZ3QlF4dUlHZl9kWXdfTERuWm9yOGlWZlpxRGh3NU1aaUJYeUhkRVd3UGZPd2N1WUZkejNJbDdxRktIb3k4Mjh5MW92dFdDVE1QcVJVelFncWJ1dEttd3dqZGVQd1VEVlFId3BuaVZ6Qk1BMXZNNkptRk1tekJOLU95b1EzTGhXRUdyS0Y0NWNfS3dxRzVYZzBQTkNObmNnRXN4YzVkY1Zvek9qWU9WV1NpY1o1Yk9zRVoxa0JBN3RBTHZlbWZJb3RWeHZxOFFFZV9iVnZ2c2V1MVNmbThEV0NBenNVN2U?oc=5
+   Title: Dozens more Rite Aid locations slated to close, court filing shows
+   Status hint: Closing | Industry: Specialty / Other
+11. URL: https://news.google.com/rss/articles/CBMi0gJBVV95cUxQOHZ3NDlGd3hTazBBTEtDSlZLZHdmUTZ5MnFQYTVFWU83ZVJLaTBGT1NMTmxHajVzMW1vR2w4T284a1pITm1lLTVYRl9YQW15ZlhMbVdBLUpwZVJDVk0tSHJ1b0w3UE9PTklyQmRDQUwtUWFQcVBvamx4STRBdW9OWHZpN2tzTmVBU1RTVlAwZVpKRFZIdGVobm1pOVJGdG5IemRzRHZVdHUyUE1YZ0hCb0FBeU03RkhJMjFJQnpkblIwN3Rub09RQ2xsc2NYNGZPdDFGZE13SEZYdUpjekxrSzIzaGZLbjNTOHA1UERpWlhtNXJUZUpHOExpZW56Wk1qOGg0c19Bdnh4SkhvbHJRaURzMnV2MFdPSHdJWGpOdm5MY3NYZ25uU3BISGN6U280MFB1aFlzck9BaVZjMEd0Q0t4cEJKUDNNZ1BfTDczVHBTUQ?oc=5
+   Title: Denny’s expands its valley footprint with a S Decatur Blvd. opening
+   Status hint: Opening | Industry: Specialty / Other
+12. URL: https://news.google.com/rss/articles/CBMi1AFBVV95cUxPUFFReEVmNzFreUQ1dW5vWjBUUm5oekt0Tl9XTVFZeVkxbXIzUnJQN3lZemtpRVBSNjdaMHhhalQzWk10VFQzWER5WXo3V0FVNnQ3ZlZUTnV0TzY2TDJCOElfZXF5MzhEYWJ1STZaVnR5NldXeURLTkhOcjZMLVJ1Q2hYdE9iRWZ2SVZfcTctN2dpTkVvdWZLVHpxZF9EeHVNQlV6Z1E1TzhYSlpOeFNxY24zYk1ETU44VFR1a1VhYzAyRi1uUDd6eXhEZk5xZlZFdkRGSA?oc=5
+   Title: King Soopers to break ground on new Marketplace store
+   Status hint: Opening | Industry: Specialty / Other
+13. URL: https://news.google.com/rss/articles/CBMicEFVX3lxTFA4NS1HOTdUVm1IbmIxdmI1RHVSV0ZwMzdkLVp2TFdxaVJlOVJ5UUJmMU9zSHZ0ME1RRFQ4NjJZa2dPZ3lpUmt5M2N3RG9WSDRRanVBbTZUQjhzcnAzOE9OU3JwWVlwRGQ2dmFGVk1zTXk?oc=5
+   Title: Vail Wraps Up The Season, Leaving Just 6 Open Ski Areas In Colorado
+   Status hint: Closing | Industry: Specialty / Other
+14. URL: https://news.google.com/rss/articles/CBMi3wFBVV95cUxPU3U1d1BOeFc0SlppZnNmVFdFdWFfX25UMGt0cVdZN2d3Q3gzMmtwYURWcVE2eWkzanM2QmtMY3IwM3JxcUo3VWFkZVFzVmVnYnZ0UjVjM3lEVHFBQUdXaWs5M0FiZ1pWZHh5dkJTTVhydU0yRkpicVMxT0g2Yk1VbXYtNm5XZ1FGS3Vvd1RZZVMyZzZKQ3YzaHRBMVNYUEpjaXdMYkFTQ3F1Zk84VjhuRlJUNU9USjVSYVZrcHZnTWxRM3FJWEs0VmFiSjg2eGk0QlVyRDB0dmNvdXVIN0hj?oc=5
+   Title: SOUTHINGTON SCOOP: Noto Americano Italian Market closing ahead of new owner take-over
+   Status hint: Opening | Industry: Specialty / Other
+15. URL: https://news.google.com/rss/articles/CBMilAFBVV95cUxQUm1PckNkLVh2SVk3dHBlcHVmaXhsc1VmdUtrcXdoOHVoZ1dFSklMR0E5Z1E5aDBDVThmQkpERzUwV0hGblRuV01yNGFOSzNQNDg3dEIzMXZLaWh5UG5wN2EtM3ZRbi1rcHlrOThQWGFkT1VlNnczekNvazY0Ry1XT2hfdjBkdDhoS1I4NzVsSHdkZzEx?oc=5
+   Title: More Than 1,500 Stores Are Set to Close Across The US in 2026
+   Status hint: Closing | Industry: Specialty / Other
+16. URL: https://news.google.com/rss/articles/CBMi4wFBVV95cUxQMkE4VlV1cldkM2l4TDlKOVJSV0g0QUpEOXJvVzJmSzFQUUxFTjRGQ3pZamlyUHlaRUtsSlU4cWZ2X1JmMDBEdFpEOGJtdUdIVGo2ZU9qSVkxTVhTb3RwYUI5UnZhM2tZM043N1N6Y281YU02Mk9lM25SaUctVmVkRzR4NUwxaHZXNWVYTDgzMlRnSExUcElwTkhXOHYxQ2VCa2JkaTNESHR3TnJnZHFpNGRoVnE4RkJlSXlnMFd4QkhYUzJvNFJLN0FtV1ZtTFpfckpEN1dMRUlpQ0d6b1piemRxNA?oc=5
+   Title: Humboldt Park's Segnatore Closing
+   Status hint: Closing | Industry: Specialty / Other
+17. URL: https://news.google.com/rss/articles/CBMirgFBVV95cUxPMV9JelBVaVRobXZIUURQeTVDVmIyb1Z5Vk8wWS0yYUoxQ2Y5NEE5YlphTHNBV0Y4bFhKVDNxdHBoQ0FOQ2lQejBLdjJrMjlvSm5nMGRHT000RXhmZXNZQ0x1T1JYeXdGZ3lLTFVLTzhNbmpSZWxyTTItelMwSnFKcER5aDhLTFJiNmpMRDBsdWdoZWlDNTlUTTJPbEpFeFdLbWNqeHRiWlNTbkNQd3fSAa4BQVVfeXFMTzFfSXpQVWlUaG12SFFEUHk1Q1ZiMm9WeVZPMFktMmFKMUNmOTRBOWJaYUxzQVdGOGxYSlQzcXRwaENBTkNpUHowS3YyazI5b0puZzBkR09NNEV4ZmVzWUNMdU9SWHl3Rmd5S0xVS084TW5qUmVsck0yLXpTMEpxSnBEeWg4S0xSYjZqTEQwbHVnaGVpQzU5VE0yT2xKRXhXS21janh0YlpTU25DUHd3?oc=5
+   Title: Trafford Centre confirms huge new store from hit fitness brand
+   Status hint: Opening | Industry: Specialty / Other
+18. URL: https://news.google.com/rss/articles/CBMiqwFBVV95cUxOa1lIdWhYSnhlRldjbXlMXzhUcWdHTlpMZHRMOG5DRXhxR3pBS3Zjdk9JUVRkS1dINzY4Vmo3dXBGSDZWOURNUGVGdXNSdmx6ZDdOOU9MeGt4ZngyNTE5b21HSXEzT0huMFVWVExwTWphTi1DbXpINnIxZG5OY0RPdTR2akh2X1VTUmxvRGJxOWl3NF81VDNMV0xRRElWNnlQQU1GZUJBcjB1X1U?oc=5
+   Title: Saks puts Triangle Town Center store on the market after neighbor Macy's sold at steep discount
+   Status hint: Closing | Industry: Specialty / Other
+19. URL: https://news.google.com/rss/articles/CBMinwFBVV95cUxQX09FZTFhSC1sa08wdnhrTmJrNVR5Qmt2ajVOWFJpX1RkOVl4bXc3amZCQWRYaG9scWFkbmZaaG5EbkI0UGhCVEFKOVplRWM5Um5VZW9VWXl3NTRnY25qX213RWphQllaTUExSEpIbXRpNXI0ZWxfVTVfVnRYLVZnWnQ0azZabm5VYWstZXhNNmVuVmVTaktibks4QTNFMEk?oc=5
+   Title: New business set to welcome customers for first time in Troon during open day
+   Status hint: Opening | Industry: Specialty / Other
+20. URL: https://news.google.com/rss/articles/CBMipAFBVV95cUxPOHdSN1NLQnc5Z0xtZHpRV29KNTBFLWp6Rms3UnRYcVFEN0IzMU1oZGJDcXFYWGpuME5fa2I1UHV5aGRZeFMxM0d4eUowYmpDQjVRaXVKY0pSRUdRM2pYNUp2VlNaS1hBWkRITkdnTVZRNTNWMUFjbkJmTE5wZlpkdm80cG1seVhHM2VuNEF2X1VaXzFUQVVYSUJuaV9sb1BlWFFNbQ?oc=5
+   Title: HUGE queue forms outside Glasgow's first Wendy's location
+   Status hint: Opening | Industry: Specialty / Other
+21. URL: https://news.google.com/rss/articles/CBMisAFBVV95cUxQbTZ4U0NkcEdzZlJCc0ZEZFFVaEg2N0hSMVJzRFdFbmpqR2h2bnBodk9yYWNpMXNqb25wcUhaQ0I5eDF0ci1XRGc4bHkxMGdaRWdXQXE4d0tsTHB4bVFFWUxjQ1lQN1FHSVloYmhlWHZVcUJaV1NVUU9ENTJHeks2ZE0tWWVIckY2djZsY2tEN2VxU0tJY1loZGNVcWlOQU1Wb2J4X2JQRnlsd1RrWGw4Nw?oc=5
+   Title: 67-year-old retailer quietly closes stores in major shift
+   Status hint: Closing | Industry: Specialty / Other
+22. URL: https://news.google.com/rss/articles/CBMiiwFBVV95cUxQOTVrTGpxVXNaQkVNblBOdHRONHJ2MDFYeVg0ZkZmbGRpTVZ2OWtNc2prR1RoX3dkT1BwMnlvMDNmMFpwQktqSG5JRTh2TWVGN2ozemNOck1zd084NGtRTWFFWllmaE9YZkN1bm1wOWhkTmZBWGhHYWtNVFR6WkhQbWNwMmVJNHh0NDhR0gGQAUFVX3lxTE9ZdmdSSzZvVDNNaXl3TmdPTmNla0Z4RU1EanpYdVFZZ2dGcFhBUGJZQktkNHZfOC1TS0t3NzUtbVBqUkZ3T2Y1TGE2X054Z2ZrLVJCU29Rcy1NejZrV29lcnREMU1kUDBfMy1hMVAwQzVwQVZ2aWFXc1ZxUV92NW9PcFB6NWIzTFlvRkhacUNtMQ?oc=5
+   Title: Lidl to open more than 50 stores including in Warrington
+   Status hint: Opening | Industry: Specialty / Other
+23. URL: https://news.google.com/rss/articles/CBMi4AFBVV95cUxOc3ltYUVIRlFtM2s0RTVlX1oxNV8ta1FpQkVNZ0pUb1VwUHY5bUVHMkJKSEpwbU1UanplcC04MzY3S1ZfaGJDTGtBd2E1TEtmUGxBTllXSkc1NU40VlVTLTBkd2gyZk9Zc0trek9FWGdFLUFnMmM4RkEwSnNKMFM0blExR1ZQZmFRanBWNlRYOUVIVS1ydjZSeEVzOUVsUW94WVpoOXpjdTZnQ25ybEY2NExmUzgySWc4SjR5SFpfcDVoWExJTDFpOVJJNXhtN1VuUTdTSTY2OGlBbkFlajcwNA?oc=5
+   Title: Apparel chain sets opening date for 3 SC stores while Yeti to exit King Street
+   Status hint: Opening | Industry: Specialty / Other
+24. URL: https://news.google.com/rss/articles/CBMilAFBVV95cUxQYUxrUDJSWU5Lb0trcmNsejJyUnh2WTIxYjduNTgtd2RkSWRMY1d2TnpFaDRtSHlDTjd1bDAxNXMzVTh4NUc3M3V6UjBNZFgzd2hHV19YLV84OHhYMVpLcEJNblo3UVlFOERpYmZMU1FrcnZHN2ZxMmR1UUlHM2FSVllqQ3VtTDVoMlRpdVV1ZHdjOXdU?oc=5
+   Title: Turning Stone Names Promotions, New Hires Amid $370M Expansion
+   Status hint: Opening | Industry: Specialty / Other
+25. URL: https://news.google.com/rss/articles/CBMinwFBVV95cUxQNGtEc3JxZEthcUR1M1JsN3lyRDhxMUlxdkNNc3NNZ2hTVFNNNUMxMzN5VTlBcXBGNFRiSUstV25UV2VXWWUwU0p0bEhsVG9JOXVTSjVCNzhiLXJaVGQwRmpUT0RoeXhWNURJa1hyU3V0dkJTaXFYUEs3NzJucUNKamNvT0ZyeWxVQU9ScWJrbkFNaUMxMVJPTXdCOWdOU1XSAZ8BQVVfeXFMUDRrRHNycWRLYXFEdTNSbDd5ckQ4cTFJcXZDTXNzTWdoU1RTTTVDMTMzeVU5QXFwRjRUYklLLVduVFdlV1llMFNKdGxIbFRvSTl1U0o1Qjc4Yi1yWlRkMEZqVE9EaHl4VjVESWtYclN1dHZCU2lxWFBLNzcybnFDSmpjb09GcnlsVUFPUnFia25BTWlDMTFST013QjlnTlNV?oc=5
+   Title: Lidl begin construction of first pub at Co Down store ahead of summer opening
+   Status hint: Opening | Industry: Specialty / Other
+26. URL: https://news.google.com/rss/articles/CBMingFBVV95cUxOMVRxeXl5bGZvZzZQSmVDcHcyUExkNFhKNTZ6RFdsSzREMXRGWWltN3p5MkwzeTBtWFdZYXYxSHNjcko3WUE4b2tyVGZxODZieDdTMnlLYnBXdlJpRHozR3R2Q2pOSElWbFdOUWFwRHNGNlFiTGxQTW1lcEtvcmg2Q24yUHV1TkRuMU1pdlZWMTVjLWVQVG5WZTk0ZkhRZw?oc=5
+   Title: Lidl to open more than 50 new stores in next 12 months
+   Status hint: Opening | Industry: Specialty / Other
+27. URL: https://news.google.com/rss/articles/CBMiiAFBVV95cUxNTWF2MU1BQUJ6Z0djMUJwSHc1T0NFcWNqbVVfUTJXTlhYMVY5RlVKRnR4YU84Rnd1c0lQQ0toZG90Z2c3TVllUXNLZF9fMFA1X2FHSTd3VmZrUklDYlBZem5tQjZnNFZnbFNlS2pOTlRzalZLd3gxWk15UVFTbUZGRHd2dzMxdC14?oc=5
+   Title: ‘This definitely got my attention’: Can two new trendy stores make one of Boston’s oldest shopping hubs new again?
+   Status hint: Opening | Industry: Specialty / Other
+28. URL: https://news.google.com/rss/articles/CBMi7wFBVV95cUxNTXFERVc4MlpPZGczV0ZMb1JZX1N2Tk02dUJkX2ltU1RUdlZ2aHFQNEZNS2g5SGtCbk1peWEwTnJJMFJyQlBTc1J3dGVGcXlkMUdmeXlOM0x1VmJ2Z21jUm5pQmVTNXl4UnVUcy1UZWdHY2dhbW9vWUI2aS16R280OWdkaG40TGVaTUhvcnNaYzllcEVYX2ZiajJpOUhqaFc1Sy00TXRJSDZGclg5NXNsU3F2a0hVTnlxNzU3dWFkZnRLLTBCclotNC1EbVp0TUdDbnh0SVZuT2drYTZBVzkzRFVhNnhnMWFFU1hJa291RdIB9AFBVV95cUxQbTVfSFBNcE9IWFdydHVkVmVGVDNPSUZjaHVoRlFvSVNHRWhPUk5maGMybjVxeVZZUFBkUjZSbWJNaDVKbEdGSzFQY0hGRXJ4cEhWRTktZmJfRDVka19nUjRIMlp2WnRLaWJFc1hScExUbHA4Vkp5M0dFVDBZSTZNVGJ4a05zSkxvaTlJXzZHX19UNm9GSWZKbVFDMmpEMmJDTnBJSjlLSVJkUUxMbVFZWmlRelVjX3VZM0ZHQXFvOTFwM2t3R1pfbTdseklBYWpmRl8tUGlDTGxDemgtcXZVZzRRZllMTXNxM0RuQi1YdlFvZ0ZG?oc=5
+   Title: Editorial: What La. voters need to do now to make sure they can vote in the closed primary
+   Status hint: Closing | Industry: Specialty / Other
+29. URL: https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVE5kalFhbVdvQWhndXBHQUoySTFTNjRtSGR4U05OcmU3alFhck96RjVZZWJDbEN4TkZlZzFlT29MWTZnSjNVTG1jZXFrRWNDTm8wNnVxT2gxOTgxMDZGdlJMZ0JPcTI2X3A4UG1mRkxMS1ppOUE1dm9KWmlfZmdIR1VXVlJYeWNzaWdFQ2tLUkFKRTF6RnV4OU1nVmFtYi1tVHFVMWVXN1I?oc=5
+   Title: Lidl to open more than 50 stores creating close to 2,000 jobs
+   Status hint: Opening | Industry: Specialty / Other
+30. URL: https://news.google.com/rss/articles/CBMiZ0FVX3lxTE01WnhrQ0Rldmw2TG9VUmpEbFNvakVxVGRYWUpGNFJNZ0U2UGhWRXlheWFJMVc0d2ZDbnk3NWpKby1ZMDBEUzFZeWtqcDBQN2xhS0p4ZV9VOEFmY05PUHlEYUxPMVVDSnc?oc=5
+   Title: Popular Jeweler with 33 Louisiana Locations Announces Closings
+   Status hint: Closing | Industry: Specialty / Other
+
+============================================================
+END — copy Claude's Markdown table into claude_response.txt
+============================================================
+
+============================================================
+PASTE INTO CLAUDE.AI — Part 10 of 11
+============================================================
+
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+1. URL: https://news.google.com/rss/articles/CBMirAFBVV95cUxORUxndWVZZF9zUEVfVGFxRjJqRF9UUEdTNXFEYk5ESWtRREtXdUZOTGI2TkRSY24zcWdJdXpBYjNhaUIxOHpYSXNoNGFyLWpST3RmSVJVcWotSzdzVVpydGx5MWFwdmthNmZyZ3NpRVdEenJHcGFDekdEdEJhQ2tOWm5PSUpySjAzUnNSUGJySUVvWjYtLTRHRFhqZm9la2VLc2FkbWlDX1BNeHR0?oc=5
+   Title: Denny’s Expands its Valley Footprint with a S. Decatur Blvd. Opening
+   Status hint: Opening | Industry: Specialty / Other
+2. URL: https://news.google.com/rss/articles/CBMinAFBVV95cUxOMVota2FOZ2dodGZKLXYtY21FNldlMFRZdzRfSHZ4Wjg4X1BWYWxkbFVlaFZiQ0U1OHpxdm1PaEFZTkRlOFRIU0ZRSURBSjBTTHRPVlZjaTRvZXRaZmN1VEFScUNrLWJidHlpbEhLdmgwVW94RXdJWkNMOW11SWptb1p4WVhRMDlyZG5SOWhMNC1KLVNxZWhINnhXT1c?oc=5
+   Title: New Target Store Coming to Oconee County
+   Status hint: Opening | Industry: Specialty / Other
+3. URL: https://news.google.com/rss/articles/CBMinwFBVV95cUxNQTdrNGxKbFVwZWNJclJTRUZseU9WaUp1Q2FyaFV6VWpDZC1xejRCUThvY3dvNkp4VFl0dGFOdEZjRlEzUi1sdk1WV0NEVTdXSjZZejU5SzItazhRaGFLaG00dmJMQnFEeFZXbzVDdGFMM0Z1c2k4WVVSMDRPLXZXaEE5U1J6RlhlRFFYQ1hjQTBWbzJ2eEswUGF0VkVkaDQ?oc=5
+   Title: Bed Bath & Beyond buys The Container Store for $150M
+   Status hint: Closing | Industry: Specialty / Other
+4. URL: https://news.google.com/rss/articles/CBMipgFBVV95cUxQX2xSWkx0aG1CcjAyNUZrLUtEWUtndUR5LXhSZFFBWFhqLU9WaFZsOWdQbTZpYUlWbklSZlNodEZHMkpBdXVPbjk2MXVsUFZjSWVhVDNvU1pRVW1XQXVwSmlJZXhBcDJjUXFteWJqTkFkZkUwVFZDWHJ0M2Nrb0Nzay0tamtBYkxfVTF4cUVVaXpMQW85cEJmdklKV0hONFhBX2hSZ1930gGrAUFVX3lxTFBPUHBCT0xLMEx3Zk96NFVZYjBlREhfYWhmSlZnMXVLN2tITk5tbGtNLW8wTGFpcmZRM3dOQnBzOEh3QVcxZGtPb2lYcDB2ZUtFUXBVdFd2R082SENQcnVyTHF2MEF3bGxUX0VCWDVqZnZObnU3b3RJOXZ2eVQ5TmtFUm1HUDJrTXRZcnlabTJYQmFLbmJIVGlTNFROYzVpTjdvSUxiTmlJYk1fTQ?oc=5
+   Title: First look inside new Farmfoods store in Leicester
+   Status hint: Opening | Industry: Specialty / Other
+5. URL: https://news.google.com/rss/articles/CBMisAJBVV95cUxQREx2aWtDa253Z2ozdXczdmt3dDZlRF9uUnRGcmxJd1p1Y00wWFRLazdabTEzcG1VS29xUlljNUNhUEpEVDBJUVd6bDhFWlhlUDA3a3pnSHQwSTJsQl9Lb0tFb20zNVpPeEtZYmhIN1pRUF9pc0x5S3pYcmljdzgwRV92N2NCel9JaFVGQjJ4NGNlNkI4MjE1SldTVVhLOUxlY0tSV1dsWkxCai1TS2wyX0w1QUxCV1lfWnczQzAxeXpsMHFpUnBFUURfMDkyaC1jSzlFa3BYWTF4Q2xrUHRSYUExUWxWM0pBOVBmd3ZiUnNLZWJWMnZldUlUR2RRLXpOVS1XeVI5Y2ZFM3Y2Q2lVd1JzTHl6MUhxUkUzY2dkSWZ3NEFFclRrTFBTV0NHZVVW?oc=5
+   Title: Publix is opening new stores: Here’s where
+   Status hint: Opening | Industry: Specialty / Other
+6. URL: https://news.google.com/rss/articles/CBMi9AFBVV95cUxQVk5jbF9oUktoUXc4aUpSZ2ZobjBQU0hGcnNrSkVnY05zaGktR25GS0tnUXpTV3dzSjZ4SF81Z3pMTUlNdGJ2ZzVXN3JreVp3VTVENENPY0czN0JmdHhRd2o4R1hyd2I5SWdyMGdzdTRZSUdMZVE1RjZEejdMSDJJMER0ZzRkM3VJNjhZTDJ3ZW9ablV0eC02RmFsb1lfS29mUU5GeEdKS2FoblR5enlValpJYk96SzE1bEtDdmJ2SDVHMmdwWkl2SUUzWE1zVUhIME1Wc09YdXA4Uk94NmVpWlF1eGhob0Y2VWdkS3FXUVdiWGto?oc=5
+   Title: Sign of the times? Costco is opening standalone gas stations
+   Status hint: Opening | Industry: Specialty / Other
+7. URL: https://news.google.com/rss/articles/CBMinAFBVV95cUxOcXB6YjBSOUdIUkw4UXo3OV80TFVTR3BEeGNRcnMzMExGcEZEVmFfOUhqaURFWUNfTXU5NnRRWjJ1bnJHWVZFMjY4V1k3VVYxeF9SUEVyNzQ3SzZsNDhFMjdlam5WSlZkV3B5cDJmcTJ4eTlLd05JUnctaWpiaHIxRi1hNEYtZ0s1cWRyYVg2LVZJdXBRN0JoSG5yTTc?oc=5
+   Title: Town Fair Tire plans to open on Monroe Turnpike, neighbors air concerns
+   Status hint: Closing | Industry: Specialty / Other
+8. URL: https://news.google.com/rss/articles/CBMiwAFBVV95cUxOWFAyV2REUUx6UlF5MllDVEVxVmdEdUNpbHYtekZYYWFSb2NtQ2duejRHdGRpa25SMXpXdllGU0luWGd2RHV4Y01GeS00VDREdkQyZ29IemE5b1IwLVdvbDhrWFcyNzl5RGFkc0k0N1JKUmJBMF9EYmhkLThoa3NOa3doaEJHSHdWaUZkT1UzT3lEdVdKMk1HMjlhNVNGRDRENkwwTjNFOEk3cmxzT2xaTzNVdFo2WWx5WmZmMi1PMW4?oc=5
+   Title: Oahu, Maui County open emergency shelters amid storm’s threat
+   Status hint: Opening | Industry: Specialty / Other
+9. URL: https://news.google.com/rss/articles/CBMi4gFBVV95cUxNcEpYVnVQZHdrX2s4aFZ5X1NVYk5GSXZXN3N3UnFNZkpzc3V6bllxZjJ4TFdsMldybDRubFhZNnFab3Z3bmdBVkFFOWppc0NhcGFlVGtZSkNUZ3laZXZraU9mQTF1N3RORmpZNGRiOGN2eFRpc205b1g5ZnJYajhIeXc2Umx0alhoUS1oTHRZUEhVSkpEbkduM01PLVhNWGtEWkZQWDVYSW00Q3NHU004VkFCdU53TXdWeUNVQTZCVDdCdVh0dHVvWDZxUmNTMkIwQmpJQWk3dTlCeF9TMzV0c1NR?oc=5
+   Title: In-N-Out is opening new locations. See where.
+   Status hint: Opening | Industry: Specialty / Other
+10. URL: https://news.google.com/rss/articles/CBMikgFBVV95cUxPQmIwX3RadVNPTVJWR2hNTGctbDF5OUR0eTVEbWhvaVlPTFFhMkloMmkzUVFzcmR5SFZLMjZpWUpRSkVWT2dKcnQzTWpRZGRvRG40R25QM1ZlcXYzY0M1a0hFWlFxZ1BNWUFBVm91M2EzNDREQWtKRHZZdUxiMzlFaXM0cmpzNTUzS1hBblo0b09OQQ?oc=5
+   Title: IKEA Opens New Store in Phoenix
+   Status hint: Opening | Industry: Specialty / Other
+11. URL: https://news.google.com/rss/articles/CBMivgFBVV95cUxOMVl3WjdnSWhHNGdva05HQm53S0hiUmUya1dCMlNGUnVRdW9lQU9pWUhzWDNKS19YVlNmaWpWcGtmZFpaZGxscE43Wm5hNmlGMHowd293T3ZFX082RnZSbTJxbkgtdVJEbFlkeV9SQVRxdjBNdzNpZENTaEEtT0RkbnVNYklaWGN2UVhYelFaOS1fVWxSSHgtbzJhQnFfcExRV3loalVWeGtjVXlLa29aUEs4dTc4MW1RQ0VabnRB?oc=5
+   Title: Two Rivers Gallery opening temporary location during HVAC repairs
+   Status hint: Opening | Industry: Specialty / Other
+12. URL: https://news.google.com/rss/articles/CBMizgJBVV95cUxNaDlzM2V1WVcwdnIxazFZSWt6TG55VDljdE5IVHVQeUFHQTNzVVpXREJxTjRXLTBLa0F3U2c1cjNMV3lEeFpjeVNza3cwWTlEYm11bHd2NmJ2YkMwbDlBV254LXFTVlFwTXBNTkhpZWNqeDRxMGVQYVQ3YkhuSVZ4WmFOeXo0bTVGaElXR0ZheGZra0ZIMC1nNUsyYUdWY2g2NGZ2UnlQRG4tWkM4dWNIOE5YcXNUT0ZhUl9fUV9ITEdkcUE0YzBFSmJ5djdJNE5ScS1tY2hjekZMWmNpcF9rUUxlMlQ3aG8tWFplZm15aVE5LUM0UkszaXFieUN1bUJ6NEdEYmZYQ1NUYnF2MUh0Tm1GR0IwTGE5R1ZUcTFhQWZOV2dJYVlrOTE3ZElHLUE3dzNLZ0Y4S2pqc0FyVzVYSU1xQ1RjWjViN1VOUU1n?oc=5
+   Title: Sephora to Open New Store at San Jose's Almaden Shopping Plaza
+   Status hint: Opening | Industry: Specialty / Other
+13. URL: https://news.google.com/rss/articles/CBMikgFBVV95cUxPQnRfdnZpZ0VDY1BkNEZTTC1PdmNqTEZpNmRremhBNXZVUnJGZmREM08yWG5IdkI2a2RseFowcUNQek1pUzNTcWR5M08zcXhCU0RyLXVXX3hhMHNZR29ya2pKSDd2RUdNY3JaMmVlNks2QUdLQ3lNTzhoeEVqWWNPb1Y1LVZNLVJrT2hPU2Z0a1dKQQ?oc=5
+   Title: Navy Exchange at risk of closing 300 spots over battle with Walmart and Target
+   Status hint: Closing | Industry: Specialty / Other
+14. URL: https://news.google.com/rss/articles/CBMi-gJBVV95cUxPNUYtQURrX1Rzdlo5cllwNVJSVVZoYjBUOFc0amNWR0YtTWxLNDhQZUoyMEFDYThyZ3lHc0czYmkzWHdsRVpxX0NqMU5rdnJOUmV1OW1pNHlqOFBtV0E1YWxZRWk2dzBPc2VUMXYyWGtoQzFySFRVMFFYbTBmeXlhSWFubElMSzZqLWVhRnIyQkhlRklNbU0waEpYZWhLR2ZTQ0l4SmJ4dW5oVlUwbVhhb3ZQYnRTcTlUTFFqMnJSbkRIUFlGVTV2TXZLMVV1OHdZVUNWaC1EcFYyWUlObnJVWnpCVEhoQVFDejc3bjRJSjhQS2MtRjB0UFdKdENNb3BCYUtyS3huQmY0THh5UzJKcnhrZWVFRnVBRm95ZlVXS0ZRNGZhZ3diS19WYXJ2RlRpRVdIZGRNWEdwbWtMaFhzQUh2dkdfWWczS3VHb211SGZUeTZnbHd2ZFBaOGFuOElqNnJITjV6WFBhYlpUaDVrUzJzbExaUE1EdGc?oc=5
+   Title: 'Most unique magic experience in the world': New magic mansion to open in Chicago this month
+   Status hint: Opening | Industry: Specialty / Other
+15. URL: https://news.google.com/rss/articles/CBMisgFBVV95cUxOZVBYR2pTUVFNcjVaSm10MWx5UG15UjVvY2RTd1pfTHdlM3Atc05rTE82VUFQYlg2ZHRfU1d1eWZteWhFS3VHQTdaUjYwNkRKUmZSYmxmUHZsbXJDZW13Z2paQnBSVmp5MUFKZENXNDFjeUlGSWV4YXF3OF9JQXk0N3VHME10elpzbFBHSHNnZk80UGlKLUpnQXlFdFhWUUFvSUpMYWZkSF9wYVNUc3RBVm130gHGAUFVX3lxTE1fNDhGUkt0VDhBWkRZTmpOSnRNSFFUV0VYQmNEMkxRb0ZjcE8tcDBCLVpramlfM2ZUYVNoSGNPVTNpTE1zcFBOa2ZHOWcyNXNEeTJjVHFhTGdjb2RhMEFiTnMtZEJuQkRDQ1R1cGtGZVE0SFRIcWRqdGF3eU80ZkM2blEzUmNYUGVGTm8yaG9YUGtLNV8wRmFEZWk0cWZYUGI4c2lZTGVTNjdrTkJiMHIwYkpGVUZPVWVsTWx1dmlIbnZsRVNjQQ?oc=5
+   Title: 65 fast-food locations in limbo after major operator files bankruptcy
+   Status hint: Closing | Industry: Specialty / Other
+16. URL: https://news.google.com/rss/articles/CBMipgFBVV95cUxNZkJJOEc2bzd0b21qdktyMGdVRXlaLWhVemFDdGpXUnNYTWlsdUI2OV9HNE9ZcnhOLTV4blJRZkdYZmhzR1pDRDlmay00T1FRajE4Vlg0cXQ3bUU5eklHVERlenZFWUxPMEtLOE93OERWOTQxYjNwanZBaVVXRldLMEIzdktBTDVIT2dnZUZza2VKNXlTakJtSHBYcTdvSkZwWlNuTG5n0gG7AUFVX3lxTE5PSk5odnRRSldwOUR2b2I0anZnZm15QmFhbDBxZ2RVMnRLYUMydDI3aWFKaTg3SEk2T1Vkb2hnT3RDamFsQnF1dXhuaDgyOHY3eDdFd29PdTNLcUg2SFZzMmJmS2ZZSVc5VjdwUzVhZ2MtYXpaTlN5Mm4wdU5CQmI4alhBVWRhLXYxU1ZuLVlzQVpkV3ZpbTZnb1AwcWJZWDJvNHdyQ0lDNkNhZjhySHdiT3ptb1MtcERhblU?oc=5
+   Title: Tatté Bakery, Van Leeuwen Ice Cream Could Open Soon At One Loudoun: Report
+   Status hint: Opening | Industry: Specialty / Other
+17. URL: https://news.google.com/rss/articles/CBMikwFBVV95cUxOUHFVUUZYVHdwUzFJR3FnN0ViaFAyVkxoRUNNS1BmVVB3ZjNPWlR2dTUxRi15bUdzZE4yVjNzTGtTUHpMSzRfX1ZDelc4eVZIbDROeUhpQW1OVlV5OFRQMElCRDVzTmJ2d2g0SHZBMjN2MFp6RnM4V05tNXJLWE4yYkhMd1RNX25QR1U0Rm5ITWt1dlk?oc=5
+   Title: Helena Daylight Donuts opening April 9
+   Status hint: Opening | Industry: Specialty / Other
+18. URL: https://news.google.com/rss/articles/CBMipwFBVV95cUxNRHZTVGo0b1lJVVhIS3hENGl1MGE5Y0NCNW5CQ0cwVlU5MkF3cmhPRm1ITnA1RHpHTEdadXpLUk8wMm44bmhsMl9ibHBPaFc5NW1sSlNDOV9jVWhjRUtnendnTTdUcENJbDhJOFRfM0R0cjJiY296azFWSVBLQVJyVjJOWGJMcWY1WGtnRkRPOHZQc2oxSTdSQmdSSG9fOEh3U3cteWZDdw?oc=5
+   Title: The BBQ Company Expands with New 5,000 Sq Ft Outlet in Faridabad
+   Status hint: Opening | Industry: Specialty / Other
+19. URL: https://news.google.com/rss/articles/CBMipAFBVV95cUxONGl5eV85NGJRbzVDTWlqaEVoa2VISHRtazZvYTVLcm1BaEFXM0xNaWgxVW5qbmJjeDNXU3JoS2VITGtIVFhEX29WR1VjU2pueWx5d3lHYm9Yc3VIMzVXbXBMcDltT0M4T1Nya1pwZVpMNWk5Uk5IRWw5YUtQbndsblJPZElKSjhyMVpwalVzZGhQRTVfbTJ2X2Z6N1hHTjM3QktQdA?oc=5
+   Title: Former Joann store claimed by Goodwill rival for sprawling 22,461 sq ft spot
+   Status hint: Closing | Industry: Specialty / Other
+20. URL: https://news.google.com/rss/articles/CBMizAFBVV95cUxPVHhsb3pHTnZ0Zm1aMU9qVVRKeG1XdkFaNm1kOHlGUU93TDJGVk5ZUnpMSzEzNmRORGx6bGFPVDc2OVZ2c3UzbzR5UkN4R1RDVkk3SU9vQmhPV2tNcFNqbFZuTW1lZkdlZ2p5VGpEZTJBRDIxZ1M2XzhuMFFrTGQzeHVEYmJEaWZ0M3BRVFljaV9iVW5GMmFiS1FtazZNUy1OdHNQVVNqSDZZQnF0aU51VURFcmNCNDhSTE1iQmVsMkpwRWJxUzRRMnVlQi0?oc=5
+   Title: Winners, part of US discount retail giant TJX, to open new location at Ontario's largest mall
+   Status hint: Opening | Industry: Specialty / Other
+21. URL: https://news.google.com/rss/articles/CBMifkFVX3lxTFA1WlZScWI4elluNmRINWxGakJRMWRyRmNZNHJ6bjZNOFB6TFlDR3ZCZnRYS2hqRlplZHpxTGQzcnBHTHAzbmF4ZFBYQV9yaEJnaUVKV1pRWlJvZS1SQ1E2Vy0zRHh2TlFILUdvSkgzalJISmZwUGJFNlBJbVd5Zw?oc=5
+   Title: This Week in Retail: Saks Global Secures New Funding, Jaded London Opens Two Stores in U.S., Tapestry Taps Pinterest for Board Seat, NVIDIA Partners with Fashion Agency, Meta adds Affiliate Links
+   Status hint: Closing | Industry: Specialty / Other
+22. URL: https://news.google.com/rss/articles/CBMimgFBVV95cUxPend3NUQtcDF2WGlDQUV3WS1NR2doUVc1SGVxdkU2N05pS0RfNUZJTGZlOXdyUkg4aHRmOG9jZ2JqVHdubnJjT1ZLTlFSMmFuQlVkdWFzZ2s4cDRDaDVKekNiekRRbGJ3QzhuZFFhcEhjTmJIT2trSUlIeXpITFJPV0h5RXUwVFR5c1JQQVNuc2U3X1FHNUF3RFJR?oc=5
+   Title: It’s over for Olive Garden rival as location permanently closes down after 29 years
+   Status hint: Closing | Industry: Specialty / Other
+23. URL: https://news.google.com/rss/articles/CBMi9wFBVV95cUxOcll1S2U5VHdyNHgyelVsV3FNLXlnWmtwbDB3bFdxRDFQVjAtZUh6QjNMNkdvWFYyWklUYnBnV2Iyc01oZGhST2J1aHJBRk1JbkdxMkpZWkpVTE9aODYteVVGazZKOUEzdXhvYVROenZsSG93dnNBeDdZWU1JTGtSSjJVaGZOVVVyMV91NHJtTVZHcFBrTEVwclFpRnVlUkQ3RW0zd3Jyc3BVbHh0UFVpOTBmbE42WnViMTNNVC1LVGhDcUR6R3VwbFV2Ry0xamVnejNrNmM4V3RCay00UGZ0M3FMejRkNDVrLWFWV3ZTQ2doRG94aUdZ?oc=5
+   Title: Legislative actions aimed at expanding food access head to Common Council
+   Status hint: Opening | Industry: Specialty / Other
+24. URL: https://news.google.com/rss/articles/CBMiZEFVX3lxTE9KOW5DQ183WW9rbUtKTVpmTVdCMjBQY1cxZEdfUXpOOHM2U1VBTTV1aDRxSTM3V2lhYjFFSGNSMFlLTDJoSEpPWEFaRVZPd2k1WWlHTzRaZDVEb3djZXhNa2Zmd3PSAWRBVV95cUxPSjluQ0NfN1lva21LSk1aZk1XQjIwUGNXMWRHX1F6TjhzNlNVQU01dWg0cUkzN1dpYWIxRUhjUjBZS0wyaEhKT1hBWkVWT3dpNVlpR080WmQ1RG93Y2V4TWtmZndz?oc=5
+   Title: Outdoor Living Flagship Stores
+   Status hint: Opening | Industry: Specialty / Other
+25. URL: https://news.google.com/rss/articles/CBMiiAFBVV95cUxOTW56MmlJcWxtRDJrWWg3T2FocFg0Z3NLN3Vza2dQSUVwNzdDQkZPOU9ZYVhhSW8ya3NDbm00Z29hcDVCclBWdzlBY0liNy1GWUVMdkZYdHd3aHIxUkc1bnEzbjRBMzFCWXE2T0EzVXZ5S0YxaDEyNU95eDJydUs3ZHZyU056SGdp?oc=5
+   Title: Nick the Greek Debuts in Inland Empire With Ontario Location
+   Status hint: Opening | Industry: Specialty / Other
+26. URL: https://news.google.com/rss/articles/CBMickFVX3lxTE9BMkNlV3FDMFVwd0dzM0dSSFJiSjl3YkpPa0NRLTZhNERaSVd5X2F6MXpiaXRycUZkVkxlYkpIS0ZBN0xqckZDZC1ETVN0V0VlY0VqV0dqV1ViWlMtYklHNUIxTGRhcjdadFZwT2tlOHk4UQ?oc=5
+   Title: Beloved shoe chain closing 25 stores after nearly 50 years in business
+   Status hint: Closing | Industry: Specialty / Other
+27. URL: https://news.google.com/rss/articles/CBMikgFBVV95cUxQd2xXLTUyZEdLeC13VEZ1SWk1RlNSVEhjWnZNYlFSTTlPV0trWThKMUdXQVFxSTBlTGxoQkFqQUNiZF9BSlhRbG1xZUpvUHdpSUU2ZXZEQk05cEFNNHJvQ2JwZm9ZTVViT28zdUZZTzdBSnRwbDl6MDBIWUhIb0xxXzdNVXM3a29QQ0F0Tlp6Z2lCZ9IBkgFBVV95cUxNaWVUQlp0LXgxVWhlb0xvbU43cWJjLUliWkZLS3ZXXzBQUjRjRFNXSnRNdEdmaWp3QlA3UEh5QlNhTk5NYmJpTWlpLV9iMVZCNnBYQlBvbWN6R1BVZ3FQdlAwazdoazJoWDBJQ25mV1JHNzdQY2NDaVJWQXZVbnA5bkszQ1pUTWlhMHZpaHd0UFJfQQ?oc=5
+   Title: Tacoma’s first Katsu Burger has opened on Sixth Ave. Here’s a peek
+   Status hint: Opening | Industry: Specialty / Other
+28. URL: https://news.google.com/rss/articles/CBMijAFBVV95cUxQUmZqVzd1X1RnbVpyS1lFWnhXcGtoaDBEbVptaGIyRVA3cENIdmIzTm5uSnBUQlFBaldFVnpGVFl2NEJHU0Zsa1hGRG1IZi0zRzNEbmZtb043eUs1UlVYa1BSMVhuY1FrajZRTHdVOHp4bzBKdmtKbEVCT04xLWZYRWMxSlFFRUoxTjFJZQ?oc=5
+   Title: Closing down sales reached up to 60% before JCPenney moved into final closure stage
+   Status hint: Closing | Industry: Specialty / Other
+29. URL: https://news.google.com/rss/articles/CBMisAFBVV95cUxQQkwwVUYyZm9nZVRaamxZX2ktb0EtQWpZanoxQ0xRV2dlVzFzSWYyXzRvbnlUZFlJdFpmc0JrM1JRNnB3MmwzTkVJVm03NmVUMVo5dXZsQzM3QXJ2emNreDREajVIaHY1RGgwNkllNEltOEVYYjdiXzloOENsaGlOcmhyRXBLSlFHaDZxVGpBYkVnUHUtUDVIaTk3bTNXS1luZ25hZVZXM1FxSENrS0ZNaw?oc=5
+   Title: Aldi to open 6 Florida stores in April, you could win free gift cards
+   Status hint: Opening | Industry: Specialty / Other
+30. URL: https://news.google.com/rss/articles/CBMihgFBVV95cUxQSjNhaXJDc3R4WkUxZVVaZDJRb0VlTGVLNTMyZHpBbElWNmE0NThIUkJhX29SemZKdzhpVXBCemdXM3REbTJOU3ZheTVkQ2oyUnFRQ3Q4Sk83ZXlQQXg1eW4wLVhwSW1GSmszUjRWVHdFOU41TjVhTndtTjVOdTN1UEhnbS1wQQ?oc=5
+   Title: Houston fast-food staple expanding with suburban location
+   Status hint: Opening | Industry: Specialty / Other
+
+============================================================
+END — copy Claude's Markdown table into claude_response.txt
+============================================================
+
+============================================================
+PASTE INTO CLAUDE.AI — Part 11 of 11
+============================================================
+
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+1. URL: https://news.google.com/rss/articles/CBMid0FVX3lxTE9ycDE4SXgwU3piWG9DTHJVYjRLU2RPNVk1eExiX3dkbHo5T3RlU0lTSkh4dWxhRnJMSnJzMml3UVpqWFlWb1FzUkFiZTVsaHl6Tjg2bGdvTFJTb1hGS3UwR2ZaZ2FfZHNlTF81MVV3YlBxQ3Y3X3VF?oc=5
+   Title: Sheetz Plans to Build 100 Stores in Indiana
+   Status hint: Opening | Industry: Specialty / Other
+2. URL: https://news.google.com/rss/articles/CBMirAFBVV95cUxQS1d4YjRfQVNkOU0wT0Q5LXpKZU15Q2lFbVZTZE1xbHFEQ05FNVBPSjYxcndJa2ljQXpudVRWdl9LeG1RcU1iTFhnemFITENFSHJOQ0pJT0pvbDdTTHk5Q21YWWIzb1RTUU1HZHhFZU9SckVwU3BSR045NlF2ZXBEVkgtTWNobGRERkhrczl2MnpXeDZOTFVNUzFPS2tYajZjNmRVYm5WeWlQcUJz?oc=5
+   Title: 125-year-old retail chain to close more stores in 2026
+   Status hint: Closing | Industry: Specialty / Other
+3. URL: https://news.google.com/rss/articles/CBMimwFBVV95cUxPTlNEVVg0TEt2WW95Wm9yQlRpVmpGbWxxbS1ZdUxFamkxWkNtdXo4bDNyMUg5czUtZ2poYlBmWTlWM193WnRlZjFQdkhETmVmYXB2bENKUVN6MWlHQWtFMF95YVRVY1dEdWJLSnpoU1VkV2REbFY1MzRGQlJJcDY1OTlNRGQ0VFh4MGtIa1RQRENteVNBRzVXcmdEOA?oc=5
+   Title: Iconic Downtown Little Rock Eatery to Close After 39 Years
+   Status hint: Closing | Industry: Specialty / Other
+4. URL: https://news.google.com/rss/articles/CBMiuwFBVV95cUxOZ1NySGlBeXlCQ2Z5TlRGOHJiX0pScVNINlpEUFVVUHN6UHd0WXQtLWpFdXNEUnVFZEp2OWFWTG9xbkd5aURmc2ZLeWNaWWpaUTVMcWJJT3FDYmtWWWVncXhkVk5RSUZXd01zbGZ1SG9oVTYxT3RDazUxT3RUU2RGWVgyRzhOU2hHZDRFVnNtMGRLU2d6anI4NUlHcW9fUDBzVHZycnBXM2lHa1gtVXAxVm0wRGxwTXZkeGNJ?oc=5
+   Title: Tiger Woods-backed mini-golf chain sets opening for $5.8M Texas course
+   Status hint: Opening | Industry: Specialty / Other
+5. URL: https://news.google.com/rss/articles/CBMigAFBVV95cUxNVUJ6MUhvNHpJSFIxZ003aTlmNnd5TTNQMnhKWlBsOWtJMklaVkduQ2pOSl9mWVIzSGN6aHNLNVpOWW5aWU5Hd0NiRDdNMTgwdlZiWnBiZTlTckhfMThwNDN0Rms4MzVTOUREVDAyM1IxYnlhZEFMdWNST25Ucmc2eg?oc=5
+   Title: National treasure to open new area at Stroud shopping centre
+   Status hint: Opening | Industry: Specialty / Other
+6. URL: https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSlQyWThVTllWVm5zSGlRUHZjV3BJM2MxYU5OZ3ZiMmRaSW51Tk9udDdzdFJyNktXZk92dkM0cW5WZlFxaERkS3JBb0Q2TVNxbmpNeWpCV1EyYWtWRm1nQzV5eDdKTV9WdG1zY0p3LTRMdjhRbkYwOU9PZndkTHlOdmNlOTVuTGR5?oc=5
+   Title: End of an era for multiple Kroger stores as first stage of 60 closures start on April 10
+   Status hint: Closing | Industry: Specialty / Other
+7. URL: https://news.google.com/rss/articles/CBMifkFVX3lxTE1lNmNZcGpCd3pUMVpEbHpBQmhRamF4M2R0c2xTVzFzMnJiclFMdXhRaEZEbVBVdkZkMmFEOW1ZOHByQmplZGdYNVdaUjdLT0xFQnpxdWVrRXcwS2owb0twQlRDT1MxTWIyczVScXdZUmVsNU80U1pRUlNXX0tBUQ?oc=5
+   Title: Another Wendy’s location bites the dust as ‘Project Fresh’ to hit up to 360 spots
+   Status hint: Closing | Industry: Specialty / Other
+8. URL: https://news.google.com/rss/articles/CBMiswFBVV95cUxPMV9oSktReC14dUI4U0d6a3hVSklPM3ltNzE0eVhrTkdGZURtd0w5VHVWcXBwdEpHYUQtSGtubE51RTdzT2F4ZEZLaUtLdTM3WGxYYlg5em1udDB6dS1DVERYYnBYUUlHLUFCc0lGMllWbXBLUl9hSUR3WTE0NVVfbE5MUEc1c2xUMXhPQnJVUmJUTTNRdHJXWUhBTXBrNnluLXQzSEZ3VzBGOU9xYjZJZ29BOA?oc=5
+   Title: Medieval well unearthed at North Yorkshire store set to become new shopper attraction
+   Status hint: Opening | Industry: Specialty / Other
+9. URL: https://news.google.com/rss/articles/CBMi3AFBVV95cUxNOEZGeGRWeThaalRyUU00SDdhaE9SR1RDb3lrS1A4YnR5RDdKc0lHYlh5M29fTWdHWWc2a01kX0h5N2FIb3RwV29rVXdZVkYtMEp3SE1iWXZfT1J1NUJZRVVuNC1GOC1SdlFvVVp3bjFOMVhGeE1WcUFuM24yUHlPVEJJYkdqTnFoWm9CRjVZWTdBNzRVb2RTMkdQMm9iSi1NZGQ4dHpTY2pOQVc2MEt0b1ZnWXRhclVYRnpJak1EdTMyejBBb1l0OHlQRTl1NUcycnczMmNTVWgtUDRN?oc=5
+   Title: Royal Farms Expands Presence in Maryland with New Silver Spring Location
+   Status hint: Opening | Industry: Specialty / Other
+10. URL: https://news.google.com/rss/articles/CBMigwFBVV95cUxQajF5a3VoZ1ZFUjdPaVo4WGptWkVmdmVZbURqanhBZlRfMzFIak5sN215SDJkbVEwRncxWDJlTUNtTkhsRWVMeHBjVEJ3Y1BwUlRPRVRoVnJzSGdpRHZBMENtLTJxX0JjVWw4bkVzdFQ2SXg1TzlvY2o0TTRaWkNkU2d2Zw?oc=5
+   Title: Q&A: Owner of the Besties’ Table talks opening, makes his dreams come true with new Black-owned brunch spot
+   Status hint: Opening | Industry: Specialty / Other
+11. URL: https://news.google.com/rss/articles/CBMiggFBVV95cUxNOHBEdm1YeGh4anRzU1NLd1pWaE1PQnI2VFhRSENTeTUyUTFSZjJIVjFvSE9FZ3JUVW1IRXQ2Wnllbl8xTHprNHgyS0lxVWtyX2U3cmtVV0g1RmpfOUhGRXZMUW0tLWFZNUlRTjRFNURlVTNoc1YzSnVCUGY1aXF4MXhR?oc=5
+   Title: Nobody’s Child to open new Harrogate store
+   Status hint: Opening | Industry: Specialty / Other
+12. URL: https://news.google.com/rss/articles/CBMiggFBVV95cUxNS19VTlJ3eDJYaWljekxBLXRqdk9hRV9Jd3VRYlExX0pNWmNLSHhXUUl2NGQtNGhpTUFvWE1VUU45S3U3SzZlY19QeTQ2VTFvUUtnTkNLdWFtcVVRMWIwUlNqdzBOQzJ4UkZVNFpEMzRaV2kwWmp0RHkxZ21yRm96bFh3?oc=5
+   Title: Albertsons stores to serve their last customers & lay off workers by April 25
+   Status hint: Closing | Industry: Specialty / Other
+13. URL: https://news.google.com/rss/articles/CBMimgFBVV95cUxOUlMyVmZCTzN6QWU5UnBuQmF2V0wxSFE2RFNlVUp6SVJoNHk1X2RCNUZGb1VhZ1pJNFZzVi1qVlZGMkZBWS1Za3VDUUxONlZ4SjNFNm9OQkt0UVlkQjBNMjZBN196Tm94Rlh2WFZNT1RnZTQyZFFDeEtzeERSMVFlZktSbm1vQVlNTFNUQ0M2d1AyQ2JmbDl5RVVn?oc=5
+   Title: 'The ship is going down': Old Dayton Pizza at Riverside Hideaway announces closure
+   Status hint: Closing | Industry: Specialty / Other
+14. URL: https://news.google.com/rss/articles/CBMixgFBVV95cUxPbDVVZGZ2OTk4MUkxYjB4SkVLazdYYm1VVGlDd0ZNeVYzcFJKYzljT2EyX0NKU2MtLWVmeEJYTlpCcGtGUFN6YXNseTc4S3dFQzRJbW5IVHFWNU1JMEJvLVgzbnBORFUyVlUxTnRtNmt5ODRlY05rT3hXek1aSldGVFBXdjJweGhyOHFJWlgyTFVhaWJnT0JaTWZUbW11UGlvbldSTHktLVpSSlRzQkRpZDM1bXVBTFMzR1JtcnNWUW5neFgtTHc?oc=5
+   Title: Wow Momo Strengthens QSR Presence with 200 Store Additions Across 90 Cities
+   Status hint: Opening | Industry: Specialty / Other
+15. URL: https://news.google.com/rss/articles/CBMiyAFBVV95cUxPRGg3cFhoVE9QczRaZU5ieVRlSDJWaWFwbE8yaDNrSnRScHFIUmhUNGx6WERUT3lWUnlwUENyRTl6VFJlbXF1VGk5eUxXS1FSbTZTcFV6TTB2T0xKSWdtYVlDYTZvUEh1SW04cHg4SDhybE5wWEwyQnlrVlBxSWpRQ0FLcHpYN1RzbUUxazFoQ2pQZXRPYzU0TUZRTGxYMzNhQ19ocnVSRlVtYWh4RUFyM3VxU1NvOUlhNm5JR09UajJZRnZLTnlhWQ?oc=5
+   Title: Segnatore Closing In May After 5 Years Of Italian-Meets-Midwestern Fare In Humboldt Park
+   Status hint: Closing | Industry: Specialty / Other
+16. URL: https://news.google.com/rss/articles/CBMiswFBVV95cUxOUC1DLVF6aTNodHR0Tkh0eVpQQnliN0VvX0stVFNuSXlrUUZ2cFNwcmU1NmZsd0U0STRVWUlfZ0pBbUcxUXYxei1ZVXQwNXRUcDlGUExKWGRSMjNJVk5pb003amtxTV9ZNEdNZGRVTzhSQjlwY2VuNUlZZm42UWxRcFpzcWNyV0FqM0RQQXBWcGJ1WWhNc0IzSmxINVliV2RvQ0tDakpmTU1UeW8xRUdKQ0RZWQ?oc=5
+   Title: Bed Bath & Beyond to Acquire Several Home Retail Brands, Including The Container Store
+   Status hint: Closing | Industry: Specialty / Other
+17. URL: https://news.google.com/rss/articles/CBMinAFBVV95cUxPaExpaktrdE1feEFBRW1jQm5Tc1lESXhRM1dJOGxCdmwzUWZaeXpNdUZxSkI3cXh3YlNvNFpUZl9hOWhxejdvWjREcnlmd1QtY2E3MUotY2xmSWNMZkdjcGFyWDFOV3dnN2RXZUZweFlrdzQ5NWdoRW1mRE9mSVEydHhmSWhqSy03RlYzakZiZGc4TFdXOHNfa2FLSEjSAZwBQVVfeXFMT2hMaWpLa3RNX3hBQUVtY0JuU3NZREl4UTNXSThsQnZsM1FmWnl6TXVGcUpCN3F4d2JTbzRaVGZfYTlocXo3b1o0RHJ5ZndULWNhNzFKLWNsZkljTGZHY3BhclgxTld3ZzdkV2VGcHhZa3c0OTVnaEVtZkRPZklRMnR4ZkloakstN0ZWM2pGYmRnOExXVzhzX2thS0hI?oc=5
+   Title: Jersey Mike’s opens new location in Luling
+   Status hint: Opening | Industry: Specialty / Other
+18. URL: https://news.google.com/rss/articles/CBMif0FVX3lxTE5VbXU0Ulh3V3lxTEhZTXQzLWktcUVlOGo1ajhnb1R1LTZMUVJBTExFa0VyQTdXRUtxWjhSMHY5Q0ROYi14ZHJ0Q0pjVW5ZWlpKVHN2a1VYU2p1T1NpcDRxRWxjQ0cyT3FmQmYxV2poN0c4WGZ6QVhYbDVEd1JLOTQ?oc=5
+   Title: 2 longtime Triangle stores are closing. Here are the last days to shop
+   Status hint: Closing | Industry: Specialty / Other
+19. URL: https://news.google.com/rss/articles/CBMioAFBVV95cUxQUDl6V0RtNjkxSjd5X1l4Mjc5cDNFX0Q3b0RLN2lBLUlDcnJzZFBObXhLa19PQ0pnZjZKOTJUZXVHR0o3MUxrbjBsUFF4MXRLNFJWQzNpNDI3dV9FcXFjMGZiSGR3dkNYS2pfc2JzZWVkTk56WnYyYi1uUzlUZmFFcjRfdXR6RUJ5dWtKWHpqS0pwM1F2TC1TZXQ4aDNBV0N0?oc=5
+   Title: First quarter sees 17 retailers reveal closing plans
+   Status hint: Closing | Industry: Specialty / Other
+20. URL: https://news.google.com/rss/articles/CBMitwFBVV95cUxQT3FCaTJfTDlqU0IwQ0c0S29TbngtMUlsWTRqUW8xRFpaVjh4dEI5QmwzVFgzRDhLbVJKam9LUVpqZGlFVmRKVlFrQzJGdGZyTzl3cFdKdVVrMldCc3dKd19LZ0lNd2dUTFFpbElEYTRKZ0ZTMVcyNEZDQU0wbm5nTzlsVDNlQjJuNnNKNkFXZG42dFBjZ0YtZ0R1R3NFdGFNdlZtWk9qQ1lqZGNqTUVGMTdMN1NyOGM?oc=5
+   Title: Royal Farms Sets May 4 Opening for Silver Spring Store
+   Status hint: Opening | Industry: Specialty / Other
+21. URL: https://news.google.com/rss/articles/CBMizgFBVV95cUxOQUtaTFN4T3JoNmYzWTRsVTRNdTMxb3EtdUZ6V0N2czhBZzZWMzR1ejNlc2NRa25OdWxnTmhUWk9QNGFzd1o2RGE0RWlWZGF0enRJNjBaMm9DQnZDcVoybWxVVWhNVXdaYXc1a1d0YzZzRE96RUNPY2lySzl4UmN0ZW1rWDB4TVlqeFU2REF5YzFzUFFmUTUyUnRzRlltc0lOaXp4SE5lWHlvRGFiRkRKQ184RC1ienpLdVY4TlNyaHpuUUZ4eG5LWFI1RnB5UQ?oc=5
+   Title: Travieso Latin Fusion to close in Waukesha
+   Status hint: Closing | Industry: Specialty / Other
+22. URL: https://news.google.com/rss/articles/CBMiyAFBVV95cUxQdGkzYV9IdlZsUUhpeHRQbEdBcVQyNmZLc3F3aWEtMmVKR0kxb0R3WmRsWlhXX2hXdW1xOGVNWVdGWVdqcUFhcy1fZV93WVQxS3p0UE85TGJsRXI1enNPWnJvY1ZyTGxCMVYxNGplMTV6U2pocUw4SWlMakwzdFo4MVdiUW1qRVBSZ3Q0bEJhTnhwUlZSZ05VQzdCRmtIeGlkYnVCODMwMHZOa29BVlBBN1BYOXpIZG5zak15akxCOUJBVG1kcFJXYg?oc=5
+   Title: 14 new stores coming to Memphis suburbs, from Target to Warby Parker
+   Status hint: Opening | Industry: Specialty / Other
+23. URL: https://news.google.com/rss/articles/CBMiggFBVV95cUxNVVhHVUNRR0JpQ0V6c3ZoWUM0Sm9Vb3NhaEdDOTlWbmpIMl8xaWN5emJ3NS1YS0lLSmFIWndwa2EyNkNUd01qUXBZQm1YTVNBMlJKdkJmLTc3S3c5SDZfZDJiLVAtS1ZwZFlwLWFscnNHclZtZHZIY2EtTVRHMkhsWmFB?oc=5
+   Title: Seoul: juun.j shop-in-shop opening
+   Status hint: Opening | Industry: Specialty / Other
+24. URL: https://news.google.com/rss/articles/CBMinwFBVV95cUxNRVk3M25DNlZDbUV4d2d5N2dJa3dnS0dPb1RpeXc5MFlZc0YzdjJUMDdXcHNVQzlvdnlwZTdkRDhIUHg4TkJkdURrbGZNRDNvTjl6d2ZoSHZDT1NVY1RhVkpWVnBzYVlmbXpBdWpUVEdkeFprNXZLV2o1c1VWVHlfdEdTbTFhcmdIS3dyVjlaTVNHd3Q0VmpMc1M0cTFzUGPSAboBQVVfeXFMT0dDOUZLakZyTXExQnVpYVAxWWpZZzU2emFoV0VwVHZHYUxnSjUwRWZraXpnRWpSQjdQOXRWdXJ1NG50YU1FSUM3U25wcnpkLXF0VmNyc0lScWJNM09mUEdVME4zYTNwaW95bUthV2pWTHAtLUQ2M043LTBWUjA5d2dfYnFydC1zcHloRXNUOE9WY0U4QWhyTnBDaUpieVVLOVpLX2hELXJOOXhHMHhyaG45cUIxOEVlYkxB?oc=5
+   Title: Soft Opening Draws Mouthwatering Reviews For Mélange On Sycamore
+   Status hint: Opening | Industry: Specialty / Other
+25. URL: https://news.google.com/rss/articles/CBMiT0FVX3lxTE1nNTgzcG1QRHJCcGNuZ1ViWFRlVmstYTV3OEtiYU1WdHhtNnVQemhBVVRkOHNNT0E2cGZVYUFVcUtQeEs3d2xSX2c4a2hQWms?oc=5
+   Title: Luisaviaroma's store on Via dei Tosinghi in Florence is closing.
+   Status hint: Closing | Industry: Specialty / Other
+26. URL: https://news.google.com/rss/articles/CBMihwFBVV95cUxNZGhTeVN1bl80dmNpblMwRW9UX1lid0pIUkdIQXJtOHpxVkRYblc0WlNQWXZwMXVlNlp5c0xiSHBldlJIcXJScktTM25XRzVwbE55MG5kZG5KY1R1azZwSnNiek1PdlgwM0FRMWNTS3Zaa0FqWVgtZ1BMLTZTWU5HMWhJMzc2N0E?oc=5
+   Title: Aldi to open second store in Bristol later this year, making 34 in state
+   Status hint: Closing | Industry: Specialty / Other
+27. URL: https://news.google.com/rss/articles/CBMi1AFBVV95cUxPVHBkUC1XTl8zTjJGbjV3MHMzY3MxRGdnbzZmSWxpVzIzTjJBM1lsMjNSd2gtSWxVOTFHSmtJWGNaSnFoVVNhRW9tNmItblUzOUpPeEhPcFBvOVFVaDNfa24tbGxodVUxOGdXTl9LTFpmSzlTOV8tWEl3SEl0ZjBqU0Q5ejZGbEhDRnRTT3Zkb0xLbEk4cE03cVpLeTByLUpoUk5ueGJXZ2cyaFZPRXZ1NTNGVHd6MVRRT1ZkaHZPenhVdmNfOUpBVEx1Yk4wS3BmZFY2SQ?oc=5
+   Title: Waltman Furniture Closing Liquidation: The End of a 75-Year Pennsylvania Legacy Starts April 9
+   Status hint: Closing | Industry: Specialty / Other
+28. URL: https://news.google.com/rss/articles/CBMi8wJBVV95cUxQd1NCbklhNS1TSFN5RHpEcWtTSVA4VXE5dTdUOVVoWU0xU0hkM2RnOHFpN0h3VG9pblJwS2FJZ1drcHVPdldmc19HWFhHMHFZdEVrUzY3eG1YZmFtakhmbFBxa3lPeGNHaklfNUV5WHFBc09VM0dNTmpBMy1NZ1dMM3pDd2Rrc0otUHVDSE9HeU5hX2JPazZwano0NTI4WF9NUW1UVzhzclpkN0trZUxwdjlzaHFLRmJ1MkNpTnlMZndxOWtPbDlRVTBBNy1OZnp1THlfc1ZtbmhBaXBzWlZGQ3dhQ3BQOWpLZ1gwVmQ4VGd6RWZxVTlKeExwYVF2eGpkVUtHbU1SbVk4NG1LYzEtdUlTY0hlcEdoZ2tSNm9DeTd1UkxlNnN5cmVfZlVkTHRUMlZrVkZIZm9XbFFrZjR6SU9pcmJvTGtzNEMxSUlpd3o3SWpqeThsX0hSM0NfOXotdXZadGEyaDJ0X3hCdFhnbVdHbw?oc=5
+   Title: California households impacted as grocery giant shutters stores
+   Status hint: Closing | Industry: Specialty / Other
+
+============================================================
+END — copy Claude's Markdown table into claude_response.txt
+============================================================
