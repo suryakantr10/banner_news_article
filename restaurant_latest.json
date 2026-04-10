@@ -1,7 +1,19 @@
 {
-  "last_updated": "2026-04-10 00:07 UTC",
+  "last_updated": "2026-04-10 05:42 UTC",
   "total": 60,
   "data": [
+    {
+      "date": "April 09, 2026",
+      "url": "https://whatnow.com/houston/restaurants/7-brew-to-open-in-missouri-city/",
+      "title": "7 Brew to Open in Missouri City",
+      "address": "10026 Hwy 6, Missouri City, TX 77459"
+    },
+    {
+      "date": "April 09, 2026",
+      "url": "https://whatnow.com/washington-dc/restaurants/xian-famous-foods-bringing-acclaimed-cuisine-to-clarendon/",
+      "title": "Xi’an Famous Foods Bringing Acclaimed Cuisine to Clarendon",
+      "address": "2800 Clarendon Blvd, Arlington, VA 22201"
+    },
     {
       "date": "April 09, 2026",
       "url": "https://whatnow.com/houston/restaurants/the-peach-cobbler-factory-to-sweeten-up-bay-area-with-an-opening/",
@@ -349,18 +361,6 @@
       "url": "https://whatnow.com/nashville/restaurants/sarabhas-creamery-opening-in-east-nashville-for-second-location/",
       "title": "Sarabha’s Creamery Opening In East Nashville For Second Location | What Now Nashville",
       "address": "3104 Gallatin Pike, Nashville, TN 37216"
-    },
-    {
-      "date": "April 08, 2026",
-      "url": "https://whatnow.com/los-angeles/restaurants/crab-n-spice-opening-new-location-in-cudahy/",
-      "title": "Crab N Spice Opening New Location In Cudahy | What Now Los Angeles",
-      "address": "8017 Atlantic Ave, Cudahy, CA 90201"
-    },
-    {
-      "date": "April 08, 2026",
-      "url": "https://whatnow.com/charlotte/restaurants/smooth-monkey-planning-uptown-location/",
-      "title": "Smooth Monkey Planning Uptown Location | What Now Charlotte",
-      "address": "500 W Trade St, Charlotte, NC 28202"
     }
   ]
 }
