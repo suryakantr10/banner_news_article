@@ -880,7 +880,7 @@
     const REST_EXTRACTION_URL  = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/restaurant_extraction_latest.json';
     const BIZ_JSON_URL           = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/businessdebut_latest.json';
     const BIZ_EXTRACTION_URL     = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/businessdebut_extraction_latest.json';
-    const DAILY_NEWS_JSON_URL    = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/daily_news_latest.json';
+    const DAILY_NEWS_JSON_URL    = 'docs/news_data.json';
     const DAILY_NEWS_EXT_URL     = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/daily_news_extraction_latest.json';
 
     let storeArticles = [], filteredStoreArticles = [];
@@ -1778,11 +1778,17 @@
             const res = await fetch(DAILY_NEWS_JSON_URL + '?t=' + Date.now());
             if (!res.ok) throw new Error('fetch failed');
             const data = await res.json();
-            document.getElementById('updateDate').textContent = data.last_updated || 'Unknown';
-            dailyNewsArticles = (data.data || []).map(item => ({
-                title: item.title || item.Title || '',
-                date:  item.date  || item.Date  || '',
-                link:  item.link  || item.Link  || ''
+            document.getElementById('updateDate').textContent = data.last_updated || data.generated || 'Unknown';
+            const rawItems = data.articles || data.data || [];
+            dailyNewsArticles = rawItems.map(item => ({
+                title:    item.title    || item.Title    || '',
+                date:     item.published_date || item.date || item.Date || '',
+                link:     item.direct_link   || item.link || item.Link || '',
+                status:   item.status   || '',
+                industry: item.industry || '',
+                region:   item.region   || '',
+                source:   item.source   || '',
+                keyword:  item.keyword  || ''
             }));
             filteredDailyNewsArticles = dailyNewsArticles;
             updateDailyNewsStats(filteredDailyNewsArticles);
@@ -1804,7 +1810,11 @@
 
     function filterDailyArticles() {
         const term = document.getElementById('dailySearchInput').value.toLowerCase();
-        filteredDailyNewsArticles = dailyNewsArticles.filter(a => !term || (a.title||'').toLowerCase().includes(term));
+        filteredDailyNewsArticles = dailyNewsArticles.filter(a => !term ||
+            (a.title||'').toLowerCase().includes(term) ||
+            (a.industry||'').toLowerCase().includes(term) ||
+            (a.source||'').toLowerCase().includes(term) ||
+            (a.status||'').toLowerCase().includes(term));
         updateDailyNewsStats(filteredDailyNewsArticles);
         renderDailyNewsArticles();
     }
@@ -1848,14 +1858,23 @@
         const _isNew = isNew(article.date, _key);
         const newBadge = _isNew ? `<span class="badge-new ml-2"><i class="fas fa-bolt" style="font-size:0.5rem"></i>NEW</span>` : '';
         const newGlowClass = _isNew ? ' card-new-glow' : '';
+        const statusClass = article.status === 'Opening' ? 'badge-opening' : article.status === 'Closing' ? 'badge-closing' : '';
+        const statusBadge = article.status
+            ? `<span class="px-2 py-0.5 rounded-full text-xs font-bold text-white ${statusClass}">${escapeHtml(article.status)}</span>`
+            : '';
+        const metaParts = [article.industry, article.region, article.source].filter(Boolean);
+        const metaLine = metaParts.length
+            ? `<div class="flex flex-wrap gap-1 mb-2">${metaParts.map(m => `<span class="px-2 py-0.5 rounded text-xs text-gray-400 bg-gray-800">${escapeHtml(m)}</span>`).join('')}</div>`
+            : '';
         return `
             <div class="glass-card${newGlowClass} card-accent-blue rounded-2xl p-5">
                 <div class="flex items-center gap-2 mb-3">
                     <span class="px-3 py-1 rounded-full text-xs font-bold text-white flex items-center gap-1"
                           style="background:linear-gradient(135deg,#3b82f6,#2563eb);box-shadow:0 4px 14px rgba(59,130,246,0.35)">
                         <i class="fas fa-rss text-xs"></i>Daily News
-                    </span>${newBadge}
+                    </span>${statusBadge}${newBadge}
                 </div>
+                ${metaLine}
                 <h3 class="font-bold text-base mb-3 text-white leading-snug">${highlight(article.title||'', term)}</h3>
                 <a href="${escapeHtml(article.link||'#')}" target="_blank" rel="noopener noreferrer"
                    onclick="markArticleSeen('${escapeHtml(_key)}', event)"
