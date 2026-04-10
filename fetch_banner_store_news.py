@@ -208,7 +208,7 @@ else:
     if all_rows:
         df = pd.DataFrame(all_rows)
         today_str = date.today().strftime("%Y-%m-%d")
-        filename = f"store_open_close_news_{today_str}.csv"
+        filename = f"banner_news_{today_str}.csv"
         df.to_csv(filename, index=False, encoding='utf-8')
         print(f"\nResults saved to: {filename}")
         print(f"Total articles: {len(all_rows)}")

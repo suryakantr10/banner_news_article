@@ -297,7 +297,7 @@
                 <span id="updateDate" class="font-semibold text-blue-300">Loading…</span>
             </div>
             <div class="mt-3 text-xs text-gray-600 flex items-center justify-center gap-4">
-                <span><kbd class="kbd">1</kbd>–<kbd class="kbd">4</kbd> switch tabs</span>
+                <span><kbd class="kbd">1</kbd>–<kbd class="kbd">5</kbd> switch tabs</span>
                 <span><kbd class="kbd">R</kbd> refresh</span>
             </div>
         </div>
@@ -315,6 +315,9 @@
                 </button>
                 <button id="tabBizBtn" class="tab-btn" onclick="switchTab('biz')">
                     <i class="fas fa-briefcase mr-1.5"></i>Biz Debut<span id="tabBizNewCount" class="tab-new-dot hidden"></span>
+                </button>
+                <button id="tabDailyBtn" class="tab-btn" onclick="switchTab('daily')">
+                    <i class="fas fa-rss mr-1.5"></i>Daily News<span id="tabDailyNewCount" class="tab-new-dot hidden"></span>
                 </button>
             </div>
         </div>
@@ -733,6 +736,111 @@
             </div>
         </div>
 
+        <!-- DAILY NEWS TAB -->
+        <div id="dailyTabContent" class="hidden">
+            <div class="mb-6 flex justify-center">
+                <div class="glass rounded-2xl p-1 flex gap-1">
+                    <button id="dailySubTabArticlesBtn" class="sub-tab-btn active" onclick="switchDailySubTab('articles')">
+                        <i class="fas fa-rss mr-1"></i> Articles
+                    </button>
+                    <button id="dailySubTabExtractionBtn" class="sub-tab-btn" onclick="switchDailySubTab('extraction')">
+                        <i class="fas fa-table mr-1"></i> Extraction
+                    </button>
+                </div>
+            </div>
+
+            <div id="dailyArticlesSubTab">
+                <div id="dailyStatsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 fade-in" style="display:none;">
+                    <div class="stats-card rounded-2xl p-6 card-accent-blue">
+                        <div class="flex items-center justify-between">
+                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Total Articles</p><p class="text-3xl font-bold text-white" id="dailyTotalArticles">0</p></div>
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center"><i class="fas fa-rss text-blue-400 text-xl"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3">
+                    <div class="flex-1 relative">
+                        <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
+                        <input type="text" id="dailySearchInput" placeholder="Search by title…"
+                            class="input-field w-full pl-11 pr-4 py-3 text-sm" oninput="debounce(filterDailyArticles,250)()">
+                    </div>
+                    <button onclick="downloadDailyCSV()" class="btn-download px-5 py-3 rounded-xl font-medium flex items-center gap-2 text-sm whitespace-nowrap">
+                        <i class="fas fa-download"></i><span>Download CSV</span>
+                    </button>
+                </div>
+                <div id="dailyLoadingState" class="hidden py-20"></div>
+                <div id="dailyEmptyState" class="text-center py-20 hidden">
+                    <div class="w-20 h-20 rounded-full bg-slate-800/80 flex items-center justify-center mx-auto mb-4"><i class="fas fa-inbox text-3xl text-gray-600"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-300">No recent Daily News articles</h3>
+                    <p class="text-gray-500 text-sm">No articles found. Run the scraper to fetch the latest news.</p>
+                </div>
+                <div id="dailyArticlesContainer" class="hidden"></div>
+            </div>
+
+            <div id="dailyExtractionSubTab" class="hidden">
+                <div id="dailyExtStatsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 fade-in" style="display:none;">
+                    <div class="stats-card rounded-2xl p-6 card-accent-blue">
+                        <div class="flex items-center justify-between">
+                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Total Rows</p><p class="text-3xl font-bold text-white" id="dailyExtTotal">0</p></div>
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center"><i class="fas fa-table text-blue-400 text-xl"></i></div>
+                        </div>
+                    </div>
+                    <div class="stats-card rounded-2xl p-6 card-accent-green">
+                        <div class="flex items-center justify-between">
+                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Openings</p><p class="text-3xl font-bold text-gray-300" id="dailyExtOpenings">0</p></div>
+                            <div class="w-12 h-12 rounded-xl bg-gray-700/20 flex items-center justify-center"><i class="fas fa-arrow-trend-up text-gray-400 text-xl"></i></div>
+                        </div>
+                    </div>
+                    <div class="stats-card rounded-2xl p-6 card-accent-orange">
+                        <div class="flex items-center justify-between">
+                            <div><p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Closings</p><p class="text-3xl font-bold text-gray-300" id="dailyExtClosings">0</p></div>
+                            <div class="w-12 h-12 rounded-xl bg-gray-700/20 flex items-center justify-center"><i class="fas fa-arrow-trend-down text-gray-400 text-xl"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3">
+                    <div class="flex-1 relative">
+                        <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
+                        <input type="text" id="dailyExtSearchInput" placeholder="Search by store, location, or description…"
+                            class="input-field w-full pl-11 pr-4 py-3 text-sm" oninput="debounce(filterDailyExtractionRows,250)()">
+                    </div>
+                    <select id="dailyExtTypeFilter" onchange="filterDailyExtractionRows()" class="input-field px-4 py-3 text-sm">
+                        <option value="all">All Types</option>
+                        <option value="Opening">Opening</option>
+                        <option value="Closing">Closing</option>
+                    </select>
+                    <button onclick="downloadDailyExtractionCSV()" class="btn-download px-5 py-3 rounded-xl font-medium flex items-center gap-2 text-sm whitespace-nowrap">
+                        <i class="fas fa-download"></i><span>Download CSV</span>
+                    </button>
+                </div>
+                <div id="dailyExtLoadingState" class="text-center py-20 hidden"><div class="loading-spinner mx-auto mb-4"></div><p class="text-gray-400 text-sm">Loading…</p></div>
+                <div id="dailyExtEmptyState" class="text-center py-20 hidden">
+                    <div class="w-20 h-20 rounded-full bg-slate-800/80 flex items-center justify-center mx-auto mb-4"><i class="fas fa-table text-3xl text-gray-600"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-300">No extraction data found</h3>
+                    <p class="text-gray-500 text-sm">Run daily_news_save_output_cluade.py to generate extraction data.</p>
+                </div>
+                <div id="dailyExtTableContainer" class="hidden overflow-x-auto rounded-2xl border border-white/5 fade-in">
+                    <table class="w-full text-sm text-left data-table table-fixed">
+                        <thead><tr>
+                            <th class="px-3 py-3 w-12">#</th>
+                            <th class="px-3 py-3">Store / Business</th>
+                            <th class="px-3 py-3">Location</th>
+                            <th class="px-3 py-3 w-28">Event Type</th>
+                            <th class="px-3 py-3 w-36">Event Date</th>
+                            <th class="px-3 py-3 w-40">Status</th>
+                            <th class="px-3 py-3">Description</th>
+                            <th class="px-3 py-3 w-20">Link</th>
+                        </tr></thead>
+                        <tbody id="dailyExtTableBody"></tbody>
+                    </table>
+                    <div class="px-4 py-3 glass text-gray-500 text-xs border-t border-white/5 flex justify-between">
+                        <span>Showing <span id="dailyExtRowCount" class="text-gray-300 font-semibold">0</span> records</span>
+                        <span>Updated: <span id="dailyExtLastUpdated" class="text-gray-300">—</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <footer class="relative z-10 mt-16 py-8 border-t border-white/5">
@@ -757,6 +865,7 @@
     document.getElementById('loadingState').innerHTML = `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${skeletonCards(6)}</div>`;
     document.getElementById('scoopLoadingState').innerHTML = `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${skeletonCards(3)}</div>`;
     document.getElementById('bizLoadingState').innerHTML   = `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${skeletonCards(3)}</div>`;
+    document.getElementById('dailyLoadingState').innerHTML = `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${skeletonCards(3)}</div>`;
 
     (function(){
         const style = document.createElement('style');
@@ -769,8 +878,10 @@
     const REST_JSON_URL        = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/restaurant_latest.json';
     const SCOOP_EXTRACTION_URL = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/ct_scoop_extraction_latest.json';
     const REST_EXTRACTION_URL  = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/restaurant_extraction_latest.json';
-    const BIZ_JSON_URL         = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/businessdebut_latest.json';
-    const BIZ_EXTRACTION_URL   = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/businessdebut_extraction_latest.json';
+    const BIZ_JSON_URL           = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/businessdebut_latest.json';
+    const BIZ_EXTRACTION_URL     = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/businessdebut_extraction_latest.json';
+    const DAILY_NEWS_JSON_URL    = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/daily_news_latest.json';
+    const DAILY_NEWS_EXT_URL     = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/daily_news_extraction_latest.json';
 
     let storeArticles = [], filteredStoreArticles = [];
     let scoopArticles = [], filteredScoopArticles = [];
@@ -780,8 +891,11 @@
     let restExtractionRows = [], filteredRestExtractionRows = [];
     let bizArticles = [], filteredBizArticles = [];
     let bizExtractionRows = [], filteredBizExtractionRows = [];
+    let dailyNewsArticles = [], filteredDailyNewsArticles = [];
+    let dailyNewsExtractionRows = [], filteredDailyNewsExtractionRows = [];
     let activeTab = 'store', activeScoopSubTab = 'articles';
     let activeRestSubTab = 'articles', activeBizSubTab = 'articles';
+    let activeDailyNewsSubTab = 'articles';
 
     const TODAY = new Date().toISOString().split('T')[0];
 
@@ -816,6 +930,7 @@
         scoopArticles.forEach(a => seenSet.add(a.link || ''));
         restArticles.forEach(a => seenSet.add(a.url || ''));
         bizArticles.forEach(a => seenSet.add(a.link || ''));
+        dailyNewsArticles.forEach(a => seenSet.add(a.link || ''));
         localStorage.setItem('seenArticles', JSON.stringify([...seenSet]));
         // Remove all badges and glows from current DOM
         document.querySelectorAll('.badge-new').forEach(b => b.remove());
@@ -831,6 +946,7 @@
             scoop: scoopArticles.filter(a => isNew(a.date, a.link || '')).length,
             restaurant: restArticles.filter(a => isNew(a.date, a.url || '')).length,
             biz: bizArticles.filter(a => isNew(a.date, a.link || '')).length,
+            daily: dailyNewsArticles.filter(a => isNew(a.date, a.link || '')).length,
         };
         const updateDot = (id, n) => {
             const el = document.getElementById(id);
@@ -842,6 +958,7 @@
         updateDot('tabScoopNewCount',      counts.scoop);
         updateDot('tabRestaurantNewCount', counts.restaurant);
         updateDot('tabBizNewCount',        counts.biz);
+        updateDot('tabDailyNewCount',      counts.daily);
         const totalNew = Object.values(counts).reduce((s, v) => s + v, 0);
         const markAllBtn = document.getElementById('markAllReadBtn');
         if (markAllBtn) markAllBtn.classList.toggle('hidden', totalNew === 0);
@@ -893,7 +1010,7 @@
 
     document.addEventListener('keydown', (e) => {
         if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA') return;
-        const map = { '1': 'store', '2': 'scoop', '3': 'restaurant', '4': 'biz' };
+        const map = { '1': 'store', '2': 'scoop', '3': 'restaurant', '4': 'biz', '5': 'daily' };
         if (map[e.key]) { switchTab(map[e.key]); return; }
         if (e.key.toLowerCase() === 'r' && !e.ctrlKey && !e.metaKey) refreshData();
     });
@@ -917,8 +1034,8 @@
 
     function switchTab(tab) {
         activeTab = tab;
-        const tabs = { store: 'storeTabContent', scoop: 'scoopTabContent', restaurant: 'restaurantTabContent', biz: 'bizTabContent' };
-        const btns = { store: 'tabStoreBtn', scoop: 'tabScoopBtn', restaurant: 'tabRestaurantBtn', biz: 'tabBizBtn' };
+        const tabs = { store: 'storeTabContent', scoop: 'scoopTabContent', restaurant: 'restaurantTabContent', biz: 'bizTabContent', daily: 'dailyTabContent' };
+        const btns = { store: 'tabStoreBtn', scoop: 'tabScoopBtn', restaurant: 'tabRestaurantBtn', biz: 'tabBizBtn', daily: 'tabDailyBtn' };
         Object.values(tabs).forEach(id => document.getElementById(id).classList.add('hidden'));
         Object.values(btns).forEach(id => document.getElementById(id).classList.remove('active'));
         document.getElementById(tabs[tab]).classList.remove('hidden');
@@ -932,11 +1049,14 @@
         } else if (tab === 'biz') {
             if (activeBizSubTab === 'articles' && bizArticles.length === 0) loadBizData();
             if (activeBizSubTab === 'extraction' && bizExtractionRows.length === 0) loadBizExtractionData();
+        } else if (tab === 'daily') {
+            if (activeDailyNewsSubTab === 'articles' && dailyNewsArticles.length === 0) loadDailyNewsData();
+            if (activeDailyNewsSubTab === 'extraction' && dailyNewsExtractionRows.length === 0) loadDailyNewsExtractionData();
         }
     }
 
     function updateNavTotal() {
-        const total = storeArticles.length + scoopArticles.length + restArticles.length + bizArticles.length;
+        const total = storeArticles.length + scoopArticles.length + restArticles.length + bizArticles.length + dailyNewsArticles.length;
         const badge = document.getElementById('navTotalBadge');
         document.getElementById('navTotalCount').textContent = total;
         badge.classList.toggle('hidden', total === 0);
@@ -1640,6 +1760,175 @@
         showToast('Business Debut Extraction CSV downloaded!');
     }
 
+    // ══ DAILY NEWS SUB-TAB ══
+    function switchDailySubTab(subTab) {
+        activeDailyNewsSubTab = subTab;
+        toggleSubTab('dailyArticlesSubTab', 'dailyExtractionSubTab', 'dailySubTabArticlesBtn', 'dailySubTabExtractionBtn', subTab === 'articles');
+        if (subTab === 'articles' && dailyNewsArticles.length === 0) loadDailyNewsData();
+        if (subTab === 'extraction' && dailyNewsExtractionRows.length === 0) loadDailyNewsExtractionData();
+    }
+
+    // ══ DAILY NEWS ARTICLES ══
+    async function loadDailyNewsData() {
+        try {
+            document.getElementById('dailyLoadingState').classList.remove('hidden');
+            document.getElementById('dailyArticlesContainer').classList.add('hidden');
+            document.getElementById('dailyEmptyState').classList.add('hidden');
+            document.getElementById('dailyStatsContainer').style.display = 'none';
+            const res = await fetch(DAILY_NEWS_JSON_URL + '?t=' + Date.now());
+            if (!res.ok) throw new Error('fetch failed');
+            const data = await res.json();
+            document.getElementById('updateDate').textContent = data.last_updated || 'Unknown';
+            dailyNewsArticles = (data.data || []).map(item => ({
+                title: item.title || item.Title || '',
+                date:  item.date  || item.Date  || '',
+                link:  item.link  || item.Link  || ''
+            }));
+            filteredDailyNewsArticles = dailyNewsArticles;
+            updateDailyNewsStats(filteredDailyNewsArticles);
+            renderDailyNewsArticles();
+            updateNavTotal();
+            updateTabNewCounts();
+            document.getElementById('dailyLoadingState').classList.add('hidden');
+        } catch (err) {
+            console.error(err);
+            document.getElementById('dailyLoadingState').classList.add('hidden');
+            document.getElementById('dailyEmptyState').classList.remove('hidden');
+        }
+    }
+
+    function updateDailyNewsStats(articles) {
+        setCount('dailyTotalArticles', articles.length);
+        document.getElementById('dailyStatsContainer').style.display = articles.length ? 'grid' : 'none';
+    }
+
+    function filterDailyArticles() {
+        const term = document.getElementById('dailySearchInput').value.toLowerCase();
+        filteredDailyNewsArticles = dailyNewsArticles.filter(a => !term || (a.title||'').toLowerCase().includes(term));
+        updateDailyNewsStats(filteredDailyNewsArticles);
+        renderDailyNewsArticles();
+    }
+
+    function downloadDailyCSV() {
+        if (!filteredDailyNewsArticles.length) return;
+        const h = ['date','title','link'];
+        const csv = [h.join(','), ...filteredDailyNewsArticles.map(r => h.map(k => `"${(r[k]||'').replace(/"/g,'""')}"`).join(','))].join('\n');
+        dlCSV(csv, `daily_news_${TODAY}.csv`);
+        showToast('Daily News CSV downloaded!');
+    }
+
+    function renderDailyNewsArticles() {
+        const container = document.getElementById('dailyArticlesContainer');
+        const term = document.getElementById('dailySearchInput').value.toLowerCase();
+        if (!filteredDailyNewsArticles.length) {
+            container.classList.add('hidden');
+            document.getElementById('dailyEmptyState').classList.remove('hidden');
+            return;
+        }
+        document.getElementById('dailyEmptyState').classList.add('hidden');
+        container.classList.remove('hidden');
+        const grid = document.createElement('div');
+        grid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5';
+        filteredDailyNewsArticles.forEach(a => {
+            const w = document.createElement('div');
+            w.innerHTML = createDailyNewsCard(a, term);
+            if (w.firstElementChild) grid.appendChild(w.firstElementChild);
+        });
+        container.innerHTML = '';
+        container.appendChild(grid);
+    }
+
+    function createDailyNewsCard(article, term = '') {
+        let dateText = article.date || 'Date not available';
+        try {
+            const d = new Date(dateText);
+            if (!isNaN(d.getTime())) dateText = d.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' });
+        } catch {}
+        const _key = article.link || '';
+        const _isNew = isNew(article.date, _key);
+        const newBadge = _isNew ? `<span class="badge-new ml-2"><i class="fas fa-bolt" style="font-size:0.5rem"></i>NEW</span>` : '';
+        const newGlowClass = _isNew ? ' card-new-glow' : '';
+        return `
+            <div class="glass-card${newGlowClass} card-accent-blue rounded-2xl p-5">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="px-3 py-1 rounded-full text-xs font-bold text-white flex items-center gap-1"
+                          style="background:linear-gradient(135deg,#3b82f6,#2563eb);box-shadow:0 4px 14px rgba(59,130,246,0.35)">
+                        <i class="fas fa-rss text-xs"></i>Daily News
+                    </span>${newBadge}
+                </div>
+                <h3 class="font-bold text-base mb-3 text-white leading-snug">${highlight(article.title||'', term)}</h3>
+                <a href="${escapeHtml(article.link||'#')}" target="_blank" rel="noopener noreferrer"
+                   onclick="markArticleSeen('${escapeHtml(_key)}', event)"
+                   class="text-blue-400 hover:text-blue-300 text-sm font-medium mb-3 block transition-colors">
+                    View full story <i class="fas fa-external-link-alt text-xs ml-1 opacity-60"></i>
+                </a>
+                <div class="flex items-center text-gray-500 text-xs">
+                    <i class="fas fa-calendar-alt mr-1.5 text-gray-600"></i>${escapeHtml(dateText)}
+                </div>
+            </div>`;
+    }
+
+    // ══ DAILY NEWS EXTRACTION ══
+    async function loadDailyNewsExtractionData() {
+        try {
+            document.getElementById('dailyExtLoadingState').classList.remove('hidden');
+            document.getElementById('dailyExtTableContainer').classList.add('hidden');
+            document.getElementById('dailyExtEmptyState').classList.add('hidden');
+            document.getElementById('dailyExtStatsContainer').style.display = 'none';
+            const res = await fetch(DAILY_NEWS_EXT_URL + '?t=' + Date.now());
+            if (!res.ok) throw new Error('fetch failed');
+            const data = await res.json();
+            document.getElementById('dailyExtLastUpdated').textContent = data.last_updated || '—';
+            dailyNewsExtractionRows = data.data || [];
+            filteredDailyNewsExtractionRows = [...dailyNewsExtractionRows];
+            updateDailyNewsExtStats(filteredDailyNewsExtractionRows);
+            renderDailyNewsExtractionTable();
+            document.getElementById('dailyExtLoadingState').classList.add('hidden');
+        } catch (err) {
+            console.error(err);
+            document.getElementById('dailyExtLoadingState').classList.add('hidden');
+            document.getElementById('dailyExtEmptyState').classList.remove('hidden');
+        }
+    }
+
+    function updateDailyNewsExtStats(rows) {
+        setCount('dailyExtTotal', rows.filter(r => r.store_name !== 'No qualifying business found').length);
+        setCount('dailyExtOpenings', rows.filter(r => r.event_type === 'Opening').length);
+        setCount('dailyExtClosings', rows.filter(r => r.event_type === 'Closing').length);
+        document.getElementById('dailyExtStatsContainer').style.display = rows.length ? 'grid' : 'none';
+    }
+
+    function filterDailyExtractionRows() {
+        const term = document.getElementById('dailyExtSearchInput').value.toLowerCase();
+        const type = document.getElementById('dailyExtTypeFilter').value;
+        filteredDailyNewsExtractionRows = dailyNewsExtractionRows.filter(r => {
+            const ms = !term || ['store_name','location','short_description','status'].some(k => (r[k]||'').toLowerCase().includes(term));
+            return ms && (type === 'all' || r.event_type === type);
+        });
+        updateDailyNewsExtStats(filteredDailyNewsExtractionRows);
+        renderDailyNewsExtractionTable();
+    }
+
+    function renderDailyNewsExtractionTable() {
+        const tbody = document.getElementById('dailyExtTableBody'), container = document.getElementById('dailyExtTableContainer');
+        const term = document.getElementById('dailyExtSearchInput').value.toLowerCase();
+        if (!filteredDailyNewsExtractionRows.length) {
+            container.classList.add('hidden');
+            document.getElementById('dailyExtEmptyState').classList.remove('hidden');
+            return;
+        }
+        document.getElementById('dailyExtEmptyState').classList.add('hidden');
+        container.classList.remove('hidden');
+        tbody.innerHTML = filteredDailyNewsExtractionRows.map((r, i) => buildExtractionRow(r, i, term, 'blue')).join('');
+        document.getElementById('dailyExtRowCount').textContent = filteredDailyNewsExtractionRows.length;
+    }
+
+    function downloadDailyExtractionCSV() {
+        if (!filteredDailyNewsExtractionRows.length) return;
+        csvDownloadExtraction(filteredDailyNewsExtractionRows, `daily_news_extraction_${TODAY}.csv`);
+        showToast('Daily News Extraction CSV downloaded!');
+    }
+
     // ══ SHARED HELPERS ══
     function buildExtractionRow(r, i, term, accentColor) {
         const isOpening = r.event_type === 'Opening';
@@ -1724,9 +2013,12 @@
         } else if (activeTab === 'restaurant') {
             restArticles = []; restExtractionRows = [];
             loader = activeRestSubTab === 'extraction' ? loadRestExtractionData() : loadRestData();
-        } else {
+        } else if (activeTab === 'biz') {
             bizArticles = []; bizExtractionRows = [];
             loader = activeBizSubTab === 'extraction' ? loadBizExtractionData() : loadBizData();
+        } else {
+            dailyNewsArticles = []; dailyNewsExtractionRows = [];
+            loader = activeDailyNewsSubTab === 'extraction' ? loadDailyNewsExtractionData() : loadDailyNewsData();
         }
         Promise.resolve(loader).finally(() => setTimeout(() => icon.classList.remove('spin-anim'), 500));
     }

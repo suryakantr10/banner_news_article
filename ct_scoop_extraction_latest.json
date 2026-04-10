@@ -162,7 +162,75 @@
       "status": "Ownership transferred",
       "short_description": "Olde World Apizza in North Haven has been sold to three seasoned restaurateurs: Robert Marcarelli (30 years culinary experience, Pi Restaurant Consulting), Jared Schulefand (owner of Home restaurant, 14 years), and Israel Lopez (Grand Apizza North Haven background). The 30-year legacy, recipes, traditions, and existing staff are being maintained.",
       "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/north-haven-scoop-olde-world-apizza-sold-to-group-of-seasoned-restaurateurs"
+    },
+    {
+      "store_name": "Dog House Subs",
+      "location": "33 Wilbur Cross Way, Storrs, CT",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "Now open",
+      "short_description": "Dog House Subs has opened at 33 Wilbur Cross Way in Storrs Center, next door to Huskies Restaurant and Bar, from the team behind Huskies Restaurant and Huskies Tavern. The fast-casual eatery serves cold and hot sub sandwiches including American Combo, Italian, Chicken Parm, and Philly Cheesesteaks in half and whole sizes, plus salad options. Hours: Tuesday through Saturday 11am-6pm, closed Sunday and Monday.",
+      "article_link": "https://www.theconnecticutscoop.com/all-tolland-county-posts/storrs-scoop-dog-house-subs-is-now-open-in-storrs-center"
+    },
+    {
+      "store_name": "Angel Land",
+      "location": "1433 New Britain Avenue, Corbin's Corner, West Hartford, CT (lower level next to World Market)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "Now open",
+      "short_description": "Angel Land, a children's entertainment center aimed at ages 10 and under, has opened at 1433 New Britain Avenue in Corbin's Corner, West Hartford. The facility features climbing structures, obstacle courses, ball pits, slides, trampolines, bumper cars, and interactive games, plus 2 private party rooms. Open daily 10am-8pm; weekday 7.99/child, weekend/holiday 9.99/child.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/west-hartford-scoop-angel-land-opens-bringing-kids-entertainment-to-corbins-corner"
+    },
+    {
+      "store_name": "Ross Dress for Less",
+      "location": "3105 Berlin Turnpike, Newington Plaza, Newington, CT (former Joann Fabric)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "Planned (building permit application filed)",
+      "short_description": "Ross Dress for Less is planning to open at Newington Plaza at 3105 Berlin Turnpike in Newington, in the former Joann Fabric space. A building permit application for a tenant fit-out with new interior finishes and minor exterior modifications was filed, with work estimated at .2 million. No opening timeline has been announced; this would be Connecticut's third Ross location.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/newington-scoop-ross-dress-for-less-eyeing-new-location-in-newington"
+    },
+    {
+      "store_name": "Wingstop",
+      "location": "972 West Main Street, Branford, CT (former Mohegan Cigar & Smoke Shop)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "Coming soon (building permits submitted)",
+      "short_description": "Wingstop is coming soon to 972 West Main Street in Branford, in the former Mohegan Cigar & Smoke Shop next to Sushi Burrific. Building permit applications were recently submitted to convert the space into a Wingstop restaurant. The article indicates an opening later this year; no construction timeline was immediately available.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/branford-scoop-wingstop-coming-soon-to-branford"
+    },
+    {
+      "store_name": "Toasty Scoops",
+      "location": "499 New Haven Avenue, Milford, CT (former Sundae House building)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "Coming soon (renovations underway)",
+      "short_description": "Toasty Scoops is coming soon to 499 New Haven Avenue in Milford, the former home of the iconic Sundae House. Renovations are now underway on the building for the new ice cream shop, which will serve Bassetts brand ice cream — America's oldest creamery since 1861 with over 40 flavors. No opening date has been announced.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/milford-scoop-toasty-scoops-coming-soon-to-sundae-house-spot"
+    },
+    {
+      "store_name": "Donovan Family Confections",
+      "location": "600 North Colony Road, Wallingford, CT",
+      "event_type": "Opening",
+      "event_date": "April 9, 2026",
+      "status": "Reopening April 9, 2026",
+      "short_description": "Donovan Family Confections is reopening at a new, larger location at 600 North Colony Road in Wallingford on April 9, 2026, having relocated from their previous 850 South Colony Road space after 2.5 years. The shop sells gourmet bonbons with various fillings including Cookie Butter Caramel Crunch, Key Lime Pie, and Ruby Raspberry Cheesecake. Hours: Tuesday & Thursday 4pm-7pm, Saturday 11am-5pm.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/wallingford-scoop-donovan-family-confections-reopening-on-0409"
+    },
+    {
+      "store_name": "The Ugly Dumpling",
+      "location": "1105 Fall River Avenue, Seekonk, MA (former TGI Fridays)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "Coming soon",
+      "short_description": "The Ugly Dumpling is coming soon to the former TGI Fridays at 1105 Fall River Avenue in Seekonk, MA, occupying 6,800 square feet. The chain serves traditional Chinese cuisine including orange chicken, shrimp stir fry, chicken fried rice, Xiao Long Bao, and various dumplings. No opening timeline has been announced; the chain has 12 existing locations with 14 new planned.",
+      "article_link": "https://www.theconnecticutscoop.com/all-mass-posts/seekonk-scoop-the-ugly-dumpling-coming-to-former-tgi-fridays-site"
     }
   ],
-  "non_working": []
+  "non_working": [
+    {
+      "identifier": "https://www.theconnecticutscoop.com/all-hartford-county-posts/manchester-scoop-health-inspection-reports-january-february-2026",
+      "reason": "Health inspection report — no business opening or closing details"
+    }
+  ]
 }

@@ -1,0 +1,43 @@
+name: Daily Retail News Scraper
+
+on:
+  schedule:
+    - cron: "0 6 * * *"  # 6:00 AM UTC daily (11:30 AM IST)
+  workflow_dispatch:  # allows manual triggering from GitHub Actions tab
+
+permissions:
+  contents: write  # needed to commit output files back to the repo
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install feedparser pandas python-dateutil
+
+      - name: Run scraper
+        run: python daily_news_atricles.py
+
+      - name: Commit output files
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add daily_news_latest.json
+          git add daily_news_*.json || true
+          git diff --cached --quiet || git commit -m "Auto-update: Daily news fetch $(date -u +%Y-%m-%d)"
+          git pull --rebase origin main
+          git push origin main

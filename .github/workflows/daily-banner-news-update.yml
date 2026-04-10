@@ -1,4 +1,4 @@
-name: Daily News Update
+name: Daily Banner News Update
 
 # Runs every day at 09:00 UTC
 # To change the time, modify the cron schedule below (format: minute hour day month weekday)
@@ -32,7 +32,7 @@ jobs:
           pip install feedparser pandas python-dateutil
 
       - name: Run news fetcher
-        run: python fetch_store_news.py
+        run: python fetch_banner_store_news.py
 
       - name: Commit and push changes
         run: |
