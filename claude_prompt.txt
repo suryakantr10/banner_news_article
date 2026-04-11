@@ -1,0 +1,1330 @@
+============================================================
+PASTE INTO CLAUDE.AI — Part 1 of 10
+============================================================
+
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+1. URL: https://www.elorafergustoday.com/local-news/must-read-financial-duress-leads-to-permanent-closure-of-eloras-the-badley-restaurant-12127637
+   Title: MUST READ: 'Financial duress' leads to permanent closure of Elora's The Badley restaurant
+   Status hint: Closing | Industry: Restaurants
+2. URL: https://uk.news.yahoo.com/beauty-retailer-returns-store-set-110000684.html
+   Title: Beauty retailer returns with new store set to open at popular shopping centre
+   Status hint: Opening | Industry: Health / Beauty
+3. URL: https://nationaltoday.com/us/mn/fergus-falls/news/2026/04/11/new-italian-restaurant-tuscany-opening-soon-in-fergus-falls/
+   Title: New Italian Restaurant 'Tuscany' Opening Soon in Fergus Falls
+   Status hint: Opening | Industry: Restaurants
+4. URL: https://coolasleicester.co.uk/new-restaurant-now-open-at-scraptoft-golf-club/
+   Title: New restaurant now open at Scraptoft Golf Club
+   Status hint: Opening | Industry: Restaurants
+5. URL: https://www.greatyarmouthmercury.co.uk/news/26006283.bradwell-garage-become-new-dog-grooming-business/
+   Title: New dog grooming salon set to open from owner's garage
+   Status hint: Opening | Industry: Health / Beauty
+6. URL: https://www.thenorthernecho.co.uk/news/26012120.sliceburg-darlington-teases-new-location-opening-soon/
+   Title: Popular Darlington fast-food restaurant teases new location opening soon
+   Status hint: Opening | Industry: Restaurants
+7. URL: https://www.travelandtourworld.com/news/article/septimo-cocktail-bar-at-four-seasons-hotel-miami-brings-timeless-craft-and-contemporary-spirit-to-brickells-skyline-with-grand-opening-on-april-29-2026/
+   Title: Séptimo Cocktail Bar at Four Seasons Hotel Miami Brings Timeless Craft and Contemporary Spirit to Brickell’s Skyline with Grand Opening on April 29, 2026
+   Status hint: Opening | Industry: Hospitality
+8. URL: https://www.msn.com/en-us/foodanddrink/foodnews/highly-anticipated-hen-egg-restaurant-hosts-private-grand-opening/ar-AA1KkuZv?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+   Title: Highly anticipated Hen & Egg restaurant hosts private grand opening
+   Status hint: Opening | Industry: Restaurants
+9. URL: https://www.businessdebut.com/paradise-restaurant-and-lounge-opening-soon-in-orange-park/
+   Title: Paradise Restaurant and Lounge Opening Soon in Orange Park
+   Status hint: Opening | Industry: Restaurants
+10. URL: https://www.msn.com/en-us/money/companies/restaurant-chain-with-3-193-locations-shut-down-after-bankruptcy-filing/ss-AA1ZVfWR?ocid=iehp9x
+   Title: Restaurant chain with 3,193 locations shut down after bankruptcy filing
+   Status hint: Closing | Industry: Restaurants
+11. URL: https://neworleanscitybusiness.com/blog/2026/04/10/the-monarch-boutique-hotel-st-charles-ave-new-orleans/
+   Title: New boutique hotel The Monarch set to open on St. Charles Ave.
+   Status hint: Opening | Industry: Hospitality
+12. URL: https://www.travelandtourworld.com/news/article/the-mohi-by-appellation-morgan-hills-new-culinary-driven-luxury-hotel-set-to-open-in-2027/
+   Title: The MOHI by Appellation: Morgan Hill’s New Culinary-Driven Luxury Hotel Set to Open in 2027
+   Status hint: Opening | Industry: Hospitality
+13. URL: https://www.timesfreepress.com/news/2026/apr/10/bookstore-opens-new-chapter-on-southside-with/
+   Title: Bookstore opens new chapter on Southside with grand opening Saturday
+   Status hint: Opening | Industry: Books / Toys / Gaming
+14. URL: https://bizneworleans.com/dolfys-restaurant-now-open-on-freret-street/
+   Title: Dolfy’s Restaurant Now Open on Freret Street
+   Status hint: Opening | Industry: Restaurants
+15. URL: https://www.starnewsonline.com/story/lifestyle/food/2026/04/10/the-smoke-house-in-wilmington-nc-has-closed/89552450007/
+   Title: Wilmington barbecue restaurant closes, but another is set to open
+   Status hint: Opening | Industry: Restaurants
+16. URL: https://patch.com/california/santee/baby-cheetahs-new-lego-store-opening-coachella-showtimes-winning-lottery-ticket
+   Title: Baby Cheetahs + New LEGO Store Opening + Coachella Showtimes + Winning Lottery Ticket: Saturday Smiles
+   Status hint: Opening | Industry: Hospitality
+17. URL: https://www.msn.com/en-us/money/companies/a-new-sprouts-grocery-store-is-opening-soon-in-phoenix-what-we-know/ar-AA20pObb?ocid=BingNewsVerp
+   Title: A new Sprouts grocery store is opening soon in Phoenix. What we know
+   Status hint: Opening | Industry: Grocery
+18. URL: https://bernama.com/en/press/news.php?id=2543227
+   Title: Now Open: 1926 Heritage Hotel Penang Brings Living Heritage to a New Generation
+   Status hint: Opening | Industry: Hospitality
+19. URL: https://live959.com/burger-king-jobs-massachusetts/
+   Title: With Over 100 Massachusetts Locations, Massive Restaurant Chain is Now Hiring
+   Status hint: Opening | Industry: Restaurants
+20. URL: https://hospibuz.com/hotels-hot-topics/centara-life-namba-hotel-osaka-celebrates-grand-opening-in-the-heart-of-the-city-11711679
+   Title: Centara Life Namba Hotel Osaka Celebrates Grand Opening in the Heart of the City
+   Status hint: Opening | Industry: Hospitality
+21. URL: https://www.timeout.com/johannesburg/news/new-fine-dining-restaurant-set-to-open-in-sandton-041026
+   Title: New fine dining restaurant set to open in Sandton
+   Status hint: Opening | Industry: Restaurants
+22. URL: https://hk-now.com/2026/04/09/opening-soon-bridge-street-breakfast-lunch-in-tylerville-a-new-restaurant-with-a-touch-of-history/
+   Title: Opening Soon: Bridge Street Breakfast & Lunch in Tylerville, A New Restaurant with a Touch of History
+   Status hint: Opening | Industry: Restaurants
+23. URL: https://www.restaurantnews.com/the-mexican-new-restaurant-brickell-key-miami-040926/
+   Title: The Mexican: A New Brickell Key Restaurant Now Open in Miami
+   Status hint: Opening | Industry: Restaurants
+24. URL: http://www.msn.com/en-us/money/companies/gina-maria-s-pizza-bankruptcy-shines-light-on-why-the-cherished-restaurant-closed-see-full-list-of-locations/ar-AA20rREJ?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+   Title: Gina Maria’s Pizza bankruptcy shines light on why the cherished restaurant closed: See full list of locations
+   Status hint: Closing | Industry: Restaurants
+25. URL: https://www.msn.com/en-us/money/companies/fast-food-chain-operator-with-65-locations-files-for-bankruptcy/ar-AA20nCxz?uxmode=ruby
+   Title: Fast-food chain operator with 65 locations files for bankruptcy
+   Status hint: Closing | Industry: Restaurants
+26. URL: https://news.google.com/rss/articles/CBMi1wFBVV95cUxQMHlLSU9wTHpJRHR5OGxVc2M5NFlybS1hNlZIM1RSTGw4RUdsMWNJOHpYQzVHeFdiRDl4cTZvaW1UcmhuT3FNT2I4TURUSWFDQi1ja1VvcjdUVVgybTRna29BY3UwTFdycDUzdXM3cVJHVUlfbm1FLU92OFdlNXE4dWpZd01qZlNpSmh1cklwR3duR0xpNkRORmRmc0lYdkVSVDl4RC1jdFhyZTBhbzhvZkNwWjFsLXczSHB1N196RU9SUTRRRXBEZW85T0hCYVc0TWlKMFZ4OA?oc=5
+   Title: Carl’s Jr. franchisee operating 65 California locations files for Chapter 11 protection
+   Status hint: Closing | Industry: Specialty / Other
+27. URL: https://wgme.com/news/arc-maine/gallery/aldi-set-to-open-first-location-in-maine-on-thursday-portland-pine-tree-shopping-center-former-big-lots-store-supermarket-chain?photo=1
+   Title: Aldi set to open first location in Maine on Thursday
+   Status hint: Opening | Industry: Specialty / Other
+28. URL: https://www.ibiza-spotlight.com/magazine/2025/02/party-preview-pachas-grand-opening-party
+   Title: Pacha's Grand Opening Weekend: Part Two with Solomun
+   Status hint: Opening | Industry: Specialty / Other
+29. URL: https://www.thestreet.com/restaurants/once-booming-cookie-chain-closes-all-stores-after-chapter-11-filing
+   Title: Once-booming cookie chain closes all stores after Chapter 11 filing
+   Status hint: Closing | Industry: Specialty / Other
+30. URL: https://www.the-sun.com/money/16209348/olive-garden-confirms-first-city-restaurant/
+   Title: Olive Garden answers diners' prayers after YEARS by confirming opening of city's first restaurant
+   Status hint: Opening | Industry: Restaurants
+
+============================================================
+END — copy Claude's Markdown table into claude_response.txt
+============================================================
+
+============================================================
+PASTE INTO CLAUDE.AI — Part 2 of 10
+============================================================
+
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+1. URL: https://www.walesonline.co.uk/whats-on/whats-on-news/new-mcdonalds-wales-wrexham-33752449
+   Title: New McDonald’s set to open in Welsh city within months
+   Status hint: Opening | Industry: Specialty / Other
+2. URL: https://news.google.com/rss/articles/CBMi7gFBVV95cUxQTzhVZXJSRWMwUmZVSkNEX05KckJJeFYwVTJZcmQ2RWgtS1VMMk9haXJXVEZKVXBaNHUwT2JmNV9xeF9iLWZCYmtEU2d6Y1NzM2NySTJpZDBKNWRHbUlBaFZXbHhvY1h5NFQzNVdQV2tqNmx2WHQ5UVE1U3lwRDg1a29ZOVpfcHBqaTVlUk1EdGtoY3pTVkZfTnFzQldQR0diMUpLT1Y1aFhLU2JiR09oRFlNamVzdVdTMENCWk5aSXRBYk1jbTJlNmt0TU5RLW1faXJwWXNqREdGLWR5OFBsaExqY2oydFdhdjJOb3hB?oc=5
+   Title: Pizza chain closes all locations and files for bankruptcy after 50 years in business
+   Status hint: Closing | Industry: Specialty / Other
+3. URL: https://www.msn.com/en-us/travel/tripideas/bengaluru-cafe-in-northern-liberties-now-open/ar-AA1ZoODV?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+   Title: Bengaluru cafe in Northern Liberties now open
+   Status hint: Opening | Industry: Specialty / Other
+4. URL: https://www.mantecabulletin.com/news/local-news/tractor-supply-breaks-ground-on-manteca-store-within-4-months/
+   Title: Tractor Supply breaks ground on Manteca store within 4 months
+   Status hint: Opening | Industry: Specialty / Other
+5. URL: https://www.thehindu.com/news/cities/bangalore/relief-for-bengaluru-commuters-as-silk-board-flyover-set-to-open-fully-but-new-bottleneck-looms/article70848349.ece
+   Title: Relief for Bengaluru commuters as Silk Board flyover set to open fully, but inspection by BTP reveals likely bottleneck
+   Status hint: Opening | Industry: Specialty / Other
+6. URL: https://www.stokesentinel.co.uk/whats-on/food-drink/french-friends-open-new-mexican-10908098.amp
+   Title: New Mexican tapas and cocktail bar now open in Hanley
+   Status hint: Opening | Industry: Specialty / Other
+7. URL: https://www.edp24.co.uk/news/26001418.sign-spotted-new-starbucks-built-hall-road/
+   Title: Global coffee shop 'opening soon' as site work continues
+   Status hint: Opening | Industry: Specialty / Other
+8. URL: https://guardian.ng/saturday-magazine/gembas-grand-opening-signals-new-era-for-tourism-in-calabar/
+   Title: Gemba’s grand opening signals new era for tourism in Calabar
+   Status hint: Opening | Industry: Specialty / Other
+9. URL: https://www.newsx.com/world/strait-of-hormuz-latest-update-not-opening-soon-iran-faces-challenges-locating-mines-tehran-planted-in-key-shipping-route-what-it-means-197246/
+   Title: Strait of Hormuz Not Opening Soon? Iran Faces Challenges Locating Mines Tehran Planted In Key Shipping Route
+   Status hint: Opening | Industry: Specialty / Other
+10. URL: https://www.msn.com/en-us/money/companies/timber-targets-ax-throwing-outlet-now-open-in-aberdeen/ar-AA20BBLD
+   Title: Timber Targets Ax throwing outlet now open in Aberdeen
+   Status hint: Opening | Industry: Specialty / Other
+11. URL: https://www.msn.com/en-ca/travel/tripideas/tui-opening-its-first-hotel-resort-in-the-land-of-happiness/ar-AA20w02o?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+   Title: TUI opening its first hotel resort in the 'Land of Happiness'
+   Status hint: Opening | Industry: Hospitality
+12. URL: https://www.aol.com/articles/5-highly-anticipated-small-businesses-210000762.html
+   Title: 5 Highly Anticipated Small Businesses Set To Open In 2026 In Sacramento's Midtown Neighborhood
+   Status hint: Opening | Industry: Specialty / Other
+13. URL: https://www.marconews.com/story/news/local/2026/04/10/last-picture-show-marco-movies-is-closing-find-out-when-is-the-last-day/89560857007/
+   Title: Last picture show: Marco Movies is closing. Find out when is the last day
+   Status hint: Closing | Industry: Specialty / Other
+14. URL: https://www.dorsetecho.co.uk/news/26012452.rockwater-sandbanks-venue-open-july-work-set-resume/
+   Title: Rockwater 'ran out of money' building Dorset site but set to open later this year
+   Status hint: Opening | Industry: Specialty / Other
+15. URL: https://www.timeout.com/miami/news/a-new-members-driven-social-club-is-now-open-in-coral-gables-and-its-got-great-jazz-to-boot-041026
+   Title: A new members-driven social club is now open in Coral Gables, and it's got great jazz to boot
+   Status hint: Opening | Industry: Specialty / Other
+16. URL: https://mocoshow.com/2026/04/10/new-seafood-house-now-open/
+   Title: New Seafood House Now Open
+   Status hint: Opening | Industry: Specialty / Other
+17. URL: https://www.postindependent.com/news/warren-miller-exhibit-now-open-at-colorado-snowsports-museum/
+   Title: Warren Miller exhibit now open at Colorado Snowsports Museum
+   Status hint: Opening | Industry: Specialty / Other
+18. URL: https://www.aol.com/articles/apple-closing-stores-three-states-210540758.html
+   Title: Apple is closing stores in three states as it begins to pull back on mall locations
+   Status hint: Closing | Industry: Specialty / Other
+19. URL: https://www.msn.com/en-in/money/topstories/lidl-set-to-open-over-50-new-stores-and-create-2-000-jobs-as-it-battles-for-market-share/ar-AA20tB3C
+   Title: Lidl set to open over 50 new stores and create 2,000 jobs as it battles for market share
+   Status hint: Opening | Industry: Specialty / Other
+20. URL: https://www.thedailyworld.com/2026/04/10/timber-targets-ax-throwing-outlet-now-open-in-aberdeen/
+   Title: Timber & Targets ax throwing outlet now open in Aberdeen
+   Status hint: Opening | Industry: Specialty / Other
+21. URL: https://news.google.com/rss/articles/CBMiywFBVV95cUxQX09GbWJLSzBBbXFVMXo4ckhZdWlsV0xkY2x2ZUZVZzRSRkVWZ3FsYmp6SkNRUDYyVDJRLTZPUGd5SjFHVzhncFVyNFlZSUM2VFNfbzhXZjVtMXp3OHpXenpiS2Z0YTNRNXdwZEZGRG5uR3Z5cF82Y3JCczk3cmExUGc0VXFwQkFiTG9YTE5UbmRkV0FROUxLUFIwYVpRODRKWGZfMHZhZXdyQ0JuOUtnbnZRdnAtc0FlUkVLQzRzQnhsX2FwRXVzOWwyWQ?oc=5
+   Title: Major burger chain franchisee bankruptcy puts over 60 locations at risk
+   Status hint: Closing | Industry: Specialty / Other
+22. URL: https://www.msn.com/en-us/news/crime/update-on-new-target-store-set-to-open-in-upstate/ar-AA20rv9j
+   Title: Update on new Target store set to open in Upstate
+   Status hint: Opening | Industry: Specialty / Other
+23. URL: https://wgrd.com/trust-tellers-grand-rapids/
+   Title: New, Unique Upscale Dining Experience with Cocktail Lounge Next door Now Open Downtown Grand Rapids
+   Status hint: Opening | Industry: Specialty / Other
+24. URL: https://www.theglobeandmail.com/investing/markets/stocks/TOL/pressreleases/36587431/toll-brothers-announces-model-grand-opening-at-sereno-canyon-enclave-collection-in-scottsdale-arizona/
+   Title: Toll Brothers Announces Model Grand Opening at Sereno Canyon
+   Status hint: Opening | Industry: Specialty / Other
+25. URL: https://spotonalabama.com/al-mountains/1379386/marshalls-opening-soon-in-fort-payne.html
+   Title: Marshalls opening soon in Fort Payne, set to bring 'the good stuff'
+   Status hint: Opening | Industry: Specialty / Other
+26. URL: https://profilemiamire.com/miamirealestate/2026/4/10/the-wagyu-bar-by-meat-n-bone-set-to-open-in-coral-gables
+   Title: The Wagyu Bar by Meat N' Bone Set To Open In Coral Gables
+   Status hint: Opening | Industry: Specialty / Other
+27. URL: https://www.theconnecticutscoop.com/all-hartford-county-posts/avon-scoop-robeks-fresh-juice-to-celebrate-grand-opening-on-0411
+   Title: AVON SCOOP: Robeks Fresh Juice to celebrate grand opening on 04/11
+   Status hint: Opening | Industry: Specialty / Other
+28. URL: https://communityimpact.com/san-antonio/new-braunfels/business/2026/04/10/wild-haus-childrens-boutique-now-open-in-new-braunfels/
+   Title: Wild Haus Children's Boutique now open in New Braunfels
+   Status hint: Opening | Industry: Specialty / Other
+29. URL: https://www.msn.com/en-us/money/companies/carl-s-jr-franchisee-with-65-locations-files-for-chapter-11-bankruptcy-in-california/ar-AA20rPtl
+   Title: Carl's Jr. franchisee with 65 locations files for Chapter 11 bankruptcy in California
+   Status hint: Closing | Industry: Specialty / Other
+30. URL: https://allears.net/2026/04/10/big-thunder-mountain-railroad-is-opening-soon-in-magic-kingdom-here-are-5-rules-you-need-to-know/
+   Title: Big Thunder Mountain Railroad Is Opening SOON in Magic Kingdom
+   Status hint: Opening | Industry: Specialty / Other
+
+============================================================
+END — copy Claude's Markdown table into claude_response.txt
+============================================================
+
+============================================================
+PASTE INTO CLAUDE.AI — Part 3 of 10
+============================================================
+
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+1. URL: https://www.wtae.com/article/pittsburgh-couple-surprise-proposal-ohio-bucees-grand-opening/70985525
+   Title: Buc-ee’s grand opening in Ohio sets the stage for surprise proposal for Pittsburgh couple
+   Status hint: Opening | Industry: Specialty / Other
+2. URL: https://dailydodge.com/ymca-of-dodge-county-expansion-breaks-ground/
+   Title: YMCA of Dodge County Expansion Breaks Ground
+   Status hint: Opening | Industry: Specialty / Other
+3. URL: https://fox59.com/news/entertainment/contemporary-art-museum-of-indianapolis-announces-grand-opening-events/amp/
+   Title: Contemporary Art Museum of Indianapolis announces grand opening events
+   Status hint: Opening | Industry: Specialty / Other
+4. URL: https://www.newspressnow.com/news/local_news/rolling-hills-library-s-riverside-branch-set-to-open-may-9/article_d90b0173-66fa-40c4-a029-52e4b218fd2f.html
+   Title: Rolling Hills Library’s Riverside Branch set to open May 9
+   Status hint: Opening | Industry: Specialty / Other
+5. URL: https://raltoday.6amcity.com/real-estate/sip-gourmet-coffee-tour-model-homes-during-next-months-grand-opening?_amp=true
+   Title: Sip gourmet coffee, tour model homes during next month’s grand opening
+   Status hint: Opening | Industry: Specialty / Other
+6. URL: https://www.leicestermercury.co.uk/whats-on/whats-on-news/two-new-shops-opening-highcross-10910485.amp
+   Title: 'Fresh' and 'exciting' new shops set to open in Highcross
+   Status hint: Opening | Industry: Specialty / Other
+7. URL: https://www.wccbcharlotte.com/2026/04/10/improper-pig-now-open-in-plaza-midwood/
+   Title: Improper Pig now open in Plaza Midwood
+   Status hint: Opening | Industry: Specialty / Other
+8. URL: https://www.severnaparkvoice.com/stories/haven-hue-hair-co-celebrates-grand-opening,69092
+   Title: Haven & Hue Hair Co. Celebrates Grand Opening
+   Status hint: Opening | Industry: Specialty / Other
+9. URL: https://lancasteronline.com/business/whats_in_store/new-starbucks-now-open-near-quarryville-taking-spot-in-newly-constructed-building-at-the-buck/article_bfff8d20-c0cc-4da4-bd9c-09bd850108f4.html
+   Title: New Starbucks now open near Quarryville, taking spot in newly-constructed building at the Buck
+   Status hint: Opening | Industry: Specialty / Other
+10. URL: https://www.birkenhead.news/jack-and-the-beanstalk-now-open-at-gladstone-theatre/
+   Title: Jack and the Beanstalk now open at Gladstone Theatre
+   Status hint: Opening | Industry: Specialty / Other
+11. URL: https://www.tapinto.net/towns/basking-ridge/sections/food-and-drink/articles/new-life-for-a-landmark-station-tavern-set-to-open-in-bernardsville
+   Title: New Life for a Landmark: Station Tavern Set to Open in Bernardsville
+   Status hint: Opening | Industry: Specialty / Other
+12. URL: https://businessplus.ie/news/shaws-20-jobs-clonmel/
+   Title: Shaws creates 20 jobs with Clonmel store opening
+   Status hint: Opening | Industry: Specialty / Other
+13. URL: https://grocerytrader.co.uk/lidl-gb-announces-ambitious-expansion-plans-with-over-50-new-stores-set-to-open-in-next-12-months/
+   Title: Lidl GB announces ambitious expansion plans with over 50 new stores set to open in next 12 months
+   Status hint: Opening | Industry: Specialty / Other
+14. URL: https://www.doncasterfreepress.co.uk/business/lidl-gb-announces-ambitious-plans-with-over-50-new-stores-set-to-open-in-next-12-months-6569988
+   Title: Lidl GB announces ambitious plans with over 50 new stores set to open in next 12 months
+   Status hint: Opening | Industry: Specialty / Other
+15. URL: https://www.theglobeandmail.com/investing/markets/stocks/HBFG-CN/pressreleases/1237842/happy-belly-food-group-s-heal-wellness-qsr-announces-the-grand-opening-of-its-newest-location-at-bloor-and-spadina-in-toronto-ontario/
+   Title: Happy Belly Food Group's Heal Wellness QSR Announces the Grand Opening of its Newest Location at Bloor and Spadina in Toronto, Ontario
+   Status hint: Opening | Industry: Specialty / Other
+16. URL: https://times.abema.tv/en/articles/-/10237873?page=1
+   Title: "DAN DA DAN," "Gachiakuta," "Takopi's Original Sin," and more—Crunchyroll Anime Awards 2026 Nominees Announced, Voting Now Open
+   Status hint: Opening | Industry: Specialty / Other
+17. URL: https://www.designboom.com/art/obama-presidential-center-site-specific-artworks-sculptures-campus/
+   Title: obama presidential center set to open with site-specific artworks and sculptures on campus
+   Status hint: Opening | Industry: Specialty / Other
+18. URL: https://news.google.com/rss/articles/CBMinwFBVV95cUxNRUxKQkxGYm5yTXNJV0Q1aE11NENvTDQtc0EyNTJEalo3Nkl5aUNiNlRMY3dmbUFSTFctcUJKNlhWMjV1VzVBdVRzTUtLeFZrbnpYcGRqU2lTcEQ0NEJkQkZ1X2dNdjZMWnhJc1J4RERmVXRXeTJzSDVlV0d1SWw5amNFSjN4dG9vU0g1RkpuZGh5cTBIZ1J3ei1CamNEYXc?oc=5
+   Title: Freshii Locations in St. John’s Temporarily Shut Down Due to Bankruptcy
+   Status hint: Closing | Industry: Specialty / Other
+19. URL: https://www.msn.com/en-in/news/world/us-pizza-chain-gina-maria-s-closes-all-us-outlets-after-50-years-files-for-bankruptcy/ar-AA20dPAX?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+   Title: US pizza chain Gina Maria’s closes all US outlets after 50 years, files for bankruptcy
+   Status hint: Closing | Industry: Specialty / Other
+20. URL: https://www.aol.com/trader-joe-set-open-stores-162300723.html
+   Title: Trader Joe’s set to open new stores across 12 states: Here’s the full list
+   Status hint: Opening | Industry: Specialty / Other
+21. URL: https://www.aol.com/articles/disney-theme-park-princess-dining-111155289.html
+   Title: New Disney Theme Park Princess Dining is Now Open
+   Status hint: Opening | Industry: Specialty / Other
+22. URL: https://news.google.com/rss/articles/CBMiiAJBVV95cUxQSkFlbTk3Y3lxcmE4WEJsRmRVOHhObHZLYWQ0SE9zd2trR0RxU0pVaVJJTEVoVFJQS1AzVkFvSGoycGpBb01obTJ0YjQ4MlNMOEo1TGwydl9LckkzN3VWVTl2ZmR5V3NjbjVvOVBNR2pWMUxjS1pWNkhpbWoyZ1U4dUpVajNrZm1lSUNmTU16S2diTWFsODVLRUE2VkdBYl9idWJzSVZjbkdFXzhnUG9GOTBZN0VNeEM3eC1OZFV3TmxGQkJBM2x2VWk3ai1UZUpQN201aDM2LUJPdG9IcUNyWWZGZWlpVHppa3RlVk84cTl6d1VrM0ZTZldPMnRlTFJFLUEySUlMVDY?oc=5
+   Title: Another fast-food franchise owner has filed for Chapter 11 bankruptcy. Will the burger joint close any locations?
+   Status hint: Closing | Industry: Specialty / Other
+23. URL: https://www.baltimoresun.com/2026/04/09/apple-closes-towson-union-store/
+   Title: With Towson store closing, where can Apple customers go for help?
+   Status hint: Closing | Industry: Specialty / Other
+24. URL: https://www.aol.com/news/score-free-food-pensacolas-newest-161952884.html
+   Title: Score free food at Pensacola's newest Chick-fil-A, opening soon on Mobile Hwy
+   Status hint: Opening | Industry: Specialty / Other
+25. URL: https://www.businessdebut.com/grants-crabs-seafood-grille-opening-soon-in-havana/
+   Title: Grant’s Crabs Seafood & Grille Opening Soon in Havana
+   Status hint: Opening | Industry: Specialty / Other
+26. URL: https://www.cbc.ca/news/canada/north/new-primary-care-clinic-run-by-nurse-practitioners-set-to-open-in-whitehorse-9.7157757
+   Title: New primary care clinic run by nurse practitioners set to open in Whitehorse
+   Status hint: Opening | Industry: Specialty / Other
+27. URL: https://www.pgaofcanada.com/media/national-championship-player-registration-now-open-49829
+   Title: National Championship Player Registration Now Open: Media Centre
+   Status hint: Opening | Industry: Specialty / Other
+28. URL: https://oswegocountybusiness.com/connextcare-to-open-new-school-based-health-center/
+   Title: ConnextCare to Open New School-based Health Center
+   Status hint: Opening | Industry: Pharmaceutical / Medical
+29. URL: https://www.replaymag.com/hooky-cinema-entertainment-center-opening-in-nashville/
+   Title: Hooky Cinema Entertainment Center Opening in Nashville
+   Status hint: Opening | Industry: Movie Theatres
+30. URL: https://nationaltoday.com/us/tn/nashville/news/2026/04/11/hooky-entertainment-venue-and-cinema-to-open-at-nashville-yards/
+   Title: Hooky Entertainment Venue and Cinema to Open at Nashville Yards
+   Status hint: Opening | Industry: Experiential, Movie Theatres
+
+============================================================
+END — copy Claude's Markdown table into claude_response.txt
+============================================================
+
+============================================================
+PASTE INTO CLAUDE.AI — Part 4 of 10
+============================================================
+
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+1. URL: https://www.thestreet.com/restaurants/93-year-old-sandwich-chain-primanti-bros-closed-half-its-restaurants
+   Title: 93-year-old sandwich chain has closed half of its restaurants
+   Status hint: Closing | Industry: Restaurants
+2. URL: https://www.the-sun.com/money/16210454/popular-seafood-restaurant-closes-leaving-one-store/
+   Title: Say goodbye to popular seafood restaurant as it closes location TODAY
+   Status hint: Closing | Industry: Restaurants
+3. URL: https://www.watfordobserver.co.uk/leisure/foodanddrink/26013381.watford-high-streets-aysu-restaurant---verdict/
+   Title: I tried the Turkish restaurant that has received rave reviews since opening
+   Status hint: Opening | Industry: Restaurants
+4. URL: https://www.stokesentinel.co.uk/whats-on/shopping/stoke-trent-convenience-store-wants-10910160
+   Title: Stoke-on-Trent convenience store wants midnight booze licence
+   Status hint: Opening | Industry: Convenience Stores / Distributors
+5. URL: https://www.watfordobserver.co.uk/leisure/26013320.wraps-wings-set-open-chorleywood-april-20/
+   Title: Big-name burger chain to open new restaurant next week
+   Status hint: Opening | Industry: Restaurants
+6. URL: https://www.nottinghampost.com/whats-on/food-drink/prominent-nottingham-city-centre-restaurant-10911063
+   Title: Prominent Nottingham city centre restaurant makes 'difficult decision' to close
+   Status hint: Closing | Industry: Restaurants
+7. URL: https://www.thesun.co.uk/money/38789658/fashion-retailer-shut-store-good-closing-sale-launched/
+   Title: Major fashion retailer with 364 branches to shut store for good in DAYS as closing down sale launched
+   Status hint: Closing | Industry: Apparel
+8. URL: https://www.irishmirror.ie/news/irish-news/lidl-opening-pub-next-irish-36999199
+   Title: Lidl opening pub next to Irish supermarket this summer
+   Status hint: Opening | Industry: Grocery
+9. URL: https://www.twincities.com/2026/04/11/french-restaurant-aubergine-st-paul-selby-aven/
+   Title: French restaurant Aubergine to open on Selby Avenue this month
+   Status hint: Opening | Industry: Restaurants
+10. URL: https://www.aol.com/articles/owner-opened-restaurant-day-off-113000204.html
+   Title: Owner Opened Restaurant on Day Off to Fulfill Dying Man's Last Wish to Feed Hospice Nurses Who Cared for Him
+   Status hint: Closing | Industry: Restaurants
+11. URL: https://www.yourohionews.com/harrison-county/el-bronco-aims-for-may-opening-in-cadiz/1028951
+   Title: El Bronco Mexican restaurant to open in Cadiz in May
+   Status hint: Opening | Industry: Restaurants
+12. URL: https://www.aol.com/articles/one-miami-favorite-bakeries-opening-083000492.html
+   Title: One of Miami’s favorite bakeries is opening a new restaurant in Miami Beach
+   Status hint: Opening | Industry: Restaurants
+13. URL: https://www.aol.com/articles/cinema-closed-car-crashes-144335017.html
+   Title: Cinema closed after car crashes into it
+   Status hint: Opening | Industry: Movie Theatres
+14. URL: https://www.aol.com/iconic-furniture-store-closes-good-205113907.html
+   Title: Iconic furniture store closes for good leaving 10,000 orders unfulfilled
+   Status hint: Opening | Industry: Furniture / Mattress
+15. URL: https://menafn.com/1110970248/6-Regional-Grocery-Chains-Closing-Underperforming-Locations-This-Month
+   Title: 6 Regional Grocery Chains Closing Underperforming Locations This Month
+   Status hint: Closing | Industry: Grocery
+16. URL: https://www.yourcentralvalley.com/news/local-news/new-olive-garden-hanford/
+   Title: Olive Garden to open its first Kings County restaurant
+   Status hint: Opening | Industry: Restaurants
+17. URL: https://www.msn.com/en-us/money/companies/upscale-restaurants-shut-down-file-chapter-7-bankruptcy/ar-AA201NzM?gemSnapshotKey=GMAFB19AE7-snapshot-1&uxmode=ruby&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+   Title: Upscale restaurants shut down, file Chapter 7 bankruptcy
+   Status hint: Closing | Industry: Restaurants
+18. URL: https://www.asatunews.co.id/en/fast-furious-supercharged-close-new-coaster
+   Title: Fast & Furious: Supercharged to Close, Universal Orlando Resort Prepares New Coaster
+   Status hint: Opening | Industry: Hospitality
+19. URL: https://www.abc12.com/news/business/new-goodwill-store-opens-in-burton-at-former-furniture-store/article_78d2127d-8476-4d61-9913-8e84c5332e97.html
+   Title: New Goodwill store opens in Burton at former furniture store
+   Status hint: Opening | Industry: Furniture / Mattress
+20. URL: https://www.azfamily.com/video/2026/04/11/vai-resort-glendale-likely-not-opening-this-year-construction-continues/
+   Title: VAI Resort in Glendale likely not opening this year as construction continues
+   Status hint: Opening | Industry: Hospitality
+21. URL: https://wwmt.com/news/local/namsan-kalamazoo-closing-closed-korean-restaurant-landlord-raising-rent-expensive-rising-costs-authentic-retire-unaffordable-business-wwmt
+   Title: Namsan Korean Restaurant in Kalamazoo to permanently close May 31
+   Status hint: Closing | Industry: Restaurants
+22. URL: http://www.msn.com/en-us/money/companies/family-owned-jewelry-store-in-old-sacramento-closes-its-doors-after-decades/ar-AA1TnRYJ?ocid=finance-verthp-feeds&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+   Title: Family-owned jewelry store in Old Sacramento closes its doors after decades
+   Status hint: Closing | Industry: Jewelry & Accessories
+23. URL: http://www.msn.com/en-us/entertainment/entertainment-celebrity/kai-trump-sparks-debate-as-she-shops-at-the-world-s-most-expensive-grocery-store/ar-AA1XSAKR?ocid=msedgntp&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+   Title: Kai Trump sparks debate as she shops at the 'world's most expensive' grocery store
+   Status hint: Closing | Industry: Grocery
+24. URL: https://www.msn.com/en-us/news/us/smash-and-grab-robbers-raid-new-jersey-jewelry-store-with-sledgehammers/vi-AA20ydY3?ocid=MD12OW
+   Title: Smash-and-grab robbers raid New Jersey jewelry store with sledgehammers
+   Status hint: Closing | Industry: Jewelry & Accessories
+25. URL: https://www.mississauga.com/business/new-supermarket-mississauga/article_0ec33207-fcd1-5920-9da1-6cd3cadf30ab.html
+   Title: T&T Supermarket opens 2nd Mississauga location, deals run until Sunday
+   Status hint: Opening | Industry: Grocery
+26. URL: https://www.bizjournals.com/losangeles/news/2026/04/10/phenix-salon-suites-opens-inglewood-crenshaw.html
+   Title: Phenix Salon Suites opens second Inglewood location
+   Status hint: Opening | Industry: Health / Beauty
+27. URL: https://www.jacksonville.com/story/news/local/2026/04/10/jacksonville-veterans-housing-project-breaks-ground/89424671007/
+   Title: Nonprofit begins converting a closed hotel into new veteran housing
+   Status hint: Opening | Industry: Hospitality
+28. URL: https://www.insauga.com/closure-viral-clothing-store-shutting-down-in-toronto/
+   Title: CLOSURE: Viral clothing store shutting down in Toronto
+   Status hint: Closing | Industry: Apparel
+29. URL: https://www.insidehalton.com/news/new-tt-supermarket-opens-in-mississauga/article_e31454be-2554-5fde-b5be-a49788f90289.html
+   Title: T&T Supermarket opens new Ontario store featuring exclusive Baby Bear Bao Taiwanese-style street food
+   Status hint: Opening | Industry: Grocery
+30. URL: https://www.axios.com/local/charlotte/2026/04/10/hand-roll-sushi-restaurant-sharigato-opening-soon
+   Title: See inside: Hand-roll sushi restaurant Sharigato to open soon in Optimist Park
+   Status hint: Opening | Industry: Restaurants
+
+============================================================
+END — copy Claude's Markdown table into claude_response.txt
+============================================================
+
+============================================================
+PASTE INTO CLAUDE.AI — Part 5 of 10
+============================================================
+
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+1. URL: https://www.aol.com/news/hawaiian-restaurant-chain-opening-1st-120130937.html
+   Title: Hawaiian restaurant chain opening 1st Arizona location
+   Status hint: Opening | Industry: Restaurants
+2. URL: https://nationaltoday.com/us/mi/royal-oak/news/2026/04/10/gene-simmons-of-kiss-opens-new-restaurant-location-in-detroit-1/
+   Title: Gene Simmons of Kiss Opens New Restaurant Location in Detroit
+   Status hint: Opening | Industry: Restaurants
+3. URL: https://patch.com/connecticut/newtown/popular-food-truck-opening-first-restaurant-newtown-next-week
+   Title: Popular Food Truck Opening First Restaurant In Newtown Next Week
+   Status hint: Opening | Industry: Restaurants
+4. URL: https://www.13wmaz.com/article/life/food/central-georgia-eats/jacks-family-restaurant-announces-milledgeville-opening-date-free-breakfast-for-month/93-38a4f966-6ba3-45f5-afff-bdbc736731da
+   Title: Free breakfast for a month? Jack's Family Restaurant announces Milledgeville opening date and offering
+   Status hint: Opening | Industry: Restaurants
+5. URL: https://www.thescottishsun.co.uk/money/16140102/edinburgh-castle-new-cocktail-bar-restaurant-views/
+   Title: New cocktail bar & restaurant to open with incredible views of Edinburgh Castle
+   Status hint: Opening | Industry: Restaurants
+6. URL: https://www.masslive.com/boston/2026/04/popular-japanese-clothing-store-opens-in-long-vacant-boston-storefront.html
+   Title: Popular Japanese clothing store opens in long-vacant Boston storefront
+   Status hint: Opening | Industry: Apparel
+7. URL: https://www.bizjournals.com/orlando/news/2026/04/10/burger-king-whopper-bar-universal-city-walk-resort.html
+   Title: Iconic Universal CityWalk restaurant to close after 17 years
+   Status hint: Closing | Industry: Restaurants
+8. URL: https://www.aol.com/articles/publix-expanding-kentucky-more-grocery-020007228.html
+   Title: Publix Is Expanding Into Kentucky With More Grocery Store Openings—Here's Where
+   Status hint: Opening | Industry: Grocery
+9. URL: https://www.azfamily.com/2026/04/10/vai-resort-glendale-likely-not-opening-this-year-after-deadline-passes/
+   Title: VAI Resort in Glendale likely not opening this year after deadline passes
+   Status hint: Opening | Industry: Hospitality
+10. URL: https://finance.yahoo.com/news/why-shaquille-oneal-is-investing-his-money-in-an-adult-toy-store-144922712.html
+   Title: Why Shaquille O'Neal is investing his money in an adult toy store
+   Status hint: Closing | Industry: Books / Toys / Gaming
+11. URL: https://whatnow.com/news/local-news/a-popular-seafood-restaurant-in-st-paul-will-close-this-week/
+   Title: A Popular Seafood Restaurant in St. Paul Will Close This Week
+   Status hint: Closing | Industry: Restaurants
+12. URL: https://patch.com/massachusetts/across-ma/beloved-clothing-store-debuts-longtime-steakhouse-shutters-ma-business-week
+   Title: Longtime Steakhouse Shutters + Beloved Clothing Store Debuts: MA Business Week
+   Status hint: Opening | Industry: Apparel
+13. URL: https://www.houstonchronicle.com/food-restaurants/article/closed-houston-restaurants-march-2026-22093959.php
+   Title: These 10 Houston restaurants closed in March, including Be More Pacific
+   Status hint: Closing | Industry: Restaurants
+14. URL: https://hotelbusiness.com/the-monarch-hotel-to-open-in-new-orleans/
+   Title: The Monarch Hotel to open in New Orleans
+   Status hint: Opening | Industry: Hospitality
+15. URL: https://www.newsobserver.com/living/food-drink/article315357562.html
+   Title: ‘It’s heartbreaking’: Iconic Durham barbecue restaurant could close this month
+   Status hint: Opening | Industry: Restaurants
+16. URL: https://www.aol.com/news/arizona-grocery-stores-cheaper-walmart-120101517.html
+   Title: These Arizona grocery stores are cheaper than Walmart, report says
+   Status hint: Opening | Industry: Grocery
+17. URL: https://www.sanluisobispo.com/news/local/article315346172.html
+   Title: Newly renovated restaurant to open in well-known Pismo Beach spot
+   Status hint: Opening | Industry: Restaurants
+18. URL: https://www.aol.com/news/barnes-noble-open-first-bookstore-230759087.html
+   Title: Barnes & Noble will open its first bookstore in Clovis at former JoAnn site
+   Status hint: Opening | Industry: Books / Toys / Gaming
+19. URL: https://progressivegrocer.com/tt-supermarket-opens-2nd-mississauga-store
+   Title: T&T Supermarket Opens 2nd Mississauga Store
+   Status hint: Opening | Industry: Grocery
+20. URL: https://www.examinerlive.co.uk/whats-on/food-drink-news/major-new-bar-open-york-33744996
+   Title: Major new bar to open in York city centre following sudden closure of popular restaurant
+   Status hint: Opening | Industry: Restaurants
+21. URL: https://www.golfcoursearchitecture.net/content/tiger-woods-course-at-marcella-resort-in-utah-to-open-in-summer-2026
+   Title: Tiger Woods course at Marcella resort in Utah to open in summer 2026
+   Status hint: Opening | Industry: Hospitality
+22. URL: https://www.news-journalonline.com/story/entertainment/dining/2026/04/10/port-orange-waterfront-restaurant-coming-soon-to-rose-bay/89531353007/
+   Title: Seafood restaurant, entertainment venue to open on Rose Bay
+   Status hint: Opening | Industry: Experiential, Restaurants
+23. URL: https://www.sj-r.com/story/business/2026/04/10/new-korean-convenience-store-pop-in-seoul-opens-in-springfield/89520303007/
+   Title: Pop into Springfield's first Korean convenience store
+   Status hint: Opening | Industry: Convenience Stores / Distributors
+24. URL: https://www.msn.com/en-us/news/crime/video-shows-brazen-burglary-at-new-jersey-jewelry-store/vi-AA20wPjo?cvid=8c75e7e3e373461184b2c478d2928d1f
+   Title: Video shows brazen burglary at New Jersey jewelry store
+   Status hint: Closing | Industry: Jewelry & Accessories
+25. URL: https://www.hospitalitynet.org/announcement/41014295/the-monarch-hotel-to-open-in-new-orleans-as-part-of-sbes-hq-hotels-residences-collection
+   Title: The Monarch Hotel to Open in New Orleans as Part of sbe's HQ Hotels & Residences Collection
+   Status hint: Opening | Industry: Hospitality
+26. URL: https://www.lohud.com/story/life/food/restaurants/2026/04/10/westchester-ny-restaurant-closing-updates-new-plans/89483821007/
+   Title: Say goodbye to gyros, empanadas from 3 closed Westchester restaurants
+   Status hint: Closing | Industry: Restaurants
+27. URL: https://www.msn.com/en-us/money/companies/do-it-best-hardware-store-closes-no-bankruptcy/ar-AA203Age?uxmode=ruby
+   Title: Do it Best hardware store closes, no bankruptcy
+   Status hint: Closing | Industry: Home Improvement / Building Materials
+28. URL: https://www.cadillacnews.com/news/today-in-history-auto-parts-store-demolished-to-make-way-for-blockbuster/article_fa66abae-3585-4abe-9818-9ddbcdfc3356.html
+   Title: Today in history: Auto parts store demolished to make way for Blockbuster
+   Status hint: Opening | Industry: Auto Parts
+29. URL: https://nationaltoday.com/us/ca/santa-rosa/news/2026/04/10/olivers-market-to-open-third-santa-rosa-store-after-25m-shopping-center-purchase/
+   Title: Oliver's Market to open third Santa Rosa store after $25M shopping center purchase
+   Status hint: Closing | Industry: Retail REITs
+30. URL: https://nationaltoday.com/us/ga/woodstock/news/2026/04/10/landlords-object-to-burlington-replacing-saks-off-5th-at-georgia-outlet-mall/
+   Title: Landlords Object to Burlington Replacing Saks Off 5th at Georgia Outlet Mall
+   Status hint: Closing | Industry: Retail REITs
+
+============================================================
+END — copy Claude's Markdown table into claude_response.txt
+============================================================
+
+============================================================
+PASTE INTO CLAUDE.AI — Part 6 of 10
+============================================================
+
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+1. URL: https://www.msn.com/en-us/travel/tripideas/is-my-supermarket-open-the-mall-what-s-open-closed-on-easter-in-sacramento/ar-AA1ZVxIZ?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+   Title: Is my supermarket open? The mall? What's open & closed on Easter in Sacramento
+   Status hint: Opening | Industry: Grocery
+2. URL: https://www.msn.com/en-us/money/companies/exclusive-cafe-and-flower-shop-to-replace-shuttered-88-year-old-sf-hardware-store/ar-AA201JAX
+   Title: Exclusive: Cafe and flower shop to replace shuttered 88-year-old SF hardware store
+   Status hint: Opening | Industry: Home Improvement / Building Materials
+3. URL: https://www.washingtonpost.com/entertainment/2026/04/09/kiss-gene-simmons-rock-band-restaurant-detroit/59669b4a-3456-11f1-b85b-2cd751275c1d_story.html
+   Title: Gene Simmons of Kiss visits Detroit Rock City to open new restaurant location
+   Status hint: Opening | Industry: Restaurants
+4. URL: https://thenewsmill.com/2020/10/cinema-halls-to-open-in-assam-following-strict-sop/
+   Title: Cinema halls to open in Assam following strict SOP
+   Status hint: Opening | Industry: Movie Theatres
+5. URL: https://news.google.com/rss/articles/CBMilwFBVV95cUxQN2kyUy1uaE12YXZyek1fLURwdEk3ZHBDUGI3cFZXdzd5VUlibWNjZGN2TklaX3ZqcHhTSG83bl9GajZQOElvVFZqQWFZei1FenFMVmZsWFhvMU5aQzdOZ1lLSjZTbGdSYnNNbkl4dnFPeUlScVBkUmFiWFdZOVotV1YxU2VNNFFZOXVycG93ZmttdVFWeDkw?oc=5
+   Title: All stores at risk as high street fashion retailer in administration countdown
+   Status hint: Closing | Industry: Apparel
+6. URL: https://www.msn.com/en-us/entertainment/news/edison-hardware-store-gets-hollywood-moment-in-new-netflix-series/ar-AA20dHds
+   Title: Edison hardware store gets Hollywood moment in new Netflix series
+   Status hint: Closing | Industry: Home Improvement / Building Materials
+7. URL: https://www.wyff4.com/article/clock-family-restaurant-duncan-to-close/70966049
+   Title: 'It's bittersweet': Owners reflect on The Clock Family Restaurant of Duncan set to close Friday
+   Status hint: Closing | Industry: Restaurants
+8. URL: https://www.msn.com/en-us/money/news/golds-gym-closing-in-new-braunfels-heres-whats-taking-over/ar-AA1ZVosi?ocid=BingNewsVerp
+   Title: Gold's Gym closing in New Braunfels? Here's what's taking over
+   Status hint: Closing | Industry: Gyms / Fitness
+9. URL: https://latteluxurynews.com/2026/04/09/nikki-beach-resort-spa-marrakech-to-open-in-2028/
+   Title: Nikki Beach Resort & Spa Marrakech to open in 2028
+   Status hint: Opening | Industry: Hospitality
+10. URL: https://nationaltoday.com/us/mi/royal-oak/news/2026/04/09/gene-simmons-brings-kiss-to-detroit-for-restaurant-opening/
+   Title: Gene Simmons Brings Kiss to Detroit for Restaurant Opening
+   Status hint: Opening | Industry: Restaurants
+11. URL: https://dailyhive.com/vancouver/hyatt-place-vancouver-metrotown-hotel
+   Title: New 159-room Hyatt hotel to open next to Metrotown SkyTrain station this spring
+   Status hint: Opening | Industry: Hospitality
+12. URL: https://nationaltoday.com/us/mi/royal-oak/news/2026/04/09/gene-simmons-of-kiss-opens-new-restaurant-location-in-detroit/
+   Title: Gene Simmons of Kiss Celebrates Detroit Restaurant Opening
+   Status hint: Opening | Industry: Restaurants
+13. URL: https://www.msn.com/en-us/money/companies/new-nordstrom-rack-store-coming-to-busy-south-texas-shopping-center/ar-AA20kbIp
+   Title: New Nordstrom Rack store coming to busy South Texas shopping center
+   Status hint: Opening | Industry: Retail REITs
+14. URL: https://www.yahoo.com/news/videos/shops-apartments-grocery-store-revitalize-221304025.html
+   Title: New shops, apartments, and a grocery store revitalize Briarwood Mall area
+   Status hint: Opening | Industry: Grocery
+15. URL: https://www.wfmz.com/features/eat-sip-shop/excited-to-serve-more-people-popular-mexican-restaurant-to-open-2nd-lehigh-valley-location/article_3d9cca4e-77ac-4b5c-b137-cac0f777dfd8.html
+   Title: ‘Excited to serve more people‘: Popular Mexican restaurant to open 2nd Lehigh Valley location
+   Status hint: Opening | Industry: Restaurants
+16. URL: https://greaterlongisland.com/deer-park-mega-millions-second-prize-winner/
+   Title: Deer Park convenience store sells $2M Mega Millions ticket
+   Status hint: Opening | Industry: Convenience Stores / Distributors
+17. URL: https://www.wsls.com/video/news/2026/04/09/salem-valley-8-movie-theater-to-permanently-close-its-doors/
+   Title: Salem Valley 8 movie theater to permanently close its doors
+   Status hint: Closing | Industry: Movie Theatres
+18. URL: https://www.cbsnews.com/detroit/video/gene-simmons-visits-detroit-rock-city-to-open-new-restaurant-location/
+   Title: Gene Simmons visits Detroit Rock City to open new restaurant location
+   Status hint: Opening | Industry: Restaurants
+19. URL: https://www.eyeonannapolis.net/2026/04/pearl-restaurant-and-ponche-tiki-bar-close-in-downtown-annapolis-as-osteria-177-steps-in/
+   Title: Pearl Restaurant and Ponche Tiki Bar Close in Downtown Annapolis as Osteria 177 Steps In
+   Status hint: Opening | Industry: Restaurants
+20. URL: https://www.yahoo.com/lifestyle/articles/nyt-lauded-seafood-chef-open-210749390.html
+   Title: NYT-lauded seafood chef to open new restaurant in Point Reyes Station
+   Status hint: Opening | Industry: Restaurants
+21. URL: https://www.theconnecticutscoop.com/all-mass-posts/wretham-scoop-first-in-the-us-haribo-store-coming-to-wretham
+   Title: WRETHAM SCOOP: First-in-the-US Haribo store coming to Wretham!
+   Status hint: Opening | Industry: Specialty / Other
+22. URL: https://www.sootoday.com/lets-eat/st-louis-bar-grill-will-open-in-station-mall-this-summer-12129732
+   Title: St. Louis Bar & Grill will open this summer
+   Status hint: Opening | Industry: Specialty / Other
+23. URL: https://nationaltoday.com/us/ny/new-york/news/2026/04/11/new-businesses-eyed-to-replace-shuttered-rite-aid-stores-across-new-york/
+   Title: New Businesses Eyed to Replace Shuttered Rite Aid Stores Across New York
+   Status hint: Closing | Industry: Specialty / Other
+24. URL: https://www.thesun.co.uk/money/38789281/wetherspoons-open-five-new-locations/
+   Title: Wetherspoons will open 5 new locations, including one perfect for holiday pints
+   Status hint: Opening | Industry: Specialty / Other
+25. URL: https://mynewsla.com/business/2026/04/11/skylight-books-opening-second-location-in-eagle-rock/
+   Title: Skylight Books Opening Second Location in Eagle Rock
+   Status hint: Opening | Industry: Specialty / Other
+26. URL: https://www.salisburyjournal.co.uk/sport/national/26013209.arsenal-open-door-man-city-title-race-defeat-home-bournemouth/
+   Title: Arsenal open door to Man City in title race with defeat at home to Bournemouth
+   Status hint: Opening | Industry: Specialty / Other
+27. URL: http://www.msn.com/en-us/money/general/thrifty-ice-cream-buyer-found-as-rite-aid-closings-pass-1-000-stores/ar-AA1HMTPh?ocid=BingNewsSerp&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+   Title: Thrifty Ice Cream buyer found as Rite Aid closings pass 1,000 stores
+   Status hint: Closing | Industry: Specialty / Other
+28. URL: https://www.mysanantonio.com/business/article/red-white-blue-thrift-store-san-antonio-22194069.php
+   Title: First-of-its-kind thrift store sets opening date for San Antonio
+   Status hint: Opening | Industry: Specialty / Other
+29. URL: https://www.bitget.com/amp/news/detail/12560605358763
+   Title: Sizzler's Revival: Will a 47% Surge in Sales Be Enough to Rescue a Brand Reduced to Just 74 Locations?
+   Status hint: Closing | Industry: Specialty / Other
+30. URL: https://www.bordercountiesadvertizer.co.uk/news/26003231.woodland-open-day-near-llanfyllin-set-may-bank-holiday/
+   Title: Llanfyllin woodland open day to showcase bluebells and birds
+   Status hint: Opening | Industry: Specialty / Other
+
+============================================================
+END — copy Claude's Markdown table into claude_response.txt
+============================================================
+
+============================================================
+PASTE INTO CLAUDE.AI — Part 7 of 10
+============================================================
+
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+1. URL: https://news.google.com/rss/articles/CBMiogJBVV95cUxOYXRBZDNTQjRHMTRMM3R6Wk04SHJFLVE5UjdTd3lpeEhfRG9rU2VxLUcyNDV5N2RBTDd5M0lGcTdMRXA4SklhSGE2QjZCb3NfRDhxZjR6T0Y1TXJWR2JCM09qV2JMQ2tDN2ItWC1kbDltWFpiRWJFUWpBbzNrMU9saEI3UVN2cGJWMTBTWnAtbW9Oc2tKREpSM1F6QXRYWWFCX0IxaEsxWVJwSlQwdUJVYXdxSkxlaV9GbkxvakpTMEJSV3kyMENoVXNMWk5MRWlFSEduYmszRENFVnd2U2g5a3lQdmlHa3BqY084TkJwSVU3dDNxOGVsOUlUMVF2WWg1bUxuLTZFLVB4Q1F6RXVCcXZEVU5mQ2I4X1dPYkpHbjZfUQ?oc=5
+   Title: The MAC to open in West Las Vegas
+   Status hint: Opening | Industry: Specialty / Other
+2. URL: https://www.mississauga.com/things-to-do/misssissauga-golf-courses-open/article_7e350bd8-c142-5ceb-9ce3-55504b2dbd8d.html
+   Title: Mississauga sets opening dates for Lakeview, BraeBen golf courses, public encouraged to book tee times in advance
+   Status hint: Opening | Industry: Specialty / Other
+3. URL: https://news.google.com/rss/articles/CBMiugFBVV95cUxQcjRac2hhYUlVOW02QW9LWHR2TzNFUFIxWm8zZFJIU0x6ak5hNVJkR25DR0NQNG5IQ1BpU0VNZllkUnNjT1VIQmYxTmo4RzFxM1JYOE4wR1J3a01rdEU3R3ZtblZ5VmxwNzg1bzlwN2hoQWg2S1RHSi0wZHhtckYxS3dqVlZZSS1tSTg1YmpkZVNOUjg5OFZjSjRPd2ZYYThka0J0YUJXZ1pPbG1ubDlIbU5CS0FXTDFGUUE?oc=5
+   Title: Dunham's Sports ready to open Friday
+   Status hint: Opening | Industry: Specialty / Other
+4. URL: https://www.msn.com/en-us/money/companies/why-grocery-outlet-is-closing-some-stores-in-california/ar-AA1ZIBTs
+   Title: Why Grocery Outlet is closing some stores in California
+   Status hint: Closing | Industry: Specialty / Other
+5. URL: https://www.aol.com/news/final-step-just-shoes-ridgewood-173700493.html
+   Title: Final Step: Just Our Shoes In Ridgewood Closing After 43 Years
+   Status hint: Closing | Industry: Specialty / Other
+6. URL: https://nationaltoday.com/us/ca/clovis/news/2026/04/11/clovis-planet-fitness-reopens-after-safety-closure/
+   Title: Clovis Planet Fitness Reopens After Safety Closure
+   Status hint: Opening | Industry: Specialty / Other
+7. URL: https://www.aol.com/trader-joe-open-2-stores-200412695.html
+   Title: Trader Joe’s to open 2 new stores in California this year
+   Status hint: Opening | Industry: Specialty / Other
+8. URL: https://www.aol.com/news/2-longtime-triangle-stores-closing-181044421.html
+   Title: 2 longtime Triangle stores are closing. Here are the last days to shop
+   Status hint: Closing | Industry: Specialty / Other
+9. URL: https://www.aol.com/starbucks-closes-five-stores-seattle-205900453.html
+   Title: Starbucks closes five new stores in Seattle
+   Status hint: Closing | Industry: Specialty / Other
+10. URL: https://nationaltoday.com/us/ca/san-diego/news/2026/04/11/the-kebab-shop-to-open-new-location-in-kingwood/
+   Title: The Kebab Shop to Open New Location in Kingwood
+   Status hint: Opening | Industry: Specialty / Other
+11. URL: https://news.google.com/rss/articles/CBMixgFBVV95cUxPRGJIUU1qaWNUWTBGd0hpb0FZSklPZnp5c0V0NDQza2c3cVpTcFhpX3NzMl85NDlZd1hUamdFUFRfZWxtb1lCRzg1RWtFRXdLSlc0U2M0RGZwUUNQNk40WmFlenZ2NTVGeEZBTjVFZjFRNFR2RkM1eGF0YTVuWkZpNHhKMHJUaUVMOGpiMkNnR1dNYW1HX0xlUWhwTzNKZm9VU1ZqMlktemNfRDhENl9WZkFsU2JFNGg2aE5odzN3elUyakhqdFE?oc=5
+   Title: Taiwan-Based 85°C Bakery Cafe to Open First Colorado Location in Aurora
+   Status hint: Opening | Industry: Specialty / Other
+12. URL: https://www.aol.com/walgreens-9-other-major-stores-100500633.html
+   Title: Walgreens and 9 Other Major Stores That Are Closing in April
+   Status hint: Closing | Industry: Specialty / Other
+13. URL: https://www.msn.com/en-us/money/companies/kohl-s-stores-closing-update-ceo-reveals-what-happens-next-after-dozens-of-locations-shuttered-last-year/ar-AA1YZG1I?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+   Title: Kohl’s stores closing update: CEO reveals what happens next after dozens of locations shuttered last year
+   Status hint: Closing | Industry: Specialty / Other
+14. URL: https://www.chesterstandard.co.uk/news/26007674.lidl-set-open-50-new-stores---including-cheshire/
+   Title: Lidl to open more than 50 stores creating close to 2,000 jobs
+   Status hint: Opening | Industry: Specialty / Other
+15. URL: https://www.birminghammail.co.uk/whats-on/whats-on-news/huge-new-birmingham-superpark-activity-33734837
+   Title: Huge new Birmingham SuperPark activity centre for families to open at former casino site
+   Status hint: Opening | Industry: Specialty / Other
+16. URL: https://news.google.com/rss/articles/CBMilgFBVV95cUxPM3dVSlFjRHhrSEhlUEplY09ISno1M3pBSDhwaEw4VDQySzRPNmF4MXZwTlJKdVIydEh3YllMdG13ME1iV1N2YXhEbXJJTUIyYWQwZlRlWmFaeGd4WldVNG9iZWtRTlY4TkhyLTlhc1NicWJEdkJBZGhKU2xjWnBqN1dsTDNsem9nV09PUlNiMzhkUEVORHc?oc=5
+   Title: Graze Craze Plating Up New Highlands Ranch Location
+   Status hint: Opening | Industry: Specialty / Other
+17. URL: https://news.google.com/rss/articles/CBMitAJBVV95cUxPUW9aczUyZzQtWGtyWmMxVURRMWZIMG1GMF9fbVVDeFB0NVF5Ty1xOF8yWllwZmo1ci1hZEV0cEpOWFBCR0doWXNFQmd5VFlfamM2RWp0TVJJZ3Y5WnRhNHJ1bG9oWjhzS1hZSEhjd3VaZnYtOUZoZ01ORzFkUlpnWG1HWk03MWxLRHFEaTJLZjlMeDFMQjRRVU1zVjh5WmtqMEVRdnB5VURCUHZPNGJzOWpuMldlZ25tQUFPZ2RwbkdhbmxOMHdFaTYwMFNqZzA2bjlvRWJTOWUxX21YdjRnTnZ1aXFFbTR4TWhKZ2I0VG9RM2dRYTdoMnAxeVBKMnZQMVFwM3M3alZOMUFTVkRuVEFLZlpXQTI4eDhFNzlUMUQzMmVjNHh5T1FtQnFFdTg0aDNXNQ?oc=5
+   Title: Saks Fifth Avenue in Bala Cynwyd is closing
+   Status hint: Closing | Industry: Specialty / Other
+18. URL: https://disneyparksblog.com/products/new-star-wars-day-merch-coming-to-disney-store-and-disney-parks/
+   Title: New Star Wars Day Merch Coming to Disney Store and Disney Parks
+   Status hint: Opening | Industry: Specialty / Other
+19. URL: https://www.fakta.co/universal-hollywood-drift-coaster-2027
+   Title: Universal Orlando Progresses Fast & Furious: Hollywood Drift Coaster for 2027 Opening
+   Status hint: Closing | Industry: Specialty / Other
+20. URL: https://www.msn.com/en-us/money/smallbusiness/cvs-is-closing-hundreds-of-stores-and-opening-these-20-instead/ar-AA1ZS34H
+   Title: CVS is closing hundreds of stores—and opening these 20 instead
+   Status hint: Closing | Industry: Specialty / Other
+21. URL: https://www.msn.com/en-us/foodanddrink/foodnews/trader-joe-s-opening-new-locations-in-12-states/ar-AA20BNax?gemSnapshotKey=GM23F5F3E6-snapshot-1&uxmode=ruby
+   Title: Trader Joe’s opening new locations in 12 states
+   Status hint: Opening | Industry: Specialty / Other
+22. URL: https://www.thestreet.com/travel/popular-amusement-park-adventure-landing-closes-another-location-exits-florida
+   Title: Popular amusement park closes another location, exits state
+   Status hint: Closing | Industry: Specialty / Other
+23. URL: https://whatnow.com/austin/restaurants/tejas-meat-supply-looks-to-be-planning-taylor-location/
+   Title: Tejas Meat Supply Looks to Be Planning Taylor Location
+   Status hint: Opening | Industry: Specialty / Other
+24. URL: https://www.dorsetecho.co.uk/news/26008681.lidl-reveals-5-dorset-locations-targeted-new-stores/
+   Title: Lidl reveals the 5 locations in Dorset where it wants to build new stores
+   Status hint: Opening | Industry: Specialty / Other
+25. URL: https://www.thestreet.com/retail/huge-jewelry-retailer-signet-closing-100-stores-folding-two-brands
+   Title: Huge jewelry retailer closing 100 stores, folding two brands
+   Status hint: Closing | Industry: Specialty / Other
+26. URL: https://mickeyvisit.com/disneyland-closing-restaurant-permanently-april-10-2026/
+   Title: Disneyland Closing Dining Location Permanently After Two Decades and Preparing For New Tenant
+   Status hint: Closing | Industry: Specialty / Other
+27. URL: https://www.orilliamatters.com/local-news/elevated-dining-moxies-expanding-with-new-location-in-region-12121881
+   Title: 'Elevated dining': Moxies expanding with new location in region
+   Status hint: Opening | Industry: Specialty / Other
+28. URL: https://www.msn.com/en-us/travel/news/costco-to-open-standalone-gas-stations-starting-in-june-in-california-and-beyond/ar-AA20BEyB
+   Title: Costco to open standalone gas stations starting in June in California and beyond
+   Status hint: Opening | Industry: Specialty / Other
+29. URL: https://www.bizjournals.com/southflorida/news/2026/04/10/cameron-mitchell-del-mar-open-west-palm-beach.html
+   Title: Cameron Mitchell and Miami bakery expand in South Florida, Wayfair to make debut (Photos)
+   Status hint: Opening | Industry: Specialty / Other
+30. URL: https://people.com/trader-joes-is-opening-18-new-stores-across-these-12-states-11947602
+   Title: Trader Joe's Is Opening 18 New Stores Across These 12 States
+   Status hint: Opening | Industry: Specialty / Other
+
+============================================================
+END — copy Claude's Markdown table into claude_response.txt
+============================================================
+
+============================================================
+PASTE INTO CLAUDE.AI — Part 8 of 10
+============================================================
+
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+1. URL: https://www.mlive.com/news/ann-arbor/2026/04/midwest-grocer-to-open-first-michigan-store-in-ann-arbor-next-week.html
+   Title: Midwest grocer to open first Michigan store in Ann Arbor next week
+   Status hint: Opening | Industry: Specialty / Other
+2. URL: https://m.dailyhunt.in/news/india/english/upstox-epaper-upstox/nifty50+sensex+today+wall+street+cues+fii+activity+key+things+to+know+before+markets+open+on+april+10-newsid-n707907522
+   Title: NIFTY50, SENSEX today: Wall Street cues, FII activity, key things to know before markets open on April 10
+   Status hint: Opening | Industry: Specialty / Other
+3. URL: https://www.disneydining.com/universal-citywalk-closure-cj1/
+   Title: Universal Announces Permanent CityWalk Closure From April 13
+   Status hint: Closing | Industry: Specialty / Other
+4. URL: https://www.thescottishsun.co.uk/money/16140464/popular-new-york-style-pizza-place-open-fourth-scots/
+   Title: Popular New York-style pizza place to open fourth Scots branch in Glasgow city centre
+   Status hint: Opening | Industry: Specialty / Other
+5. URL: https://www.theconnecticutscoop.com/all-hartford-county-posts/south-windsor-scoop-the-wicked-press-opening-on-april-18th
+   Title: SOUTH WINDSOR SCOOP: The Wicked Press opening on April 18th
+   Status hint: Opening | Industry: Specialty / Other
+6. URL: https://www.msn.com/en-us/money/companies/aldi-opening-5-stores-in-florida-in-april-how-to-get-free-stuff/ar-AA1ZQ4u0
+   Title: Aldi opening 5 stores in Florida in April, how to get free stuff
+   Status hint: Opening | Industry: Specialty / Other
+7. URL: https://www.newsobserver.com/living/food-drink/article315369506.html
+   Title: New coffee shop will open its first US location in Raleigh. Here’s when
+   Status hint: Opening | Industry: Specialty / Other
+8. URL: https://communityimpact.com/houston/katy-fulshear/business/2026/04/10/la-z-boy-opens-7th-greater-houston-location-in-katy/
+   Title: La-Z-Boy opens 7th Greater Houston location in Katy
+   Status hint: Opening | Industry: Specialty / Other
+9. URL: https://news.google.com/rss/articles/CBMivwFBVV95cUxPRkQ1b24tYWRRd0NySmJoOW1RN1hsNlZNV19wR252bGlPUElsLUltejZRWXhJRTFuZ2h2WHJBWWNhZzB0dXJIdFJmamFrUFZhbVg3RmZlNHdtQnB6OGZ3YzhtMEFmRUZCbXpLN1kzUGc1Y3cxSnFFTjZCX3pfYy1GenhLTFdwampVMHdobENQVk5KazN4ZFNhRXJHVFM2cHc3SFM4VE16VXgyM3Z3ZUxRdzhFYlVvX2o1WndiNjVuZw?oc=5
+   Title: 65 locations at risk as well-known burger chain files for bankruptcy
+   Status hint: Closing | Industry: Specialty / Other
+10. URL: https://www.msn.com/en-us/money/companies/another-major-retailer-is-closing-over-100-stores/ar-AA1ZjTSr?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+   Title: Another major retailer is closing over 100 stores
+   Status hint: Closing | Industry: Specialty / Other
+11. URL: https://www.aol.com/news/eastlake-manufacturing-plant-conn-selmer-160611744.html
+   Title: Eastlake manufacturing plant Conn-Selmer sets closing date
+   Status hint: Closing | Industry: Specialty / Other
+12. URL: https://storebrands.com/loves-travel-stops-opens-three-new-locations
+   Title: Love’s Travel Stops Opens Three New Locations
+   Status hint: Opening | Industry: Specialty / Other
+13. URL: https://www.msn.com/en-us/money/companies/iconic-burger-pizza-chains-close-stores-as-bankruptcy-sale-looms/ar-AA1Z5SHV
+   Title: Iconic burger, pizza chains close stores as bankruptcy sale looms
+   Status hint: Closing | Industry: Specialty / Other
+14. URL: https://news.google.com/rss/articles/CBMizAFBVV95cUxQbUdMTWc0T0QzZkdFZmUtUTBHb3U0eGIwbm9WOHJkc1F6anlpanhWZm04MlR6SnVwYUhjV1NPQ0d0QWM4anVLVl9jR3hXRGZoTm5iUFdwQ3Jwb2FnYUlwb05hT2ozY2dKT191WFVRTm1IZ1FnaTV4X0JFbDU1UFh2WXpmZEVUU2gzbko2S2hCYWJ0cEMwc1ZicmNhMHk4VGhhUEI5b2FPVFQ1WWM3RzJsbW9GYTJCNDBiRXh2VmRZdUJTREI1TGtvOTBTd3E?oc=5
+   Title: California Closets to Open New Location at The Shops at SunVet in Holbrook
+   Status hint: Opening | Industry: Specialty / Other
+15. URL: https://whatnow.com/miami/restaurants/stylish-new-cocktail-bar-with-a-modern-spin-on-classics-to-open-at-four-seasons/
+   Title: Stylish New Cocktail Bar With a Modern Spin on Classics to Open at Four Seasons
+   Status hint: Opening | Industry: Specialty / Other
+16. URL: https://nationaltoday.com/us/fl/winter-haven/news/2026/04/10/publix-expands-with-5-new-stores-across-southeast-by-april-2026/
+   Title: Publix Expands with 5 New Stores Across Southeast by April 2026
+   Status hint: Opening | Industry: Specialty / Other
+17. URL: https://www.msn.com/en-us/foodanddrink/foodnews/most-unique-magic-experience-in-the-world-new-magic-mansion-to-open-in-chicago-this-month/ar-AA20mH03
+   Title: 'Most unique magic experience in the world': New magic mansion to open in Chicago this month
+   Status hint: Opening | Industry: Specialty / Other
+18. URL: https://communityimpact.com/houston/bryan-college-station/government/2026/04/10/bryan-isd-meets-zeitmans-to-close-temporarily-5-stories-from-april-6-10-to-catch-up-on-in-bryan-college-station/
+   Title: Bryan ISD meets, Zeitman's to close temporarily: 5 stories from April 6-10 to catch up on in Bryan, College Station
+   Status hint: Closing | Industry: Specialty / Other
+19. URL: https://www.aol.com/news/stories-q-five-below-now-165559028.html
+   Title: Your Stories Q&A: Five Below now open in Oswego
+   Status hint: Closing | Industry: Specialty / Other
+20. URL: https://www.tsln.com/news/registration-open-for-the-2026-bif-symposium-and-convention-in-boise/
+   Title: Registration Open for the 2026 BIF Symposium and Convention in Boise
+   Status hint: Opening | Industry: Specialty / Other
+21. URL: https://www.tallahassee.com/story/news/local/2026/04/10/tallahassee-flea-market-exchange-launches-with-plans-for-expansion/89500081007/
+   Title: Tallahassee Flea Market Exchange launches with plans for major expansion
+   Status hint: Opening | Industry: Specialty / Other
+22. URL: https://42freeway.com/news/adam-outlet-glassboro-closing-deptford-location-remains-open/
+   Title: Adam Outlet Glassboro Closing. Deptford Location Remains Open
+   Status hint: Closing | Industry: Specialty / Other
+23. URL: https://www.drovers.com/news/registration-open-2026-bif-symposium
+   Title: Registration Open for 2026 BIF Symposium
+   Status hint: Opening | Industry: Specialty / Other
+24. URL: https://www.barchart.com/story/news/1245032/pesorama-announces-grand-opening-of-store-35-on-april-11th-in-parque-tepeyac
+   Title: PesoRama Announces Grand Opening of Store #35 on April 11th in Parque Tepeyac
+   Status hint: Opening | Industry: Specialty / Other
+25. URL: https://www.aol.com/news/list-where-america-car-mart-161638802.html
+   Title: LIST: Here’s where America’s Car-Mart closed 42 of its dealerships
+   Status hint: Closing | Industry: Specialty / Other
+26. URL: https://www.crosstimbersgazette.com/2026/04/10/great-clips-to-add-another-location-in-southern-denton-county/
+   Title: Great Clips to add another location in southern Denton County
+   Status hint: Opening | Industry: Specialty / Other
+27. URL: https://whatnow.com/jacksonville/restaurants/blackberry-creamery-cafe-and-more-opening-on-former-normandy-boulevard-rallys-lot/
+   Title: Blackberry Creamery & Cafe (and More) Opening on Former Normandy Boulevard Rally’s Lot
+   Status hint: Closing | Industry: Specialty / Other
+28. URL: https://africa.businessinsider.com/retail/more-than-1500-stores-are-set-to-close-across-the-us-in-2026-heres-the-list/8b817px
+   Title: More than 1,500 stores are set to close across the US in 2026. Here's the list.
+   Status hint: Closing | Industry: Specialty / Other
+29. URL: https://13wham.com/news/good-day-arc-rochester/dunk-bright-opening-in-henriettas-south-town-plaza
+   Title: Dunk & Bright opening in Henrietta's South Town Plaza
+   Status hint: Opening | Industry: Specialty / Other
+30. URL: https://www.fenlandcitizen.co.uk/news/excitement-grows-ahead-of-new-crazy-golf-venue-opening-tomor-9461344/
+   Title: Excitement grows ahead of new crazy golf venue opening tomorrow
+   Status hint: Opening | Industry: Specialty / Other
+
+============================================================
+END — copy Claude's Markdown table into claude_response.txt
+============================================================
+
+============================================================
+PASTE INTO CLAUDE.AI — Part 9 of 10
+============================================================
+
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+1. URL: https://www.floridatoday.com/story/entertainment/dining/2026/04/10/goombays-beachside-announces-closing-ending-the-20-year-run/89549878007/
+   Title: Goombay's Beachside closing after 20 years in Satellite Beach
+   Status hint: Opening | Industry: Specialty / Other
+2. URL: https://www.msn.com/en-us/money/companies/allbirds-once-worth-4b-closes-all-stores-avoids-bankruptcy/ar-AA1ZVAA3
+   Title: Allbirds, once worth $4B, closes all stores, avoids bankruptcy
+   Status hint: Closing | Industry: Specialty / Other
+3. URL: https://fathomjournal.org/3aaa3246smm/cacb24c7-ZuQCvHyGHMw.html
+   Title: Brandon Nakashima Favored In US Open Clash With Jesper De Jong [03b27f]
+   Status hint: Opening | Industry: Specialty / Other
+4. URL: https://www.orlandosentinel.com/2026/04/10/citywalk-epic-preview-center-closing-soon-five-guys-coming-this-summer/
+   Title: CityWalk: Epic preview center closing soon; Five Guys coming this summer
+   Status hint: Opening | Industry: Specialty / Other
+5. URL: https://wdwnt.com/2026/04/universal-legacy-store-returning-burger-king-whopper-bar-closing/
+   Title: Universal Legacy Store Returning, Burger King Whopper Bar Closing, & More Coming to Universal Orlando
+   Status hint: Closing | Industry: Specialty / Other
+6. URL: https://www.thecomet.net/news/26011327.letchworths-new-hickorys-smokehouse-open-today/
+   Title: Letchworth's new Hickory's Smokehouse to open today ahead of schedule
+   Status hint: Opening | Industry: Specialty / Other
+7. URL: https://www.furnituretoday.com/furniture-retailer/mor-furnitures-newest-store-bolsters-idaho-presence/
+   Title: Mor Furniture’s newest store bolsters Idaho presence
+   Status hint: Opening | Industry: Specialty / Other
+8. URL: https://news.google.com/rss/articles/CBMilgFBVV95cUxQSUhQWTZHY0dwbXoya2ZaQmJzMWdqUlBTRFZha2ZqaUpHaXlEYW9VQ3hkNXJIQ3NkY2tNQllYak9qUnQ0aklWWG9ZVnF6M1RSNThMQjAxOF9yUzYyQ003Uy00TTFPSk9tZVpjYm9EbWl5eG5ZVW5DSjRkdWxVSUJmbDYyLTNWcF9mM1B5TVh6QkVJb1BZMUE?oc=5
+   Title: Historic Collingswood theater is now a thrift store where you can sell your clothes for $1 a day
+   Status hint: Opening | Industry: Specialty / Other
+9. URL: https://telegrafi.com/en/amp/Applications-are-open-for-the-prestigious-CHA-hotel-training-in-Kosovo-2676697019
+   Title: Applications open for prestigious CHA hospitality training in Kosovo
+   Status hint: Opening | Industry: Specialty / Other
+10. URL: https://www.msn.com/en-us/travel/tripideas/these-4-houston-area-water-parks-are-opening-for-weekend-fun-before-summer-here-is-how-soon/ar-AA20hxjb
+   Title: These 4 Houston-area water parks are opening for weekend fun before summer. Here is how soon.
+   Status hint: Opening | Industry: Specialty / Other
+11. URL: https://nationaltoday.com/us/co/loveland/news/2026/04/10/loveland-ski-area-to-close-early-amid-challenging-colorado-season/
+   Title: Loveland Ski Area to Close Early Amid Challenging Colorado Season
+   Status hint: Closing | Industry: Specialty / Other
+12. URL: https://www.thewestmorlandgazette.co.uk/news/26010791.popular-dog-day-open-leighton-halls-2026-season/
+   Title: Popular ‘Dog Day’ to open Leighton Hall’s 2026 season
+   Status hint: Opening | Industry: Specialty / Other
+13. URL: https://www.pennlive.com/life/2026/04/heres-where-trader-joes-will-open-its-new-stores-across-12-states.html
+   Title: Here’s where Trader Joe’s will open its new stores across 12 states
+   Status hint: Opening | Industry: Specialty / Other
+14. URL: https://www.express.co.uk/news/uk/2192537/aldi-plans-change-supermarkets-2026/amp
+   Title: Aldi announces plans for major change across 532 stores by end of 2026
+   Status hint: Opening | Industry: Specialty / Other
+15. URL: https://www.rli.uk.com/highcross-leicester-reveals-upcoming-pureseoul-opening/
+   Title: Highcross Leicester Reveals Upcoming PURESEOUL Opening
+   Status hint: Opening | Industry: Specialty / Other
+16. URL: https://retailtimes.co.uk/community-shop-and-ocado-retail-celebrate-decade-of-community-support-with-opening-of-new-store/
+   Title: Community Shop and Ocado Retail celebrate decade of community support with opening of new store
+   Status hint: Opening | Industry: Specialty / Other
+17. URL: https://news.google.com/rss/articles/CBMixAFBVV95cUxQV2pPaGdYM1V5anYtWDlPaUpNVVRWczJsaEJCS3EzSUltWTlNaDJiOHFGdWZJT3EwdHYydjg1VDYzbDd3R1RybzBQdXN0aC1sUXNKcnJ0ZEVTaERqVFV1MFM3QzBFaC02dC0teHV2V3JvM1pkUHFuYWFhbm5RY2dISEE5c3p6WW11RlpTb05TTG9KWVZUNE5makhyaVhMRVZIc0xoVWhwZ01FemZkRXNackpGbGJyRE5zV2ZSVVh5WVJFTWNz0gHYAUFVX3lxTE82aE9haXp5YUQwcEFaOE5OT1A0VDFzOFJoRGFuME96Y3lFWFBTdXhpRER5MjV4eHlNSk0wSmxzaWJjNGpsNVBtcnRSTzhibVE1TjNTbXc4cWVielc0QXV0UmYwMTdyc1JqbmFfWW9ycGdoMjFXUDZCZWZjOHF4U2lIY3B4YnNFY0xpMTlBSjBIQzBhNnhfT3ZsWE1ZenQ2ZkE2azlYWGo4b3p2NWI4RjNsRjN4LXljd2JFYTRrR3U0Q3hCYklsSE5qNHc2S081dlcwandfMlE5TA?oc=5
+   Title: Beloved burger chain just closed its last location: ‘Your support has meant the world’
+   Status hint: Closing | Industry: Specialty / Other
+18. URL: https://www.ipswichstar.co.uk/news/26006675.former-charity-shop-ipswich-set-open-new-butchers/
+   Title: Ipswich landlord to open new shop in town centre
+   Status hint: Opening | Industry: Specialty / Other
+19. URL: https://www.lansingstatejournal.com/story/entertainment/dining/2026/04/10/garage-bar-mexican-restaurant-el-camino-hannah-plaza-msu/88104323007/
+   Title: Mexican-themed 'garage bar' planned near MSU. When it could open
+   Status hint: Opening | Industry: Specialty / Other
+20. URL: https://www.delawareonline.com/story/entertainment/2026/04/10/leftys-alley-eats-delays-newark-opening-to-july/89537212007/
+   Title: Lefty's Alley & Eats to open in The Grove in Newark in July
+   Status hint: Opening | Industry: Specialty / Other
+21. URL: https://meyka.com/blog/april-10-stassfurt-outlet-sells-imperfect-goods-as-resale-demand-rises-1004/
+   Title: April 10: Stassfurt Outlet Sells Imperfect Goods as Resale Demand Rises
+   Status hint: Closing | Industry: Specialty / Other
+22. URL: https://open.kg/en/news/local-news/90282-v-tretjakovskoj-galeree-otkrylas-vystavka-nasledie-jepohi-semen-chujkov.html
+   Title: The exhibition "Heritage of the Era. Semyon Chuykov" has opened at the Tretyakov Gallery.
+   Status hint: Opening | Industry: Specialty / Other
+23. URL: https://www.bizjournals.com/tampabay/news/2026/04/10/publix-stores-opening-soon-tampa-bay.html
+   Title: Publix opens new stores across Tampa Bay
+   Status hint: Opening | Industry: Specialty / Other
+24. URL: https://www.morningadvertiser.co.uk/Article/2026/04/10/lidl-to-open-first-pub-at-dundonald-store/
+   Title: Lidl to open first pub at Dundonald store
+   Status hint: Opening | Industry: Specialty / Other
+25. URL: https://servicedapartmentnews.com/news/property/frasers-hospitality-asia-pipeline/
+   Title: Frasers Hospitality to open 18 serviced properties in Asia by 2028
+   Status hint: Opening | Industry: Specialty / Other
+26. URL: https://www.salisburyjournal.co.uk/news/national/uk-today/26009433.bodycare-return-uk-high-street-2026-25-new-stores/
+   Title: Bodycare will return to high street in 2026 after closing 150 stores last year
+   Status hint: Opening | Industry: Specialty / Other
+27. URL: https://news.google.com/rss/articles/CBMilgFBVV95cUxQaE96VXZlWmxXUjFXck1HR0w1NVBvNnFpaHBaRUZ6MlJ3X3NxR3ZCUWNJZkQwTFZKdHRQOWVNU3AxNXJIbC1tQTFUcDdYOHpkS29GQjZkVHFMVThFLTJPMU1TOElyMVVYb01OdmRBWFUweFlFLWhYZXVYbE5PTVRUMXpTa0pzVjZkSi1sX3E5ZlRVek83eVE?oc=5
+   Title: Trumbull Mall's Apple Store to close, one of three nationwide
+   Status hint: Closing | Industry: Specialty / Other
+28. URL: https://news.google.com/rss/articles/CBMirAFBVV95cUxNX2dVNlRGZnY1UUZVRTk0YXM0N1c1S3JIUFVGNXlFUThEdFk5eXMzRU5aLVB0RmZTYlRXbXdObXpaVHRQZkJmS0hLTGR6dmtpbENpQnlJb0RpNldHUHE0VDdVbmJlSGlXSVYtbTdiQW1rbGpmYWRiN1hMREJVS2ZRb2J1UU9RS2h5UGJ6UHRUV2ZWNzgxdGVyTEJhTjY3SmgyNjN4QzRxWlRJTnJJ?oc=5
+   Title: Fat Head's Saloon on Pittsburgh's South Side to close
+   Status hint: Closing | Industry: Specialty / Other
+29. URL: https://www.buckinghamshirelive.com/news/uk-world-news/lidl-says-open-50-new-10907683
+   Title: Lidl says it will open 50 new stores in next year and create 2,000 jobs including Gloucestershire
+   Status hint: Opening | Industry: Specialty / Other
+30. URL: https://news.google.com/rss/articles/CBMixAFBVV95cUxQTWoySDZMa2c5N3N4SnRJTmIyZndCY2dKY3A4dHBuVks5RTJXdWUwOTlIN1RfaHlleE9Dc3lIZTFqRGVsc3hNTS03Njd4cWFlZm1KLXQtRkwyc3dTZXJtNUVEVW1xd3N3SGpkUjQ0VGFBNWV1c1ZoaVZ0SjQ3RDg2NUtFWGM1bkw5UlpvQzRNSnpLaHNheTNTWTF4YUdKUWFsRy1BM2pvVVlhTVMxdGo3bThtY0ZKdVVVREdVd29aOWdqOV9f?oc=5
+   Title: Applebee's franchisee bankruptcy puts over 50 southern locations at risk
+   Status hint: Closing | Industry: Specialty / Other
+
+============================================================
+END — copy Claude's Markdown table into claude_response.txt
+============================================================
+
+============================================================
+PASTE INTO CLAUDE.AI — Part 10 of 10
+============================================================
+
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+1. URL: https://news.google.com/rss/articles/CBMiwwFBVV95cUxNSGRVVi1HT3phU0stRFR0LTEzS05LUV82dzJZSDdIS2hVNHpxV0pIMmFqdjg3dkFZRjJ2VzhfN3BvVG9oRWY1OEdJWDJBRDBTdU5yOEU1QkhRVWFrbUxDektEbThTM01jYlh4SkYzcWJ0QndUQ243c1B0LW9hUXpYSUNMR3ZNaUNmUm54WHE5cndhdDh0MElncTZ3VHJtSzdydnFmQlZzZGFBT2I2TDB4YXI4c2JBaXdPa3BrOU1mVUI1RVU?oc=5
+   Title: Boot Barn to Open First Jersey Shore Location in Mays Landing
+   Status hint: Opening | Industry: Specialty / Other
+2. URL: https://www.derbytelegraph.co.uk/news/derby-news/disruption-warning-ms-close-doors-10908713.amp
+   Title: Disruption warning as M&S to close its doors amid major Derby revamp
+   Status hint: Opening | Industry: Specialty / Other
+3. URL: https://www.retaildive.com/news/walmart-layoffs-illinois-fulfillment-center-nextgen/817053/
+   Title: Walmart to close Illinois fulfillment center
+   Status hint: Opening | Industry: Specialty / Other
+4. URL: https://www.msn.com/en-us/travel/tripideas/slick-city-an-indoor-slide-park-for-kids-is-set-to-open-in-colleyville-this-spring/ar-AA1ZQYH6?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+   Title: Slick City, an indoor slide park for kids, is set to open in Colleyville this spring
+   Status hint: Opening | Industry: Specialty / Other
+5. URL: https://www.dorsetecho.co.uk/news/26008227.aldi-planning-open-new-store-dorset/
+   Title: New Dorset Aldi store planned creating dozens of jobs
+   Status hint: Opening | Industry: Specialty / Other
+6. URL: https://www.usatoday.com/story/grocery/2026/04/09/trader-joes-new-stores-2026-locations/89541331007/
+   Title: Trader Joe's is opening 18 new stores in 12 states. See where
+   Status hint: Opening | Industry: Specialty / Other
+7. URL: https://www.rgj.com/story/life/food/2026/04/09/nick-the-greek-giving-free-lunch-for-2nd-reno-store-opening/89538775007/
+   Title: Nick the Greek giving free lunch for 2nd Reno store opening
+   Status hint: Opening | Industry: Specialty / Other
+8. URL: https://news.google.com/rss/articles/CBMiogFBVV95cUxPckpZSTZWSk04ZUc5RERNZlVkVGw3czZaNGVoOGRidmcwQkt0ZlVNTWR1ZXM3WFJYaVE1d1EyWEV6TUkzbUdxTjFNN2pFUjhYdktkWjdxLVRxUktyYTNQejA3cC1NZFJGaXVrcVdSWm1yWEpvYXViZHQ4WG83U3Jpdk5jSW54R2lyZTFwa1JpT1BIMlF5T2tDS3JZWlQ4WXJ5Wmc?oc=5
+   Title: Opening Day Freebies!
+   Status hint: Opening | Industry: Specialty / Other
+9. URL: https://news.google.com/rss/articles/CBMihgFBVV95cUxNb0xWUHBXdkpoUHc5Q1lTVzJzd2RrSVpuZVBtTllQQ0dZYkc1bEZJUEhSc1NOWXdTNGxCdVU5OURKWGNBRlo5ZWtFRTBmNWE4cW43T3ZrNHIyVzZoQzlsempyLVlIbUZ2SnNQYVdVcGNmY3hVWWd0cENUazhvM3RrWWVaSHlXd9IBhgFBVV95cUxNb0xWUHBXdkpoUHc5Q1lTVzJzd2RrSVpuZVBtTllQQ0dZYkc1bEZJUEhSc1NOWXdTNGxCdVU5OURKWGNBRlo5ZWtFRTBmNWE4cW43T3ZrNHIyVzZoQzlsempyLVlIbUZ2SnNQYVdVcGNmY3hVWWd0cENUazhvM3RrWWVaSHlXdw?oc=5
+   Title: Apple (AAPL) is closing its first unionized store
+   Status hint: Closing | Industry: Specialty / Other
+10. URL: https://superfuture.com/2026/04/new-restaurants-bars/istanbul-kinu-cafe-opening/
+   Title: Istanbul: kinu café opening
+   Status hint: Opening | Industry: Specialty / Other
+11. URL: https://azdailysun.com/news/local/hollywood-video-closing/article_105e54f9-c3df-5727-8e9c-d2fc8f8e4464.amp.html
+   Title: Hollywood Video closing
+   Status hint: Closing | Industry: Specialty / Other
+12. URL: https://whatnow.com/toronto/restaurants/mandys-opening-new-location-in-the-distillery-district/
+   Title: Mandy’s Opening New Location in the Distillery District
+   Status hint: Opening | Industry: Specialty / Other
+13. URL: https://news.google.com/rss/articles/CBMinwFBVV95cUxPU1RIaFg1aDhqTDFRMTJpVjNyQm1sMUFtYjVzOG41aldiMUptUVVVVFhyaHItS0tKcnBJdnJjbHA5LVROTEdxTmdoVzZjRlRvd3VPYjNkWXJYQ08yM3pRYi1xUHJ2RVdrNXNkbGMwNUxuR0tQb0FYeW9hS0Zlbzg1by1KTENYbWJEcXVQQXlOMEstcFh4U2hCQXBNTUNRb00?oc=5
+   Title: Supply chain issues delay opening of H Mart in Haltom City
+   Status hint: Opening | Industry: Specialty / Other
+14. URL: https://nationaltoday.com/us/nd/dickinson/news/2026/04/09/dakota-chappy-relocates-to-dakota-square-mall/
+   Title: Dakota Chappy Relocates Store to Dakota Square Mall
+   Status hint: Opening | Industry: Specialty / Other
+15. URL: https://www.msn.com/en-us/money/companies/buc-ee-s-opens-its-first-ohio-location-see-which-states-are-next/ar-AA20moN1?uxmode=ruby
+   Title: Buc-ee's opens its first Ohio location. See which states are next
+   Status hint: Opening | Industry: Specialty / Other
+16. URL: https://news.google.com/rss/articles/CBMiwgFBVV95cUxOM2VZNXBHQndDQl8zRnpKZGlwVkFmaFBRbC1KMkxURVA3VVpGTDFwOC1SVEEwZV84eTFaTkVBWXpfRGdmaEtpNHFtZmlxTnlENi1LLThFMW5fWmlNSDZHSmwzYUpRQ2ZiZ0pkZThJLU9ObnFXekZ0bEJwa1pSd2xGaWt5V1Z2YkdtMXFBX2lmMnBYZjBBdW42RlFPWDJDRFVsbG1ndkZrVk1GdlpJZ09vbWNKTlRfVElSSEhUR3ZTa0FFQQ?oc=5
+   Title: Five Below now open in Corbin
+   Status hint: Opening | Industry: Specialty / Other
+17. URL: https://www.aol.com/news/pensacola-wawa-store-open-soon-205531479.html
+   Title: New Pensacola Wawa store to open soon
+   Status hint: Opening | Industry: Specialty / Other
+
+============================================================
+END — copy Claude's Markdown table into claude_response.txt
+============================================================
