@@ -12,6 +12,15 @@ from html import unescape
 import base64
 
 # ────────────────────────────────────────────────
+# Output directory setup
+# ────────────────────────────────────────────────
+STORE_NEWS_DIR = Path("data/store_news")
+JSON_ARCHIVE_DIR = Path("data/store_news/json_archive")
+STORE_NEWS_DIR.mkdir(parents=True, exist_ok=True)
+JSON_ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
+
+
+# ────────────────────────────────────────────────
 # Google News URL Decoder
 # ────────────────────────────────────────────────
 
@@ -223,14 +232,12 @@ def fetch_news_for_store(store, is_closure=False):
         if not is_recent(published_str, cutoff_date):
             continue
 
-        # ── FIXED: decode the Google News redirect URL ──────────────────────
         real_link = decode_google_news_url(entry)
-        # ────────────────────────────────────────────────────────────────────
 
         raw_summary = entry.get('summary', 'No summary')
         results.append({
             'title':     entry.title,
-            'link':      real_link,          # ← now the real article URL
+            'link':      real_link,
             'published': published_str,
             'summary':   clean_summary(raw_summary),
             'type':      'Closing' if is_closure else 'Opening',
@@ -303,7 +310,7 @@ else:
     if all_rows:
         df_out = pd.DataFrame(all_rows)
         today_str = date.today().strftime("%Y-%m-%d")
-        filename = f"banner_news_{today_str}.csv"
+        filename = STORE_NEWS_DIR / f"banner_news_{today_str}.csv"
         df_out.to_csv(filename, index=False, encoding='utf-8')
         print(f"\nResults saved to: {filename}")
         print(f"Total articles: {len(all_rows)}")
@@ -318,12 +325,14 @@ json_data = {
     "data": {analyst: items for analyst, items in sorted(analyst_results.items())},
 }
 
+# Keep latest_news.json at root — index.html reads it via GitHub raw URL
 with open('latest_news.json', 'w', encoding='utf-8') as f:
     json.dump(json_data, f, ensure_ascii=False, indent=2)
 
-archive_filename = f"latest_news_{today_str}.json"
+# Archive dated snapshot in data/store_news/json_archive/
+archive_filename = JSON_ARCHIVE_DIR / f"latest_news_{today_str}.json"
 with open(archive_filename, 'w', encoding='utf-8') as f:
     json.dump(json_data, f, ensure_ascii=False, indent=2)
 
-print(f"\n✓ latest_news.json created/updated (last_updated: {today_str})")
+print(f"\n✓ latest_news.json created/updated at root (last_updated: {today_str})")
 print(f"✓ {archive_filename} created as historical snapshot")
