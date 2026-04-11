@@ -774,7 +774,7 @@
                     <h3 class="text-xl font-semibold mb-2 text-gray-300">No recent Daily News articles</h3>
                     <p class="text-gray-500 text-sm">No articles found. Run the scraper to fetch the latest news.</p>
                 </div>
-                <div id="dailyArticlesContainer" class="hidden"></div>
+                <div id="dailyArticlesContainer" class="hidden overflow-x-auto rounded-2xl border border-white/5 fade-in"></div>
             </div>
 
             <div id="dailyExtractionSubTab" class="hidden">
@@ -1781,14 +1781,15 @@
             document.getElementById('updateDate').textContent = data.last_updated || data.generated || 'Unknown';
             const rawItems = data.articles || data.data || [];
             dailyNewsArticles = rawItems.map(item => ({
-                title:    item.title    || item.Title    || '',
-                date:     item.published_date || item.date || item.Date || '',
-                link:     item.direct_link   || item.link || item.Link || '',
-                status:   item.status   || '',
-                industry: item.industry || '',
-                region:   item.region   || '',
-                source:   item.source   || '',
-                keyword:  item.keyword  || ''
+                title:          item.title    || item.Title    || '',
+                date:           item.published_date || item.date || item.Date || '',
+                link:           item.direct_link   || item.link || item.Link || '',
+                status:         item.status   || '',
+                industry:       item.industry || '',
+                region:         item.region   || '',
+                source:         item.source   || '',
+                keyword:        item.keyword  || '',
+                relevance_score: item.relevance_score != null ? item.relevance_score : ''
             }));
             filteredDailyNewsArticles = dailyNewsArticles;
             updateDailyNewsStats(filteredDailyNewsArticles);
@@ -1814,15 +1815,17 @@
             (a.title||'').toLowerCase().includes(term) ||
             (a.industry||'').toLowerCase().includes(term) ||
             (a.source||'').toLowerCase().includes(term) ||
-            (a.status||'').toLowerCase().includes(term));
+            (a.status||'').toLowerCase().includes(term) ||
+            (a.region||'').toLowerCase().includes(term) ||
+            (a.keyword||'').toLowerCase().includes(term));
         updateDailyNewsStats(filteredDailyNewsArticles);
         renderDailyNewsArticles();
     }
 
     function downloadDailyCSV() {
         if (!filteredDailyNewsArticles.length) return;
-        const h = ['date','title','link'];
-        const csv = [h.join(','), ...filteredDailyNewsArticles.map(r => h.map(k => `"${(r[k]||'').replace(/"/g,'""')}"`).join(','))].join('\n');
+        const h = ['status','industry','region','title','source','date','link','keyword','relevance_score'];
+        const csv = [h.join(','), ...filteredDailyNewsArticles.map(r => h.map(k => `"${(r[k]!=null?r[k]:'').toString().replace(/"/g,'""')}"`).join(','))].join('\n');
         dlCSV(csv, `daily_news_${TODAY}.csv`);
         showToast('Daily News CSV downloaded!');
     }
@@ -1837,54 +1840,50 @@
         }
         document.getElementById('dailyEmptyState').classList.add('hidden');
         container.classList.remove('hidden');
-        const grid = document.createElement('div');
-        grid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5';
-        filteredDailyNewsArticles.forEach(a => {
-            const w = document.createElement('div');
-            w.innerHTML = createDailyNewsCard(a, term);
-            if (w.firstElementChild) grid.appendChild(w.firstElementChild);
-        });
-        container.innerHTML = '';
-        container.appendChild(grid);
-    }
-
-    function createDailyNewsCard(article, term = '') {
-        let dateText = article.date || 'Date not available';
-        try {
-            const d = new Date(dateText);
-            if (!isNaN(d.getTime())) dateText = d.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' });
-        } catch {}
-        const _key = article.link || '';
-        const _isNew = isNew(article.date, _key);
-        const newBadge = _isNew ? `<span class="badge-new ml-2"><i class="fas fa-bolt" style="font-size:0.5rem"></i>NEW</span>` : '';
-        const newGlowClass = _isNew ? ' card-new-glow' : '';
-        const statusClass = article.status === 'Opening' ? 'badge-opening' : article.status === 'Closing' ? 'badge-closing' : '';
-        const statusBadge = article.status
-            ? `<span class="px-2 py-0.5 rounded-full text-xs font-bold text-white ${statusClass}">${escapeHtml(article.status)}</span>`
-            : '';
-        const metaParts = [article.industry, article.region, article.source].filter(Boolean);
-        const metaLine = metaParts.length
-            ? `<div class="flex flex-wrap gap-1 mb-2">${metaParts.map(m => `<span class="px-2 py-0.5 rounded text-xs text-gray-400 bg-gray-800">${escapeHtml(m)}</span>`).join('')}</div>`
-            : '';
-        return `
-            <div class="glass-card${newGlowClass} card-accent-blue rounded-2xl p-5">
-                <div class="flex items-center gap-2 mb-3">
-                    <span class="px-3 py-1 rounded-full text-xs font-bold text-white flex items-center gap-1"
-                          style="background:linear-gradient(135deg,#3b82f6,#2563eb);box-shadow:0 4px 14px rgba(59,130,246,0.35)">
-                        <i class="fas fa-rss text-xs"></i>Daily News
-                    </span>${statusBadge}${newBadge}
-                </div>
-                ${metaLine}
-                <h3 class="font-bold text-base mb-3 text-white leading-snug">${highlight(article.title||'', term)}</h3>
-                <a href="${escapeHtml(article.link||'#')}" target="_blank" rel="noopener noreferrer"
-                   onclick="markArticleSeen('${escapeHtml(_key)}', event)"
-                   class="text-blue-400 hover:text-blue-300 text-sm font-medium mb-3 block transition-colors">
-                    View full story <i class="fas fa-external-link-alt text-xs ml-1 opacity-60"></i>
-                </a>
-                <div class="flex items-center text-gray-500 text-xs">
-                    <i class="fas fa-calendar-alt mr-1.5 text-gray-600"></i>${escapeHtml(dateText)}
-                </div>
-            </div>`;
+        const rows = filteredDailyNewsArticles.map((a, i) => {
+            const _key = a.link || '';
+            const _isNew = isNew(a.date, _key);
+            const newBadge = _isNew ? `<span class="badge-new ml-1"><i class="fas fa-bolt" style="font-size:0.5rem"></i>NEW</span>` : '';
+            const statusClass = a.status === 'Opening' ? 'badge-opening' : a.status === 'Closing' ? 'badge-closing' : '';
+            const statusCell = a.status
+                ? `<span class="px-2 py-0.5 rounded-full text-xs font-bold text-white ${statusClass}">${escapeHtml(a.status)}</span>`
+                : '—';
+            const linkCell = a.link
+                ? `<a href="${escapeHtml(a.link)}" target="_blank" rel="noopener noreferrer"
+                      onclick="markArticleSeen('${escapeHtml(_key)}', event)"
+                      class="text-blue-400 hover:text-blue-300 transition-colors" title="${escapeHtml(a.link)}">
+                      <i class="fas fa-external-link-alt"></i>
+                   </a>`
+                : '—';
+            return `<tr>
+                <td class="px-3 py-2 text-gray-500 text-xs">${i + 1}</td>
+                <td class="px-3 py-2">${statusCell}</td>
+                <td class="px-3 py-2 text-gray-300 text-xs">${escapeHtml(a.industry||'—')}</td>
+                <td class="px-3 py-2 text-gray-300 text-xs">${escapeHtml(a.region||'—')}</td>
+                <td class="px-3 py-2 text-white text-xs leading-snug">${highlight(a.title||'', term)}${newBadge}</td>
+                <td class="px-3 py-2 text-gray-400 text-xs whitespace-nowrap">${escapeHtml(a.source||'—')}</td>
+                <td class="px-3 py-2 text-gray-400 text-xs whitespace-nowrap">${escapeHtml(a.date||'—')}</td>
+                <td class="px-3 py-2 text-center">${linkCell}</td>
+                <td class="px-3 py-2 text-gray-300 text-xs">${escapeHtml(a.keyword||'—')}</td>
+                <td class="px-3 py-2 text-gray-300 text-xs text-center">${a.relevance_score !== '' ? escapeHtml(String(a.relevance_score)) : '—'}</td>
+            </tr>`;
+        }).join('');
+        container.innerHTML = `
+            <table class="w-full text-sm text-left data-table">
+                <thead><tr>
+                    <th class="px-3 py-3 w-8">#</th>
+                    <th class="px-3 py-3 whitespace-nowrap">Status</th>
+                    <th class="px-3 py-3 whitespace-nowrap">Industry</th>
+                    <th class="px-3 py-3 whitespace-nowrap">Region</th>
+                    <th class="px-3 py-3">Title</th>
+                    <th class="px-3 py-3 whitespace-nowrap">Source</th>
+                    <th class="px-3 py-3 whitespace-nowrap">Published Date</th>
+                    <th class="px-3 py-3 whitespace-nowrap text-center">Link</th>
+                    <th class="px-3 py-3 whitespace-nowrap">Keyword</th>
+                    <th class="px-3 py-3 whitespace-nowrap text-center">Score</th>
+                </tr></thead>
+                <tbody>${rows}</tbody>
+            </table>`;
     }
 
     // ══ DAILY NEWS EXTRACTION ══

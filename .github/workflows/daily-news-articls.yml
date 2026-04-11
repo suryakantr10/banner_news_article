@@ -27,10 +27,12 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install feedparser pandas python-dateutil
+          pip install feedparser pandas python-dateutil requests python-dotenv googlenewsdecoder
 
       - name: Run scraper
-        run: python daily_news_atricles.py
+        env:
+          ZYTE_API_KEY: ${{ secrets.ZYTE_API_KEY }}
+        run: python daily_news_articles.py
 
       - name: Commit output files
         run: |

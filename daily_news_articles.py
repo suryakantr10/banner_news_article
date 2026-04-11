@@ -5,9 +5,10 @@ Changes from v9:
      Root cause: HEAD redirect lands on domain root, not the article.
      New decode pipeline:
        Tier A: base64 decode of the Google News path segment (most reliable, free)
-       Tier B: Scrape Google's redirect page for data-n-au / c-wiz article URL
-       Tier C: googlenewsdecoder library
-       Tier D: Keep Google News URL (fallback)
+       Tier B: Zyte proxy redirect resolution (follows Google redirect to real article)
+       Tier C: Scrape Google's redirect page for data-n-au / c-wiz article URL
+       Tier D: googlenewsdecoder library
+       Tier E: Keep Google News URL (fallback)
   2. REMOVED HEAD request tier — it was the source of homepage URLs.
   3. IMPROVED geo filter — catches leeds-live, salisburyjournal, deeside, gcnews.com.au
 """
@@ -26,6 +27,10 @@ from urllib.parse import urlparse
 from collections import Counter
 import json
 import os
+import urllib3
+
+# Suppress SSL warnings when Zyte verify=False
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # IPython display is optional (not available in GitHub Actions / plain Python)
 try:
@@ -46,6 +51,32 @@ except ImportError:
         HAS_GND = True
     except Exception:
         HAS_GND = False
+
+# ─────────────────────────────────────────────────────────
+# ZYTE PROXY CONFIGURATION
+# ─────────────────────────────────────────────────────────
+
+# Load .env for local development (no-op if not installed or file missing)
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
+ZYTE_API_KEY = os.environ.get("ZYTE_API_KEY", "")  # set in .env locally or GitHub Secret in CI
+
+ZYTE_PROXIES = {
+    scheme: f"http://{ZYTE_API_KEY}:@api.zyte.com:8011"
+    for scheme in ("http", "https")
+}
+
+# Set to "zyte-ca.crt" if you have the cert, or False to skip SSL verification
+ZYTE_CA_CERT = False
+
+# Persistent Zyte session — reuses connections for speed
+_ZYTE_SESSION = requests.Session()
+_ZYTE_SESSION.proxies.update(ZYTE_PROXIES)
+_ZYTE_SESSION.verify = ZYTE_CA_CERT
 
 # ─────────────────────────────────────────────────────────
 # CONFIG
@@ -258,28 +289,22 @@ GEO_BLOCK_PATTERN = re.compile(
     re.IGNORECASE
 )
 
-# Extended: catches homepage-only resolved domains that slipped through geo filter
 GEO_BLOCK_DOMAINS = {
-    # UK / Ireland
     'iol.co.za', 'ewn.co.za', 'jamaicaobserver.com', 'thesun.co.uk',
     'mirror.co.uk', 'express.co.uk', 'independent.co.uk', 'birminghammail.co.uk',
     'thestar.co.uk', 'examinerlive.co.uk', 'swindonadvertiser.co.uk',
     'punchline-gloucester.com', 'leeds-live.co.uk', 'salisburyjournal.co.uk',
     'deeside.com',
-    # Australia / NZ
     'gcnews.com.au', 'concreteplayground.com',
-    # Other international
     'vijesti.me', 'agoranotizia.it', 'mid-day.com',
     'hollywoodreporterindia.com', 'lifestyleasia.com',
     'starnewskorea.com', 'openthemagazine.com', 'road.cc',
     'infashionbusiness.com',
 }
 
-# Resolved URLs that are just homepages — mark as unresolved
 _HOMEPAGE_PATTERN = re.compile(r'^https?://[^/]+/?$')
 
 def _is_homepage(url: str) -> bool:
-    """Returns True if URL resolves to a bare domain with no article path."""
     return bool(_HOMEPAGE_PATTERN.match(url.rstrip('/')))
 
 def is_geo_relevant(title: str, url: str, source: str) -> bool:
@@ -350,21 +375,14 @@ MIN_RELEVANCE_SCORE = 2
 # ─────────────────────────────────────────────────────────
 # PROXY & BATCH CONFIG
 # ─────────────────────────────────────────────────────────
-# Add your proxies below. Leave the list empty to run without proxies.
-# Format: "http://user:pass@host:port"  or  "http://host:port"
-# Each proxy gets its own persistent session; workers round-robin across them.
-PROXIES = [
-    # "http://user:pass@proxy1.example.com:8080",
-    # "http://user:pass@proxy2.example.com:8080",
-    # "http://user:pass@proxy3.example.com:8080",
-]
+PROXIES = []   # Add your own proxies here if needed (separate from Zyte)
 
-BATCH_SIZE   = 40          # tasks per batch  (lower = gentler on Google)
-BATCH_PAUSE  = (35, 55)    # seconds to sleep between batches
-WORKERS      = 2           # concurrent workers per batch (≤ len(PROXIES) is ideal)
+BATCH_SIZE   = 40
+BATCH_PAUSE  = (35, 55)
+WORKERS      = 2
 
 # ─────────────────────────────────────────────────────────
-# HTTP SESSION POOL  (one session per proxy, or one direct session)
+# HTTP SESSION POOL
 # ─────────────────────────────────────────────────────────
 _BASE_HEADERS = {
     "User-Agent": (
@@ -377,7 +395,7 @@ _BASE_HEADERS = {
     "Referer": "https://news.google.com/",
 }
 
-HEADERS = _BASE_HEADERS   # kept for _decode_scrape compatibility
+HEADERS = _BASE_HEADERS
 
 
 def _make_session(proxy: str | None = None) -> requests.Session:
@@ -388,18 +406,15 @@ def _make_session(proxy: str | None = None) -> requests.Session:
     return s
 
 
-# Build pool: one session per proxy; fall back to a single direct session
 _SESSION_POOL: list[requests.Session] = (
     [_make_session(p) for p in PROXIES] if PROXIES else [_make_session()]
 )
 
-# Thread → session mapping so each worker always uses the same proxy
 _thread_session_map: dict[int, requests.Session] = {}
 _thread_map_lock = threading.Lock()
 
 
 def _get_session() -> requests.Session:
-    """Return the session assigned to the current thread (round-robin across pool)."""
     tid = threading.get_ident()
     with _thread_map_lock:
         if tid not in _thread_session_map:
@@ -408,7 +423,6 @@ def _get_session() -> requests.Session:
     return _thread_session_map[tid]
 
 
-# Legacy alias used by code that predates the pool
 _SESSION = _SESSION_POOL[0]
 
 # ─────────────────────────────────────────────────────────
@@ -431,7 +445,6 @@ def _is_google_url(url: str) -> bool:
     return 'news.google.com' in url
 
 def _is_valid_article_url(url: str) -> bool:
-    """Must be non-Google, non-homepage, with a real article path."""
     if not url or _is_google_url(url):
         return False
     if _is_homepage(url):
@@ -448,8 +461,8 @@ _tier_hits: Counter = Counter()
 
 def _decode_base64(google_url: str) -> str | None:
     """
-    Decode the base64 path segment of a Google News URL.
-    The encoded blob contains the real article URL after a binary header.
+    Tier A: Decode the base64 path segment of a Google News URL.
+    Free, no HTTP call needed.
     """
     try:
         parsed  = urlparse(google_url)
@@ -459,7 +472,6 @@ def _decode_base64(google_url: str) -> str | None:
         path_id = segs[-1].split('?')[0]
         padded  = path_id + '=' * (-len(path_id) % 4)
         raw     = base64.urlsafe_b64decode(padded)
-        # Real URL sits after a variable binary header; scan forward for http
         match = re.search(rb'https?://[\x21-\x7e]+', raw)
         if match:
             candidate = match.group(0).decode('utf-8', errors='ignore').rstrip('.')
@@ -470,11 +482,29 @@ def _decode_base64(google_url: str) -> str | None:
     return None
 
 
+def _decode_zyte(google_url: str) -> str | None:
+    """
+    Tier B: Resolve Google News redirect via Zyte proxy.
+    Zyte follows the redirect chain and returns the final real article URL.
+    """
+    try:
+        response = _ZYTE_SESSION.get(
+            google_url,
+            allow_redirects=True,
+            timeout=10,
+        )
+        final_url = response.url
+        if final_url and _is_valid_article_url(final_url):
+            return _clean_url(final_url)
+    except Exception:
+        pass
+    return None
+
+
 def _decode_scrape(google_url: str) -> str | None:
     """
-    Fetch the Google News article redirect page and extract the real URL.
-    Google embeds it in several places; we try all of them.
-    NOTE: does NOT follow redirects — we parse the page directly.
+    Tier C: Fetch the Google News article redirect page and extract the real URL.
+    Parses data-n-au / c-wiz / meta refresh / window.location from the HTML.
     """
     try:
         resp = _get_session().get(
@@ -483,7 +513,6 @@ def _decode_scrape(google_url: str) -> str | None:
             allow_redirects=False,
             headers={
                 **HEADERS,
-                # Standard Chrome UA — avoids bot detection on some feeds
                 "User-Agent": (
                     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
                     "AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -492,28 +521,24 @@ def _decode_scrape(google_url: str) -> str | None:
             }
         )
 
-        # 1. HTTP Location header (rare for Google News, but check anyway)
         loc = resp.headers.get("Location", "")
         if loc and _is_valid_article_url(loc):
             return _clean_url(loc)
 
         html = resp.text
 
-        # 2. data-n-au="..." — Google's primary article URL attribute
         m = re.search(r'data-n-au=["\']([^"\']+)["\']', html)
         if m:
             url = m.group(1).strip()
             if _is_valid_article_url(url):
                 return _clean_url(url)
 
-        # 3. <c-wiz> jsdata containing the article URL
         m = re.search(r'"(https?://(?!.*news\.google\.com)[^"]{20,})"', html)
         if m:
             url = m.group(1).strip()
             if _is_valid_article_url(url):
                 return _clean_url(url)
 
-        # 4. meta refresh
         m = re.search(
             r'<meta[^>]+http-equiv=["\']refresh["\'][^>]+'
             r'content=["\'][^;]*;\s*url=([^"\'>\s]+)',
@@ -524,7 +549,6 @@ def _decode_scrape(google_url: str) -> str | None:
             if _is_valid_article_url(url):
                 return _clean_url(url)
 
-        # 5. window.location JS redirect
         m = re.search(r"window\.location\s*=\s*['\"]([^'\"]+)['\"]", html)
         if m:
             url = m.group(1).strip()
@@ -537,7 +561,7 @@ def _decode_scrape(google_url: str) -> str | None:
 
 
 def _decode_gnd(google_url: str) -> str | None:
-    """googlenewsdecoder library — last resort."""
+    """Tier D: googlenewsdecoder library — last resort."""
     if not HAS_GND:
         return None
     for attempt in range(2):
@@ -569,16 +593,22 @@ def decode_link(google_url: str) -> str:
     # Small jitter before any HTTP call
     time.sleep(random.uniform(0.1, 0.4))
 
-    # Tier B: scrape Google redirect page for embedded article URL
-    decoded = _decode_scrape(google_url)
+    # Tier B: Zyte proxy redirect resolution
+    decoded = _decode_zyte(google_url)
     if decoded:
-        _tier_hits["B_scrape"] += 1
+        _tier_hits["B_zyte"] += 1
         return decoded
 
-    # Tier C: googlenewsdecoder library
+    # Tier C: scrape Google redirect page for embedded article URL
+    decoded = _decode_scrape(google_url)
+    if decoded:
+        _tier_hits["C_scrape"] += 1
+        return decoded
+
+    # Tier D: googlenewsdecoder library
     decoded = _decode_gnd(google_url)
     if decoded:
-        _tier_hits["C_gnd"] += 1
+        _tier_hits["D_gnd"] += 1
         return decoded
 
     _tier_hits["fail"] += 1
@@ -610,12 +640,10 @@ def fetch_rss(url: str) -> list:
             if b"<html" in content[:200] or b"captcha" in content[:500].lower():
                 print(f"  [RSS BLOCKED] Google returned HTML/captcha — possible rate limit")
             return []
-        # Strip namespace declarations that can break ElementTree
         content = re.sub(rb'\s+xmlns(?::\w+)?="[^"]+"', b'', content)
         root  = ET.fromstring(content)
         items = root.findall(".//item")
 
-        # Cache <source url="..."> for Tier A (free publisher URLs on wire services)
         for item in items:
             try:
                 lnk    = item.findtext("link") or ""
@@ -636,7 +664,7 @@ def fetch_rss(url: str) -> list:
 
 def fetch_one(intent_kw: str, industry: str, industry_terms: list,
               use_sites: bool, region_ceid: str, region_label: str) -> list:
-    time.sleep(random.uniform(0.8, 2.5))   # human-like per-request delay
+    time.sleep(random.uniform(0.8, 2.5))
 
     status  = "Opening" if intent_kw in OPENING_KWS else "Closing"
     country = region_ceid.split(':')[0]
@@ -795,7 +823,6 @@ if all_results:
 
     df["direct_link"] = df["google_link"].map(link_map)
 
-    # Flag homepage-only results as unresolved
     df.loc[df["direct_link"].apply(
         lambda u: isinstance(u, str) and _is_homepage(u)
     ), "direct_link"] = df.loc[df["direct_link"].apply(
@@ -846,7 +873,7 @@ if all_results:
              "published_date", "direct_link", "keyword", "relevance_score"]]
 
     # ─────────────────────────────────────────────────────
-    # EXPORT  news_data.json  (base data for website)
+    # EXPORT  news_data.json
     # ─────────────────────────────────────────────────────
     os.makedirs("docs", exist_ok=True)
 
@@ -861,8 +888,7 @@ if all_results:
     print(f"\n💾 Saved {news_data_path}  ({len(records)} articles)")
 
     # ─────────────────────────────────────────────────────
-    # GENERATE  claude_prompt.txt  (ready to paste into Claude.ai)
-    # Batched at 30 articles so it fits Claude's context window
+    # GENERATE  claude_prompt.txt
     # ─────────────────────────────────────────────────────
     _CLAUDE_BATCH = 30
     batches = [records[i : i + _CLAUDE_BATCH]
@@ -912,7 +938,6 @@ If none, write: None
     prompt_blocks = []
     for idx, batch in enumerate(batches, 1):
         label = (f" — Part {idx} of {len(batches)}" if len(batches) > 1 else "")
-        # Format articles as a numbered list with URL + title for Claude to visit
         articles_text = "\n".join(
             f"{i+1}. URL: {r['direct_link']}\n"
             f"   Title: {r['title']}\n"
@@ -938,7 +963,7 @@ If none, write: None
           f"({len(batches)} batch{'es' if len(batches) > 1 else ''} "
           f"× ≤{_CLAUDE_BATCH} articles)")
 
-    # ── Excel for your own reference ─────────────────────
+    # ── Excel export ──────────────────────────────────────
     fname = f"Retail_Update_{NOW_UTC.strftime('%Y%m%d_%H%M')}.xlsx"
     with pd.ExcelWriter(fname, engine="openpyxl") as writer:
         df.to_excel(writer, index=False, sheet_name="News")
