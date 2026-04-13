@@ -1,7 +1,37 @@
 {
-  "last_updated": "2026-04-12 00:03 UTC",
+  "last_updated": "2026-04-13 00:05 UTC",
   "total": 60,
   "data": [
+    {
+      "date": "April 12, 2026",
+      "url": "https://whatnow.com/memphis/restaurants/beloved-olive-branch-cajun-concept-readying-second-location/",
+      "title": "Beloved Olive Branch Cajun Concept Readying Second Location",
+      "address": ""
+    },
+    {
+      "date": "April 11, 2026",
+      "url": "https://whatnow.com/washington-dc/restaurants/hot-food-hall-concept-bringing-the-heat-to-sterling-summer/",
+      "title": "Hot Food Hall Concept Bringing the Heat to Sterling Summer",
+      "address": "20980 Southbank St, Sterling, VA 20165"
+    },
+    {
+      "date": "April 11, 2026",
+      "url": "https://whatnow.com/memphis/restaurants/new-memphis-area-location-on-the-horizon-for-tazikis-mediterranean-cafe/",
+      "title": "New Memphis-Area Location on the Horizon for Taziki’s Mediterranean Cafe",
+      "address": ""
+    },
+    {
+      "date": "April 11, 2026",
+      "url": "https://whatnow.com/memphis/restaurants/fresh-coffee-shop-nears-memphis-opening/",
+      "title": "Fresh Coffee Shop Nears Memphis Opening",
+      "address": "3895 Hacks Cross Rd, Memphis, TN 38125"
+    },
+    {
+      "date": "April 11, 2026",
+      "url": "https://whatnow.com/washington-dc/restaurants/talkin-tacos-headed-to-oakville-triangle/",
+      "title": "Talkin’ Tacos Headed to Oakville Triangle",
+      "address": ""
+    },
     {
       "date": "April 11, 2026",
       "url": "https://whatnow.com/washington-dc/restaurants/taste-buds-kitchen-cooking-up-something-fresh-and-new-for-loudoun/",
@@ -331,36 +361,6 @@
       "url": "https://whatnow.com/austin/restaurants/kung-fu-tea-opening-in-bastrop-this-summer/",
       "title": "Kung Fu Tea Opening in Bastrop This Summer",
       "address": "663 State Hwy 71, Bastrop, TX 78602"
-    },
-    {
-      "date": "April 10, 2026",
-      "url": "https://whatnow.com/detroit/restaurants/shorts-brewing-staying-up-north-with-third-site-in-traverse-city/",
-      "title": "Short’s Brewing Staying Up North with Third Site in Traverse City",
-      "address": "2024 W South Airport Rd, Traverse City, MI 49684"
-    },
-    {
-      "date": "April 10, 2026",
-      "url": "https://whatnow.com/austin/restaurants/urban-egg-planned-for-northcross-center/",
-      "title": "Urban Egg Planned for Northcross Center",
-      "address": "7600 Burnet Rd #250, Austin, TX 78757"
-    },
-    {
-      "date": "April 10, 2026",
-      "url": "https://whatnow.com/seattle/restaurants/spokane-dive-bar-moezy-inn-set-for-fresh-start-under-new-ownership/",
-      "title": "Moezy Inn in Spokane Set for Fresh Start Under New Owners",
-      "address": "2723 N Monroe St. Spokane, WA 99205"
-    },
-    {
-      "date": "April 10, 2026",
-      "url": "https://whatnow.com/new-york/restaurants/a-greenwich-street-french-restaurant-will-serve-its-final-dinner-on-may-23/",
-      "title": "A Greenwich Street French Restaurant Will Serve Its Final Dinner on May 23",
-      "address": "684 Greenwich St, New York, NY 10014, United States"
-    },
-    {
-      "date": "April 10, 2026",
-      "url": "https://whatnow.com/jacksonville/restaurants/blackberry-creamery-cafe-and-more-opening-on-former-normandy-boulevard-rallys-lot/",
-      "title": "Blackberry Creamery & Cafe (and More) Opening on Former Normandy Boulevard Rally’s Lot",
-      "address": "5615 Normandy Blvd, Jacksonville, FL 32205"
     }
   ]
 }
