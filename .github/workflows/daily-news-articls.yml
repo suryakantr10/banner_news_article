@@ -38,8 +38,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add daily_news_latest.json
-          git add daily_news_*.json || true
+          git add docs/news_data.json || true
           git diff --cached --quiet || git commit -m "Auto-update: Daily news fetch $(date -u +%Y-%m-%d)"
           git pull --rebase origin main
           git push origin main
