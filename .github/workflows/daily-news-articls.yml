@@ -2,11 +2,11 @@ name: Daily Retail News Scraper
 
 on:
   schedule:
-    - cron: "0 6 * * *"  # 6:00 AM UTC daily (11:30 AM IST)
-  workflow_dispatch:  # allows manual triggering from GitHub Actions tab
+    - cron: "30 21 * * *"    # 9:30 PM UTC = 3:00 AM IST
+  workflow_dispatch:
 
 permissions:
-  contents: write  # needed to commit output files back to the repo
+  contents: write
 
 jobs:
   scrape:
@@ -27,7 +27,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install feedparser pandas python-dateutil requests python-dotenv googlenewsdecoder
+          pip install feedparser pandas python-dateutil requests python-dotenv googlenewsdecoder openpyxl
 
       - name: Run scraper
         env:
