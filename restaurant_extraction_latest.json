@@ -1,5 +1,411 @@
 {
   "last_updated": "2026-04-13",
-  "data": [],
-  "non_working": []
+  "data": [
+    {
+      "store_name": "Taquiza Tacos",
+      "location": "8246 NE 2nd Ave, Miami, FL 33138",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "opening; an opening date has not been announced",
+      "short_description": "Taquiza Tacos is opening a new taco shop at 8246 NE Second Avenue in Miami's Little River neighborhood, confirmed by owner Steve Santana. The concept is known for scratch-made tacos using organic, non-GMO blue corn ground in-house, and holds an entry in the Florida Michelin Guide.",
+      "article_link": "https://whatnow.com/miami/restaurants/taquiza-is-opening-in-little-river/"
+    },
+    {
+      "store_name": "Berry Divine Acai Bowls",
+      "location": "1900 N Civic Sq, Goodyear, AZ 85395",
+      "event_type": "Opening",
+      "event_date": "Fall 2026",
+      "status": "when it opens in fall 2026",
+      "short_description": "Berry Divine Acai Bowls has signed a lease at the Civic Square side of Goodyear's GSQ development and will open as the brand's 11th location. The health-focused concept specializes in soft serve acai with customizable fruit and topping combinations.",
+      "article_link": "https://whatnow.com/phoenix/restaurants/berry-divine-acai-bowls-opening-at-goodyears-gsq/"
+    },
+    {
+      "store_name": "Pav's Beanery",
+      "location": "2625 Easton Street, Plain Township (zip not specified)",
+      "event_type": "Opening",
+      "event_date": "Around end of year (year not specified)",
+      "status": "debuted around the end of the year",
+      "short_description": "Pav's Beanery, a new coffee concept from the team behind Pav's Creamery in Akron, is opening at 2625 Easton Street in Plain Township. The shop will serve coffees from North Canton-based roastery M & H Beans and will also offer a few gelato flavors; a menu has not yet been released.",
+      "article_link": "https://whatnow.com/columbus/restaurants/owners-of-pavs-creamery-to-debut-new-coffee-shop-in-plain-township/"
+    },
+    {
+      "store_name": "DQ Hawaiian BBQ",
+      "location": "7423 Fair Oaks Blvd, Suite 9, Carmichael, CA 95608",
+      "event_type": "Opening",
+      "event_date": "Soft opening tentatively planned for next weekend; grand opening in coming weeks (year not specified)",
+      "status": "soft opening tentatively planned for next weekend, pending any last-minute delays",
+      "short_description": "DQ Hawaiian BBQ is opening a new approximately 1,700-square-foot location at 7423 Fair Oaks Blvd, Suite 9 in Carmichael, featuring the brand's signature Hawaiian, Asian, and American fusion menu. A soft opening is tentatively planned for the following weekend, with a grand opening expected in the coming weeks.",
+      "article_link": "https://whatnow.com/sacramento/restaurants/dq-hawaiian-bbq-expanding-to-carmichael-this-spring/"
+    },
+    {
+      "store_name": "Lucca Italian Sandwich Shop (second location)",
+      "location": "905 J St, San Diego, CA 92101",
+      "event_type": "Opening",
+      "event_date": "Summer 2026",
+      "status": "projected Summer 2026 opening",
+      "short_description": "Lucca's Italian Shop Sandwiches is opening a second San Diego location at 905 J Street in the East Village, the former Copa Vida space, with freshly baked focaccia on-site and quality wine and beer. Owner Sabastian Garcia confirmed the new location, which will operate Monday to Saturday from 10:30 a.m. to 7 p.m.",
+      "article_link": "https://whatnow.com/san-diego/restaurants/san-diego-to-welcome-a-second-lucca-italian-sandwich-shop/"
+    },
+    {
+      "store_name": "Real Taco Express",
+      "location": "24020 Orchard Lake Rd, Farmington Hills, MI 48336",
+      "event_type": "Opening",
+      "event_date": "Within a month or further out (year not specified)",
+      "status": "aiming to open in a month or further out",
+      "short_description": "Real Taco Express is planning a third location at 24020 Orchard Lake Road in Farmington Hills, in the former McDonald's space. Owner Silviano Arellano told What Now Detroit he is aiming to open within a month or further out, with a menu focused on authentic Mexican street tacos.",
+      "article_link": "https://whatnow.com/detroit/restaurants/real-taco-express-planning-third-location-in-farmington-hills/"
+    },
+    {
+      "store_name": "Handel's Ice Cream",
+      "location": "6765 Mira Mesa Blvd, Suite 149, San Diego, CA 92121",
+      "event_type": "Opening",
+      "event_date": "Before end of year (year not specified)",
+      "status": "likely set to open before the end of the year",
+      "short_description": "Handel's Ice Cream is opening a new location at 6765 Mira Mesa Blvd, Suite 149 in San Diego, replacing a former Starbucks, per the San Diego Department of Environmental Health and Quality. No official opening date has been confirmed, as the franchise owner had not responded at time of publication.",
+      "article_link": "https://whatnow.com/san-diego/restaurants/handels-ice-cream-expands-with-new-location-in-2026/"
+    },
+    {
+      "store_name": "Pinky's Sports Bar",
+      "location": "810 N 2nd St, Phoenix, AZ 85004",
+      "event_type": "Opening",
+      "event_date": "June 1 (year not specified)",
+      "status": "slated to open June 1",
+      "short_description": "Pinky's, a new sports bar and grill, is slated to open June 1 at 810 N. Second Street in downtown Phoenix, the former home of Angel's Trumpet. The collaboration between Robert Cissell, Ariel Bracamonte, and Chuckie Duff will feature indoor and outdoor seating for 150, pool tables, TVs, and a bar menu of burgers, wings, and nachos.",
+      "article_link": "https://whatnow.com/phoenix/restaurants/pinkys-sports-bar-to-open-in-downtown-phoenix/"
+    },
+    {
+      "store_name": "Bubba's 33",
+      "location": "8268 E Northfield Blvd, Denver, CO 80238",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "transformation already underway; official opening timeline has not yet been announced",
+      "short_description": "Bubba's 33, a family-friendly American restaurant and sports bar backed by the creators of Texas Roadhouse, is converting the former Red Lobster space at 8268 East Northfield Blvd in Denver's Northfield neighborhood. Pre-construction work has begun, though no official opening timeline has been announced.",
+      "article_link": "https://whatnow.com/denver/restaurants/bubbas-33-taking-over-red-lobster-space-in-the-shops-at-northfield/"
+    },
+    {
+      "store_name": "Lilly Bird's Creamery",
+      "location": "4810 Main St, Shallotte, NC 28470",
+      "event_type": "Opening",
+      "event_date": "Memorial Day weekend (year not specified)",
+      "status": "aims to open Memorial Day weekend",
+      "short_description": "Lilly Bird's Creamery, a family-owned homemade ice cream shop, is set to open at 4810 Main Street in Shallotte, North Carolina, around Memorial Day weekend. The shop will offer 16 dairy and eight non-dairy flavors, slow-churned in small batches with a 16% butterfat base, alongside traditional and vegan waffle cones.",
+      "article_link": "https://whatnow.com/charleston/restaurants/lilly-birds-creamery-bringing-homemade-scoops-to-shallotte-this-may/"
+    },
+    {
+      "store_name": "The Olive Farmer",
+      "location": "N 44th St & E Osborn Rd., Phoenix, AZ 85018",
+      "event_type": "Opening",
+      "event_date": "Later in 2026",
+      "status": "will open later in 2026",
+      "short_description": "The Olive Farmer, a restaurant, market, and bar, is opening later in 2026 at the former Santo Arcadia space at 44th Street and Osborn in Phoenix. The joint venture between In Good Spirits Hospitality and Queen Creek Olive Mill will offer all-day Italian-focused dining, an on-site Flour Lab for baked goods and pasta, a curated market, and a bottle shop.",
+      "article_link": "https://whatnow.com/phoenix/restaurants/the-olive-farmer-to-open-with-fresh-italian-specialties/"
+    },
+    {
+      "store_name": "Caramba",
+      "location": "411 Main St, Pleasanton (scraper address listed as San Francisco, CA 94105)",
+      "event_type": "Opening",
+      "event_date": "Late May (year not specified)",
+      "status": "expected to open in late May",
+      "short_description": "Caramba, a new Spanish restaurant focused on tapas and small plates, is expected to open in late May at 411 Main Street in downtown Pleasanton, the former Frontier Spice space. The concept comes from restaurateur German Carlucci, who already operates Brava Garden Eatery and Planta Coffee House in the area.",
+      "article_link": "https://whatnow.com/san-francisco/restaurants/caramba-is-planned-to-open-in-late-may-in-pleasanton/"
+    },
+    {
+      "store_name": "Séptimo",
+      "location": "1435 Brickell Ave, Miami, FL 33131",
+      "event_type": "Opening",
+      "event_date": "April 29, 2026",
+      "status": "opening its doors on April 29, 2026",
+      "short_description": "Séptimo, a new cocktail bar located on the seventh floor of the Four Seasons Hotel Miami, is opening on April 29, 2026. The bar will operate daily from 3 p.m. to midnight, featuring a cocktail program that blends classic techniques with modern flavors, alongside small plates and other food offerings.",
+      "article_link": "https://whatnow.com/miami/restaurants/stylish-new-cocktail-bar-with-a-modern-spin-on-classics-to-open-at-four-seasons/"
+    },
+    {
+      "store_name": "Le Nocturne",
+      "location": "470 First St #100, Livermore, CA 94550",
+      "event_type": "Opening",
+      "event_date": "Mid to late May (year not specified)",
+      "status": "targeting a mid to late May debut; still under construction",
+      "short_description": "Le Nocturne, a modern French supper club concept, is opening at 470 First Street in downtown Livermore, targeting a mid to late May debut while still under construction. The venue will offer late-night French dining with EDM and house music, replacing the former Last Word/The Syndicate space that closed in 2025.",
+      "article_link": "https://whatnow.com/san-francisco/restaurants/le-nocturne-brings-modern-french-dining-and-bar-experience-to-livermore/"
+    },
+    {
+      "store_name": "Potbelly Sandwich Shop",
+      "location": "4994 E Irlo Bronson Memorial Hwy, St Cloud, FL 34771",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "an opening date has not been announced",
+      "short_description": "Potbelly Sandwich Shop is planning to open at 4994 E. Irlo Bronson Memorial Highway in St. Cloud, per permit applications filed with the Florida Department of Business and Professional Regulation by franchisee Sugarland Investment Group LLC. No opening date has been announced.",
+      "article_link": "https://whatnow.com/orlando/restaurants/potbelly-sandwich-shop-to-open-in-st-cloud/"
+    },
+    {
+      "store_name": "ProteinHouse",
+      "location": "5310 E High St, Phoenix, AZ 85054",
+      "event_type": "Opening",
+      "event_date": "April 25, 2026",
+      "status": "grand opening on April 25, 2026, at 11 a.m.",
+      "short_description": "ProteinHouse is opening a new 2,477-square-foot location at 5310 E. High Street in North Phoenix with a grand opening on April 25, 2026 at 11 a.m. The protein-focused fast-casual concept will feature outdoor seating, a dedicated to-go window, and operate Monday–Saturday 7 a.m.–9 p.m. and Sunday 7 a.m.–7 p.m.",
+      "article_link": "https://whatnow.com/phoenix/restaurants/protein-focused-fast-casual-restaurant-is-coming-to-phoenix-this-spring/"
+    },
+    {
+      "store_name": "Poblano Pepper (third location)",
+      "location": "2225 NE Broadway, Portland, OR 97232",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "new Poblano Pepper opening",
+      "short_description": "Poblano Pepper, a Mexican cuisine concept with vegan and vegetarian options, is opening a third location at 2225 NE Broadway in Portland, confirmed by owner Marcelo. Liquor licensing paperwork shows planned daily operating hours of 9 a.m. to 9 p.m., with indoor seating for 30 and outdoor seating for 10.",
+      "article_link": "https://whatnow.com/portland/restaurants/poblano-pepper-plans-new-location-on-ne-broadway/"
+    },
+    {
+      "store_name": "Shorebird Bakery (formerly Woodblock Bakery)",
+      "location": "5027 NE 42nd Ave, Portland, OR 97218",
+      "event_type": "Opening",
+      "event_date": "May 1 (year not specified)",
+      "status": "starting Friday May 1",
+      "short_description": "Shorebird Bakery, formerly known as Woodblock Bakery, is rebranding and moving to a new space at 5027 NE 42nd Avenue (the Oakshire building at NE 42nd and Alberta) starting May 1. The bakery's final day of service at its current location at Woodblock Chocolate's manufactory on NE 17th Avenue will be April 23.",
+      "article_link": "https://whatnow.com/portland/restaurants/woodblock-bakery-rebrands-as-shorebird-bakery-plans-move-to-ne-42nd-avenue/"
+    },
+    {
+      "store_name": "Woodblock Bakery (current location closing)",
+      "location": "Woodblock Chocolate's manufactory, NE 17th Avenue, Portland (zip not specified)",
+      "event_type": "Closing",
+      "event_date": "April 23 (year not specified)",
+      "status": "final day of service on Thursday, April 23",
+      "short_description": "Woodblock Bakery, now rebranding as Shorebird Bakery, will have its final day of service at NE 17th Avenue on April 23 before transitioning to a new location on NE 42nd Avenue on May 1. The rebrand and move were reported this week by Bridgetown Bites.",
+      "article_link": "https://whatnow.com/portland/restaurants/woodblock-bakery-rebrands-as-shorebird-bakery-plans-move-to-ne-42nd-avenue/"
+    },
+    {
+      "store_name": "University of Beer (Folsom)",
+      "location": "1009 E Bidwell St, Folsom, CA 95630",
+      "event_type": "Closing",
+      "event_date": "April 11, 2026",
+      "status": "final day of service will be Saturday, April 11, 2026",
+      "short_description": "University of Beer's Folsom location will close permanently on April 11, 2026 to make way for renovations for the incoming Roku Japanese Cuisine. The space will be transformed into Roku's second location, which is targeting a late June or early July 2026 opening.",
+      "article_link": "https://whatnow.com/sacramento/restaurants/roseville-based-roku-japanese-cuisine-to-bring-upscale-japanese-fare-to-folsom/"
+    },
+    {
+      "store_name": "Roku Japanese Cuisine",
+      "location": "1009 E Bidwell St, Folsom, CA 95630",
+      "event_type": "Opening",
+      "event_date": "Late June or early July 2026",
+      "status": "target debut set for late June or early July 2026",
+      "short_description": "Roku Japanese Cuisine is opening its second location at 1009 East Bidwell Street in Folsom's Willow Creek Town Center, taking over the current University of Beer space. The approximately 4,000-square-foot location will be more than double the size of the original Roseville restaurant, offering sushi, ramen, nigiri, and other Japanese staples.",
+      "article_link": "https://whatnow.com/sacramento/restaurants/roseville-based-roku-japanese-cuisine-to-bring-upscale-japanese-fare-to-folsom/"
+    },
+    {
+      "store_name": "Kung Fu Tea",
+      "location": "663 State Hwy 71, Suite 111, Bastrop, TX 78602",
+      "event_type": "Opening",
+      "event_date": "Summer (year not specified); construction April 20 – June 26",
+      "status": "under construction from April 20 until June 26",
+      "short_description": "Kung Fu Tea is opening its first Bastrop location at 663 West State Highway 71, Suite 111, per a TDLR filing showing a $250,000 renovation of a 1,500-square-foot space with construction running April 20 to June 26. Franchisee Stephen Thomas is bringing the Taiwanese bubble tea brand to the area to serve Bastrop's growing market.",
+      "article_link": "https://whatnow.com/austin/restaurants/kung-fu-tea-opening-in-bastrop-this-summer/"
+    },
+    {
+      "store_name": "Taquiza Tacos",
+      "location": "8246 NE 2nd Ave, Miami, FL 33138",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "opening; an opening date has not been announced",
+      "short_description": "Taquiza Tacos is opening a new taco shop at 8246 NE Second Avenue in Miami's Little River neighborhood, confirmed by owner Steve Santana. The concept is known for scratch-made tacos using organic, non-GMO blue corn ground in-house, and holds an entry in the Florida Michelin Guide.",
+      "article_link": "https://whatnow.com/miami/restaurants/taquiza-is-opening-in-little-river/"
+    },
+    {
+      "store_name": "Berry Divine Acai Bowls",
+      "location": "1900 N Civic Sq, Goodyear, AZ 85395",
+      "event_type": "Opening",
+      "event_date": "Fall 2026",
+      "status": "when it opens in fall 2026",
+      "short_description": "Berry Divine Acai Bowls has signed a lease at the Civic Square side of Goodyear's GSQ development and will open as the brand's 11th location. The health-focused concept specializes in soft serve acai with customizable fruit and topping combinations.",
+      "article_link": "https://whatnow.com/phoenix/restaurants/berry-divine-acai-bowls-opening-at-goodyears-gsq/"
+    },
+    {
+      "store_name": "Pav's Beanery",
+      "location": "2625 Easton Street, Plain Township (zip not specified)",
+      "event_type": "Opening",
+      "event_date": "Around end of year (year not specified)",
+      "status": "debuted around the end of the year",
+      "short_description": "Pav's Beanery, a new coffee concept from the team behind Pav's Creamery in Akron, is opening at 2625 Easton Street in Plain Township. The shop will serve coffees from North Canton-based roastery M & H Beans and will also offer a few gelato flavors; a menu has not yet been released.",
+      "article_link": "https://whatnow.com/columbus/restaurants/owners-of-pavs-creamery-to-debut-new-coffee-shop-in-plain-township/"
+    },
+    {
+      "store_name": "DQ Hawaiian BBQ",
+      "location": "7423 Fair Oaks Blvd, Suite 9, Carmichael, CA 95608",
+      "event_type": "Opening",
+      "event_date": "Soft opening tentatively planned for next weekend; grand opening in coming weeks (year not specified)",
+      "status": "soft opening tentatively planned for next weekend, pending any last-minute delays",
+      "short_description": "DQ Hawaiian BBQ is opening a new approximately 1,700-square-foot location at 7423 Fair Oaks Blvd, Suite 9 in Carmichael, featuring the brand's signature Hawaiian, Asian, and American fusion menu. A soft opening is tentatively planned for the following weekend, with a grand opening expected in the coming weeks.",
+      "article_link": "https://whatnow.com/sacramento/restaurants/dq-hawaiian-bbq-expanding-to-carmichael-this-spring/"
+    },
+    {
+      "store_name": "Lucca Italian Sandwich Shop (second location)",
+      "location": "905 J St, San Diego, CA 92101",
+      "event_type": "Opening",
+      "event_date": "Summer 2026",
+      "status": "projected Summer 2026 opening",
+      "short_description": "Lucca's Italian Shop Sandwiches is opening a second San Diego location at 905 J Street in the East Village, the former Copa Vida space, with freshly baked focaccia on-site and quality wine and beer. Owner Sabastian Garcia confirmed the new location, which will operate Monday to Saturday from 10:30 a.m. to 7 p.m.",
+      "article_link": "https://whatnow.com/san-diego/restaurants/san-diego-to-welcome-a-second-lucca-italian-sandwich-shop/"
+    },
+    {
+      "store_name": "Real Taco Express",
+      "location": "24020 Orchard Lake Rd, Farmington Hills, MI 48336",
+      "event_type": "Opening",
+      "event_date": "Within a month or further out (year not specified)",
+      "status": "aiming to open in a month or further out",
+      "short_description": "Real Taco Express is planning a third location at 24020 Orchard Lake Road in Farmington Hills, in the former McDonald's space. Owner Silviano Arellano told What Now Detroit he is aiming to open within a month or further out, with a menu focused on authentic Mexican street tacos.",
+      "article_link": "https://whatnow.com/detroit/restaurants/real-taco-express-planning-third-location-in-farmington-hills/"
+    },
+    {
+      "store_name": "Handel's Ice Cream",
+      "location": "6765 Mira Mesa Blvd, Suite 149, San Diego, CA 92121",
+      "event_type": "Opening",
+      "event_date": "Before end of year (year not specified)",
+      "status": "likely set to open before the end of the year",
+      "short_description": "Handel's Ice Cream is opening a new location at 6765 Mira Mesa Blvd, Suite 149 in San Diego, replacing a former Starbucks, per the San Diego Department of Environmental Health and Quality. No official opening date has been confirmed, as the franchise owner had not responded at time of publication.",
+      "article_link": "https://whatnow.com/san-diego/restaurants/handels-ice-cream-expands-with-new-location-in-2026/"
+    },
+    {
+      "store_name": "Pinky's Sports Bar",
+      "location": "810 N 2nd St, Phoenix, AZ 85004",
+      "event_type": "Opening",
+      "event_date": "June 1 (year not specified)",
+      "status": "slated to open June 1",
+      "short_description": "Pinky's, a new sports bar and grill, is slated to open June 1 at 810 N. Second Street in downtown Phoenix, the former home of Angel's Trumpet. The collaboration between Robert Cissell, Ariel Bracamonte, and Chuckie Duff will feature indoor and outdoor seating for 150, pool tables, TVs, and a bar menu of burgers, wings, and nachos.",
+      "article_link": "https://whatnow.com/phoenix/restaurants/pinkys-sports-bar-to-open-in-downtown-phoenix/"
+    },
+    {
+      "store_name": "Bubba's 33",
+      "location": "8268 E Northfield Blvd, Denver, CO 80238",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "transformation already underway; official opening timeline has not yet been announced",
+      "short_description": "Bubba's 33, a family-friendly American restaurant and sports bar backed by the creators of Texas Roadhouse, is converting the former Red Lobster space at 8268 East Northfield Blvd in Denver's Northfield neighborhood. Pre-construction work has begun, though no official opening timeline has been announced.",
+      "article_link": "https://whatnow.com/denver/restaurants/bubbas-33-taking-over-red-lobster-space-in-the-shops-at-northfield/"
+    },
+    {
+      "store_name": "Lilly Bird's Creamery",
+      "location": "4810 Main St, Shallotte, NC 28470",
+      "event_type": "Opening",
+      "event_date": "Memorial Day weekend (year not specified)",
+      "status": "aims to open Memorial Day weekend",
+      "short_description": "Lilly Bird's Creamery, a family-owned homemade ice cream shop, is set to open at 4810 Main Street in Shallotte, North Carolina, around Memorial Day weekend. The shop will offer 16 dairy and eight non-dairy flavors, slow-churned in small batches with a 16% butterfat base, alongside traditional and vegan waffle cones.",
+      "article_link": "https://whatnow.com/charleston/restaurants/lilly-birds-creamery-bringing-homemade-scoops-to-shallotte-this-may/"
+    },
+    {
+      "store_name": "The Olive Farmer",
+      "location": "N 44th St & E Osborn Rd., Phoenix, AZ 85018",
+      "event_type": "Opening",
+      "event_date": "Later in 2026",
+      "status": "will open later in 2026",
+      "short_description": "The Olive Farmer, a restaurant, market, and bar, is opening later in 2026 at the former Santo Arcadia space at 44th Street and Osborn in Phoenix. The joint venture between In Good Spirits Hospitality and Queen Creek Olive Mill will offer all-day Italian-focused dining, an on-site Flour Lab for baked goods and pasta, a curated market, and a bottle shop.",
+      "article_link": "https://whatnow.com/phoenix/restaurants/the-olive-farmer-to-open-with-fresh-italian-specialties/"
+    },
+    {
+      "store_name": "Caramba",
+      "location": "411 Main St, Pleasanton (scraper address listed as San Francisco, CA 94105)",
+      "event_type": "Opening",
+      "event_date": "Late May (year not specified)",
+      "status": "expected to open in late May",
+      "short_description": "Caramba, a new Spanish restaurant focused on tapas and small plates, is expected to open in late May at 411 Main Street in downtown Pleasanton, the former Frontier Spice space. The concept comes from restaurateur German Carlucci, who already operates Brava Garden Eatery and Planta Coffee House in the area.",
+      "article_link": "https://whatnow.com/san-francisco/restaurants/caramba-is-planned-to-open-in-late-may-in-pleasanton/"
+    },
+    {
+      "store_name": "Séptimo",
+      "location": "1435 Brickell Ave, Miami, FL 33131",
+      "event_type": "Opening",
+      "event_date": "April 29, 2026",
+      "status": "opening its doors on April 29, 2026",
+      "short_description": "Séptimo, a new cocktail bar located on the seventh floor of the Four Seasons Hotel Miami, is opening on April 29, 2026. The bar will operate daily from 3 p.m. to midnight, featuring a cocktail program that blends classic techniques with modern flavors, alongside small plates and other food offerings.",
+      "article_link": "https://whatnow.com/miami/restaurants/stylish-new-cocktail-bar-with-a-modern-spin-on-classics-to-open-at-four-seasons/"
+    },
+    {
+      "store_name": "Le Nocturne",
+      "location": "470 First St #100, Livermore, CA 94550",
+      "event_type": "Opening",
+      "event_date": "Mid to late May (year not specified)",
+      "status": "targeting a mid to late May debut; still under construction",
+      "short_description": "Le Nocturne, a modern French supper club concept, is opening at 470 First Street in downtown Livermore, targeting a mid to late May debut while still under construction. The venue will offer late-night French dining with EDM and house music, replacing the former Last Word/The Syndicate space that closed in 2025.",
+      "article_link": "https://whatnow.com/san-francisco/restaurants/le-nocturne-brings-modern-french-dining-and-bar-experience-to-livermore/"
+    },
+    {
+      "store_name": "Potbelly Sandwich Shop",
+      "location": "4994 E Irlo Bronson Memorial Hwy, St Cloud, FL 34771",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "an opening date has not been announced",
+      "short_description": "Potbelly Sandwich Shop is planning to open at 4994 E. Irlo Bronson Memorial Highway in St. Cloud, per permit applications filed with the Florida Department of Business and Professional Regulation by franchisee Sugarland Investment Group LLC. No opening date has been announced.",
+      "article_link": "https://whatnow.com/orlando/restaurants/potbelly-sandwich-shop-to-open-in-st-cloud/"
+    },
+    {
+      "store_name": "ProteinHouse",
+      "location": "5310 E High St, Phoenix, AZ 85054",
+      "event_type": "Opening",
+      "event_date": "April 25, 2026",
+      "status": "grand opening on April 25, 2026, at 11 a.m.",
+      "short_description": "ProteinHouse is opening a new 2,477-square-foot location at 5310 E. High Street in North Phoenix with a grand opening on April 25, 2026 at 11 a.m. The protein-focused fast-casual concept will feature outdoor seating, a dedicated to-go window, and operate Monday–Saturday 7 a.m.–9 p.m. and Sunday 7 a.m.–7 p.m.",
+      "article_link": "https://whatnow.com/phoenix/restaurants/protein-focused-fast-casual-restaurant-is-coming-to-phoenix-this-spring/"
+    },
+    {
+      "store_name": "Poblano Pepper (third location)",
+      "location": "2225 NE Broadway, Portland, OR 97232",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "new Poblano Pepper opening",
+      "short_description": "Poblano Pepper, a Mexican cuisine concept with vegan and vegetarian options, is opening a third location at 2225 NE Broadway in Portland, confirmed by owner Marcelo. Liquor licensing paperwork shows planned daily operating hours of 9 a.m. to 9 p.m., with indoor seating for 30 and outdoor seating for 10.",
+      "article_link": "https://whatnow.com/portland/restaurants/poblano-pepper-plans-new-location-on-ne-broadway/"
+    },
+    {
+      "store_name": "Shorebird Bakery (formerly Woodblock Bakery)",
+      "location": "5027 NE 42nd Ave, Portland, OR 97218",
+      "event_type": "Opening",
+      "event_date": "May 1 (year not specified)",
+      "status": "starting Friday May 1",
+      "short_description": "Shorebird Bakery, formerly known as Woodblock Bakery, is rebranding and moving to a new space at 5027 NE 42nd Avenue (the Oakshire building at NE 42nd and Alberta) starting May 1. The bakery's final day of service at its current location at Woodblock Chocolate's manufactory on NE 17th Avenue will be April 23.",
+      "article_link": "https://whatnow.com/portland/restaurants/woodblock-bakery-rebrands-as-shorebird-bakery-plans-move-to-ne-42nd-avenue/"
+    },
+    {
+      "store_name": "Woodblock Bakery (current location closing)",
+      "location": "Woodblock Chocolate's manufactory, NE 17th Avenue, Portland (zip not specified)",
+      "event_type": "Closing",
+      "event_date": "April 23 (year not specified)",
+      "status": "final day of service on Thursday, April 23",
+      "short_description": "Woodblock Bakery, now rebranding as Shorebird Bakery, will have its final day of service at NE 17th Avenue on April 23 before transitioning to a new location on NE 42nd Avenue on May 1. The rebrand and move were reported this week by Bridgetown Bites.",
+      "article_link": "https://whatnow.com/portland/restaurants/woodblock-bakery-rebrands-as-shorebird-bakery-plans-move-to-ne-42nd-avenue/"
+    },
+    {
+      "store_name": "University of Beer (Folsom)",
+      "location": "1009 E Bidwell St, Folsom, CA 95630",
+      "event_type": "Closing",
+      "event_date": "April 11, 2026",
+      "status": "final day of service will be Saturday, April 11, 2026",
+      "short_description": "University of Beer's Folsom location will close permanently on April 11, 2026 to make way for renovations for the incoming Roku Japanese Cuisine. The space will be transformed into Roku's second location, which is targeting a late June or early July 2026 opening.",
+      "article_link": "https://whatnow.com/sacramento/restaurants/roseville-based-roku-japanese-cuisine-to-bring-upscale-japanese-fare-to-folsom/"
+    },
+    {
+      "store_name": "Roku Japanese Cuisine",
+      "location": "1009 E Bidwell St, Folsom, CA 95630",
+      "event_type": "Opening",
+      "event_date": "Late June or early July 2026",
+      "status": "target debut set for late June or early July 2026",
+      "short_description": "Roku Japanese Cuisine is opening its second location at 1009 East Bidwell Street in Folsom's Willow Creek Town Center, taking over the current University of Beer space. The approximately 4,000-square-foot location will be more than double the size of the original Roseville restaurant, offering sushi, ramen, nigiri, and other Japanese staples.",
+      "article_link": "https://whatnow.com/sacramento/restaurants/roseville-based-roku-japanese-cuisine-to-bring-upscale-japanese-fare-to-folsom/"
+    },
+    {
+      "store_name": "Kung Fu Tea",
+      "location": "663 State Hwy 71, Suite 111, Bastrop, TX 78602",
+      "event_type": "Opening",
+      "event_date": "Summer (year not specified); construction April 20 – June 26",
+      "status": "under construction from April 20 until June 26",
+      "short_description": "Kung Fu Tea is opening its first Bastrop location at 663 West State Highway 71, Suite 111, per a TDLR filing showing a $250,000 renovation of a 1,500-square-foot space with construction running April 20 to June 26. Franchisee Stephen Thomas is bringing the Taiwanese bubble tea brand to the area to serve Bastrop's growing market.",
+      "article_link": "https://whatnow.com/austin/restaurants/kung-fu-tea-opening-in-bastrop-this-summer/"
+    }
+  ],
+  "non_working": [
+    {
+      "identifier": "None",
+      "reason": ""
+    },
+    {
+      "identifier": "None",
+      "reason": ""
+    }
+  ]
 }
