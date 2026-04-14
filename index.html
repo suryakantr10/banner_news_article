@@ -319,6 +319,9 @@
                 <button id="tabDailyBtn" class="tab-btn" onclick="switchTab('daily')">
                     <i class="fas fa-rss mr-1.5"></i>Daily News<span id="tabDailyNewCount" class="tab-new-dot hidden"></span>
                 </button>
+                <button id="tabWarnBtn" class="tab-btn" onclick="switchTab('warn')">
+                    <i class="fas fa-triangle-exclamation mr-1.5"></i>Warn News
+                </button>
             </div>
         </div>
 
@@ -841,6 +844,101 @@
             </div>
         </div>
 
+        <!-- WARN NEWS TAB -->
+        <div id="warnTabContent" class="hidden">
+
+            <!-- Stats cards -->
+            <div id="warnStatsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 fade-in" style="display:none;">
+                <div class="stats-card rounded-2xl p-6 card-accent-blue">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Total Notices</p>
+                            <p class="text-3xl font-bold text-white" id="warnTotal">0</p>
+                        </div>
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center">
+                            <i class="fas fa-triangle-exclamation text-blue-400 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="stats-card rounded-2xl p-6 card-accent-orange">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Closures</p>
+                            <p class="text-3xl font-bold text-gray-300" id="warnClosures">0</p>
+                        </div>
+                        <div class="w-12 h-12 rounded-xl bg-gray-700/20 flex items-center justify-center">
+                            <i class="fas fa-building-circle-xmark text-gray-400 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="stats-card rounded-2xl p-6 card-accent-indigo">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Total Employees Affected</p>
+                            <p class="text-3xl font-bold text-gray-300" id="warnEmployees">0</p>
+                        </div>
+                        <div class="w-12 h-12 rounded-xl bg-gray-700/20 flex items-center justify-center">
+                            <i class="fas fa-users text-gray-400 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3">
+                <div class="flex-1 relative">
+                    <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
+                    <input type="text" id="warnSearchInput" placeholder="Search by company, city, or notes…"
+                        class="input-field w-full pl-11 pr-4 py-3 text-sm" oninput="debounce(filterWarnRows,250)()">
+                </div>
+                <select id="warnStateFilter" onchange="filterWarnRows()" class="input-field px-4 py-3 text-sm">
+                    <option value="all">All States</option>
+                </select>
+                <select id="warnTypeFilter" onchange="filterWarnRows()" class="input-field px-4 py-3 text-sm">
+                    <option value="all">All Types</option>
+                    <option value="closure">Closure</option>
+                    <option value="layoff">Layoff</option>
+                </select>
+                <button onclick="downloadWarnCSV()" class="btn-download px-5 py-3 rounded-xl font-medium flex items-center gap-2 text-sm whitespace-nowrap">
+                    <i class="fas fa-download"></i><span>Download CSV</span>
+                </button>
+            </div>
+
+            <!-- Loading / empty / table states -->
+            <div id="warnLoadingState" class="text-center py-20 hidden">
+                <div class="loading-spinner mx-auto mb-4"></div>
+                <p class="text-gray-400 text-sm">Loading WARN notices…</p>
+            </div>
+            <div id="warnEmptyState" class="text-center py-20 hidden">
+                <div class="w-20 h-20 rounded-full bg-slate-800/80 flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-triangle-exclamation text-3xl text-gray-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-gray-300">No WARN notices found</h3>
+                <p class="text-gray-500 text-sm">Run warn.py to generate data, or adjust your filters.</p>
+            </div>
+            <div id="warnTableContainer" class="hidden overflow-x-auto rounded-2xl border border-white/5 fade-in">
+                <table class="w-full text-sm text-left data-table">
+                    <thead><tr>
+                        <th class="px-3 py-3 w-10">#</th>
+                        <th class="px-3 py-3">Company</th>
+                        <th class="px-3 py-3">City</th>
+                        <th class="px-3 py-3 w-28">State</th>
+                        <th class="px-3 py-3 w-32">Notice Date</th>
+                        <th class="px-3 py-3 w-32">Layoff Date</th>
+                        <th class="px-3 py-3 w-28">Employees</th>
+                        <th class="px-3 py-3 w-28">Type</th>
+                        <th class="px-3 py-3">Notes</th>
+                    </tr></thead>
+                    <tbody id="warnTableBody"></tbody>
+                </table>
+                <div class="px-4 py-3 glass text-gray-500 text-xs border-t border-white/5 flex justify-between">
+                    <span>Showing <span id="warnRowCount" class="text-gray-300 font-semibold">0</span> notices</span>
+                    <span>Updated: <span id="warnLastUpdated" class="text-gray-300">—</span></span>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 
     <footer class="relative z-10 mt-16 py-8 border-t border-white/5">
@@ -882,6 +980,7 @@
     const BIZ_EXTRACTION_URL     = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/businessdebut_extraction_latest.json';
     const DAILY_NEWS_JSON_URL    = 'docs/news_data.json';
     const DAILY_NEWS_EXT_URL     = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/daily_news_extraction_latest.json';
+    const WARN_JSON_URL          = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/warn_latest.json';
 
     let storeArticles = [], filteredStoreArticles = [];
     let scoopArticles = [], filteredScoopArticles = [];
@@ -893,6 +992,7 @@
     let bizExtractionRows = [], filteredBizExtractionRows = [];
     let dailyNewsArticles = [], filteredDailyNewsArticles = [];
     let dailyNewsExtractionRows = [], filteredDailyNewsExtractionRows = [];
+    let warnRows = [], filteredWarnRows = [];
     let activeTab = 'store', activeScoopSubTab = 'articles';
     let activeRestSubTab = 'articles', activeBizSubTab = 'articles';
     let activeDailyNewsSubTab = 'articles';
@@ -1010,7 +1110,7 @@
 
     document.addEventListener('keydown', (e) => {
         if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA') return;
-        const map = { '1': 'store', '2': 'scoop', '3': 'restaurant', '4': 'biz', '5': 'daily' };
+        const map = { '1': 'store', '2': 'scoop', '3': 'restaurant', '4': 'biz', '5': 'daily', '6': 'warn' };
         if (map[e.key]) { switchTab(map[e.key]); return; }
         if (e.key.toLowerCase() === 'r' && !e.ctrlKey && !e.metaKey) refreshData();
     });
@@ -1034,8 +1134,8 @@
 
     function switchTab(tab) {
         activeTab = tab;
-        const tabs = { store: 'storeTabContent', scoop: 'scoopTabContent', restaurant: 'restaurantTabContent', biz: 'bizTabContent', daily: 'dailyTabContent' };
-        const btns = { store: 'tabStoreBtn', scoop: 'tabScoopBtn', restaurant: 'tabRestaurantBtn', biz: 'tabBizBtn', daily: 'tabDailyBtn' };
+        const tabs = { store: 'storeTabContent', scoop: 'scoopTabContent', restaurant: 'restaurantTabContent', biz: 'bizTabContent', daily: 'dailyTabContent', warn: 'warnTabContent' };
+        const btns = { store: 'tabStoreBtn', scoop: 'tabScoopBtn', restaurant: 'tabRestaurantBtn', biz: 'tabBizBtn', daily: 'tabDailyBtn', warn: 'tabWarnBtn' };
         Object.values(tabs).forEach(id => document.getElementById(id).classList.add('hidden'));
         Object.values(btns).forEach(id => document.getElementById(id).classList.remove('active'));
         document.getElementById(tabs[tab]).classList.remove('hidden');
@@ -1052,11 +1152,13 @@
         } else if (tab === 'daily') {
             if (activeDailyNewsSubTab === 'articles' && dailyNewsArticles.length === 0) loadDailyNewsData();
             if (activeDailyNewsSubTab === 'extraction' && dailyNewsExtractionRows.length === 0) loadDailyNewsExtractionData();
+        } else if (tab === 'warn') {
+            if (warnRows.length === 0) loadWarnData();
         }
     }
 
     function updateNavTotal() {
-        const total = storeArticles.length + scoopArticles.length + restArticles.length + bizArticles.length + dailyNewsArticles.length;
+        const total = storeArticles.length + scoopArticles.length + restArticles.length + bizArticles.length + dailyNewsArticles.length + warnRows.length;
         const badge = document.getElementById('navTotalBadge');
         document.getElementById('navTotalCount').textContent = total;
         badge.classList.toggle('hidden', total === 0);
@@ -2034,11 +2136,124 @@
         } else if (activeTab === 'biz') {
             bizArticles = []; bizExtractionRows = [];
             loader = activeBizSubTab === 'extraction' ? loadBizExtractionData() : loadBizData();
-        } else {
+        } else if (activeTab === 'daily') {
             dailyNewsArticles = []; dailyNewsExtractionRows = [];
             loader = activeDailyNewsSubTab === 'extraction' ? loadDailyNewsExtractionData() : loadDailyNewsData();
+        } else if (activeTab === 'warn') {
+            warnRows = [];
+            loader = loadWarnData();
         }
         Promise.resolve(loader).finally(() => setTimeout(() => icon.classList.remove('spin-anim'), 500));
+    }
+
+    // ══ WARN NEWS ══
+    async function loadWarnData() {
+        try {
+            document.getElementById('warnLoadingState').classList.remove('hidden');
+            document.getElementById('warnTableContainer').classList.add('hidden');
+            document.getElementById('warnEmptyState').classList.add('hidden');
+            document.getElementById('warnStatsContainer').style.display = 'none';
+
+            const res = await fetch(WARN_JSON_URL + '?t=' + Date.now());
+            if (!res.ok) throw new Error('fetch failed');
+            const data = await res.json();
+
+            document.getElementById('warnLastUpdated').textContent = data.last_updated || '—';
+            warnRows = data.data || [];
+            filteredWarnRows = [...warnRows];
+
+            // Populate state dropdown dynamically
+            const states = [...new Set(warnRows.map(r => r.state).filter(Boolean))].sort();
+            const sel = document.getElementById('warnStateFilter');
+            sel.innerHTML = '<option value="all">All States</option>' +
+                states.map(s => `<option value="${escapeHtml(s)}">${escapeHtml(s)}</option>`).join('');
+
+            updateWarnStats(filteredWarnRows);
+            renderWarnTable();
+            updateNavTotal();
+            document.getElementById('warnLoadingState').classList.add('hidden');
+        } catch (err) {
+            console.error(err);
+            document.getElementById('warnLoadingState').classList.add('hidden');
+            document.getElementById('warnEmptyState').classList.remove('hidden');
+        }
+    }
+
+    function updateWarnStats(rows) {
+        setCount('warnTotal', rows.length);
+        setCount('warnClosures', rows.filter(r => (r.closure_type||'').toLowerCase().includes('clos')).length);
+        const emp = rows.reduce((sum, r) => {
+            const n = parseInt((r.employees_affected||'').replace(/,/g,''), 10);
+            return sum + (isNaN(n) ? 0 : n);
+        }, 0);
+        setCount('warnEmployees', emp);
+        document.getElementById('warnStatsContainer').style.display = rows.length ? 'grid' : 'none';
+    }
+
+    function filterWarnRows() {
+        const term  = document.getElementById('warnSearchInput').value.toLowerCase();
+        const state = document.getElementById('warnStateFilter').value;
+        const type  = document.getElementById('warnTypeFilter').value;
+        filteredWarnRows = warnRows.filter(r => {
+            const matchTerm  = !term  || ['company','city','notes'].some(k => (r[k]||'').toLowerCase().includes(term));
+            const matchState = state === 'all' || r.state === state;
+            const matchType  = type  === 'all' || (r.closure_type||'').toLowerCase().includes(type);
+            return matchTerm && matchState && matchType;
+        });
+        updateWarnStats(filteredWarnRows);
+        renderWarnTable();
+    }
+
+    function renderWarnTable() {
+        const tbody = document.getElementById('warnTableBody');
+        const container = document.getElementById('warnTableContainer');
+        const term = document.getElementById('warnSearchInput').value.toLowerCase();
+
+        if (!filteredWarnRows.length) {
+            container.classList.add('hidden');
+            document.getElementById('warnEmptyState').classList.remove('hidden');
+            return;
+        }
+        document.getElementById('warnEmptyState').classList.add('hidden');
+        container.classList.remove('hidden');
+
+        tbody.innerHTML = filteredWarnRows.map((r, i) => {
+            const isClosure = (r.closure_type||'').toLowerCase().includes('clos');
+            const typeBadge = isClosure
+                ? `<span class="badge-closing px-2 py-1 rounded-full text-xs font-bold text-white"><i class="fas fa-building-circle-xmark mr-1 text-xs"></i>Closure</span>`
+                : r.closure_type
+                ? `<span class="px-2 py-1 rounded-full text-xs bg-amber-900/40 text-amber-300 border border-amber-700/30">${escapeHtml(r.closure_type)}</span>`
+                : `<span class="text-gray-600 text-xs">—</span>`;
+            return `
+            <tr>
+                <td class="px-3 py-3 text-gray-600 text-xs font-semibold">${i+1}</td>
+                <td class="px-3 py-3 max-w-[180px]">
+                    <span class="font-medium text-white text-sm line-clamp-2 block" title="${escapeHtml(r.company||'')}">${highlight(r.company||'—', term)}</span>
+                </td>
+                <td class="px-3 py-3 text-gray-400 text-xs">${highlight(r.city||'—', term)}</td>
+                <td class="px-3 py-3">
+                    <span class="px-2 py-1 rounded-full text-xs bg-blue-900/40 text-blue-300 border border-blue-700/30">${escapeHtml(r.state||'—')}</span>
+                </td>
+                <td class="px-3 py-3 text-gray-400 text-xs whitespace-nowrap">${escapeHtml(r.notice_date||'—')}</td>
+                <td class="px-3 py-3 text-gray-400 text-xs whitespace-nowrap">${escapeHtml(r.layoff_date||'—')}</td>
+                <td class="px-3 py-3 text-gray-300 text-xs font-semibold">${escapeHtml(r.employees_affected||'—')}</td>
+                <td class="px-3 py-3">${typeBadge}</td>
+                <td class="px-3 py-3 max-w-[200px]">
+                    <span class="text-gray-500 text-xs line-clamp-2 block" title="${escapeHtml(r.notes||'')}">${highlight(r.notes||'—', term)}</span>
+                </td>
+            </tr>`;
+        }).join('');
+
+        document.getElementById('warnRowCount').textContent = filteredWarnRows.length;
+    }
+
+    function downloadWarnCSV() {
+        if (!filteredWarnRows.length) return;
+        const h = ['state','company','city','notice_date','layoff_date','employees_affected','closure_type','notes'];
+        const labels = ['State','Company','City','Notice Date','Layoff Date','Employees Affected','Type','Notes'];
+        const csv = [labels.join(','), ...filteredWarnRows.map(r => h.map(k => `"${(r[k]||'').replace(/"/g,'""')}"`).join(','))].join('\n');
+        dlCSV('\uFEFF' + csv, `warn_notices_${TODAY}.csv`);
+        showToast('WARN notices CSV downloaded!');
     }
 
     window.addEventListener('DOMContentLoaded', () => {
