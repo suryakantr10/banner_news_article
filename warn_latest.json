@@ -1,0 +1,1116 @@
+{
+  "last_updated": "2026-04-14",
+  "total": 111,
+  "data": [
+    {
+      "state": "Alabama",
+      "company": "Legacy Supply Chain Operations",
+      "city": "Decatur",
+      "notice_date": "04/09/2026",
+      "layoff_date": "06/06/2026",
+      "employees_affected": "6",
+      "closure_type": "closure",
+      "notes": ""
+    },
+    {
+      "state": "Alabama",
+      "company": "Resolute Forest Products",
+      "city": "Alpine",
+      "notice_date": "03/31/2026",
+      "layoff_date": "05/24/2026",
+      "employees_affected": "20",
+      "closure_type": "closure",
+      "notes": ""
+    },
+    {
+      "state": "Alabama",
+      "company": "Resolute Forest Products",
+      "city": "Coosa Pines",
+      "notice_date": "03/31/2026",
+      "layoff_date": "05/24/2026",
+      "employees_affected": "255",
+      "closure_type": "closure",
+      "notes": ""
+    },
+    {
+      "state": "Alabama",
+      "company": "Louis Vuitton",
+      "city": "Birmingham",
+      "notice_date": "02/19/2026",
+      "layoff_date": "02/17/2026",
+      "employees_affected": "10",
+      "closure_type": "closure",
+      "notes": ""
+    },
+    {
+      "state": "Alabama",
+      "company": "Tiffin Motorhomes Incorporated",
+      "city": "Winfield",
+      "notice_date": "02/05/2026",
+      "layoff_date": "05/12/2026",
+      "employees_affected": "139",
+      "closure_type": "closure",
+      "notes": ""
+    },
+    {
+      "state": "Alabama",
+      "company": "Southern Parallel Forest Products Corp",
+      "city": "Albertville",
+      "notice_date": "02/12/2026",
+      "layoff_date": "04/08/2026",
+      "employees_affected": "62",
+      "closure_type": "closure",
+      "notes": ""
+    },
+    {
+      "state": "Alabama",
+      "company": "Saks Fifth Avenue",
+      "city": "Birmingham",
+      "notice_date": "02/10/2026",
+      "layoff_date": "04/11/2026",
+      "employees_affected": "44",
+      "closure_type": "closure",
+      "notes": ""
+    },
+    {
+      "state": "Alabama",
+      "company": "Salon Centric Inc",
+      "city": "Mc Calla",
+      "notice_date": "01/13/2026",
+      "layoff_date": "06/30/2026",
+      "employees_affected": "79",
+      "closure_type": "closure",
+      "notes": ""
+    },
+    {
+      "state": "Alaska",
+      "company": "Chugach Training & Educational Solutions, LLC (CTESL)",
+      "city": "Palmer",
+      "notice_date": "6/2/25",
+      "layoff_date": "6/30/25",
+      "employees_affected": "110",
+      "closure_type": "",
+      "notes": "Loss of Contract"
+    },
+    {
+      "state": "Alaska",
+      "company": "Vigor Alaska, LLC",
+      "city": "Ketchikan",
+      "notice_date": "5/7/25",
+      "layoff_date": "Begins 7/7/25 and will be staggered until official closure on 11/30/25",
+      "employees_affected": "72",
+      "closure_type": "",
+      "notes": "Closure"
+    },
+    {
+      "state": "Alaska",
+      "company": "Natural Fiber Welding, Inc.",
+      "city": "Anchorage",
+      "notice_date": "12/10/2024",
+      "layoff_date": "2/8/25",
+      "employees_affected": "1 Alaska Worker",
+      "closure_type": "",
+      "notes": "Layoff"
+    },
+    {
+      "state": "Alaska",
+      "company": "American Nursery Services, Inc.",
+      "city": "Anchorage",
+      "notice_date": "9/5/2023",
+      "layoff_date": "12/31/23",
+      "employees_affected": "TBA",
+      "closure_type": "",
+      "notes": "Closure"
+    },
+    {
+      "state": "Alaska",
+      "company": "Centerra",
+      "city": "Anchorage, Juneau, and Fairbanks",
+      "notice_date": "8/10/23",
+      "layoff_date": "9/30/23",
+      "employees_affected": "27",
+      "closure_type": "",
+      "notes": "Loss of Contract"
+    },
+    {
+      "state": "Alaska",
+      "company": "Technica LLC",
+      "city": "Fort Wainwright and Joint Base Elmendorf-Richardson (JBER)",
+      "notice_date": "7/5/23",
+      "layoff_date": "9/6/2023",
+      "employees_affected": "101",
+      "closure_type": "",
+      "notes": "Loss of Contract"
+    },
+    {
+      "state": "Alaska",
+      "company": "David's Bridal",
+      "city": "Anchorage",
+      "notice_date": "4/14/23",
+      "layoff_date": "June-August 2023",
+      "employees_affected": "TBA",
+      "closure_type": "",
+      "notes": "Store Closure"
+    },
+    {
+      "state": "Alaska",
+      "company": "First Student",
+      "city": "Matanuska-Susitna Borough",
+      "notice_date": "5/2/22",
+      "layoff_date": "6/30/22",
+      "employees_affected": "182",
+      "closure_type": "",
+      "notes": "Loss of contract"
+    },
+    {
+      "state": "Alaska",
+      "company": "Bean’s Cafe",
+      "city": "Anchorage",
+      "notice_date": "9/16/21",
+      "layoff_date": "9/15/21",
+      "employees_affected": "40",
+      "closure_type": "",
+      "notes": "Loss of contract"
+    },
+    {
+      "state": "Alaska",
+      "company": "Kakivik Asset Mgmt",
+      "city": "Prudhoe Bay",
+      "notice_date": "7/2/21",
+      "layoff_date": "8/31/21",
+      "employees_affected": "134",
+      "closure_type": "",
+      "notes": "Loss of Contract"
+    },
+    {
+      "state": "Alaska",
+      "company": "First Student",
+      "city": "Fairbanks, North Pole",
+      "notice_date": "4/30/21",
+      "layoff_date": "6/30/21",
+      "employees_affected": "185",
+      "closure_type": "",
+      "notes": "Loss of contract"
+    },
+    {
+      "state": "Alaska",
+      "company": "GCI Communication Group",
+      "city": "Anchorage",
+      "notice_date": "4/12/21",
+      "layoff_date": "August-November 2021",
+      "employees_affected": "59",
+      "closure_type": "",
+      "notes": "Business need changes/reorganization; \r\n permanent"
+    },
+    {
+      "state": "Alaska",
+      "company": "RavnAir Group, Corvus Airlines, Hageland Aviation Services and Peninsula Aviation Services",
+      "city": "Anchorage and 20 smaller Alaska communities, plus Boston, Mass.",
+      "notice_date": "9/30/20*",
+      "layoff_date": "8/7/20",
+      "employees_affected": "1,234",
+      "closure_type": "",
+      "notes": "COVID-19; permanent"
+    },
+    {
+      "state": "Alaska",
+      "company": "HMSHost – Ted Stevens Anchorage International Airport restaurants: Starbucks, Humpy’s Great Alaskan Alehouse, Norton Sound Seafood House, Cinnabon, Alaska Doghaus, Cream, Upper One Restaurant/Lounge, Mezzanine Bar, Anchorage Marketplace and Local Alaska Rustic Marketplace",
+      "city": "Anchorage",
+      "notice_date": "8/12/20",
+      "layoff_date": "10/15/20",
+      "employees_affected": "123",
+      "closure_type": "",
+      "notes": "COVID-19; permanent"
+    },
+    {
+      "state": "Alaska",
+      "company": "HMSHost – Fairbanks International Airport restaurants: The Local and Starbucks",
+      "city": "Fairbanks",
+      "notice_date": "8/12/20",
+      "layoff_date": "10/15/20",
+      "employees_affected": "19",
+      "closure_type": "",
+      "notes": "COVID-19; permanent"
+    },
+    {
+      "state": "Alaska",
+      "company": "Chenega Security and Support Solutions LLC",
+      "city": "Shemya Island",
+      "notice_date": "7/31/20",
+      "layoff_date": "9/30/20",
+      "employees_affected": "64",
+      "closure_type": "",
+      "notes": ""
+    },
+    {
+      "state": "Alaska",
+      "company": "Alaska Airlines",
+      "city": "Anchorage",
+      "notice_date": "7/31/20",
+      "layoff_date": "10/1/20",
+      "employees_affected": "331",
+      "closure_type": "",
+      "notes": "Permanent"
+    },
+    {
+      "state": "Alaska",
+      "company": "Holland America Group,Carnival UK,Westmark Hotels, Inc.,Tour Alaska, Inc.,Royal Hyway Tours, Inc.,Anchorage Westmark Hotel,Escorted Tour Operations,Anchorage Transportation,Anchorage Rail Division,Fairbanks Westmark Hotel,Fairbanks Transportation,Westmark McKinley Chalet Resort,Denali Princess Wilderness Lodge,Denali Transportation Division,Healy Homestead",
+      "city": "Anchorage,Fairbanks,Denali National Park  andHealy",
+      "notice_date": "5/19/20",
+      "layoff_date": "6/1/20",
+      "employees_affected": "149",
+      "closure_type": "",
+      "notes": "COVID-19; temporary"
+    },
+    {
+      "state": "Alaska",
+      "company": "Doyon Drilling Inc.",
+      "city": "North Slope",
+      "notice_date": "5/1/20",
+      "layoff_date": "4/7/20 to 5/31/20",
+      "employees_affected": "304",
+      "closure_type": "",
+      "notes": "COVID-19; permanent"
+    },
+    {
+      "state": "Alaska",
+      "company": "Yukon-Kuskokwim Health Corporation",
+      "city": "Bethel and other Y-K Delta communities",
+      "notice_date": "4/28/20",
+      "layoff_date": "4/29/20 to 5/31/20",
+      "employees_affected": "Up to 300",
+      "closure_type": "",
+      "notes": "COVID-19; permanent"
+    },
+    {
+      "state": "Alaska",
+      "company": "Hard Rock Cafe International STP",
+      "city": "Anchorage",
+      "notice_date": "4/27/20",
+      "layoff_date": "4/13/20 to 4/27/20",
+      "employees_affected": "54",
+      "closure_type": "",
+      "notes": "COVID-19; temporary"
+    },
+    {
+      "state": "Alaska",
+      "company": "Baker Hughes",
+      "city": "North Slope",
+      "notice_date": "4/27/20",
+      "layoff_date": "4/28/20 to 5/11/20",
+      "employees_affected": "63",
+      "closure_type": "",
+      "notes": "COVID-19"
+    },
+    {
+      "state": "Alaska",
+      "company": "Schlumberger Technology Corp.",
+      "city": "North Slope",
+      "notice_date": "4/22/20",
+      "layoff_date": "4/22/20 to June 2020",
+      "employees_affected": "129",
+      "closure_type": "",
+      "notes": "COVID-19"
+    },
+    {
+      "state": "Alaska",
+      "company": "Halliburton Energy Services",
+      "city": "Prudhoe Bay",
+      "notice_date": "4/20/20",
+      "layoff_date": "4/20/20",
+      "employees_affected": "80",
+      "closure_type": "",
+      "notes": ""
+    },
+    {
+      "state": "Alaska",
+      "company": "Crush Bistro",
+      "city": "Anchorage",
+      "notice_date": "4/2/20",
+      "layoff_date": "4/17/20",
+      "employees_affected": "24",
+      "closure_type": "",
+      "notes": "COVID-19"
+    },
+    {
+      "state": "Alaska",
+      "company": "South Restaurant & Coffeehouse",
+      "city": "Anchorage",
+      "notice_date": "4/2/20",
+      "layoff_date": "4/17/20",
+      "employees_affected": "82",
+      "closure_type": "",
+      "notes": "COVID-19"
+    },
+    {
+      "state": "Alaska",
+      "company": "Snow City Café",
+      "city": "Anchorage",
+      "notice_date": "4/2/20",
+      "layoff_date": "4/17/20",
+      "employees_affected": "37",
+      "closure_type": "",
+      "notes": "COVID-19"
+    },
+    {
+      "state": "Alaska",
+      "company": "Benihana",
+      "city": "Anchorage",
+      "notice_date": "4/2/20",
+      "layoff_date": "4/16/20",
+      "employees_affected": "68",
+      "closure_type": "",
+      "notes": "COVID-19"
+    },
+    {
+      "state": "Alaska",
+      "company": "Peak Oilfield Services",
+      "city": "North Slope, Kenai Peninsula, And Valdez",
+      "notice_date": "4/1/20",
+      "layoff_date": "4/1/20 5/31/20",
+      "employees_affected": "161",
+      "closure_type": "",
+      "notes": "COVID-19"
+    },
+    {
+      "state": "Alaska",
+      "company": "Spenard Roadhouse",
+      "city": "Anchorage",
+      "notice_date": "4/1/20",
+      "layoff_date": "4/17/20",
+      "employees_affected": "77",
+      "closure_type": "",
+      "notes": "COVID-19"
+    },
+    {
+      "state": "Alaska",
+      "company": "Westmark Anchorage",
+      "city": "Anchorage",
+      "notice_date": "3/25/20",
+      "layoff_date": "3/25/20",
+      "employees_affected": "37",
+      "closure_type": "",
+      "notes": "COVID-19; temporary"
+    },
+    {
+      "state": "Alaska",
+      "company": "Alsco",
+      "city": "Anchorage",
+      "notice_date": "3/25/20",
+      "layoff_date": "3/25/20",
+      "employees_affected": "21",
+      "closure_type": "",
+      "notes": "COVID-19; temporary"
+    },
+    {
+      "state": "Alaska",
+      "company": "Alyeska Resort",
+      "city": "Girdwood",
+      "notice_date": "3/18/20",
+      "layoff_date": "3/19/20",
+      "employees_affected": "616",
+      "closure_type": "",
+      "notes": "COVID-19"
+    },
+    {
+      "state": "Alaska",
+      "company": "British Petroleum",
+      "city": "North Slope",
+      "notice_date": "12/19/19",
+      "layoff_date": "2/20/20",
+      "employees_affected": "345",
+      "closure_type": "",
+      "notes": "Sale of business"
+    },
+    {
+      "state": "Alaska",
+      "company": "British Petroleum",
+      "city": "Anchorage",
+      "notice_date": "12/19/19",
+      "layoff_date": "2/20/20",
+      "employees_affected": "287",
+      "closure_type": "",
+      "notes": "Sale of business"
+    },
+    {
+      "state": "Alaska",
+      "company": "AECOM",
+      "city": "Eielson AFB",
+      "notice_date": "12/6/19",
+      "layoff_date": "1/4/20",
+      "employees_affected": "160",
+      "closure_type": "",
+      "notes": "End of contract"
+    },
+    {
+      "state": "Alaska",
+      "company": "Nordstrom Anchorage",
+      "city": "Anchorage",
+      "notice_date": "6/26/19",
+      "layoff_date": "09/13/19",
+      "employees_affected": "173",
+      "closure_type": "",
+      "notes": "Store closure"
+    },
+    {
+      "state": "Alaska",
+      "company": "Aleut O&M Services, LLC",
+      "city": "Clear, AK",
+      "notice_date": "7/2/18",
+      "layoff_date": "8/31/18",
+      "employees_affected": "74",
+      "closure_type": "",
+      "notes": "Loss of contract"
+    },
+    {
+      "state": "Alaska",
+      "company": "BAE Systems",
+      "city": "Clear, AK",
+      "notice_date": "6/25/18",
+      "layoff_date": "8/31/18",
+      "employees_affected": "101",
+      "closure_type": "",
+      "notes": "Loss of contract"
+    },
+    {
+      "state": "Alaska",
+      "company": "Mistras Group, Inc. and subsidiary Quality Services Laboratories Inc.",
+      "city": "Prudhoe Bay/Anchorage",
+      "notice_date": "1/23/18",
+      "layoff_date": "3/31/18",
+      "employees_affected": "261",
+      "closure_type": "",
+      "notes": "Loss of contract"
+    },
+    {
+      "state": "Alaska",
+      "company": "Sam’s Club",
+      "city": "Fairbanks",
+      "notice_date": "1/11/18",
+      "layoff_date": "Starting3/16/18",
+      "employees_affected": "177",
+      "closure_type": "",
+      "notes": "Store closure"
+    },
+    {
+      "state": "Alaska",
+      "company": "Sam’s Club",
+      "city": "Anchorage on Muldoon Road",
+      "notice_date": "1/11/18",
+      "layoff_date": "Starting3/16/18",
+      "employees_affected": "167",
+      "closure_type": "",
+      "notes": "Store closure"
+    },
+    {
+      "state": "Alaska",
+      "company": "Sam’s Club",
+      "city": "Anchorage on Old Seward Hwy.",
+      "notice_date": "1/11/18",
+      "layoff_date": "Starting3/16/18",
+      "employees_affected": "181",
+      "closure_type": "",
+      "notes": "Store closure"
+    },
+    {
+      "state": "Alaska",
+      "company": "Sears Holdings",
+      "city": "Anchorage",
+      "notice_date": "1/4/18",
+      "layoff_date": "Starting4/8/18",
+      "employees_affected": "67",
+      "closure_type": "",
+      "notes": "Store closure"
+    },
+    {
+      "state": "Alaska",
+      "company": "Kodiak Support Services, JV",
+      "city": "Kodiak",
+      "notice_date": "11/30/17",
+      "layoff_date": "12/31/17",
+      "employees_affected": "125",
+      "closure_type": "",
+      "notes": "Loss of contract"
+    },
+    {
+      "state": "Alaska",
+      "company": "ASRC Energy Services",
+      "city": "Milne, Endicott, and Northstaron the North Slope",
+      "notice_date": "11/28/17",
+      "layoff_date": "12/18/17 to 12/31/17",
+      "employees_affected": "92",
+      "closure_type": "",
+      "notes": "Services terminated"
+    },
+    {
+      "state": "Alaska",
+      "company": "Norcon",
+      "city": "North Slope",
+      "notice_date": "5/12/17",
+      "layoff_date": "Varied",
+      "employees_affected": "147",
+      "closure_type": "",
+      "notes": "Loss of contract"
+    },
+    {
+      "state": "Alaska",
+      "company": "First Student",
+      "city": "Soldotna,Homer & Seward",
+      "notice_date": "4/19/17",
+      "layoff_date": "6/30/17",
+      "employees_affected": "149",
+      "closure_type": "",
+      "notes": "Loss of contract"
+    },
+    {
+      "state": "Alaska",
+      "company": "Parker Drilling",
+      "city": "Anchorage/North Slope",
+      "notice_date": "3/21/16",
+      "layoff_date": "March to May2016",
+      "employees_affected": "55",
+      "closure_type": "",
+      "notes": "Reduction in work"
+    },
+    {
+      "state": "Alaska",
+      "company": "CH2M",
+      "city": "North Slope",
+      "notice_date": "3/17/16",
+      "layoff_date": "3/31/16",
+      "employees_affected": "58",
+      "closure_type": "",
+      "notes": "Loss of contract"
+    },
+    {
+      "state": "Alaska",
+      "company": "Shell",
+      "city": "Anchorage",
+      "notice_date": "1/27/16",
+      "layoff_date": "3/31/16",
+      "employees_affected": "75",
+      "closure_type": "",
+      "notes": "End of exploration"
+    },
+    {
+      "state": "Alaska",
+      "company": "Walmart",
+      "city": "Juneau",
+      "notice_date": "1/15/16",
+      "layoff_date": "4/15/16",
+      "employees_affected": "168",
+      "closure_type": "",
+      "notes": "Store closure"
+    },
+    {
+      "state": "Alaska",
+      "company": "ASRC Energy Services",
+      "city": "Statewide",
+      "notice_date": "11/10/15",
+      "layoff_date": "11/1/15 to 12/31/15",
+      "employees_affected": "134",
+      "closure_type": "",
+      "notes": "End of exploration"
+    },
+    {
+      "state": "Alaska",
+      "company": "Doyon Universal Services LLC",
+      "city": "Anchorage/North Slope",
+      "notice_date": "5/10/13",
+      "layoff_date": "8/15/13",
+      "employees_affected": "75",
+      "closure_type": "",
+      "notes": "Loss of contract"
+    },
+    {
+      "state": "Alaska",
+      "company": "TriWest Healthcare Alliance Corp",
+      "city": "Statewide",
+      "notice_date": "12/10/12",
+      "layoff_date": "Varied",
+      "employees_affected": "31",
+      "closure_type": "",
+      "notes": "Loss of contract"
+    },
+    {
+      "state": "Alaska",
+      "company": "CH2M Hill",
+      "city": "North Slope",
+      "notice_date": "12/20/12",
+      "layoff_date": "Varied",
+      "employees_affected": "380",
+      "closure_type": "",
+      "notes": "Loss of contracts"
+    },
+    {
+      "state": "Alaska",
+      "company": "Williams Inc.",
+      "city": "Juneau",
+      "notice_date": "6/30/12",
+      "layoff_date": "9/2/12",
+      "employees_affected": "90",
+      "closure_type": "",
+      "notes": "Store closure"
+    },
+    {
+      "state": "Alaska",
+      "company": "Hostess Brands, Inc.",
+      "city": "Statewide",
+      "notice_date": "5/4/12",
+      "layoff_date": "11/19/12",
+      "employees_affected": "90",
+      "closure_type": "",
+      "notes": "Company closure"
+    },
+    {
+      "state": "Alaska",
+      "company": "United Parcel Services",
+      "city": "Anchorage",
+      "notice_date": "3/15/10",
+      "layoff_date": "various",
+      "employees_affected": "109",
+      "closure_type": "",
+      "notes": "Restructuring"
+    },
+    {
+      "state": "Alaska",
+      "company": "NovaGold",
+      "city": "Nome",
+      "notice_date": "11/26/08",
+      "layoff_date": "11/28/08",
+      "employees_affected": "130",
+      "closure_type": "",
+      "notes": "Lack offinancing"
+    },
+    {
+      "state": "Alaska",
+      "company": "Agrium U.S. Inc. Kenai Nitrogen Operations",
+      "city": "Kenai",
+      "notice_date": "9/26/07",
+      "layoff_date": "",
+      "employees_affected": "140",
+      "closure_type": "",
+      "notes": "Lack ofnatural gas"
+    },
+    {
+      "state": "Alaska",
+      "company": "Arctec Services",
+      "city": "Clear",
+      "notice_date": "6/20/06",
+      "layoff_date": "9/30/06",
+      "employees_affected": "171",
+      "closure_type": "",
+      "notes": "Loss of contract"
+    },
+    {
+      "state": "Alaska",
+      "company": "Chugach Alutiiq Joint Venture",
+      "city": "Fort Greely",
+      "notice_date": "5/30/06",
+      "layoff_date": "6/1/06",
+      "employees_affected": "151",
+      "closure_type": "",
+      "notes": "Loss of contract"
+    },
+    {
+      "state": "Alaska",
+      "company": "First Student",
+      "city": "Mat-Su",
+      "notice_date": "4/10/06",
+      "layoff_date": "6/30/06",
+      "employees_affected": "102",
+      "closure_type": "",
+      "notes": "Loss of contract"
+    },
+    {
+      "state": "Alaska",
+      "company": "Johnson's Tire Service, Inc.",
+      "city": "Anchorage,Eagle River,Wasilla & Soldotna",
+      "notice_date": "2/25/06",
+      "layoff_date": "4/1/06",
+      "employees_affected": "100",
+      "closure_type": "",
+      "notes": "Change in ownership only"
+    },
+    {
+      "state": "Alaska",
+      "company": "",
+      "city": "",
+      "notice_date": "",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "Golden Services, LLC",
+      "city": "",
+      "notice_date": "January 1, 2025",
+      "layoff_date": "January 31, 2025",
+      "employees_affected": "43",
+      "closure_type": "2",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "Freedom House, Inc",
+      "city": "",
+      "notice_date": "February 14, 2025",
+      "layoff_date": "April 15, 2025",
+      "employees_affected": "76",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "United Medical Center",
+      "city": "",
+      "notice_date": "February 20, 2025",
+      "layoff_date": "Various Dates through September 30, 2025",
+      "employees_affected": "485",
+      "closure_type": "2",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "ACDI VOCA",
+      "city": "",
+      "notice_date": "March 6, 2025",
+      "layoff_date": "April 2, 2025",
+      "employees_affected": "109",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "Dexis Consulting Group",
+      "city": "",
+      "notice_date": "March 10, 2025",
+      "layoff_date": "March 14, 2025 through April 30, 2025",
+      "employees_affected": "94",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "IREX",
+      "city": "",
+      "notice_date": "March 11, 2025",
+      "layoff_date": "March 3, 2025",
+      "employees_affected": "130",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "Save the Children",
+      "city": "",
+      "notice_date": "March 13, 2025",
+      "layoff_date": "February 28 and March 7 & 14, 2025",
+      "employees_affected": "116",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "Institute of International Education",
+      "city": "",
+      "notice_date": "March 13, 2025",
+      "layoff_date": "Various Dates through May 16, 2026",
+      "employees_affected": "95",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "Chemonics",
+      "city": "",
+      "notice_date": "March 14, 2025",
+      "layoff_date": "Various Dates through May 30, 2025",
+      "employees_affected": "500",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "National Democratic Institute",
+      "city": "",
+      "notice_date": "March 24, 2024",
+      "layoff_date": "April 14, 2025",
+      "employees_affected": "230",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "Cointerpart International",
+      "city": "",
+      "notice_date": "March 28, 2025",
+      "layoff_date": "March 28 through May 31, 2025",
+      "employees_affected": "64",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "Freedom House, Inc.",
+      "city": "",
+      "notice_date": "March 28, 2025",
+      "layoff_date": "May 27, 2025",
+      "employees_affected": "30",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "American Federation of Government Employees (AFGE)",
+      "city": "",
+      "notice_date": "March 31, 2025",
+      "layoff_date": "May 30, 2025",
+      "employees_affected": "206",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "International Republican Institute",
+      "city": "",
+      "notice_date": "April 7, 2025",
+      "layoff_date": "June 6, 2025",
+      "employees_affected": "246",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "Family Health International d/b/a FHI360",
+      "city": "",
+      "notice_date": "April 9, 2025",
+      "layoff_date": "May 2, 2025 through May 16, 2026",
+      "employees_affected": "260",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "US Conference of Catholic Bishops",
+      "city": "",
+      "notice_date": "April 14, 2025",
+      "layoff_date": "May 30, 2025",
+      "employees_affected": "39",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "Institue of International Education",
+      "city": "",
+      "notice_date": "April 14, 2025",
+      "layoff_date": "Various Dates through June 29, 2025",
+      "employees_affected": "45 (amended)",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "Children's School Services",
+      "city": "",
+      "notice_date": "April 25, 2025",
+      "layoff_date": "June 28, 2025",
+      "employees_affected": "226",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "Institue of International Education",
+      "city": "",
+      "notice_date": "April 25, 2025",
+      "layoff_date": "Various Dates through June 29, 2025",
+      "employees_affected": "63 (amended)",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "Radio Free Asia",
+      "city": "",
+      "notice_date": "May 2, 2025",
+      "layoff_date": "May 9 through September 30, 2025",
+      "employees_affected": "285",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "Pact",
+      "city": "",
+      "notice_date": "May 13, 2025",
+      "layoff_date": "June 24,2025",
+      "employees_affected": "72",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "Sodexo Services East, LLC",
+      "city": "",
+      "notice_date": "May 15, 2025",
+      "layoff_date": "August 8, 2025",
+      "employees_affected": "228",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "ACDI/VOCA",
+      "city": "",
+      "notice_date": "June 4, 2025",
+      "layoff_date": "August 4, 2025",
+      "employees_affected": "19",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "Institue of International Education",
+      "city": "",
+      "notice_date": "June 4, 2025",
+      "layoff_date": "Various Dates through September 28, 2025",
+      "employees_affected": "54 (amended)",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "Sodexo, Inc.",
+      "city": "",
+      "notice_date": "June 6, 2025",
+      "layoff_date": "July 31 through August 28, 2025",
+      "employees_affected": "308",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "Institue of International Education",
+      "city": "",
+      "notice_date": "July 1, 2025",
+      "layoff_date": "Various Dates through November2, 2025",
+      "employees_affected": "54 (amended)",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "ACDI VOGA",
+      "city": "",
+      "notice_date": "July 2, 2025",
+      "layoff_date": "September 2, 2025",
+      "employees_affected": "4",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "National Association of County and City Health Officials",
+      "city": "",
+      "notice_date": "July 30, 2025",
+      "layoff_date": "September 30, 2025",
+      "employees_affected": "43",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "ACDI VOCA",
+      "city": "",
+      "notice_date": "July 30, 2025",
+      "layoff_date": "October 1, 2025",
+      "employees_affected": "4",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "Corporation for Public Broadcasting",
+      "city": "",
+      "notice_date": "August 1, 2025",
+      "layoff_date": "September 30, 2025",
+      "employees_affected": "94",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "Institue of International Education",
+      "city": "",
+      "notice_date": "August 11, 2025",
+      "layoff_date": "Various Dates through November 2, 2025",
+      "employees_affected": "46 (amended)",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "Chemonics",
+      "city": "",
+      "notice_date": "August 25, 2025",
+      "layoff_date": "September 30 through September 28, 2025",
+      "employees_affected": "59",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "Target",
+      "city": "",
+      "notice_date": "August 27, 2025",
+      "layoff_date": "November 1, 2025",
+      "employees_affected": "44",
+      "closure_type": "2",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "ACDI VOCA",
+      "city": "",
+      "notice_date": "August 28, 2025",
+      "layoff_date": "November 3, 2025",
+      "employees_affected": "5",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "Institue of International Education",
+      "city": "",
+      "notice_date": "September 10, 2025",
+      "layoff_date": "Various Dates through September 28, 2025",
+      "employees_affected": "46 (amended)",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "Institue of International Education",
+      "city": "",
+      "notice_date": "October 20, 2025",
+      "layoff_date": "January 4, 2026",
+      "employees_affected": "24",
+      "closure_type": "1",
+      "notes": ""
+    },
+    {
+      "state": "DC",
+      "company": "RATP DEV and Midtown Group",
+      "city": "",
+      "notice_date": "October 29, 2025",
+      "layoff_date": "January 3, 2026",
+      "employees_affected": "52",
+      "closure_type": "2",
+      "notes": ""
+    }
+  ]
+}
