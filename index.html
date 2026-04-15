@@ -848,7 +848,7 @@
         <div id="warnTabContent" class="hidden">
 
             <!-- Stats cards -->
-            <div id="warnStatsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 fade-in" style="display:none;">
+            <div id="warnStatsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 fade-in" style="display:none;">
                 <div class="stats-card rounded-2xl p-6 card-accent-blue">
                     <div class="flex items-center justify-between">
                         <div>
@@ -868,17 +868,6 @@
                         </div>
                         <div class="w-12 h-12 rounded-xl bg-gray-700/20 flex items-center justify-center">
                             <i class="fas fa-building-circle-xmark text-gray-400 text-xl"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="stats-card rounded-2xl p-6 card-accent-indigo">
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Total Employees Affected</p>
-                            <p class="text-3xl font-bold text-gray-300" id="warnEmployees">0</p>
-                        </div>
-                        <div class="w-12 h-12 rounded-xl bg-gray-700/20 flex items-center justify-center">
-                            <i class="fas fa-users text-gray-400 text-xl"></i>
                         </div>
                     </div>
                 </div>
@@ -920,13 +909,13 @@
                 <table class="w-full text-sm text-left data-table">
                     <thead><tr>
                         <th class="px-3 py-3 w-10">#</th>
-                        <th class="px-3 py-3">Company</th>
-                        <th class="px-3 py-3">City</th>
-                        <th class="px-3 py-3 w-28">State</th>
-                        <th class="px-3 py-3 w-32">Notice Date</th>
-                        <th class="px-3 py-3 w-32">Layoff Date</th>
-                        <th class="px-3 py-3 w-28">Employees</th>
-                        <th class="px-3 py-3 w-28">Type</th>
+                        <th class="px-3 py-3 cursor-pointer select-none hover:text-white" onclick="sortWarnTable('company')">Company <span id="warnSort_company"></span></th>
+                        <th class="px-3 py-3 cursor-pointer select-none hover:text-white" onclick="sortWarnTable('city')">City <span id="warnSort_city"></span></th>
+                        <th class="px-3 py-3 w-28 cursor-pointer select-none hover:text-white" onclick="sortWarnTable('state')">State <span id="warnSort_state"></span></th>
+                        <th class="px-3 py-3 w-32 cursor-pointer select-none hover:text-white" onclick="sortWarnTable('notice_date')">Notice Date <span id="warnSort_notice_date"></span></th>
+                        <th class="px-3 py-3 w-32 cursor-pointer select-none hover:text-white" onclick="sortWarnTable('layoff_date')">Layoff Date <span id="warnSort_layoff_date"></span></th>
+                        <th class="px-3 py-3 w-28 cursor-pointer select-none hover:text-white" onclick="sortWarnTable('employees_affected')">Employees <span id="warnSort_employees_affected"></span></th>
+                        <th class="px-3 py-3 w-28 cursor-pointer select-none hover:text-white" onclick="sortWarnTable('closure_type')">Type <span id="warnSort_closure_type"></span></th>
                         <th class="px-3 py-3">Notes</th>
                     </tr></thead>
                     <tbody id="warnTableBody"></tbody>
@@ -993,6 +982,7 @@
     let dailyNewsArticles = [], filteredDailyNewsArticles = [];
     let dailyNewsExtractionRows = [], filteredDailyNewsExtractionRows = [];
     let warnRows = [], filteredWarnRows = [];
+    let warnSortCol = 'notice_date', warnSortDir = 'desc';
     let activeTab = 'store', activeScoopSubTab = 'articles';
     let activeRestSubTab = 'articles', activeBizSubTab = 'articles';
     let activeDailyNewsSubTab = 'articles';
@@ -2182,11 +2172,6 @@
     function updateWarnStats(rows) {
         setCount('warnTotal', rows.length);
         setCount('warnClosures', rows.filter(r => (r.closure_type||'').toLowerCase().includes('clos')).length);
-        const emp = rows.reduce((sum, r) => {
-            const n = parseInt((r.employees_affected||'').replace(/,/g,''), 10);
-            return sum + (isNaN(n) ? 0 : n);
-        }, 0);
-        setCount('warnEmployees', emp);
         document.getElementById('warnStatsContainer').style.display = rows.length ? 'grid' : 'none';
     }
 
@@ -2212,12 +2197,29 @@
         if (!filteredWarnRows.length) {
             container.classList.add('hidden');
             document.getElementById('warnEmptyState').classList.remove('hidden');
+            _updateWarnSortIcons();
             return;
         }
         document.getElementById('warnEmptyState').classList.add('hidden');
         container.classList.remove('hidden');
 
-        tbody.innerHTML = filteredWarnRows.map((r, i) => {
+        // Sort a copy of the filtered rows
+        const sorted = [...filteredWarnRows].sort((a, b) => {
+            let va = a[warnSortCol] || '', vb = b[warnSortCol] || '';
+            if (warnSortCol === 'employees_affected') {
+                va = parseInt((va+'').replace(/,/g,''), 10) || 0;
+                vb = parseInt((vb+'').replace(/,/g,''), 10) || 0;
+                return warnSortDir === 'asc' ? va - vb : vb - va;
+            }
+            if (warnSortCol === 'notice_date' || warnSortCol === 'layoff_date') {
+                va = new Date(va).getTime() || 0;
+                vb = new Date(vb).getTime() || 0;
+                return warnSortDir === 'asc' ? va - vb : vb - va;
+            }
+            return warnSortDir === 'asc' ? va.localeCompare(vb) : vb.localeCompare(va);
+        });
+
+        tbody.innerHTML = sorted.map((r, i) => {
             const isClosure = (r.closure_type||'').toLowerCase().includes('clos');
             const typeBadge = isClosure
                 ? `<span class="badge-closing px-2 py-1 rounded-full text-xs font-bold text-white"><i class="fas fa-building-circle-xmark mr-1 text-xs"></i>Closure</span>`
@@ -2245,6 +2247,32 @@
         }).join('');
 
         document.getElementById('warnRowCount').textContent = filteredWarnRows.length;
+        _updateWarnSortIcons();
+    }
+
+    function sortWarnTable(col) {
+        if (warnSortCol === col) {
+            warnSortDir = warnSortDir === 'asc' ? 'desc' : 'asc';
+        } else {
+            warnSortCol = col;
+            warnSortDir = (col === 'notice_date' || col === 'layoff_date' || col === 'employees_affected') ? 'desc' : 'asc';
+        }
+        renderWarnTable();
+    }
+
+    function _updateWarnSortIcons() {
+        const cols = ['company','city','state','notice_date','layoff_date','employees_affected','closure_type'];
+        cols.forEach(col => {
+            const el = document.getElementById(`warnSort_${col}`);
+            if (!el) return;
+            if (warnSortCol !== col) {
+                el.innerHTML = '<i class="fas fa-sort ml-1 text-gray-600 text-xs opacity-50"></i>';
+            } else {
+                el.innerHTML = warnSortDir === 'asc'
+                    ? '<i class="fas fa-sort-up ml-1 text-blue-400 text-xs"></i>'
+                    : '<i class="fas fa-sort-down ml-1 text-blue-400 text-xs"></i>';
+            }
+        });
     }
 
     function downloadWarnCSV() {
