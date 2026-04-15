@@ -134,7 +134,7 @@ def scrape_alaska() -> pd.DataFrame:
     soup = BeautifulSoup(resp.content, "html.parser")
 
     data = []
-    for row in soup.find_all("tr")[2:]:
+    for row in soup.find_all("tr")[1:]:   # [1:] skips the single header row
         cols = row.find_all("td")
         if len(cols) < 6:
             continue
@@ -157,37 +157,14 @@ async def _scrape_dc_async() -> list[dict]:
     """
     Parse DC WARN table by scraping <tr>/<td> directly via Playwright,
     bypassing pd.read_html entirely.
+    Fetches both current year and previous year pages to get full data.
     """
-    URL = "https://does.dc.gov/page/industry-closings-and-layoffs-warn-notifications-2025"
+    current_year = date.today().year
+    URLS = [
+        f"https://does.dc.gov/page/industry-closings-and-layoffs-warn-notifications-{current_year}",
+        f"https://does.dc.gov/page/industry-closings-and-layoffs-warn-notifications-{current_year - 1}",
+    ]
     SELECTOR = ".field-name-body table, .field-items table, article table"
-
-    async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
-        page = await browser.new_page()
-        await page.goto(URL, wait_until="domcontentloaded", timeout=30000)
-        await page.wait_for_selector(SELECTOR, timeout=20000)
-
-        rows_data = await page.eval_on_selector(
-            SELECTOR,
-            """tbl => {
-                const rows = Array.from(tbl.querySelectorAll('tr'));
-                return rows.map(r =>
-                    Array.from(r.querySelectorAll('th, td'))
-                        .map(c => c.innerText.trim())
-                );
-            }"""
-        )
-        await browser.close()
-
-    if not rows_data:
-        return []
-
-    header_idx = next(
-        (i for i, r in enumerate(rows_data) if sum(bool(c) for c in r) >= 3),
-        0
-    )
-    headers = [h.strip() for h in rows_data[header_idx]]
-    data_rows = rows_data[header_idx + 1:]
 
     col_map = {
         "organization name": "company",
@@ -208,16 +185,52 @@ async def _scrape_dc_async() -> list[dict]:
         "city":              "city",
     }
 
-    norm_headers = [col_map.get(h.lower(), h.lower()) for h in headers]
+    all_records = []
 
-    records = []
-    for row in data_rows:
-        if not any(row):
-            continue
-        padded = row + [""] * (len(norm_headers) - len(row))
-        records.append(dict(zip(norm_headers, padded)))
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=True)
 
-    return records
+        for url in URLS:
+            try:
+                page = await browser.new_page()
+                await page.goto(url, wait_until="domcontentloaded", timeout=30000)
+                await page.wait_for_selector(SELECTOR, timeout=20000)
+
+                rows_data = await page.eval_on_selector(
+                    SELECTOR,
+                    """tbl => {
+                        const rows = Array.from(tbl.querySelectorAll('tr'));
+                        return rows.map(r =>
+                            Array.from(r.querySelectorAll('th, td'))
+                                .map(c => c.innerText.trim())
+                        );
+                    }"""
+                )
+                await page.close()
+
+                if not rows_data:
+                    continue
+
+                header_idx = next(
+                    (i for i, r in enumerate(rows_data) if sum(bool(c) for c in r) >= 3),
+                    0
+                )
+                headers = [h.strip() for h in rows_data[header_idx]]
+                data_rows = rows_data[header_idx + 1:]
+                norm_headers = [col_map.get(h.lower(), h.lower()) for h in headers]
+
+                for row in data_rows:
+                    if not any(row):
+                        continue
+                    padded = row + [""] * (len(norm_headers) - len(row))
+                    all_records.append(dict(zip(norm_headers, padded)))
+
+            except Exception as exc:
+                log.warning(f"  DC: failed to scrape {url} — {exc}")
+
+        await browser.close()
+
+    return all_records
 
 
 def scrape_dc() -> pd.DataFrame:
@@ -560,33 +573,34 @@ def scrape_texas() -> pd.DataFrame:
     raw.columns = [c.strip() for c in raw.columns]
     log.info(f"  Texas raw columns: {raw.columns.tolist()}")
 
-    # Texas Socrata column names vary; map whatever is present
+    # Actual Texas Socrata CSV uses ALL_CAPS_UNDERSCORE column names.
+    # Map both the real names and common title-case variants as fallback.
     col_map = {
-        # company
-        "Company Name":         "company",
-        "Employer Name":        "company",
-        "Company":              "company",
+        # company — actual Socrata name
+        "JOB_SITE_NAME":            "company",
         # city
-        "City":                 "city",
-        "Location":             "city",
+        "CITY_NAME":                "city",
+        "City":                     "city",
         # notice date
-        "Notice Date":          "notice_date",
-        "WARN Date":            "notice_date",
-        # layoff/effective date
-        "Layoff Date":          "layoff_date",
-        "Effective Date":       "layoff_date",
-        "Planned Layoff Date":  "layoff_date",
+        "NOTICE_DATE":              "notice_date",
+        "Notice Date":              "notice_date",
+        # layoff / effective date
+        "LayOff_Date":              "layoff_date",
+        "LAYOFF_DATE":              "layoff_date",
+        "Layoff Date":              "layoff_date",
+        "Effective Date":           "layoff_date",
         # employees
-        "# Employees Affected": "employees_affected",
-        "Employees Affected":   "employees_affected",
-        "Number of Employees":  "employees_affected",
-        # type
-        "Type of Layoff":       "closure_type",
-        "Closure/Layoff":       "closure_type",
-        "Type":                 "closure_type",
+        "TOTAL_LAYOFF_NUMBER":      "employees_affected",
+        "# Employees Affected":     "employees_affected",
+        "Employees Affected":       "employees_affected",
+        "Number of Affected Workers": "employees_affected",
+        # closure type (Texas dataset has no dedicated type column; leave blank)
+        "Type of Layoff/Closure":   "closure_type",
+        "Type of Layoff":           "closure_type",
+        "Closure/Layoff":           "closure_type",
         # notes
-        "Notes":                "notes",
-        "Comments":             "notes",
+        "Notes":                    "notes",
+        "Comments":                 "notes",
     }
     raw.rename(columns={k: v for k, v in col_map.items() if k in raw.columns}, inplace=True)
 
