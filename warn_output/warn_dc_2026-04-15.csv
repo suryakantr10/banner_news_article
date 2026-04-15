@@ -1,4 +1,8 @@
 state,company,city,notice_date,layoff_date,employees_affected,closure_type,notes
+DC,Elior North America,,"February 2, 2026","June 30, 2026",76,1,
+DC,WP Company LLC,,"February 6, 2026","April 10, 2026",277,1,
+DC,Albertson's/Safeway,,"March 13, 2026",TBD,87,2,
+DC,"Bering Global Solutions, LLC",,"March 13, 2026","March 31, 2026",108,1,
 DC,"Golden Services, LLC",,"January 1, 2025","January 31, 2025",43,2,
 DC,"Freedom House, Inc",,"February 14, 2025","April 15, 2025",76,1,
 DC,United Medical Center,,"February 20, 2025","Various Dates through September 30, 2025",485,2,
