@@ -217,6 +217,8 @@
         .data-table tbody tr { border-bottom: 1px solid rgba(255,255,255,0.04); transition: background 0.15s; }
         .data-table tbody tr:hover { background: rgba(99,102,246,0.06); }
         .data-table thead th { background: rgba(15,20,40,0.9); color: #94a3b8; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; }
+        .data-table tbody tr.warn-highlight { background: rgba(22,163,74,0.10); border-left: 3px solid #16a34a; }
+        .data-table tbody tr.warn-highlight:hover { background: rgba(22,163,74,0.18); }
 
         .analyst-section { scroll-margin-top: 90px; }
         .analyst-heading {
@@ -2189,6 +2191,56 @@
         renderWarnTable();
     }
 
+    const WARN_HIGHLIGHT_COMPANIES = new Set([
+        "7-eleven us","academy sports + outdoors","albertsons","allsup's","amazon fresh",
+        "amazon go","arco","at home","autozone","baker's supermarkets","balducci's",
+        "barnes & noble","barnes and noble","bentley's pet stuff","best friends pet care",
+        "biscuits & bath","bj's restaurant & brewhouse","bj's wholesale club",
+        "bloomingdale's","boscov's","bp","burlington","burlington stores",
+        "casey's general store","casey's general stores","centinela feed & pet supplies",
+        "central market","chevron","choice pet supply","chuck & don's pet food outlet",
+        "circle k","circle-k","city market","concord pet foods and supplies",
+        "conocophillips","costco wholesale corp.","cub foods","cvs","dave's hot chicken",
+        "dd's discounts","dick's sporting goods","dillard's","dillons supermarkets",
+        "doggie style","dogtopia","dollar general","dollar tree","domino's pizza",
+        "dunkin'","dunkin donuts","earthwise pet","el bodegon supermarket",
+        "el rancho supermercado","el rio bravo supermarket","el super","family dollar",
+        "family dollar stores","feeders supply","fields","fiesta foods","fiesta mart",
+        "food city","food lion","foodmaxx supermarkets","fred meyer","fresco y más",
+        "friendly pets","fry's food & drug stores","gerbes super markets","giant eagle",
+        "giant food","giant food stores","golf galaxy","grocery outlet","haggen",
+        "harris teeter","harveys supermarket","h-e-b","hobby lobby","hobby lobby stores",
+        "hollywood feed","homegoods","homesense us","hornbacher's","hy-vee",
+        "ingles markets","jay c","jcpenney","joann fabric and craft stores",
+        "joe v's smart shop","johnny brusco's","kahoots pet products","king soopers",
+        "kirklands","kj's market","kmart","kohl's","kriser's","kroger",
+        "kroger marketplace","lidl us","loblaws","love's travel stops and country stores",
+        "lowe's","lowes foods","lucky supermarkets","lucky's market","macy's",
+        "mariano's","market basket","market district","marshalls","martin's food markets",
+        "mcdonald's us","meijer","metro market","michaels stores",
+        "morton williams supermarkets","mountain mike's pizza","mud bay","neiman marcus",
+        "nordstrom","nordstrom rack","northgate gonzalez market","office depot",
+        "o'reilly auto parts","papa john's","party city","pay less super markets",
+        "pet club food and supplies","pet depot","pet evolution","pet food express",
+        "pet paradise resort and day spa","pet planet","pet pros","petco",
+        "pete and mac's","pet's barn","petsmart","pick 'n save","pieology pizzeria",
+        "piggly wiggly","pilot travel centers","popshelf","presidente supermarkets",
+        "price chopper","price chopper (dgs)","publix","publix super markets",
+        "qfc (quality food centers)","quicklee's","quiktrip","racetrac","raley's",
+        "ralphs","rei","rite aid","roche bros.","ross dress for less","ross stores",
+        "rouses markets","safeway","saks fifth avenue","sam's club","saubel's markets",
+        "sauce pizza & wine","save mart supermarkets","save-a-lot","scheels","schnucks",
+        "seafood city","sears","sedano's supermarkets","sheetz","shell oil",
+        "smith's food & drug stores","sprouts farmers market","sprouts farmers markets",
+        "staples","starbucks u.s.","stater bros. markets","stop & shop","t.j. maxx",
+        "taco bell","target","tesco stores","the container store","the fresh market",
+        "three dog bakery","trader joe's","ulta","ulta beauty",
+        "uncle maddio's pizza joint","uniqlo us","vallarta supermarkets",
+        "variety wholesalers","vca animal hospitals","wag n' wash natural food & bakery",
+        "walgreens","walmart","wawa","wegmans food markets","whole foods market",
+        "wild fork foods"
+    ]);
+
     function renderWarnTable() {
         const tbody = document.getElementById('warnTableBody');
         const container = document.getElementById('warnTableContainer');
@@ -2226,8 +2278,9 @@
                 : r.closure_type
                 ? `<span class="px-2 py-1 rounded-full text-xs bg-amber-900/40 text-amber-300 border border-amber-700/30">${escapeHtml(r.closure_type)}</span>`
                 : `<span class="text-gray-600 text-xs">—</span>`;
+            const isTracked = WARN_HIGHLIGHT_COMPANIES.has((r.company||'').toLowerCase().trim());
             return `
-            <tr>
+            <tr class="${isTracked ? 'warn-highlight' : ''}">
                 <td class="px-3 py-3 text-gray-600 text-xs font-semibold">${i+1}</td>
                 <td class="px-3 py-3 max-w-[180px]">
                     <span class="font-medium text-white text-sm line-clamp-2 block" title="${escapeHtml(r.company||'')}">${highlight(r.company||'—', term)}</span>
