@@ -1,76 +1,220 @@
 {
-  "last_updated": "2026-04-13",
+  "last_updated": "2026-04-16",
   "data": [
     {
-      "store_name": "Zaza Cuban Comfort Food",
-      "location": "9202 Jeff Fuqua Blvd, Orlando, FL 32827",
+      "store_name": "Gino's Panino",
+      "location": "907 Arendell St, Suite A, Morehead City, NC 28557",
       "event_type": "Opening",
-      "event_date": "August 2026 (targeted)",
-      "status": "Targeting August opening (construction underway; timeline pending buildout)",
-      "short_description": "A hybrid airport concept branded as Zaza Bar and Cuban Cafe combining full-service dining, coffee, bar, and grab-and-go in ~1,500 sq ft. Founded by Ruben Perez with CEO Luis Fernandez. Planned daily 5 a.m.–9 p.m.",
-      "article_link": "https://www.businessdebut.com/6-coming-soon-orange-county-restaurants-april-15-2026/"
+      "event_date": "Within coming weeks (as early as next week)",
+      "status": "preparing to open in the coming weeks",
+      "short_description": "Gino's Panino is an Italian-themed sandwich shop preparing to open in Morehead City, offering housemade sandwiches, subs, wraps, paninis, and salads with counter-service ordering. The space will operate primarily as a takeout concept with both indoor and outdoor seating, and plans to include a small retail section with Italian grocery items.",
+      "article_link": "https://www.businessdebut.com/ginos-panino-opening-in-morehead-city-very-soon/"
     },
     {
-      "store_name": "Culver's",
-      "location": "1921 US-92, Auburndale, FL 33823",
+      "store_name": "Las Mas Mexican Food & Cantina",
+      "location": "111 S. White Street, Suite B, Wake Forest, NC 27587",
       "event_type": "Opening",
-      "event_date": "Q1 2027 (targeted)",
-      "status": "Targeting Q1 2027 (pending city infrastructure completion)",
-      "short_description": "A 4,500-square-foot restaurant with dine-in seating for ~75 guests, patio, and drive-thru. Owner Nathan Devine's sixth location managed by operator Scott Hunt. Planned Sun–Thu 10 a.m.–10 p.m.; Fri–Sat 10 a.m.–11 p.m.",
-      "article_link": "https://www.businessdebut.com/6-coming-soon-orange-county-restaurants-april-15-2026/"
+      "event_date": "In about two weeks (year not specified)",
+      "status": "targeting an opening in about two weeks",
+      "short_description": "Las Mas Mexican Food & Cantina is opening in a remodeled and renovated space previously occupied for 24 years by Las Margaritas, following a two-year rebrand and renovation process. The full-service Mexican restaurant and cantina will seat 98 guests and serve expanded traditional Mexican dishes alongside familiar menu staples.",
+      "article_link": "https://www.businessdebut.com/las-mas-mexican-food-cantina-opening-soon-in-wake-forest/"
     },
     {
-      "store_name": "Flavors of Jamaica",
-      "location": "2610 S Ferncreek Ave, Orlando, FL 32806",
+      "store_name": "Black Berry's Creamery & Cafe",
+      "location": "5615 Normandy Blvd, Jacksonville, FL 32205",
       "event_type": "Opening",
-      "event_date": "Early April 2026 (targeted)",
-      "status": "Targeting early April opening (pending final approvals)",
-      "short_description": "First full-service location for the brand with ~78 indoor seats and additional outdoor seating, expanding beyond takeout. Menu features oxtails, curry goat, and jerk chicken.",
-      "article_link": "https://www.businessdebut.com/6-coming-soon-orange-county-restaurants-april-15-2026/"
+      "event_date": "June 15 (year not specified)",
+      "status": "targeting a June 15 opening",
+      "short_description": "Black Berry's Creamery & Cafe is targeting a June 15 opening at a former Rally's site in Jacksonville, serving as the anchor dessert destination within a larger food truck park developed by co-owners Raymond Paulk and Lynn Little. The concept will offer a wide range of ice cream flavors, milkshakes, shaved ice, and fresh-squeezed lemonades, with plans to introduce house-made ice cream within the first six months.",
+      "article_link": "https://www.businessdebut.com/black-berrys-creamery-and-cafe-debuting-in-jacksonville/"
     },
     {
-      "store_name": "Zephyr Chills",
-      "location": "6536 Unit H Stadium Drive, Zephyrhills, FL 33542",
+      "store_name": "Music City Beach Bar",
+      "location": "16905 Gulf Boulevard, North Redington Beach, FL 33708",
       "event_type": "Opening",
-      "event_date": "Mid-May 2026 (targeted)",
-      "status": "Targeting a mid-May opening",
-      "short_description": "A walk-up shaved ice shop with no indoor seating, operated by owners Darrell Lake Valencia and Nikki Lake with family involvement. Starting menu includes shaved ice, popcorn, soda, and dirty lemonades with plans to expand to smoothies and boba teas.",
-      "article_link": "https://www.businessdebut.com/zephyr-chills-opening-soon-in-zephyrhills/"
+      "event_date": "April 20 (year not specified)",
+      "status": "targeting an April 20 opening",
+      "short_description": "Music City Beach Bar is a Nashville-style honky tonk venue targeting an April 20 opening at 16905 Gulf Boulevard, bringing live country music, a full-service bar, and casual bar food to the Gulf Coast. The 2,100 sq ft space seats roughly 130 guests and features two eight-foot glass garage doors opening toward the beach.",
+      "article_link": "https://www.businessdebut.com/music-city-beach-bar-bringing-live-country-music-to-north-redington-beach/"
     },
     {
-      "store_name": "Lumbre",
-      "location": "220 N. Rome Ave., Tampa, FL 33603",
+      "store_name": "Teriyaki Madness",
+      "location": "4969 Roswell Rd, Atlanta, GA 30342",
       "event_type": "Opening",
-      "event_date": "Early June 2026 (targeted)",
-      "status": "Targeting an early June opening",
-      "short_description": "A full-service Spanish restaurant from Tampa group Tastes Pretty Good seating about 125 guests, centered on tapas, paella, and wood-fired cooking. Features a custom-built wood-fired grill imported from Spain as a kitchen centerpiece.",
-      "article_link": "https://www.businessdebut.com/lumbre-bringing-spanish-dining-experience-to-tampa/"
+      "event_date": "Mid-June (year not specified)",
+      "status": "targeting a mid-June opening",
+      "short_description": "Teriyaki Madness is targeting a mid-June opening at 4969 Roswell Rd in Atlanta, with construction expected to begin April 27 pending final permitting and a five-to-six week buildout. The fast-casual Japanese-inspired restaurant will seat approximately 25–30 guests indoors with additional outdoor seating, and is franchisee Gonzalo de Aristegui's second Teriyaki Madness location.",
+      "article_link": "https://www.businessdebut.com/teriyaki-madness-bringing-japanese-inspired-bowl-concept-in-atlanta/"
     },
     {
-      "store_name": "Supra Revolving Sushi Bar",
-      "location": "4521 Southside Boulevard, Jacksonville, FL 32216",
+      "store_name": "Mama's Pizza",
+      "location": "1430 Lake Hearn Dr NE, Suite A, Brookhaven, GA 30319",
       "event_type": "Opening",
-      "event_date": "October or November 2026 (targeted)",
-      "status": "Targeting an October or November opening",
-      "short_description": "A conveyor belt-style full-service dining concept seating 150–180 guests, serving sushi, hibachi, ramen, appetizers, milk tea, and alcoholic beverages. Owner Ivan Lu also owns other Jacksonville-area restaurants including Tonka.",
-      "article_link": "https://www.businessdebut.com/supra-revolving-sushi-bar-targeting-fall-opening-in-jacksonville/"
+      "event_date": "Early to mid-May (year not specified)",
+      "status": "targeting an early to mid-May debut",
+      "short_description": "Mama's Pizza is opening a second location at 1430 Lake Hearn Dr NE in Brookhaven within an Amli apartment development, featuring approximately 48 indoor seats, 32 patio seats, a walk-up garage-style window, and 12 draft beer taps. The menu will largely mirror the Alpharetta location with classic pizzas and Italian offerings, alongside rotating monthly specials.",
+      "article_link": "https://www.businessdebut.com/mamas-pizza-opening-second-location-in-brookhaven/"
     },
     {
-      "store_name": "Odoms and Sons BBQ",
-      "location": "2740 Greenbriar Pkwy SW, Atlanta, GA 30311",
+      "store_name": "The Gin Mill",
+      "location": "250 Cleveland Street, Locust Grove, GA 30248",
       "event_type": "Opening",
-      "event_date": "May 22, 2026 (targeted)",
-      "status": "Targeting a May 22 opening",
-      "short_description": "A counter-service BBQ restaurant marking the brand's first brick-and-mortar, transitioning from pop-ups and a food truck since September 2023. Signature items include smoked oxtails, brisket, and ribs; initially open Friday–Sunday until sellout.",
-      "article_link": "https://www.businessdebut.com/odoms-and-sons-bbq-expanding-to-brick-and-mortar-in-atlanta/"
+      "event_date": "Around Father's Day weekend (year not specified)",
+      "status": "plans to open around Father's Day weekend",
+      "short_description": "The Gin Mill is a catering and events venue from Quinn's Catering owner Quinn O'Neill, nearing completion in Locust Grove with interior construction complete and final approvals underway. The space includes a banquet hall for up to 150 guests, a large covered patio, and an outdoor garden designed for weddings, private events, and community gatherings.",
+      "article_link": "https://www.businessdebut.com/quinns-catering-opening-the-gin-mill-event-space-in-locust-grove/"
+    },
+    {
+      "store_name": "Some Luck",
+      "location": "644 N Highland Ave NE, Atlanta, GA 30306",
+      "event_type": "Opening",
+      "event_date": "Early July (targeting July 1)",
+      "status": "targeting an early July opening",
+      "short_description": "Some Luck is a bar-forward late-night dining concept from the team behind Talat Market, targeting a July 1 opening at 644 N Highland Ave NE in Atlanta's Virginia-Highland area. The menu will center on Thai barfare including papaya salad, skewers, congee-style dishes, and snackable items, with a beverage program of Thai-inspired cocktails and late-night hours until 2 a.m. on Fridays and Saturdays.",
+      "article_link": "https://www.businessdebut.com/some-luck-aiming-to-open-in-july/"
+    },
+    {
+      "store_name": "Tavern 312",
+      "location": "312 East Broad Street, Dunn, NC 28334",
+      "event_type": "Opening",
+      "event_date": "Grand opening in approximately 30 days (year not specified)",
+      "status": "soft opened last weekend, grand opening planned in approximately 30 days",
+      "short_description": "Tavern 312 soft opened last weekend at 312 East Broad Street in Dunn, NC, with a grand opening planned approximately 30 days later. The laid-back bar concept features two pool tables, arcade-style games, a golf machine, and relies on food trucks for food service while the bar provides drinks.",
+      "article_link": "https://www.businessdebut.com/tavern-312-opening-new-bar-in-dunn/"
+    },
+    {
+      "store_name": "Float Dirty Soda and Ice Cream",
+      "location": "1013 Battleground Ave, Greensboro, NC 27408",
+      "event_type": "Opening",
+      "event_date": "August (year not specified)",
+      "status": "working toward an August opening",
+      "short_description": "Float Dirty Soda and Ice Cream is working toward an August opening in Greensboro, combining a dirty soda bar with a retro-inspired soda fountain and ice cream shop in a 1,000 sq ft former car wash space. The concept will feature a build-your-own dirty soda bar using Coca-Cola products and flavored syrups, alongside ice cream sourced from Homeland Creamery, a family-owned dairy in Julian, NC.",
+      "article_link": "https://www.businessdebut.com/float-dirty-soda-and-ice-cream-opening-in-greensboro/"
+    },
+    {
+      "store_name": "Shakeburger",
+      "location": "5076 Styers Ferry Rd, Lewisville, NC 27023",
+      "event_type": "Opening",
+      "event_date": "Mid-June (year not specified)",
+      "status": "targeting a mid-June opening",
+      "short_description": "Shakeburger is targeting a mid-June opening in Lewisville, NC, in a new-build modern family-friendly restaurant with approximately 50 indoor seats and 60 covered patio seats. The counter-service concept will offer 100% Angus ground chuck burgers, hot dogs, chicken sandwiches, barbecue, fish sandwiches, milkshakes, flurries, and dipped ice cream cones at affordable pricing.",
+      "article_link": "https://www.businessdebut.com/shakeburger-opening-mid-june-in-lewisville/"
+    },
+    {
+      "store_name": "Creo",
+      "location": "3201 Corrine Drive, Orlando, FL 32803",
+      "event_type": "Opening",
+      "event_date": "Late April to early May (year not specified)",
+      "status": "targeting a late April to early May opening",
+      "short_description": "Creo is a fast-casual Italian-inspired walk-up concept opening inside East End Market at 3201 Corrine Drive in Orlando, with a buildout nearing completion and inspections pending. The menu focuses on Italian small plates drawing from Venetian and Tuscan traditions, including cicchetti, house-made breads, rotating entrees, and house-made sodas and mocktails.",
+      "article_link": "https://www.businessdebut.com/creo-bringing-italian-small-plates-to-orlando/"
+    },
+    {
+      "store_name": "Jeremiah's Italian Ice",
+      "location": "928 Promenade St, Panama City, FL 32404",
+      "event_type": "Opening",
+      "event_date": "Mid-May (year not specified)",
+      "status": "targeting a mid-May opening",
+      "short_description": "Jeremiah's Italian Ice is targeting a mid-May opening at 928 Promenade St in Panama City, marking the first Jeremiah's franchise for owner Bob Amin and the concept's first location in the area. The fast-casual concept offers Italian ice layered with ice cream, gelati combinations, ice cream sandwiches, cakes, and take-home quart options.",
+      "article_link": "https://www.businessdebut.com/jeremiahs-italian-ice-opening-soon-in-panama-city/"
+    },
+    {
+      "store_name": "The Wagyu House by Meat N' Bone",
+      "location": "601 N Federal Hwy, #113, Hallandale Beach, FL 33009",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "now in soft opening and moving toward a full opening phase",
+      "short_description": "The Wagyu House by Meat N' Bone is currently in soft opening at 601 N Federal Hwy, #113 in Hallandale Beach, offering a full-service steakhouse experience centered on more than 32 cuts of beef from USDA Choice to Japanese Wagyu. The 3,000 sq ft, 120-seat space also includes a retail boutique with over 400 curated protein products available for purchase.",
+      "article_link": "https://www.businessdebut.com/the-wagyu-house-by-meat-n-bone-debuts-in-hallandale-beach/"
+    },
+    {
+      "store_name": "The Ivy House",
+      "location": "106 NW Main St, Williston, FL 32696",
+      "event_type": "Opening",
+      "event_date": "Late July (year not specified)",
+      "status": "targeting a late July opening",
+      "short_description": "The Ivy House is preparing to reopen at 106 NW Main St in Williston after a fire forced the business to close more than two years ago, with owner Waica Micheletti targeting a late July opening. The restored 1912 French country-style home will feature approximately 150 indoor seats, 40–50 outdoor seats, a new bar called ROOTS, and a menu anchored by original family recipes.",
+      "article_link": "https://www.businessdebut.com/the-ivy-house-returning-to-williston-after-closure/"
+    },
+    {
+      "store_name": "Lakeside Social",
+      "location": "2431 Town Center Ave, Building 2, Melbourne, FL 32940",
+      "event_type": "Opening",
+      "event_date": "Early June 2026",
+      "status": "targeting an early June 2026 opening",
+      "short_description": "Lakeside Social is targeting an early June 2026 opening in Viera, offering a large-scale food truck park with six semi-permanent food trucks, two full-service bars, a performance stage, and a waterfront green space. The venue will seat approximately 250–300 guests with capacity for up to 1,000 standing, with all events planned to be free for the community.",
+      "article_link": "https://www.businessdebut.com/lakeside-social-bringing-food-trucks-and-live-events-to-viera/"
+    },
+    {
+      "store_name": "Coconut Island Market (hot food service)",
+      "location": "7573 Raymary St, Units A-B, Bokeelia, FL 33922",
+      "event_type": "Opening",
+      "event_date": "Mid-May (year not specified)",
+      "status": "targeting a mid-May launch for hot food service",
+      "short_description": "Coconut Island Market, currently open as a convenience-style market, is preparing to add quick-service hot food including tacos, hamburgers, burritos, fruit cups, and aguas frescas by mid-May. The addition comes in response to demand from local workers seeking fast lunch options, with an option to order ahead for pickup.",
+      "article_link": "https://www.businessdebut.com/coconut-island-market-adding-hot-food-in-bokeelia/"
+    },
+    {
+      "store_name": "Elegancia Beauty Spa",
+      "location": "7573 Raymary St (neighboring unit), Bokeelia, FL 33922",
+      "event_type": "Opening",
+      "event_date": "June (year not specified)",
+      "status": "targeting a June debut",
+      "short_description": "Elegancia Beauty Spa, owned by Niurica Ortiz, is preparing to open in a unit neighboring Coconut Island Market in the same plaza in Bokeelia, targeting a June debut. No further details about the spa's offerings were provided in the article.",
+      "article_link": "https://www.businessdebut.com/coconut-island-market-adding-hot-food-in-bokeelia/"
+    },
+    {
+      "store_name": "Meltwich",
+      "location": "12098 Collegiate Way, Orlando, FL 32817",
+      "event_type": "Opening",
+      "event_date": "Mid-to-late May (year not specified)",
+      "status": "targeting a mid-to-late May debut",
+      "short_description": "Meltwich, a Canada-based quick-service restaurant built around grilled cheese sandwiches, burgers, poutines, and comfort food, is targeting a mid-to-late May opening at 12098 Collegiate Way in Orlando, the first Meltwich in Orlando and the second in Florida. The approximately 2,000 sq ft space will seat roughly 20–50 guests, with catering planned as a major focus for the UCF-area location.",
+      "article_link": "https://www.businessdebut.com/meltwich-opening-mid-to-late-may-in-orlando/"
+    },
+    {
+      "store_name": "Northbound Tavern",
+      "location": "10150 Ball Ground Hwy, Ball Ground, GA 30107",
+      "event_type": "Opening",
+      "event_date": "June (year not specified)",
+      "status": "targeting a June opening",
+      "short_description": "Northbound Tavern is targeting a June opening at 10150 Ball Ground Hwy in Ball Ground, GA, offering full-service American tavern fare with a bar and seating for around 80 guests. The menu will include sandwiches, steak cuts, and seafood, with wood-fired cooking techniques incorporated for items like wings and steaks.",
+      "article_link": "https://www.businessdebut.com/northbound-tavern-replacing-choate-bbq-bar-in-ball-ground/"
+    },
+    {
+      "store_name": "La Cantina Off Main",
+      "location": "420 Old Canton Rd, Ball Ground, GA 30107",
+      "event_type": "Opening",
+      "event_date": "June (year not specified)",
+      "status": "targeting a June opening",
+      "short_description": "La Cantina Off Main is targeting a June opening at 420 Old Canton Rd in Ball Ground as a second location for the team's Canton-based La Cantina on Main, seating approximately 75–80 guests inside plus 20–30 on a patio. The full-service restaurant will serve authentic northeastern Mexican cuisine including aguachile de ribeye, cachetadas and campechana tacos, and wood-fired dishes.",
+      "article_link": "https://www.businessdebut.com/la-cantina-off-main-opening-in-ball-ground/"
+    },
+    {
+      "store_name": "Leonidas",
+      "location": "510 Dodecanese Blvd, Tarpon Springs, FL 34689",
+      "event_type": "Opening",
+      "event_date": "Next week (year not specified)",
+      "status": "targeting a soft opening sometime next week",
+      "short_description": "Leonidas, a Belgian chocolate brand, is preparing to open along the Sponge Docks in Tarpon Springs, offering imported Belgian chocolates, Greek desserts, and a full coffee bar with indoor seating for 35–40 guests and 30 outdoors. The shop will carry chocolates flown in weekly from Belgium and pastries imported from Greece, alongside in-house items and coffee from local roaster Aleph Premium Coffee.",
+      "article_link": "https://www.businessdebut.com/leonidas-bringing-belgian-chocolates-to-tarpon-springs/"
+    },
+    {
+      "store_name": "Pie Bar",
+      "location": "1530 Ellsworth Industrial Blvd NW, Atlanta, GA 30318",
+      "event_type": "Opening",
+      "event_date": "Early May (year not specified)",
+      "status": "targeting an early May opening",
+      "short_description": "Pie Bar is planning a new location inside Westside Market at 1530 Ellsworth Industrial Blvd NW in Atlanta, offering espresso drinks, sweet and savory pies, and grab-and-go service near the front entrance. The location will also function as a central pickup point for online orders, with menu items including chicken pot pie, quiche, shepherd's pie, and eight to ten rotating sweet pie flavors.",
+      "article_link": "https://www.businessdebut.com/pie-bar-opening-in-westside-market-atlanta/"
     },
     {
       "store_name": "Iron Oak Cigar Lounge",
-      "location": "1048 Copperfield Blvd NE Suite 101, Concord, NC 28025",
+      "location": "1048 Copperfield Blvd NE, Suite 101, Concord, NC 28025",
       "event_type": "Opening",
-      "event_date": "Soft opening mid-May; grand opening late May or early June 2026",
+      "event_date": "Soft opening mid-May; grand opening late May or early June (year not specified)",
       "status": "under construction",
-      "short_description": "A cigar-focused lounge with a bar and indoor golf simulator, owned by Bjorn Mohaugen. Targeting a soft opening in mid-May followed by a grand opening in late May or early June.",
+      "short_description": "Iron Oak Cigar Lounge is under construction in Concord, NC, with owner Bjorn Mohaugen developing a cigar-focused concept that will also include a bar and indoor golf simulator. The team is targeting a soft opening in mid-May, followed by a grand opening in late May or early June.",
       "article_link": "https://www.businessdebut.com/8-new-businesses-opening-across-north-carolina-april-10-2026/"
     },
     {
@@ -78,324 +222,36 @@
       "location": "3661 Concord Parkway South, Concord, NC 28027",
       "event_type": "Opening",
       "event_date": "Not specified",
-      "status": "opening",
-      "short_description": "Opening in the former Smoothie King location, owned by Sarah and Barrett Dabbs who also own Johnny Roger's BBQ & Burgers in the same shopping plaza. No opening date or timeline was provided in the article.",
+      "status": "opening in the former location of Smoothie King",
+      "short_description": "The Tickled Pickle Deli is opening in the former Smoothie King location at 3661 Concord Parkway South, owned by couple Sarah and Barrett Dabbs, who also own Johnny Roger's BBQ & Burgers in the same shopping plaza. No opening date was specified in the article.",
       "article_link": "https://www.businessdebut.com/8-new-businesses-opening-across-north-carolina-april-10-2026/"
     },
     {
       "store_name": "Taste of Bengal",
-      "location": "10610 Centrum Pkwy Suite L, Pineville, NC 28134",
+      "location": "10610 Centrum Pkwy, Suite L, Pineville, NC 28134",
       "event_type": "Opening",
-      "event_date": "Within one to one-and-a-half months of article date (targeted)",
-      "status": "Targeting an opening in about one to one-and-a-half months",
-      "short_description": "A Bengali-focused takeout concept with catering, frozen goods, and a halal butcher counter, owned by Sabyasachi Patra. Pending remaining buildout progress as of article date.",
+      "event_date": "Within about one to one-and-a-half months (year not specified)",
+      "status": "has a goal to open within about one to one-and-a-half months",
+      "short_description": "Taste of Bengal is preparing to open in Pineville, NC, offering a Bengali-focused concept blending takeout food, catering, frozen goods, and a halal butcher counter. Owner Sabyasachi Patra told Business Debut the timeline is pending remaining buildout progress.",
       "article_link": "https://www.businessdebut.com/8-new-businesses-opening-across-north-carolina-april-10-2026/"
     },
     {
       "store_name": "Shaka Taco",
       "location": "4502 Fountain Drive, Wilmington, NC 28403",
       "event_type": "Opening",
-      "event_date": "Late spring to early summer 2026 (targeted)",
-      "status": "The team is targeting a late spring to early summer opening as construction continues",
-      "short_description": "A coastal taco concept opening a new standalone location near UNC Wilmington, co-owned by Steve Christian. Construction is ongoing as of article date.",
+      "event_date": "Late spring to early summer (year not specified)",
+      "status": "targeting a late spring to early summer opening",
+      "short_description": "Shaka Taco is preparing to open a new location at 4502 Fountain Drive in Wilmington, near the University of North Carolina Wilmington, bringing its coastal taco concept to a standalone space. Construction is ongoing with a late spring to early summer opening targeted.",
       "article_link": "https://www.businessdebut.com/8-new-businesses-opening-across-north-carolina-april-10-2026/"
-    },
-    {
-      "store_name": "Grain and Berry",
-      "location": "Apex, NC (full address not specified)",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "preparing to open",
-      "short_description": "A Florida-based superfood concept expanding to Apex, NC. Full address and specific opening date were not provided in the article excerpt.",
-      "article_link": "https://www.businessdebut.com/8-new-businesses-opening-across-north-carolina-april-10-2026/"
-    },
-    {
-      "store_name": "Gin Khao",
-      "location": "750 W. Main Street, Bartow, FL 33830",
-      "event_type": "Opening",
-      "event_date": "Soft opening May; full opening June 2026 (targeted)",
-      "status": "Targeting a soft opening in May with full opening in June",
-      "short_description": "A fast-casual Thai restaurant expanding from a long-running food truck, owned by Thomas and Prapapan Klug. The food truck will continue operating alongside the new brick-and-mortar space.",
-      "article_link": "https://www.businessdebut.com/6-coming-soon-polk-county-restaurants-april-10-2026/"
-    },
-    {
-      "store_name": "Wingnutz",
-      "location": "1037 Dixieland Mall Lane, Lakeland, FL 33803",
-      "event_type": "Opening",
-      "event_date": "April 15, 2026 (targeted)",
-      "status": "Targeting April 15 opening, pending approvals",
-      "short_description": "A hybrid counter-service concept with outdoor patio, TVs, and live music, marking the brand's first Florida location. Owned by CEO Chris Cavalieri and partners, expanding the Buffalo-born brand.",
-      "article_link": "https://www.businessdebut.com/6-coming-soon-polk-county-restaurants-april-10-2026/"
-    },
-    {
-      "store_name": "Ay Que Rico!",
-      "location": "3419 E County Rd 542, Lakeland, FL 33801",
-      "event_type": "Opening",
-      "event_date": "Late May 2026 (targeted)",
-      "status": "Targeting late May opening",
-      "short_description": "A full-service Cuban restaurant with indoor seating and a large outdoor event space for live entertainment, owned by Odalis Chanlatte and Isnelys Prieto. Menu features Cuban sandwiches, ropa vieja, oxtail, palomillo steak, and the signature \"Riconator.\"",
-      "article_link": "https://www.businessdebut.com/6-coming-soon-polk-county-restaurants-april-10-2026/"
-    },
-    {
-      "store_name": "The Fish Market",
-      "location": "114 Sailors Cove Dr, Port St. Joe, FL 32456",
-      "event_type": "Opening",
-      "event_date": "May 10, 2026 (targeted)",
-      "status": "targeting May 10th for its opening",
-      "short_description": "A family-run seafood restaurant, market, and retail concept from the Arreguin family, seating 150–170 guests inside and outside with bay views. Signature items include a seafood boil and a Mediterranean-style fish entree, plus a full bar.",
-      "article_link": "https://www.businessdebut.com/the-fish-market-bringing-seafood-dining-to-port-st-joe/"
-    },
-    {
-      "store_name": "Gin Khao",
-      "location": "750 W. Main Street, Bartow, FL 33830",
-      "event_type": "Opening",
-      "event_date": "Soft opening May; broader opening June 2026 (targeted)",
-      "status": "preparing to open its first brick-and-mortar restaurant",
-      "short_description": "First brick-and-mortar for the Gin Khao food truck brand, owned by Thomas and Prapapan Klug, with limited seating for ~14 guests in a fast-casual format. The food truck will continue operating 2–3 times per week alongside the new location.",
-      "article_link": "https://www.businessdebut.com/gin-khao-to-open-first-brick-and-mortar-in-bartow/"
     },
     {
       "store_name": "Breakfast Time",
       "location": "1510 Abbotts Creek Cir, Kernersville, NC 27284",
       "event_type": "Opening",
-      "event_date": "Late 2026, targeting December (targeted)",
-      "status": "Targeting a late 2026 opening",
-      "short_description": "A 200-seat all-day breakfast and brunch concept owned by Alex Kazakos, continuing the family-run brand his father founded in 2008. Signature items include banana foster waffles, pancakes, and French toast; planned hours Mon–Sun 6 a.m.–3 p.m.",
+      "event_date": "Late 2026 (plans pointing toward December)",
+      "status": "targeting a late 2026 opening",
+      "short_description": "Breakfast Time is targeting a late 2026 opening in Kernersville, NC, as a 200-seat dine-in concept offering an all-day breakfast and brunch menu. Signature items include banana foster waffles, pancakes, French toast, liver mush, fried pork tenderloin, and ribeyes, alongside specialty pancakes and house-made syrups.",
       "article_link": "https://www.businessdebut.com/breakfast-time-targeting-late-2026-opening-in-kernersville/"
-    },
-    {
-      "store_name": "Taste of Bengal",
-      "location": "10610 Centrum Pkwy Suite L, Pineville, NC 28134",
-      "event_type": "Opening",
-      "event_date": "Within one to one-and-a-half months of article date (targeted)",
-      "status": "Targeting an opening in about one to one-and-a-half months",
-      "short_description": "A takeout-focused Bengali concept with limited seating, a halal butcher counter, and retail frozen goods section, owned by Sabyasachi Patra expanding from an existing Pennsylvania location. Menu includes rice plates, biryani, curry dishes, cutlets, and traditional sweets.",
-      "article_link": "https://www.businessdebut.com/5-new-coming-soon-hillsborough-county-restaurants-2/"
-    },
-    {
-      "store_name": "Your Mom's Donuts",
-      "location": "20601 Torrence Chapel Rd Suite 106, Cornelius, NC 28031",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "Exact date unavailable",
-      "short_description": "A donut shop with a strong takeout focus, specialty square donuts, and a coffee program, owned by Dustin and Colleen Wanemacher who acquired the brand in 2023. Limited indoor and outdoor seating will be available.",
-      "article_link": "https://www.businessdebut.com/5-new-coming-soon-hillsborough-county-restaurants-2/"
-    },
-    {
-      "store_name": "Crisp Kitchen & Cocktails",
-      "location": "132 Brevard Ct., Charlotte, NC 28202",
-      "event_type": "Opening",
-      "event_date": "Lunch now open; dinner launching early April 2026",
-      "status": "Now open for lunch; dinner launching in early April",
-      "short_description": "A relocated and expanded concept in Brevard Courtyard with a larger footprint, full bar, and upstairs dining, operated by Matt Marenna and team. Lunch menu features fresh salads and wraps; dinner adds flank steak, shrimp skewers, mussels, and Mediterranean-inspired dishes.",
-      "article_link": "https://www.businessdebut.com/5-new-coming-soon-hillsborough-county-restaurants-2/"
-    },
-    {
-      "store_name": "Palm Berries",
-      "location": "7808 Rea Rd Suite E, Charlotte, NC 28277",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "opening",
-      "short_description": "Article text is cut off before providing additional details beyond the address. No opening date or timeline provided in the available excerpt.",
-      "article_link": "https://www.businessdebut.com/5-new-coming-soon-hillsborough-county-restaurants-2/"
-    },
-    {
-      "store_name": "Trattoria On Main",
-      "location": "109 S Main St, Monroe, NC 28112",
-      "event_type": "Opening",
-      "event_date": "Soft opening April 10, 2026; full opening April 28, 2026 (targeted)",
-      "status": "preparing to open",
-      "short_description": "A sit-down full-service Italian restaurant from Frank and Marcella Siano seating about 40 guests, distinct from their Siano's Pizza and Pasta in Waxhaw. Menu features house-made pasta, lasagna, seafood dishes, and table-side Pecorino cheese wheel service.",
-      "article_link": "https://www.businessdebut.com/trattoria-on-main-soft-opening-this-weekend/"
-    },
-    {
-      "store_name": "Grant's Crabs Seafood & Grille",
-      "location": "309 S. Main St., Havana, FL 32333",
-      "event_type": "Opening",
-      "event_date": "Soft opening April 16–17, 2026; grand opening April 18, 2026 at noon",
-      "status": "set to open",
-      "short_description": "The second location for Ginger and William Grant, who have operated their first location in Largo for 11 years, offering a full-service seafood restaurant seating about 40 guests. Known for blue crabs and their trademarked Stutter Butter sauce; William Grant and son Spencer will operate the Havana location.",
-      "article_link": "https://www.businessdebut.com/grants-crabs-seafood-grille-opening-soon-in-havana/"
-    },
-    {
-      "store_name": "Salty Bagel and Grill",
-      "location": "23 W Hibiscus Blvd, Melbourne, FL 32901",
-      "event_type": "Opening",
-      "event_date": "Early May 2026 (targeted)",
-      "status": "targeting an early May opening",
-      "short_description": "The company's sixth location, continuing the family-run bagel concept that opened its first store in Satellite Beach about five years ago, owned by Bernard and Elizabeth Corrigan.",
-      "article_link": "https://www.businessdebut.com/19-restaurants-opening-across-florida-april-8-2026/"
-    },
-    {
-      "store_name": "NY Pizza Place",
-      "location": "330 S Federal Hwy, Pompano Beach, FL 33069",
-      "event_type": "Opening",
-      "event_date": "Late June or early July 2026 (targeted)",
-      "status": "targeting an opening in late June or early July",
-      "short_description": "The brand's 5th location owned by Elyshia Allen alongside her husband Kelley Allen and business partners Chris Slusser and Francesca Perini. The new restaurant will introduce a different layout compared to most of the brand's existing stores.",
-      "article_link": "https://www.businessdebut.com/19-restaurants-opening-across-florida-april-8-2026/"
-    },
-    {
-      "store_name": "Oakberry",
-      "location": "801 N Federal Hwy, Suite 108, Hallandale Beach, FL 33009",
-      "event_type": "Opening",
-      "event_date": "Soft opening February 15, 2026; grand opening March 21, 2026",
-      "status": "now open",
-      "short_description": "The global açaí brand's franchisee Ademar Guedin and his wife Christiane Guedin brought this location to Atlantic Village. Soft opening began February 15 and grand opening event was held March 21.",
-      "article_link": "https://www.businessdebut.com/19-restaurants-opening-across-florida-april-8-2026/"
-    },
-    {
-      "store_name": "Gochas Latin Food",
-      "location": "930 Blanding Blvd., Suite D & E, Orange Park, FL 32065",
-      "event_type": "Opening",
-      "event_date": "Early May 2026 (targeted)",
-      "status": "preparing to open",
-      "short_description": "Owned by Katzumi Yonekura and Juan Yonekura, building on the success of their existing Gochas Empanadas food truck which has a following in Jacksonville. Target opening is early May 2026.",
-      "article_link": "https://www.businessdebut.com/19-restaurants-opening-across-florida-april-8-2026/"
-    },
-    {
-      "store_name": "Casa Cotzelli",
-      "location": "Naples, FL (full address not specified in excerpt)",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "preparing to open",
-      "short_description": "Article text is cut off before providing the full address or opening timeline. Collier County, Naples, FL location.",
-      "article_link": "https://www.businessdebut.com/19-restaurants-opening-across-florida-april-8-2026/"
-    },
-    {
-      "store_name": "Vic's Italian Restaurant",
-      "location": "5434 Six Forks Rd, Raleigh, NC 27609",
-      "event_type": "Opening",
-      "event_date": "Approximately two months from article date (targeted)",
-      "status": "preparing to open a new location",
-      "short_description": "Taking over a standalone building previously occupied by KFC and Taco Bell near Colony Shopping Center, featuring 75–80 seats, fast-casual service, drive-thru, and beer and wine service. Brand founded by Mario Longo in 1993 with the original Vic's Pizzeria remaining in City Market in Raleigh.",
-      "article_link": "https://www.businessdebut.com/vics-italian-restaurant-coming-soon-to-six-forks-road-in-raleigh/"
-    },
-    {
-      "store_name": "Pho 5 Spices",
-      "location": "114 E Broughton St, Savannah, GA 31401",
-      "event_type": "Opening",
-      "event_date": "Approximately 3–4 weeks from article date (targeted)",
-      "status": "soft opening expected in approximately three to four weeks",
-      "short_description": "A new Vietnamese restaurant from Tobey and Jenny Vu currently completing interior renovations. No specific opening date was given beyond the approximate timeline.",
-      "article_link": "https://www.businessdebut.com/georgia-new-restaurant-roundup-april-7-26/"
-    },
-    {
-      "store_name": "Cotto Italian",
-      "location": "2850 Paces Ferry Rd SE, Atlanta, GA 30339",
-      "event_type": "Opening",
-      "event_date": "Several months from article date (targeted)",
-      "status": "will likely open in several months",
-      "short_description": "A second location of the existing Gainesville concept from Fork U Concepts (Alexis and Scott Kinsey), taking over the former Stockyard space in Vinings with planned renovations. Offers upscale Italian dining with lunch and dinner service.",
-      "article_link": "https://www.businessdebut.com/georgia-new-restaurant-roundup-april-7-26/"
-    },
-    {
-      "store_name": "West Park Sports Club",
-      "location": "29 West Park Square NE, Marietta, GA 30060",
-      "event_type": "Opening",
-      "event_date": "Week of April 20, 2026 (targeted)",
-      "status": "targeting an opening the week of April 20",
-      "short_description": "An upscale sports bar from Fork U Concepts with a two-level layout, patio seating, extensive TV coverage, and a chef-driven elevated bar fare menu. Expected to seat ~70 upstairs and ~25 downstairs with one of the larger patios in the area.",
-      "article_link": "https://www.businessdebut.com/georgia-new-restaurant-roundup-april-7-26/"
-    },
-    {
-      "store_name": "The Wine Bar",
-      "location": "312 Willowbend Rd, Peachtree City, GA 30269",
-      "event_type": "Opening",
-      "event_date": "April 29, 2026 (targeted)",
-      "status": "targeting a grand opening on April 29th",
-      "short_description": "A boutique upscale wine bar concept from father-daughter team Michael Surapine and Bailey Surapine-Meen centered around a global wine experience.",
-      "article_link": "https://www.businessdebut.com/georgia-new-restaurant-roundup-april-7-26/"
-    },
-    {
-      "store_name": "Amorino",
-      "location": "7125 Medley Crossing, Johns Creek, GA 30097",
-      "event_type": "Opening",
-      "event_date": "October 29, 2026 (targeted)",
-      "status": "set to open",
-      "short_description": "The brand's third Georgia location, part of the larger Medley mixed-use development opening in coordination with other tenants, owned by franchisee German Rodriguez. Offers Italian gelato, gelato-filled macarons, crepes, waffles, coffee, and affogatos.",
-      "article_link": "https://www.businessdebut.com/georgia-new-restaurant-roundup-april-7-26/"
-    },
-    {
-      "store_name": "CocoLuxe Ice Cream & Sweets",
-      "location": "Metro Atlanta, GA (mobile trailer — no fixed address)",
-      "event_type": "Opening",
-      "event_date": "May 1, 2026 (targeted)",
-      "status": "targeting a May 1 launch",
-      "short_description": "A mobile plant-based vegan dessert trailer from owner Tonya Whitfield serving West End, Atlantic Station, Piedmont Park, and Grant Park. Menu focuses on dairy-free, allergy-friendly frozen treats including organic fruit-based pops and non-dairy ice cream.",
-      "article_link": "https://www.businessdebut.com/georgia-new-restaurant-roundup-april-7-26/"
-    },
-    {
-      "store_name": "Amorino",
-      "location": "7125 Medley Crossing, Johns Creek, GA 30097",
-      "event_type": "Opening",
-      "event_date": "October 29, 2026 (targeted)",
-      "status": "set to open",
-      "short_description": "The brand's third Georgia location within the Medley mixed-use development, franchised by German Rodriguez, offering gelato, macarons, crepes, waffles, hot chocolate, coffee, and affogatos. Indoor and outdoor seating along the green space; open daily with extended weekend hours.",
-      "article_link": "https://www.businessdebut.com/amorino-bringing-italian-gelato-to-medley-johns-creek/"
-    },
-    {
-      "store_name": "CocoLuxe Ice Cream & Sweets",
-      "location": "Metro Atlanta, GA (mobile trailer — no fixed address)",
-      "event_type": "Opening",
-      "event_date": "May 1, 2026 (targeted)",
-      "status": "targeting a May 1 opening",
-      "short_description": "A mobile vegan dessert trailer from owner Tonya Whitfield focused on clean-label, dairy-free frozen treats made without artificial dyes or preservatives. Plans include a potential soft opening before May 1 as initial trailer placement locations are confirmed.",
-      "article_link": "https://www.businessdebut.com/cocoluxe-ice-cream-sweets-debuting-vegan-dessert-trailer-in-atlanta/"
-    },
-    {
-      "store_name": "Surcheros Fresh Mex",
-      "location": "1102 Trust Ave Ste 300, Augusta, GA 30909",
-      "event_type": "Opening",
-      "event_date": "April 16, 2026 (targeted)",
-      "status": "slated to open its next location in Augusta on April 16th",
-      "short_description": "A Tex-Mex franchise location just off Wheeler Road, owned by franchisee Madison Tuten who also owns another Surcheros off Washington Road in Augusta. Tuten also plans to open additional locations in Evans, GA and Aiken, SC in Q1 2027.",
-      "article_link": "https://www.businessdebut.com/surcheros-fresh-mex-opening-soon-in-augusta/"
-    },
-    {
-      "store_name": "Cotto Italian",
-      "location": "2850 Paces Ferry Rd SE, Atlanta, GA 30339",
-      "event_type": "Opening",
-      "event_date": "Several months from article date (targeted)",
-      "status": "will likely open in several months",
-      "short_description": "Taking over the former Stockyard space in Vinings, bringing a second location of the existing Gainesville concept with planned front-of-house renovations. Offers upscale Italian dining with weekend lunch/dinner and weekday dinner service.",
-      "article_link": "https://www.businessdebut.com/fork-u-concepts-expanding-with-two-new-locations-in-metro-atlanta/"
-    },
-    {
-      "store_name": "West Park Sports Club",
-      "location": "29 West Park Square NE, Marietta, GA 30060",
-      "event_type": "Opening",
-      "event_date": "Week of April 20, 2026 (targeted)",
-      "status": "targeting an opening the week of April 20",
-      "short_description": "An upscale two-level sports bar in Marietta Square with a \"dark and moody\" upstairs (~70 seats), a downstairs bar (~25 seats), and one of the larger patios in the area. Menu centers on elevated bar fare including oysters, wings, and burgers.",
-      "article_link": "https://www.businessdebut.com/fork-u-concepts-expanding-with-two-new-locations-in-metro-atlanta/"
-    },
-    {
-      "store_name": "Goofy Foot Taproom and Brewery",
-      "location": "523 West King Street, Boone, NC 28607",
-      "event_type": "Opening",
-      "event_date": "Approximately two weeks from article date (targeted)",
-      "status": "preparing to open",
-      "short_description": "The brand's first expansion beyond its original High Point taproom (opened 2018), featuring a two-floor setup with 16–18 rotating taps, live music, trivia, and cocktail bar. Delayed by hurricane-related construction setbacks; planned hours Mon–Thu 1–9 p.m., Fri–Sat 12–10 p.m., Sun 12–7 p.m.",
-      "article_link": "https://www.businessdebut.com/goofy-foot-taproom-and-brewery-nears-boone-opening/"
-    },
-    {
-      "store_name": "Unhinged Coffee & Co.",
-      "location": "319 N First Ave, Knightdale, NC 27545",
-      "event_type": "Opening",
-      "event_date": "Soft opening targeted this week (article date); grand opening early May 2026",
-      "status": "preparing to open its first brick-and-mortar location",
-      "short_description": "The brand's first permanent location, expanding from a mobile coffee cart, operating as a day-to-night coffee shop transitioning from morning café to evening social space with beer, wine, and THC beverages. Co-owned by Jonny Mocha and Cody Alexander Vaughn, centered on inclusivity and mental health awareness.",
-      "article_link": "https://www.businessdebut.com/unhinged-coffee-co-opening-a-brick-and-mortar-in-knightdale/"
-    },
-    {
-      "store_name": "French Toast Buckhead",
-      "location": "2263 Cheshire Bridge Rd NE, Atlanta, GA 30324",
-      "event_type": "Opening",
-      "event_date": "April 6, 2026",
-      "status": "officially opened",
-      "short_description": "A second location of the French Toast brand, taking over the former Blu Lagoon space, known for breakfast, brunch, and lunch with an emphasis on French toast variations and service-forward dining. Open seven days a week: Mon–Fri 7 a.m.–3 p.m., Sat–Sun 6 a.m.–5 p.m.",
-      "article_link": "https://www.businessdebut.com/french-toast-buckhead-soft-opens-on-cheshire-bridge-road/"
     },
     {
       "store_name": "Point Ybel Brewing Co.",
@@ -403,7 +259,7 @@
       "event_type": "Opening",
       "event_date": "Not specified",
       "status": "No recent updates yet",
-      "short_description": "A large downtown brewery expansion with 17 taps featuring in-house lagers, IPAs, sours, and hard seltzers, with food provided by food trucks and nearby restaurants. Owned by Jordan Weisberg; planned daily 11 a.m.–11 p.m. with live music and trivia events.",
+      "short_description": "Point Ybel Brewing Co. is a planned downtown brewery expansion in Fort Myers with 17 taps, indoor seating, and events including live music and trivia. Food will come from food trucks and nearby restaurants, with planned daily hours of 11 a.m.–11 p.m.",
       "article_link": "https://www.businessdebut.com/5-new-coming-soon-restaurants-in-lee-county-april-9-2026/"
     },
     {
@@ -412,7 +268,7 @@
       "event_type": "Opening",
       "event_date": "Not specified",
       "status": "Now open",
-      "short_description": "A roaming food truck serving Lee County focused on scratch-made baked empanadas, quesadillas, and rotating specials, owned by Jose and Sandra Flores. Operating Wednesday–Saturday 10 a.m.–5 p.m.",
+      "short_description": "Mando's Cuisine is a roaming food truck serving Lee County with a scratch-made menu focused on baked empanadas, quesadillas, and rotating specials, operated by Jose and Sandra Flores. Hours are Wednesday through Saturday, 10 a.m.–5 p.m.",
       "article_link": "https://www.businessdebut.com/5-new-coming-soon-restaurants-in-lee-county-april-9-2026/"
     },
     {
@@ -421,16 +277,16 @@
       "event_type": "Opening",
       "event_date": "Not specified",
       "status": "Opening soon",
-      "short_description": "A hybrid coffee and botanical tea lounge combining daytime workspace energy with late-night social vibes, offering espresso drinks, kava and kratom teas, and light food. Founded by Tony Toska and operated locally by Derek Weimer; open early morning to late night with weekends until 2 a.m.",
+      "short_description": "The Roast & Rush Society is a hybrid coffee and botanical tea lounge opening soon in Fort Myers, featuring espresso drinks, kava and kratom teas, and light food options. The concept is designed for daytime workspace energy and late-night social vibes, with weekends extending until 2 a.m.",
       "article_link": "https://www.businessdebut.com/5-new-coming-soon-restaurants-in-lee-county-april-9-2026/"
     },
     {
       "store_name": "Savage Skillet",
-      "location": "5110 Pine Island Rd #140, Bokeelia, FL 33922",
+      "location": "5110 Pine Island Rd, #140, Bokeelia, FL 33922",
       "event_type": "Opening",
       "event_date": "Not specified",
       "status": "Now open",
-      "short_description": "A brunch-forward restaurant with a modern interior seating around 50 guests, offering elevated brunch dishes, rotating specials, cinnamon rolls, and specialty coffee drinks. Owned by Erika Fernandez and Carla Arguello; exact hours TBD.",
+      "short_description": "Savage Skillet is a brunch-forward restaurant now open in Bokeelia, FL, with a modern interior and seating for around 50 guests. The menu features elevated brunch dishes, rotating specials, cinnamon rolls, and specialty coffee drinks, operated by Erika Fernandez and Carla Arguello.",
       "article_link": "https://www.businessdebut.com/5-new-coming-soon-restaurants-in-lee-county-april-9-2026/"
     },
     {
@@ -439,132 +295,76 @@
       "event_type": "Opening",
       "event_date": "Not specified",
       "status": "Not specified",
-      "short_description": "Article text is truncated before providing status, opening date, or additional details for Big Nick's BBQ beyond the address.",
+      "short_description": "Big Nick's BBQ is listed as a coming soon restaurant in Cape Coral, FL at 4720 SE 9th Place, Ste 200. No further details about the concept, opening date, or status were provided in the article text.",
       "article_link": "https://www.businessdebut.com/5-new-coming-soon-restaurants-in-lee-county-april-9-2026/"
     },
     {
       "store_name": "Sweetwaters",
       "location": "32 E Las Olas Blvd, Fort Lauderdale, FL 33301",
       "event_type": "Opening",
-      "event_date": "October 2026 (targeted)",
+      "event_date": "October (year not specified)",
       "status": "targeting an October opening",
-      "short_description": "A modern coastal full-service restaurant with nearly 300 indoor and outdoor seats from Specialty Restaurants Corporation, led by owner John Tallichet, known for the Rusty Pelican concept. Menu centers on fresh seafood including a full raw bar, hot seafood tower, and lobster and shrimp risotto.",
+      "short_description": "Sweetwaters is a new full-service coastal seafood restaurant targeting an October opening at 32 E Las Olas Blvd in Fort Lauderdale, developed as a ground-up build by Specialty Restaurants Corporation. The nearly 300-seat open, airy space will feature a full raw bar, hot seafood tower, fresh fish selections, lobster and shrimp risotto, and a full cocktail program connected to the waterfront.",
       "article_link": "https://www.businessdebut.com/sweetwaters-targeting-october-opening-in-fort-lauderdale/"
     },
     {
       "store_name": "Smoke and Maple Restaurant",
       "location": "12325 Northlake Blvd., Suite 130, Palm Beach Gardens, FL 33412",
       "event_type": "Opening",
-      "event_date": "Late June 2026 (targeted)",
+      "event_date": "Late June (year not specified)",
       "status": "targeting a late June opening",
-      "short_description": "A full-service gastropub with ~167 seats including a 22-seat bar, led by owner Nick Lanier alongside co-owners Tara Lanier, Brendon O'hara, and Joel Hartunian. Menu described as \"rustic refined\" featuring smash burgers, rotating oysters, raw bar, and a signature \"Kentucky barbecue fried gator\" dish by executive chef David Schroeder.",
+      "short_description": "Smoke and Maple Restaurant is targeting a late June opening in Palm Beach Gardens as a full-service gastropub with approximately 167 seats including a 22-seat bar. The \"rustic refined\" menu from executive chef David Schroeder will feature a smash burger, rotating oysters, a raw bar, and signature dishes like \"Kentucky barbecue fried gator,\" with a focus on quality ingredients and no seed oils.",
       "article_link": "https://www.businessdebut.com/smoke-and-maple-restaurant-bringing-gastropub-concept-to-palm-beach-gardens/"
     },
     {
-      "store_name": "Five Iron Golf",
-      "location": "3009 Ponce de Leon Blvd., Coral Gables, FL 33134",
+      "store_name": "Supra Revolving Sushi Bar",
+      "location": "4521 Southside Boulevard, Jacksonville, FL 32216",
       "event_type": "Opening",
-      "event_date": "April 28, 2026; plans to be open by May 1, 2026 (targeted)",
-      "status": "targeting an April 28 opening, with plans to be open by May 1",
-      "short_description": "An indoor golf simulator, bar, and restaurant concept featuring ~175 seats across simulator bays, bowling lanes, and dining areas, serving as the Florida flagship for franchisees Peter McCormick, Alex Zega, and Matt Csillag. Also introduces Strike Club, a sister concept with 12 full-size bowling lanes.",
-      "article_link": "https://www.businessdebut.com/five-iron-golf-bringing-indoor-golf-concept-to-coral-gables/"
+      "event_date": "October or November (year not specified)",
+      "status": "targeting an October or November opening",
+      "short_description": "Supra Revolving Sushi Bar is targeting an October or November opening in Jacksonville, offering a conveyor belt-style dining experience alongside a full-service staff in a space designed to seat 150–180 guests. The menu will feature sushi, hibachi, ramen, appetizers, milk tea, and alcoholic beverages in an interactive format.",
+      "article_link": "https://www.businessdebut.com/supra-revolving-sushi-bar-targeting-fall-opening-in-jacksonville/"
     },
     {
-      "store_name": "Brighten Your Day Cafe",
-      "location": "122 N. Dixie Highway, West Palm Beach, FL 33401",
+      "store_name": "The Fish Market",
+      "location": "114 Sailors Cove Dr, Port St. Joe, FL 32456",
       "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "Now open",
-      "short_description": "A fast-casual breakfast and lunch cafe with counter service and indoor/outdoor seating, owned by Chef Ethan Haim. Menu features egg sandwiches, omelets, Benedicts, smoothies, specialty French toast, wraps, burgers, and house-made soups; open Mon–Fri 6:30 a.m.–3 p.m., Sat 6:30 a.m.–2 p.m., Sun 10 a.m.–2 p.m.",
-      "article_link": "https://www.businessdebut.com/6-new-coming-soon-palm-beach-county-restaurants-april-1-2026/"
-    },
-    {
-      "store_name": "Bud's Chicken & Seafood",
-      "location": "8801 Boynton Beach Blvd, Boynton Beach, FL 33472",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "Now open",
-      "short_description": "A fast-casual concept focused on made-to-order fried chicken and seafood from a long-running family brand, owned by Phillip Brinkman and family. Menu features fresh chicken tenders, fried cod, shrimp, and clams; open daily 10:30 a.m.–9 p.m.",
-      "article_link": "https://www.businessdebut.com/6-new-coming-soon-palm-beach-county-restaurants-april-1-2026/"
-    },
-    {
-      "store_name": "Due Cuori",
-      "location": "405 Federal Highway, Lake Park, FL 33403",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "Now open",
-      "short_description": "A full-service Italian American restaurant with a casual, homey setting and indoor/outdoor seating, owned by Monique Rabyor and Alfredo Verrone. Menu features house-made pasta, cacio e pepe, burrata, and antipasti; open Tue–Thu 11 a.m.–9 p.m., Fri–Sat 11 a.m.–10 p.m., Sun 4–9 p.m.",
-      "article_link": "https://www.businessdebut.com/6-new-coming-soon-palm-beach-county-restaurants-april-1-2026/"
-    },
-    {
-      "store_name": "Bona Pizza Pasta 2",
-      "location": "1649 Forum Place, Suite 3, West Palm Beach, FL 33401",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "Now open",
-      "short_description": "A casual Italian-American restaurant offering dine-in and takeout with a focus on consistency and customer experience. Menu includes pizza, wings, baked pastas, and entrees like chicken francese and veal; article text is truncated before additional details.",
-      "article_link": "https://www.businessdebut.com/6-new-coming-soon-palm-beach-county-restaurants-april-1-2026/"
+      "event_date": "May 10 (year not specified)",
+      "status": "targeting May 10th for its opening",
+      "short_description": "The Fish Market is targeting a May 10 opening in Port St. Joe, combining a full-service seafood restaurant, seafood market, and retail component operated by the Arreguin family. The concept will seat 150–170 guests inside and outside and feature a seafood boil with snow crab, local shrimp, mussels, and clams, along with a full bar with tropical cocktails and craft beer.",
+      "article_link": "https://www.businessdebut.com/the-fish-market-bringing-seafood-dining-to-port-st-joe/"
     },
     {
       "store_name": "Paradise Restaurant & Lounge",
-      "location": "550 Wells Rd Ste 1, Orange Park, FL 32073",
+      "location": "550 Wells Rd, Suite 1, Orange Park, FL 32073",
       "event_type": "Opening",
-      "event_date": "Late April to early May 2026 (targeted)",
-      "status": "targeting a late April or early May opening",
-      "short_description": "A full-service restaurant and lounge with approximately 140 seats and a full liquor bar, owned by Pedro Parks and focused on pasta dishes, char-grilled oysters, flatbreads, and weekend brunch. Menu emphasizes linguine or scampi-style pasta paired with proteins like shrimp, chicken, salmon, or lobster.",
+      "event_date": "Late April to early May (year not specified)",
+      "status": "targeting a late April to early May opening",
+      "short_description": "Paradise Restaurant & Lounge is targeting a late April to early May opening in Orange Park, offering a full-service experience with approximately 140 seats and a full liquor bar. The menu will focus on pasta dishes, char-grilled oysters, flatbreads, pork chop entrées, bar staples, and weekend brunch.",
       "article_link": "https://www.businessdebut.com/paradise-restaurant-and-lounge-opening-soon-in-orange-park/"
     },
     {
       "store_name": "Lucky Goat Coffee",
       "location": "12553 Bartram Park Blvd., Suite 302, Jacksonville, FL 32258",
       "event_type": "Opening",
-      "event_date": "June 18, 2026 (targeted, pending permits and construction)",
+      "event_date": "June 18 (year not specified)",
       "status": "targeting a June 18 opening, pending permits and construction",
-      "short_description": "A specialty coffee franchise in fast-casual format with 25–30 indoor seats and a small patio, owned by Daniel and Nicole Price who were drawn to the brand during their time at Florida State University in Tallahassee. Menu centers on an Italian-style espresso program including lattes, cappuccinos, cold brew, and nitro cold brew.",
+      "short_description": "Lucky Goat Coffee is preparing to open at 12553 Bartram Park Blvd., Suite 302 in Jacksonville, with owners Daniel and Nicole Price targeting a June 18 opening pending permits and construction. The fast-casual specialty coffee shop will seat approximately 25–30 guests indoors with a small patio, featuring an Italian-style espresso program, cold brew, nitro cold brew, and mobile app ordering.",
       "article_link": "https://www.businessdebut.com/lucky-goat-coffee-to-open-new-location-in-jacksonville/"
-    },
-    {
-      "store_name": "Gochas Latin Food",
-      "location": "930 Blanding Blvd., Suite D & E, Orange Park, FL 32065",
-      "event_type": "Opening",
-      "event_date": "Early May 2026 (targeted)",
-      "status": "preparing to open",
-      "short_description": "A fast-casual 16-seat Venezuelan restaurant from owners Katzumi and Juan Yonekura, building on their existing Gochas Empanadas food truck following in Jacksonville. Menu centers on scratch-made empanadas, cachapas, fresh juices, and breakfast offerings, with recipes from Yonekura's mother-in-law Sonia Barajas.",
-      "article_link": "https://www.businessdebut.com/gochas-latin-food-preparing-new-restaurant-in-orange-park/"
     }
   ],
   "non_working": [
     {
-      "identifier": "**Article 1** — The URL title references \"Orange County Restaurants\" but the content covers Orlando, Auburndale, and Kissimmee; article text is truncated (Flavors of Jamaica menu is cut off mid-sentence). Partial data only for some entries.",
+      "identifier": "None",
       "reason": ""
     },
     {
-      "identifier": "**Article 6** — Article text is truncated mid-entry for Grain and Berry (Apex, NC) and several other businesses in Wake County, Knightdale, Raleigh, and Boone are referenced but not included in the provided text excerpt. Partial data only.",
-      "reason": ""
+      "identifier": "Article 23",
+      "reason": "Roundup article with truncated content; only partial details provided for some businesses (Grain and Berry in Apex and remaining Wake County entries are cut off). Rows included for all businesses with available details; incomplete entries noted."
     },
     {
-      "identifier": "**Article 7** — Article text is truncated; only three of the six Polk County restaurants are covered in the provided excerpt. Partial data only.",
-      "reason": ""
-    },
-    {
-      "identifier": "**Article 11** — Title says \"Hillsborough County\" but content covers Mecklenburg County; article text is cut off mid-entry for Palm Berries (Charlotte), preventing full extraction.",
-      "reason": ""
-    },
-    {
-      "identifier": "**Article 14** — Article text is truncated after the start of the Casa Cotzelli (Naples) entry; full address and details for that business and all remaining Florida counties are missing. Partial data only for Casa Cotzelli and potentially other businesses not included in the excerpt.",
-      "reason": ""
-    },
-    {
-      "identifier": "**Article 16** — Article text is truncated after the start of the CocoLuxe entry; the full CocoLuxe details and any additional Georgia businesses listed after it are not available in the provided excerpt. Partial data only.",
-      "reason": ""
-    },
-    {
-      "identifier": "**Article 24** — Article text is truncated at the Big Nick's BBQ entry (Cape Coral), cutting off before the status, opening date, and description fields. Partial data only for that entry; all other four businesses were extractable.",
-      "reason": ""
-    },
-    {
-      "identifier": "**Article 28** — Article text is truncated mid-entry for Bona Pizza Pasta 2 and any remaining Palm Beach County businesses listed in the roundup are not present in the provided excerpt. Partial data only.",
-      "reason": ""
+      "identifier": "Article 25",
+      "reason": "Big Nick's BBQ entry is incomplete in the article text, with status and details cut off. Row included with available address only."
     }
   ]
 }
