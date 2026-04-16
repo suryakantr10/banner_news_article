@@ -64,15 +64,24 @@ OUTPUT_COLS = [
 
 # ── Helpers ──────────────────────────────────────────────────────────────────
 
+def _filter_from_2025(df: pd.DataFrame) -> pd.DataFrame:
+    """Drop rows whose notice_date is before 2025. Rows with unparseable dates are kept."""
+    if df.empty or "notice_date" not in df.columns:
+        return df
+    parsed = pd.to_datetime(df["notice_date"], errors="coerce")
+    keep = parsed.isna() | (parsed.dt.year >= 2025)
+    return df[keep].reset_index(drop=True)
+
+
 def _normalise(df: pd.DataFrame, state: str) -> pd.DataFrame:
-    """Ensure every required column exists and state is set."""
+    """Ensure every required column exists, state is set, and rows are 2025+."""
     df = df.copy()
     df["state"] = state
     for col in OUTPUT_COLS:
         if col not in df.columns:
             df[col] = ""
     extras = [c for c in df.columns if c not in OUTPUT_COLS]
-    return df[OUTPUT_COLS + extras]
+    return _filter_from_2025(df[OUTPUT_COLS + extras])
 
 
 # ── State scrapers ────────────────────────────────────────────────────────────
@@ -85,7 +94,9 @@ async def _scrape_alabama_async() -> list[dict]:
         await page.goto("https://workforce.alabama.gov/warn-list/")
         await page.wait_for_selector('tr.fw-warn-list__items[data-year="2026"]', timeout=15000)
 
-        rows = await page.query_selector_all('tr.fw-warn-list__items[data-year="2026"]')
+        rows = await page.query_selector_all(
+            'tr.fw-warn-list__items[data-year="2025"], tr.fw-warn-list__items[data-year="2026"]'
+        )
         for row in rows:
             status = await row.query_selector('td[data-label="Closing or Layoff"]')
             if not status:
