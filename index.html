@@ -2237,7 +2237,7 @@
                     <span class="px-2 py-1 rounded-full text-xs bg-blue-900/40 text-blue-300 border border-blue-700/30">${escapeHtml(r.state||'—')}</span>
                 </td>
                 <td class="px-3 py-3 text-gray-400 text-xs whitespace-nowrap">${escapeHtml(r.notice_date||'—')}</td>
-                <td class="px-3 py-3 text-gray-400 text-xs whitespace-nowrap">${escapeHtml(r.layoff_date||'—')}</td>
+                <td class="px-3 py-3 text-gray-400 text-xs w-32"><div class="w-28 truncate" title="${escapeHtml(r.layoff_date||'')}">${escapeHtml(r.layoff_date||'—')}</div></td>
                 <td class="px-3 py-3 text-gray-300 text-xs font-semibold">${escapeHtml(r.employees_affected||'—')}</td>
                 <td class="px-3 py-3">${typeBadge}</td>
                 <td class="px-3 py-3 max-w-[200px]">
