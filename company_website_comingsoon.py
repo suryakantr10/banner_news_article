@@ -1,0 +1,406 @@
+"""
+Company Website Grand Openings / Coming Soon Scraper
+=====================================================
+Scrapers:
+  • ALDI       — https://www.aldi.us/grand-openings (Selenium)
+  • Dogtopia   — REST API JSON endpoint (requests)
+  • Burlington — https://www.burlington.com/grand-openings (Selenium)
+
+Output:
+  docs/company_website_latest.json
+  {
+    "last_updated": "April 17, 2026 08:33 UTC",
+    "data": [
+      {
+        "company": "ALDI",
+        "store_name": "",
+        "address": "14600 Palm Beach Blvd., Fort Myers, FL 33905",
+        "opening_date": "April 19, 2026",
+        "link": "https://www.aldi.us/stores/..."
+      }, ...
+    ]
+  }
+"""
+
+import re
+import time
+import json
+import os
+import requests
+import pandas as pd
+from datetime import date, datetime, timezone
+from bs4 import BeautifulSoup
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+
+# ── Shared helpers ────────────────────────────────────────────────────────────
+
+DATE_RE = re.compile(
+    r"\b(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?"
+    r"|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)"
+    r"\s+\d{1,2},?\s+\d{4}\b"
+    r"|\b\d{1,2}[/\-]\d{1,2}[/\-]\d{4}\b",
+    re.IGNORECASE,
+)
+
+
+def extract_date(text: str) -> str:
+    m = DATE_RE.search(text or "")
+    return m.group(0).strip() if m else ""
+
+
+def make_driver() -> webdriver.Chrome:
+    options = Options()
+    options.add_argument("--headless=new")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--window-size=1920,1080")
+    options.add_argument(
+        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36"
+    )
+    return webdriver.Chrome(options=options)
+
+
+# ── ALDI scraper ──────────────────────────────────────────────────────────────
+
+ALDI_OPENINGS_URL = "https://www.aldi.us/grand-openings"
+ALDI_BASE_URL = "https://www.aldi.us"
+ALDI_STORE_LINK_RE = re.compile(r"/stores/l/[^/]+/[^/]+/[^/]+/[a-z0-9]+", re.IGNORECASE)
+
+
+def _aldi_opening_date(driver: webdriver.Chrome, url: str) -> str:
+    try:
+        driver.get(url)
+        time.sleep(3)
+        soup = BeautifulSoup(driver.page_source, "html.parser")
+
+        for sel in ["[class*='grand-opening']", "[class*='grandOpening']",
+                    "[class*='opening-date']", "[class*='openingDate']",
+                    "[class*='store-opening']"]:
+            tag = soup.select_one(sel)
+            if tag:
+                d = extract_date(tag.get_text(" ", strip=True))
+                if d:
+                    return d
+
+        for tag in soup.find_all(string=re.compile(r"grand\s+opening", re.I)):
+            d = extract_date(tag.parent.get_text(" ", strip=True))
+            if d:
+                return d
+
+        full_text = soup.get_text(" ", strip=True)
+        m = re.search(
+            r"opening[^.]{0,80}?"
+            r"(\b(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May"
+            r"|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?"
+            r"|Nov(?:ember)?|Dec(?:ember)?)\s+\d{1,2},?\s+\d{4}\b"
+            r"|\b\d{1,2}[/\-]\d{1,2}[/\-]\d{4}\b)",
+            full_text, re.IGNORECASE,
+        )
+        if m:
+            return m.group(1).strip()
+        return extract_date(full_text)
+    except Exception as e:
+        print(f"  ALDI date fetch error {url}: {e}")
+        return ""
+
+
+def scrape_aldi(driver: webdriver.Chrome) -> list[dict]:
+    print(f"[ALDI] Loading {ALDI_OPENINGS_URL}")
+    driver.get(ALDI_OPENINGS_URL)
+    time.sleep(5)
+    soup = BeautifulSoup(driver.page_source, "html.parser")
+
+    seen, stores = set(), []
+    for a in soup.find_all("a", href=ALDI_STORE_LINK_RE):
+        href = a["href"].strip()
+        full_link = href if href.startswith("http") else ALDI_BASE_URL + href
+        if full_link in seen:
+            continue
+        seen.add(full_link)
+
+        address_text = a.get_text(separator=" ", strip=True)
+        m = re.match(r"^(.*?),\s*(.*?),\s*([A-Z]{2})\s*(\d{5}(?:-\d{4})?)$", address_text)
+        if m:
+            street, city, state, zip_code = m.groups()
+            full_address = f"{street.strip(', ')}, {city.strip()}, {state.strip()} {zip_code.strip()}"
+        else:
+            parts = full_link.split("/")
+            state = parts[5].upper() if len(parts) > 5 else ""
+            full_address = address_text
+
+        stores.append({"full_link": full_link, "address": full_address})
+
+    print(f"[ALDI] Found {len(stores)} store(s). Fetching opening dates…")
+    results = []
+    for i, store in enumerate(stores, 1):
+        print(f"  [{i}/{len(stores)}] {store['full_link']}")
+        opening_date = _aldi_opening_date(driver, store["full_link"])
+        print(f"         → {opening_date or '(not found)'}")
+        results.append({
+            "company":      "ALDI",
+            "store_name":   "",
+            "address":      store["address"],
+            "opening_date": opening_date,
+            "link":         store["full_link"],
+        })
+        time.sleep(1.0)
+    return results
+
+
+# ── Dogtopia scraper ──────────────────────────────────────────────────────────
+
+DOGTOPIA_API = "https://www.dogtopia.com/wp-json/store-locator/v1/locations.json"
+
+
+def scrape_dogtopia() -> list[dict]:
+    print(f"[Dogtopia] Fetching {DOGTOPIA_API}")
+    try:
+        response = requests.get(DOGTOPIA_API, timeout=30)
+        response.raise_for_status()
+        data = response.json()
+    except Exception as e:
+        print(f"[Dogtopia] Error: {e}")
+        return []
+
+    results = []
+    for loc in data:
+        if not loc.get("opening_soon"):
+            continue
+        try:
+            addr_info = loc["store_info"]["location_address_info"][0]
+            hours_info = loc["store_info"]["location_hours_info"][0]
+
+            street   = addr_info.get("location_street_address", "") or ""
+            city     = addr_info.get("location_city", "") or ""
+            state    = addr_info.get("location_state_prov", "") or ""
+            zipcode  = addr_info.get("location_zip_postal", "") or ""
+            parts    = [p for p in [street, city, state, zipcode] if p]
+            address  = ", ".join(parts)
+
+            store_name    = loc.get("location_name") or loc.get("title") or ""
+            opening_date  = hours_info.get("coming_soon_header_text", "") or ""
+            link          = loc.get("link", "") or ""
+
+            results.append({
+                "company":      "Dogtopia",
+                "store_name":   store_name,
+                "address":      address,
+                "opening_date": opening_date,
+                "link":         link,
+            })
+        except (KeyError, IndexError, TypeError) as e:
+            print(f"  [Dogtopia] Skipping malformed record: {e}")
+
+    print(f"[Dogtopia] Found {len(results)} coming-soon location(s).")
+    return results
+
+
+# ── Burlington scraper ────────────────────────────────────────────────────────
+
+BURLINGTON_URL = "https://www.burlington.com/grand-openings"
+
+US_STATES_RE = re.compile(
+    r"^(Alabama|Alaska|Arizona|Arkansas|California|Colorado|Connecticut"
+    r"|Delaware|Florida|Georgia|Hawaii|Idaho|Illinois|Indiana|Iowa|Kansas"
+    r"|Kentucky|Louisiana|Maine|Maryland|Massachusetts|Michigan|Minnesota"
+    r"|Mississippi|Missouri|Montana|Nebraska|Nevada|New Hampshire|New Jersey"
+    r"|New Mexico|New York|North Carolina|North Dakota|Ohio|Oklahoma|Oregon"
+    r"|Pennsylvania|Rhode Island|South Carolina|South Dakota|Tennessee|Texas"
+    r"|Utah|Vermont|Virginia|Washington|West Virginia|Wisconsin|Wyoming)$"
+)
+
+BURLINGTON_DATE_RE = re.compile(
+    r"\b(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?"
+    r"|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)"
+    r"\s+\d{1,2},?\s+\d{4}\b"
+    r"|\b\d{1,2}[/\-]\d{1,2}[/\-]\d{4}\b"
+    r"|\b\d{2}/\d{2}\b",
+    re.IGNORECASE,
+)
+
+
+def _burlington_expand_accordions(driver: webdriver.Chrome) -> int:
+    WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.TAG_NAME, "button"))
+    )
+    buttons = driver.find_elements(By.CSS_SELECTOR, "button[aria-expanded='false']")
+    if not buttons:
+        buttons = [b for b in driver.find_elements(By.TAG_NAME, "button")
+                   if b.text.strip() in ("+", "expand", "Show")]
+    if not buttons:
+        buttons = driver.find_elements(By.XPATH, "//*[normalize-space(text())='+']")
+
+    count = 0
+    for btn in buttons:
+        try:
+            driver.execute_script("arguments[0].scrollIntoView({block:'center'});", btn)
+            time.sleep(0.2)
+            driver.execute_script("arguments[0].click();", btn)
+            count += 1
+            time.sleep(0.6)
+        except Exception:
+            continue
+    time.sleep(3)
+    return count
+
+
+def _burlington_find_container(state_tag):
+    node = state_tag
+    for _ in range(6):
+        parent = node.parent
+        if parent is None or parent.name in ("body", "html", "[document]"):
+            break
+        if parent.find(["a", "li"]):
+            return parent
+        for sibling in node.next_siblings:
+            if not hasattr(sibling, "find"):
+                continue
+            if sibling.find(["a", "li"]):
+                return sibling
+        node = parent
+    return state_tag.parent
+
+
+def _burlington_entries(container):
+    entries = []
+    candidates = container.find_all("a") or container.find_all("li")
+    for el in candidates:
+        text = el.get_text(" ", strip=True)
+        if len(text) < 3:
+            continue
+        row = el.find_parent(["li", "div", "article", "p"]) or el.parent
+        row_text = row.get_text(" ", strip=True) if row else text
+        entries.append((text, row_text))
+    return entries
+
+
+def _burlington_parse(soup: BeautifulSoup) -> list[dict]:
+    section = (
+        soup.find(id="UpcomingGrandOpenings")
+        or soup.find(id=re.compile(r"grand.?opening", re.I))
+        or soup.find(attrs={"class": re.compile(r"grand.?opening", re.I)})
+        or soup.body
+    )
+    state_tags = section.find_all(
+        lambda t: t.name in ("h2", "h3", "h4", "strong", "b", "p", "span", "div")
+        and US_STATES_RE.match(t.get_text(strip=True))
+    )
+    print(f"[Burlington] Found {len(state_tags)} state heading(s).")
+
+    stores, seen = [], set()
+    for state_tag in state_tags:
+        state_name = state_tag.get_text(strip=True)
+        container  = _burlington_find_container(state_tag)
+        entries    = _burlington_entries(container)
+        print(f"  [{state_name}] {len(entries)} entries.")
+
+        for text, row_text in entries:
+            key = (state_name, text.lower())
+            if key in seen:
+                continue
+            seen.add(key)
+            opening_date = extract_date(row_text)
+            address = re.sub(re.escape(text), "", row_text, flags=re.IGNORECASE)
+            address = re.sub(BURLINGTON_DATE_RE, "", address)
+            address = re.sub(r"\s{2,}", " ", address).strip(" -–•|/,")
+            stores.append({
+                "state_name":   state_name,
+                "store_name":   text,
+                "address":      address,
+                "opening_date": opening_date,
+            })
+    return stores
+
+
+def scrape_burlington(driver: webdriver.Chrome) -> list[dict]:
+    print(f"[Burlington] Loading {BURLINGTON_URL}")
+    driver.get(BURLINGTON_URL)
+    time.sleep(8)
+    n = _burlington_expand_accordions(driver)
+    print(f"[Burlington] Expanded {n} accordion(s).")
+    soup = BeautifulSoup(driver.page_source, "html.parser")
+    stores = _burlington_parse(soup)
+
+    results = []
+    for s in stores:
+        if len(s["store_name"]) <= 4:
+            continue
+        results.append({
+            "company":      "Burlington",
+            "store_name":   s["store_name"],
+            "address":      s["address"] if s["address"] else s["state_name"],
+            "opening_date": s["opening_date"],
+            "link":         "",
+        })
+    print(f"[Burlington] {len(results)} store(s) parsed.")
+    return results
+
+
+# ── Main ──────────────────────────────────────────────────────────────────────
+
+def main():
+    all_stores = []
+
+    # ── ALDI ──
+    driver = None
+    try:
+        driver = make_driver()
+        all_stores.extend(scrape_aldi(driver))
+    except Exception as e:
+        print(f"[ALDI] Scraping failed: {e}")
+    finally:
+        if driver:
+            driver.quit()
+
+    # ── Dogtopia ──
+    try:
+        all_stores.extend(scrape_dogtopia())
+    except Exception as e:
+        print(f"[Dogtopia] Scraping failed: {e}")
+
+    # ── Burlington ──
+    driver = None
+    try:
+        driver = make_driver()
+        all_stores.extend(scrape_burlington(driver))
+    except Exception as e:
+        print(f"[Burlington] Scraping failed: {e}")
+    finally:
+        if driver:
+            driver.quit()
+
+    print(f"\nTotal records collected: {len(all_stores)}")
+
+    # ── Save JSON ──
+    os.makedirs("docs", exist_ok=True)
+    output = {
+        "last_updated": datetime.now(timezone.utc).strftime("%B %d, %Y %H:%M UTC"),
+        "data": all_stores,
+    }
+    out_path = os.path.join("docs", "company_website_latest.json")
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(output, f, indent=2, ensure_ascii=False)
+    print(f"Saved → {out_path}")
+
+    # ── Also save Excel for convenience ──
+    if all_stores:
+        df = pd.DataFrame(all_stores, columns=["company", "store_name", "address", "opening_date", "link"])
+        today_str = date.today().strftime("%B %d, %Y")
+        excel_path = f"company_website_openings_{today_str}.xlsx"
+        with pd.ExcelWriter(excel_path, engine="openpyxl") as writer:
+            df.to_excel(writer, index=False, sheet_name="Openings")
+            ws = writer.sheets["Openings"]
+            for col in ws.columns:
+                max_len = max(len(str(cell.value or "")) for cell in col)
+                ws.column_dimensions[col[0].column_letter].width = min(max_len + 4, 60)
+        print(f"Saved → {excel_path}")
+
+
+if __name__ == "__main__":
+    main()

@@ -324,6 +324,9 @@
                 <button id="tabWarnBtn" class="tab-btn" onclick="switchTab('warn')">
                     <i class="fas fa-triangle-exclamation mr-1.5"></i>Warn News
                 </button>
+                <button id="tabCompanyWebBtn" class="tab-btn" onclick="switchTab('companyweb')">
+                    <i class="fas fa-globe mr-1.5"></i>Company Website
+                </button>
             </div>
         </div>
 
@@ -930,6 +933,82 @@
 
         </div>
 
+        <!-- COMPANY WEBSITE TAB -->
+        <div id="companywebTabContent" class="hidden">
+
+            <!-- Stats -->
+            <div id="companyWebStatsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 fade-in" style="display:none;">
+                <div class="stats-card rounded-2xl p-6 card-accent-blue">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Total Locations</p>
+                            <p class="text-3xl font-bold text-white" id="companyWebTotal">0</p>
+                        </div>
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center">
+                            <i class="fas fa-globe text-blue-400 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="stats-card rounded-2xl p-6 card-accent-green">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Companies</p>
+                            <p class="text-3xl font-bold text-gray-300" id="companyWebCompanyCount">0</p>
+                        </div>
+                        <div class="w-12 h-12 rounded-xl bg-gray-700/20 flex items-center justify-center">
+                            <i class="fas fa-building text-gray-400 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3">
+                <div class="flex-1 relative">
+                    <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
+                    <input type="text" id="companyWebSearchInput" placeholder="Search by store name, address…"
+                        class="input-field w-full pl-11 pr-4 py-3 text-sm" oninput="debounce(filterCompanyWebRows,250)()">
+                </div>
+                <select id="companyWebCompanyFilter" onchange="filterCompanyWebRows()" class="input-field px-4 py-3 text-sm">
+                    <option value="all">All Companies</option>
+                </select>
+                <button onclick="downloadCompanyWebCSV()" class="btn-download px-5 py-3 rounded-xl font-medium flex items-center gap-2 text-sm whitespace-nowrap">
+                    <i class="fas fa-download"></i><span>Download CSV</span>
+                </button>
+            </div>
+
+            <!-- Loading / empty / table -->
+            <div id="companyWebLoadingState" class="text-center py-20 hidden">
+                <div class="loading-spinner mx-auto mb-4"></div>
+                <p class="text-gray-400 text-sm">Loading company openings…</p>
+            </div>
+            <div id="companyWebEmptyState" class="text-center py-20 hidden">
+                <div class="w-20 h-20 rounded-full bg-slate-800/80 flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-globe text-3xl text-gray-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-gray-300">No company website data found</h3>
+                <p class="text-gray-500 text-sm">Run company_website_comingsoon.py to generate data.</p>
+            </div>
+            <div id="companyWebTableContainer" class="hidden overflow-x-auto rounded-2xl border border-white/5 fade-in">
+                <table class="w-full text-sm text-left data-table">
+                    <thead><tr>
+                        <th class="px-3 py-3 w-10">#</th>
+                        <th class="px-3 py-3 w-32">Company</th>
+                        <th class="px-3 py-3">Store Name</th>
+                        <th class="px-3 py-3">Address</th>
+                        <th class="px-3 py-3 w-36">Opening Date</th>
+                        <th class="px-3 py-3 w-20">Link</th>
+                    </tr></thead>
+                    <tbody id="companyWebTableBody"></tbody>
+                </table>
+                <div class="px-4 py-3 glass text-gray-500 text-xs border-t border-white/5 flex justify-between">
+                    <span>Showing <span id="companyWebRowCount" class="text-gray-300 font-semibold">0</span> locations</span>
+                    <span>Updated: <span id="companyWebLastUpdated" class="text-gray-300">—</span></span>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 
     <footer class="relative z-10 mt-16 py-8 border-t border-white/5">
@@ -972,6 +1051,7 @@
     const DAILY_NEWS_JSON_URL    = 'docs/news_data.json';
     const DAILY_NEWS_EXT_URL     = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/daily_news_extraction_latest.json';
     const WARN_JSON_URL          = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/warn_latest.json';
+    const COMPANY_WEB_JSON_URL   = 'docs/company_website_latest.json';
 
     let storeArticles = [], filteredStoreArticles = [];
     let scoopArticles = [], filteredScoopArticles = [];
@@ -985,6 +1065,7 @@
     let dailyNewsExtractionRows = [], filteredDailyNewsExtractionRows = [];
     let warnRows = [], filteredWarnRows = [];
     let warnSortCol = 'notice_date', warnSortDir = 'desc';
+    let companyWebRows = [], filteredCompanyWebRows = [];
     let activeTab = 'store', activeScoopSubTab = 'articles';
     let activeRestSubTab = 'articles', activeBizSubTab = 'articles';
     let activeDailyNewsSubTab = 'articles';
@@ -1126,8 +1207,8 @@
 
     function switchTab(tab) {
         activeTab = tab;
-        const tabs = { store: 'storeTabContent', scoop: 'scoopTabContent', restaurant: 'restaurantTabContent', biz: 'bizTabContent', daily: 'dailyTabContent', warn: 'warnTabContent' };
-        const btns = { store: 'tabStoreBtn', scoop: 'tabScoopBtn', restaurant: 'tabRestaurantBtn', biz: 'tabBizBtn', daily: 'tabDailyBtn', warn: 'tabWarnBtn' };
+        const tabs = { store: 'storeTabContent', scoop: 'scoopTabContent', restaurant: 'restaurantTabContent', biz: 'bizTabContent', daily: 'dailyTabContent', warn: 'warnTabContent', companyweb: 'companywebTabContent' };
+        const btns = { store: 'tabStoreBtn', scoop: 'tabScoopBtn', restaurant: 'tabRestaurantBtn', biz: 'tabBizBtn', daily: 'tabDailyBtn', warn: 'tabWarnBtn', companyweb: 'tabCompanyWebBtn' };
         Object.values(tabs).forEach(id => document.getElementById(id).classList.add('hidden'));
         Object.values(btns).forEach(id => document.getElementById(id).classList.remove('active'));
         document.getElementById(tabs[tab]).classList.remove('hidden');
@@ -1146,6 +1227,8 @@
             if (activeDailyNewsSubTab === 'extraction' && dailyNewsExtractionRows.length === 0) loadDailyNewsExtractionData();
         } else if (tab === 'warn') {
             if (warnRows.length === 0) loadWarnData();
+        } else if (tab === 'companyweb') {
+            if (companyWebRows.length === 0) loadCompanyWebData();
         }
     }
 
@@ -2134,6 +2217,9 @@
         } else if (activeTab === 'warn') {
             warnRows = [];
             loader = loadWarnData();
+        } else if (activeTab === 'companyweb') {
+            companyWebRows = [];
+            loader = loadCompanyWebData();
         }
         Promise.resolve(loader).finally(() => setTimeout(() => icon.classList.remove('spin-anim'), 500));
     }
@@ -2335,6 +2421,109 @@
         const csv = [labels.join(','), ...filteredWarnRows.map(r => h.map(k => `"${(r[k]||'').replace(/"/g,'""')}"`).join(','))].join('\n');
         dlCSV('\uFEFF' + csv, `warn_notices_${TODAY}.csv`);
         showToast('WARN notices CSV downloaded!');
+    }
+
+    // ══ COMPANY WEBSITE ══
+    async function loadCompanyWebData() {
+        try {
+            document.getElementById('companyWebLoadingState').classList.remove('hidden');
+            document.getElementById('companyWebTableContainer').classList.add('hidden');
+            document.getElementById('companyWebEmptyState').classList.add('hidden');
+            document.getElementById('companyWebStatsContainer').style.display = 'none';
+
+            const res = await fetch(COMPANY_WEB_JSON_URL + '?t=' + Date.now());
+            if (!res.ok) throw new Error('fetch failed');
+            const data = await res.json();
+
+            document.getElementById('companyWebLastUpdated').textContent = data.last_updated || '—';
+            companyWebRows = data.data || [];
+            filteredCompanyWebRows = [...companyWebRows];
+
+            // Populate company dropdown dynamically
+            const companies = [...new Set(companyWebRows.map(r => r.company).filter(Boolean))].sort();
+            const sel = document.getElementById('companyWebCompanyFilter');
+            sel.innerHTML = '<option value="all">All Companies</option>' +
+                companies.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('');
+
+            updateCompanyWebStats(filteredCompanyWebRows);
+            renderCompanyWebTable();
+            updateNavTotal();
+            document.getElementById('companyWebLoadingState').classList.add('hidden');
+        } catch (err) {
+            console.error(err);
+            document.getElementById('companyWebLoadingState').classList.add('hidden');
+            document.getElementById('companyWebEmptyState').classList.remove('hidden');
+        }
+    }
+
+    function updateCompanyWebStats(rows) {
+        setCount('companyWebTotal', rows.length);
+        const uniqueCompanies = new Set(rows.map(r => r.company).filter(Boolean)).size;
+        setCount('companyWebCompanyCount', uniqueCompanies);
+        document.getElementById('companyWebStatsContainer').style.display = rows.length ? 'grid' : 'none';
+    }
+
+    function filterCompanyWebRows() {
+        const term    = document.getElementById('companyWebSearchInput').value.toLowerCase();
+        const company = document.getElementById('companyWebCompanyFilter').value;
+        filteredCompanyWebRows = companyWebRows.filter(r => {
+            const matchTerm    = !term    || ['store_name','address','opening_date'].some(k => (r[k]||'').toLowerCase().includes(term));
+            const matchCompany = company === 'all' || r.company === company;
+            return matchTerm && matchCompany;
+        });
+        updateCompanyWebStats(filteredCompanyWebRows);
+        renderCompanyWebTable();
+    }
+
+    function renderCompanyWebTable() {
+        const tbody = document.getElementById('companyWebTableBody');
+        const term  = document.getElementById('companyWebSearchInput').value.toLowerCase();
+
+        if (!filteredCompanyWebRows.length) {
+            document.getElementById('companyWebTableContainer').classList.add('hidden');
+            document.getElementById('companyWebEmptyState').classList.remove('hidden');
+            return;
+        }
+        document.getElementById('companyWebEmptyState').classList.add('hidden');
+        document.getElementById('companyWebTableContainer').classList.remove('hidden');
+
+        tbody.innerHTML = filteredCompanyWebRows.map((r, i) => {
+            const linkCell = r.link
+                ? `<a href="${escapeHtml(r.link)}" target="_blank" rel="noopener noreferrer"
+                      class="px-2 py-1 rounded-lg text-xs bg-blue-900/40 text-blue-300 border border-blue-700/30 hover:bg-blue-800/60 transition-colors whitespace-nowrap">
+                      <i class="fas fa-external-link-alt mr-1"></i>View
+                   </a>`
+                : `<span class="text-gray-600 text-xs">—</span>`;
+            const storeName = r.store_name
+                ? `<span class="text-white text-sm">${highlight(r.store_name, term)}</span>`
+                : `<span class="text-gray-600 text-xs">—</span>`;
+            return `
+            <tr>
+                <td class="px-3 py-3 text-gray-600 text-xs font-semibold">${i+1}</td>
+                <td class="px-3 py-3">
+                    <span class="px-2 py-1 rounded-full text-xs font-semibold bg-indigo-900/40 text-indigo-300 border border-indigo-700/30">${escapeHtml(r.company||'—')}</span>
+                </td>
+                <td class="px-3 py-3 max-w-[200px]">${storeName}</td>
+                <td class="px-3 py-3 text-gray-400 text-xs max-w-[220px]">
+                    <span class="line-clamp-2 block" title="${escapeHtml(r.address||'')}">${highlight(r.address||'—', term)}</span>
+                </td>
+                <td class="px-3 py-3 text-gray-300 text-xs whitespace-nowrap">${highlight(r.opening_date||'—', term)}</td>
+                <td class="px-3 py-3">${linkCell}</td>
+            </tr>`;
+        }).join('');
+
+        document.getElementById('companyWebRowCount').textContent = filteredCompanyWebRows.length;
+    }
+
+    function downloadCompanyWebCSV() {
+        if (!filteredCompanyWebRows.length) return;
+        const headers = ['company','store_name','address','opening_date','link'];
+        const labels  = ['Company','Store Name','Address','Opening Date','Link'];
+        const csv = [labels.join(','), ...filteredCompanyWebRows.map(r =>
+            headers.map(k => `"${(r[k]||'').replace(/"/g,'""')}"`).join(',')
+        )].join('\n');
+        dlCSV('\uFEFF' + csv, `company_website_openings_${TODAY}.csv`);
+        showToast('Company Website CSV downloaded!');
     }
 
     window.addEventListener('DOMContentLoaded', () => {
