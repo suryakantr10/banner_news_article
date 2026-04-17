@@ -224,6 +224,14 @@ BURLINGTON_DATE_RE = re.compile(
     re.IGNORECASE,
 )
 
+# Matches Burlington entry format: "05/01 - Fayetteville (#1829) 3835 North Mall Ave Ste 2"
+# Group 1: opening date  (05/01)
+# Group 2: store name    (Fayetteville (#1829))
+# Group 3: address       (3835 North Mall Ave Ste 2)
+BURLINGTON_ENTRY_RE = re.compile(
+    r'^(\d{2}/\d{2})\s*[-–]\s*(.+?\(#\d+\))\s+(.+)$'
+)
+
 
 def _burlington_expand_accordions(driver: webdriver.Chrome) -> int:
     WebDriverWait(driver, 10).until(
@@ -305,13 +313,22 @@ def _burlington_parse(soup: BeautifulSoup) -> list[dict]:
             if key in seen:
                 continue
             seen.add(key)
-            opening_date = extract_date(row_text)
-            address = re.sub(re.escape(text), "", row_text, flags=re.IGNORECASE)
-            address = re.sub(BURLINGTON_DATE_RE, "", address)
-            address = re.sub(r"\s{2,}", " ", address).strip(" -–•|/,")
+
+            # Try Burlington-specific format: "MM/DD - City (#StoreNum) Street Address"
+            m = BURLINGTON_ENTRY_RE.match(text.strip())
+            if m:
+                opening_date = m.group(1).strip()
+                store_name   = m.group(2).strip()
+                address      = f"{m.group(3).strip()}, {state_name}"
+            else:
+                # Fallback for any non-standard entries
+                opening_date = extract_date(text) or extract_date(row_text)
+                store_name   = text
+                address      = state_name
+
             stores.append({
                 "state_name":   state_name,
-                "store_name":   text,
+                "store_name":   store_name,
                 "address":      address,
                 "opening_date": opening_date,
             })
