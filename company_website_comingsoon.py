@@ -2,12 +2,13 @@
 Company Website Grand Openings / Coming Soon Scraper
 =====================================================
 Scrapers:
-  • ALDI        — https://www.aldi.us/grand-openings (Selenium)
-  • Dogtopia    — REST API JSON endpoint (requests)
-  • Burlington  — https://www.burlington.com/grand-openings (Selenium)
-  • Five Below  — https://locations.fivebelow.com/coming-soon/index.html (requests)
-  • HomeGoods   — https://www.homegoods.com/grand-openings (Selenium)
-  • Homesense   — https://us.homesense.com/grand-openings (Selenium)
+  • ALDI           — https://www.aldi.us/grand-openings (Selenium)
+  • Dogtopia       — REST API JSON endpoint (requests)
+  • Burlington     — https://www.burlington.com/grand-openings (Selenium)
+  • Five Below     — https://locations.fivebelow.com/coming-soon/index.html (requests)
+  • HomeGoods      — https://www.homegoods.com/grand-openings (Selenium)
+  • Homesense      — https://us.homesense.com/grand-openings (Selenium)
+  • Jersey Mike's  — https://www.jerseymikes.com/locations/coming-soon (requests)
 
 Output:
   docs/company_website_latest.json
@@ -53,6 +54,15 @@ DATE_RE = re.compile(
 def extract_date(text: str) -> str:
     m = DATE_RE.search(text or "")
     return m.group(0).strip() if m else ""
+
+
+def normalize_date(date_str: str) -> str:
+    """Convert missing or unrecognised/incomplete dates to 'In Development'."""
+    s = (date_str or "").strip()
+    if not s:
+        return "In Development"
+    m = DATE_RE.search(s)
+    return m.group(0).strip() if m else "In Development"
 
 
 def make_driver() -> webdriver.Chrome:
@@ -137,8 +147,6 @@ def scrape_aldi(driver: webdriver.Chrome) -> list[dict]:
             street, city, state, zip_code = m.groups()
             full_address = f"{street.strip(', ')}, {city.strip()}, {state.strip()} {zip_code.strip()}"
         else:
-            parts = full_link.split("/")
-            state = parts[5].upper() if len(parts) > 5 else ""
             full_address = address_text
 
         stores.append({"full_link": full_link, "address": full_address})
@@ -179,7 +187,7 @@ def scrape_dogtopia() -> list[dict]:
         if not loc.get("opening_soon"):
             continue
         try:
-            addr_info = loc["store_info"]["location_address_info"][0]
+            addr_info  = loc["store_info"]["location_address_info"][0]
             hours_info = loc["store_info"]["location_hours_info"][0]
 
             street   = addr_info.get("location_street_address", "") or ""
@@ -189,8 +197,8 @@ def scrape_dogtopia() -> list[dict]:
             parts    = [p for p in [street, city, state, zipcode] if p]
             address  = ", ".join(parts)
 
-            opening_date  = hours_info.get("coming_soon_header_text", "") or ""
-            link          = loc.get("link", "") or ""
+            opening_date = hours_info.get("coming_soon_header_text", "") or ""
+            link         = loc.get("link", "") or ""
 
             results.append({
                 "company":      "Dogtopia",
@@ -217,15 +225,6 @@ US_STATES_RE = re.compile(
     r"|New Mexico|New York|North Carolina|North Dakota|Ohio|Oklahoma|Oregon"
     r"|Pennsylvania|Rhode Island|South Carolina|South Dakota|Tennessee|Texas"
     r"|Utah|Vermont|Virginia|Washington|West Virginia|Wisconsin|Wyoming)$"
-)
-
-BURLINGTON_DATE_RE = re.compile(
-    r"\b(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?"
-    r"|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)"
-    r"\s+\d{1,2},?\s+\d{4}\b"
-    r"|\b\d{1,2}[/\-]\d{1,2}[/\-]\d{4}\b"
-    r"|\b\d{2}/\d{2}\b",
-    re.IGNORECASE,
 )
 
 # Matches Burlington entry format: "05/01 - Fayetteville (#1829) 3835 North Mall Ave Ste 2"
@@ -318,21 +317,17 @@ def _burlington_parse(soup: BeautifulSoup) -> list[dict]:
                 continue
             seen.add(key)
 
-            # Try Burlington-specific format: "MM/DD - City (#StoreNum) Street Address"
             m = BURLINGTON_ENTRY_RE.match(text.strip())
             if m:
                 opening_date = m.group(1).strip()
-                store_name   = m.group(2).strip()
                 address      = f"{m.group(3).strip()}, {state_name}"
             else:
-                # Fallback for any non-standard entries
+                if len(text) <= 4:
+                    continue
                 opening_date = extract_date(text) or extract_date(row_text)
-                store_name   = text
                 address      = state_name
 
             stores.append({
-                "state_name":   state_name,
-                "store_name":   store_name,
                 "address":      address,
                 "opening_date": opening_date,
             })
@@ -350,11 +345,9 @@ def scrape_burlington(driver: webdriver.Chrome) -> list[dict]:
 
     results = []
     for s in stores:
-        if len(s["store_name"]) <= 4:
-            continue
         results.append({
             "company":      "Burlington",
-            "address":      s["address"] if s["address"] else s["state_name"],
+            "address":      s["address"],
             "opening_date": s["opening_date"].strip(),
             "link":         "",
         })
@@ -453,9 +446,9 @@ def scrape_homegoods(driver: webdriver.Chrome) -> list[dict]:
         state = state_li.find("h4").get_text(strip=True) if state_li.find("h4") else ""
 
         for store_li in state_li.find_all("li"):
-            address_tag = store_li.find("address")
-            opening_tag = store_li.find("h5")
-            link_tag    = store_li.find("a", class_="arrow-link")
+            address_tag  = store_li.find("address")
+            opening_tag  = store_li.find("h5")
+            link_tag     = store_li.find("a", class_="arrow-link")
 
             address      = address_tag.get_text(separator=", ", strip=True) if address_tag else ""
             opening_date = opening_tag.get_text(strip=True) if opening_tag else ""
@@ -525,7 +518,7 @@ def scrape_homesense(driver: webdriver.Chrome) -> list[dict]:
                     if text:
                         address_parts.append(text)
 
-        street = ", ".join(p for p in address_parts if p)
+        street  = ", ".join(p for p in address_parts if p)
         address = f"{street}, {city}" if street and city else street or city
 
         results.append({
@@ -536,6 +529,119 @@ def scrape_homesense(driver: webdriver.Chrome) -> list[dict]:
         })
 
     print(f"[Homesense] {len(results)} store(s) parsed.")
+    return results
+
+
+# ── Jersey Mike's scraper ────────────────────────────────────────────────────
+
+JERSEY_MIKES_BASE_URL = "https://www.jerseymikes.com/locations/coming-soon"
+
+JM_STATES = {
+    "AL": "Alabama", "AK": "Alaska", "AZ": "Arizona", "AR": "Arkansas",
+    "CA": "California", "CO": "Colorado", "CT": "Connecticut", "DE": "Delaware",
+    "FL": "Florida", "GA": "Georgia", "HI": "Hawaii", "ID": "Idaho",
+    "IL": "Illinois", "IN": "Indiana", "IA": "Iowa", "KS": "Kansas",
+    "KY": "Kentucky", "LA": "Louisiana", "ME": "Maine", "MD": "Maryland",
+    "MA": "Massachusetts", "MI": "Michigan", "MN": "Minnesota", "MS": "Mississippi",
+    "MO": "Missouri", "MT": "Montana", "NE": "Nebraska", "NV": "Nevada",
+    "NH": "New Hampshire", "NJ": "New Jersey", "NM": "New Mexico", "NY": "New York",
+    "NC": "North Carolina", "ND": "North Dakota", "OH": "Ohio", "OK": "Oklahoma",
+    "OR": "Oregon", "PA": "Pennsylvania", "RI": "Rhode Island", "SC": "South Carolina",
+    "SD": "South Dakota", "TN": "Tennessee", "TX": "Texas", "UT": "Utah",
+    "VT": "Vermont", "VA": "Virginia", "WA": "Washington", "WV": "West Virginia",
+    "WI": "Wisconsin", "WY": "Wyoming", "DC": "District of Columbia",
+}
+
+JM_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36"
+    )
+}
+
+
+def _jm_resolve(data: list, index):
+    """Resolve a Vue.js serialised index back to its actual value."""
+    if isinstance(index, int) and 0 <= index < len(data):
+        return data[index]
+    return index
+
+
+def _jm_parse_payload(raw_data: list) -> list[dict]:
+    """Parse store records from the Vue.js JSON payload embedded in the page."""
+    stores = []
+    try:
+        if len(raw_data) <= 6:
+            return stores
+        for store_idx in raw_data[6]:
+            if store_idx >= len(raw_data):
+                continue
+            store_dict = _jm_resolve(raw_data, store_idx)
+            if not isinstance(store_dict, dict):
+                continue
+            store = {}
+            for key in ("id", "number", "name", "openDate"):
+                if key in store_dict:
+                    store[key] = _jm_resolve(raw_data, store_dict[key])
+            if "address" in store_dict:
+                addr_raw = _jm_resolve(raw_data, store_dict["address"])
+                if isinstance(addr_raw, dict):
+                    store["address"] = {
+                        k: _jm_resolve(raw_data, addr_raw[k])
+                        for k in ("street1", "city", "subdivisionCode", "postalCode")
+                        if k in addr_raw
+                    }
+                else:
+                    store["address"] = {}
+            stores.append(store)
+    except Exception as e:
+        print(f"  [Jersey Mike's] Payload parse error: {e}")
+    return stores
+
+
+def scrape_jersey_mikes() -> list[dict]:
+    print(f"[Jersey Mike's] Scraping {JERSEY_MIKES_BASE_URL} …")
+    results = []
+
+    for state_code, state_name in JM_STATES.items():
+        url = f"{JERSEY_MIKES_BASE_URL}/US-{state_code}"
+        try:
+            resp = requests.get(url, headers=JM_HEADERS, timeout=15)
+            resp.raise_for_status()
+        except Exception:
+            continue
+
+        soup = BeautifulSoup(resp.text, "html.parser")
+        script = soup.find("script", type="application/json")
+        if not (script and script.string):
+            continue
+
+        try:
+            raw_data = json.loads(script.string)
+        except Exception:
+            continue
+
+        stores = _jm_parse_payload(raw_data)
+        for s in stores:
+            addr     = s.get("address") or {}
+            street   = addr.get("street1", "") or ""
+            city     = addr.get("city", "") or ""
+            zip_code = addr.get("postalCode", "") or ""
+            address_parts = [p for p in [street, city, f"{state_code} {zip_code}".strip()] if p]
+            address  = ", ".join(address_parts) if address_parts else state_name
+
+            open_date = s.get("openDate", "") or ""
+
+            results.append({
+                "company":      "Jersey Mike's",
+                "address":      address,
+                "opening_date": extract_date(open_date),
+                "link":         url,
+            })
+
+        time.sleep(0.5)
+
+    print(f"[Jersey Mike's] Found {len(results)} coming-soon location(s).")
     return results
 
 
@@ -599,6 +705,16 @@ def main():
     finally:
         if driver:
             driver.quit()
+
+    # ── Jersey Mike's ──
+    try:
+        all_stores.extend(scrape_jersey_mikes())
+    except Exception as e:
+        print(f"[Jersey Mike's] Scraping failed: {e}")
+
+    # ── Normalise opening dates ──
+    for store in all_stores:
+        store["opening_date"] = normalize_date(store["opening_date"])
 
     print(f"\nTotal records collected: {len(all_stores)}")
 
