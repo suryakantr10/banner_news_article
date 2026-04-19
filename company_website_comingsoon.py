@@ -6,6 +6,7 @@ Scrapers:
   • Dogtopia    — REST API JSON endpoint (requests)
   • Burlington  — https://www.burlington.com/grand-openings (Selenium)
   • Five Below  — https://locations.fivebelow.com/coming-soon/index.html (requests)
+  • HomeGoods   — https://www.homegoods.com/grand-openings (Selenium)
 
 Output:
   docs/company_website_latest.json
@@ -435,6 +436,47 @@ def scrape_five_below() -> list[dict]:
     return results
 
 
+# ── HomeGoods scraper ────────────────────────────────────────────────────────
+
+HOMEGOODS_URL = "https://www.homegoods.com/grand-openings"
+HOMEGOODS_BASE_URL = "https://www.homegoods.com"
+
+
+def scrape_homegoods(driver: webdriver.Chrome) -> list[dict]:
+    print(f"[HomeGoods] Loading {HOMEGOODS_URL}")
+    driver.get(HOMEGOODS_URL)
+    time.sleep(5)
+    soup = BeautifulSoup(driver.page_source, "html.parser")
+
+    results = []
+    for state_li in soup.find_all("li", class_="state-dropdown"):
+        state = state_li.find("h4").get_text(strip=True) if state_li.find("h4") else ""
+
+        for store_li in state_li.find_all("li"):
+            address_tag = store_li.find("address")
+            opening_tag = store_li.find("h5")
+            link_tag    = store_li.find("a", class_="arrow-link")
+
+            address      = address_tag.get_text(separator=", ", strip=True) if address_tag else ""
+            opening_date = opening_tag.get_text(strip=True) if opening_tag else ""
+            href         = link_tag["href"] if link_tag and link_tag.get("href") else ""
+            link         = (HOMEGOODS_BASE_URL + href) if href.startswith("/") else href
+
+            if not address:
+                continue
+
+            results.append({
+                "company":      "HomeGoods",
+                "store_name":   "",
+                "address":      f"{address}, {state}" if state else address,
+                "opening_date": opening_date,
+                "link":         link,
+            })
+
+    print(f"[HomeGoods] {len(results)} store(s) parsed.")
+    return results
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -473,6 +515,17 @@ def main():
         all_stores.extend(scrape_five_below())
     except Exception as e:
         print(f"[Five Below] Scraping failed: {e}")
+
+    # ── HomeGoods ──
+    driver = None
+    try:
+        driver = make_driver()
+        all_stores.extend(scrape_homegoods(driver))
+    except Exception as e:
+        print(f"[HomeGoods] Scraping failed: {e}")
+    finally:
+        if driver:
+            driver.quit()
 
     print(f"\nTotal records collected: {len(all_stores)}")
 
