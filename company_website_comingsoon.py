@@ -56,14 +56,6 @@ def extract_date(text: str) -> str:
     return m.group(0).strip() if m else ""
 
 
-def normalize_date(date_str: str) -> str:
-    """Convert missing or unrecognised/incomplete dates to 'In Development'."""
-    s = (date_str or "").strip()
-    if not s:
-        return "In Development"
-    m = DATE_RE.search(s)
-    return m.group(0).strip() if m else "In Development"
-
 
 def make_driver() -> webdriver.Chrome:
     options = Options()
@@ -635,7 +627,7 @@ def scrape_jersey_mikes() -> list[dict]:
             results.append({
                 "company":      "Jersey Mike's",
                 "address":      address,
-                "opening_date": extract_date(open_date),
+                "opening_date": extract_date(open_date) or "In Development",
                 "link":         url,
             })
 
@@ -711,10 +703,6 @@ def main():
         all_stores.extend(scrape_jersey_mikes())
     except Exception as e:
         print(f"[Jersey Mike's] Scraping failed: {e}")
-
-    # ── Normalise opening dates ──
-    for store in all_stores:
-        store["opening_date"] = normalize_date(store["opening_date"])
 
     print(f"\nTotal records collected: {len(all_stores)}")
 
