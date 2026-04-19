@@ -15,7 +15,6 @@ Output:
     "data": [
       {
         "company": "ALDI",
-        "store_name": "",
         "address": "14600 Palm Beach Blvd., Fort Myers, FL 33905",
         "opening_date": "April 19, 2026",
         "link": "https://www.aldi.us/stores/..."
@@ -146,9 +145,8 @@ def scrape_aldi(driver: webdriver.Chrome) -> list[dict]:
         print(f"         → {opening_date or '(not found)'}")
         results.append({
             "company":      "ALDI",
-            "store_name":   "",
             "address":      store["address"],
-            "opening_date": opening_date,
+            "opening_date": opening_date.strip(),
             "link":         store["full_link"],
         })
         time.sleep(1.0)
@@ -185,15 +183,13 @@ def scrape_dogtopia() -> list[dict]:
             parts    = [p for p in [street, city, state, zipcode] if p]
             address  = ", ".join(parts)
 
-            store_name    = loc.get("location_name") or loc.get("title") or ""
             opening_date  = hours_info.get("coming_soon_header_text", "") or ""
             link          = loc.get("link", "") or ""
 
             results.append({
                 "company":      "Dogtopia",
-                "store_name":   store_name,
                 "address":      address,
-                "opening_date": opening_date,
+                "opening_date": opening_date.strip(),
                 "link":         link,
             })
         except (KeyError, IndexError, TypeError) as e:
@@ -352,9 +348,8 @@ def scrape_burlington(driver: webdriver.Chrome) -> list[dict]:
             continue
         results.append({
             "company":      "Burlington",
-            "store_name":   s["store_name"],
             "address":      s["address"] if s["address"] else s["state_name"],
-            "opening_date": s["opening_date"],
+            "opening_date": s["opening_date"].strip(),
             "link":         "",
         })
     print(f"[Burlington] {len(results)} store(s) parsed.")
@@ -423,7 +418,6 @@ def scrape_five_below() -> list[dict]:
                     store = entry["item"]
                     results.append({
                         "company":      "Five Below",
-                        "store_name":   store.get("name", "") or "",
                         "address":      _five_below_format_address(store.get("address", {})),
                         "opening_date": "",
                         "link":         store.get("url", "") or "",
@@ -467,9 +461,8 @@ def scrape_homegoods(driver: webdriver.Chrome) -> list[dict]:
 
             results.append({
                 "company":      "HomeGoods",
-                "store_name":   "",
                 "address":      f"{address}, {state}" if state else address,
-                "opening_date": opening_date,
+                "opening_date": opening_date.strip(),
                 "link":         link,
             })
 
@@ -542,7 +535,7 @@ def main():
 
     # ── Also save Excel for convenience ──
     if all_stores:
-        df = pd.DataFrame(all_stores, columns=["company", "store_name", "address", "opening_date", "link"])
+        df = pd.DataFrame(all_stores, columns=["company", "address", "opening_date", "link"])
         today_str = date.today().strftime("%B %d, %Y")
         excel_path = f"company_website_openings_{today_str}.xlsx"
         with pd.ExcelWriter(excel_path, engine="openpyxl") as writer:
