@@ -1,7 +1,31 @@
 {
-  "last_updated": "2026-04-18 00:08 UTC",
+  "last_updated": "2026-04-19 00:05 UTC",
   "total": 60,
   "data": [
+    {
+      "date": "April 18, 2026",
+      "url": "https://whatnow.com/sacramento/restaurants/lao-hu-tong-dumpling-house-to-take-over-former-macaroni-grill-space-in-roseville/",
+      "title": "Lao Hu Tong Dumpling House to Take Over Former Macaroni Grill Space in Roseville",
+      "address": "2010 Douglas Blvd, Roseville, CA 95661"
+    },
+    {
+      "date": "April 17, 2026",
+      "url": "https://whatnow.com/sacramento/restaurants/ca-phe-diem-brewing-brick-and-mortar-shop-in-downtown-sacramento/",
+      "title": "Cà Phê Diễm Brewing Brick-and-Mortar Shop in Downtown Sacramento",
+      "address": "1102 Q St, Suite 110, Sacramento, CA 95811"
+    },
+    {
+      "date": "April 17, 2026",
+      "url": "https://whatnow.com/dallas/restaurants/lumis-to-light-up-the-seam/",
+      "title": "Lumis to Light up The Seam",
+      "address": "1444 Oak Lawn Ave, Dallas, TX 75207"
+    },
+    {
+      "date": "April 17, 2026",
+      "url": "https://whatnow.com/memphis/restaurants/summer-avenue-sees-7-brew-progress/",
+      "title": "Summer Avenue Sees 7 Brew Progress",
+      "address": "4670 Summer Ave, Memphis, TN 38122"
+    },
     {
       "date": "April 17, 2026",
       "url": "https://whatnow.com/orlando/restaurants/team-market-group-announces-eastwood-orlando/",
@@ -337,30 +361,6 @@
       "url": "https://whatnow.com/boston/restaurants/elevated-steakhouse-experience-coming-to-boston-this-april/",
       "title": "Elevated Steakhouse Experience Coming to Boston This April",
       "address": "131 Seaport Blvd, Boston, MA 02210"
-    },
-    {
-      "date": "April 17, 2026",
-      "url": "https://whatnow.com/jacksonville/restaurants/eggbred-opening-in-st-augustines-historic-district/",
-      "title": "Eggbred Opening in St. Augustine’s Historic District",
-      "address": "56 St George St, St. Augustine, FL 32084"
-    },
-    {
-      "date": "April 17, 2026",
-      "url": "https://whatnow.com/charleston/restaurants/chicos-chickens-set-to-bring-peruvian-style-rotisserie-to-surfside-beach/",
-      "title": "Chico’s Chickens Brings Peruvian Chicken to Surfside Beach",
-      "address": "320 US-17 BUS, Surfside Beach, SC 29575"
-    },
-    {
-      "date": "April 17, 2026",
-      "url": "https://whatnow.com/tampa/restaurants/burger-monger-prepares-to-expand-with-two-new-locations/",
-      "title": "Burger Monger Prepares to Expand with Two New Locations",
-      "address": ""
-    },
-    {
-      "date": "April 17, 2026",
-      "url": "https://whatnow.com/tampa/restaurants/cafe-riviera-opening-in-st-pete-beach/",
-      "title": "Cafe Riviera Opening in St. Pete Beach",
-      "address": "116 8th Ave, St Pete Beach, FL 33706"
     }
   ]
 }
