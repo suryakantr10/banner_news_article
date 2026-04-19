@@ -994,9 +994,8 @@
                     <thead><tr>
                         <th class="px-3 py-3 w-10">#</th>
                         <th class="px-3 py-3 w-32">Company</th>
-                        <th class="px-3 py-3">Store Name</th>
                         <th class="px-3 py-3">Address</th>
-                        <th class="px-3 py-3 w-36">Opening Date</th>
+                        <th class="px-3 py-3 w-32">Opening Date</th>
                         <th class="px-3 py-3 w-20">Link</th>
                     </tr></thead>
                     <tbody id="companyWebTableBody"></tbody>
@@ -2467,7 +2466,7 @@
         const term    = document.getElementById('companyWebSearchInput').value.toLowerCase();
         const company = document.getElementById('companyWebCompanyFilter').value;
         filteredCompanyWebRows = companyWebRows.filter(r => {
-            const matchTerm    = !term    || ['store_name','address','opening_date'].some(k => (r[k]||'').toLowerCase().includes(term));
+            const matchTerm    = !term    || ['address','opening_date'].some(k => (r[k]||'').toLowerCase().includes(term));
             const matchCompany = company === 'all' || r.company === company;
             return matchTerm && matchCompany;
         });
@@ -2494,17 +2493,13 @@
                       <i class="fas fa-external-link-alt mr-1"></i>View
                    </a>`
                 : `<span class="text-gray-600 text-xs">—</span>`;
-            const storeName = r.store_name
-                ? `<span class="text-white text-sm">${highlight(r.store_name, term)}</span>`
-                : `<span class="text-gray-600 text-xs">—</span>`;
             return `
             <tr>
                 <td class="px-3 py-3 text-gray-600 text-xs font-semibold">${i+1}</td>
                 <td class="px-3 py-3">
                     <span class="px-2 py-1 rounded-full text-xs font-semibold bg-indigo-900/40 text-indigo-300 border border-indigo-700/30">${escapeHtml(r.company||'—')}</span>
                 </td>
-                <td class="px-3 py-3 max-w-[200px]">${storeName}</td>
-                <td class="px-3 py-3 text-gray-400 text-xs max-w-[220px]">
+                <td class="px-3 py-3 text-gray-400 text-xs max-w-[280px]">
                     <span class="line-clamp-2 block" title="${escapeHtml(r.address||'')}">${highlight(r.address||'—', term)}</span>
                 </td>
                 <td class="px-3 py-3 text-gray-300 text-xs whitespace-nowrap">${highlight(r.opening_date||'—', term)}</td>
@@ -2517,8 +2512,8 @@
 
     function downloadCompanyWebCSV() {
         if (!filteredCompanyWebRows.length) return;
-        const headers = ['company','store_name','address','opening_date','link'];
-        const labels  = ['Company','Store Name','Address','Opening Date','Link'];
+        const headers = ['company','address','opening_date','link'];
+        const labels  = ['Company','Address','Opening Date','Link'];
         const csv = [labels.join(','), ...filteredCompanyWebRows.map(r =>
             headers.map(k => `"${(r[k]||'').replace(/"/g,'""')}"`).join(',')
         )].join('\n');
