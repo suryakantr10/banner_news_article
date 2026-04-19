@@ -9,6 +9,7 @@ Scrapers:
   • HomeGoods      — https://www.homegoods.com/grand-openings (Selenium)
   • Homesense      — https://us.homesense.com/grand-openings (Selenium)
   • Jersey Mike's  — https://www.jerseymikes.com/locations/coming-soon (requests)
+  • LongHorn       — https://www.longhornsteakhouse.com/locations/new-locations (requests)
 
 Output:
   docs/company_website_latest.json
@@ -637,6 +638,61 @@ def scrape_jersey_mikes() -> list[dict]:
     return results
 
 
+# ── LongHorn Steakhouse scraper ──────────────────────────────────────────────
+
+LONGHORN_URL = "https://www.longhornsteakhouse.com/locations/new-locations"
+LONGHORN_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36"
+    )
+}
+
+
+def scrape_longhorn() -> list[dict]:
+    print(f"[LongHorn] Fetching {LONGHORN_URL}")
+    try:
+        resp = requests.get(LONGHORN_URL, headers=LONGHORN_HEADERS, timeout=30)
+        resp.raise_for_status()
+    except Exception as e:
+        print(f"[LongHorn] Error: {e}")
+        return []
+
+    soup = BeautifulSoup(resp.content, "html.parser")
+    content = soup.find_all("div", class_="newloc row")
+
+    results = []
+    for data in content:
+        address_div = data.find("div", class_="span7 margtop3")
+        if not address_div:
+            continue
+
+        parts = address_div.get_text(separator="\n", strip=True).split("\n")
+        street     = parts[1] if len(parts) > 1 else ""
+        city_state = parts[2] if len(parts) > 2 else ""
+        field3     = parts[3] if len(parts) > 3 else ""
+        field4     = parts[4] if len(parts) > 4 else ""
+
+        # field3 is a phone number when it starts with '(' or a digit;
+        # for "OPENING SPRING 2026" rows there is no phone — field3 is the date.
+        is_phone     = field3.startswith("(") or (bool(field3) and field3[0].isdigit())
+        opening_date = field4 if is_phone else field3
+
+        address = f"{street}, {city_state}".strip(", ")
+        if not address:
+            continue
+
+        results.append({
+            "company":      "LongHorn Steakhouse",
+            "address":      address,
+            "opening_date": extract_date(opening_date) or opening_date,
+            "link":         LONGHORN_URL,
+        })
+
+    print(f"[LongHorn] {len(results)} location(s) parsed.")
+    return results
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -703,6 +759,12 @@ def main():
         all_stores.extend(scrape_jersey_mikes())
     except Exception as e:
         print(f"[Jersey Mike's] Scraping failed: {e}")
+
+    # ── LongHorn Steakhouse ──
+    try:
+        all_stores.extend(scrape_longhorn())
+    except Exception as e:
+        print(f"[LongHorn] Scraping failed: {e}")
 
     print(f"\nTotal records collected: {len(all_stores)}")
 
