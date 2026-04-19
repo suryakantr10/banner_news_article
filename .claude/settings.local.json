@@ -28,7 +28,10 @@
       "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://whatnow.com/las-vegas/restaurants/inclusivity-focused-coffee-spot-in-las-vegas-to-shut-down/\")",
       "Bash(python -c \"from pathlib import Path; p=Path\\(''ct_scoop_articles_ready.txt''\\); print\\(f''exists: {p.exists\\(\\)}, size: {p.stat\\(\\).st_size if p.exists\\(\\) else 0} bytes''\\)\")",
       "Bash(python -c \"import json; d=json.load\\(open\\(''latest_news.json''\\)\\); print\\(''local total:'', sum\\(len\\(v\\) for v in d[''data''].values\\(\\)\\)\\)\")",
-      "Bash(python -c \"import json; d=json.load\\(open\\(''latest_news.json'', encoding=''utf-8''\\)\\); print\\(''local total:'', sum\\(len\\(v\\) for v in d[''data''].values\\(\\)\\)\\)\")"
+      "Bash(python -c \"import json; d=json.load\\(open\\(''latest_news.json'', encoding=''utf-8''\\)\\); print\\(''local total:'', sum\\(len\\(v\\) for v in d[''data''].values\\(\\)\\)\\)\")",
+      "Bash(git pull *)",
+      "Bash(git push *)",
+      "Bash(git stash *)"
     ]
   }
 }

@@ -7,6 +7,7 @@ Scrapers:
   • Burlington  — https://www.burlington.com/grand-openings (Selenium)
   • Five Below  — https://locations.fivebelow.com/coming-soon/index.html (requests)
   • HomeGoods   — https://www.homegoods.com/grand-openings (Selenium)
+  • Homesense   — https://us.homesense.com/grand-openings (Selenium)
 
 Output:
   docs/company_website_latest.json
@@ -60,11 +61,16 @@ def make_driver() -> webdriver.Chrome:
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--window-size=1920,1080")
+    options.add_argument("--disable-blink-features=AutomationControlled")
+    options.add_experimental_option("excludeSwitches", ["enable-automation"])
+    options.add_experimental_option("useAutomationExtension", False)
     options.add_argument(
         "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
         "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36"
     )
-    return webdriver.Chrome(options=options)
+    driver = webdriver.Chrome(options=options)
+    driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+    return driver
 
 
 # ── ALDI scraper ──────────────────────────────────────────────────────────────
@@ -470,6 +476,65 @@ def scrape_homegoods(driver: webdriver.Chrome) -> list[dict]:
     return results
 
 
+# ── Homesense scraper ────────────────────────────────────────────────────────
+
+HOMESENSE_URL = "https://us.homesense.com/grand-openings"
+
+
+def scrape_homesense(driver: webdriver.Chrome) -> list[dict]:
+    print(f"[Homesense] Loading {HOMESENSE_URL}")
+    driver.get(HOMESENSE_URL)
+    try:
+        WebDriverWait(driver, 15).until(
+            EC.presence_of_element_located((By.CLASS_NAME, "locator-txt"))
+        )
+    except Exception:
+        print("[Homesense] Timed out waiting for cards; trying anyway…")
+        time.sleep(5)
+
+    soup = BeautifulSoup(driver.page_source, "html.parser")
+    cards = soup.find_all("div", class_="locator-txt")
+    print(f"[Homesense] Found {len(cards)} store card(s).")
+
+    results = []
+    for card in cards:
+        city_tag     = card.find("h2")
+        date_tag     = card.find(class_="lime-txt")
+        city         = city_tag.get_text(strip=True) if city_tag else ""
+        opening_date = date_tag.get_text(strip=True) if date_tag else ""
+
+        address_parts = []
+        directions_url = ""
+        for p in card.find_all("p"):
+            if "lime-txt" in (p.get("class") or []):
+                continue
+            for elem in p.children:
+                if hasattr(elem, "name") and elem.name == "a":
+                    href = elem.get("href", "")
+                    text = elem.get_text(strip=True)
+                    if href.startswith("tel:"):
+                        continue
+                    elif "maps" in href or "Get Directions" in text:
+                        directions_url = href
+                    else:
+                        address_parts.append(text)
+                elif str(elem).strip():
+                    address_parts.append(str(elem).strip())
+
+        street = " ".join(address_parts).strip()
+        address = f"{street}, {city}" if street and city else street or city
+
+        results.append({
+            "company":      "Homesense",
+            "address":      address,
+            "opening_date": opening_date.strip(),
+            "link":         directions_url,
+        })
+
+    print(f"[Homesense] {len(results)} store(s) parsed.")
+    return results
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -516,6 +581,17 @@ def main():
         all_stores.extend(scrape_homegoods(driver))
     except Exception as e:
         print(f"[HomeGoods] Scraping failed: {e}")
+    finally:
+        if driver:
+            driver.quit()
+
+    # ── Homesense ──
+    driver = None
+    try:
+        driver = make_driver()
+        all_stores.extend(scrape_homesense(driver))
+    except Exception as e:
+        print(f"[Homesense] Scraping failed: {e}")
     finally:
         if driver:
             driver.quit()
