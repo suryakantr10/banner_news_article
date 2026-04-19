@@ -31,7 +31,7 @@ import os
 import requests
 import pandas as pd
 from datetime import date, datetime, timezone
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, NavigableString, Tag
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
@@ -508,26 +508,30 @@ def scrape_homesense(driver: webdriver.Chrome) -> list[dict]:
         for p in card.find_all("p"):
             if "lime-txt" in (p.get("class") or []):
                 continue
+            hit_hours = False
             for elem in p.children:
-                if hasattr(elem, "name") and elem.name == "a":
-                    href = elem.get("href", "")
-                    text = elem.get_text(strip=True)
-                    if href.startswith("tel:"):
-                        continue
-                    elif "maps" in href or "Get Directions" in text:
-                        directions_url = href
-                    else:
+                if isinstance(elem, Tag):
+                    if elem.name == "img":
+                        hit_hours = True
+                    elif elem.name == "a":
+                        href = elem.get("href", "")
+                        text = elem.get_text(strip=True)
+                        if href.startswith("tel:"):
+                            continue
+                        elif "maps" in href or "Get Directions" in text:
+                            directions_url = href
+                elif isinstance(elem, NavigableString) and not hit_hours:
+                    text = str(elem).strip().strip(",").strip()
+                    if text:
                         address_parts.append(text)
-                elif str(elem).strip():
-                    address_parts.append(str(elem).strip())
 
-        street = " ".join(address_parts).strip()
+        street = ", ".join(p for p in address_parts if p)
         address = f"{street}, {city}" if street and city else street or city
 
         results.append({
             "company":      "Homesense",
             "address":      address,
-            "opening_date": opening_date.strip(),
+            "opening_date": extract_date(opening_date),
             "link":         directions_url,
         })
 
