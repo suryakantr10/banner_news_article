@@ -2,9 +2,10 @@
 Company Website Grand Openings / Coming Soon Scraper
 =====================================================
 Scrapers:
-  • ALDI       — https://www.aldi.us/grand-openings (Selenium)
-  • Dogtopia   — REST API JSON endpoint (requests)
-  • Burlington — https://www.burlington.com/grand-openings (Selenium)
+  • ALDI        — https://www.aldi.us/grand-openings (Selenium)
+  • Dogtopia    — REST API JSON endpoint (requests)
+  • Burlington  — https://www.burlington.com/grand-openings (Selenium)
+  • Five Below  — https://locations.fivebelow.com/coming-soon/index.html (requests)
 
 Output:
   docs/company_website_latest.json
@@ -359,6 +360,81 @@ def scrape_burlington(driver: webdriver.Chrome) -> list[dict]:
     return results
 
 
+# ── Five Below scraper ───────────────────────────────────────────────────────
+
+FIVE_BELOW_INDEX_URL = "https://locations.fivebelow.com/coming-soon/index.html"
+FIVE_BELOW_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+    )
+}
+
+
+def _five_below_get_json_ld(url: str) -> dict:
+    resp = requests.get(url, headers=FIVE_BELOW_HEADERS, timeout=30)
+    resp.raise_for_status()
+    soup = BeautifulSoup(resp.text, "html.parser")
+    script = soup.find("script", type="application/ld+json")
+    return json.loads(script.string)
+
+
+def _five_below_format_address(address: dict) -> str:
+    if not address:
+        return ""
+    parts = [
+        address.get("streetAddress", "").strip(),
+        address.get("addressLocality", "").strip(),
+        address.get("addressRegion", "").strip(),
+        address.get("postalCode", "").strip(),
+    ]
+    return ", ".join(p for p in parts if p)
+
+
+def scrape_five_below() -> list[dict]:
+    print(f"[Five Below] Fetching {FIVE_BELOW_INDEX_URL}")
+    try:
+        index_data = _five_below_get_json_ld(FIVE_BELOW_INDEX_URL)
+        state_urls = [
+            item["item"]["url"]
+            for item in index_data["@graph"][0]["mainEntity"]["itemListElement"]
+        ]
+    except Exception as e:
+        print(f"[Five Below] Error fetching index: {e}")
+        return []
+
+    results = []
+    for state_url in state_urls:
+        try:
+            state_data = _five_below_get_json_ld(state_url)
+            city_urls = [
+                item["item"]["url"]
+                for item in state_data["@graph"][0]["mainEntity"]["itemListElement"]
+            ]
+        except Exception as e:
+            print(f"[Five Below] Error fetching state {state_url}: {e}")
+            continue
+
+        for city_url in city_urls:
+            try:
+                city_data = _five_below_get_json_ld(city_url)
+                for entry in city_data["@graph"][0]["mainEntity"]["itemListElement"]:
+                    store = entry["item"]
+                    results.append({
+                        "company":      "Five Below",
+                        "store_name":   store.get("name", "") or "",
+                        "address":      _five_below_format_address(store.get("address", {})),
+                        "opening_date": "",
+                        "link":         store.get("url", "") or "",
+                    })
+            except Exception as e:
+                print(f"[Five Below] Error fetching city {city_url}: {e}")
+                continue
+
+    print(f"[Five Below] Found {len(results)} coming-soon location(s).")
+    return results
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -391,6 +467,12 @@ def main():
     finally:
         if driver:
             driver.quit()
+
+    # ── Five Below ──
+    try:
+        all_stores.extend(scrape_five_below())
+    except Exception as e:
+        print(f"[Five Below] Scraping failed: {e}")
 
     print(f"\nTotal records collected: {len(all_stores)}")
 
