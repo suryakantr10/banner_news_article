@@ -1,649 +1,533 @@
 {
-  "last_updated": "April 19, 2026 16:06 UTC",
+  "last_updated": "April 19, 2026 16:33 UTC",
   "data": [
     {
       "company": "ALDI",
-      "store_name": "",
       "address": "1221 North Arizona Avenue, Gilbert, 85233",
       "opening_date": "4/23/2026",
       "link": "https://info.aldi.us/stores/l/az/gilbert/1221-north-arizona-avenue/fo25"
     },
     {
       "company": "ALDI",
-      "store_name": "",
       "address": "17406 Colima Road, Rowland Heights, 91748",
       "opening_date": "4/23/2026",
       "link": "https://info.aldi.us/stores/l/ca/rowland-heights/17406-colima-road/fo29"
     },
     {
       "company": "ALDI",
-      "store_name": "",
       "address": "208 West Clinton Street, Gray, 31032",
       "opening_date": "4/30/2026",
       "link": "https://info.aldi.us/stores/l/ga/gray/208-w-clinton-st/fs13"
     },
     {
       "company": "ALDI",
-      "store_name": "",
       "address": "6040 Crossland Trail, Bradenton, 34211",
       "opening_date": "4/23/2026",
       "link": "https://info.aldi.us/stores/l/fl/bradenton/6040-crossland-trail/ff33"
     },
     {
       "company": "ALDI",
-      "store_name": "",
       "address": "2533 Thomas Drive, Panama City, 32408",
       "opening_date": "4/16/2026",
       "link": "https://info.aldi.us/stores/l/fl/panama-city/2533-thomas-drive/fp32"
     },
     {
       "company": "ALDI",
-      "store_name": "",
       "address": "995 Sebastian Boulevard, Sebastian, 32958",
       "opening_date": "4/23/2026",
       "link": "https://info.aldi.us/stores/l/fl/sebastian/995-sebastian-boulevard/fo02"
     },
     {
       "company": "ALDI",
-      "store_name": "",
       "address": "11100 4th Street North, St. Petersburg, 33716",
       "opening_date": "4/16/2026",
       "link": "https://info.aldi.us/stores/l/fl/st-petersburg/11100-4th-street-north/ft01"
     },
     {
       "company": "ALDI",
-      "store_name": "",
       "address": "458 Venice Bypass, Venice, 34285",
       "opening_date": "4/23/2026",
       "link": "https://info.aldi.us/stores/l/fl/venice/458-venice-bypass/ft15"
     },
     {
       "company": "ALDI",
-      "store_name": "",
       "address": "1021 Lockwood Blvd Unit 8, Oviedo, 32765",
       "opening_date": "4/30/2026",
       "link": "https://info.aldi.us/stores/l/fl/oviedo/1021-lockwood-blvd-unit-8/fi05"
     },
     {
       "company": "ALDI",
-      "store_name": "",
       "address": "1414 North Burnside Avenue, Gonzales, LA 70737",
       "opening_date": "4/16/2026",
       "link": "https://info.aldi.us/stores/l/la/gonzales/1414-north-burnside-avenue/ff87"
     },
     {
       "company": "ALDI",
-      "store_name": "",
       "address": "38 Great Neck Road, Great Neck, 11021",
       "opening_date": "4/23/2026",
       "link": "https://info.aldi.us/stores/l/ny/great-neck/38-great-neck-road/fn76"
     },
     {
       "company": "ALDI",
-      "store_name": "",
       "address": "791 West Elk Avenue, Elizabethton, 37643",
       "opening_date": "4/23/2026",
       "link": "https://info.aldi.us/stores/l/tn/elizabethton/791-w-elk-ave/fm20"
     },
     {
       "company": "Dogtopia",
-      "store_name": {
-        "raw": "Denton",
-        "rendered": "Denton"
-      },
       "address": "2311 Colorado Blvd, Denton, Texas, 76205",
       "opening_date": "Coming Summer 2026!",
       "link": "https://www.dogtopia.com/locations/denton/"
     },
     {
       "company": "Dogtopia",
-      "store_name": {
-        "raw": "Prairieville",
-        "rendered": "Prairieville"
-      },
       "address": "17422 Airline Hwy, Prairieville, Louisiana, 70769",
       "opening_date": "",
       "link": "https://www.dogtopia.com/locations/prairieville/"
     },
     {
       "company": "Dogtopia",
-      "store_name": {
-        "raw": "Naperville",
-        "rendered": "Naperville"
-      },
       "address": "1932 McDowell Road, Naperville, Illinois, 60563",
       "opening_date": "Coming Summer 2026!",
       "link": "https://www.dogtopia.com/locations/naperville/"
     },
     {
       "company": "Dogtopia",
-      "store_name": {
-        "raw": "Ankeny",
-        "rendered": "Ankeny"
-      },
       "address": "1606 NW Irvinedale Dr., Ankeny, Iowa, 50023",
       "opening_date": "",
       "link": "https://www.dogtopia.com/locations/ankeny/"
     },
     {
       "company": "Dogtopia",
-      "store_name": {
-        "raw": "Longmont",
-        "rendered": "Longmont"
-      },
       "address": "1070 Ken Pratt Blvd, Longmont, Colorado, 80501",
       "opening_date": "",
       "link": "https://www.dogtopia.com/locations/longmont/"
     },
     {
       "company": "Dogtopia",
-      "store_name": {
-        "raw": "Chattanooga - Southside",
-        "rendered": "Chattanooga &#8211; Southside"
-      },
       "address": "1607 Central Ave, Chattanooga, Tennessee, 37408",
       "opening_date": "",
       "link": "https://www.dogtopia.com/locations/chattanooga-southside/"
     },
     {
       "company": "Dogtopia",
-      "store_name": {
-        "raw": "Ashburn - Loudoun Station",
-        "rendered": "Ashburn &#8211; Loudoun Station"
-      },
       "address": "43800 Metro Center Drive, Suite E110, Ashburn, Virginia, 20147",
       "opening_date": "",
       "link": "https://www.dogtopia.com/locations/ashburn-loudoun-station/"
     },
     {
       "company": "Dogtopia",
-      "store_name": {
-        "raw": "Castle Rock",
-        "rendered": "Castle Rock"
-      },
       "address": "3194 N Industrial Way, Castle Rock, Colorado, 80109",
       "opening_date": "",
       "link": "https://www.dogtopia.com/locations/castle-rock/"
     },
     {
       "company": "Dogtopia",
-      "store_name": {
-        "raw": "San Diego - East Village",
-        "rendered": "San Diego &#8211; East Village"
-      },
       "address": "1508 E St. Suite 20, San Diego, California, 92101",
       "opening_date": "Opening in 2026!",
       "link": "https://www.dogtopia.com/locations/san-diego-east-village/"
     },
     {
       "company": "Dogtopia",
-      "store_name": {
-        "raw": "St. Augustine",
-        "rendered": "St. Augustine"
-      },
       "address": "25 Alsop Ct., St. Augustine, Florida, 32095",
       "opening_date": "",
       "link": "https://www.dogtopia.com/locations/st-augustine/"
     },
     {
       "company": "Dogtopia",
-      "store_name": {
-        "raw": "Madison-Verona",
-        "rendered": "Madison-Verona"
-      },
       "address": "135 Enterprise Dr., Verona, Wisconsin, 53593",
       "opening_date": "",
       "link": "https://www.dogtopia.com/locations/madison-verona/"
     },
     {
       "company": "Dogtopia",
-      "store_name": {
-        "raw": "Houston - Heights",
-        "rendered": "Houston &#8211; Heights"
-      },
       "address": "2036 East T.C Jester Blvd, Houston, Texas, 77008",
       "opening_date": "",
       "link": "https://www.dogtopia.com/locations/houston-heights/"
     },
     {
       "company": "Dogtopia",
-      "store_name": {
-        "raw": "Jenkintown",
-        "rendered": "Jenkintown"
-      },
       "address": "610 Old York Rd, Jenkintown, Philadelphia, 19046",
       "opening_date": "",
       "link": "https://www.dogtopia.com/locations/jenkintown/"
     },
     {
       "company": "Dogtopia",
-      "store_name": {
-        "raw": "Four Seasons - Chesterfield",
-        "rendered": "Four Seasons &#8211; Chesterfield"
-      },
       "address": "140 Four Seasons Shopping Center, Chesterfield, Missouri, 63017",
       "opening_date": "PERMANENTLY CLOSED",
       "link": "https://www.dogtopia.com/locations/four-seasons-chesterfield/"
     },
     {
       "company": "Burlington",
-      "store_name": "Avondale (#1797)",
       "address": "1717 N Dysart Rd, Arizona",
       "opening_date": "05/15",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Fayetteville (#1829)",
       "address": "3835 North Mall Ave Ste 2, Arkansas",
       "opening_date": "05/01",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Santa Clarita (#1784)",
       "address": "26583 Carl Boyer Drive, California",
       "opening_date": "05/08",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Bakersfield (#1769)",
       "address": "3010 Ming Avenue, California",
       "opening_date": "05/15",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Manteca (#1773)",
       "address": "2210 Daniels Street, California",
       "opening_date": "05/22",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Lady Lake (#1771)",
       "address": "540 N US Hwy 441, Florida",
       "opening_date": "04/24",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Jacksonville (#1791)",
       "address": "10261 River Marsh Drive Ste 149, Florida",
       "opening_date": "05/15",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Decatur (#1801)",
       "address": "2655 N Decatur Rd, Georgia",
       "opening_date": "04/24",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Newnan (#1781)",
       "address": "1074 Bullsboro Dr Unit #6, Georgia",
       "opening_date": "05/01",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "DeKalb (#1821)",
       "address": "2550 Sycamore Rd, Illinois",
       "opening_date": "05/01",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Bourbonnais (#1787)",
       "address": "2056 IL-50, Illinois",
       "opening_date": "05/15",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Louisville (#1793)",
       "address": "4600 Shelbyville Rd ste 280, Kentucky",
       "opening_date": "05/15",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "East Walpole (#1782)",
       "address": "96 Providence Highway, Massachusetts",
       "opening_date": "05/01",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Fort Gratiot Twp (#1813)",
       "address": "4715 24th Ave, Michigan",
       "opening_date": "05/15",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Eagan (#1824)",
       "address": "1271 Promenade Pl, Minnesota",
       "opening_date": "05/01",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Rochester (#1822)",
       "address": "3839 Marketplace Drive NW, Minnesota",
       "opening_date": "05/29",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Tupelo (#1794)",
       "address": "3875 North Gloster Street, Mississippi",
       "opening_date": "05/01",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Jersey City (#1745)",
       "address": "701 NJ-440 Space 16, New Jersey",
       "opening_date": "05/22",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Watchung (#1756)",
       "address": "1701 ROUTE 22, New Jersey",
       "opening_date": "05/29",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Horseheads (#522)",
       "address": "1530 County Rd 64, New York",
       "opening_date": "05/15",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Asheville (#1809)",
       "address": "80 S Tunnel Rd, Ste 30, North Carolina",
       "opening_date": "05/15",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Boardman (#171)",
       "address": "441 Boardman Poland Road, Ohio",
       "opening_date": "05/01",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Columbus (#1792)",
       "address": "4600 W Broad St, Ohio",
       "opening_date": "05/08",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "St Clairsville (#1800)",
       "address": "67800 Mall Ring Road Unit 100  015, Ohio",
       "opening_date": "05/29",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Willoughby Hills (#591)",
       "address": "28221 Chardon Rd, Ohio",
       "opening_date": "05/29",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Summerville (#1795)",
       "address": "1215 N Main St Ste B, South Carolina",
       "opening_date": "05/01",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Myrtle Beach (#1828)",
       "address": "1120 Seaboard Street, South Carolina",
       "opening_date": "05/15",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Conway (#1598)",
       "address": "1610 Church St, South Carolina",
       "opening_date": "05/29",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "El Paso (#1783)",
       "address": "10501 Gateway Blvd W Bld 9, Texas",
       "opening_date": "05/01",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "McKinney (#1780)",
       "address": "2050 West University Dr Suite 250, Texas",
       "opening_date": "05/15",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Katy (#1798)",
       "address": "1219 N Fry Rd Ste B, Texas",
       "opening_date": "05/22",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Houston (#787)",
       "address": "4446 North Freeway, Texas",
       "opening_date": "05/29",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Round Rock (#1777)",
       "address": "201 University Oaks Blvd., Suite 1260, Texas",
       "opening_date": "05/29",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Kent (#1733)",
       "address": "26015 104th Ave SE Suite 101, Washington",
       "opening_date": "05/08",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Longview (#1772)",
       "address": "700 Ocean Beach Hwy Ste 100, Washington",
       "opening_date": "05/08",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Eau Claire (#1790)",
       "address": "4045 Commonwealth Ave, Wisconsin",
       "opening_date": "05/15",
       "link": ""
     },
     {
       "company": "Burlington",
-      "store_name": "Oshkosh (#1810)",
       "address": "1226 S Koeller St, Wisconsin",
       "opening_date": "05/15",
       "link": ""
     },
     {
       "company": "Five Below",
-      "store_name": "Five Below",
       "address": "1649 N Expwy, Griffin, GA, 30223",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/ga/griffin/1649-n-expwy/coming-soon"
     },
     {
       "company": "Five Below",
-      "store_name": "Five Below",
       "address": "3201 N White Sands Blvd, Alamogordo, NM, 88310",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/nm/alamogordo/3201-n-white-sands-blvd/coming-soon"
     },
     {
       "company": "Five Below",
-      "store_name": "Five Below",
       "address": "644 E Main St, Waynesboro, PA, 17268",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/pa/waynesboro/644-e-main-st/coming-soon"
     },
     {
       "company": "Five Below",
-      "store_name": "Five Below",
       "address": "1040 Dekalb Plaza Blvd SW, Fort Payne, AL, 35967",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/al/fort-payne/1040-dekalb-plaza-blvd-sw/coming-soon"
     },
     {
       "company": "Five Below",
-      "store_name": "Five Below",
       "address": "5537 Grove Blvd, Hoover, AL, 35226",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/al/hoover/5537-grove-blvd/coming-soon"
     },
     {
       "company": "Five Below",
-      "store_name": "Five Below",
       "address": "256 Black Gold Blvd, Hazard, KY, 41701",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/ky/hazard/256-black-gold-blvd/coming-soon"
     },
     {
       "company": "Five Below",
-      "store_name": "Five Below",
       "address": "13710 W Bell Rd, Surprise, AZ, 85374",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/az/surprise/13710-w-bell-rd/coming-soon"
     },
     {
       "company": "Five Below",
-      "store_name": "Five Below",
       "address": "480 Stillwater Ave, Bangor, ME, 04401",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/me/bangor/480-stillwater-ave/coming-soon"
     },
     {
       "company": "Five Below",
-      "store_name": "Five Below",
       "address": "28201 Chardon Rd, Willoughby Hills, OH, 44092",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/oh/willoughby-hills/28201-chardon-rd/coming-soon"
     },
     {
       "company": "Five Below",
-      "store_name": "Five Below",
       "address": "2921 Boca Chica Blvd, Brownsville, TX, 78521",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/tx/brownsville/2921-boca-chica-blvd/coming-soon"
     },
     {
       "company": "Five Below",
-      "store_name": "Five Below",
       "address": "19386 Bear Valley Rd, Apple Valley, CA, 92308",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/ca/apple-valley/19386-bear-valley-rd/coming-soon"
     },
     {
       "company": "Five Below",
-      "store_name": "Five Below",
       "address": "4222 E Ontario Ranch Rd, Ontario, CA, 91762",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/ca/ontario/4222-e-ontario-ranch-rd/coming-soon"
     },
     {
       "company": "Five Below",
-      "store_name": "Five Below",
       "address": "3706 E Shaw Ave, Clovis, CA, 93619",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/ca/clovis/3706-e-shaw-ave/coming-soon"
     },
     {
       "company": "Five Below",
-      "store_name": "Five Below",
       "address": "1038 Crossroads Dr, Statesville, NC, 28625",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/nc/statesville/1038-crossroads-dr/coming-soon"
     },
     {
       "company": "Five Below",
-      "store_name": "Five Below",
       "address": "7285 Arroyo Crossing Pkwy, Las Vegas, NV, 89113",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/nv/las-vegas/7285-arroyo-crossing-pkwy/coming-soon"
     },
     {
       "company": "HomeGoods",
-      "store_name": "",
       "address": "Coastal Centre, 1218 Cottage Lane, Conway, SC 29526, South Carolina",
       "opening_date": "New store opening on April 30, 2026 from 8am to 10pm!",
       "link": "https://www.homegoods.com/store-details/Conway-SC-29526/1222"
     },
     {
       "company": "HomeGoods",
-      "store_name": "",
       "address": "Cedar Breaks West Shopping Center, 4610 Williams Dr 105, Georgetown, TX 78633, Texas",
       "opening_date": "New store opening on April 23, 2026 from 8am to 10pm!",
       "link": "https://www.homegoods.com/store-details/Georgetown-TX-78633/1220"
     },
     {
       "company": "HomeGoods",
-      "store_name": "",
       "address": "Killeen Mall, 2100 SWS Young Drive, Killeen, TX 76543, Texas",
       "opening_date": "Now Open!",
       "link": "https://www.homegoods.com/store-details/Killeen-TX-76543/1159"
     },
     {
       "company": "HomeGoods",
-      "store_name": "",
       "address": "Mountain Farms, 337 Russell Street, Hadley, MA 01035, Massachusetts",
       "opening_date": "Now Open!",
       "link": "https://www.homegoods.com/store-details/Hadley-MA-01035/98"
     },
     {
       "company": "HomeGoods",
-      "store_name": "",
       "address": "Blackmore Marketplace, 520 Newport Rd., Casper, WY 82609, Wyoming",
       "opening_date": "Now Open!",
       "link": "https://www.homegoods.com/store-details/Casper-WY-82609/1218"
     },
     {
       "company": "HomeGoods",
-      "store_name": "",
       "address": "Eastland Shopping Center, 2753 E. Eastland Drive, West Covina, CA 91791, California",
       "opening_date": "Now Open!",
       "link": "https://www.homegoods.com/store-details/West-Covina-CA-91791/57"
     },
     {
       "company": "HomeGoods",
-      "store_name": "",
       "address": "University Commons, 1463 University Drive, Burlington, NC 27215, North Carolina",
       "opening_date": "Now Open!",
       "link": "https://www.homegoods.com/store-details/Burlington-NC-27215/1182"
     },
     {
       "company": "HomeGoods",
-      "store_name": "",
       "address": "Columbus Center, 3200 Columbus Center, Columbus, IN 47203, Indiana",
       "opening_date": "",
       "link": "https://www.homegoods.com/store-details/Columbus-IN-47203/1178"
+    },
+    {
+      "company": "Homesense",
+      "address": "Lake Nona West Retail Center <br/> 6023 Lake Nona Blvd <br/> Lake Nona, FL 32827 <br/> <br/> <br/> <br/> <br/> <img alt=\"store hours\" src=\"/ResourcePackages/Bootstrap5/assets/dist/images/locator-icon-hours.svg\" style=\"padding-bottom:5px;\"/> <br/> <strong>\nClosed<br/><br/> <!--span style=\"color:#b5ce2f\"></!--span><br /-->\n</strong>, Lake Nona, FL",
+      "opening_date": "New store opening on May 14, 2026 from 8am to 10pm!",
+      "link": "https://www.google.com/maps?saddr&daddr=6023 Lake Nona Blvd+Lake Nona,FL+32827"
+    },
+    {
+      "company": "Homesense",
+      "address": "Marketplace at Mill Creek <br/> 1705 Mall of Georgia Blvd Suite 400 <br/> Buford, GA 30519 <br/> <br/> <br/> <br/> <br/> <img alt=\"store hours\" src=\"/ResourcePackages/Bootstrap5/assets/dist/images/locator-icon-hours.svg\" style=\"padding-bottom:5px;\"/> <br/> <strong>\nClosed<br/><br/> <!--span style=\"color:#b5ce2f\"></!--span><br /-->\n</strong>, Buford, GA",
+      "opening_date": "New store opening on April 30, 2026 from 8am to 10pm!",
+      "link": "https://www.google.com/maps?saddr&daddr=1705 Mall of Georgia Blvd Suite 400+Buford,GA+30519"
     }
   ]
 }
