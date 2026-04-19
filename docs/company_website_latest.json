@@ -1,5 +1,5 @@
 {
-  "last_updated": "April 17, 2026 08:16 UTC",
+  "last_updated": "April 19, 2026 15:38 UTC",
   "data": [
     {
       "company": "ALDI",
@@ -241,13 +241,6 @@
     },
     {
       "company": "Burlington",
-      "store_name": "Fresno (#299)",
-      "address": "7458 N Blackstone Ave, California",
-      "opening_date": "04/17",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
       "store_name": "Santa Clarita (#1784)",
       "address": "26583 Carl Boyer Drive, California",
       "opening_date": "05/08",
@@ -293,13 +286,6 @@
       "store_name": "Newnan (#1781)",
       "address": "1074 Bullsboro Dr Unit #6, Georgia",
       "opening_date": "05/01",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "store_name": "Darien (#1778)",
-      "address": "7511 Lemont Rd Ste 101, Illinois",
-      "opening_date": "04/17",
       "link": ""
     },
     {
@@ -356,13 +342,6 @@
       "store_name": "Tupelo (#1794)",
       "address": "3875 North Gloster Street, Mississippi",
       "opening_date": "05/01",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "store_name": "St. Louis (#1426)",
-      "address": "6927 S Lindbergh Blvd, Missouri",
-      "opening_date": "04/17",
       "link": ""
     },
     {
@@ -504,6 +483,111 @@
       "address": "1226 S Koeller St, Wisconsin",
       "opening_date": "05/15",
       "link": ""
+    },
+    {
+      "company": "Five Below",
+      "store_name": "Five Below",
+      "address": "1649 N Expwy, Griffin, GA, 30223",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/ga/griffin/1649-n-expwy/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "store_name": "Five Below",
+      "address": "3201 N White Sands Blvd, Alamogordo, NM, 88310",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/nm/alamogordo/3201-n-white-sands-blvd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "store_name": "Five Below",
+      "address": "644 E Main St, Waynesboro, PA, 17268",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/pa/waynesboro/644-e-main-st/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "store_name": "Five Below",
+      "address": "1040 Dekalb Plaza Blvd SW, Fort Payne, AL, 35967",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/al/fort-payne/1040-dekalb-plaza-blvd-sw/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "store_name": "Five Below",
+      "address": "5537 Grove Blvd, Hoover, AL, 35226",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/al/hoover/5537-grove-blvd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "store_name": "Five Below",
+      "address": "256 Black Gold Blvd, Hazard, KY, 41701",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/ky/hazard/256-black-gold-blvd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "store_name": "Five Below",
+      "address": "13710 W Bell Rd, Surprise, AZ, 85374",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/az/surprise/13710-w-bell-rd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "store_name": "Five Below",
+      "address": "480 Stillwater Ave, Bangor, ME, 04401",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/me/bangor/480-stillwater-ave/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "store_name": "Five Below",
+      "address": "28201 Chardon Rd, Willoughby Hills, OH, 44092",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/oh/willoughby-hills/28201-chardon-rd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "store_name": "Five Below",
+      "address": "2921 Boca Chica Blvd, Brownsville, TX, 78521",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/tx/brownsville/2921-boca-chica-blvd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "store_name": "Five Below",
+      "address": "19386 Bear Valley Rd, Apple Valley, CA, 92308",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/ca/apple-valley/19386-bear-valley-rd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "store_name": "Five Below",
+      "address": "4222 E Ontario Ranch Rd, Ontario, CA, 91762",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/ca/ontario/4222-e-ontario-ranch-rd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "store_name": "Five Below",
+      "address": "3706 E Shaw Ave, Clovis, CA, 93619",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/ca/clovis/3706-e-shaw-ave/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "store_name": "Five Below",
+      "address": "1038 Crossroads Dr, Statesville, NC, 28625",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/nc/statesville/1038-crossroads-dr/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "store_name": "Five Below",
+      "address": "7285 Arroyo Crossing Pkwy, Las Vegas, NV, 89113",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/nv/las-vegas/7285-arroyo-crossing-pkwy/coming-soon"
     }
   ]
 }
