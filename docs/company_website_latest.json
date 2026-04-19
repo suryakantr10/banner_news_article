@@ -1,5 +1,5 @@
 {
-  "last_updated": "April 19, 2026 15:38 UTC",
+  "last_updated": "April 19, 2026 16:06 UTC",
   "data": [
     {
       "company": "ALDI",
@@ -588,6 +588,62 @@
       "address": "7285 Arroyo Crossing Pkwy, Las Vegas, NV, 89113",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/nv/las-vegas/7285-arroyo-crossing-pkwy/coming-soon"
+    },
+    {
+      "company": "HomeGoods",
+      "store_name": "",
+      "address": "Coastal Centre, 1218 Cottage Lane, Conway, SC 29526, South Carolina",
+      "opening_date": "New store opening on April 30, 2026 from 8am to 10pm!",
+      "link": "https://www.homegoods.com/store-details/Conway-SC-29526/1222"
+    },
+    {
+      "company": "HomeGoods",
+      "store_name": "",
+      "address": "Cedar Breaks West Shopping Center, 4610 Williams Dr 105, Georgetown, TX 78633, Texas",
+      "opening_date": "New store opening on April 23, 2026 from 8am to 10pm!",
+      "link": "https://www.homegoods.com/store-details/Georgetown-TX-78633/1220"
+    },
+    {
+      "company": "HomeGoods",
+      "store_name": "",
+      "address": "Killeen Mall, 2100 SWS Young Drive, Killeen, TX 76543, Texas",
+      "opening_date": "Now Open!",
+      "link": "https://www.homegoods.com/store-details/Killeen-TX-76543/1159"
+    },
+    {
+      "company": "HomeGoods",
+      "store_name": "",
+      "address": "Mountain Farms, 337 Russell Street, Hadley, MA 01035, Massachusetts",
+      "opening_date": "Now Open!",
+      "link": "https://www.homegoods.com/store-details/Hadley-MA-01035/98"
+    },
+    {
+      "company": "HomeGoods",
+      "store_name": "",
+      "address": "Blackmore Marketplace, 520 Newport Rd., Casper, WY 82609, Wyoming",
+      "opening_date": "Now Open!",
+      "link": "https://www.homegoods.com/store-details/Casper-WY-82609/1218"
+    },
+    {
+      "company": "HomeGoods",
+      "store_name": "",
+      "address": "Eastland Shopping Center, 2753 E. Eastland Drive, West Covina, CA 91791, California",
+      "opening_date": "Now Open!",
+      "link": "https://www.homegoods.com/store-details/West-Covina-CA-91791/57"
+    },
+    {
+      "company": "HomeGoods",
+      "store_name": "",
+      "address": "University Commons, 1463 University Drive, Burlington, NC 27215, North Carolina",
+      "opening_date": "Now Open!",
+      "link": "https://www.homegoods.com/store-details/Burlington-NC-27215/1182"
+    },
+    {
+      "company": "HomeGoods",
+      "store_name": "",
+      "address": "Columbus Center, 3200 Columbus Center, Columbus, IN 47203, Indiana",
+      "opening_date": "",
+      "link": "https://www.homegoods.com/store-details/Columbus-IN-47203/1178"
     }
   ]
 }
