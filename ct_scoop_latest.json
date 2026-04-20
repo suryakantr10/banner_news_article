@@ -1,35 +1,50 @@
 {
-  "last_updated": "2026-04-19",
+  "last_updated": "2026-04-20",
   "data": [
+    {
+      "heading": "HARTFORD SCOOP: New all-day brunch spot opens in Parkville",
+      "date": "2026-04-19",
+      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/hartford-scoop-new-all-day-brunch-spot-opens-in-parkville"
+    },
+    {
+      "heading": "COLLINSVILLE SCOOP: LaSalle Market & Deli sets reopening date!",
+      "date": "2026-04-19",
+      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/collinsville-scoop-lasalle-market-deli-sets-reopening-date"
+    },
+    {
+      "heading": "MADISON SCOOP: The Clam Castle reopens!",
+      "date": "2026-04-19",
+      "link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/madison-scoop-the-clam-castle-reopens"
+    },
+    {
+      "heading": "STAMFORD SCOOP: Barnes & Noble closing at Stamford Town Center",
+      "date": "2026-04-19",
+      "link": "https://www.theconnecticutscoop.com/all-fairfield-county-posts/stamford-scoop-barnes-noble-closing-at-stamford-town-center"
+    },
+    {
+      "heading": "OLD SAYBROOK SCOOP: New businesses coming soon to Old Saybrook",
+      "date": "2026-04-19",
+      "link": "https://www.theconnecticutscoop.com/all-middlesex-county-posts/old-saybrook-scoop-new-businesses-coming-soon-to-old-saybrook"
+    },
+    {
+      "heading": "BOSTON SCOOP: Tree House Brewing eyeing Faneuil Hall for next location",
+      "date": "2026-04-19",
+      "link": "https://www.theconnecticutscoop.com/all-mass-posts/boston-scoop-tree-house-brewing-eyeing-faneuil-hall-for-next-location"
+    },
     {
       "heading": "ELLINGTON SCOOP: Wen Ming House adds AYCE sushi to menu!",
       "date": "2026-04-18",
       "link": "https://www.theconnecticutscoop.com/all-tolland-county-posts/ellington-scoop-wen-ming-house-adds-ayce-sushi-to-menu"
     },
     {
+      "heading": "SOUTH WINDSOR SCOOP: The Wicked Press opens new bookstore & coffee shop in South Windsor",
+      "date": "2026-04-18",
+      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/south-windsor-scoop-the-wicked-press-opens-new-bookstore-coffee-shop-in-south-windsor"
+    },
+    {
       "heading": "MERIDEN SCOOP: Meriden Food Truck Festival back for 5th year",
       "date": "2026-04-18",
       "link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/meriden-scoop-meriden-food-truck-festival-back-for-5th-year"
-    },
-    {
-      "heading": "WEST HARTFORD SCOOP: Burger Squad opens tomorrow in WeHa!",
-      "date": "2026-04-17",
-      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/west-hartford-scoop-burger-squad-opens-tomorrow-in-weha"
-    },
-    {
-      "heading": "MILFORD SCOOP: Red Eye Coffee Co. opens in Milford",
-      "date": "2026-04-17",
-      "link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/milford-scoop-red-eye-coffee-co-opens-in-milford"
-    },
-    {
-      "heading": "NORWALK SCOOP: New beach-side eatery coming soon to Norwalk",
-      "date": "2026-04-17",
-      "link": "https://www.theconnecticutscoop.com/all-fairfield-county-posts/norwalk-scoop-new-beach-side-eatery-coming-soon-to-norwalk"
-    },
-    {
-      "heading": "PAWCATUCK SCOOP: Bess Eaton closing on 04/18",
-      "date": "2026-04-17",
-      "link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/pawcatuck-scoop-bess-eaton-closing-on-0418"
     }
   ]
 }
