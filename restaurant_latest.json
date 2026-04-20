@@ -1,7 +1,43 @@
 {
-  "last_updated": "2026-04-19 00:05 UTC",
+  "last_updated": "2026-04-20 00:07 UTC",
   "total": 60,
   "data": [
+    {
+      "date": "April 19, 2026",
+      "url": "https://whatnow.com/dallas/restaurants/more-maman-headed-to-dallas/",
+      "title": "More Maman Headed to Dallas",
+      "address": "2752 N Haskell Ave. Building D, Dallas, TX 75204"
+    },
+    {
+      "date": "April 19, 2026",
+      "url": "https://whatnow.com/memphis/restaurants/aura-opening-in-memphis/",
+      "title": "Aura Opening in Memphis",
+      "address": "6700 Winchester Rd #40, Memphis, TN 38115"
+    },
+    {
+      "date": "April 19, 2026",
+      "url": "https://whatnow.com/washington-dc/restaurants/lamis-to-bring-sophisticated-dining-experience-to-virginia/",
+      "title": "Lamis to Bring Sophisticated Dining Experience to Virginia",
+      "address": "5762 Union Mill Rd, Clifton, VA 20124"
+    },
+    {
+      "date": "April 19, 2026",
+      "url": "https://whatnow.com/washington-dc/restaurants/franks-wild-years-approaches-opening/",
+      "title": "Frank’s Wild Years Approaches Opening",
+      "address": "1345 S St NW, Washington, DC 20009"
+    },
+    {
+      "date": "April 19, 2026",
+      "url": "https://whatnow.com/washington-dc/restaurants/bizzeria-bringing-innovative-not-pizzas-to-georgetown/",
+      "title": "Bizzeria Bringing Innovative (Not) Pizzas to Georgetown",
+      "address": "3246 Prospect St NW, Washington, DC 20007"
+    },
+    {
+      "date": "April 19, 2026",
+      "url": "https://whatnow.com/washington-dc/restaurants/sanjay-mandhaiya-readies-next-culinary-adventure/",
+      "title": "Sanjay Mandhaiya Readies Next Culinary Adventure",
+      "address": "1539 7th St NW, Washington, DC 20001"
+    },
     {
       "date": "April 18, 2026",
       "url": "https://whatnow.com/sacramento/restaurants/lao-hu-tong-dumpling-house-to-take-over-former-macaroni-grill-space-in-roseville/",
@@ -325,42 +361,6 @@
       "url": "https://whatnow.com/austin/restaurants/true-texas-bbq-opening-in-upcoming-san-marcos-h-e-b/",
       "title": "True Texas BBQ Opening in Upcoming San Marcos H-E-B",
       "address": "McCarty Ln & S I-35 South Frontage Rd, San Marcos, TX 78666"
-    },
-    {
-      "date": "April 17, 2026",
-      "url": "https://whatnow.com/philadelphia/restaurants/long-running-restaurant-near-butler-avenue-is-serving-its-final-weekend-of-service/",
-      "title": "Long-Running Restaurant Near Butler Avenue Is Serving Its Final Weekend of Service",
-      "address": "129 E Butler Ave, Ambler, PA 19002"
-    },
-    {
-      "date": "April 17, 2026",
-      "url": "https://whatnow.com/jacksonville/restaurants/acai-licious-looks-to-be-opening-second-location/",
-      "title": "Acai-Licious Looks to Be Opening Second Location",
-      "address": "2013 Jammes Rd fl a, Jacksonville, FL 32210"
-    },
-    {
-      "date": "April 17, 2026",
-      "url": "https://whatnow.com/charlotte/restaurants/three-lanterns-bringing-mixture-of-asian-cuisines-to-south-end/",
-      "title": "Three Lanterns Bringing Mixture of Asian Cuisines To South End | What Now Charlotte",
-      "address": ""
-    },
-    {
-      "date": "April 17, 2026",
-      "url": "https://whatnow.com/jacksonville/restaurants/white-castle-plans-northeast-florida-debut-in-st-augustine/",
-      "title": "White Castle Plans Northeast Florida Debut in St. Augustine",
-      "address": "3405 International Golf Pkwy, St. Augustine, FL 32092"
-    },
-    {
-      "date": "April 17, 2026",
-      "url": "https://whatnow.com/new-york/restaurants/a-new-york-city-restaurant-is-entering-its-final-weeks-before-closure/",
-      "title": "A New York City Restaurant Is Entering Its Final Weeks Before Closure",
-      "address": "21 W 8th St, New York, NY 10011, United States"
-    },
-    {
-      "date": "April 17, 2026",
-      "url": "https://whatnow.com/boston/restaurants/elevated-steakhouse-experience-coming-to-boston-this-april/",
-      "title": "Elevated Steakhouse Experience Coming to Boston This April",
-      "address": "131 Seaport Blvd, Boston, MA 02210"
     }
   ]
 }
