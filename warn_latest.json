@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-04-20",
-  "total": 704,
+  "last_updated": "2026-04-21",
+  "total": 705,
   "data": [
     {
       "state": "Alabama",
@@ -1579,6 +1579,29 @@
       "Local Area": "",
       "Total  Employees": "",
       "Effective  Date": "",
+      "COUNTY_NAME": "",
+      "WDA_NAME": "",
+      "WFDD_RECEIVED_DATE": "",
+      "zip": "",
+      "lwib_area": "",
+      "address": "",
+      "contact_person": "",
+      "collective_bargaining_unit": "",
+      "type_detail": ""
+    },
+    {
+      "state": "Maryland",
+      "company": "Stoney River Steakhouse & Grill",
+      "city": "825 Dulaney Valley Road Towson, MD 21204",
+      "notice_date": "04/20/2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "Plant Closure",
+      "notes": "",
+      "NAICS  Code": "722511.0",
+      "Local Area": "Baltimore County",
+      "Total  Employees": "68",
+      "Effective  Date": "06/26/2026",
       "COUNTY_NAME": "",
       "WDA_NAME": "",
       "WFDD_RECEIVED_DATE": "",
