@@ -1,5 +1,5 @@
 {
-  "last_updated": "April 22, 2026 20:10 UTC",
+  "last_updated": "April 22, 2026 21:23 UTC",
   "data": [
     {
       "company": "ALDI",
@@ -1644,6 +1644,24 @@
       "address": "815 Eastern Bypass, Richmond, KY 40475",
       "opening_date": "Now Open",
       "link": "https://www.longhornsteakhouse.com/locations/new-locations"
+    },
+    {
+      "company": "Trader Joe's",
+      "address": "",
+      "opening_date": "",
+      "link": "https://www.traderjoes.com/home/announcements?category=store-openings"
+    },
+    {
+      "company": "Wawa",
+      "address": "6658 Pensacola Blvd, Pensacola, FL 32505",
+      "opening_date": "4/16/2026",
+      "link": "https://wawa.a.bigcontent.io/v1/static/041626_PensacolaFL_GrandOpening_Alert"
+    },
+    {
+      "company": "Wawa",
+      "address": "13100 Ferguson Valley Rd, Yeagertown, PA 17099",
+      "opening_date": "4/30/2026",
+      "link": "https://wawa.a.bigcontent.io/v1/static/043026_YeagertownPA_GrandOpening_Alert"
     }
   ]
 }
