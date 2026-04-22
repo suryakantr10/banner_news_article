@@ -383,6 +383,9 @@
                 <select id="analystFilter" onchange="filterStoreArticles()" class="input-field px-4 py-3 text-sm">
                     <option value="all">All Analysts</option>
                 </select>
+                <button onclick="downloadStoreCSV()" class="btn-download px-5 py-3 rounded-xl font-medium flex items-center gap-2 text-sm whitespace-nowrap">
+                    <i class="fas fa-download"></i><span>Download CSV</span>
+                </button>
             </div>
 
             <div id="loadingState" class="py-20"></div>
@@ -1298,6 +1301,14 @@
         });
         updateStoreStats(filteredStoreArticles);
         renderStoreArticles();
+    }
+
+    function downloadStoreCSV() {
+        if (!filteredStoreArticles.length) return;
+        const h = ['Store','Analyst','Industry','Type','Title','Published','Link','Summary'];
+        const csv = [h.join(','), ...filteredStoreArticles.map(r => h.map(k => `"${(r[k]||'').replace(/"/g,'""')}"`).join(','))].join('\n');
+        dlCSV(csv, `store_news_${TODAY}.csv`);
+        showToast('Store News CSV downloaded!');
     }
 
     function renderStoreArticles() {
