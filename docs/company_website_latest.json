@@ -1,5 +1,5 @@
 {
-  "last_updated": "April 22, 2026 22:18 UTC",
+  "last_updated": "April 22, 2026 22:44 UTC",
   "data": [
     {
       "company": "ALDI",
@@ -138,240 +138,6 @@
       "address": "140 Four Seasons Shopping Center, Chesterfield, Missouri, 63017",
       "opening_date": "PERMANENTLY CLOSED",
       "link": "https://www.dogtopia.com/locations/four-seasons-chesterfield/"
-    },
-    {
-      "company": "Burlington",
-      "address": "1717 N Dysart Rd, Arizona",
-      "opening_date": "05/15",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "3835 North Mall Ave Ste 2, Arkansas",
-      "opening_date": "05/01",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "26583 Carl Boyer Drive, California",
-      "opening_date": "05/08",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "3010 Ming Avenue, California",
-      "opening_date": "05/15",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "2210 Daniels Street, California",
-      "opening_date": "05/22",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "540 N US Hwy 441, Florida",
-      "opening_date": "04/24",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "10261 River Marsh Drive Ste 149, Florida",
-      "opening_date": "05/15",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "2655 N Decatur Rd, Georgia",
-      "opening_date": "04/24",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "1074 Bullsboro Dr Unit #6, Georgia",
-      "opening_date": "05/01",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "2550 Sycamore Rd, Illinois",
-      "opening_date": "05/01",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "2056 IL-50, Illinois",
-      "opening_date": "05/15",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "4600 Shelbyville Rd ste 280, Kentucky",
-      "opening_date": "05/15",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "96 Providence Highway, Massachusetts",
-      "opening_date": "05/01",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "4715 24th Ave, Michigan",
-      "opening_date": "05/15",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "1271 Promenade Pl, Minnesota",
-      "opening_date": "05/01",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "3839 Marketplace Drive NW, Minnesota",
-      "opening_date": "05/29",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "3875 North Gloster Street, Mississippi",
-      "opening_date": "05/01",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "701 NJ-440 Space 16, New Jersey",
-      "opening_date": "05/22",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "1701 ROUTE 22, New Jersey",
-      "opening_date": "05/29",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "1530 County Rd 64, New York",
-      "opening_date": "05/15",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "80 S Tunnel Rd, Ste 30, North Carolina",
-      "opening_date": "05/15",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "441 Boardman Poland Road, Ohio",
-      "opening_date": "05/01",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "4600 W Broad St, Ohio",
-      "opening_date": "05/08",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "67800 Mall Ring Road Unit 100  015, Ohio",
-      "opening_date": "05/29",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "28221 Chardon Rd, Ohio",
-      "opening_date": "05/29",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "9653 Colerain Avenue, Ohio",
-      "opening_date": "06/19",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "1215 N Main St Ste B, South Carolina",
-      "opening_date": "05/01",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "1120 Seaboard Street, South Carolina",
-      "opening_date": "05/15",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "1610 Church St, South Carolina",
-      "opening_date": "05/29",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "10501 Gateway Blvd W Bld 9, Texas",
-      "opening_date": "05/01",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "2050 West University Dr Suite 250, Texas",
-      "opening_date": "05/15",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "1219 N Fry Rd Ste B, Texas",
-      "opening_date": "05/22",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "4446 North Freeway, Texas",
-      "opening_date": "05/29",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "201 University Oaks Blvd., Suite 1260, Texas",
-      "opening_date": "05/29",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "4127 N US Highway 75, Texas",
-      "opening_date": "06/19",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "26015 104th Ave SE Suite 101, Washington",
-      "opening_date": "05/08",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "700 Ocean Beach Hwy Ste 100, Washington",
-      "opening_date": "05/08",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "4045 Commonwealth Ave, Wisconsin",
-      "opening_date": "05/15",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "1226 S Koeller St, Wisconsin",
-      "opening_date": "05/15",
-      "link": ""
     },
     {
       "company": "Five Below",
@@ -2340,6 +2106,60 @@
       "address": "11711 NE 62nd Terrace Lady Lake, FL",
       "opening_date": "Opens: 05/07/26Grand Opening: 05/29/26",
       "link": "https://maps.app.goo.gl/3UGK1MwLPCLNaDWw6"
+    },
+    {
+      "company": "Marshalls",
+      "address": "1610 Church St, Conway, South Carolina",
+      "opening_date": "April 30, 2026",
+      "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=1661&ref=grandOpenings"
+    },
+    {
+      "company": "Marshalls",
+      "address": "900 DeKalb Plaza Blvd, Fort Payne, Alabama",
+      "opening_date": "April 23, 2026",
+      "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=1653&ref=grandOpenings"
+    },
+    {
+      "company": "Marshalls",
+      "address": "850 3rd Avenue, Brooklyn, New York",
+      "opening_date": "April 23, 2026",
+      "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=1290&ref=grandOpenings"
+    },
+    {
+      "company": "Marshalls",
+      "address": "1310 Oklahoma Ave, Woodward, Oklahoma",
+      "opening_date": "April 23, 2026",
+      "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=1656&ref=grandOpenings"
+    },
+    {
+      "company": "Marshalls",
+      "address": "4610 Williams Dr, Georgetown, Texas",
+      "opening_date": "Now Open!",
+      "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=1657&ref=grandOpenings"
+    },
+    {
+      "company": "Marshalls",
+      "address": "5811 Worth Pkwy Ste109, San Antonio, Texas",
+      "opening_date": "April 16, 2026",
+      "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=652&ref=grandOpenings"
+    },
+    {
+      "company": "Marshalls",
+      "address": "5435 Alexandria Pike, Cold Spring, Kentucky",
+      "opening_date": "Now Open!",
+      "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=1637&ref=grandOpenings"
+    },
+    {
+      "company": "Marshalls",
+      "address": "934 E. 23rd St, Fremont, Nebraska",
+      "opening_date": "March 26, 2026",
+      "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=1611&ref=grandOpenings"
+    },
+    {
+      "company": "Marshalls",
+      "address": "995 North State 434, Altamonte Springs, Florida",
+      "opening_date": "Now Open!",
+      "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=67&ref=grandOpenings"
     }
   ]
 }
