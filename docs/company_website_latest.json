@@ -1,5 +1,5 @@
 {
-  "last_updated": "April 19, 2026 18:54 UTC",
+  "last_updated": "April 22, 2026 20:10 UTC",
   "data": [
     {
       "company": "ALDI",
@@ -27,21 +27,9 @@
     },
     {
       "company": "ALDI",
-      "address": "2533 Thomas Drive, Panama City, 32408",
-      "opening_date": "4/16/2026",
-      "link": "https://info.aldi.us/stores/l/fl/panama-city/2533-thomas-drive/fp32"
-    },
-    {
-      "company": "ALDI",
       "address": "995 Sebastian Boulevard, Sebastian, 32958",
       "opening_date": "4/23/2026",
       "link": "https://info.aldi.us/stores/l/fl/sebastian/995-sebastian-boulevard/fo02"
-    },
-    {
-      "company": "ALDI",
-      "address": "11100 4th Street North, St. Petersburg, 33716",
-      "opening_date": "4/16/2026",
-      "link": "https://info.aldi.us/stores/l/fl/st-petersburg/11100-4th-street-north/ft01"
     },
     {
       "company": "ALDI",
@@ -54,12 +42,6 @@
       "address": "1021 Lockwood Blvd Unit 8, Oviedo, 32765",
       "opening_date": "4/30/2026",
       "link": "https://info.aldi.us/stores/l/fl/oviedo/1021-lockwood-blvd-unit-8/fi05"
-    },
-    {
-      "company": "ALDI",
-      "address": "1414 North Burnside Avenue, Gonzales, LA 70737",
-      "opening_date": "4/16/2026",
-      "link": "https://info.aldi.us/stores/l/la/gonzales/1414-north-burnside-avenue/ff87"
     },
     {
       "company": "ALDI",
@@ -156,6 +138,240 @@
       "address": "140 Four Seasons Shopping Center, Chesterfield, Missouri, 63017",
       "opening_date": "PERMANENTLY CLOSED",
       "link": "https://www.dogtopia.com/locations/four-seasons-chesterfield/"
+    },
+    {
+      "company": "Burlington",
+      "address": "1717 N Dysart Rd, Arizona",
+      "opening_date": "05/15",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "3835 North Mall Ave Ste 2, Arkansas",
+      "opening_date": "05/01",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "26583 Carl Boyer Drive, California",
+      "opening_date": "05/08",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "3010 Ming Avenue, California",
+      "opening_date": "05/15",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "2210 Daniels Street, California",
+      "opening_date": "05/22",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "540 N US Hwy 441, Florida",
+      "opening_date": "04/24",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "10261 River Marsh Drive Ste 149, Florida",
+      "opening_date": "05/15",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "2655 N Decatur Rd, Georgia",
+      "opening_date": "04/24",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "1074 Bullsboro Dr Unit #6, Georgia",
+      "opening_date": "05/01",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "2550 Sycamore Rd, Illinois",
+      "opening_date": "05/01",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "2056 IL-50, Illinois",
+      "opening_date": "05/15",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "4600 Shelbyville Rd ste 280, Kentucky",
+      "opening_date": "05/15",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "96 Providence Highway, Massachusetts",
+      "opening_date": "05/01",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "4715 24th Ave, Michigan",
+      "opening_date": "05/15",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "1271 Promenade Pl, Minnesota",
+      "opening_date": "05/01",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "3839 Marketplace Drive NW, Minnesota",
+      "opening_date": "05/29",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "3875 North Gloster Street, Mississippi",
+      "opening_date": "05/01",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "701 NJ-440 Space 16, New Jersey",
+      "opening_date": "05/22",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "1701 ROUTE 22, New Jersey",
+      "opening_date": "05/29",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "1530 County Rd 64, New York",
+      "opening_date": "05/15",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "80 S Tunnel Rd, Ste 30, North Carolina",
+      "opening_date": "05/15",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "441 Boardman Poland Road, Ohio",
+      "opening_date": "05/01",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "4600 W Broad St, Ohio",
+      "opening_date": "05/08",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "67800 Mall Ring Road Unit 100  015, Ohio",
+      "opening_date": "05/29",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "28221 Chardon Rd, Ohio",
+      "opening_date": "05/29",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "9653 Colerain Avenue, Ohio",
+      "opening_date": "06/19",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "1215 N Main St Ste B, South Carolina",
+      "opening_date": "05/01",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "1120 Seaboard Street, South Carolina",
+      "opening_date": "05/15",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "1610 Church St, South Carolina",
+      "opening_date": "05/29",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "10501 Gateway Blvd W Bld 9, Texas",
+      "opening_date": "05/01",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "2050 West University Dr Suite 250, Texas",
+      "opening_date": "05/15",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "1219 N Fry Rd Ste B, Texas",
+      "opening_date": "05/22",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "4446 North Freeway, Texas",
+      "opening_date": "05/29",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "201 University Oaks Blvd., Suite 1260, Texas",
+      "opening_date": "05/29",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "4127 N US Highway 75, Texas",
+      "opening_date": "06/19",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "26015 104th Ave SE Suite 101, Washington",
+      "opening_date": "05/08",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "700 Ocean Beach Hwy Ste 100, Washington",
+      "opening_date": "05/08",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "4045 Commonwealth Ave, Wisconsin",
+      "opening_date": "05/15",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "1226 S Koeller St, Wisconsin",
+      "opening_date": "05/15",
+      "link": ""
     },
     {
       "company": "Five Below",
@@ -276,12 +492,6 @@
       "address": "Blackmore Marketplace, 520 Newport Rd., Casper, WY 82609, Wyoming",
       "opening_date": "Now Open!",
       "link": "https://www.homegoods.com/store-details/Casper-WY-82609/1218"
-    },
-    {
-      "company": "HomeGoods",
-      "address": "Eastland Shopping Center, 2753 E. Eastland Drive, West Covina, CA 91791, California",
-      "opening_date": "Now Open!",
-      "link": "https://www.homegoods.com/store-details/West-Covina-CA-91791/57"
     },
     {
       "company": "HomeGoods",
@@ -441,12 +651,6 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "754 Admiral Callaghan Lane, Vallejo, CA 94591-3650",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-CA"
-    },
-    {
-      "company": "Jersey Mike's",
       "address": "58060 29 Palms Highway, Yucca Valley, CA 92284",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-CA"
@@ -513,12 +717,6 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "10601 US-441, Leesburg, FL 34788-7240",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-FL"
-    },
-    {
-      "company": "Jersey Mike's",
       "address": "43 Blake Blvd, Celebration, FL 34747-4515",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-FL"
@@ -567,12 +765,6 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "1467 Harper Street, Augusta, GA 30901-2600",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-GA"
-    },
-    {
-      "company": "Jersey Mike's",
       "address": "4870 GOlden Parkway, Buford, GA 30518-5840",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-GA"
@@ -609,7 +801,7 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "TBD @ University Boulevard, Rexburg, ID 83440",
+      "address": "1055 Tamana Dr, Rexburg, ID 83440",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-ID"
     },
@@ -771,12 +963,6 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "29750 Wixom Road, Wixom, MI 48393-3434",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-MI"
-    },
-    {
-      "company": "Jersey Mike's",
       "address": "1809 Plymouth Road, Minnetonka, MN 55305-1980",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-MN"
@@ -861,12 +1047,6 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "76 North Greenbush Road, Troy, NY 12180-8595",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-NY"
-    },
-    {
-      "company": "Jersey Mike's",
       "address": "356 Devoe Street, Brooklyn, NY 11211-2638",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-NY"
@@ -940,6 +1120,12 @@
     {
       "company": "Jersey Mike's",
       "address": "3245 Southwestern Blvd., Orchard Park, NY 14127-1230",
+      "opening_date": "In Development",
+      "link": "https://www.jerseymikes.com/locations/coming-soon/US-NY"
+    },
+    {
+      "company": "Jersey Mike's",
+      "address": "421 Boston Post Road, Port Chester, NY 10573-4750",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-NY"
     },
@@ -1020,12 +1206,6 @@
       "address": "Ohio Valley Mall, St. Clairsville, OH 43950",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-OH"
-    },
-    {
-      "company": "Jersey Mike's",
-      "address": "2275 NE 27th Street, McMinnville, OR 97128-2352",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-OR"
     },
     {
       "company": "Jersey Mike's",
@@ -1113,7 +1293,7 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "1050 Market Way, Argyle, TX 76226",
+      "address": "9911 Brodie Lane, Austin, TX 78748-5802",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-TX"
     },
@@ -1262,10 +1442,154 @@
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-DC"
     },
     {
-      "company": "LongHorn Steakhouse",
-      "address": "187 Watauga Village Dr, Boone, NC 28607",
-      "opening_date": "",
-      "link": "https://www.longhornsteakhouse.com/locations/new-locations"
+      "company": "Chick-fil-A",
+      "address": "",
+      "opening_date": "April 20, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-mill-creek-and-cordata-parkway"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "3425 Bienville Blvd",
+      "opening_date": "April 23, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-ocean-spring"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "14266 E Colonial Dr",
+      "opening_date": "April 16, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-avalon-park"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "260 Tingle Drive",
+      "opening_date": "April 23, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-i-85-and-julian"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "1600 Durham Road",
+      "opening_date": "April 16, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-roxboro"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "9111 E 40th Ave",
+      "opening_date": "April 16, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-runway-35-south"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "4735 Mobile Highway",
+      "opening_date": "April 16, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-mobile-hwy"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "",
+      "opening_date": "April 9, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-centre-city"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "2100 Treelight Way",
+      "opening_date": "April 9, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-wendell"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "578 Grand Army of the Republic Hwy",
+      "opening_date": "April 9, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-somerset"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "2060 Southfield Rd",
+      "opening_date": "March 30, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-lincoln-park"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "3965 E Broad St",
+      "opening_date": "April 2, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-whitehall"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "1000 Delaware Ave",
+      "opening_date": "March 26, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-marysville"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "9081 Snowden River Pkwy",
+      "opening_date": "April 2, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-snowden-river-pkwy"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "400 Premium Outlets Drive",
+      "opening_date": "April 2, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-gloucester-outlets"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "1780 E Hwy 44",
+      "opening_date": "March 26, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-edgewood-lane"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "1837 Kapiolani Blvd",
+      "opening_date": "March 26, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-kapiolani-and-kalakaua"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "901 Fairhope Ave",
+      "opening_date": "March 27, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-fairhope"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "30955 Woodward Ave",
+      "opening_date": "March 26, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-royal-oak"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "2625 10 th Ave",
+      "opening_date": "March 26, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-10th-ave-n-and-i-95"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "2430 N Morton St",
+      "opening_date": "March 19, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-franklin-indiana"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "3169 Godwin Blvd",
+      "opening_date": "March 19, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-planters-station"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "",
+      "opening_date": "March 11, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-new-york-expansion"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "262 East Main Street",
+      "opening_date": "March 17, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-johnny-cash-pkwy"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "140 Bluebell Drive SW",
+      "opening_date": "March 12, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-new-philadelphia"
     },
     {
       "company": "LongHorn Steakhouse",
@@ -1289,6 +1613,12 @@
       "company": "LongHorn Steakhouse",
       "address": "12609 E US 290 Hwy EB, Manor, TX 78653",
       "opening_date": "OPENING SUMMER 2026",
+      "link": "https://www.longhornsteakhouse.com/locations/new-locations"
+    },
+    {
+      "company": "LongHorn Steakhouse",
+      "address": "187 Watauga Village Dr, Boone, NC 28607",
+      "opening_date": "Now Open",
       "link": "https://www.longhornsteakhouse.com/locations/new-locations"
     },
     {
