@@ -836,23 +836,34 @@ TJ_CLICK_WAIT_MS = 3500
 
 
 def _tj_parse_opening_date(text: str) -> str:
+    # TJ articles use "Date & Time of Opening:" (the "of" was missing before)
     m = re.search(
-        r"Date\s*&\s*Time\s*Opening\s*[:\-]?\s*\n?\s*([^\n]{3,80})",
+        r"Date\s*&\s*Time\s*(?:of\s*)?Opening\s*[:\-]?\s*\n?\s*([^\n]{3,80})",
         text, re.IGNORECASE,
     )
     if m:
         val = m.group(1).strip()
         return val if val else "TBD"
-    return ""
+    # Fallback: any full date near an "open" keyword
+    m2 = re.search(
+        r"open(?:ing|s)?[^.]{0,80}?"
+        r"((?:January|February|March|April|May|June|July|August|September|"
+        r"October|November|December)\s+\d{1,2},?\s+\d{4})",
+        text, re.IGNORECASE,
+    )
+    if m2:
+        return m2.group(1).strip()
+    return extract_date(text)
 
 
 def _tj_parse_address(text: str) -> str:
+    # "Store Location:\n123 Main St\nCity, State ZIP"
     m = re.search(
         r"Store\s*Location\s*[:\-]?\s*\n([^\n]+)\n([^\n]+)",
         text, re.IGNORECASE,
     )
     if m:
-        return f"{m.group(1).strip()} {m.group(2).strip()}"
+        return f"{m.group(1).strip()}, {m.group(2).strip()}"
     m2 = re.search(
         r"Store\s*Location\s*[:\-]?\s*\n?\s*([^\n]{5,120})",
         text, re.IGNORECASE,
@@ -897,11 +908,22 @@ async def _tj_collect_article_urls(page) -> list[str]:
         await page.wait_for_timeout(TJ_PAGE_LOAD_MS)
         await _tj_dismiss_overlays(page)
 
-        anchors = await page.query_selector_all("a[href*='/home/announcements/']")
+        # Wait for React to render the article cards before querying
+        try:
+            await page.wait_for_selector("a[href*='/home/announcements']", timeout=12000)
+        except Exception:
+            print(f"[Trader Joe's] Page {current_page}: timed out waiting for article cards.")
+
+        # Broaden to href*='/home/announcements' (no trailing slash required)
+        anchors = await page.query_selector_all("a[href*='/home/announcements']")
         page_count = 0
         for a in anchors:
             href = (await a.get_attribute("href") or "").strip()
+            # Skip the category listing URL and bare /home/announcements
             if not href or "?category" in href:
+                continue
+            bare = href.rstrip("/").split("?")[0]
+            if bare in ("/home/announcements", "https://www.traderjoes.com/home/announcements"):
                 continue
             full = href if href.startswith("http") else f"https://www.traderjoes.com{href}"
             if full not in seen:
@@ -915,17 +937,25 @@ async def _tj_collect_article_urls(page) -> list[str]:
             print(f"[Trader Joe's] Reached page limit ({TJ_PAGES}).")
             break
 
-        next_btn = await page.query_selector(
-            f"li[aria-label='Go to page {current_page + 1}']"
-        ) or await page.query_selector(
-            "button[class*='arrow'][class*='right']:not([disabled])"
-        ) or await page.query_selector(
-            "a[aria-label='Next page'], button[aria-label='Next page']"
-        )
+        # Try each next-page selector separately (comma-groups can silently miss)
+        next_btn = None
+        for sel in [
+            f"li[aria-label='Go to page {current_page + 1}']",
+            f"button[aria-label='Go to page {current_page + 1}']",
+            "button[class*='arrow'][class*='right']:not([disabled])",
+            "button[class*='next']:not([disabled])",
+            "a[aria-label='Next page']",
+            "button[aria-label='Next page']",
+        ]:
+            next_btn = await page.query_selector(sel)
+            if next_btn:
+                break
+
         if not next_btn:
             print("[Trader Joe's] No more listing pages.")
             break
         await next_btn.click()
+        await page.wait_for_timeout(TJ_PAGE_LOAD_MS)
         current_page += 1
     return urls
 
