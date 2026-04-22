@@ -21,40 +21,162 @@ JSON_ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
 
 
 # ────────────────────────────────────────────────
+# Industries — keyword map used to narrow queries
+# ────────────────────────────────────────────────
+INDUSTRIES = {
+    "Apparel": [
+        "clothing store", "fashion retailer", "apparel store", "apparel chain",
+        "clothing chain", "fashion chain", "garment store",
+    ],
+    "Arts & Crafts": [
+        "arts and crafts store", "hobby store", "craft store", "craft retailer",
+        "hobby shop",
+    ],
+    "Auto Parts": [
+        "auto parts store", "auto parts retailer", "automotive parts",
+        "car parts store",
+    ],
+    "Books / Toys / Gaming": [
+        "bookstore", "book store", "toy store", "toy retailer",
+        "gaming store", "game store",
+    ],
+    "Convenience Stores / Distributors": [
+        "convenience store", "c-store", "gas station convenience",
+        "fuel station store", "convenience chain",
+    ],
+    "Cruise Lines": [
+        "cruise line", "cruise terminal", "cruise port", "cruise ship homeport",
+    ],
+    "Department Stores": [
+        "department store", "department chain",
+    ],
+    "Drug Retailers": [
+        "pharmacy chain", "drugstore chain", "drug store", "drug retailer",
+        "retail pharmacy",
+    ],
+    "Electronics / Distributors": [
+        "electronics store", "electronics retailer", "consumer electronics store",
+        "tech retailer",
+    ],
+    "Experiential": [
+        "entertainment venue", "experiential retail", "family entertainment",
+        "escape room", "trampoline park", "adventure park",
+    ],
+    "Facility & Support Services": [
+        "facility services", "facilities management", "support services provider",
+    ],
+    "Financial Services": [
+        "bank branch", "credit union branch", "financial services branch",
+        "bank location",
+    ],
+    "Foodservice Distributors": [
+        "foodservice distributor", "food distributor", "restaurant supply",
+    ],
+    "Footwear": [
+        "shoe store", "footwear store", "footwear retailer", "shoe retailer",
+        "sneaker store",
+    ],
+    "Furniture / Mattress": [
+        "furniture store", "mattress store", "furniture retailer",
+        "mattress retailer", "home furniture store",
+    ],
+    "Grocery": [
+        "grocery store", "supermarket", "food store", "grocery chain",
+        "supermarket chain",
+    ],
+    "Grocery Wholesale": [
+        "wholesale grocery", "warehouse club", "wholesale club",
+        "cash and carry",
+    ],
+    "Gyms / Fitness": [
+        "gym", "fitness center", "fitness studio", "health club",
+        "fitness chain",
+    ],
+    "Health / Beauty": [
+        "beauty store", "beauty retailer", "salon", "spa", "health store",
+        "wellness store", "cosmetics store",
+    ],
+    "Home Improvement / Building Materials": [
+        "home improvement store", "hardware store", "building materials store",
+        "home improvement chain",
+    ],
+    "Hospitality": [
+        "hotel", "motel", "resort", "inn", "hotel chain", "hotel brand",
+    ],
+    "Housewares & Home Furnishings": [
+        "housewares store", "home goods store", "home furnishings store",
+        "kitchenware store",
+    ],
+    "International": [
+        "international retailer", "global retail chain",
+    ],
+    "Jewelry & Accessories": [
+        "jewelry store", "jewellery store", "accessories store",
+        "jewelry retailer",
+    ],
+    "Mass Merchandisers": [
+        "mass merchandiser", "big box store", "discount store",
+        "supercenter",
+    ],
+    "Movie Theatres": [
+        "movie theater", "movie theatre", "cinema", "multiplex",
+        "theater chain",
+    ],
+    "Office & Computer": [
+        "office supply store", "computer store", "office retailer",
+        "stationery store",
+    ],
+    "Pet Care": [
+        "pet store", "pet supply store", "pet retailer", "veterinary clinic",
+        "animal hospital",
+    ],
+    "Pharmaceutical / Medical": [
+        "medical clinic", "health center", "urgent care center",
+        "medical center", "outpatient clinic",
+    ],
+    "Restaurants": [
+        "restaurant", "fast food chain", "quick service restaurant",
+        "fast casual", "diner", "eatery chain", "food chain",
+    ],
+    "Retail REITs": [
+        "shopping center", "shopping mall", "retail plaza", "strip mall",
+        "retail REIT", "outlet mall",
+    ],
+    "Specialty / Other": [
+        "specialty retailer", "specialty store", "niche retailer",
+    ],
+    "Sporting Goods": [
+        "sporting goods store", "sports retailer", "outdoor retailer",
+        "sports chain",
+    ],
+}
+
+# Pre-build a flat lookup: industry name → OR string of quoted keywords
+# e.g. '"pet store" OR "pet supply store" OR ...'
+INDUSTRY_QUERY_STRINGS: dict[str, str] = {
+    industry: " OR ".join(f'"{kw}"' for kw in keywords)
+    for industry, keywords in INDUSTRIES.items()
+}
+
+
+# ────────────────────────────────────────────────
 # Google News URL Decoder
 # ────────────────────────────────────────────────
 
 def _decode_gnews_blob(encoded: str) -> str | None:
-    """
-    Decode a base64url-encoded Google News article blob to the real article URL.
-
-    Google News encodes article links as protobuf-style blobs. The structure is:
-        0x08  varint          – field 1 (article type tag)
-        0x12  varint length   – field 2 (length-delimited)
-        <length bytes>        – the inner blob (another layer)
-
-    Inside the inner blob, field 1 (0x0A + varint length) typically holds the URL.
-    We walk the bytes looking for any UTF-8 sequence starting with 'http'.
-    """
-    # Fix base64 padding
     rem = len(encoded) % 4
     if rem:
         encoded += '=' * (4 - rem)
-
     try:
         data = base64.urlsafe_b64decode(encoded)
     except Exception:
         return None
 
-    # Walk every byte position and look for 0x0A (protobuf field 1, wire type 2)
-    # followed by a varint length, followed by URL-like bytes.
     i = 0
     while i < len(data) - 4:
         if data[i] == 0x0A:
-            # Read varint length (single-byte varints cover up to 127 bytes)
             length_byte = data[i + 1]
             if length_byte & 0x80:
-                # Multi-byte varint – handle 2-byte case (covers up to 16 383)
                 if i + 2 < len(data):
                     length = (length_byte & 0x7F) | ((data[i + 2] & 0x7F) << 7)
                     start = i + 3
@@ -64,7 +186,6 @@ def _decode_gnews_blob(encoded: str) -> str | None:
             else:
                 length = length_byte
                 start = i + 2
-
             end = start + length
             if end <= len(data):
                 candidate = data[start:end]
@@ -76,7 +197,6 @@ def _decode_gnews_blob(encoded: str) -> str | None:
                     pass
         i += 1
 
-    # Fallback: find the first 'http' sequence anywhere in the blob
     idx = data.find(b'http')
     if idx != -1:
         chunk = data[idx:]
@@ -85,45 +205,27 @@ def _decode_gnews_blob(encoded: str) -> str | None:
             return chunk[:end].decode('utf-8', errors='ignore') or None
         except Exception:
             pass
-
     return None
 
 
 def decode_google_news_url(entry) -> str:
-    """
-    Return the real article URL from a feedparser RSS entry.
-
-    Strategy (in priority order):
-    1. entry.source['href']  – feedparser exposes the publisher's domain here;
-       sometimes this IS the canonical URL.
-    2. Decode the base64 blob in entry.link.
-    3. Return entry.link unchanged (Google redirect) as last resort.
-    """
     raw_link: str = entry.get('link', '')
-
-    # ── Strategy 1: check entry.source ──────────────────────────────────────
     source = entry.get('source', {})
     source_href: str = source.get('href', '') if isinstance(source, dict) else ''
-    # entry.source.href is usually just the publisher homepage (e.g. CNN.com),
-    # not the article URL, so we only use it if it looks like a full article path.
     if source_href.startswith('http') and '/' in source_href.lstrip('https://'):
         path = source_href.split('/', 3)
-        if len(path) > 3 and len(path[3]) > 5:          # has a non-trivial path
+        if len(path) > 3 and len(path[3]) > 5:
             return source_href
-
-    # ── Strategy 2: decode the blob ─────────────────────────────────────────
     match = re.search(r'/articles/([A-Za-z0-9_=-]+)', raw_link)
     if match:
         decoded = _decode_gnews_blob(match.group(1))
         if decoded:
             return decoded
-
-    # ── Strategy 3: return as-is (still clickable, just goes via Google) ────
     return raw_link
 
 
 # ────────────────────────────────────────────────
-# Default fallback (only used if analysts.csv is missing)
+# Default fallback
 # ────────────────────────────────────────────────
 default_stores = [
     "Doggie Style", "Dogtopia", "Earthwise Pet", "Feeders Supply",
@@ -132,10 +234,13 @@ default_stores = [
 ]
 
 # ────────────────────────────────────────────────
-# Load stores + analyst mapping from analysts.csv (single source of truth)
+# Load stores + analyst + industry mapping from analyst.csv
+# Expected columns: Store, Analyst, Industry
+# Industry values must match keys in INDUSTRIES dict exactly.
 # ────────────────────────────────────────────────
 stores = []
 analyst_map = {}
+industry_map = {}
 
 csv_file = Path('analyst.csv')
 
@@ -150,20 +255,34 @@ if csv_file.exists():
         stores = df['Store'].tolist()
         analyst_map = dict(zip(df['Store'], df['Analyst']))
 
-        print(f"→ Loaded {len(stores)} stores + {len(analyst_map)} mappings from analysts.csv")
+        # Industry column is optional — fall back to None if missing
+        if 'Industry' in df.columns:
+            df['Industry'] = df['Industry'].astype(str).str.strip()
+            industry_map = dict(zip(df['Store'], df['Industry']))
+            valid = sum(1 for v in industry_map.values() if v in INDUSTRIES)
+            print(f"→ Loaded {len(stores)} stores + {len(analyst_map)} analyst mappings + "
+                  f"{valid} valid industry mappings from analyst.csv")
+        else:
+            industry_map = {s: None for s in stores}
+            print(f"→ Loaded {len(stores)} stores from analyst.csv")
+            print("   ⚠  No 'Industry' column found — industry keywords will not be added to queries.")
+            print("      Add an 'Industry' column to analyst.csv with values matching INDUSTRIES keys.")
+
         unique_analysts = len(set(analyst_map.values()))
         print(f"   → {unique_analysts} unique analysts detected")
 
     except Exception as e:
-        print(f"Error reading analysts.csv: {e}")
+        print(f"Error reading analyst.csv: {e}")
         print("→ Falling back to default pet stores list")
         stores = default_stores
-        analyst_map = {s: "Unassigned" for s in default_stores}
+        analyst_map  = {s: "Unassigned" for s in default_stores}
+        industry_map = {s: "Pet Care"   for s in default_stores}
 else:
-    print("→ analyst.csv not found")
-    print("→ Using default pet stores fallback")
+    print("→ analyst.csv not found — using default pet stores fallback")
     stores = default_stores
-    analyst_map = {s: "Unassigned" for s in default_stores}
+    analyst_map  = {s: "Unassigned" for s in default_stores}
+    industry_map = {s: "Pet Care"   for s in default_stores}
+
 
 # ────────────────────────────────────────────────
 # Helper functions
@@ -190,12 +309,34 @@ def is_recent(published_str, cutoff_date):
         return False
 
 
-def build_query(store, is_closure=False):
+def build_industry_context(industry: str | None) -> str:
+    """
+    Return an OR-grouped industry keyword clause for the query.
+    Falls back to a generic retail context if industry is unknown/missing.
+    """
+    if industry and industry in INDUSTRY_QUERY_STRINGS:
+        return f"({INDUSTRY_QUERY_STRINGS[industry]})"
+    # Generic fallback — same as original retail_context
+    return '(store OR location OR retail OR shop OR outlet OR station OR pharmacy OR supermarket OR grocery OR "auto parts")'
+
+
+def build_query(store: str, industry: str | None = None, is_closure: bool = False) -> str:
     base_keywords_open = (
         '"new store" OR "new location" OR "opening soon" OR "coming soon" OR '
         '"grand opening" OR "now open" OR "opens new" OR "opening in" OR '
         '"to open" OR "set to open" OR "plans to open" OR "breaks ground" OR '
-        '"now hiring" OR "store opening" OR "location opening"'
+        '"now hiring" OR "store opening" OR "location opening" OR '
+        '"will open" OR "opening date" OR "opening weekend" OR '
+        '"soft opening" OR "ribbon cutting" OR "open for business" OR '
+        '"doors open" OR "expanding to" OR "announced plans" OR '
+        '"plans announced" OR "permit filed" OR "building permit" OR '
+        '"permit application" OR "zoning approval" OR "site plan approved" OR '
+        '"lease signed" OR "signed lease" OR "retail space leased" OR '
+        '"land acquired" OR "site acquired" OR "broke ground" OR '
+        '"groundbreaking ceremony" OR "under construction" OR '
+        '"construction underway" OR "construction started" OR '
+        '"construction begins" OR "tenant improvement" OR '
+        '"interior build-out" OR "build out" OR "certificate of occupancy"'
     )
 
     base_keywords_close = (
@@ -207,23 +348,23 @@ def build_query(store, is_closure=False):
         '"closing all locations" OR "closing locations" OR "shutter stores"'
     )
 
-    keywords = base_keywords_close if is_closure else base_keywords_open
-    retail_context = '(store OR location OR retail OR shop OR outlet OR station OR pharmacy OR supermarket OR grocery OR "auto parts")'
-    locations = '(USA OR Canada OR "United States" OR America OR state OR city OR county)'
-    recent_date = (date.today() - timedelta(days=4)).strftime('%Y-%m-%d')
+    keywords         = base_keywords_close if is_closure else base_keywords_open
+    industry_context = build_industry_context(industry)
+    locations        = '(USA OR Canada OR "United States" OR America OR state OR city OR county)'
+    recent_date      = (date.today() - timedelta(days=4)).strftime('%Y-%m-%d')
 
-    return f'"{store}" {keywords} {retail_context} {locations} after:{recent_date}'
+    return f'"{store}" {keywords} {industry_context} {locations} after:{recent_date}'
 
 
-def fetch_news_for_store(store, is_closure=False):
-    query = build_query(store, is_closure)
+def fetch_news_for_store(store: str, industry: str | None = None, is_closure: bool = False) -> list[dict]:
+    query         = build_query(store, industry=industry, is_closure=is_closure)
     encoded_query = quote_plus(query)
     rss_url = (
         f"https://news.google.com/rss/search?q={encoded_query}"
         f"&hl=en-US&gl=US&ceid=US:en&scoring=d"
     )
 
-    feed = feedparser.parse(rss_url)
+    feed        = feedparser.parse(rss_url)
     cutoff_date = date.today() - timedelta(days=2)
 
     results = []
@@ -232,8 +373,7 @@ def fetch_news_for_store(store, is_closure=False):
         if not is_recent(published_str, cutoff_date):
             continue
 
-        real_link = decode_google_news_url(entry)
-
+        real_link  = decode_google_news_url(entry)
         raw_summary = entry.get('summary', 'No summary')
         results.append({
             'title':     entry.title,
@@ -257,10 +397,11 @@ analyst_results = defaultdict(list)
 found_any = False
 
 for store in stores:
-    analyst = analyst_map.get(store, "Unassigned")
+    analyst  = analyst_map.get(store, "Unassigned")
+    industry = industry_map.get(store)          # None if no Industry column
 
-    results_open  = fetch_news_for_store(store, is_closure=False)
-    results_close = fetch_news_for_store(store, is_closure=True)
+    results_open  = fetch_news_for_store(store, industry=industry, is_closure=False)
+    results_close = fetch_news_for_store(store, industry=industry, is_closure=True)
 
     all_results = results_open + results_close
 
@@ -270,6 +411,7 @@ for store in stores:
             analyst_results[analyst].append({
                 'Store':     store,
                 'Analyst':   analyst,
+                'Industry':  industry or "Unknown",
                 'Type':      res['type'],
                 'Title':     res['title'],
                 'Link':      res['link'],
@@ -294,7 +436,7 @@ else:
         print("-" * 70)
 
         for i, item in enumerate(items, 1):
-            print(f"{i}. [{item['Type']}] {item['Store']}")
+            print(f"{i}. [{item['Type']}] {item['Store']}  |  Industry: {item['Industry']}")
             print(f"   {item['Title']}")
             print(f"   Published: {item['Published']}")
             print(f"   Link:      {item['Link']}")
@@ -308,9 +450,9 @@ else:
         all_rows.extend(items)
 
     if all_rows:
-        df_out = pd.DataFrame(all_rows)
+        df_out    = pd.DataFrame(all_rows)
         today_str = date.today().strftime("%Y-%m-%d")
-        filename = STORE_NEWS_DIR / f"banner_news_{today_str}.csv"
+        filename  = STORE_NEWS_DIR / f"banner_news_{today_str}.csv"
         df_out.to_csv(filename, index=False, encoding='utf-8')
         print(f"\nResults saved to: {filename}")
         print(f"Total articles: {len(all_rows)}")
@@ -325,11 +467,9 @@ json_data = {
     "data": {analyst: items for analyst, items in sorted(analyst_results.items())},
 }
 
-# Keep latest_news.json at root — index.html reads it via GitHub raw URL
 with open('latest_news.json', 'w', encoding='utf-8') as f:
     json.dump(json_data, f, ensure_ascii=False, indent=2)
 
-# Archive dated snapshot in data/store_news/json_archive/
 archive_filename = JSON_ARCHIVE_DIR / f"latest_news_{today_str}.json"
 with open(archive_filename, 'w', encoding='utf-8') as f:
     json.dump(json_data, f, ensure_ascii=False, indent=2)

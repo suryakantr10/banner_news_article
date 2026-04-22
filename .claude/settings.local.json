@@ -31,7 +31,9 @@
       "Bash(python -c \"import json; d=json.load\\(open\\(''latest_news.json'', encoding=''utf-8''\\)\\); print\\(''local total:'', sum\\(len\\(v\\) for v in d[''data''].values\\(\\)\\)\\)\")",
       "Bash(git pull *)",
       "Bash(git push *)",
-      "Bash(git stash *)"
+      "Bash(git stash *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
