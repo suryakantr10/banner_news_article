@@ -13,6 +13,7 @@ Scrapers:
   • LongHorn       — https://www.longhornsteakhouse.com/locations/new-locations (requests)
   • Trader Joe's   — https://www.traderjoes.com/home/announcements?category=store-openings (Playwright)
   • Target         — https://corporate.target.com/press/fact-sheet/2024/04/store-openings (requests)
+  • Teso Life      — https://www.tesolife.com/en/stores (Selenium)
   • Wawa           — https://www.wawa.com/about-us/public-relations/grand-openings (Playwright)
 
 Output:
@@ -1185,6 +1186,111 @@ def scrape_target() -> list[dict]:
     return results
 
 
+# ── Teso Life scraper ────────────────────────────────────────────────────────
+
+TESO_URL = "https://www.tesolife.com/en/stores"
+TESO_BASE_URL = "https://www.tesolife.com"
+
+
+def _teso_extract_opening_date(store_tag) -> str:
+    full_text = store_tag.get_text(" ", strip=True)
+    date_tag = store_tag.find(class_=lambda c: c and any(
+        x in c.lower() for x in ["date", "opening", "coming", "soon", "badge", "label"]
+    ))
+    if date_tag:
+        return date_tag.get_text(strip=True)
+    if "coming soon" in full_text.lower():
+        return "Coming Soon"
+    date_match = re.search(
+        r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+\d{4}'
+        r'|\d{1,2}[\/\-]\d{1,2}[\/\-]\d{4}'
+        r'|\d{1,2}[\/\-]\d{4}',
+        full_text, re.IGNORECASE,
+    )
+    if date_match:
+        return date_match.group()
+    return "Open"
+
+
+def scrape_teso_life(driver: webdriver.Chrome) -> list[dict]:
+    print(f"[Teso Life] Loading {TESO_URL}")
+    driver.get(TESO_URL)
+    try:
+        WebDriverWait(driver, 15).until(
+            EC.presence_of_element_located(
+                (By.CSS_SELECTOR, ".store-list-item, .sl-state-group, [class*='store']")
+            )
+        )
+    except Exception:
+        print("[Teso Life] Timed out waiting for store elements; trying anyway…")
+    time.sleep(5)
+
+    soup = BeautifulSoup(driver.page_source, "html.parser")
+    results = []
+
+    state_groups = soup.find_all("div", class_="sl-state-group")
+    if state_groups:
+        print(f"[Teso Life] Found {len(state_groups)} state group(s).")
+        for group in state_groups:
+            state_tag = group.find("h5") or group.find("h4") or group.find("h3")
+            state_name = state_tag.get_text(strip=True) if state_tag else ""
+
+            store_items = group.find_all("a", class_="store-list-item-action")
+            if not store_items:
+                store_items = group.find_all(
+                    ["a", "div"], class_=lambda c: c and "store" in c.lower()
+                )
+
+            for store in store_items:
+                opening_date = _teso_extract_opening_date(store)
+                if opening_date == "Open":
+                    continue
+
+                addr_tag = store.find("p") or store.find(
+                    "span", class_=lambda c: c and "address" in c.lower()
+                )
+                address = addr_tag.get_text(strip=True) if addr_tag else ""
+                if state_name:
+                    address = f"{address}, {state_name}" if address else state_name
+
+                href = store.get("href", "")
+                if href and not href.startswith("http"):
+                    href = TESO_BASE_URL + href
+
+                results.append({
+                    "company":      "Teso Life",
+                    "address":      address,
+                    "opening_date": opening_date,
+                    "link":         href,
+                })
+    else:
+        print("[Teso Life] No state groups found, trying flat store list…")
+        store_items = soup.find_all(
+            lambda tag: tag.name in ["a", "div", "li"]
+            and any("store" in c.lower() for c in tag.get("class", []))
+        )
+        print(f"[Teso Life] Found {len(store_items)} store item(s).")
+
+        for store in store_items:
+            opening_date = _teso_extract_opening_date(store)
+            if opening_date == "Open":
+                continue
+
+            href = store.get("href", "")
+            if href and not href.startswith("http"):
+                href = TESO_BASE_URL + href
+
+            results.append({
+                "company":      "Teso Life",
+                "address":      store.get_text(" ", strip=True)[:200],
+                "opening_date": opening_date,
+                "link":         href,
+            })
+
+    print(f"[Teso Life] {len(results)} coming-soon/upcoming store(s) found.")
+    return results
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -1281,6 +1387,17 @@ def main():
         all_stores.extend(scrape_target())
     except Exception as e:
         print(f"[Target] Scraping failed: {e}")
+
+    # ── Teso Life ──
+    driver = None
+    try:
+        driver = make_driver()
+        all_stores.extend(scrape_teso_life(driver))
+    except Exception as e:
+        print(f"[Teso Life] Scraping failed: {e}")
+    finally:
+        if driver:
+            driver.quit()
 
     print(f"\nTotal records collected: {len(all_stores)}")
 
