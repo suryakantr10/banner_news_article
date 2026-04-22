@@ -14,6 +14,7 @@ Scrapers:
   • Trader Joe's   — https://www.traderjoes.com/home/announcements?category=store-openings (Playwright)
   • Target         — https://corporate.target.com/press/fact-sheet/2024/04/store-openings (requests)
   • Teso Life      — https://www.tesolife.com/en/stores (Selenium)
+  • 7-Eleven       — https://www.7-eleven.com/lp/grand-openings (requests)
   • Wawa           — https://www.wawa.com/about-us/public-relations/grand-openings (Playwright)
 
 Output:
@@ -1291,6 +1292,68 @@ def scrape_teso_life(driver: webdriver.Chrome) -> list[dict]:
     return results
 
 
+# ── 7-Eleven scraper ─────────────────────────────────────────────────────────
+
+SEVEN_ELEVEN_URL = "https://www.7-eleven.com/lp/grand-openings"
+SEVEN_ELEVEN_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+    )
+}
+
+
+def scrape_seven_eleven() -> list[dict]:
+    print(f"[7-Eleven] Fetching {SEVEN_ELEVEN_URL}")
+    try:
+        resp = requests.get(SEVEN_ELEVEN_URL, headers=SEVEN_ELEVEN_HEADERS, timeout=30)
+        resp.raise_for_status()
+    except Exception as e:
+        print(f"[7-Eleven] Error: {e}")
+        return []
+
+    soup = BeautifulSoup(resp.content, "html.parser")
+    items = soup.find_all("li", class_="item")
+    print(f"[7-Eleven] Found {len(items)} item(s).")
+
+    results = []
+    for item in items:
+        try:
+            # Partial class match guards against hashed Next.js suffixes (e.g. Heading_h6__OzLeX)
+            h2 = item.find("h2", class_=lambda c: c and any("Heading_h6" in v for v in c))
+            h4 = item.find("h4", class_=lambda c: c and any("Heading_h4" in v for v in c))
+            h2 = h2 or item.find("h2")
+            h4 = h4 or item.find("h4")
+
+            address1 = h2.get_text(strip=True) if h2 else ""
+            address2 = h4.get_text(strip=True) if h4 else ""
+            address = f"{address1} {address2}".strip()
+            if not address:
+                continue
+
+            p_tag = item.find("p")
+            opening_date_raw = p_tag.get_text(strip=True) if p_tag else ""
+
+            cta = item.find("div", class_="cta")
+            link = ""
+            if cta:
+                a_tag = cta.find("a")
+                if a_tag:
+                    link = a_tag.get("href", "")
+
+            results.append({
+                "company":      "7-Eleven",
+                "address":      address,
+                "opening_date": extract_date(opening_date_raw) or opening_date_raw,
+                "link":         link,
+            })
+        except Exception as e:
+            print(f"  [7-Eleven] Error parsing item: {e}")
+
+    print(f"[7-Eleven] {len(results)} store(s) parsed.")
+    return results
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -1398,6 +1461,12 @@ def main():
     finally:
         if driver:
             driver.quit()
+
+    # ── 7-Eleven ──
+    try:
+        all_stores.extend(scrape_seven_eleven())
+    except Exception as e:
+        print(f"[7-Eleven] Scraping failed: {e}")
 
     print(f"\nTotal records collected: {len(all_stores)}")
 
