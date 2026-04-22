@@ -11,6 +11,8 @@ Scrapers:
   • Jersey Mike's  — https://www.jerseymikes.com/locations/coming-soon (requests)
   • Chick-fil-A    — https://www.chick-fil-a.com/press-room/openings/list-view (requests)
   • LongHorn       — https://www.longhornsteakhouse.com/locations/new-locations (requests)
+  • Trader Joe's   — https://www.traderjoes.com/home/announcements?category=store-openings (Playwright)
+  • Wawa           — https://www.wawa.com/about-us/public-relations/grand-openings (Playwright)
 
 Output:
   docs/company_website_latest.json
@@ -31,8 +33,10 @@ import re
 import time
 import json
 import os
+import asyncio
 import requests
 import pandas as pd
+import nest_asyncio
 from datetime import date, datetime, timezone
 from bs4 import BeautifulSoup, NavigableString, Tag
 from selenium import webdriver
@@ -40,6 +44,19 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from playwright.async_api import async_playwright
+
+try:
+    from playwright_stealth import stealth_async
+    _TJ_STEALTH_MODE = "async"
+except ImportError:
+    try:
+        from playwright_stealth import Stealth
+        _TJ_STEALTH_MODE = "new"
+    except ImportError:
+        _TJ_STEALTH_MODE = "manual"
+
+nest_asyncio.apply()
 
 
 # ── Shared helpers ────────────────────────────────────────────────────────────
@@ -806,6 +823,311 @@ def scrape_longhorn() -> list[dict]:
     return results
 
 
+# ── Trader Joe's scraper ─────────────────────────────────────────────────────
+
+TJ_BASE_URL      = "https://www.traderjoes.com/home/announcements?category=store-openings"
+TJ_PAGES         = 5
+TJ_PAGE_LOAD_MS  = 4000
+TJ_CLICK_WAIT_MS = 3500
+
+
+def _tj_parse_opening_date(text: str) -> str:
+    m = re.search(
+        r"Date\s*&\s*Time\s*Opening\s*[:\-]?\s*\n?\s*([^\n]{3,80})",
+        text, re.IGNORECASE,
+    )
+    if m:
+        val = m.group(1).strip()
+        return val if val else "TBD"
+    return ""
+
+
+def _tj_parse_address(text: str) -> str:
+    m = re.search(
+        r"Store\s*Location\s*[:\-]?\s*\n([^\n]+)\n([^\n]+)",
+        text, re.IGNORECASE,
+    )
+    if m:
+        return f"{m.group(1).strip()} {m.group(2).strip()}"
+    m2 = re.search(
+        r"Store\s*Location\s*[:\-]?\s*\n?\s*([^\n]{5,120})",
+        text, re.IGNORECASE,
+    )
+    return m2.group(1).strip() if m2 else ""
+
+
+async def _tj_apply_stealth(page) -> None:
+    if _TJ_STEALTH_MODE == "async":
+        await stealth_async(page)
+    elif _TJ_STEALTH_MODE == "new":
+        stealth = Stealth()
+        await stealth.apply_stealth_async(page)
+    else:
+        await page.add_init_script("""
+            Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
+            Object.defineProperty(navigator, 'plugins',   { get: () => [1, 2, 3] });
+            Object.defineProperty(navigator, 'languages', { get: () => ['en-US', 'en'] });
+            window.chrome = { runtime: {} };
+        """)
+
+
+async def _tj_dismiss_overlays(page) -> None:
+    for sel in ["button:has-text('GOT IT')", "button:has-text('Got it')",
+                "button[aria-label='Close dialog']", ".klaviyo-close-form"]:
+        try:
+            btn = await page.query_selector(sel)
+            if btn:
+                await btn.click()
+                await page.wait_for_timeout(800)
+        except Exception:
+            pass
+
+
+async def _tj_goto_page(page, page_num: int) -> None:
+    await page.goto(TJ_BASE_URL, wait_until="networkidle")
+    await page.wait_for_timeout(TJ_PAGE_LOAD_MS)
+    await _tj_dismiss_overlays(page)
+    if page_num > 1:
+        btn = await page.query_selector(f"li[aria-label='Go to page {page_num}']")
+        if btn:
+            await btn.click()
+            await page.wait_for_timeout(TJ_PAGE_LOAD_MS)
+            await _tj_dismiss_overlays(page)
+
+
+async def _tj_scrape_card_detail(page) -> tuple[str, str, str]:
+    """Return (publish_date, opening_date, address) from the current detail view."""
+    pd_el = await page.query_selector(
+        ".PublishDate_dateWrapper__2CXO5, [class*='publishDate']"
+    )
+    pub_date = (await pd_el.inner_text()).strip() if pd_el else ""
+    body = await page.inner_text("body")
+    return pub_date, _tj_parse_opening_date(body), _tj_parse_address(body)
+
+
+async def _tj_scrape() -> list[dict]:
+    results = []
+    async with async_playwright() as pw:
+        browser = await pw.chromium.launch(
+            headless=True,
+            args=["--disable-blink-features=AutomationControlled"],
+        )
+        context = await browser.new_context(
+            user_agent=(
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/124.0.0.0 Safari/537.36"
+            ),
+            viewport={"width": 1366, "height": 768},
+            locale="en-US",
+            timezone_id="America/New_York",
+        )
+        page = await context.new_page()
+        await _tj_apply_stealth(page)
+
+        await page.goto(TJ_BASE_URL, wait_until="networkidle")
+        await page.wait_for_timeout(TJ_PAGE_LOAD_MS)
+        await _tj_dismiss_overlays(page)
+
+        current_page = 1
+        while True:
+            print(f"[Trader Joe's] Page {current_page} …")
+
+            # Featured card
+            body = await page.inner_text("body")
+            feat_url = page.url
+            feat_opening = _tj_parse_opening_date(body)
+            feat_address = _tj_parse_address(body)
+            results.append({
+                "company":      "Trader Joe's",
+                "address":      feat_address,
+                "opening_date": feat_opening,
+                "link":         feat_url,
+            })
+
+            # Sidebar cards
+            sidebar_cards = await page.query_selector_all(
+                "h3.AnnouncementCard_announcementCard__title__2Ap_w"
+            )
+            titles = [(await c.inner_text()).strip() for c in sidebar_cards]
+            print(f"  {len(titles)} sidebar card(s) found.")
+
+            for idx, title in enumerate(titles):
+                try:
+                    await _tj_goto_page(page, current_page)
+                    cards = await page.query_selector_all(
+                        "h3.AnnouncementCard_announcementCard__title__2Ap_w"
+                    )
+                    for c in cards:
+                        if (await c.inner_text()).strip() == title:
+                            await c.click()
+                            break
+                    await page.wait_for_timeout(TJ_CLICK_WAIT_MS)
+                    await _tj_dismiss_overlays(page)
+
+                    _, opening, address = await _tj_scrape_card_detail(page)
+                    print(f"  [{idx+1}/{len(titles)}] {title} → {opening or '(no date)'}")
+                    results.append({
+                        "company":      "Trader Joe's",
+                        "address":      address,
+                        "opening_date": opening,
+                        "link":         page.url,
+                    })
+                except Exception as e:
+                    print(f"  [{idx+1}/{len(titles)}] {title} — ERROR: {e}")
+
+            if TJ_PAGES and current_page >= TJ_PAGES:
+                print(f"[Trader Joe's] Reached page limit ({TJ_PAGES}).")
+                break
+
+            await _tj_goto_page(page, current_page)
+            next_btn = await page.query_selector(
+                f"li[aria-label='Go to page {current_page + 1}']"
+            ) or await page.query_selector(
+                "button.Pagination_pagination__arrow_side_right__9YUGr:not([disabled])"
+            )
+            if not next_btn:
+                print("[Trader Joe's] No more pages.")
+                break
+            await next_btn.click()
+            await page.wait_for_timeout(TJ_PAGE_LOAD_MS)
+            await _tj_dismiss_overlays(page)
+            current_page += 1
+
+        await browser.close()
+    return results
+
+
+def scrape_trader_joes() -> list[dict]:
+    print(f"[Trader Joe's] Scraping {TJ_BASE_URL} ({TJ_PAGES} pages)…")
+    try:
+        results = asyncio.run(_tj_scrape())
+    except Exception as e:
+        print(f"[Trader Joe's] Error: {e}")
+        return []
+    print(f"[Trader Joe's] Found {len(results)} opening(s).")
+    return results
+
+
+# ── Wawa scraper ─────────────────────────────────────────────────────────────
+
+WAWA_BASE_URL     = "https://www.wawa.com/about-us/public-relations/grand-openings"
+WAWA_PAGE_LOAD_MS = 4000
+
+
+async def _wawa_dismiss_popups(page) -> None:
+    for sel in ["button:has-text('Accept')", "button:has-text('Accept All')",
+                "button:has-text('Got it')", "[aria-label='Close']"]:
+        try:
+            btn = await page.query_selector(sel)
+            if btn:
+                await btn.click()
+                await page.wait_for_timeout(800)
+                return
+        except Exception:
+            pass
+
+
+async def _wawa_scrape() -> list[dict]:
+    results = []
+    async with async_playwright() as pw:
+        browser = await pw.chromium.launch(
+            headless=True,
+            args=["--disable-blink-features=AutomationControlled"],
+        )
+        context = await browser.new_context(
+            user_agent=(
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/124.0.0.0 Safari/537.36"
+            ),
+            viewport={"width": 1366, "height": 768},
+            locale="en-US",
+            timezone_id="America/New_York",
+        )
+        page = await context.new_page()
+        await _tj_apply_stealth(page)  # reuse shared stealth helper
+
+        await page.goto(WAWA_BASE_URL, wait_until="networkidle")
+        await page.wait_for_timeout(WAWA_PAGE_LOAD_MS)
+        await _wawa_dismiss_popups(page)
+
+        current_page = 1
+        while True:
+            print(f"[Wawa] Page {current_page} …")
+            try:
+                await page.wait_for_selector("p.md\\:text-lg", timeout=8000)
+            except Exception:
+                print("[Wawa] Timed out waiting for store entries.")
+
+            store_paras = await page.query_selector_all("p.md\\:text-lg")
+            print(f"  {len(store_paras)} entry/entries found.")
+
+            for para in store_paras:
+                try:
+                    full_text = (await para.inner_text()).strip()
+                    if "Opening Date:" not in full_text:
+                        continue
+
+                    addr_m = re.search(
+                        r"Store\s+\d+\s*\|\s*(.+?)(?:\n|Opening Date:)",
+                        full_text, re.IGNORECASE | re.DOTALL,
+                    )
+                    address = addr_m.group(1).strip() if addr_m else ""
+
+                    date_m = re.search(
+                        r"Opening\s+Date\s*[:\-]?\s*([^\n]+)",
+                        full_text, re.IGNORECASE,
+                    )
+                    opening_date = date_m.group(1).strip() if date_m else ""
+
+                    link_el = await para.query_selector("a")
+                    href = ""
+                    if link_el:
+                        href = await link_el.get_attribute("href") or ""
+                        if href.startswith("/"):
+                            href = f"https://www.wawa.com{href}"
+
+                    results.append({
+                        "company":      "Wawa",
+                        "address":      address,
+                        "opening_date": extract_date(opening_date) or opening_date,
+                        "link":         href,
+                    })
+                except Exception as e:
+                    print(f"  [Wawa] Entry error: {e}")
+
+            next_btn = (
+                await page.query_selector("a[aria-label='Next page']")
+                or await page.query_selector("button[aria-label='Next page']")
+                or await page.query_selector("a:has-text('Next')")
+                or await page.query_selector("button:has-text('Next')")
+                or await page.query_selector(f"a[aria-label='page {current_page + 1}']")
+                or await page.query_selector(f"li[aria-label='Go to page {current_page + 1}']")
+            )
+            if not next_btn:
+                print("[Wawa] No more pages.")
+                break
+            await next_btn.click()
+            await page.wait_for_timeout(WAWA_PAGE_LOAD_MS)
+            await _wawa_dismiss_popups(page)
+            current_page += 1
+
+        await browser.close()
+    return results
+
+
+def scrape_wawa() -> list[dict]:
+    print(f"[Wawa] Scraping {WAWA_BASE_URL} …")
+    try:
+        results = asyncio.run(_wawa_scrape())
+    except Exception as e:
+        print(f"[Wawa] Error: {e}")
+        return []
+    print(f"[Wawa] Found {len(results)} opening(s).")
+    return results
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -884,6 +1206,18 @@ def main():
         all_stores.extend(scrape_longhorn())
     except Exception as e:
         print(f"[LongHorn] Scraping failed: {e}")
+
+    # ── Trader Joe's ──
+    try:
+        all_stores.extend(scrape_trader_joes())
+    except Exception as e:
+        print(f"[Trader Joe's] Scraping failed: {e}")
+
+    # ── Wawa ──
+    try:
+        all_stores.extend(scrape_wawa())
+    except Exception as e:
+        print(f"[Wawa] Scraping failed: {e}")
 
     print(f"\nTotal records collected: {len(all_stores)}")
 
