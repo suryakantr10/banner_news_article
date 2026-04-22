@@ -1070,6 +1070,7 @@
     let activeDailyNewsSubTab = 'articles';
 
     const TODAY = new Date().toISOString().split('T')[0];
+    const YESTERDAY = new Date(Date.now() - 86400000).toISOString().split('T')[0];
 
     // ── Smart "New" tracking ──────────────────────────────────────────────────
     // PREV_VISIT_DATE: what the user saw on their last session
@@ -1192,8 +1193,8 @@
         if (key && seenSet.has(key)) return false;
         try {
             const d = new Date(dateStr).toISOString().split('T')[0];
-            // New if: published today OR published since the user's last visit
-            return d >= TODAY || d > PREV_VISIT_DATE;
+            // New if: published today or yesterday (last 2 days)
+            return d >= YESTERDAY;
         } catch { return false; }
     }
 
