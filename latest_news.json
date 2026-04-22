@@ -51,15 +51,6 @@
         "Store": "BJ's Wholesale Club",
         "Analyst": "Ashwin Nair",
         "Type": "Opening",
-        "Title": "Discount chain BJ's Wholesale Club to open first Texas store in Forney - MSN",
-        "Link": "https://news.google.com/rss/articles/CBMi2AJBVV95cUxOMURkX0pFQ2ZFczNmcnFmYnpKNzFGSENSajBpeUtNWVN5R1ZWa3RleUI1OVN4NVNvNFFsTTJwV3FYNF91eUwtMERxTkdyR2FVbFBnR1hVbXdvVzZWaUZTeFoyS09iNHNoeFY3RE1JSnhnalZFN1lsakV4X2dQQm5Ib1Myb3N6QXc4STRtX1ZTa0I3WTFtN3VISG9Sb05Eak9QUGpNQWhuc094YmY1YXVKWmhoWklqTTRFUmp4QjRJRFl0T2k5M2laZldscHBXc1dSSTlWVjN0NTlUdTlVeGpaMUxjMC1pd2ZHdUd3MExFVEV2XzZfdDVJOXdTZmw5UFRfVXdyY2VVNnpJdW1ITFh4T0JfVTcyU0hBMTdtUmhTZ0dvTHBBR3V0cVRlcXd3VVY2NEZnQnFyZkMzM0VndG1FdUJUX3Q5T1RXQXRmelZOYnl2RlpEcGVfUg?oc=5",
-        "Published": "Tue, 21 Apr 2026 05:46:54 GMT",
-        "Summary": "Discount chain BJ's Wholesale Club to open first Texas store in Forney MSN"
-      },
-      {
-        "Store": "BJ's Wholesale Club",
-        "Analyst": "Ashwin Nair",
-        "Type": "Opening",
         "Title": "BJ’s Wholesale Club sets opening for first Texas location - Drug Store News",
         "Link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQWVpkODFOSW14eUdIcjJNempQbUdyaWhoZ0xJc0xCRDdGMTI3Uzg3MmpvVU9hN3pOTmdOU1hZSzdPOURCVWM4YS0wVXJEVnZMNXEtYTBwN1c5TzQtVl9NYk9ESE5wUThvY0VJZVFxdE1QTHJKSkR1a3ZBVzlMLUtaOWQ0TDg?oc=5",
         "Published": "Mon, 20 Apr 2026 17:45:20 GMT",
@@ -162,6 +153,33 @@
     ],
     "Dhiraj Manghani": [
       {
+        "Store": "Party City",
+        "Analyst": "Dhiraj Manghani",
+        "Type": "Closing",
+        "Title": "Is the Party City and Staples Partnership Cause for Celebration? - RetailWire",
+        "Link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFA1QlV4bGF5QTRGWEE4QlRmRDhLZ1pnUnRNVWJOb2xLWjlvWTZ6b09aUUphMDVDNUlqLWI4V05xbVRWNm56YWZFZnNOSlNDQVNsQUtfeXRYclQyWGpYV0Z1S3h5OG93eV9Cb1JjdkFpTmRiRWM?oc=5",
+        "Published": "Tue, 21 Apr 2026 20:11:10 GMT",
+        "Summary": "Is the Party City and Staples Partnership Cause for Celebration? RetailWire"
+      },
+      {
+        "Store": "T.J. Maxx",
+        "Analyst": "Dhiraj Manghani",
+        "Type": "Opening",
+        "Title": "Natchez Trace Town to add TJ Maxx, Ulta, Bath and Body Works and more major retailers - The Natchez Democrat",
+        "Link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOLThGMzNXZ1JUSjNwbk1iM3VxUGlHNEQ5Z3dXTUF3Q3pfMGNMaG5TRUdYSW5qTG10dHlJVG1teUhJR3MySGxBYlJnYlBEYmg3V0p4anhTc1ZJeTdfQTJHU3JlbE9rN2VhVTNpVHF4OTd5WjY4UFJQdzdHdmlLQXNsYk5aNjR0djBuOE9URXVZY0RpV0RTMXhBbDBaMFdMdlZUSFJSOXRaNTJOT1JESmlCaGpXekhNUzhrLV9BMXhWaWQxSzlHOTNCaQ?oc=5",
+        "Published": "Tue, 21 Apr 2026 18:28:26 GMT",
+        "Summary": "Natchez Trace Town to add TJ Maxx, Ulta, Bath and Body Works and more major retailers The Natchez Democrat"
+      },
+      {
+        "Store": "CVS",
+        "Analyst": "Dhiraj Manghani",
+        "Type": "Closing",
+        "Title": "Tennessee lawmakers pass 'Fair Rx Act' as CVS warns of closures and litigation - WCYB",
+        "Link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNVVc2NmNpbjdUNmhKR3BVMWRaZkEyUmN5WFpuejF1aGNxVTctbWtHcXdPdkt3UG5aTi1MT01DSUNmT0R2aFBaaGxDd0o4RlFOV0xKdHd2dW1xbktrVlpMSGoyN2REZGZyS0gwdWVtQVZFQVB4bmNKR0F2UmduVGowY1kxcmsya1VhOTgwLW5JZ0lvQWxWamJFS0RmNi1WRU1BUTFabFB5Yw?oc=5",
+        "Published": "Wed, 22 Apr 2026 02:47:46 GMT",
+        "Summary": "Tennessee lawmakers pass 'Fair Rx Act' as CVS warns of closures and litigation WCYB"
+      },
+      {
         "Store": "CVS",
         "Analyst": "Dhiraj Manghani",
         "Type": "Closing",
@@ -176,26 +194,17 @@
         "Type": "Closing",
         "Title": "TN lawmakers pass 'Fair Rx' Act, could result in numerous CVS pharmacy closures - Local 3 News",
         "Link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOZFNxT1g2UXRQUFBXb0hCaFFqVjV3Nm5IaTZmVm14QnhNYWtTeFMyVU4xNXl4eW9haUVUV1FUSlZRQ3loaTAxb0xKb0tfSXpLcGkwZC1SZVpWY0VSZjRlbnFvT2J3bmJDZWFhNWVWTTRQRlcwYzVOQWtOQVAxN1hDZXRaUll3cHR3TTdzY0hTN1hTUExYWWhvM1ZNZ0VieS10dURDRWNld1ZBZDFMU2dBQ21mcVU0ZFpLVXlhR3Nhd3BlanF4dDNTc3RnYktnSUFNTkNkY3J2cWVnSFRscURONUZJNzZDN1kzdThPZUlKRlQ5dXg5dGFZ?oc=5",
-        "Published": "Tue, 21 Apr 2026 21:10:00 GMT",
+        "Published": "Tue, 21 Apr 2026 21:15:43 GMT",
         "Summary": "TN lawmakers pass 'Fair Rx' Act, could result in numerous CVS pharmacy closures Local 3 News"
       },
       {
         "Store": "CVS",
         "Analyst": "Dhiraj Manghani",
         "Type": "Closing",
-        "Title": "CVS Closing Hundreds Of Stores Across US - MSN",
-        "Link": "https://news.google.com/rss/articles/CBMirwJBVV95cUxNTl9vV3Q1ZFcwc016YVpEM2VyMWFzVnItN2x0N2ZFSXBFTFlYa1R0UGlZcTlST2NMTWc1T0t6N1NaQ3NyTnNyUEdjYnp6SllZZU5ySWVVZkdNODhXaTZnb0Nlb1IzRENUV0FGUzFuQUtiNm5UcmJheVZIcGRoNnZFbnlaQ0ljVzA5LTBLZXQzZnBCcVdHdVpBU2FKX0NTbGpGb1hrTkNoMTJBNzlhWWNta1NxR0JFMkQ4T2E4ZjhxbGQyR29COWlna2RJUUhzUnlyeDFKNVZUY01rTzkxd1VTYS03N1VwTFVMV3gyZFJudGJpNWViM1FtYWJYbm00d19qWkZFM0ZRMDZlRjdDbVplYnFSeDJ6VkowZUlLT3VrS3RjMXAwNVRsRmlBU0FaQ1E?oc=5",
-        "Published": "Tue, 21 Apr 2026 19:43:41 GMT",
-        "Summary": "CVS Closing Hundreds Of Stores Across US MSN"
-      },
-      {
-        "Store": "CVS",
-        "Analyst": "Dhiraj Manghani",
-        "Type": "Closing",
-        "Title": "Tennessee House passes bill targeting CVS, pharmacy closures in question - WZTV",
-        "Link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQTlV6c3hXR1d6UzZuQ1N5VHZZVmx1V3o3VkJBNzJ5dERRcTVLajJJbktfTU5CSGxRR25VV0kzRjBDMEpYVGYzcGg4cnlxTERYVkF0VktOb183cVZYUURnbFFhYXdMMXI5SkxBbFg5SUM2eExXaTFuSElqSTl1VF9hWkRJTDNoT04tY0tiN29JT2s1ZGdjZ01vRmhrZW9VUG1tcDV6LXNzbERCWVRRTlVnNzExdnpsQjRYRDRoSVNUNlFRRlNfdUZmLXpVcUYxbTJWblhxQmNucmVFV2t0RnJUcTdWdUNocFJISTBydzFSVzc2UQ?oc=5",
-        "Published": "Tue, 21 Apr 2026 17:14:32 GMT",
-        "Summary": "Tennessee House passes bill targeting CVS, pharmacy closures in question WZTV"
+        "Title": "Tennessee House passes bill targeting CVS, pharmacy closures in question - WTVC",
+        "Link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPRUV0VzkwUzdRaXUtSmhHcmpRMmZURlpFcS1EWEszOW02Um9EYVhlTVZMeEhwQ2diNzY3SFBnX2xBT2FOc2xya24xdnpyd0pFZ1ZzT29uSWpzRHNUZFlXZldiNGNTVm8wbGNqeWZFc2V0VVdQOEpqYkM2SVJSX0VMT1pUNUpTbTZYQ2RoOHM0SHgxS1F4allVNkxNTEFrWHNTdUxFUEtrcWljSXNNeDJCV0xLNnRBNjVhbTBBcGtnVGxKS1JkTEdhQ0Q2WVVabkpPSnVsSlR6WE5kUm5hRFFfLV9KUmh3LW9RNWo5aTFYLUlnS2hGeFl1Ymw1aw?oc=5",
+        "Published": "Tue, 21 Apr 2026 20:29:34 GMT",
+        "Summary": "Tennessee House passes bill targeting CVS, pharmacy closures in question WTVC"
       },
       {
         "Store": "CVS",
@@ -223,6 +232,26 @@
         "Link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOeFZKWlBWT3pFZ3Q2STVocHB2M2l1NTZqUDQ3M29WanR6aTF4UVZNd2dwQVJZb2plSW9ITHN6b1VHZE5YQjRFWjFiT3V4Q0tGWXp4UFZJSkRvSUk2MWdBbVJMcTMzeVdid1V5bmMydHB5OHZsdkFXMW45N2ZrblBfSmdDalp2Y1I3SlJDMGRGV0M1WjVmelZHMnFZcE9TaVHSAaQBQVVfeXFMUFpwYmJzX0lZck1BaC1JamdHWFktNlhxQ2xuUmYwVXNMZ2FLMHFRR2xhV2NyX2d6X2JJNVpnZzJ6OTNrR0R4U2UxbzgxWTB2T2t2amY1aHR6ck93WkRoLWdFbnRfa0pMWHJ2bWhDVWN3MXhwdndvRUFiR2Q1UjJiY3MtVlhJcGFXOEY3THZ4ajQ3RHdwMXppVjdLeTU1YmhwVVgtak8?oc=5",
         "Published": "Mon, 20 Apr 2026 08:46:00 GMT",
         "Summary": "Domino's Pizza store in Immingham to open with giveaway Grimsby Live"
+      }
+    ],
+    "Harsimranjeet Singh Ghelani": [
+      {
+        "Store": "FIELDS",
+        "Analyst": "Harsimranjeet Singh Ghelani",
+        "Type": "Opening",
+        "Title": "Chiefs QB Fields Breaks Silence on Playing Behind Mahomes - heavy.com",
+        "Link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNUmRLODNIeTNlM183OFBxSlRGNUlYYW9DeGFaV3RGSVMwZlIydG1oMVVfTU9xLUgzZ2ItWEI2c0dGR09hMVZsTEhENGNaQV9keHF3WV9JV2oyUkoyVDRmN0NzMldVa3RMc2wwdHdIRW9BN09KRFRzYUJDY3I0Z2tPQjlFTzFEbS1ucUVkNjVkaTdQUQ?oc=5",
+        "Published": "Wed, 22 Apr 2026 00:14:00 GMT",
+        "Summary": "Chiefs QB Fields Breaks Silence on Playing Behind Mahomes heavy.com"
+      },
+      {
+        "Store": "ConocoPhillips",
+        "Analyst": "Harsimranjeet Singh Ghelani",
+        "Type": "Closing",
+        "Title": "UBS $4.273M Auto-Callable Securities tied to COP stock (AMUB) - Stock Titan",
+        "Link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQZGNHNHM2LVRNb1FFcVctZnh6QWNIQ0NXTnRGelExVHFKUkdYNk80REUzSld5TFh0MG5SaFVNaFl2UWhZanh2WllZYkJmaDc4enZOUjExOHlrMV9LX3l6VlJ3ZVhDU1ZMMHZ1Z2Y4cE5hSDJOWDE2TGM0WUhXVFpMcGFCYlA4UHZROTRYb0RIRF9vS2NVT1ZadTFaZ08?oc=5",
+        "Published": "Tue, 21 Apr 2026 19:48:10 GMT",
+        "Summary": "UBS $4.273M Auto-Callable Securities tied to COP stock (AMUB) Stock Titan"
       }
     ],
     "Kabeer Pandya": [
@@ -259,15 +288,6 @@
         "Store": "Taco Bell",
         "Analyst": "Kashish Kasar",
         "Type": "Opening",
-        "Title": "Tex-Mex fast food giant Taco Bell to open first Northern Ireland outlet - MSN",
-        "Link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOS0pwa1d3ay1RUG9CeEtjVHg3R1JzY0dtTUxPVENpZ1gyNGx1VVppUjAxcURucG9kZVdSY2RQZWdQTDdEOFJHYko3Ym5EOVdPbzVDSEZDNHN3TTZTSnFmQ1V0TS1tNTB4YzE4TFQ4WjVCUXdicXBGVmIyVXdmZGZYdmltRVB5bFdCS2N4QVYwQV9WaHBZWGw1NFRYMEJsUTgzazFRYlhMUWxCYkp1MkdpNm04Q2RPZG9BMGY5Z0xHN3d3UzloY3JaSk5YNm9DNjYyVUJ4Sks4YkswQnJyMnFLeFcxLTZ0dw?oc=5",
-        "Published": "Mon, 20 Apr 2026 13:29:08 GMT",
-        "Summary": "Tex-Mex fast food giant Taco Bell to open first Northern Ireland outlet MSN"
-      },
-      {
-        "Store": "Taco Bell",
-        "Analyst": "Kashish Kasar",
-        "Type": "Opening",
         "Title": "Applegreen To Open Northern Ireland’s First Taco Bell - Business Eye",
         "Link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOa2xUTjdEeFdxekhxNmdqRTh3dVJSblZWVTRDZUVUQjZiRmVVb1V5MWNRY3lKVVpHZ2lkODYtY2ZrWmZVd1ZLcmN1QV9FRHhiazVBOE56ZFpBNEpscXB5WXRZcTUzdkhiWmlHTnlVVHZ5eGFkMTR4UmMyVXNQeEdzRTRMRzgzbGZPQ0QzRzdaOTUtZw?oc=5",
         "Published": "Mon, 20 Apr 2026 12:18:04 GMT",
@@ -281,27 +301,9 @@
         "Link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNbHJmbE9fbHk2QnVhMElRQWJqZDFMTVJxeVg4b05IeDhyQVBiOGhkQXI4MGVpcjFMYnVpbjlMcFoydFlWUVQ1cnFZcWhIMEhTc19HeXoyaEFjWkNmbEl1RzUxSERBZ3Zta2U5c0JIQmpiTVlYOHRoZ2F3QXBKNVBLYWFyNDNjaTcyVzhBRE9hNy1tdFF5Rko2SVN2NGhPQUpMdUE?oc=5",
         "Published": "Mon, 20 Apr 2026 10:53:38 GMT",
         "Summary": "Applegreen set to launch Taco Bell in Northern Ireland RTE.ie"
-      },
-      {
-        "Store": "Taco Bell",
-        "Analyst": "Kashish Kasar",
-        "Type": "Opening",
-        "Title": "Opening of Northern Ireland's first-ever Taco Bell location confirmed by Applegreen - Belfast Live",
-        "Link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOb21fckdKUXVIRHhLcXVMTnIteDZCX0ZiZVJxc1J2VDMyTGcxRV9kTlQtOTVpanRDeHZELUZwbkZNOEE1VjNxOGZjZWRQR2JQcFVJakN3X1pnVjlsdWNfMjFfdHpJbDZlVEpPWVdfMDltQ3REY0NZc0U3MEhjX1hEWnFpSzVBSkpTOWRwUnB2SWVlUm05RkhBdi11Q0dIZGYxSHfSAacBQVVfeXFMTXJWVS1lNjVuRXhpaHdEYW8xR2Zrd0hoQ2pMVzZiVWFOOGNuZUFFX01FTzlxTzBkNV92TWwyREVJajRfeEVvN09XUjNzVlNoZ1ZkRHhWWDdoWlpGRlFDb1VTTndfdzQ5cFRvZFNtbURONnNzdzRoMVgya0FlSkJFc0sweWNmZmppeGJ2ZHlyVU4wWHR5TDJZbGxWTEMtMERuZTBNcWtKRkk?oc=5",
-        "Published": "Mon, 20 Apr 2026 10:45:00 GMT",
-        "Summary": "Opening of Northern Ireland's first-ever Taco Bell location confirmed by Applegreen Belfast Live"
       }
     ],
     "Komal Agarwal": [
-      {
-        "Store": "Walgreens",
-        "Analyst": "Komal Agarwal",
-        "Type": "Closing",
-        "Title": "Walgreens closing Syracuse store on W. Genesee Street - MSN",
-        "Link": "https://news.google.com/rss/articles/CBMivgJBVV95cUxOYjZBZzA2N0Y1NzZsNHo5Um03NkR1amZQTjc4YnhkN2V6TWl5Q0NEbGhfR2o5UzkwVmJaUkc5cjM5SjE0amlkZV91NEgyR3NNa1g0ekQzX3ZCWEt3OWl3VS1qT082MDF0c1JPWTNsZmthYmxtTjJ3dXFsSlJoa2pDOVRXam53d0QzVy1ERllUSkY3cGk2NVkwcWpROG9FZDBNRkZSTlRXQ2cwOWRoek9VVnlDNWZfaDExbWttOU85RXAyQXFuMEh1THN2cE9OZnBfUGdpbnpsMEg0Qld4d1JTY1g3VkdUREl2UUU2MFJ1b3FHcXZveFo1UGpNNVZKNnBQdEpHMWZodkM0bVZJbUlJN19MYmlqQlZrbFFxRm1GZVNKenlfeFVXV0VkazVhMXVMMkQzZjQyLWNLRzBIdXc?oc=5",
-        "Published": "Tue, 21 Apr 2026 18:22:58 GMT",
-        "Summary": "Walgreens closing Syracuse store on W. Genesee Street MSN"
-      },
       {
         "Store": "BP",
         "Analyst": "Komal Agarwal",
@@ -315,19 +317,19 @@
         "Store": "BP",
         "Analyst": "Komal Agarwal",
         "Type": "Closing",
-        "Title": "Spain's antitrust watchdog shutters probes into BP, Repsol, Moeve - TradingView",
-        "Link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPa2dpZDNuR0ZYT0FfOXZFSmc1UmNzZ1NvaTVCNkEwT1JrZ1YxYnE3Ujg2SmZTM1E3X3Z1TWU3WWlPUlBLaVRrV29WZUZDT0pkYm9GMEFEZG8tTmNLbHZjNFRCY1h1YkMyVjUxbkZqbW5rUHpZelg5RUFZRzlBVTJfSklBZnY1MlFyZXp5MzlqeGdnYWpFX245TFV4Z3hONzhXX3RqcTAzd0Zsb1ZmdnBPV2lkN2l2U0w1Y2hoemZMeFNuUFp2Y3NoYVlWWUZjdw?oc=5",
-        "Published": "Tue, 21 Apr 2026 10:54:48 GMT",
-        "Summary": "Spain's antitrust watchdog shutters probes into BP, Repsol, Moeve TradingView"
+        "Title": "Spain's antitrust watchdog shutters probes into BP, Repsol, Moeve - MSN",
+        "Link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOVWNWVUNnWDcwUU12UEtSMlNEQkNwLU5UTGp1b203QTJmSFc5aFBxMkd5TUZfcVRpTlhVOXlzbVNkQV84STJNTG9TSXV4YkI5eUtKQk9KMXZ5cENmTnpzalJEVllyUjQxQkMyZGpueXNCUGZCQ0hyVGd6TE5YSk9YdTFkZm9fT0dHLTdCcE9aQkh2dnZHT1h5cjZ0WWJrX0dMNXUxUFNGVjVTZFVnbzNCc3c0OA?oc=5",
+        "Published": "Tue, 21 Apr 2026 12:34:31 GMT",
+        "Summary": "Spain's antitrust watchdog shutters probes into BP, Repsol, Moeve MSN"
       },
       {
         "Store": "BP",
         "Analyst": "Komal Agarwal",
         "Type": "Closing",
-        "Title": "Spain's antitrust watchdog shutters probes into BP, Repsol, Moeve - London South East",
-        "Link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQVzZtaEJZYk9aNE9QazFQdnVtaERUaUliRVBrYkhCeDVzcUxEenVhLWNNdFdpYmF6Zy00Sm9RdTZaMzJ0ZDZGQ2lnRE5zM0FiRlJPNXpjeE9UQ2RCUnk4WHpPTTdqQWN1TmJITlhzaF90WC1ObGd6cGVRaGVFbzhxQ1hSX0hnNy1qbFNNQ2tTQzMwNEhkS1RBT1VUREJWZTJSem55SkdXTHZvOUtDeDJV?oc=5",
-        "Published": "Tue, 21 Apr 2026 10:54:00 GMT",
-        "Summary": "Spain's antitrust watchdog shutters probes into BP, Repsol, Moeve London South East"
+        "Title": "Spain's antitrust watchdog shutters probes into BP, Repsol, Moeve - TradingView",
+        "Link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPa2dpZDNuR0ZYT0FfOXZFSmc1UmNzZ1NvaTVCNkEwT1JrZ1YxYnE3Ujg2SmZTM1E3X3Z1TWU3WWlPUlBLaVRrV29WZUZDT0pkYm9GMEFEZG8tTmNLbHZjNFRCY1h1YkMyVjUxbkZqbW5rUHpZelg5RUFZRzlBVTJfSklBZnY1MlFyZXp5MzlqeGdnYWpFX245TFV4Z3hONzhXX3RqcTAzd0Zsb1ZmdnBPV2lkN2l2U0w1Y2hoemZMeFNuUFp2Y3NoYVlWWUZjdw?oc=5",
+        "Published": "Tue, 21 Apr 2026 10:54:48 GMT",
+        "Summary": "Spain's antitrust watchdog shutters probes into BP, Repsol, Moeve TradingView"
       }
     ],
     "Moksh Kashyap": [
@@ -339,6 +341,15 @@
         "Link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxONVMyWlZJc0F4Z09CN2tUU09haTBQTllwR2VqbWFuZW14TXBvOTFvRS1neGI4azJ6bG9YT0JWYXA0YWVnVkFrWXlHTkJWY21nLTFZb3NscVhocU5YTW5aQ1hEVUthaHc5ZWpWM2hYSm9fOVRHYktOZ3JhMjZ5QWpzQ2IzOFp3MU81QTQ1aHRkdFl1RkFkc2hvNWdYbzUtVnoxdFRQc2dRdE9YbWIyRGhCMEtvdmJpeDZKOVVaMFFTTER5NVhPdTRjdlFkN0FZZw?oc=5",
         "Published": "Tue, 21 Apr 2026 19:24:18 GMT",
         "Summary": "Kroger shakeup sees store closures, executive changes WKRC"
+      },
+      {
+        "Store": "Circle K",
+        "Analyst": "Moksh Kashyap",
+        "Type": "Closing",
+        "Title": "‘It’s a lot of money’: Customers with water in their gas tanks to be reimbursed by Circle K - CTV News",
+        "Link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxORUtUOGJWT1lCbEU0R0J0YjBuM2xNT1V4ZVZtdVhwaTZNSzBQSWUzN3c3UHM3VDFMdnJMS09qWE1KTWxNQzkzaU5oV1hJYWtROWlfS1hjd3hOTlJNNS14c3NrWFFNd0JneGVETHhVWFREcm5yeUtETzlES29IOWt0MDBvQkhUOVVmMWxmV2x6enYtbFJOdVJPdklrVS11YjJ5WWk4VzdnVVFuT2xGc3BkOGxmRzdCMjRHRXRZakotTDV5ckk4QXJN?oc=5",
+        "Published": "Mon, 20 Apr 2026 22:37:19 GMT",
+        "Summary": "‘It’s a lot of money’: Customers with water in their gas tanks to be reimbursed by Circle K CTV News"
       }
     ],
     "Rahul Shinde": [
@@ -391,10 +402,10 @@
         "Store": "Whole Foods Market",
         "Analyst": "Rahul Shinde",
         "Type": "Opening",
-        "Title": "Expanded Whole Foods Market opens in Los Gatos - The Mercury News",
-        "Link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPS25mOUw5bjVEcVZYMUc5MWRxdGh5QW9ZYk9Xa0h3V19sRUdsY2IxVGZKUlduVm9HbHZjQ3hVcGRNZTZpa1l1SHdZbTVuM1BfdUVlQm81TGZYNVdXeGRqcU9VbDZMdlRTT3pJRGpsa2hzNF92T0N6ZndHcEJqdVoxcm5aMVp4VVY1Nnp30gGQAUFVX3lxTE5pcktuRzlLQ1lUWHRqRlBnM1RYcnlvQkxpa2VyTTlZdi13cHY4Tmh5MEFxQTV6dHJBdnVEaEZDd2NsNjBPVklpSTZOQld3ODNJakJjSG91NHB3NFVTY2dROFNFZjhvZFdNYUROLVdiM0czN21hY2JJcldrX1ZVUlRIWDdDTTEzTURDWG9lbGNEMQ?oc=5",
+        "Title": "Expanded Whole Foods Market opens in Los Gatos - East Bay Times",
+        "Link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPd1VZQ1pkLUMtYlBfWEd0YjVfajhuUU5rU2xTUmdTMU8wZE9oSkI0b3ZpTHVUd2ZJR2M3Yjc1VnpBTkhrV1J5LW15VEZGdGRUV3ozemJiVjVLelBDVTl3LWRiT3pWUzJzbG5SWTRNWFFaa0lBWGRiWVo2VFE2dHZKdTMxNnJ0eUY2OFU5THQwS2rSAZYBQVVfeXFMTVdTcmk1VXVhaXhxcjlGdFEwSWFkZGdick1DOWh3eU1pT3hBSmdmckhRSWtFa2c3TDBiQWxoM1RycnBuQkFYeEZ3azhJZU40MGZJR1VsMDRvREJDbmxnY3pDeWU0SExPdjR6NWVHdFdBRWNBaDhVVWxPNXdtSXhjajk5WExmcm5Tb0V1RVBtbW9mb1J6NF9n?oc=5",
         "Published": "Tue, 21 Apr 2026 13:48:26 GMT",
-        "Summary": "Expanded Whole Foods Market opens in Los Gatos The Mercury News"
+        "Summary": "Expanded Whole Foods Market opens in Los Gatos East Bay Times"
       },
       {
         "Store": "Whole Foods Market",
@@ -420,7 +431,7 @@
         "Type": "Opening",
         "Title": "Grocery Outlet to celebrate grand opening of Strongsville store April 30 - Cleveland.com",
         "Link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNNFZRWUdRRmF2YjdaTWVsVjFxUThSN3Zyd0VVSXNocDdoWVhkbVE1MTlubVotanpjTjZKeU8xZGR2RENuSHU1RDFKWXNMLXl4eG56WWdVc2R1MGJ1ZGF3Nl91eE1BYTNFWlhKWjl5T0U5QThUVU9oV1F4NERSOUh4SmMxQy11d1pmS3BGNVF3YlduTjZ1Y0psN0U5ZWE0dnRtLXplaHVzUDRpTlFodlRDM1VaZktGU0ZFb1hySQ?oc=5",
-        "Published": "Tue, 21 Apr 2026 19:06:00 GMT",
+        "Published": "Tue, 21 Apr 2026 19:17:00 GMT",
         "Summary": "Grocery Outlet to celebrate grand opening of Strongsville store April 30 Cleveland.com"
       },
       {
@@ -466,8 +477,8 @@
         "Analyst": "Rahul Vasaya",
         "Type": "Closing",
         "Title": "Attention Shoppers: Walmart Stores Are Closing in These 6 States - MSN",
-        "Link": "https://news.google.com/rss/articles/CBMi4AJBVV95cUxPanRBR2pqdGRJSi12MGttN1B5bVJaQWFTSVpsUTZJeUY5MktWWkwtZEk5U0I4c0M1STByMGlfRWZ2Zy1EWmVrRjBMb25vbmlQREJKYXdhSG9yUGZTZWdHLTRjb0dCa0lQOGExLVVoSDRGak5UNGxMeHB6MEt2Y2h3Vm16enI1d0ZlUXlxN25jd0VHRU5fa1QybWRvSDUxZXEzcVFKdXNzdmttbnU2ZDgwZFRWNXdHVkpUdmVxOEd3ZXVBMEVBSEdfS0FEemhjZHl4ZXFDbFRTdjBIZEVXY0tjNDRTaExzXzBUaVA5dzRmRFVlLWRDZmNUNkFNa3czNUJKWGFLY0ZTYVh3bGhPcHE5VkFIa2JzVmZiMm4zanJST2dBMVF3Z1p2cGo1Q0o1SXhtb2F2NkFOWjVxWk1ITkJUdWozcDhoMDlaNXczdVQwVFd3U2IwbnJTYXJ4R3NyZzFj?oc=5",
-        "Published": "Tue, 21 Apr 2026 14:44:54 GMT",
+        "Link": "https://news.google.com/rss/articles/CBMi4gJBVV95cUxOU0RrQ1hnUzNrVHQ3Z0U2OFRlaUgzdXBrNEhJM1hTdzNzcnlhaUwyOGZIVUNkcDljTDBoVm9haTNObUIxRmoyU0dPMmZPT1hSeUw3Vnc2WVY5NzhDZGplVzdvd1FrcGdNT1RSS1p6V0RIVV9mZG5MRzdGVXNaR0hlV1RQRVFGemJVU1poVDhIR28wZWhGenVoTXlOYm93NHJiQkNsMG9Pa0l4bEpReU5RaDdIUnhRYzdOdERPRlQ1OE5iclo2SnVpZ0wxOV9CZFY5NUtaTlN5VWU0WmpQZjB5U0NGNTlQbkJQQVkyNFBWenhCM3RLLTRlajl5LVF0TE1YaUJTa1Z2bWRZbF96LXdOdHJsYjVRdEZsb3puSUdUZlNuRTNlNEwxM3ItZ3hMRkR4QndxVS04QUJWRmhfR0xkeExOR29fdUVxQ1VKSHJtTHJEM3A4bEkyWTFoWFlkaEZRamc?oc=5",
+        "Published": "Tue, 21 Apr 2026 14:44:55 GMT",
         "Summary": "Attention Shoppers: Walmart Stores Are Closing in These 6 States MSN"
       }
     ],
