@@ -15,6 +15,7 @@ Scrapers:
   • Target         — https://corporate.target.com/press/fact-sheet/2024/04/store-openings (requests)
   • Teso Life      — https://www.tesolife.com/en/stores (Selenium)
   • 7-Eleven       — https://www.7-eleven.com/lp/grand-openings (requests)
+  • Marshalls      — https://www.marshalls.com/us/store/jump/topic/Grand-Openings/2600014 (Selenium)
   • Wawa           — https://www.wawa.com/about-us/public-relations/grand-openings (Playwright)
 
 Output:
@@ -1354,6 +1355,59 @@ def scrape_seven_eleven() -> list[dict]:
     return results
 
 
+# ── Marshalls scraper ────────────────────────────────────────────────────────
+
+MARSHALLS_URL = "https://www.marshalls.com/us/store/jump/topic/Grand-Openings/2600014"
+MARSHALLS_BASE_URL = "https://www.marshalls.com"
+
+
+def scrape_marshalls(driver: webdriver.Chrome) -> list[dict]:
+    print(f"[Marshalls] Loading {MARSHALLS_URL}")
+    driver.get(MARSHALLS_URL)
+    time.sleep(5)
+
+    soup = BeautifulSoup(driver.page_source, "html.parser")
+    results = []
+
+    for box in soup.find_all("section", class_="subsection"):
+        h2 = box.find("h2")
+        if not h2:
+            continue
+        state = h2.get_text(strip=True)
+
+        for item in box.find_all("li", class_=lambda c: c and "store-list-item" in c):
+            h3 = item.find("h3", class_=lambda c: c and "address-heading" in c)
+            city = h3.get_text(strip=True) if h3 else ""
+
+            street_div = item.find("div", class_="street-address")
+            street = street_div.get_text(strip=True) if street_div else ""
+
+            address_parts = [p for p in [street, city, state] if p]
+            full_address = ", ".join(address_parts)
+
+            strong = item.find("strong")
+            opening_date = strong.get_text(strip=True) if strong else ""
+            if not opening_date:
+                continue
+
+            link_tag = item.find("a", href=lambda h: h and "directions.jsp" in h)
+            href = ""
+            if link_tag:
+                href = link_tag["href"]
+                if not href.startswith("http"):
+                    href = MARSHALLS_BASE_URL + href
+
+            results.append({
+                "company":      "Marshalls",
+                "address":      full_address,
+                "opening_date": extract_date(opening_date) or opening_date,
+                "link":         href,
+            })
+
+    print(f"[Marshalls] {len(results)} store(s) parsed.")
+    return results
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -1467,6 +1521,17 @@ def main():
         all_stores.extend(scrape_seven_eleven())
     except Exception as e:
         print(f"[7-Eleven] Scraping failed: {e}")
+
+    # ── Marshalls ──
+    driver = None
+    try:
+        driver = make_driver()
+        all_stores.extend(scrape_marshalls(driver))
+    except Exception as e:
+        print(f"[Marshalls] Scraping failed: {e}")
+    finally:
+        if driver:
+            driver.quit()
 
     print(f"\nTotal records collected: {len(all_stores)}")
 
