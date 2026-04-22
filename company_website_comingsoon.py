@@ -12,6 +12,7 @@ Scrapers:
   • Chick-fil-A    — https://www.chick-fil-a.com/press-room/openings/list-view (requests)
   • LongHorn       — https://www.longhornsteakhouse.com/locations/new-locations (requests)
   • Trader Joe's   — https://www.traderjoes.com/home/announcements?category=store-openings (Playwright)
+  • Target         — https://corporate.target.com/press/fact-sheet/2024/04/store-openings (requests)
   • Wawa           — https://www.wawa.com/about-us/public-relations/grand-openings (Playwright)
 
 Output:
@@ -883,26 +884,47 @@ async def _tj_dismiss_overlays(page) -> None:
             pass
 
 
-async def _tj_goto_page(page, page_num: int) -> None:
-    await page.goto(TJ_BASE_URL, wait_until="networkidle")
-    await page.wait_for_timeout(TJ_PAGE_LOAD_MS)
-    await _tj_dismiss_overlays(page)
-    if page_num > 1:
-        btn = await page.query_selector(f"li[aria-label='Go to page {page_num}']")
-        if btn:
-            await btn.click()
-            await page.wait_for_timeout(TJ_PAGE_LOAD_MS)
-            await _tj_dismiss_overlays(page)
+async def _tj_collect_article_urls(page) -> list[str]:
+    """Phase 1: walk listing pages and return all article URLs."""
+    seen, urls = set(), []
+    current_page = 1
+    while True:
+        if current_page == 1:
+            await page.goto(TJ_BASE_URL, wait_until="networkidle")
+        await page.wait_for_timeout(TJ_PAGE_LOAD_MS)
+        await _tj_dismiss_overlays(page)
 
+        anchors = await page.query_selector_all("a[href*='/home/announcements/']")
+        page_count = 0
+        for a in anchors:
+            href = (await a.get_attribute("href") or "").strip()
+            if not href or "?category" in href:
+                continue
+            full = href if href.startswith("http") else f"https://www.traderjoes.com{href}"
+            if full not in seen:
+                seen.add(full)
+                urls.append(full)
+                page_count += 1
 
-async def _tj_scrape_card_detail(page) -> tuple[str, str, str]:
-    """Return (publish_date, opening_date, address) from the current detail view."""
-    pd_el = await page.query_selector(
-        ".PublishDate_dateWrapper__2CXO5, [class*='publishDate']"
-    )
-    pub_date = (await pd_el.inner_text()).strip() if pd_el else ""
-    body = await page.inner_text("body")
-    return pub_date, _tj_parse_opening_date(body), _tj_parse_address(body)
+        print(f"[Trader Joe's] Listing page {current_page}: {page_count} new link(s) (total: {len(urls)})")
+
+        if TJ_PAGES and current_page >= TJ_PAGES:
+            print(f"[Trader Joe's] Reached page limit ({TJ_PAGES}).")
+            break
+
+        next_btn = await page.query_selector(
+            f"li[aria-label='Go to page {current_page + 1}']"
+        ) or await page.query_selector(
+            "button[class*='arrow'][class*='right']:not([disabled])"
+        ) or await page.query_selector(
+            "a[aria-label='Next page'], button[aria-label='Next page']"
+        )
+        if not next_btn:
+            print("[Trader Joe's] No more listing pages.")
+            break
+        await next_btn.click()
+        current_page += 1
+    return urls
 
 
 async def _tj_scrape() -> list[dict]:
@@ -925,74 +947,28 @@ async def _tj_scrape() -> list[dict]:
         page = await context.new_page()
         await _tj_apply_stealth(page)
 
-        await page.goto(TJ_BASE_URL, wait_until="networkidle")
-        await page.wait_for_timeout(TJ_PAGE_LOAD_MS)
-        await _tj_dismiss_overlays(page)
+        # Phase 1: collect all article URLs from listing pages
+        article_urls = await _tj_collect_article_urls(page)
 
-        current_page = 1
-        while True:
-            print(f"[Trader Joe's] Page {current_page} …")
-
-            # Featured card
-            body = await page.inner_text("body")
-            feat_url = page.url
-            feat_opening = _tj_parse_opening_date(body)
-            feat_address = _tj_parse_address(body)
-            results.append({
-                "company":      "Trader Joe's",
-                "address":      feat_address,
-                "opening_date": feat_opening,
-                "link":         feat_url,
-            })
-
-            # Sidebar cards
-            sidebar_cards = await page.query_selector_all(
-                "h3.AnnouncementCard_announcementCard__title__2Ap_w"
-            )
-            titles = [(await c.inner_text()).strip() for c in sidebar_cards]
-            print(f"  {len(titles)} sidebar card(s) found.")
-
-            for idx, title in enumerate(titles):
-                try:
-                    await _tj_goto_page(page, current_page)
-                    cards = await page.query_selector_all(
-                        "h3.AnnouncementCard_announcementCard__title__2Ap_w"
-                    )
-                    for c in cards:
-                        if (await c.inner_text()).strip() == title:
-                            await c.click()
-                            break
-                    await page.wait_for_timeout(TJ_CLICK_WAIT_MS)
-                    await _tj_dismiss_overlays(page)
-
-                    _, opening, address = await _tj_scrape_card_detail(page)
-                    print(f"  [{idx+1}/{len(titles)}] {title} → {opening or '(no date)'}")
-                    results.append({
-                        "company":      "Trader Joe's",
-                        "address":      address,
-                        "opening_date": opening,
-                        "link":         page.url,
-                    })
-                except Exception as e:
-                    print(f"  [{idx+1}/{len(titles)}] {title} — ERROR: {e}")
-
-            if TJ_PAGES and current_page >= TJ_PAGES:
-                print(f"[Trader Joe's] Reached page limit ({TJ_PAGES}).")
-                break
-
-            await _tj_goto_page(page, current_page)
-            next_btn = await page.query_selector(
-                f"li[aria-label='Go to page {current_page + 1}']"
-            ) or await page.query_selector(
-                "button.Pagination_pagination__arrow_side_right__9YUGr:not([disabled])"
-            )
-            if not next_btn:
-                print("[Trader Joe's] No more pages.")
-                break
-            await next_btn.click()
-            await page.wait_for_timeout(TJ_PAGE_LOAD_MS)
-            await _tj_dismiss_overlays(page)
-            current_page += 1
+        # Phase 2: visit each article and extract details
+        for i, url in enumerate(article_urls, 1):
+            try:
+                print(f"  [{i}/{len(article_urls)}] {url}")
+                await page.goto(url, wait_until="networkidle")
+                await page.wait_for_timeout(2000)
+                await _tj_dismiss_overlays(page)
+                body = await page.inner_text("body")
+                opening = _tj_parse_opening_date(body)
+                address = _tj_parse_address(body)
+                print(f"    → {opening or '(no date)'} | {address or '(no address)'}")
+                results.append({
+                    "company":      "Trader Joe's",
+                    "address":      address,
+                    "opening_date": opening,
+                    "link":         url,
+                })
+            except Exception as e:
+                print(f"    ERROR: {e}")
 
         await browser.close()
     return results
@@ -1128,6 +1104,87 @@ def scrape_wawa() -> list[dict]:
     return results
 
 
+# ── Target scraper ────────────────────────────────────────────────────────────
+
+TARGET_URL = "https://corporate.target.com/press/fact-sheet/2024/04/store-openings"
+TARGET_BASE_URL = "https://corporate.target.com"
+TARGET_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/122.0.0.0 Safari/537.36"
+    )
+}
+TARGET_JUNK_RE = re.compile(
+    r"(click to collapse|click to expand|Target in \w+|Opened in \w+)",
+    re.IGNORECASE,
+)
+
+
+def _target_extract_date(sentence: str) -> str:
+    m = re.search(
+        r"(January|February|March|April|May|June|July|August|"
+        r"September|October|November|December)\.?\s+\d{1,2}",
+        sentence, re.IGNORECASE,
+    )
+    return m.group(0).replace(".", "") if m else sentence
+
+
+def scrape_target() -> list[dict]:
+    print(f"[Target] Fetching {TARGET_URL}")
+    try:
+        resp = requests.get(TARGET_URL, headers=TARGET_HEADERS, timeout=30)
+        resp.raise_for_status()
+    except Exception as e:
+        print(f"[Target] Error: {e}")
+        return []
+
+    soup = BeautifulSoup(resp.content, "html.parser")
+    content_area = (
+        soup.find("div", class_="field-items")
+        or soup.find("article")
+        or soup.body
+    )
+
+    results = []
+    current_opening_date = None
+
+    for tag in content_area.find_all(["p", "h3"]):
+        text = tag.get_text(" ", strip=True)
+
+        if "officially open" in text.lower():
+            current_opening_date = _target_extract_date(text)
+            continue
+
+        if tag.name == "h3":
+            if TARGET_JUNK_RE.search(text):
+                continue
+
+            store_name = text
+            address_tag = tag.find_next_sibling("p")
+            address = address_tag.get_text(" ", strip=True) if address_tag else ""
+            if not address:
+                continue
+
+            anchor_id = tag.get("id") or (
+                store_name.lower()
+                .replace(" ", "-")
+                .replace(":", "")
+                .replace(",", "")
+                .replace("(", "")
+                .replace(")", "")
+            )
+            results.append({
+                "company":      "Target",
+                "address":      f"{store_name}, {address}",
+                "opening_date": current_opening_date or "",
+                "link":         f"{TARGET_URL}#{anchor_id}",
+            })
+
+    print(f"[Target] {len(results)} store(s) parsed.")
+    return results
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -1218,6 +1275,12 @@ def main():
         all_stores.extend(scrape_wawa())
     except Exception as e:
         print(f"[Wawa] Scraping failed: {e}")
+
+    # ── Target ──
+    try:
+        all_stores.extend(scrape_target())
+    except Exception as e:
+        print(f"[Target] Scraping failed: {e}")
 
     print(f"\nTotal records collected: {len(all_stores)}")
 
