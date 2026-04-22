@@ -1,5 +1,5 @@
 {
-  "last_updated": "April 22, 2026 21:23 UTC",
+  "last_updated": "April 22, 2026 21:55 UTC",
   "data": [
     {
       "company": "ALDI",
@@ -1646,12 +1646,6 @@
       "link": "https://www.longhornsteakhouse.com/locations/new-locations"
     },
     {
-      "company": "Trader Joe's",
-      "address": "",
-      "opening_date": "",
-      "link": "https://www.traderjoes.com/home/announcements?category=store-openings"
-    },
-    {
       "company": "Wawa",
       "address": "6658 Pensacola Blvd, Pensacola, FL 32505",
       "opening_date": "4/16/2026",
@@ -1662,6 +1656,192 @@
       "address": "13100 Ferguson Valley Rd, Yeagertown, PA 17099",
       "opening_date": "4/30/2026",
       "link": "https://wawa.a.bigcontent.io/v1/static/043026_YeagertownPA_GrandOpening_Alert"
+    },
+    {
+      "company": "Target",
+      "address": "Arizona: Buckeye-Verrado, 1355 N. Verrado Way, Buckeye, AZ 85396",
+      "opening_date": "May 17",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#arizona-buckeye-verrado"
+    },
+    {
+      "company": "Target",
+      "address": "Casa Grande Promenade, 951 N. Promenade Parkway, Casa Grande, AZ 85194",
+      "opening_date": "May 17",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#casa-grande-promenade"
+    },
+    {
+      "company": "Target",
+      "address": "Missouri: University City Olive Boulevard, 8645 Olive Boulevard, St. Louis, MO 63132",
+      "opening_date": "May 17",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#missouri-university-city-olive-boulevard"
+    },
+    {
+      "company": "Target",
+      "address": "New Jersey: Jersey City Route 440, 381 Route 440, Jersey City, NJ 07305",
+      "opening_date": "May 17",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#isPasted"
+    },
+    {
+      "company": "Target",
+      "address": "North Carolina: Myrtle Grove, 5623 Carolina Beach Road, Wilmington, NC 28412",
+      "opening_date": "May 17",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#north-carolina-myrtle-grove"
+    },
+    {
+      "company": "Target",
+      "address": "Selma, 551 St. Mark Avenue, Selma, NC 27576",
+      "opening_date": "May 17",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#isPasted"
+    },
+    {
+      "company": "Target",
+      "address": "California: Bakersfield Panama and Gosford, 6301 Gosford Road, Bakersfield, CA 93313",
+      "opening_date": "March 15",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#california-bakersfield-panama-and-gosford"
+    },
+    {
+      "company": "Target",
+      "address": "Delano, 321 Woollomes Avenue, Delano, CA 93215",
+      "opening_date": "March 15",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#delano"
+    },
+    {
+      "company": "Target",
+      "address": "Missouri: Springfield Sunshine Centre, 3444 W. Sunshine Street, Springfield, MO 65807",
+      "opening_date": "March 15",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#missouri-springfield-sunshine-centre"
+    },
+    {
+      "company": "Target",
+      "address": "North Carolina: Fuquay Varina, 3200 Gold Ring Road, Fuquay Varina, NC 27526",
+      "opening_date": "March 15",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#north-carolina-fuquay-varina"
+    },
+    {
+      "company": "Target",
+      "address": "Texas: Oak Cliff, 655 W. Illinois Avenue, Dallas, TX 75224",
+      "opening_date": "March 15",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#texas-oak-cliff"
+    },
+    {
+      "company": "Target",
+      "address": "New Jersey: Jersey City (Journal Square), 104 Sip Avenue, Jersey City, NJ 07306",
+      "opening_date": "March 29",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#new-jersey-jersey-city-journal-square"
+    },
+    {
+      "company": "Target",
+      "address": "West Orange, 235 Prospect Avenue, West Orange, NJ 07052",
+      "opening_date": "March 29",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#west-orange"
+    },
+    {
+      "company": "Target",
+      "address": "Arizona: Queen Creek Gantzel and Combs, 37854 N Gantzel Road, Queen Creek, AZ 85140",
+      "opening_date": "The following Target stores officially opened on Oct. 12:",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#arizona-queen-creek-gantzel-and-combs"
+    },
+    {
+      "company": "Target",
+      "address": "Florida: Wesley Chapel Grove, 27920 Pink Flamingo Lane, Wesley Chapel, FL 33544",
+      "opening_date": "The following Target stores officially opened on Oct. 12:",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#florida-wesley-chapel-grove"
+    },
+    {
+      "company": "Target",
+      "address": "Nebraska: Grand Island, 3400 West 13th Street, Grand Island, NE 68803",
+      "opening_date": "The following Target stores officially opened on Oct. 12:",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#nebraska-grand-island"
+    },
+    {
+      "company": "Target",
+      "address": "South Carolina: Indian Land, 5345 Crossridge Boulevard, Indian Land, SC 29707",
+      "opening_date": "The following Target stores officially opened on Oct. 12:",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#south-carolina-indian-land"
+    },
+    {
+      "company": "Target",
+      "address": "Virginia: South Riding, Building 8, 24670 Arcola Landing Drive, Sterling, VA 20166",
+      "opening_date": "The following Target stores officially opened on Oct. 12:",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#virginia-south-riding"
+    },
+    {
+      "company": "Target",
+      "address": "California: Fresno Fancher Creek, 205 South Clovis Avenue, Fresno, CA 93727",
+      "opening_date": "The following Target stores officially opened on Oct. 19:",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#california-fresno-fancher-creek"
+    },
+    {
+      "company": "Target",
+      "address": "Texas: Stafford Kirkwood Road, 12565 Arc Lane, Stafford, TX 77477",
+      "opening_date": "The following Target stores officially opened on Oct. 19:",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#texas-stafford-kirkwood-road"
+    },
+    {
+      "company": "Target",
+      "address": "New York: Queens Astoria, 22-11 31st Street, Astoria, NY 11105",
+      "opening_date": "July 20",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#new-york-queens-astoria"
+    },
+    {
+      "company": "Target",
+      "address": "California: Jurupa Valley, 8063 Mission Boulevard, Jurupa Valley, CA 92509",
+      "opening_date": "The following Target stores officially opened on Aug. 17:",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#california-jurupa-valley"
+    },
+    {
+      "company": "Target",
+      "address": "Connecticut: Guilford, 900 Boston Post Road, Guilford, CT 06437",
+      "opening_date": "The following Target stores officially opened on Aug. 17:",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#connecticut-guilford"
+    },
+    {
+      "company": "Target",
+      "address": "Norwalk Connecticut Avenue, 680 Connecticut Avenue, Norwalk, CT 06854",
+      "opening_date": "The following Target stores officially opened on Aug. 17:",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#norwalk-connecticut-avenue"
+    },
+    {
+      "company": "Target",
+      "address": "Florida: Bradenton Heritage Harbor, 725 Lighthouse Drive, Bradenton, FL 34212",
+      "opening_date": "The following Target stores officially opened on Aug. 17:",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#florida-bradenton-heritage-harbor"
+    },
+    {
+      "company": "Target",
+      "address": "Wildwood, 5580 Seven Mile Drive, Wildwood, FL 34785",
+      "opening_date": "The following Target stores officially opened on Aug. 17:",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#wildwood"
+    },
+    {
+      "company": "Target",
+      "address": "New Jersey: Flemington, 325 Route 202, Flemington, NJ 08822",
+      "opening_date": "The following Target stores officially opened on Aug. 17:",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#new-jersey-flemington"
+    },
+    {
+      "company": "Target",
+      "address": "Pennsylvania: West Goshen, 985 Paoli Pike, West Chester, PA 19380",
+      "opening_date": "The following Target stores officially opened on Aug. 17:",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#pennsylvania-west-goshen"
+    },
+    {
+      "company": "Target",
+      "address": "Arizona: Surprise West - Prasada Village, 14101 N. Prasada Parkway, Surprise, AZ 85388",
+      "opening_date": "April 13",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#arizona-surprise-west---prasada-village"
+    },
+    {
+      "company": "Target",
+      "address": "California: South Lake Tahoe, 4000 Lake Tahoe Boulevard, No. 6, South Lake Tahoe, CA 96150",
+      "opening_date": "April 13",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#california-south-lake-tahoe"
+    },
+    {
+      "company": "Target",
+      "address": "Texas: Denton North, 2755 W. University Drive, Suite 1101, Denton, TX 76201",
+      "opening_date": "April 13",
+      "link": "https://corporate.target.com/press/fact-sheet/2024/04/store-openings#texas-denton-north"
     }
   ]
 }
