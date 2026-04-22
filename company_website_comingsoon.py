@@ -93,7 +93,16 @@ def make_driver() -> webdriver.Chrome:
         "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
         "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36"
     )
-    driver = webdriver.Chrome(options=options)
+    try:
+        driver = webdriver.Chrome(options=options)
+    except Exception:
+        from selenium.webdriver.chrome.service import Service as ChromeService
+        try:
+            from webdriver_manager.chrome import ChromeDriverManager
+            service = ChromeService(ChromeDriverManager().install())
+            driver = webdriver.Chrome(service=service, options=options)
+        except Exception as e2:
+            raise RuntimeError(f"Could not create Chrome driver: {e2}") from e2
     driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
     return driver
 
@@ -233,13 +242,17 @@ def scrape_dogtopia() -> list[dict]:
 BURLINGTON_URL = "https://www.burlington.com/grand-openings"
 
 US_STATES_RE = re.compile(
-    r"^(Alabama|Alaska|Arizona|Arkansas|California|Colorado|Connecticut"
+    r"^\s*(Alabama|Alaska|Arizona|Arkansas|California|Colorado|Connecticut"
     r"|Delaware|Florida|Georgia|Hawaii|Idaho|Illinois|Indiana|Iowa|Kansas"
     r"|Kentucky|Louisiana|Maine|Maryland|Massachusetts|Michigan|Minnesota"
     r"|Mississippi|Missouri|Montana|Nebraska|Nevada|New Hampshire|New Jersey"
     r"|New Mexico|New York|North Carolina|North Dakota|Ohio|Oklahoma|Oregon"
     r"|Pennsylvania|Rhode Island|South Carolina|South Dakota|Tennessee|Texas"
-    r"|Utah|Vermont|Virginia|Washington|West Virginia|Wisconsin|Wyoming)$"
+    r"|Utah|Vermont|Virginia|Washington|West Virginia|Wisconsin|Wyoming"
+    r"|AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD"
+    r"|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC"
+    r"|SD|TN|TX|UT|VT|VA|WA|WV|WI|WY)\s*(?:\(\d+\))?$",
+    re.IGNORECASE,
 )
 
 # Matches Burlington entry format: "05/01 - Fayetteville (#1829) 3835 North Mall Ave Ste 2"
@@ -252,13 +265,34 @@ BURLINGTON_ENTRY_RE = re.compile(
 
 
 def _burlington_expand_accordions(driver: webdriver.Chrome) -> int:
-    WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.TAG_NAME, "button"))
-    )
+    # Scroll through the page to trigger lazy-loaded content
+    for frac in (0.25, 0.5, 0.75, 1.0):
+        driver.execute_script(f"window.scrollTo(0, document.body.scrollHeight * {frac});")
+        time.sleep(0.8)
+    driver.execute_script("window.scrollTo(0, 0);")
+    time.sleep(1.5)
+
+    try:
+        WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.TAG_NAME, "button"))
+        )
+    except Exception:
+        pass
+
+    # Try standard aria-expanded buttons first
     buttons = driver.find_elements(By.CSS_SELECTOR, "button[aria-expanded='false']")
+
+    # Try <details> elements that are not open
+    if not buttons:
+        details = driver.find_elements(By.XPATH, "//details[not(@open)]")
+        for d in details:
+            summary = d.find_elements(By.TAG_NAME, "summary")
+            if summary:
+                buttons.append(summary[0])
+
     if not buttons:
         buttons = [b for b in driver.find_elements(By.TAG_NAME, "button")
-                   if b.text.strip() in ("+", "expand", "Show")]
+                   if b.text.strip() in ("+", "expand", "Show", "show more", "View More")]
     if not buttons:
         buttons = driver.find_elements(By.XPATH, "//*[normalize-space(text())='+']")
 
@@ -321,13 +355,15 @@ def _burlington_parse(soup: BeautifulSoup) -> list[dict]:
 
     stores, seen = [], set()
     for state_tag in state_tags:
-        state_name = state_tag.get_text(strip=True)
+        raw_state = state_tag.get_text(strip=True)
+        m_state = US_STATES_RE.match(raw_state)
+        state_name = m_state.group(1) if m_state else raw_state
         container  = _burlington_find_container(state_tag)
         entries    = _burlington_entries(container)
         print(f"  [{state_name}] {len(entries)} entries.")
 
         for text, row_text in entries:
-            key = (state_name, text.lower())
+            key = (state_name.lower(), text.lower())
             if key in seen:
                 continue
             seen.add(key)
@@ -346,11 +382,67 @@ def _burlington_parse(soup: BeautifulSoup) -> list[dict]:
                 "address":      address,
                 "opening_date": opening_date,
             })
+
+    # Flat-list fallback: if no state headings found, scan all text nodes for entry pattern
+    if not stores:
+        print("[Burlington] No state headings matched — trying flat-list scan.")
+        full_text = section.get_text("\n", strip=True)
+        current_state = "Unknown"
+        for line in full_text.splitlines():
+            line = line.strip()
+            m_st = US_STATES_RE.match(line)
+            if m_st:
+                current_state = m_st.group(1)
+                continue
+            m_entry = BURLINGTON_ENTRY_RE.match(line)
+            if m_entry:
+                key = (current_state.lower(), line.lower())
+                if key not in seen:
+                    seen.add(key)
+                    stores.append({
+                        "address":      f"{m_entry.group(3).strip()}, {current_state}",
+                        "opening_date": m_entry.group(1).strip(),
+                    })
+            elif re.match(r"^\d{2}/\d{2}", line) and len(line) > 6:
+                # Looser fallback: lines starting with MM/DD
+                key = ("flat", line.lower())
+                if key not in seen:
+                    seen.add(key)
+                    stores.append({
+                        "address":      f"{line[6:].strip()}, {current_state}",
+                        "opening_date": line[:5].strip(),
+                    })
+        print(f"[Burlington] Flat scan found {len(stores)} entries.")
+
     return stores
 
 
 def scrape_burlington(driver: webdriver.Chrome) -> list[dict]:
     print(f"[Burlington] Loading {BURLINGTON_URL}")
+
+    # Try plain requests first (faster; works if page is server-rendered)
+    try:
+        resp = requests.get(
+            BURLINGTON_URL,
+            headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"},
+            timeout=20,
+        )
+        resp.raise_for_status()
+        static_soup = BeautifulSoup(resp.text, "html.parser")
+        quick_stores = _burlington_parse(static_soup)
+        if quick_stores:
+            print(f"[Burlington] Static fetch returned {len(quick_stores)} store(s). Skipping Selenium.")
+            results = [
+                {"company": "Burlington", "address": s["address"],
+                 "opening_date": s["opening_date"].strip(), "link": ""}
+                for s in quick_stores
+            ]
+            print(f"[Burlington] {len(results)} store(s) parsed.")
+            return results
+        print("[Burlington] Static fetch returned 0 stores; falling back to Selenium.")
+    except Exception as e:
+        print(f"[Burlington] Static fetch failed: {e}; falling back to Selenium.")
+
     driver.get(BURLINGTON_URL)
     time.sleep(8)
     n = _burlington_expand_accordions(driver)
@@ -904,7 +996,7 @@ async def _tj_collect_article_urls(page) -> list[str]:
     current_page = 1
     while True:
         if current_page == 1:
-            await page.goto(TJ_BASE_URL, wait_until="networkidle")
+            await page.goto(TJ_BASE_URL, wait_until="load")
         await page.wait_for_timeout(TJ_PAGE_LOAD_MS)
         await _tj_dismiss_overlays(page)
 
@@ -987,8 +1079,8 @@ async def _tj_scrape() -> list[dict]:
         for i, url in enumerate(article_urls, 1):
             try:
                 print(f"  [{i}/{len(article_urls)}] {url}")
-                await page.goto(url, wait_until="networkidle")
-                await page.wait_for_timeout(2000)
+                await page.goto(url, wait_until="load")
+                await page.wait_for_timeout(3000)
                 await _tj_dismiss_overlays(page)
                 body = await page.inner_text("body")
                 opening = _tj_parse_opening_date(body)
