@@ -9,6 +9,7 @@ Scrapers:
   • HomeGoods      — https://www.homegoods.com/grand-openings (Selenium)
   • Homesense      — https://us.homesense.com/grand-openings (Selenium)
   • Jersey Mike's  — https://www.jerseymikes.com/locations/coming-soon (requests)
+  • Chick-fil-A    — https://www.chick-fil-a.com/press-room/openings/list-view (requests)
   • LongHorn       — https://www.longhornsteakhouse.com/locations/new-locations (requests)
 
 Output:
@@ -638,6 +639,118 @@ def scrape_jersey_mikes() -> list[dict]:
     return results
 
 
+# ── Chick-fil-A scraper ──────────────────────────────────────────────────────
+
+CHICK_FIL_A_BASE_URL = "https://www.chick-fil-a.com/press-room/openings/list-view"
+CHICK_FIL_A_PAGES    = 5
+CHICK_FIL_A_HEADERS  = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.5",
+}
+
+
+def _cfa_fetch_page(page: int) -> str:
+    url = CHICK_FIL_A_BASE_URL if page == 1 else f"{CHICK_FIL_A_BASE_URL}?query-0-page={page}"
+    resp = requests.get(url, headers=CHICK_FIL_A_HEADERS, timeout=15)
+    resp.raise_for_status()
+    return resp.text
+
+
+def _cfa_parse_list(html: str) -> list[dict]:
+    soup = BeautifulSoup(html, "html.parser")
+    rows = []
+    for h3 in soup.find_all("h3"):
+        a = h3.find("a", href=True)
+        if not a:
+            continue
+        href = a["href"]
+        if "/press-room/" not in href or "openings" in href:
+            continue
+        rows.append({"url": href})
+    return rows
+
+
+def _cfa_fetch_article(url: str) -> tuple[str, str]:
+    try:
+        resp = requests.get(url, headers=CHICK_FIL_A_HEADERS, timeout=15)
+        resp.raise_for_status()
+    except Exception as e:
+        print(f"  [Chick-fil-A] Could not fetch {url}: {e}")
+        return "", ""
+
+    soup = BeautifulSoup(resp.text, "html.parser")
+    body_text = " ".join(p.get_text(" ", strip=True) for p in soup.find_all("p"))
+
+    address = ""
+    addr_m = re.search(
+        r"[Ll]ocated at\s+([\d]+[^,\.]+(?:Ave|Blvd|Dr|Rd|St|Way|Ln|Pkwy|Hwy|"
+        r"Pike|Plaza|Circle|Cir|Court|Ct|Trail|Trl|Route|Rt|Square|Sq|"
+        r"Drive|Street|Road|Lane|Parkway|Highway)[^,\.]*)",
+        body_text,
+    )
+    if addr_m:
+        address = addr_m.group(1).strip()
+
+    opening_date = ""
+    date_m = re.search(
+        r"(?:begin serving|opening|opens?|open(?:ing)? its doors)[^.]{0,80}"
+        r"on\s+(?:\w+day,\s*)?"
+        r"((?:January|February|March|April|May|June|July|August|September|"
+        r"October|November|December)\s+\d{1,2},?\s+\d{4})",
+        body_text,
+        re.IGNORECASE,
+    )
+    if date_m:
+        opening_date = date_m.group(1).strip()
+    else:
+        h1 = soup.find("h1")
+        if h1:
+            container = h1.find_parent()
+            if container:
+                pub_m = re.search(
+                    r"((?:January|February|March|April|May|June|July|August|"
+                    r"September|October|November|December)\s+\d{1,2},?\s+\d{4})",
+                    container.get_text(" ", strip=True),
+                )
+                if pub_m:
+                    opening_date = pub_m.group(1).strip()
+
+    return address, opening_date
+
+
+def scrape_chick_fil_a() -> list[dict]:
+    print(f"[Chick-fil-A] Scraping {CHICK_FIL_A_BASE_URL} ({CHICK_FIL_A_PAGES} pages)…")
+    listings = []
+    for page in range(1, CHICK_FIL_A_PAGES + 1):
+        try:
+            html = _cfa_fetch_page(page)
+            rows = _cfa_parse_list(html)
+            listings.extend(rows)
+            print(f"  Page {page}: {len(rows)} record(s) (total: {len(listings)})")
+        except Exception as e:
+            print(f"  [Chick-fil-A] Page {page} error: {e}")
+        time.sleep(0.5)
+
+    results = []
+    for i, row in enumerate(listings, 1):
+        print(f"  [{i}/{len(listings)}] {row['url']}")
+        address, opening_date = _cfa_fetch_article(row["url"])
+        results.append({
+            "company":      "Chick-fil-A",
+            "address":      address,
+            "opening_date": opening_date,
+            "link":         row["url"],
+        })
+        time.sleep(0.5)
+
+    print(f"[Chick-fil-A] Found {len(results)} opening(s).")
+    return results
+
+
 # ── LongHorn Steakhouse scraper ──────────────────────────────────────────────
 
 LONGHORN_URL = "https://www.longhornsteakhouse.com/locations/new-locations"
@@ -759,6 +872,12 @@ def main():
         all_stores.extend(scrape_jersey_mikes())
     except Exception as e:
         print(f"[Jersey Mike's] Scraping failed: {e}")
+
+    # ── Chick-fil-A ──
+    try:
+        all_stores.extend(scrape_chick_fil_a())
+    except Exception as e:
+        print(f"[Chick-fil-A] Scraping failed: {e}")
 
     # ── LongHorn Steakhouse ──
     try:
