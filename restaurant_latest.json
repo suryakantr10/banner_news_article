@@ -1,7 +1,31 @@
 {
-  "last_updated": "2026-04-22 00:06 UTC",
+  "last_updated": "2026-04-22 08:06 UTC",
   "total": 60,
   "data": [
+    {
+      "date": "April 22, 2026",
+      "url": "https://whatnow.com/san-antonio/restaurants/jersey-mikes-subs-to-open-in-the-shops-at-nacogdoches/",
+      "title": "Jersey Mikes Subs to Open in the Shops at Nacogdoches",
+      "address": "7038 N Loop 1604 E, San Antonio, TX 78266"
+    },
+    {
+      "date": "April 22, 2026",
+      "url": "https://whatnow.com/las-vegas/restaurants/johnny-vegas-street-eats-to-bring-the-best-burgers-in-town-to-vegas/",
+      "title": "Johnny Vegas Street Eats to Bring \"The Best Burgers in Town\" to Vegas",
+      "address": ""
+    },
+    {
+      "date": "April 22, 2026",
+      "url": "https://whatnow.com/san-antonio/restaurants/laynes-chicken-fingers-to-open-in-booming-new-braunfels-area/",
+      "title": "Layne's Chicken Fingers to Open in Booming New Braunfels Area",
+      "address": "2564 Loop 337, New Braunfels, TX 78130"
+    },
+    {
+      "date": "April 21, 2026",
+      "url": "https://whatnow.com/houston/restaurants/froosta-ice-cream-to-open-in-the-southwest-plaza/",
+      "title": "Froosta Ice Cream to Open in the Southwest Plaza",
+      "address": "11922 Wilcrest Dr, Houston, TX 77031"
+    },
     {
       "date": "April 21, 2026",
       "url": "https://whatnow.com/orlando/restaurants/noodle-shawty-will-bring-late-night-food-and-good-vibes-to-downtown-orlando/",
@@ -337,30 +361,6 @@
       "url": "https://whatnow.com/memphis/restaurants/summer-avenue-sees-7-brew-progress/",
       "title": "Summer Avenue Sees 7 Brew Progress",
       "address": "4670 Summer Ave, Memphis, TN 38122"
-    },
-    {
-      "date": "April 17, 2026",
-      "url": "https://whatnow.com/orlando/restaurants/team-market-group-announces-eastwood-orlando/",
-      "title": "Team Market Group Announces Eastwood Orlando",
-      "address": "1024 N Mills Ave, Orlando, FL 32803"
-    },
-    {
-      "date": "April 17, 2026",
-      "url": "https://whatnow.com/washington-dc/restaurants/bar-nuestro-bringing-european-charm-and-vintage-vibes-to-navy-yard/",
-      "title": "Bar Nuestro Bringing European Charm and Vintage Vibes to Navy Yard",
-      "address": "1331 Yards Pl SE, Washington, DC 20003"
-    },
-    {
-      "date": "April 17, 2026",
-      "url": "https://whatnow.com/orlando/restaurants/pups-pub-to-open-in-clermont-with-fun-for-dogs-and-people/",
-      "title": "Pup's Pub to Open in Clermont With Fun For Dogs and People",
-      "address": "898 W Montrose St, Clermont, FL 34711"
-    },
-    {
-      "date": "April 17, 2026",
-      "url": "https://whatnow.com/sacramento/retail/yolo-fill-co-bringing-farm-driven-marketplace-and-dining-experience-to-winters/",
-      "title": "Yolo Fill Co. Bringing Farm-Driven Marketplace and Dining Experience to Winters",
-      "address": "411 Railroad Ave, Winters, CA 95694"
     }
   ]
 }
