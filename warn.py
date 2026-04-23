@@ -1079,6 +1079,126 @@ def scrape_ohio() -> pd.DataFrame:
     return _normalise(df, "Ohio")
 
 
+# ── Oregon ───────────────────────────────────────────────────────────────────
+# Pure requests + BeautifulSoup — no Selenium needed.
+# Flow: GET form → grab hidden tokens → POST form → parse download link → GET xlsx.
+
+_OR_BASE_URL     = "https://ccwd.hecc.oregon.gov"
+_OR_DOWNLOAD_URL = f"{_OR_BASE_URL}/Layoff/WARN/Download"
+_OR_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.5",
+    "Referer": _OR_DOWNLOAD_URL,
+}
+
+
+def _or_get_form_tokens(session: requests.Session) -> dict:
+    r = session.get(_OR_DOWNLOAD_URL, headers=_OR_HEADERS, timeout=30)
+    r.raise_for_status()
+    soup = BeautifulSoup(r.text, "html.parser")
+    return {
+        inp.get("name"): inp.get("value", "")
+        for inp in soup.find_all("input", {"type": "hidden"})
+        if inp.get("name")
+    }
+
+
+def _or_submit_form(session: requests.Session, tokens: dict) -> BeautifulSoup:
+    form_data = {**tokens, "WARNFormat": "xlsx", "WARNSort": "NoticeDate"}
+    r = session.post(
+        _OR_DOWNLOAD_URL,
+        data=form_data,
+        headers={**_OR_HEADERS, "Content-Type": "application/x-www-form-urlencoded"},
+        timeout=60,
+        allow_redirects=True,
+    )
+    r.raise_for_status()
+    return BeautifulSoup(r.text, "html.parser")
+
+
+def _or_find_download_link(soup: BeautifulSoup) -> str | None:
+    import re as _re
+    for a in soup.find_all("a", href=True):
+        href = a["href"]
+        if _re.search(r"/Layoff/Reports/WARN.*\.(xlsx|xls|csv)", href, _re.I):
+            return (_OR_BASE_URL + href) if href.startswith("/") else href
+    m = _re.search(r'href="(/Layoff/Reports/WARN[^"]+\.(xlsx|xls|csv))"', str(soup), _re.I)
+    if m:
+        return _OR_BASE_URL + m.group(1)
+    for a in soup.find_all("a", href=True):
+        href = a["href"]
+        if "WARN" in href.upper() and _re.search(r"\.(xlsx|xls|csv)$", href, _re.I):
+            return (_OR_BASE_URL + href) if href.startswith("/") else href
+    return None
+
+
+def scrape_oregon() -> pd.DataFrame:
+    """
+    Downloads Oregon WARN data via form POST (no Selenium required).
+    URL: https://ccwd.hecc.oregon.gov/Layoff/WARN/Download
+    """
+    import re as _re
+    from io import BytesIO
+
+    log.info("Scraping Oregon...")
+    session = requests.Session()
+    try:
+        tokens  = _or_get_form_tokens(session)
+        soup    = _or_submit_form(session, tokens)
+        dl_link = _or_find_download_link(soup)
+        if not dl_link:
+            log.warning("  Oregon: download link not found in response")
+            return _normalise(pd.DataFrame(), "Oregon")
+
+        log.info(f"  Oregon: downloading {dl_link}")
+        r = session.get(dl_link, headers=_OR_HEADERS, timeout=120)
+        r.raise_for_status()
+
+        ext_m = _re.search(r"\.(xlsx|xls|csv)$", dl_link, _re.I)
+        ext   = ext_m.group(0).lower() if ext_m else ".xlsx"
+        raw   = (pd.read_excel(BytesIO(r.content), engine="openpyxl")
+                 if ext in (".xlsx", ".xls")
+                 else pd.read_csv(BytesIO(r.content)))
+
+    except Exception as e:
+        log.error(f"  Oregon scraping failed: {e}")
+        return _normalise(pd.DataFrame(), "Oregon")
+
+    raw.columns = [str(c).strip() for c in raw.columns]
+    log.info(f"  Oregon raw columns: {raw.columns.tolist()}")
+
+    col_map = {
+        "Employer":            "company",
+        "Company":             "company",
+        "Company Name":        "company",
+        "Firm Name":           "company",
+        "City":                "city",
+        "Location":            "city",
+        "Notice Date":         "notice_date",
+        "Received Date":       "notice_date",
+        "Layoff Date":         "layoff_date",
+        "Effective Date":      "layoff_date",
+        "Employees Affected":  "employees_affected",
+        "Number of Employees": "employees_affected",
+        "Workers Affected":    "employees_affected",
+        "# Employees":         "employees_affected",
+        "Type":                "closure_type",
+        "Closure Type":        "closure_type",
+        "Layoff/Closure":      "closure_type",
+        "Notice Type":         "closure_type",
+        "Notes":               "notes",
+        "Comments":            "notes",
+    }
+    raw.rename(columns={k: v for k, v in col_map.items() if k in raw.columns}, inplace=True)
+
+    log.info(f"  Oregon: {len(raw)} rows")
+    return _normalise(raw, "Oregon")
+
+
 # ── Oklahoma ─────────────────────────────────────────────────────────────────
 # Salesforce LWC table — reads data-cell-value attributes to bypass Shadow DOM.
 # Uses Selenium (lazy imports).
@@ -1323,6 +1443,7 @@ SCRAPERS: dict[str, callable] = {
     "Maryland":   scrape_maryland,
     "Ohio":       scrape_ohio,
     "Oklahoma":   scrape_oklahoma,
+    "Oregon":     scrape_oregon,
     "Texas":      scrape_texas,
     "Vermont":    scrape_vermont,
     "Virginia":   scrape_virginia,
