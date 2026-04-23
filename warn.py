@@ -1733,6 +1733,150 @@ def scrape_south_dakota() -> pd.DataFrame:
     return _normalise(df, "South Dakota")
 
 
+# ── Tennessee ─────────────────────────────────────────────────────────────────
+# Selenium preferred (JS-rendered accordion tables) with requests fallback.
+# URL: https://www.tn.gov/workforce/.../reports.html
+
+_TN_URL = (
+    "https://www.tn.gov/workforce/general-resources/major-publications0/"
+    "major-publications-redirect/reports.html"
+)
+
+
+def _tn_norm(s: str) -> str:
+    return re.sub(r"\s+", " ", (s or "").strip())
+
+
+def _tn_is_warn_table(table) -> bool:
+    headers = [_tn_norm(th.get_text(" ", strip=True)).lower() for th in table.find_all("th")]
+    text = " | ".join(headers)
+    return bool(headers) and all(k in text for k in ["date", "company", "county"])
+
+
+def _tn_infer_year(table, default="2026") -> str:
+    for node in table.find_all_previous(
+        ["h1","h2","h3","h4","h5","h6","button","a","span","div"], limit=30
+    ):
+        m = re.search(r"\b(20\d{2})\b", _tn_norm(node.get_text(" ", strip=True)))
+        if m:
+            return m.group(1)
+    return default
+
+
+def _tn_parse_table(table, year: str) -> list[dict]:
+    rows = []
+    tbody = table.find("tbody")
+    if not tbody:
+        return rows
+    for tr in tbody.find_all("tr", recursive=False):
+        tds = tr.find_all("td", recursive=False)
+        if len(tds) < 6:
+            continue
+        link    = tds[1].find("a", href=True)
+        company = _tn_norm(tds[1].get_text(" ", strip=True))
+        cells   = [_tn_norm(td.get_text(" ", strip=True)) for td in tds]
+        if not company:
+            continue
+        from urllib.parse import urljoin
+        rows.append({
+            "company":            company,
+            "city":               cells[2],   # County
+            "notice_date":        cells[0],   # Date of Posting
+            "layoff_date":        cells[4],   # Closure/Layoff Date
+            "employees_affected": cells[3],   # Affected Workers
+            "closure_type":       cells[5],   # Notice/Type
+            "notes":              urljoin("https://www.tn.gov", link["href"]) if link else "",
+        })
+    return rows
+
+
+def _tn_fetch_soup() -> BeautifulSoup:
+    try:
+        from selenium import webdriver
+        from selenium.webdriver.common.by import By
+        from selenium.webdriver.chrome.options import Options
+        from selenium.webdriver.chrome.service import Service
+        from selenium.webdriver.support.ui import WebDriverWait
+        from selenium.webdriver.support import expected_conditions as EC
+        from webdriver_manager.chrome import ChromeDriverManager
+
+        opts = Options()
+        opts.add_argument("--headless=new")
+        opts.add_argument("--no-sandbox")
+        opts.add_argument("--disable-dev-shm-usage")
+        opts.add_argument("--disable-gpu")
+        opts.add_argument("--window-size=1920,1080")
+        opts.add_argument("--disable-blink-features=AutomationControlled")
+        opts.add_experimental_option("excludeSwitches", ["enable-automation"])
+        opts.add_experimental_option("useAutomationExtension", False)
+        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=opts)
+        try:
+            driver.get(_TN_URL)
+            WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
+            try:
+                for btn in driver.find_elements(
+                    By.CSS_SELECTOR, "button[data-tn-action='accordion:expandcollapse']"
+                ):
+                    aria = (btn.get_attribute("aria-label") or "").lower()
+                    cls  = (btn.get_attribute("class") or "").lower()
+                    if "expand" in aria or "icon-plus" in cls:
+                        driver.execute_script("arguments[0].click();", btn)
+                        time.sleep(1.0)
+                for btn in driver.find_elements(
+                    By.CSS_SELECTOR, "button[aria-expanded='false'][aria-controls*='collapse']"
+                ):
+                    driver.execute_script("arguments[0].click();", btn)
+                    time.sleep(0.2)
+            except Exception:
+                pass
+            WebDriverWait(driver, 15).until(
+                EC.presence_of_all_elements_located((By.CSS_SELECTOR, "table tr"))
+            )
+            time.sleep(1.5)
+            html = driver.page_source
+        finally:
+            driver.quit()
+        return BeautifulSoup(html, "html.parser")
+
+    except Exception as exc:
+        log.warning(f"  Tennessee: Selenium unavailable ({exc}), falling back to requests")
+        resp = requests.get(_TN_URL, headers=HEADERS, timeout=60)
+        resp.raise_for_status()
+        return BeautifulSoup(resp.text, "html.parser")
+
+
+def scrape_tennessee() -> pd.DataFrame:
+    """
+    Scrapes Tennessee WARN notices (all years) from JS-rendered accordion tables.
+    URL: https://www.tn.gov/workforce/.../reports.html
+    """
+    log.info("Scraping Tennessee...")
+    try:
+        soup = _tn_fetch_soup()
+    except Exception as exc:
+        log.error(f"  Tennessee: failed to fetch page — {exc}")
+        return _normalise(pd.DataFrame(), "Tennessee")
+
+    rows: list[dict] = []
+    seen: set[tuple] = set()
+    table_count = 0
+
+    for table in soup.find_all("table"):
+        if not _tn_is_warn_table(table):
+            continue
+        year = _tn_infer_year(table, default="2026")
+        for r in _tn_parse_table(table, year):
+            key = (r["company"], r["notice_date"], r["city"])
+            if key not in seen:
+                seen.add(key)
+                rows.append(r)
+        table_count += 1
+
+    df = pd.DataFrame(rows) if rows else pd.DataFrame()
+    log.info(f"  Tennessee: {len(df)} rows from {table_count} table(s)")
+    return _normalise(df, "Tennessee")
+
+
 # ── Registry ──────────────────────────────────────────────────────────────────
 # To add a new state: implement scrape_<state>() above and add it here.
 
@@ -1746,7 +1890,8 @@ SCRAPERS: dict[str, callable] = {
     "Oregon":         scrape_oregon,
     "Pennsylvania":   scrape_pennsylvania,
     "South Dakota":   scrape_south_dakota,
-    "Texas":      scrape_texas,
+    "Tennessee":      scrape_tennessee,
+    "Texas":          scrape_texas,
     "Vermont":    scrape_vermont,
     "Virginia":   scrape_virginia,
     "Washington": scrape_washington,
