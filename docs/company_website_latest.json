@@ -1,5 +1,5 @@
 {
-  "last_updated": "April 22, 2026 23:11 UTC",
+  "last_updated": "April 23, 2026 17:20 UTC",
   "data": [
     {
       "company": "ALDI",
@@ -1050,6 +1050,12 @@
       "address": "3575 Highway 528 NW, Rio Rancho, NM 87144",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-NM"
+    },
+    {
+      "company": "Jersey Mike's",
+      "address": "194 W 237th Street, Bronx, NY 10470-2005",
+      "opening_date": "In Development",
+      "link": "https://www.jerseymikes.com/locations/coming-soon/US-NY"
     },
     {
       "company": "Jersey Mike's",
@@ -2349,6 +2355,30 @@
     },
     {
       "company": "Marshalls",
+      "address": "1395 North Verrado Way, Buckeye, Arizona",
+      "opening_date": "May 21, 2026",
+      "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=1652&ref=grandOpenings"
+    },
+    {
+      "company": "Marshalls",
+      "address": "5435 Alexandria Pike, Cold Spring, Kentucky",
+      "opening_date": "Now Open!",
+      "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=1637&ref=grandOpenings"
+    },
+    {
+      "company": "Marshalls",
+      "address": "1379 Nashville Rd, Franklin, Kentucky",
+      "opening_date": "May 21, 2026",
+      "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=1655&ref=grandOpenings"
+    },
+    {
+      "company": "Marshalls",
+      "address": "1585 Plymouth Rd, Minnetonka, Minnesota",
+      "opening_date": "May 21, 2026",
+      "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=184&ref=grandOpenings"
+    },
+    {
+      "company": "Marshalls",
       "address": "1610 Church St, Conway, South Carolina",
       "opening_date": "April 30, 2026",
       "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=1661&ref=grandOpenings"
@@ -2385,12 +2415,6 @@
     },
     {
       "company": "Marshalls",
-      "address": "5435 Alexandria Pike, Cold Spring, Kentucky",
-      "opening_date": "Now Open!",
-      "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=1637&ref=grandOpenings"
-    },
-    {
-      "company": "Marshalls",
       "address": "934 E. 23rd St, Fremont, Nebraska",
       "opening_date": "March 26, 2026",
       "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=1611&ref=grandOpenings"
@@ -2400,6 +2424,66 @@
       "address": "995 North State 434, Altamonte Springs, Florida",
       "opening_date": "Now Open!",
       "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=67&ref=grandOpenings"
+    },
+    {
+      "company": "Kirkland's",
+      "address": "Ann Arbor, MI Maple Village 341 N. Maple Road Ann Arbor, MI 48103",
+      "opening_date": "Coming Soon",
+      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
+    },
+    {
+      "company": "Kirkland's",
+      "address": "West Long Branch, NJ Consumer Center 310 State Route 36 West Long Branch, NJ 07764",
+      "opening_date": "Coming Soon",
+      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
+    },
+    {
+      "company": "Kirkland's",
+      "address": "Deerfield Beach, FL Deerfield Mall 3888 West Hillsboro Blvd Deerfield, FL 33442",
+      "opening_date": "Coming Soon",
+      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
+    },
+    {
+      "company": "Kirkland's",
+      "address": "Wayne, PA Gateway Shopping Center 221 Swedesford Road, Space 183 Wayne, PA 19087",
+      "opening_date": "Coming Soon",
+      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
+    },
+    {
+      "company": "Kirkland's",
+      "address": "Washington, PA Tanger Outlet 2200 Tanger Boulevard Washington, PA 15301",
+      "opening_date": "Coming Soon",
+      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
+    },
+    {
+      "company": "Kirkland's",
+      "address": "Freehold, NJ Freehold Raceway Mall 3710 Route 9 South Freehold, NJ 07728",
+      "opening_date": "Coming Soon",
+      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
+    },
+    {
+      "company": "Kirkland's",
+      "address": "Valley Stream, NY Green Acres Commons 2034 Sunrise Highway Valley Stream, NY 11581",
+      "opening_date": "Coming Soon",
+      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
+    },
+    {
+      "company": "Kirkland's",
+      "address": "Anderson, SC Anderson Station 166 Station Drive Anderson, SC 29621",
+      "opening_date": "Coming Soon",
+      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
+    },
+    {
+      "company": "Kirkland's",
+      "address": "Nashville, TN One Bellevue Place 8167 Sawyer Brown Road Nashville, TN 37221",
+      "opening_date": "Coming Soon",
+      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
+    },
+    {
+      "company": "Kirkland's",
+      "address": "Durham, NC Renaissance Village 8200 Renaissance Parkway Durham, NC 27713",
+      "opening_date": "Coming Soon",
+      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
     }
   ]
 }
