@@ -1433,6 +1433,241 @@ def scrape_oklahoma() -> pd.DataFrame:
     return _normalise(raw, "Oklahoma")
 
 
+# ── Pennsylvania ──────────────────────────────────────────────────────────────
+# JS-rendered nested accordions: Year → Month → Company → panel text.
+# Uses Selenium (lazy imports).
+
+_PA_URL = (
+    "https://www.pa.gov/agencies/dli/programs-services/"
+    "workforce-development-home/warn-requirements/warn-notices"
+)
+_PA_YEARS = ["2025", "2026"]
+
+
+def _pa_build_driver():
+    from selenium import webdriver
+    from selenium.webdriver.chrome.options import Options
+    from selenium.webdriver.chrome.service import Service
+    from webdriver_manager.chrome import ChromeDriverManager
+
+    opts = Options()
+    opts.add_argument("--headless=new")
+    opts.add_argument("--no-sandbox")
+    opts.add_argument("--disable-dev-shm-usage")
+    opts.add_argument("--disable-gpu")
+    opts.add_argument("--window-size=1400,900")
+    opts.add_argument("--disable-blink-features=AutomationControlled")
+    opts.add_experimental_option("excludeSwitches", ["enable-automation"])
+    opts.add_experimental_option("useAutomationExtension", False)
+    opts.add_argument(
+        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+    )
+    svc = Service(ChromeDriverManager().install())
+    return webdriver.Chrome(service=svc, options=opts)
+
+
+def _pa_safe_click(driver, element) -> bool:
+    try:
+        driver.execute_script("arguments[0].scrollIntoView({block:'center'});", element)
+        time.sleep(0.3)
+        driver.execute_script("arguments[0].click();", element)
+        return True
+    except Exception:
+        return False
+
+
+def _pa_expand_if_collapsed(driver, btn) -> bool:
+    from selenium.common.exceptions import StaleElementReferenceException
+    try:
+        if (btn.get_attribute("aria-expanded") or "false").lower() == "false":
+            _pa_safe_click(driver, btn)
+            time.sleep(0.5)
+        return True
+    except StaleElementReferenceException:
+        return False
+
+
+def _pa_parse_panel_text(raw_text: str) -> dict:
+    lines = [l.strip() for l in raw_text.strip().splitlines() if l.strip()]
+    result = {"address": "", "county": "", "employees_affected": "",
+              "notice_date": "", "closure_type": ""}
+    address_lines = []
+    for line in lines:
+        lu = line.upper()
+        if "COUNTY:" in lu:
+            result["county"] = re.sub(r"COUNTY\s*:\s*", "", line, flags=re.I).strip()
+        elif "AFFECTED" in lu:
+            result["employees_affected"] = re.sub(r"#?\s*AFFECTED\s*:\s*", "", line, flags=re.I).strip()
+        elif "EFFECTIVE DATE" in lu:
+            result["notice_date"] = re.sub(r"EFFECTIVE DATE\s*:\s*", "", line, flags=re.I).strip()
+        elif "CLOSURE OR LAYOFF" in lu or "CLOSING OR LAYOFF" in lu:
+            result["closure_type"] = re.sub(
+                r"(CLOSURE OR LAYOFF|CLOSING OR LAYOFF)\s*:\s*", "", line, flags=re.I
+            ).strip()
+        elif not any(k in lu for k in ["COUNTY", "AFFECTED", "EFFECTIVE", "CLOSURE", "CLOSING"]):
+            if not result["county"]:
+                address_lines.append(line)
+    result["address"] = " ".join(address_lines).strip()
+    return result
+
+
+def _pa_scrape_year(driver, year: str) -> list[dict]:
+    from selenium.webdriver.common.by import By
+    from selenium.common.exceptions import NoSuchElementException
+
+    all_rows = []
+    year_headings = driver.find_elements(
+        By.XPATH,
+        f"//h2[contains(@class,'cmp-accordion__main-heading') and normalize-space(text())='{year}']"
+    )
+    if not year_headings:
+        log.warning(f"  Pennsylvania [{year}]: year heading not found")
+        return all_rows
+
+    year_section = driver.execute_script("""
+        var headings = document.querySelectorAll(
+            'h2.cmp-accordion__main-heading--large, h2.cmp-accordion__main-heading');
+        for (var i = 0; i < headings.length; i++) {
+            if (headings[i].textContent.trim() === arguments[0]) {
+                var el = headings[i].parentElement;
+                while (el && !el.querySelector('.cmp-accordion__button')) {
+                    el = el.nextElementSibling || el.parentElement.nextElementSibling;
+                    if (!el) break;
+                }
+                return el;
+            }
+        }
+        return null;
+    """, year)
+
+    if not year_section:
+        log.warning(f"  Pennsylvania [{year}]: accordion section not found")
+        return all_rows
+
+    # Month-level buttons
+    month_btns = year_section.find_elements(
+        By.CSS_SELECTOR,
+        ".cmp-accordion > .cmp-accordion__item > .cmp-accordion__header > .cmp-accordion__button"
+    )
+    if not month_btns:
+        month_btns = year_section.find_elements(
+            By.XPATH,
+            ".//button[contains(@class,'cmp-accordion__button')]"
+            "[.//span[contains(@class,'cmp-accordion__title') and ("
+            "normalize-space(text())='January' or normalize-space(text())='February' or "
+            "normalize-space(text())='March' or normalize-space(text())='April' or "
+            "normalize-space(text())='May' or normalize-space(text())='June' or "
+            "normalize-space(text())='July' or normalize-space(text())='August' or "
+            "normalize-space(text())='September' or normalize-space(text())='October' or "
+            "normalize-space(text())='November' or normalize-space(text())='December'"
+            ")]]"
+        )
+
+    log.info(f"  Pennsylvania [{year}]: {len(month_btns)} month(s)")
+
+    for month_btn in month_btns:
+        try:
+            month_name = month_btn.find_element(By.CSS_SELECTOR, ".cmp-accordion__title").text.strip()
+        except Exception:
+            month_name = "Unknown"
+
+        _pa_expand_if_collapsed(driver, month_btn)
+        time.sleep(0.8)
+
+        panel_id = month_btn.get_attribute("aria-controls")
+        try:
+            month_panel = (driver.find_element(By.ID, panel_id) if panel_id
+                           else driver.execute_script(
+                               "return arguments[0].closest('.cmp-accordion__item')"
+                               ".querySelector('.cmp-accordion__panel');", month_btn))
+        except NoSuchElementException:
+            continue
+        if not month_panel:
+            continue
+
+        company_btns = month_panel.find_elements(By.CSS_SELECTOR, ".cmp-accordion__button")
+
+        for comp_btn in company_btns:
+            try:
+                company_name = comp_btn.find_element(By.CSS_SELECTOR, ".cmp-accordion__title").text.strip()
+            except Exception:
+                company_name = comp_btn.text.strip().split("\n")[0].strip()
+            if not company_name:
+                continue
+
+            _pa_expand_if_collapsed(driver, comp_btn)
+            time.sleep(0.3)
+
+            comp_panel_id = comp_btn.get_attribute("aria-controls")
+            try:
+                comp_panel = (driver.find_element(By.ID, comp_panel_id) if comp_panel_id
+                              else driver.execute_script(
+                                  "return arguments[0].closest('.cmp-accordion__item')"
+                                  ".querySelector('.cmp-accordion__panel');", comp_btn))
+            except NoSuchElementException:
+                comp_panel = None
+            if not comp_panel:
+                continue
+
+            try:
+                raw_text = comp_panel.text.strip()
+                if not raw_text:
+                    soup = BeautifulSoup(comp_panel.get_attribute("innerHTML"), "html.parser")
+                    raw_text = soup.get_text(separator="\n", strip=True)
+            except Exception:
+                raw_text = ""
+            if not raw_text:
+                continue
+
+            parsed = _pa_parse_panel_text(raw_text)
+            all_rows.append({
+                "company":            company_name,
+                "city":               parsed["address"],
+                "notice_date":        parsed["notice_date"],
+                "layoff_date":        parsed["notice_date"],
+                "employees_affected": parsed["employees_affected"],
+                "closure_type":       parsed["closure_type"],
+                "notes":              f"County: {parsed['county']}" if parsed["county"] else "",
+            })
+
+    log.info(f"  Pennsylvania [{year}]: {len(all_rows)} rows")
+    return all_rows
+
+
+def scrape_pennsylvania() -> pd.DataFrame:
+    from selenium.webdriver.common.by import By
+    from selenium.webdriver.support.ui import WebDriverWait
+    from selenium.webdriver.support import expected_conditions as EC
+    from selenium.common.exceptions import TimeoutException
+
+    log.info("Scraping Pennsylvania...")
+    driver = _pa_build_driver()
+    rows: list[dict] = []
+    try:
+        driver.get(_PA_URL)
+        try:
+            WebDriverWait(driver, 30).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, ".cmp-accordion__button"))
+            )
+            time.sleep(2)
+        except TimeoutException:
+            log.error("  Pennsylvania: accordion buttons did not appear")
+            return _normalise(pd.DataFrame(), "Pennsylvania")
+
+        for year in _PA_YEARS:
+            try:
+                rows.extend(_pa_scrape_year(driver, year))
+            except Exception as exc:
+                log.error(f"  Pennsylvania [{year}]: {exc}")
+    finally:
+        driver.quit()
+
+    df = pd.DataFrame(rows) if rows else pd.DataFrame()
+    log.info(f"  Pennsylvania: {len(df)} rows total")
+    return _normalise(df, "Pennsylvania")
+
+
 # ── Registry ──────────────────────────────────────────────────────────────────
 # To add a new state: implement scrape_<state>() above and add it here.
 
@@ -1441,9 +1676,10 @@ SCRAPERS: dict[str, callable] = {
     "Alaska":     scrape_alaska,
     "DC":         scrape_dc,
     "Maryland":   scrape_maryland,
-    "Ohio":       scrape_ohio,
-    "Oklahoma":   scrape_oklahoma,
-    "Oregon":     scrape_oregon,
+    "Ohio":         scrape_ohio,
+    "Oklahoma":     scrape_oklahoma,
+    "Oregon":       scrape_oregon,
+    "Pennsylvania": scrape_pennsylvania,
     "Texas":      scrape_texas,
     "Vermont":    scrape_vermont,
     "Virginia":   scrape_virginia,
