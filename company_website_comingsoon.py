@@ -1100,14 +1100,109 @@ async def _tj_scrape() -> list[dict]:
     return results
 
 
+def _tj_extract_slugs(obj, depth: int = 0) -> list[str]:
+    """Recursively pull article slugs out of __NEXT_DATA__ JSON."""
+    if depth > 12:
+        return []
+    slugs: list[str] = []
+    if isinstance(obj, dict):
+        slug = obj.get("slug") or obj.get("url") or obj.get("path")
+        t    = obj.get("__typename") or obj.get("type") or ""
+        if slug and isinstance(slug, str) and "announcement" in t.lower():
+            slugs.append(slug.lstrip("/"))
+        for v in obj.values():
+            slugs.extend(_tj_extract_slugs(v, depth + 1))
+    elif isinstance(obj, list):
+        for item in obj:
+            slugs.extend(_tj_extract_slugs(item, depth + 1))
+    return slugs
+
+
+def _tj_requests_scrape() -> list[dict]:
+    """Primary: plain requests + __NEXT_DATA__ extraction (no JS engine needed)."""
+    _hdrs = {
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/124.0.0.0 Safari/537.36"
+        ),
+        "Accept":          "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Cache-Control":   "no-cache",
+    }
+    session = requests.Session()
+    session.headers.update(_hdrs)
+
+    seen: set[str]    = set()
+    article_urls: list[str] = []
+
+    for pg in range(1, TJ_PAGES + 1):
+        url = TJ_BASE_URL if pg == 1 else f"{TJ_BASE_URL}&page={pg}"
+        try:
+            resp = session.get(url, timeout=30)
+            soup = BeautifulSoup(resp.text, "html.parser")
+
+            # 1. Try __NEXT_DATA__ (most reliable for Next.js)
+            script_tag = soup.find("script", {"id": "__NEXT_DATA__"})
+            if script_tag and script_tag.string:
+                nd = json.loads(script_tag.string)
+                for slug in _tj_extract_slugs(nd):
+                    full = f"https://www.traderjoes.com/home/announcements/{slug}"
+                    if full not in seen:
+                        seen.add(full); article_urls.append(full)
+
+            # 2. Fallback: raw <a> link scan
+            for a in soup.find_all("a", href=True):
+                href = a["href"]
+                if "/home/announcements/" not in href or "?category" in href:
+                    continue
+                full = href if href.startswith("http") else f"https://www.traderjoes.com{href}"
+                if full not in seen:
+                    seen.add(full); article_urls.append(full)
+
+        except Exception as e:
+            print(f"[Trader Joe's] Requests listing page {pg}: {e}")
+
+    print(f"[Trader Joe's] Requests found {len(article_urls)} article URL(s).")
+    results: list[dict] = []
+    for url in article_urls:
+        try:
+            resp   = session.get(url, timeout=20)
+            soup   = BeautifulSoup(resp.text, "html.parser")
+            body   = soup.get_text("\n")
+            opening = _tj_parse_opening_date(body)
+            address = _tj_parse_address(body)
+            print(f"  → {opening or '(no date)'} | {address or '(no address)'}")
+            results.append({
+                "company":      "Trader Joe's",
+                "address":      address,
+                "opening_date": opening,
+                "link":         url,
+            })
+        except Exception as e:
+            print(f"[Trader Joe's] Article {url}: {e}")
+    return results
+
+
 def scrape_trader_joes() -> list[dict]:
     print(f"[Trader Joe's] Scraping {TJ_BASE_URL} ({TJ_PAGES} pages)…")
+    # Try lightweight requests approach first (reliable in CI/CD)
+    try:
+        results = _tj_requests_scrape()
+        if results:
+            print(f"[Trader Joe's] Found {len(results)} opening(s) via requests.")
+            return results
+        print("[Trader Joe's] Requests returned 0 — falling back to Playwright…")
+    except Exception as e:
+        print(f"[Trader Joe's] Requests failed ({e}) — falling back to Playwright…")
+    # Playwright fallback
     try:
         results = asyncio.run(_tj_scrape())
     except Exception as e:
-        print(f"[Trader Joe's] Error: {e}")
+        print(f"[Trader Joe's] Playwright error: {e}")
         return []
-    print(f"[Trader Joe's] Found {len(results)} opening(s).")
+    print(f"[Trader Joe's] Found {len(results)} opening(s) via Playwright.")
     return results
 
 
