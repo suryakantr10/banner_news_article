@@ -1079,6 +1079,240 @@ def scrape_ohio() -> pd.DataFrame:
     return _normalise(df, "Ohio")
 
 
+# ── Oklahoma ─────────────────────────────────────────────────────────────────
+# Salesforce LWC table — reads data-cell-value attributes to bypass Shadow DOM.
+# Uses Selenium (lazy imports).
+
+_OK_URL       = "https://www.employoklahoma.gov/Participants/s/warnnotices"
+_OK_BOOT_WAIT = 50   # seconds for Salesforce LWC to render
+_OK_PAGE_WAIT = 8    # seconds after clicking Next
+_OK_COLUMNS   = ["Employer", "City", "Zip Code", "Local Workforce Board", "Notice Date", "Notice Type"]
+_OK_COL_KEY_MAP = {
+    "OESC_Employer_Name__c":             "Employer",
+    "OESC_Employer_City__c":             "City",
+    "OESC_Employer_Zip_Code__c":         "Zip Code",
+    "Select_Local_Workforce_Board__c":   "Local Workforce Board",
+    "Launchpad__Notice_Date__c":         "Notice Date",
+    "Launchpad__Layoff_Closure_Type__c": "Notice Type",
+}
+
+
+def _ok_build_driver():
+    from selenium import webdriver
+    from selenium.webdriver.chrome.options import Options
+    from selenium.webdriver.chrome.service import Service
+    from webdriver_manager.chrome import ChromeDriverManager
+
+    opts = Options()
+    opts.add_argument("--headless=new")
+    opts.add_argument("--no-sandbox")
+    opts.add_argument("--disable-dev-shm-usage")
+    opts.add_argument("--disable-gpu")
+    opts.add_argument("--window-size=1600,1000")
+    opts.add_argument("--disable-blink-features=AutomationControlled")
+    opts.add_experimental_option("excludeSwitches", ["enable-automation"])
+    opts.add_experimental_option("useAutomationExtension", False)
+    opts.add_argument(
+        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+    )
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=opts)
+    driver.execute_cdp_cmd(
+        "Page.addScriptToEvaluateOnNewDocument",
+        {"source": "Object.defineProperty(navigator,'webdriver',{get:()=>undefined});"},
+    )
+    return driver
+
+
+def _ok_wait_for_table(driver, timeout=_OK_BOOT_WAIT) -> bool:
+    import re as _re
+    from selenium.webdriver.common.by import By
+    deadline = time.time() + timeout
+    attempt  = 0
+    while time.time() < deadline:
+        rows  = driver.find_elements(By.CSS_SELECTOR, "tr[data-row-number]")
+        cells = driver.find_elements(By.CSS_SELECTOR, "tr[data-row-number] [data-cell-value]")
+        if rows and cells:
+            log.info(f"  Oklahoma: table found after ~{attempt*2}s ({len(rows)} rows visible)")
+            time.sleep(1.5)
+            return True
+        attempt += 1
+        time.sleep(2)
+    return False
+
+
+def _ok_get_page_info(driver) -> str:
+    from selenium.webdriver.common.by import By
+    for xpath in (
+        "//span[contains(text(),'Displaying') and contains(text(),'Total Records')]",
+        "//span[contains(text(),'Page') and contains(text(),'of')]",
+    ):
+        try:
+            spans = driver.find_elements(By.XPATH, xpath)
+            if spans:
+                return spans[0].text.strip()
+        except Exception:
+            pass
+    return ""
+
+
+def _ok_get_total_pages(driver) -> int:
+    import re as _re
+    from selenium.webdriver.common.by import By
+    try:
+        for s in driver.find_elements(By.XPATH,
+                "//span[contains(text(),'Page') and contains(text(),'of')]"):
+            m = _re.search(r"Page\s+\d+\s+of\s+(\d+)", s.text)
+            if m:
+                return int(m.group(1))
+    except Exception:
+        pass
+    return 99
+
+
+def _ok_extract_rows(driver) -> list[dict]:
+    import re as _re
+    from selenium.webdriver.common.by import By
+    from selenium.common.exceptions import StaleElementReferenceException
+
+    rows = []
+    for tr in driver.find_elements(By.CSS_SELECTOR, "tr[data-row-number]"):
+        row = {col: "" for col in _OK_COLUMNS}
+        try:
+            for cell in tr.find_elements(By.CSS_SELECTOR, "[data-label]"):
+                label   = cell.get_attribute("data-label") or ""
+                value   = (cell.get_attribute("data-cell-value") or "").strip()
+                if label in _OK_COLUMNS:
+                    row[label] = value
+                else:
+                    col_key = cell.get_attribute("data-col-key-value") or ""
+                    for prefix, col_name in _OK_COL_KEY_MAP.items():
+                        if col_key.startswith(prefix):
+                            row[col_name] = value
+                            break
+            if not row.get("Employer"):
+                continue
+            nd = row.get("Notice Date", "")
+            if _re.match(r"\d{4}-\d{2}-\d{2}", nd):
+                p = nd.split("-")
+                row["Notice Date"] = f"{int(p[1])}/{int(p[2])}/{p[0]}"
+            rows.append(row)
+        except StaleElementReferenceException:
+            continue
+        except Exception:
+            continue
+    return rows
+
+
+def _ok_is_next_disabled(driver) -> bool:
+    from selenium.webdriver.common.by import By
+    try:
+        btns = driver.find_elements(By.XPATH, "//button[contains(normalize-space(.),'Next')]")
+        for btn in btns:
+            if (btn.get_attribute("aria-disabled") or "").lower() == "true":
+                return True
+        return not bool(btns)
+    except Exception:
+        return True
+
+
+def _ok_click_next(driver) -> bool:
+    from selenium.webdriver.common.by import By
+    from selenium.common.exceptions import NoSuchElementException
+    try:
+        for btn in driver.find_elements(By.XPATH,
+                "//button[contains(normalize-space(.),'Next')]"):
+            if (btn.get_attribute("aria-disabled") or "").lower() == "true":
+                return False
+            if btn.is_displayed():
+                driver.execute_script("arguments[0].scrollIntoView(true);", btn)
+                driver.execute_script("arguments[0].click();", btn)
+                return True
+    except (NoSuchElementException, Exception):
+        pass
+    return False
+
+
+def _ok_wait_page_advance(driver, prev_info: str, timeout=15) -> bool:
+    deadline = time.time() + timeout
+    while time.time() < deadline:
+        if _ok_get_page_info(driver) != prev_info:
+            return True
+        time.sleep(1)
+    return False
+
+
+def scrape_oklahoma() -> pd.DataFrame:
+    """
+    Scrapes Oklahoma WARN notices via Selenium.
+    Reads data-cell-value attributes to bypass the Salesforce LWC Shadow DOM.
+    URL: https://www.employoklahoma.gov/Participants/s/warnnotices
+    """
+    log.info("Scraping Oklahoma...")
+    driver = None
+    try:
+        driver = _ok_build_driver()
+        driver.get(_OK_URL)
+
+        if not _ok_wait_for_table(driver):
+            log.warning("  Oklahoma: table did not render, returning empty")
+            return _normalise(pd.DataFrame(), "Oklahoma")
+
+        total_pages = _ok_get_total_pages(driver)
+        log.info(f"  Oklahoma: {total_pages} page(s) detected")
+
+        all_rows, seen, page_no, prev_snap = [], set(), 1, None
+
+        while True:
+            rows      = _ok_extract_rows(driver)
+            page_info = _ok_get_page_info(driver)
+
+            snap = str([r.get("Employer", "") for r in rows[:3]])
+            if snap == prev_snap and page_no > 1:
+                log.warning(f"  Oklahoma page {page_no}: stall detected, stopping")
+                break
+            prev_snap = snap
+
+            for r in rows:
+                key = (r["Employer"], r["Notice Date"], r["City"])
+                if key not in seen:
+                    seen.add(key)
+                    all_rows.append(r)
+
+            log.info(f"  Oklahoma page {page_no}/{total_pages}: {len(all_rows)} total | {page_info}")
+
+            if page_no >= total_pages or _ok_is_next_disabled(driver):
+                break
+            if not _ok_click_next(driver):
+                break
+            if not _ok_wait_page_advance(driver, page_info):
+                log.warning("  Oklahoma: page did not advance, stopping")
+                break
+            time.sleep(_OK_PAGE_WAIT)
+            page_no += 1
+
+    except Exception as e:
+        log.error(f"  Oklahoma scraping failed: {e}")
+        all_rows = []
+    finally:
+        if driver:
+            driver.quit()
+
+    raw = pd.DataFrame(all_rows) if all_rows else pd.DataFrame()
+    if not raw.empty:
+        raw.rename(columns={
+            "Employer":              "company",
+            "City":                  "city",
+            "Notice Date":           "notice_date",
+            "Notice Type":           "closure_type",
+            "Local Workforce Board": "notes",
+            "Zip Code":              "zip",
+        }, inplace=True)
+
+    log.info(f"  Oklahoma: {len(raw)} rows")
+    return _normalise(raw, "Oklahoma")
+
+
 # ── Registry ──────────────────────────────────────────────────────────────────
 # To add a new state: implement scrape_<state>() above and add it here.
 
@@ -1088,6 +1322,7 @@ SCRAPERS: dict[str, callable] = {
     "DC":         scrape_dc,
     "Maryland":   scrape_maryland,
     "Ohio":       scrape_ohio,
+    "Oklahoma":   scrape_oklahoma,
     "Texas":      scrape_texas,
     "Vermont":    scrape_vermont,
     "Virginia":   scrape_virginia,
