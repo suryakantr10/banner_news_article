@@ -1668,6 +1668,71 @@ def scrape_pennsylvania() -> pd.DataFrame:
     return _normalise(df, "Pennsylvania")
 
 
+# ── South Dakota ──────────────────────────────────────────────────────────────
+# Pure requests + BeautifulSoup — no Selenium needed.
+# URL: https://dlr.sd.gov/workforce_services/businesses/warn_notices.aspx
+
+_SD_URL      = "https://dlr.sd.gov/workforce_services/businesses/warn_notices.aspx"
+_SD_BASE_URL = "https://dlr.sd.gov"
+
+
+def _sd_resolve_pdf(href: str) -> str:
+    if not href:
+        return ""
+    href = href.strip()
+    if href.startswith("http"):
+        return href
+    if href.startswith("/"):
+        return _SD_BASE_URL + href
+    return _SD_BASE_URL + "/workforce_services/businesses/" + href
+
+
+def scrape_south_dakota() -> pd.DataFrame:
+    """
+    Scrapes South Dakota WARN notices via requests + BeautifulSoup.
+    URL: https://dlr.sd.gov/workforce_services/businesses/warn_notices.aspx
+    """
+    log.info("Scraping South Dakota...")
+    resp = requests.get(_SD_URL, headers=HEADERS, timeout=30)
+    resp.raise_for_status()
+    soup = BeautifulSoup(resp.content, "lxml")
+
+    table = soup.find("table", {"bordercolor": "003366"}) or soup.find("table")
+    if not table:
+        log.warning("  South Dakota: WARN table not found")
+        return _normalise(pd.DataFrame(), "South Dakota")
+
+    trs = table.find("tbody").find_all("tr") if table.find("tbody") else table.find_all("tr")
+    rows = []
+    for tr in trs:
+        tds = tr.find_all("td")
+        if len(tds) < 4:
+            continue
+        if tds[0].get("bgcolor") == "#e7e7e7":
+            continue
+        if "tablecolumnheadings" in tds[0].get("class", []):
+            continue
+
+        link = tds[0].find("a")
+        company = (link or tds[0]).get_text(separator=" ", strip=True)
+        pdf_url = _sd_resolve_pdf(link.get("href", "") if link else "")
+
+        if not company:
+            continue
+        rows.append({
+            "company":            company,
+            "city":               tds[1].get_text(separator=" ", strip=True),
+            "notice_date":        tds[2].get_text(separator=" ", strip=True),
+            "employees_affected": tds[3].get_text(separator=" ", strip=True),
+            "closure_type":       "",
+            "notes":              pdf_url,
+        })
+
+    df = pd.DataFrame(rows) if rows else pd.DataFrame()
+    log.info(f"  South Dakota: {len(df)} rows")
+    return _normalise(df, "South Dakota")
+
+
 # ── Registry ──────────────────────────────────────────────────────────────────
 # To add a new state: implement scrape_<state>() above and add it here.
 
@@ -1678,8 +1743,9 @@ SCRAPERS: dict[str, callable] = {
     "Maryland":   scrape_maryland,
     "Ohio":         scrape_ohio,
     "Oklahoma":     scrape_oklahoma,
-    "Oregon":       scrape_oregon,
-    "Pennsylvania": scrape_pennsylvania,
+    "Oregon":         scrape_oregon,
+    "Pennsylvania":   scrape_pennsylvania,
+    "South Dakota":   scrape_south_dakota,
     "Texas":      scrape_texas,
     "Vermont":    scrape_vermont,
     "Virginia":   scrape_virginia,
