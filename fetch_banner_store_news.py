@@ -456,6 +456,30 @@ else:
         df_out.to_csv(filename, index=False, encoding='utf-8')
         print(f"\nResults saved to: {filename}")
         print(f"Total articles: {len(all_rows)}")
+    
+    # ────────────────────────────────────────────────
+    # Master file — accumulates all daily results
+    # ────────────────────────────────────────────────
+    MASTER_FILE = STORE_NEWS_DIR / "banner_news_master.csv"
+
+    if all_rows:
+        df_new = pd.DataFrame(all_rows)
+
+        if MASTER_FILE.exists():
+            df_master = pd.read_csv(MASTER_FILE, encoding='utf-8')
+            df_master = pd.concat([df_master, df_new], ignore_index=True)
+        else:
+            df_master = df_new
+
+        # Deduplicate on Store + Title + Published (handles re-runs on same day)
+        df_master = df_master.drop_duplicates(subset=['Store', 'Title', 'Published'])
+
+        # Sort newest first
+        df_master['Published'] = pd.to_datetime(df_master['Published'], errors='coerce', utc=True)
+        df_master = df_master.sort_values('Published', ascending=False)
+
+        df_master.to_csv(MASTER_FILE, index=False, encoding='utf-8')
+        print(f"✓ Master file updated: {MASTER_FILE}  ({len(df_master)} total rows)")
 
 # ────────────────────────────────────────────────
 # Always create latest_news.json (even if no news found)
