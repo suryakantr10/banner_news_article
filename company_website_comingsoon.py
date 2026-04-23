@@ -219,8 +219,8 @@ def scrape_dogtopia() -> list[dict]:
             city     = addr_info.get("location_city", "") or ""
             state    = addr_info.get("location_state_prov", "") or ""
             zipcode  = addr_info.get("location_zip_postal", "") or ""
-            parts    = [p for p in [street, city, state, zipcode] if p]
-            address  = ", ".join(parts)
+            country  = addr_info.get("location_country", "") or ""
+            address  = f"{street}, {city}, {state} {zipcode}, {country}".strip(", ")
 
             opening_date = hours_info.get("coming_soon_header_text", "") or ""
             link         = loc.get("link", "") or ""
