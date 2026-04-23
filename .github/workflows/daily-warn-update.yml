@@ -29,10 +29,16 @@ jobs:
       - name: Install Python dependencies
         run: |
           pip install --upgrade pip
-          pip install requests beautifulsoup4 pandas lxml playwright nest_asyncio
+          pip install requests beautifulsoup4 pandas lxml playwright nest_asyncio \
+                      selenium webdriver-manager openpyxl
 
       - name: Install Playwright browsers
         run: playwright install chromium --with-deps
+
+      - name: Install Chrome for Selenium
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq google-chrome-stable || true
 
       - name: Run WARN scraper
         run: python warn.py
