@@ -745,17 +745,352 @@ def scrape_virginia(max_pages: int | None = None) -> pd.DataFrame:
     return _normalise(df, "Virginia")
 
 
+# ── Ohio ─────────────────────────────────────────────────────────────────────
+# Uses Selenium (lazy imports so the rest of warn.py works without selenium installed).
+
+_OH_URLS = {
+    "2025": (
+        "https://jfs.ohio.gov/job-services-and-unemployment/"
+        "job-services/job-programs-and-services/submit-a-warn-notice/"
+        "2025-Public-Notice-of-Layoffs-and-Closures"
+    ),
+    "2026": (
+        "https://jfs.ohio.gov/job-services-and-unemployment/"
+        "job-services/job-programs-and-services/submit-a-warn-notice/"
+        "current-public-notices-of-layoffs-and-closures-sa"
+    ),
+}
+_OH_TABLE_SELS = (
+    "table#js-table-visualization",
+    "table.dataTable",
+    "table",
+)
+_OH_ROW_SELS  = tuple(f"{s} tbody tr" for s in _OH_TABLE_SELS)
+_OH_NEXT_SELS = (
+    "button.dt-paging-button.next",
+    "a.paginate_button.next",
+    "button[aria-label='Next']",
+    "a[aria-label='Next']",
+    "#js-table-visualization_next",
+)
+
+
+def _oh_build_driver():
+    from selenium import webdriver
+    from selenium.webdriver.chrome.options import Options
+    from selenium.webdriver.chrome.service import Service
+    from webdriver_manager.chrome import ChromeDriverManager
+
+    opts = Options()
+    opts.add_argument("--headless=new")
+    opts.add_argument("--no-sandbox")
+    opts.add_argument("--disable-dev-shm-usage")
+    opts.add_argument("--disable-gpu")
+    opts.add_argument("--window-size=1600,1200")
+    opts.add_argument("--disable-blink-features=AutomationControlled")
+    opts.add_experimental_option("excludeSwitches", ["enable-automation"])
+    opts.add_experimental_option("useAutomationExtension", False)
+    opts.add_argument(
+        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+    )
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=opts)
+    driver.execute_cdp_cmd(
+        "Page.addScriptToEvaluateOnNewDocument",
+        {"source": "Object.defineProperty(navigator,'webdriver',{get:()=>undefined});"},
+    )
+    return driver
+
+
+def _oh_count_rows(driver) -> int:
+    from selenium.webdriver.common.by import By
+    for sel in _OH_ROW_SELS:
+        try:
+            n = len(driver.find_elements(By.CSS_SELECTOR, sel))
+            if n:
+                return n
+        except Exception:
+            pass
+    return 0
+
+
+def _oh_switch_iframe(driver) -> bool:
+    from selenium.webdriver.common.by import By
+    driver.switch_to.default_content()
+    for frame in driver.find_elements(By.TAG_NAME, "iframe"):
+        try:
+            driver.switch_to.default_content()
+            driver.switch_to.frame(frame)
+            if driver.find_elements(By.CSS_SELECTOR, "table"):
+                return True
+        except Exception:
+            continue
+    driver.switch_to.default_content()
+    return False
+
+
+def _oh_find_table(driver, timeout=30):
+    from selenium.webdriver.common.by import By
+    end = time.time() + timeout
+    while time.time() < end:
+        for sel in _OH_TABLE_SELS:
+            try:
+                els = driver.find_elements(By.CSS_SELECTOR, sel)
+                for el in els:
+                    if el.is_displayed():
+                        return el
+                if els and sel == "table#js-table-visualization":
+                    return els[0]
+            except Exception:
+                pass
+        time.sleep(0.3)
+    return None
+
+
+def _oh_set_page_length(driver) -> None:
+    from selenium.webdriver.common.by import By
+    from selenium.webdriver.support.ui import WebDriverWait, Select
+    from selenium.webdriver.support import expected_conditions as EC
+
+    for sel in ("select#dt-length-0", "select[name$='_length']", "select[aria-controls]"):
+        try:
+            el = WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR, sel)))
+            s = Select(el)
+            values = [o.get_attribute("value") for o in s.options]
+            for target in ("-1", "100"):
+                if target in values:
+                    s.select_by_value(target)
+                    time.sleep(2.5)
+                    return
+            s.select_by_index(len(s.options) - 1)
+            time.sleep(2.5)
+            return
+        except Exception:
+            continue
+
+
+def _oh_rows_from_embedded_json(driver, url: str) -> list[dict]:
+    import json as _json
+    src = driver.page_source or ""
+    start = src.find('{"data":')
+    if start < 0:
+        return []
+    depth, in_str, esc, end = 0, False, False, None
+    for i in range(start, len(src)):
+        ch = src[i]
+        if in_str:
+            esc = (ch == "\\") and not esc
+            if not esc and ch == '"':
+                in_str = False
+        elif ch == '"':
+            in_str = True
+        elif ch == '{':
+            depth += 1
+        elif ch == '}':
+            depth -= 1
+            if depth == 0:
+                end = i + 1
+                break
+    if not end:
+        return []
+    try:
+        payload = _json.loads(src[start:end])
+    except Exception:
+        return []
+    data = payload.get("data") or []
+    if len(data) < 3:
+        return []
+    rows = []
+    for rec in data[2:]:
+        if not isinstance(rec, list) or len(rec) < 9:
+            continue
+        company = str(rec[0] or "").strip()
+        if not company:
+            continue
+        phone = str(rec[7] or "").strip()
+        union = str(rec[8] or "").strip()
+        notes_parts = [f"Phone: {phone}" if phone else "", f"Union: {union}" if union else ""]
+        rows.append({
+            "company":            company,
+            "notice_date":        str(rec[1] or "").strip(),
+            "city":               str(rec[3] or "").strip(),
+            "closure_type":       str(rec[4] or "").strip(),
+            "employees_affected": str(rec[5] or "").strip(),
+            "layoff_date":        str(rec[6] or "").strip(),
+            "notes":              " | ".join(p for p in notes_parts if p),
+        })
+    return rows
+
+
+def _oh_rows_from_page(driver, url: str) -> list[dict]:
+    from selenium.webdriver.common.by import By
+    from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException
+
+    trs = []
+    for sel in _OH_ROW_SELS:
+        try:
+            trs = driver.find_elements(By.CSS_SELECTOR, sel)
+            if trs:
+                break
+        except Exception:
+            pass
+
+    rows = []
+    for tr in trs:
+        try:
+            tds = tr.find_elements(By.TAG_NAME, "td")
+            if len(tds) < 2:
+                continue
+            company = (tds[0].text or "").strip()
+            if not company or company.lower() in ("company", "employer"):
+                continue
+
+            pdf_url = ""
+            try:
+                a = tds[0].find_element(By.CSS_SELECTOR, "a[href]")
+                pdf_url = (a.get_attribute("href") or "").strip()
+            except NoSuchElementException:
+                pass
+
+            def cell(i):
+                return (tds[i].text or "").strip() if i < len(tds) else ""
+
+            phone, union = cell(6), cell(7)
+            notes_parts = [
+                f"Phone: {phone}" if phone else "",
+                f"Union: {union}" if union else "",
+                f"PDF: {pdf_url}" if pdf_url else "",
+            ]
+            rows.append({
+                "company":            company,
+                "notice_date":        cell(1),
+                "city":               cell(2),
+                "closure_type":       cell(3),
+                "employees_affected": cell(4),
+                "layoff_date":        cell(5),
+                "notes":              " | ".join(p for p in notes_parts if p),
+            })
+        except StaleElementReferenceException:
+            continue
+        except Exception:
+            continue
+    return rows
+
+
+def _oh_click_next(driver) -> bool:
+    from selenium.webdriver.common.by import By
+    from selenium.webdriver.support.ui import WebDriverWait
+
+    before = _oh_count_rows(driver)
+    for sel in _OH_NEXT_SELS:
+        try:
+            btns = driver.find_elements(By.CSS_SELECTOR, sel)
+            btn = next((b for b in btns if b.is_displayed()), None)
+            if not btn:
+                continue
+            cls = (btn.get_attribute("class") or "").lower()
+            if "disabled" in cls or btn.get_attribute("aria-disabled") == "true":
+                continue
+            driver.execute_script("arguments[0].click();", btn)
+            try:
+                WebDriverWait(driver, 15).until(lambda d: _oh_count_rows(d) != before)
+            except Exception:
+                time.sleep(2.5)
+            time.sleep(1.0)
+            return True
+        except Exception:
+            continue
+    return False
+
+
+def _oh_scrape_year(driver, year: str, url: str) -> list[dict]:
+    from selenium.webdriver.support.ui import WebDriverWait
+
+    log.info(f"  Ohio [{year}] loading {url}")
+    driver.switch_to.default_content()
+    driver.get(url)
+    try:
+        WebDriverWait(driver, 45).until(
+            lambda d: d.execute_script("return document.readyState") == "complete"
+        )
+    except Exception:
+        pass
+    time.sleep(5.0 if year == "2025" else 3.0)
+
+    _oh_switch_iframe(driver)
+    table = _oh_find_table(driver, timeout=30)
+    if not table:
+        driver.refresh()
+        time.sleep(5.0)
+        _oh_switch_iframe(driver)
+        table = _oh_find_table(driver, timeout=30)
+
+    if not table:
+        fallback = _oh_rows_from_embedded_json(driver, url)
+        if fallback:
+            log.info(f"  Ohio [{year}] {len(fallback)} rows from embedded JSON fallback")
+            return fallback
+        log.warning(f"  Ohio [{year}] no table found, skipping")
+        return []
+
+    _oh_set_page_length(driver)
+    time.sleep(1.0)
+
+    all_rows, seen, page_no = [], set(), 1
+    while True:
+        for r in _oh_rows_from_page(driver, url):
+            key = (r["company"], r["notice_date"], r["city"])
+            if key not in seen:
+                seen.add(key)
+                all_rows.append(r)
+        log.info(f"  Ohio [{year}] page {page_no}: {len(all_rows)} total")
+        if not _oh_click_next(driver):
+            break
+        page_no += 1
+        if page_no > 100:
+            log.warning(f"  Ohio [{year}] safety-stopped at 100 pages")
+            break
+
+    return all_rows
+
+
+def scrape_ohio() -> pd.DataFrame:
+    """
+    Scrapes Ohio WARN notices for 2025 and 2026 via Selenium.
+    2025: https://jfs.ohio.gov/.../2025-Public-Notice-of-Layoffs-and-Closures
+    2026: https://jfs.ohio.gov/.../current-public-notices-of-layoffs-and-closures-sa
+    """
+    log.info("Scraping Ohio...")
+    driver = None
+    try:
+        driver = _oh_build_driver()
+        rows: list[dict] = []
+        for year, url in _OH_URLS.items():
+            rows.extend(_oh_scrape_year(driver, year, url))
+    except Exception as e:
+        log.error(f"  Ohio scraping failed: {e}")
+        rows = []
+    finally:
+        if driver:
+            driver.quit()
+
+    df = pd.DataFrame(rows) if rows else pd.DataFrame()
+    log.info(f"  Ohio: {len(df)} rows")
+    return _normalise(df, "Ohio")
+
+
 # ── Registry ──────────────────────────────────────────────────────────────────
 # To add a new state: implement scrape_<state>() above and add it here.
 
 SCRAPERS: dict[str, callable] = {
-    "Alabama":   scrape_alabama,
-    "Alaska":    scrape_alaska,
-    "DC":        scrape_dc,
-    "Maryland":  scrape_maryland,
-    "Texas":     scrape_texas,
-    "Vermont":   scrape_vermont,
-    "Virginia":  scrape_virginia,
+    "Alabama":    scrape_alabama,
+    "Alaska":     scrape_alaska,
+    "DC":         scrape_dc,
+    "Maryland":   scrape_maryland,
+    "Ohio":       scrape_ohio,
+    "Texas":      scrape_texas,
+    "Vermont":    scrape_vermont,
+    "Virginia":   scrape_virginia,
     "Washington": scrape_washington,
     # "Arizona": scrape_arizona,   ← add new states here
 }
