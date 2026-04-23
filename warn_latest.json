@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-04-22",
-  "total": 705,
+  "last_updated": "2026-04-23",
+  "total": 706,
   "data": [
     {
       "state": "Alabama",
@@ -1579,6 +1579,29 @@
       "Local Area": "",
       "Total  Employees": "",
       "Effective  Date": "",
+      "COUNTY_NAME": "",
+      "WDA_NAME": "",
+      "WFDD_RECEIVED_DATE": "",
+      "zip": "",
+      "lwib_area": "",
+      "address": "",
+      "contact_person": "",
+      "collective_bargaining_unit": "",
+      "type_detail": ""
+    },
+    {
+      "state": "Maryland",
+      "company": "Trulite Glass & Aluminum Services, LLC",
+      "city": "2190 Urbana Pike Ijamsville, MD 21754",
+      "notice_date": "04/21/2026",
+      "layoff_date": "",
+      "employees_affected": "",
+      "closure_type": "Plant Closure",
+      "notes": "",
+      "NAICS  Code": "327215.0",
+      "Local Area": "Frederick",
+      "Total  Employees": "21",
+      "Effective  Date": "06/19/2026",
       "COUNTY_NAME": "",
       "WDA_NAME": "",
       "WFDD_RECEIVED_DATE": "",
