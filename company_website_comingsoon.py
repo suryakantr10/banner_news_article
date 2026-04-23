@@ -17,6 +17,7 @@ Scrapers:
   • 7-Eleven       — https://www.7-eleven.com/lp/grand-openings (requests)
   • Marshalls      — https://www.marshalls.com/us/store/jump/topic/Grand-Openings/2600014 (Selenium)
   • Wawa           — https://www.wawa.com/about-us/public-relations/grand-openings (Playwright)
+  • Kirkland's     — https://www.kirklands.com/content.jsp?pageName=openingstores (requests)
 
 Output:
   docs/company_website_latest.json
@@ -1530,6 +1531,52 @@ def scrape_marshalls(driver: webdriver.Chrome) -> list[dict]:
     return results
 
 
+# ── Kirkland's scraper ───────────────────────────────────────────────────────
+
+KIRKLANDS_URL = "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
+KIRKLANDS_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36"
+    ),
+    "Accept": (
+        "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,"
+        "image/webp,image/apng,*/*;q=0.8"
+    ),
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://www.kirklands.com/",
+    "Connection": "keep-alive",
+}
+
+
+def scrape_kirklands() -> list[dict]:
+    print(f"[Kirkland's] Fetching {KIRKLANDS_URL}")
+    try:
+        resp = requests.get(KIRKLANDS_URL, headers=KIRKLANDS_HEADERS, timeout=30)
+        resp.raise_for_status()
+    except Exception as e:
+        print(f"[Kirkland's] Error: {e}")
+        return []
+
+    soup = BeautifulSoup(resp.content, "html.parser")
+    results = []
+
+    for box in soup.select("div.storeInfo"):
+        address = box.get_text(separator=" ", strip=True)
+        if not address:
+            continue
+        opening_date = extract_date(address) or "Coming Soon"
+        results.append({
+            "company":      "Kirkland's",
+            "address":      address,
+            "opening_date": opening_date,
+            "link":         KIRKLANDS_URL,
+        })
+
+    print(f"[Kirkland's] {len(results)} store(s) parsed.")
+    return results
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -1654,6 +1701,12 @@ def main():
     finally:
         if driver:
             driver.quit()
+
+    # ── Kirkland's ──
+    try:
+        all_stores.extend(scrape_kirklands())
+    except Exception as e:
+        print(f"[Kirkland's] Scraping failed: {e}")
 
     print(f"\nTotal records collected: {len(all_stores)}")
 
