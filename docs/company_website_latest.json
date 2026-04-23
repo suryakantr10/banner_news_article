@@ -1,5 +1,5 @@
 {
-  "last_updated": "April 23, 2026 22:16 UTC",
+  "last_updated": "April 23, 2026 22:35 UTC",
   "data": [
     {
       "company": "ALDI",
@@ -1515,12 +1515,6 @@
     },
     {
       "company": "Chick-fil-A",
-      "address": "578 Grand Army of the Republic Hwy",
-      "opening_date": "April 9, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-somerset"
-    },
-    {
-      "company": "Chick-fil-A",
       "address": "2060 Southfield Rd",
       "opening_date": "March 30, 2026",
       "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-lincoln-park"
@@ -1542,6 +1536,12 @@
       "address": "9081 Snowden River Pkwy",
       "opening_date": "April 2, 2026",
       "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-snowden-river-pkwy"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "400 Premium Outlets Drive",
+      "opening_date": "April 2, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-gloucester-outlets"
     },
     {
       "company": "Chick-fil-A",
