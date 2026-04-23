@@ -1107,15 +1107,25 @@ def _tj_extract_slugs(obj, depth: int = 0) -> list[str]:
     slugs: list[str] = []
     if isinstance(obj, dict):
         slug = obj.get("slug") or obj.get("url") or obj.get("path")
-        t    = obj.get("__typename") or obj.get("type") or ""
-        if slug and isinstance(slug, str) and "announcement" in t.lower():
+        t    = (obj.get("__typename") or obj.get("type") or "").lower()
+        # Accept any object that has a slug and looks like content (article/post/announcement/etc.)
+        CONTENT_TYPES = ("announcement", "article", "post", "story", "entry", "content", "page")
+        if slug and isinstance(slug, str) and any(ct in t for ct in CONTENT_TYPES):
             slugs.append(slug.lstrip("/"))
-        for v in obj.values():
+        # Also capture if the slug appears under an "announcements"-keyed list
+        for k, v in obj.items():
+            if k.lower() in ("announcements", "articles", "posts", "items", "entries", "nodes"):
+                if isinstance(v, list):
+                    for item in v:
+                        if isinstance(item, dict):
+                            s = item.get("slug") or item.get("url") or item.get("path")
+                            if s and isinstance(s, str):
+                                slugs.append(s.lstrip("/"))
             slugs.extend(_tj_extract_slugs(v, depth + 1))
     elif isinstance(obj, list):
         for item in obj:
             slugs.extend(_tj_extract_slugs(item, depth + 1))
-    return slugs
+    return list(dict.fromkeys(slugs))  # dedupe, preserve order
 
 
 def _tj_requests_scrape() -> list[dict]:
@@ -1141,18 +1151,24 @@ def _tj_requests_scrape() -> list[dict]:
         url = TJ_BASE_URL if pg == 1 else f"{TJ_BASE_URL}&page={pg}"
         try:
             resp = session.get(url, timeout=30)
+            print(f"[Trader Joe's] Page {pg} HTTP {resp.status_code}, {len(resp.text)} chars")
             soup = BeautifulSoup(resp.text, "html.parser")
 
             # 1. Try __NEXT_DATA__ (most reliable for Next.js)
             script_tag = soup.find("script", {"id": "__NEXT_DATA__"})
             if script_tag and script_tag.string:
                 nd = json.loads(script_tag.string)
-                for slug in _tj_extract_slugs(nd):
+                slugs = _tj_extract_slugs(nd)
+                print(f"[Trader Joe's] __NEXT_DATA__ slugs found: {len(slugs)}")
+                for slug in slugs:
                     full = f"https://www.traderjoes.com/home/announcements/{slug}"
                     if full not in seen:
                         seen.add(full); article_urls.append(full)
+            else:
+                print(f"[Trader Joe's] No __NEXT_DATA__ script on page {pg}")
 
             # 2. Fallback: raw <a> link scan
+            before = len(article_urls)
             for a in soup.find_all("a", href=True):
                 href = a["href"]
                 if "/home/announcements/" not in href or "?category" in href:
@@ -1160,6 +1176,7 @@ def _tj_requests_scrape() -> list[dict]:
                 full = href if href.startswith("http") else f"https://www.traderjoes.com{href}"
                 if full not in seen:
                     seen.add(full); article_urls.append(full)
+            print(f"[Trader Joe's] <a> scan added {len(article_urls) - before} link(s)")
 
         except Exception as e:
             print(f"[Trader Joe's] Requests listing page {pg}: {e}")
@@ -1656,9 +1673,38 @@ def scrape_kirklands() -> list[dict]:
     soup = BeautifulSoup(resp.content, "html.parser")
     results = []
 
-    for box in soup.select("div.storeInfo"):
+    # Try multiple selector strategies (site HTML may vary)
+    SELECTOR_CANDIDATES = [
+        "div.storeInfo",
+        "div[class*='storeInfo']",
+        "div[class*='store-info']",
+        "div[class*='store_info']",
+        "li[class*='store']",
+        "div[class*='opening']",
+        "td[class*='store']",
+    ]
+    boxes = []
+    for sel in SELECTOR_CANDIDATES:
+        boxes = soup.select(sel)
+        if boxes:
+            print(f"[Kirkland's] Matched selector: {sel} ({len(boxes)} items)")
+            break
+
+    if not boxes:
+        # Last resort: scan all <li> / <p> elements near an "opening" heading
+        headings = soup.find_all(
+            lambda t: t.name in ("h1", "h2", "h3", "h4") and
+                      ("opening" in t.get_text(strip=True).lower() or
+                       "coming soon" in t.get_text(strip=True).lower())
+        )
+        for h in headings:
+            parent = h.find_parent(["section", "div", "table"]) or h.parent
+            boxes.extend(parent.find_all(["li", "p", "tr"]))
+        print(f"[Kirkland's] Fallback heading scan: {len(boxes)} candidate element(s)")
+
+    for box in boxes:
         address = box.get_text(separator=" ", strip=True)
-        if not address:
+        if not address or len(address) < 8:
             continue
         opening_date = extract_date(address) or "Coming Soon"
         results.append({
