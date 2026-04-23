@@ -1,5 +1,5 @@
 {
-  "last_updated": "April 23, 2026 17:20 UTC",
+  "last_updated": "April 23, 2026 22:16 UTC",
   "data": [
     {
       "company": "ALDI",
@@ -57,85 +57,85 @@
     },
     {
       "company": "Dogtopia",
-      "address": "2311 Colorado Blvd, Denton, Texas, 76205",
+      "address": "2311 Colorado Blvd, Denton, Texas 76205, United States",
       "opening_date": "Coming Summer 2026!",
       "link": "https://www.dogtopia.com/locations/denton/"
     },
     {
       "company": "Dogtopia",
-      "address": "17422 Airline Hwy, Prairieville, Louisiana, 70769",
+      "address": "17422 Airline Hwy, Prairieville, Louisiana 70769, United States",
       "opening_date": "",
       "link": "https://www.dogtopia.com/locations/prairieville/"
     },
     {
       "company": "Dogtopia",
-      "address": "1932 McDowell Road, Naperville, Illinois, 60563",
+      "address": "1932 McDowell Road, Naperville, Illinois 60563, United States",
       "opening_date": "Coming Summer 2026!",
       "link": "https://www.dogtopia.com/locations/naperville/"
     },
     {
       "company": "Dogtopia",
-      "address": "1606 NW Irvinedale Dr., Ankeny, Iowa, 50023",
+      "address": "1606 NW Irvinedale Dr., Ankeny, Iowa 50023, United States",
       "opening_date": "",
       "link": "https://www.dogtopia.com/locations/ankeny/"
     },
     {
       "company": "Dogtopia",
-      "address": "1070 Ken Pratt Blvd, Longmont, Colorado, 80501",
+      "address": "1070 Ken Pratt Blvd, Longmont, Colorado 80501, United States",
       "opening_date": "",
       "link": "https://www.dogtopia.com/locations/longmont/"
     },
     {
       "company": "Dogtopia",
-      "address": "1607 Central Ave, Chattanooga, Tennessee, 37408",
+      "address": "1607 Central Ave, Chattanooga, Tennessee 37408, United States",
       "opening_date": "",
       "link": "https://www.dogtopia.com/locations/chattanooga-southside/"
     },
     {
       "company": "Dogtopia",
-      "address": "43800 Metro Center Drive, Suite E110, Ashburn, Virginia, 20147",
+      "address": "43800 Metro Center Drive, Suite E110, Ashburn, Virginia 20147, United States",
       "opening_date": "",
       "link": "https://www.dogtopia.com/locations/ashburn-loudoun-station/"
     },
     {
       "company": "Dogtopia",
-      "address": "3194 N Industrial Way, Castle Rock, Colorado, 80109",
+      "address": "3194 N Industrial Way, Castle Rock, Colorado 80109, United States",
       "opening_date": "",
       "link": "https://www.dogtopia.com/locations/castle-rock/"
     },
     {
       "company": "Dogtopia",
-      "address": "1508 E St. Suite 20, San Diego, California, 92101",
+      "address": "1508 E St. Suite 20, San Diego, California 92101, United States",
       "opening_date": "Opening in 2026!",
       "link": "https://www.dogtopia.com/locations/san-diego-east-village/"
     },
     {
       "company": "Dogtopia",
-      "address": "25 Alsop Ct., St. Augustine, Florida, 32095",
+      "address": "25 Alsop Ct., St. Augustine, Florida 32095, United States",
       "opening_date": "",
       "link": "https://www.dogtopia.com/locations/st-augustine/"
     },
     {
       "company": "Dogtopia",
-      "address": "135 Enterprise Dr., Verona, Wisconsin, 53593",
+      "address": "135 Enterprise Dr., Verona, Wisconsin 53593, United States",
       "opening_date": "",
       "link": "https://www.dogtopia.com/locations/madison-verona/"
     },
     {
       "company": "Dogtopia",
-      "address": "2036 East T.C Jester Blvd, Houston, Texas, 77008",
+      "address": "2036 East T.C Jester Blvd, Houston, Texas 77008, United States",
       "opening_date": "",
       "link": "https://www.dogtopia.com/locations/houston-heights/"
     },
     {
       "company": "Dogtopia",
-      "address": "610 Old York Rd, Jenkintown, Philadelphia, 19046",
+      "address": "610 Old York Rd, Jenkintown, Philadelphia 19046, United States",
       "opening_date": "",
       "link": "https://www.dogtopia.com/locations/jenkintown/"
     },
     {
       "company": "Dogtopia",
-      "address": "140 Four Seasons Shopping Center, Chesterfield, Missouri, 63017",
+      "address": "140 Four Seasons Shopping Center, Chesterfield, Missouri 63017, United States",
       "opening_date": "PERMANENTLY CLOSED",
       "link": "https://www.dogtopia.com/locations/four-seasons-chesterfield/"
     },
@@ -1455,6 +1455,12 @@
     },
     {
       "company": "Chick-fil-A",
+      "address": "1015 Vinehaven Drive NE",
+      "opening_date": "May 1, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-dale-earnhardt-blvd"
+    },
+    {
+      "company": "Chick-fil-A",
       "address": "",
       "opening_date": "April 20, 2026",
       "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-mill-creek-and-cordata-parkway"
@@ -1539,12 +1545,6 @@
     },
     {
       "company": "Chick-fil-A",
-      "address": "400 Premium Outlets Drive",
-      "opening_date": "April 2, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-gloucester-outlets"
-    },
-    {
-      "company": "Chick-fil-A",
       "address": "1780 E Hwy 44",
       "opening_date": "March 26, 2026",
       "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-edgewood-lane"
@@ -1575,6 +1575,12 @@
     },
     {
       "company": "Chick-fil-A",
+      "address": "2625 10 th Ave",
+      "opening_date": "March 26, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-10th-ave-n-and-i-95"
+    },
+    {
+      "company": "Chick-fil-A",
       "address": "2430 N Morton St",
       "opening_date": "March 19, 2026",
       "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-franklin-indiana"
@@ -1596,12 +1602,6 @@
       "address": "262 East Main Street",
       "opening_date": "March 17, 2026",
       "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-johnny-cash-pkwy"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "140 Bluebell Drive SW",
-      "opening_date": "March 12, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-new-philadelphia"
     },
     {
       "company": "LongHorn Steakhouse",
@@ -2424,66 +2424,6 @@
       "address": "995 North State 434, Altamonte Springs, Florida",
       "opening_date": "Now Open!",
       "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=67&ref=grandOpenings"
-    },
-    {
-      "company": "Kirkland's",
-      "address": "Ann Arbor, MI Maple Village 341 N. Maple Road Ann Arbor, MI 48103",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Kirkland's",
-      "address": "West Long Branch, NJ Consumer Center 310 State Route 36 West Long Branch, NJ 07764",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Kirkland's",
-      "address": "Deerfield Beach, FL Deerfield Mall 3888 West Hillsboro Blvd Deerfield, FL 33442",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Kirkland's",
-      "address": "Wayne, PA Gateway Shopping Center 221 Swedesford Road, Space 183 Wayne, PA 19087",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Kirkland's",
-      "address": "Washington, PA Tanger Outlet 2200 Tanger Boulevard Washington, PA 15301",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Kirkland's",
-      "address": "Freehold, NJ Freehold Raceway Mall 3710 Route 9 South Freehold, NJ 07728",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Kirkland's",
-      "address": "Valley Stream, NY Green Acres Commons 2034 Sunrise Highway Valley Stream, NY 11581",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Kirkland's",
-      "address": "Anderson, SC Anderson Station 166 Station Drive Anderson, SC 29621",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Kirkland's",
-      "address": "Nashville, TN One Bellevue Place 8167 Sawyer Brown Road Nashville, TN 37221",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Kirkland's",
-      "address": "Durham, NC Renaissance Village 8200 Renaissance Parkway Durham, NC 27713",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
     }
   ]
 }
