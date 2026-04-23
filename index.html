@@ -1046,7 +1046,7 @@
         <div id="companywebTabContent" class="hidden">
 
             <!-- Stats -->
-            <div id="companyWebStatsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 fade-in" style="display:none;">
+            <div id="companyWebStatsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 fade-in" style="display:none;">
                 <div class="stats-card rounded-2xl p-6 card-accent-blue">
                     <div class="flex items-center justify-between">
                         <div>
@@ -1069,6 +1069,17 @@
                         </div>
                     </div>
                 </div>
+                <div class="stats-card rounded-2xl p-6" style="background:rgba(15,23,42,0.7);border:1px solid rgba(16,185,129,0.2);">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Worked On</p>
+                            <p class="text-3xl font-bold text-emerald-400" id="companyWebDoneCount">0</p>
+                        </div>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center">
+                            <i class="fas fa-circle-check text-emerald-400 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Filters -->
@@ -1080,6 +1091,11 @@
                 </div>
                 <select id="companyWebCompanyFilter" onchange="filterCompanyWebRows()" class="input-field px-4 py-3 text-sm">
                     <option value="all">All Companies</option>
+                </select>
+                <select id="companyWebDoneFilter" onchange="filterCompanyWebRows()" class="input-field px-4 py-3 text-sm">
+                    <option value="all">All Status</option>
+                    <option value="pending">Pending</option>
+                    <option value="done">Done</option>
                 </select>
                 <button onclick="downloadCompanyWebCSV()" class="btn-download px-5 py-3 rounded-xl font-medium flex items-center gap-2 text-sm whitespace-nowrap">
                     <i class="fas fa-download"></i><span>Download CSV</span>
@@ -1101,6 +1117,7 @@
             <div id="companyWebTableContainer" class="hidden overflow-x-auto rounded-2xl border border-white/5 fade-in">
                 <table class="w-full text-sm text-left data-table">
                     <thead><tr>
+                        <th class="px-3 py-3 w-12 text-center">Done</th>
                         <th class="px-3 py-3 w-10">#</th>
                         <th class="px-3 py-3 w-32">Company</th>
                         <th class="px-3 py-3">Address</th>
@@ -2729,20 +2746,36 @@
         }
     }
 
+    function cwDoneKey(r) {
+        return 'cwdone-' + (r.link || (r.company + '|' + r.address));
+    }
+
+    function toggleCompanyWebDone(key) {
+        if (localStorage.getItem(key) === 'true') { localStorage.removeItem(key); }
+        else { localStorage.setItem(key, 'true'); }
+        updateCompanyWebStats(filteredCompanyWebRows);
+        renderCompanyWebTable();
+    }
+
     function updateCompanyWebStats(rows) {
         setCount('companyWebTotal', rows.length);
         const uniqueCompanies = new Set(rows.map(r => r.company).filter(Boolean)).size;
         setCount('companyWebCompanyCount', uniqueCompanies);
+        const doneCount = companyWebRows.filter(r => localStorage.getItem(cwDoneKey(r)) === 'true').length;
+        setCount('companyWebDoneCount', doneCount);
         document.getElementById('companyWebStatsContainer').style.display = rows.length ? 'grid' : 'none';
     }
 
     function filterCompanyWebRows() {
         const term    = document.getElementById('companyWebSearchInput').value.toLowerCase();
         const company = document.getElementById('companyWebCompanyFilter').value;
+        const doneF   = document.getElementById('companyWebDoneFilter').value;
         filteredCompanyWebRows = companyWebRows.filter(r => {
-            const matchTerm    = !term    || ['address','opening_date'].some(k => (r[k]||'').toLowerCase().includes(term));
+            const matchTerm    = !term    || ['address','opening_date','company'].some(k => (r[k]||'').toLowerCase().includes(term));
             const matchCompany = company === 'all' || r.company === company;
-            return matchTerm && matchCompany;
+            const isDone       = localStorage.getItem(cwDoneKey(r)) === 'true';
+            const matchDone    = doneF === 'all' || (doneF === 'done' ? isDone : !isDone);
+            return matchTerm && matchCompany && matchDone;
         });
         updateCompanyWebStats(filteredCompanyWebRows);
         renderCompanyWebTable();
@@ -2761,6 +2794,10 @@
         document.getElementById('companyWebTableContainer').classList.remove('hidden');
 
         tbody.innerHTML = filteredCompanyWebRows.map((r, i) => {
+            const key    = cwDoneKey(r);
+            const isDone = localStorage.getItem(key) === 'true';
+            const rowBg  = isDone ? 'background:rgba(16,185,129,0.06);' : '';
+            const safeKey = key.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
             const linkCell = r.link
                 ? `<a href="${escapeHtml(r.link)}" target="_blank" rel="noopener noreferrer"
                       class="px-2 py-1 rounded-lg text-xs bg-blue-900/40 text-blue-300 border border-blue-700/30 hover:bg-blue-800/60 transition-colors whitespace-nowrap">
@@ -2768,15 +2805,20 @@
                    </a>`
                 : `<span class="text-gray-600 text-xs">—</span>`;
             return `
-            <tr>
+            <tr style="${rowBg}" class="border-t border-white/5 transition-colors">
+                <td class="px-3 py-3 text-center">
+                    <label class="cursor-pointer inline-flex items-center justify-center w-6 h-6 rounded-md border-2 transition-all ${isDone ? 'bg-emerald-500 border-emerald-500' : 'border-gray-600 hover:border-emerald-500'}" onclick="toggleCompanyWebDone('${safeKey}')">
+                        ${isDone ? '<i class="fas fa-check text-white text-xs"></i>' : ''}
+                    </label>
+                </td>
                 <td class="px-3 py-3 text-gray-600 text-xs font-semibold">${i+1}</td>
                 <td class="px-3 py-3">
                     <span class="px-2 py-1 rounded-full text-xs font-semibold bg-indigo-900/40 text-indigo-300 border border-indigo-700/30">${escapeHtml(r.company||'—')}</span>
                 </td>
-                <td class="px-3 py-3 text-gray-400 text-xs max-w-[280px]">
+                <td class="px-3 py-3 text-xs max-w-[280px] ${isDone ? 'text-gray-600 line-through' : 'text-gray-400'}">
                     <span class="line-clamp-2 block" title="${escapeHtml(r.address||'')}">${highlight(r.address||'—', term)}</span>
                 </td>
-                <td class="px-3 py-3 text-gray-300 text-xs whitespace-nowrap">${highlight(r.opening_date||'—', term)}</td>
+                <td class="px-3 py-3 text-xs whitespace-nowrap ${isDone ? 'text-gray-600' : 'text-gray-300'}">${highlight(r.opening_date||'—', term)}</td>
                 <td class="px-3 py-3">${linkCell}</td>
             </tr>`;
         }).join('');
