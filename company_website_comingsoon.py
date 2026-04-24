@@ -19,6 +19,7 @@ Scrapers:
   • Wawa           — https://www.wawa.com/about-us/public-relations/grand-openings (Playwright)
   • Kirkland's     — https://www.kirklands.com/content.jsp?pageName=openingstores (requests)
   • Yard House     — https://www.yardhouse.com/locations/new-locations (Selenium)
+  • TJ Maxx        — https://tjmaxx.tjx.com/store/jump/topic/grand-openings/2600014 (Selenium)
 
 Output:
   docs/company_website_latest.json
@@ -1644,6 +1645,86 @@ def scrape_marshalls(driver: webdriver.Chrome) -> list[dict]:
     return results
 
 
+# ── TJ Maxx scraper ─────────────────────────────────────────────────────────
+
+TJMAXX_URL      = "https://tjmaxx.tjx.com/store/jump/topic/grand-openings/2600014"
+TJMAXX_BASE_URL = "https://tjmaxx.tjx.com"
+
+
+def scrape_tjmaxx(driver: webdriver.Chrome) -> list[dict]:
+    print(f"[TJ Maxx] Loading {TJMAXX_URL}")
+    driver.get(TJMAXX_URL)
+    time.sleep(8)  # JS-heavy TJX page needs extra render time
+
+    soup = BeautifulSoup(driver.page_source, "html.parser")
+    results = []
+
+    # Primary: TJX grand-openings list items
+    items = soup.select("li.grandopenings-store")
+
+    # Fallback: same subsection/store-list-item structure used by Marshalls
+    if not items:
+        print("[TJ Maxx] Primary selector found 0 items — trying subsection fallback.")
+        for box in soup.find_all("section", class_="subsection"):
+            h2 = box.find("h2")
+            state = h2.get_text(strip=True) if h2 else ""
+            for item in box.find_all("li", class_=lambda c: c and "store-list-item" in c):
+                h3 = item.find("h3", class_=lambda c: c and "address-heading" in c)
+                city = h3.get_text(strip=True) if h3 else ""
+                street_div = item.find("div", class_="street-address")
+                street = street_div.get_text(strip=True) if street_div else ""
+                address_parts = [p for p in [street, city, state] if p]
+                strong = item.find("strong")
+                opening_date = strong.get_text(strip=True) if strong else ""
+                if not opening_date:
+                    continue
+                link_tag = item.find("a", href=lambda h: h and "directions.jsp" in h)
+                href = ""
+                if link_tag:
+                    href = link_tag["href"]
+                    if not href.startswith("http"):
+                        href = TJMAXX_BASE_URL + href
+                results.append({
+                    "company":      "TJ Maxx",
+                    "address":      ", ".join(address_parts),
+                    "opening_date": extract_date(opening_date) or opening_date,
+                    "link":         href or TJMAXX_URL,
+                })
+        print(f"[TJ Maxx] {len(results)} store(s) parsed (fallback).")
+        return results
+
+    print(f"[TJ Maxx] Found {len(items)} store item(s).")
+    for item in items:
+        address_tag = item.select_one("div.street-address")
+        city_tag    = item.find("h3", class_=lambda c: c and "address-heading" in c)
+        strong      = item.find("strong")
+
+        street       = address_tag.get_text(strip=True) if address_tag else ""
+        city         = city_tag.get_text(strip=True) if city_tag else ""
+        opening_date = strong.get_text(strip=True) if strong else ""
+
+        address_parts = [p for p in [street, city] if p]
+        if not address_parts:
+            continue
+
+        link_tag = item.find("a", href=lambda h: h and "directions.jsp" in h)
+        href = ""
+        if link_tag:
+            href = link_tag["href"]
+            if not href.startswith("http"):
+                href = TJMAXX_BASE_URL + href
+
+        results.append({
+            "company":      "TJ Maxx",
+            "address":      ", ".join(address_parts),
+            "opening_date": extract_date(opening_date) or opening_date,
+            "link":         href or TJMAXX_URL,
+        })
+
+    print(f"[TJ Maxx] {len(results)} store(s) parsed.")
+    return results
+
+
 # ── Kirkland's scraper ───────────────────────────────────────────────────────
 
 KIRKLANDS_URL = "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
@@ -1882,6 +1963,17 @@ def main():
         all_stores.extend(scrape_marshalls(driver))
     except Exception as e:
         print(f"[Marshalls] Scraping failed: {e}")
+    finally:
+        if driver:
+            driver.quit()
+
+    # ── TJ Maxx ──
+    driver = None
+    try:
+        driver = make_driver()
+        all_stores.extend(scrape_tjmaxx(driver))
+    except Exception as e:
+        print(f"[TJ Maxx] Scraping failed: {e}")
     finally:
         if driver:
             driver.quit()
