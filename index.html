@@ -488,6 +488,7 @@
                             <th class="px-4 py-3 cursor-pointer hover:text-gray-300 transition-colors whitespace-nowrap" onclick="toggleHistSort()">
                                 Date <i id="histSortIcon" class="fas fa-sort-down text-indigo-400 ml-1"></i>
                             </th>
+                            <th class="px-4 py-3 whitespace-nowrap">Date Appended</th>
                             <th class="px-4 py-3">Store</th>
                             <th class="px-4 py-3">Analyst</th>
                             <th class="px-4 py-3">Industry</th>
@@ -1573,6 +1574,7 @@
             return `<tr class="border-t border-white/5 hover:bg-white/[0.03] transition-colors">
                 <td class="px-3 py-3 text-gray-500 text-center text-xs">${i + 1}</td>
                 <td class="px-4 py-3 text-gray-400 whitespace-nowrap text-xs">${escapeHtml(pubDate)}</td>
+                <td class="px-4 py-3 text-gray-500 whitespace-nowrap text-xs">${escapeHtml(a.Date_Appended || '')}</td>
                 <td class="px-4 py-3 text-gray-200 font-medium">${escapeHtml(a.Store || '')}</td>
                 <td class="px-4 py-3 text-gray-400">${escapeHtml(a.Analyst || '')}</td>
                 <td class="px-4 py-3 text-gray-500 text-xs">${escapeHtml(a.Industry || '')}</td>
@@ -1584,7 +1586,7 @@
 
     function downloadHistoricalCSV() {
         if (!filteredHistoricalArticles.length) return;
-        const h = ['Store','Analyst','Industry','Type','Title','Published','Link','Summary'];
+        const h = ['Store','Analyst','Industry','Type','Title','Published','Date_Appended','Link','Summary'];
         const csv = [h.join(','), ...filteredHistoricalArticles.map(r => h.map(k => `"${(r[k]||'').replace(/"/g,'""')}"`).join(','))].join('\n');
         dlCSV(csv, `banner_historical_${TODAY}.csv`);
         showToast('Historical CSV downloaded!');
