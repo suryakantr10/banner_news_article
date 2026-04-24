@@ -465,17 +465,27 @@ else:
     if all_rows:
         df_new = pd.DataFrame(all_rows)
 
+        # Add ingestion date so each batch of rows can be traced back to its run
+        df_new['Date_Appended'] = today_str
+
+        # Normalize Published to UTC datetime NOW (before concat) so dedup and
+        # sorting work on comparable values regardless of raw RSS string format.
+        df_new['Published'] = pd.to_datetime(df_new['Published'], errors='coerce', utc=True)
+
         if MASTER_FILE.exists():
             df_master = pd.read_csv(MASTER_FILE, encoding='utf-8')
+            # Re-parse Published in the master (stored as ISO string after previous runs)
+            df_master['Published'] = pd.to_datetime(df_master['Published'], errors='coerce', utc=True)
             df_master = pd.concat([df_master, df_new], ignore_index=True)
         else:
             df_master = df_new
 
-        # Deduplicate on Store + Title + Published (handles re-runs on same day)
-        df_master = df_master.drop_duplicates(subset=['Store', 'Title', 'Published'])
+        # Deduplicate on Store + Title + Link — more robust than using Published
+        # because the same article can have slightly different timestamp strings
+        # across runs while Link is a stable identifier.
+        df_master = df_master.drop_duplicates(subset=['Store', 'Title', 'Link'])
 
         # Sort newest first
-        df_master['Published'] = pd.to_datetime(df_master['Published'], errors='coerce', utc=True)
         df_master = df_master.sort_values('Published', ascending=False)
 
         df_master.to_csv(MASTER_FILE, index=False, encoding='utf-8')
