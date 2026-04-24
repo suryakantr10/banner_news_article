@@ -20,6 +20,7 @@ Scrapers:
   • Kirkland's     — https://www.kirklands.com/content.jsp?pageName=openingstores (requests)
   • Yard House     — https://www.yardhouse.com/locations/new-locations (Selenium)
   • TJ Maxx        — https://tjmaxx.tjx.com/store/jump/topic/grand-openings/2600014 (Selenium)
+  • Natural Grocers — https://www.naturalgrocers.com/new-store-announcements (Selenium)
 
 Output:
   docs/company_website_latest.json
@@ -1842,6 +1843,58 @@ def scrape_yardhouse(driver: webdriver.Chrome) -> list[dict]:
     return results
 
 
+# ── Natural Grocers scraper ──────────────────────────────────────────────────
+
+NATURAL_GROCERS_URL = "https://www.naturalgrocers.com/new-store-announcements"
+
+
+def scrape_natural_grocers(driver: webdriver.Chrome) -> list[dict]:
+    print(f"[Natural Grocers] Loading {NATURAL_GROCERS_URL}")
+    driver.get(NATURAL_GROCERS_URL)
+    time.sleep(8)  # JS-rendered page needs time to settle
+
+    soup = BeautifulSoup(driver.page_source, "html.parser")
+    results = []
+
+    # Page is structured as <h2> section heading → <ul> of <li> store entries
+    for h2 in soup.find_all("h2"):
+        ul = h2.find_next_sibling("ul")
+        if not ul:
+            continue
+
+        for li in ul.find_all("li", attrs={"data-list-item-id": True}):
+            a_tag = li.find("a", href=True)
+            if a_tag:
+                raw_text = a_tag.get_text(strip=True)
+                href     = a_tag["href"]
+                link     = href if href.startswith("http") else f"https://www.naturalgrocers.com{href}"
+            else:
+                raw_text = li.get_text(strip=True)
+                link     = NATURAL_GROCERS_URL
+
+            # Entries are formatted as "City, ST - MM/DD/YYYY" or "City, ST - Season YYYY"
+            if " - " in raw_text:
+                address, opening_date = raw_text.split(" - ", 1)
+                address      = address.strip()
+                opening_date = opening_date.strip()
+            else:
+                address      = raw_text
+                opening_date = ""
+
+            if not address:
+                continue
+
+            results.append({
+                "company":      "Natural Grocers",
+                "address":      address,
+                "opening_date": extract_date(opening_date) or opening_date,
+                "link":         link,
+            })
+
+    print(f"[Natural Grocers] {len(results)} location(s) parsed.")
+    return results
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -1991,6 +2044,17 @@ def main():
         all_stores.extend(scrape_yardhouse(driver))
     except Exception as e:
         print(f"[Yard House] Scraping failed: {e}")
+    finally:
+        if driver:
+            driver.quit()
+
+    # ── Natural Grocers ──
+    driver = None
+    try:
+        driver = make_driver()
+        all_stores.extend(scrape_natural_grocers(driver))
+    except Exception as e:
+        print(f"[Natural Grocers] Scraping failed: {e}")
     finally:
         if driver:
             driver.quit()
