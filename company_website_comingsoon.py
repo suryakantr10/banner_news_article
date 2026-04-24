@@ -18,6 +18,7 @@ Scrapers:
   • Marshalls      — https://www.marshalls.com/us/store/jump/topic/Grand-Openings/2600014 (Selenium)
   • Wawa           — https://www.wawa.com/about-us/public-relations/grand-openings (Playwright)
   • Kirkland's     — https://www.kirklands.com/content.jsp?pageName=openingstores (requests)
+  • Yard House     — https://www.yardhouse.com/locations/new-locations (Selenium)
 
 Output:
   docs/company_website_latest.json
@@ -1718,6 +1719,48 @@ def scrape_kirklands() -> list[dict]:
     return results
 
 
+# ── Yard House scraper ───────────────────────────────────────────────────────
+
+YARDHOUSE_URL = "https://www.yardhouse.com/locations/new-locations"
+
+
+def scrape_yardhouse(driver: webdriver.Chrome) -> list[dict]:
+    print(f"[Yard House] Loading {YARDHOUSE_URL}")
+    driver.get(YARDHOUSE_URL)
+    try:
+        WebDriverWait(driver, 15).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, "div.new-locations__item"))
+        )
+    except Exception:
+        print("[Yard House] Timed out waiting for location cards; trying anyway…")
+    time.sleep(3)
+
+    soup = BeautifulSoup(driver.page_source, "html.parser")
+    boxes = soup.select("div.new-locations__item")
+    print(f"[Yard House] Found {len(boxes)} location card(s).")
+
+    results = []
+    for box in boxes:
+        address_tag = box.select_one("div.new-locations__address")
+        date_tag    = box.select_one("div.new-locations__date, p.new-locations__date")
+
+        address      = address_tag.get_text(" ", strip=True) if address_tag else ""
+        opening_date = date_tag.get_text(strip=True) if date_tag else ""
+
+        if not address:
+            continue
+
+        results.append({
+            "company":      "Yard House",
+            "address":      address,
+            "opening_date": extract_date(opening_date) or opening_date,
+            "link":         YARDHOUSE_URL,
+        })
+
+    print(f"[Yard House] {len(results)} location(s) parsed.")
+    return results
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -1848,6 +1891,17 @@ def main():
         all_stores.extend(scrape_kirklands())
     except Exception as e:
         print(f"[Kirkland's] Scraping failed: {e}")
+
+    # ── Yard House ──
+    driver = None
+    try:
+        driver = make_driver()
+        all_stores.extend(scrape_yardhouse(driver))
+    except Exception as e:
+        print(f"[Yard House] Scraping failed: {e}")
+    finally:
+        if driver:
+            driver.quit()
 
     print(f"\nTotal records collected: {len(all_stores)}")
 
