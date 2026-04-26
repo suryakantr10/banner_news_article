@@ -413,7 +413,7 @@
 
             <!-- HISTORICAL SUB-TAB -->
             <div id="storeHistoricalSubTab" class="hidden">
-                <div id="histStatsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 fade-in" style="display:none;">
+                <div id="histStatsContainer" class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8 fade-in" style="display:none;">
                     <div class="stats-card rounded-2xl p-6 card-accent-blue">
                         <div class="flex items-center justify-between">
                             <div>
@@ -447,6 +447,17 @@
                             </div>
                         </div>
                     </div>
+                    <div class="stats-card rounded-2xl p-6" style="background:rgba(16,185,129,0.07);border:1px solid rgba(16,185,129,0.15);">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Done</p>
+                                <p class="text-3xl font-bold text-emerald-400" id="histDoneCount">0</p>
+                            </div>
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center">
+                                <i class="fas fa-circle-check text-emerald-400 text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="mb-6 fade-in flex flex-col sm:flex-row gap-3 flex-wrap">
                     <div class="flex-1 relative min-w-[180px]">
@@ -469,6 +480,11 @@
                         <option value="desc">Newest First</option>
                         <option value="asc">Oldest First</option>
                     </select>
+                    <select id="histDoneFilter" onchange="filterHistoricalArticles()" class="input-field px-4 py-3 text-sm">
+                        <option value="all">All Status</option>
+                        <option value="done">Done</option>
+                        <option value="undone">Not Done</option>
+                    </select>
                     <button onclick="downloadHistoricalCSV()" class="btn-download px-5 py-3 rounded-xl font-medium flex items-center gap-2 text-sm whitespace-nowrap">
                         <i class="fas fa-download"></i><span>Download CSV</span>
                     </button>
@@ -484,6 +500,7 @@
                 <div id="histTableContainer" class="hidden overflow-x-auto rounded-2xl border border-white/5 fade-in">
                     <table class="w-full text-sm text-left data-table">
                         <thead><tr>
+                            <th class="px-3 py-3 w-10 text-center">✓</th>
                             <th class="px-3 py-3 w-10 text-center">#</th>
                             <th class="px-4 py-3 cursor-pointer hover:text-gray-300 transition-colors whitespace-nowrap" onclick="toggleHistSort()">
                                 Date <i id="histSortIcon" class="fas fa-sort-down text-indigo-400 ml-1"></i>
@@ -1526,12 +1543,16 @@
         const analystF = document.getElementById('histAnalystFilter').value;
         const storeF   = document.getElementById('histStoreFilter').value;
         const typeF    = document.getElementById('histTypeFilter').value;
+        const doneF    = document.getElementById('histDoneFilter').value;
         filteredHistoricalArticles = historicalArticles.filter(a => {
-            const ms = !term || ['Store','Analyst','Title','Summary'].some(k => (a[k] || '').toLowerCase().includes(term));
+            const ms     = !term || ['Store','Analyst','Title','Summary'].some(k => (a[k] || '').toLowerCase().includes(term));
+            const isDone = localStorage.getItem(histDoneKey(a)) === 'true';
+            const matchDone = doneF === 'all' || (doneF === 'done' ? isDone : !isDone);
             return ms
                 && (analystF === 'all' || a.Analyst === analystF)
                 && (storeF   === 'all' || a.Store   === storeF)
-                && (typeF    === 'all' || a.Type     === typeF);
+                && (typeF    === 'all' || a.Type     === typeF)
+                && matchDone;
         });
         sortHistoricalArticles();
         updateHistStats();
@@ -1542,6 +1563,7 @@
         document.getElementById('histTotal').textContent    = filteredHistoricalArticles.length;
         document.getElementById('histOpenings').textContent = filteredHistoricalArticles.filter(a => a.Type === 'Opening').length;
         document.getElementById('histClosings').textContent = filteredHistoricalArticles.filter(a => a.Type === 'Closing').length;
+        document.getElementById('histDoneCount').textContent = historicalArticles.filter(a => localStorage.getItem(histDoneKey(a)) === 'true').length;
         document.getElementById('histStatsContainer').style.display = 'grid';
     }
 
@@ -1569,17 +1591,27 @@
                 const d = new Date(pubDate);
                 if (!isNaN(d.getTime())) pubDate = d.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' });
             } catch {}
-            const title = escapeHtml(a.Title || '');
-            const link  = a.Link ? `<a href="${escapeHtml(a.Link)}" target="_blank" rel="noopener" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors">${title}</a>` : title;
-            return `<tr class="border-t border-white/5 hover:bg-white/[0.03] transition-colors">
+            const key      = histDoneKey(a);
+            const isDone   = localStorage.getItem(key) === 'true';
+            const safeKey  = key.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+            const rowBg    = isDone ? 'background:rgba(16,185,129,0.06);' : '';
+            const title    = escapeHtml(a.Title || '');
+            const titleCls = isDone ? 'line-through text-gray-600' : 'text-gray-300';
+            const link     = a.Link ? `<a href="${escapeHtml(a.Link)}" target="_blank" rel="noopener" class="${titleCls} hover:text-indigo-300 underline underline-offset-2 transition-colors">${title}</a>` : `<span class="${titleCls}">${title}</span>`;
+            return `<tr style="${rowBg}" class="border-t border-white/5 transition-colors">
+                <td class="px-3 py-3 text-center">
+                    <label class="cursor-pointer inline-flex items-center justify-center w-6 h-6 rounded-md border-2 transition-all ${isDone ? 'bg-emerald-500 border-emerald-500' : 'border-gray-600 hover:border-emerald-500'}" onclick="toggleHistDone('${safeKey}')">
+                        ${isDone ? '<i class="fas fa-check text-white text-xs"></i>' : ''}
+                    </label>
+                </td>
                 <td class="px-3 py-3 text-gray-500 text-center text-xs">${i + 1}</td>
                 <td class="px-4 py-3 text-gray-400 whitespace-nowrap text-xs">${escapeHtml(pubDate)}</td>
                 <td class="px-4 py-3 text-gray-500 whitespace-nowrap text-xs">${escapeHtml(a.Date_Appended || '')}</td>
-                <td class="px-4 py-3 text-gray-200 font-medium">${escapeHtml(a.Store || '')}</td>
-                <td class="px-4 py-3 text-gray-400">${escapeHtml(a.Analyst || '')}</td>
+                <td class="px-4 py-3 ${isDone ? 'text-gray-600' : 'text-gray-200'} font-medium">${escapeHtml(a.Store || '')}</td>
+                <td class="px-4 py-3 ${isDone ? 'text-gray-600' : 'text-gray-400'}">${escapeHtml(a.Analyst || '')}</td>
                 <td class="px-4 py-3 text-gray-500 text-xs">${escapeHtml(a.Industry || '')}</td>
                 <td class="px-4 py-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium ${badgeCls}">${escapeHtml(a.Type || '')}</span></td>
-                <td class="px-4 py-3 text-gray-300 text-xs leading-snug max-w-xs">${link}</td>
+                <td class="px-4 py-3 text-xs leading-snug max-w-xs">${link}</td>
             </tr>`;
         }).join('');
     }
@@ -1590,6 +1622,17 @@
         const csv = [h.join(','), ...filteredHistoricalArticles.map(r => h.map(k => `"${(r[k]||'').replace(/"/g,'""')}"`).join(','))].join('\n');
         dlCSV(csv, `banner_historical_${TODAY}.csv`);
         showToast('Historical CSV downloaded!');
+    }
+
+    function histDoneKey(a) {
+        return 'histdone-' + (a.Link || (a.Store + '|' + a.Title));
+    }
+
+    function toggleHistDone(key) {
+        if (localStorage.getItem(key) === 'true') { localStorage.removeItem(key); }
+        else { localStorage.setItem(key, 'true'); }
+        updateHistStats();
+        renderHistoricalTable();
     }
 
     function renderStoreArticles() {
