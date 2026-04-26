@@ -1,6 +1,21 @@
 {
-  "last_updated": "2026-04-25",
+  "last_updated": "2026-04-26",
   "data": [
+    {
+      "heading": "HARTFORD SCOOP: Munchies Fried Chicken & Shawarma opens in Downtown Hartford",
+      "date": "2026-04-25",
+      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/hartford-scoop-munchies-fried-chicken-shawarma-opens-in-downtown-hartford"
+    },
+    {
+      "heading": "WINDSOR LOCKS SCOOP: New dining options landing at Bradley International Airport",
+      "date": "2026-04-25",
+      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/windsor-locks-scoop-new-dining-options-landing-at-bradley-international-airport"
+    },
+    {
+      "heading": "MILFORD SCOOP: LA Fitness closing Milford gym",
+      "date": "2026-04-25",
+      "link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/milford-scoop-la-fitness-closing-milford-gym"
+    },
     {
       "heading": "SOUTHINGTON SCOOP: PZC denies zone change for proposed retail development",
       "date": "2026-04-24",
@@ -25,31 +40,6 @@
       "heading": "MULTI-TOWN SCOOP: Wren Kitchens pulls out of US market, closes showrooms & design studios",
       "date": "2026-04-24",
       "link": "https://www.theconnecticutscoop.com/all-mass-posts/multi-town-scoop-wren-kitchens-pulls-out-of-us-market-closes-showrooms-design-studios"
-    },
-    {
-      "heading": "MANCHESTER SCOOP: Town requesting RFPs for soon-to-be former library building",
-      "date": "2026-04-23",
-      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/manchester-scoop-town-requesting-rfps-for-soon-to-be-former-library-building"
-    },
-    {
-      "heading": "FARMINGTON SCOOP: Barnes & Noble moving sale continues, Cafe announces closure date",
-      "date": "2026-04-23",
-      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/farmington-scoop-barnes-noble-moving-sale-continues-cafe-announces-closure-date"
-    },
-    {
-      "heading": "NORTH HAVEN SCOOP: Fennec's Place opening January 2027 in North Haven",
-      "date": "2026-04-23",
-      "link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/north-haven-scoop-fennecs-place-opening-january-2027-in-north-haven"
-    },
-    {
-      "heading": "SEYMOUR SCOOP: Magic Nails Bar celebrating grand opening with special offers and giveaways!",
-      "date": "2026-04-23",
-      "link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/seymour-scoop-magic-nails-bar-celebrating-grand-opening-with-special-offers-and-giveaways"
-    },
-    {
-      "heading": "SPRINGFIELD SCOOP: Ollie's Bargain Outlet sets grand opening date!",
-      "date": "2026-04-23",
-      "link": "https://www.theconnecticutscoop.com/all-mass-posts/springfield-scoop-ollies-bargain-outlet-sets-grand-opening-date"
     }
   ]
 }
