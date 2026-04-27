@@ -21,6 +21,7 @@ Scrapers:
   • Yard House     — https://www.yardhouse.com/locations/new-locations (Selenium)
   • TJ Maxx        — https://tjmaxx.tjx.com/store/jump/topic/grand-openings/2600014 (Selenium)
   • Natural Grocers — https://www.naturalgrocers.com/new-store-announcements (Selenium)
+  • Capital Grille  — https://www.thecapitalgrille.com/locations/new-locations (Selenium)
 
 Output:
   docs/company_website_latest.json
@@ -1898,33 +1899,39 @@ def scrape_natural_grocers(driver: webdriver.Chrome) -> list[dict]:
 # ── Capital Grille scraper ───────────────────────────────────────────────────
 
 CAPITAL_GRILLE_URL = "https://www.thecapitalgrille.com/locations/new-locations"
-CAPITAL_GRILLE_HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36"
-    )
-}
 
 
-def scrape_capital_grille() -> list[dict]:
-    print(f"[Capital Grille] Fetching {CAPITAL_GRILLE_URL}")
+def scrape_capital_grille(driver: webdriver.Chrome) -> list[dict]:
+    print(f"[Capital Grille] Loading {CAPITAL_GRILLE_URL}")
+    driver.get(CAPITAL_GRILLE_URL)
     try:
-        resp = requests.get(CAPITAL_GRILLE_URL, headers=CAPITAL_GRILLE_HEADERS, timeout=30)
-        resp.raise_for_status()
-    except Exception as e:
-        print(f"[Capital Grille] Error: {e}")
-        return []
+        WebDriverWait(driver, 15).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, "li.location-card, div.new-locations__item, div[class*='location']"))
+        )
+    except Exception:
+        print("[Capital Grille] Timed out waiting for location cards; trying anyway…")
+    time.sleep(5)
 
-    soup = BeautifulSoup(resp.content, "html.parser")
+    soup = BeautifulSoup(driver.page_source, "html.parser")
+
+    # Primary selector
     cards = soup.find_all("li", class_="location-card")
+
+    # Fallback: LongHorn/Yard House style structure used by other Darden brands
+    if not cards:
+        print("[Capital Grille] Primary selector found 0 cards — trying fallback selectors.")
+        cards = soup.select("div.new-locations__item") or soup.find_all("div", class_=lambda c: c and "newloc" in c.lower())
+
     print(f"[Capital Grille] Found {len(cards)} card(s).")
 
     results = []
     for card in cards:
-        address_tag  = card.find("div", class_="card-text")
-        date_tag     = card.find("div", class_="card-status")
-        address      = address_tag.get_text(strip=True) if address_tag else ""
+        address_tag  = card.find("div", class_="card-text") or card.find("div", class_=lambda c: c and "address" in c.lower())
+        date_tag     = card.find("div", class_="card-status") or card.find("div", class_=lambda c: c and ("date" in c.lower() or "status" in c.lower()))
+
+        address      = address_tag.get_text(strip=True) if address_tag else card.get_text(" ", strip=True)[:150]
         opening_date = date_tag.get_text(strip=True) if date_tag else ""
+
         if not address:
             continue
         results.append({
@@ -2103,10 +2110,15 @@ def main():
             driver.quit()
 
     # ── Capital Grille ──
+    driver = None
     try:
-        all_stores.extend(scrape_capital_grille())
+        driver = make_driver()
+        all_stores.extend(scrape_capital_grille(driver))
     except Exception as e:
         print(f"[Capital Grille] Scraping failed: {e}")
+    finally:
+        if driver:
+            driver.quit()
 
     print(f"\nTotal records collected: {len(all_stores)}")
 
