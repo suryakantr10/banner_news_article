@@ -79,6 +79,21 @@ _ZYTE_SESSION = requests.Session()
 _ZYTE_SESSION.proxies.update(ZYTE_PROXIES)
 _ZYTE_SESSION.verify = ZYTE_CA_CERT
 
+# One-time Zyte connectivity check — skip Tier B entirely if proxy is unreachable
+def _check_zyte_available() -> bool:
+    if not ZYTE_API_KEY:
+        print("⚠️  ZYTE_API_KEY not set — Tier B (Zyte) disabled")
+        return False
+    try:
+        r = _ZYTE_SESSION.get("https://httpbin.org/ip", timeout=6)
+        print(f"✅ Zyte proxy reachable (status={r.status_code})")
+        return True
+    except Exception as e:
+        print(f"⚠️  Zyte proxy unreachable ({type(e).__name__}) — Tier B disabled for this run")
+        return False
+
+_ZYTE_AVAILABLE = _check_zyte_available()
+
 # ─────────────────────────────────────────────────────────
 # CONFIG
 # ─────────────────────────────────────────────────────────
@@ -574,6 +589,8 @@ def _decode_zyte(google_url: str) -> str | None:
     Tier B: Resolve Google News redirect via Zyte proxy.
     Zyte follows the redirect chain and returns the final real article URL.
     """
+    if not _ZYTE_AVAILABLE:
+        return None
     try:
         response = _ZYTE_SESSION.get(
             google_url,
@@ -583,10 +600,8 @@ def _decode_zyte(google_url: str) -> str | None:
         final_url = response.url
         if final_url and _is_valid_article_url(final_url):
             return _clean_url(final_url)
-        else:
-            print(f"  [Zyte] Rejected URL: {final_url!r} (status={response.status_code})")
-    except Exception as e:
-        print(f"  [Zyte] Exception: {type(e).__name__}: {e}")
+    except Exception:
+        pass
     return None
 
 
