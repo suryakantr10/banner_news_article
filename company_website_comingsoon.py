@@ -1895,6 +1895,49 @@ def scrape_natural_grocers(driver: webdriver.Chrome) -> list[dict]:
     return results
 
 
+# ── Capital Grille scraper ───────────────────────────────────────────────────
+
+CAPITAL_GRILLE_URL = "https://www.thecapitalgrille.com/locations/new-locations"
+CAPITAL_GRILLE_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36"
+    )
+}
+
+
+def scrape_capital_grille() -> list[dict]:
+    print(f"[Capital Grille] Fetching {CAPITAL_GRILLE_URL}")
+    try:
+        resp = requests.get(CAPITAL_GRILLE_URL, headers=CAPITAL_GRILLE_HEADERS, timeout=30)
+        resp.raise_for_status()
+    except Exception as e:
+        print(f"[Capital Grille] Error: {e}")
+        return []
+
+    soup = BeautifulSoup(resp.content, "html.parser")
+    cards = soup.find_all("li", class_="location-card")
+    print(f"[Capital Grille] Found {len(cards)} card(s).")
+
+    results = []
+    for card in cards:
+        address_tag  = card.find("div", class_="card-text")
+        date_tag     = card.find("div", class_="card-status")
+        address      = address_tag.get_text(strip=True) if address_tag else ""
+        opening_date = date_tag.get_text(strip=True) if date_tag else ""
+        if not address:
+            continue
+        results.append({
+            "company":      "Capital Grille",
+            "address":      address,
+            "opening_date": extract_date(opening_date) or opening_date,
+            "link":         CAPITAL_GRILLE_URL,
+        })
+
+    print(f"[Capital Grille] {len(results)} location(s) parsed.")
+    return results
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -2058,6 +2101,12 @@ def main():
     finally:
         if driver:
             driver.quit()
+
+    # ── Capital Grille ──
+    try:
+        all_stores.extend(scrape_capital_grille())
+    except Exception as e:
+        print(f"[Capital Grille] Scraping failed: {e}")
 
     print(f"\nTotal records collected: {len(all_stores)}")
 
