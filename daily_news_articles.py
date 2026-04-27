@@ -13,6 +13,7 @@ Changes from v9:
   3. IMPROVED geo filter — catches leeds-live, salisburyjournal, deeside, gcnews.com.au
 """
 
+import argparse
 import requests
 import pandas as pd
 import xml.etree.ElementTree as ET
@@ -185,6 +186,21 @@ CLOSING_KWS = [
     "closing locations",
     "shutter stores"
 ]
+
+# ─────────────────────────────────────────────────────────
+# MODE  (--mode opening | closing | all)
+# ─────────────────────────────────────────────────────────
+_parser = argparse.ArgumentParser(add_help=False)
+_parser.add_argument("--mode", choices=["opening", "closing", "all"], default="all")
+_MODE = _parser.parse_known_args()[0].mode
+
+ACTIVE_KWS = (
+    OPENING_KWS if _MODE == "opening" else
+    CLOSING_KWS if _MODE == "closing" else
+    OPENING_KWS + CLOSING_KWS
+)
+
+print(f"🏷️  Mode: {_MODE.upper()}  ({len(ACTIVE_KWS)} keywords)")
 
 LOCATION_ACTION_PATTERN = re.compile(
     r'\b(open|opening|opened|close|closing|closed|closure|shut|shutting|'
@@ -802,7 +818,7 @@ def fetch_one(intent_kw: str, industry: str, industry_terms: list,
 # ─────────────────────────────────────────────────────────
 tasks = []
 for industry, terms in INDUSTRIES.items():
-    for intent_kw in OPENING_KWS + CLOSING_KWS:
+    for intent_kw in ACTIVE_KWS:
         for ceid, region_label in REGIONS:
             tasks.append((intent_kw, industry, terms, True, ceid, region_label))
 
@@ -954,7 +970,8 @@ if all_results:
     df_out["published_date"] = df_out["published_date"].astype(str)
     records = df_out.to_dict(orient="records")
 
-    news_data_path = os.path.join("docs", "news_data.json")
+    _suffix = f"_{_MODE}" if _MODE != "all" else ""
+    news_data_path = os.path.join("docs", f"news_data{_suffix}.json")
     with open(news_data_path, "w", encoding="utf-8") as f:
         json.dump({"generated": NOW_UTC.isoformat(), "articles": records},
                   f, indent=2, ensure_ascii=False)
@@ -1029,15 +1046,15 @@ If none, write: None
         )
         prompt_blocks.append(block)
 
-    with open("claude_prompt.txt", "w", encoding="utf-8") as f:
+    with open(f"claude_prompt{_suffix}.txt", "w", encoding="utf-8") as f:
         f.write("\n\n".join(prompt_blocks))
 
-    print(f"📋 Saved claude_prompt.txt  "
+    print(f"📋 Saved claude_prompt{_suffix}.txt  "
           f"({len(batches)} batch{'es' if len(batches) > 1 else ''} "
           f"× ≤{_CLAUDE_BATCH} articles)")
 
     # ── Excel export ──────────────────────────────────────
-    fname = f"Retail_Update_{NOW_UTC.strftime('%Y%m%d_%H%M')}.xlsx"
+    fname = f"Retail_Update_{NOW_UTC.strftime('%Y%m%d_%H%M')}{_suffix}.xlsx"
     with pd.ExcelWriter(fname, engine="openpyxl") as writer:
         df.to_excel(writer, index=False, sheet_name="News")
         ws = writer.sheets["News"]

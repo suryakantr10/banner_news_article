@@ -9,9 +9,10 @@ permissions:
   contents: write
 
 jobs:
-  scrape:
-    runs-on: ubuntu-latest
 
+  # ── Job 1: Opening keywords ────────────────────────────
+  scrape-opening:
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,10 +30,81 @@ jobs:
           pip install --upgrade pip
           pip install feedparser pandas python-dateutil requests python-dotenv googlenewsdecoder openpyxl
 
-      - name: Run scraper
+      - name: Run scraper (opening keywords)
         env:
           ZYTE_API_KEY: ${{ secrets.ZYTE_API_KEY }}
-        run: python daily_news_articles.py
+        run: python daily_news_articles.py --mode opening
+
+      - name: Upload opening results
+        uses: actions/upload-artifact@v4
+        with:
+          name: news-opening
+          path: docs/news_data_opening.json
+
+  # ── Job 2: Closing keywords ────────────────────────────
+  scrape-closing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install feedparser pandas python-dateutil requests python-dotenv googlenewsdecoder openpyxl
+
+      - name: Run scraper (closing keywords)
+        env:
+          ZYTE_API_KEY: ${{ secrets.ZYTE_API_KEY }}
+        run: python daily_news_articles.py --mode closing
+
+      - name: Upload closing results
+        uses: actions/upload-artifact@v4
+        with:
+          name: news-closing
+          path: docs/news_data_closing.json
+
+  # ── Job 3: Merge + commit (runs after both finish) ─────
+  merge:
+    needs: [scrape-opening, scrape-closing]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install pandas
+
+      - name: Download opening results
+        uses: actions/download-artifact@v4
+        with:
+          name: news-opening
+          path: docs
+
+      - name: Download closing results
+        uses: actions/download-artifact@v4
+        with:
+          name: news-closing
+          path: docs
+
+      - name: Merge results
+        run: python merge_results.py
 
       - name: Commit output files
         run: |
