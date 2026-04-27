@@ -2,7 +2,7 @@ name: Daily Retail News Scraper
 
 on:
   schedule:
-    - cron: "30 21 * * *"    # 9:30 PM UTC = 3:00 AM IST
+    - cron: "0 4 * * *"    # 9:30 PM UTC = 4:00 AM IST
   workflow_dispatch:
 
 permissions:
