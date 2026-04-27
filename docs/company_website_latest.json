@@ -1,17 +1,11 @@
 {
-  "last_updated": "April 24, 2026 19:45 UTC",
+  "last_updated": "April 27, 2026 23:16 UTC",
   "data": [
     {
       "company": "ALDI",
-      "address": "1221 North Arizona Avenue, Gilbert, 85233",
-      "opening_date": "4/23/2026",
-      "link": "https://info.aldi.us/stores/l/az/gilbert/1221-north-arizona-avenue/fo25"
-    },
-    {
-      "company": "ALDI",
-      "address": "17406 Colima Road, Rowland Heights, 91748",
-      "opening_date": "4/23/2026",
-      "link": "https://info.aldi.us/stores/l/ca/rowland-heights/17406-colima-road/fo29"
+      "address": "1571 Westgate Parkway, Dothan, 36303",
+      "opening_date": "5/14/2026",
+      "link": "https://info.aldi.us/stores/l/al/dothan/1571-westgate-parkway/fp37"
     },
     {
       "company": "ALDI",
@@ -21,21 +15,9 @@
     },
     {
       "company": "ALDI",
-      "address": "6040 Crossland Trail, Bradenton, 34211",
-      "opening_date": "4/23/2026",
-      "link": "https://info.aldi.us/stores/l/fl/bradenton/6040-crossland-trail/ff33"
-    },
-    {
-      "company": "ALDI",
-      "address": "995 Sebastian Boulevard, Sebastian, 32958",
-      "opening_date": "4/23/2026",
-      "link": "https://info.aldi.us/stores/l/fl/sebastian/995-sebastian-boulevard/fo02"
-    },
-    {
-      "company": "ALDI",
-      "address": "458 Venice Bypass, Venice, 34285",
-      "opening_date": "4/23/2026",
-      "link": "https://info.aldi.us/stores/l/fl/venice/458-venice-bypass/ft15"
+      "address": "11290 West State Road 84, Davie, 33325",
+      "opening_date": "5/14/2026",
+      "link": "https://info.aldi.us/stores/l/fl/davie/11290-west-state-road-84/fs76"
     },
     {
       "company": "ALDI",
@@ -45,15 +27,21 @@
     },
     {
       "company": "ALDI",
-      "address": "38 Great Neck Road, Great Neck, 11021",
-      "opening_date": "4/23/2026",
-      "link": "https://info.aldi.us/stores/l/ny/great-neck/38-great-neck-road/fn76"
+      "address": "11935 Mezzo Drive, Venice, 34293",
+      "opening_date": "5/14/2026",
+      "link": "https://info.aldi.us/stores/l/fl/venice/11955-mezzo-drive/fs80"
     },
     {
       "company": "ALDI",
-      "address": "791 West Elk Avenue, Elizabethton, 37643",
-      "opening_date": "4/23/2026",
-      "link": "https://info.aldi.us/stores/l/tn/elizabethton/791-w-elk-ave/fm20"
+      "address": "11755 Fulton Street, Lowell, 49331",
+      "opening_date": "5/14/2026",
+      "link": "https://info.aldi.us/stores/l/mi/lowell/11755-fulton-street/fm43"
+    },
+    {
+      "company": "ALDI",
+      "address": "805 Pennell Lane, Dyersburg, 38024",
+      "opening_date": "5/14/2026",
+      "link": "https://info.aldi.us/stores/l/tn/dyersburg/805-pennell-lane/fj91"
     },
     {
       "company": "Dogtopia",
@@ -153,6 +141,12 @@
     },
     {
       "company": "Burlington",
+      "address": "1514 S Riordan Ranch St, Arizona",
+      "opening_date": "06/26",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
       "address": "3835 North Mall Ave Ste 2, Arkansas",
       "opening_date": "05/01",
       "link": ""
@@ -177,8 +171,20 @@
     },
     {
       "company": "Burlington",
-      "address": "540 N US Hwy 441, Florida",
-      "opening_date": "04/24",
+      "address": "12779 Main Street, California",
+      "opening_date": "06/26",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "1410B East Plaza Blvd, California",
+      "opening_date": "06/26",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "1855 E. Ventura Blvd, California",
+      "opening_date": "06/26",
       "link": ""
     },
     {
@@ -189,8 +195,8 @@
     },
     {
       "company": "Burlington",
-      "address": "2655 N Decatur Rd, Georgia",
-      "opening_date": "04/24",
+      "address": "13173 Cortez Boulevard, Florida",
+      "opening_date": "06/26",
       "link": ""
     },
     {
@@ -215,6 +221,18 @@
       "company": "Burlington",
       "address": "4600 Shelbyville Rd ste 280, Kentucky",
       "opening_date": "05/15",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "15920 Robert S Crain Hwy, Maryland",
+      "opening_date": "06/26",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "19142 Montgomery Village Ave, Maryland",
+      "opening_date": "06/26",
       "link": ""
     },
     {
@@ -249,6 +267,12 @@
     },
     {
       "company": "Burlington",
+      "address": "10521 S 15th St, Nebraska",
+      "opening_date": "06/26",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
       "address": "701 NJ-440 Space 16, New Jersey",
       "opening_date": "05/22",
       "link": ""
@@ -263,6 +287,12 @@
       "company": "Burlington",
       "address": "1530 County Rd 64, New York",
       "opening_date": "05/15",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "3225 NY-364 Ste 25, New York",
+      "opening_date": "06/26",
       "link": ""
     },
     {
@@ -299,6 +329,12 @@
       "company": "Burlington",
       "address": "9653 Colerain Avenue, Ohio",
       "opening_date": "06/19",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "2200 East Hillside Drive, Oklahoma",
+      "opening_date": "06/26",
       "link": ""
     },
     {
@@ -357,6 +393,18 @@
     },
     {
       "company": "Burlington",
+      "address": "9500 S I-35 Frontage Rd, Building K, Texas",
+      "opening_date": "06/26",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "720 W Telegraph Street, Utah",
+      "opening_date": "06/26",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
       "address": "26015 104th Ave SE Suite 101, Washington",
       "opening_date": "05/08",
       "link": ""
@@ -396,12 +444,6 @@
       "address": "644 E Main St, Waynesboro, PA, 17268",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/pa/waynesboro/644-e-main-st/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "1040 Dekalb Plaza Blvd SW, Fort Payne, AL, 35967",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/al/fort-payne/1040-dekalb-plaza-blvd-sw/coming-soon"
     },
     {
       "company": "Five Below",
@@ -909,6 +951,12 @@
     },
     {
       "company": "Jersey Mike's",
+      "address": "5135 Lake Michigan Drive, Allendale, MI 49401-9376",
+      "opening_date": "In Development",
+      "link": "https://www.jerseymikes.com/locations/coming-soon/US-MI"
+    },
+    {
+      "company": "Jersey Mike's",
       "address": "US-223, Adrian, MI 49221",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-MI"
@@ -916,12 +964,6 @@
     {
       "company": "Jersey Mike's",
       "address": "3022 Fairlane Drive, Allen Park, MI 48101",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-MI"
-    },
-    {
-      "company": "Jersey Mike's",
-      "address": "5135 Lake Michigan Drive, Allendale, MI 49401-9376",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-MI"
     },
@@ -993,7 +1035,7 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "3825 Harrison Ave, Butte, MT 59701-6810",
+      "address": "103 Cornerstone Plaza Suite B, Butte, MT 59701-6810",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-MT"
     },
@@ -1131,7 +1173,7 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "421 Boston Post Road, Port Chester, NY 10573-4750",
+      "address": "519-521 Boston Post Road, Port Chester, NY 10573-4750",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-NY"
     },
@@ -1299,6 +1341,12 @@
     },
     {
       "company": "Jersey Mike's",
+      "address": "10049 Lemon Creek Boulevard, Boerne, TX 78015-1501",
+      "opening_date": "In Development",
+      "link": "https://www.jerseymikes.com/locations/coming-soon/US-TX"
+    },
+    {
+      "company": "Jersey Mike's",
       "address": "9911 Brodie Lane, Austin, TX 78748-5802",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-TX"
@@ -1312,12 +1360,6 @@
     {
       "company": "Jersey Mike's",
       "address": "NEC Highway 71 & FM 969, Bastrop, TX 78602",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-TX"
-    },
-    {
-      "company": "Jersey Mike's",
-      "address": "10049 Lemon Creek Boulevard, Boerne, TX 78015-1501",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-TX"
     },
@@ -1431,13 +1473,13 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "383 Patterson Drive, Morgantown, WV 26505-3270",
+      "address": "253 Three Springs Drive, Weirton, WV 26062-3814",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-WV"
     },
     {
       "company": "Jersey Mike's",
-      "address": "253 Three Springs Drive, Weirton, WV 26062-3814",
+      "address": "383 Patterson Drive, Morgantown, WV 26505-3270",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-WV"
     },
@@ -1625,6 +1667,30 @@
       "company": "LongHorn Steakhouse",
       "address": "12609 E US 290 Hwy EB, Manor, TX 78653",
       "opening_date": "OPENING SUMMER 2026",
+      "link": "https://www.longhornsteakhouse.com/locations/new-locations"
+    },
+    {
+      "company": "LongHorn Steakhouse",
+      "address": "187 Watauga Village Dr, Boone, NC 28607",
+      "opening_date": "Now Open",
+      "link": "https://www.longhornsteakhouse.com/locations/new-locations"
+    },
+    {
+      "company": "LongHorn Steakhouse",
+      "address": "3325 Tanger Blvd, Locust Grove, GA 30248",
+      "opening_date": "Now Open",
+      "link": "https://www.longhornsteakhouse.com/locations/new-locations"
+    },
+    {
+      "company": "LongHorn Steakhouse",
+      "address": "2020 Veterans Drive, Pell City, AL 35125",
+      "opening_date": "Now Open",
+      "link": "https://www.longhornsteakhouse.com/locations/new-locations"
+    },
+    {
+      "company": "LongHorn Steakhouse",
+      "address": "27490 W Lugonia Ave, Redlands, CA 92374",
+      "opening_date": "Now Open",
       "link": "https://www.longhornsteakhouse.com/locations/new-locations"
     },
     {
@@ -2229,30 +2295,6 @@
     },
     {
       "company": "7-Eleven",
-      "address": "2800 N Jackson Road Pharr, TX",
-      "opening_date": "Opens: 03/31/26Grand Opening: 04/17/26",
-      "link": "https://maps.app.goo.gl/p7EGnwyvxoFtBfg36"
-    },
-    {
-      "company": "7-Eleven",
-      "address": "1360 NC-24 Cameron, NC",
-      "opening_date": "Opens: 04/02/26Grand Opening: 04/24/26",
-      "link": "https://maps.app.goo.gl/ib1TjTYvMXuW7aJ38"
-    },
-    {
-      "company": "7-Eleven",
-      "address": "2015 Milky Way West Melbourne, FL",
-      "opening_date": "Opens: 04/03/26Grand Opening: 04/24/26",
-      "link": "https://maps.app.goo.gl/8PrhyXKffeQkCUDw9"
-    },
-    {
-      "company": "7-Eleven",
-      "address": "3599 East-West Hwy Hyattsville, MD",
-      "opening_date": "Opens: 04/07/26Grand Opening: 04/24/26",
-      "link": "https://maps.app.goo.gl/EspjHjFMrRdTbg5M8"
-    },
-    {
-      "company": "7-Eleven",
       "address": "1175 E Flamingo Rd Las Vegas, NV",
       "opening_date": "Opens: 04/07/26Grand Opening: 05/01/26",
       "link": "https://maps.app.goo.gl/Uy8VU153p8xSTWRu6"
@@ -2499,12 +2541,6 @@
     },
     {
       "company": "Yard House",
-      "address": "Folsom 350 Palladio Pkwy Folsom, CA 95630 (916) 605-0715",
-      "opening_date": "Now Open",
-      "link": "https://www.yardhouse.com/locations/new-locations"
-    },
-    {
-      "company": "Yard House",
       "address": "Santa Clarita 24201 Magic Mountain Pkway Santa Clarita, CA 91355",
       "opening_date": "Now Open",
       "link": "https://www.yardhouse.com/locations/new-locations"
@@ -2568,6 +2604,30 @@
       "address": "Abilene, TX",
       "opening_date": "4/09/26",
       "link": "https://www.naturalgrocers.com/store/abilene"
+    },
+    {
+      "company": "Capital Grille",
+      "address": "Nashville1223 BroadwayTennessee, TN 37203-3117(615) 258-5321",
+      "opening_date": "NOW OPEN!",
+      "link": "https://www.thecapitalgrille.com/locations/new-locations"
+    },
+    {
+      "company": "Capital Grille",
+      "address": "Lone Tree9067 Westview RoadColorado, CO 80124-5134(303) 302-0746",
+      "opening_date": "NOW OPEN!",
+      "link": "https://www.thecapitalgrille.com/locations/new-locations"
+    },
+    {
+      "company": "Capital Grille",
+      "address": "Panama City, PanamaAvenida Roberto Motta, Panamá, Panama 0801",
+      "opening_date": "Opens:",
+      "link": "https://www.thecapitalgrille.com/locations/new-locations"
+    },
+    {
+      "company": "Capital Grille",
+      "address": "Ho Chi Minh City, VietnamBitexco Financial Tower, No. 2 Hải Triều Street, District 1, Vietnam 700000",
+      "opening_date": "Opens:",
+      "link": "https://www.thecapitalgrille.com/locations/new-locations"
     }
   ]
 }
