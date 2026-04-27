@@ -567,8 +567,10 @@ def _decode_zyte(google_url: str) -> str | None:
         final_url = response.url
         if final_url and _is_valid_article_url(final_url):
             return _clean_url(final_url)
-    except Exception:
-        pass
+        else:
+            print(f"  [Zyte] Rejected URL: {final_url!r} (status={response.status_code})")
+    except Exception as e:
+        print(f"  [Zyte] Exception: {type(e).__name__}: {e}")
     return None
 
 
@@ -882,7 +884,7 @@ if all_results:
     print(f"\n🔗 Decoding {len(df)} links...")
 
     link_map: dict = {}
-    with ThreadPoolExecutor(max_workers=6) as ex:
+    with ThreadPoolExecutor(max_workers=2) as ex:
         future_to_link = {ex.submit(decode_link, gl): gl for gl in df["google_link"]}
         done = 0
         for fut in as_completed(future_to_link):
