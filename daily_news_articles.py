@@ -479,9 +479,9 @@ MIN_RELEVANCE_SCORE = 2
 # ─────────────────────────────────────────────────────────
 PROXIES = []   # Add your own proxies here if needed (separate from Zyte)
 
-BATCH_SIZE   = 40
-BATCH_PAUSE  = (5, 15)
-WORKERS      = 8
+BATCH_SIZE   = 20          # smaller batches → more frequent long pauses
+BATCH_PAUSE  = (25, 50)   # was (5,15) — longer gaps prevent CAPTCHA triggers
+WORKERS      = 3           # was 8 — fewer concurrent Google requests
 
 # ─────────────────────────────────────────────────────────
 # HTTP SESSION POOL
@@ -559,12 +559,14 @@ def _is_valid_article_url(url: str) -> bool:
 
 _RSS_SOURCE_URLS: dict[str, str] = {}
 _tier_hits: Counter = Counter()
+_CAPTCHA_BACKOFF_UNTIL: float = 0.0   # epoch time — global RSS pause when CAPTCHA detected
 
 
 def _decode_base64(google_url: str) -> str | None:
     """
     Tier A: Decode the base64 path segment of a Google News URL.
     Free, no HTTP call needed.
+    Tries multiple extraction patterns to maximise success rate.
     """
     try:
         parsed  = urlparse(google_url)
@@ -574,11 +576,20 @@ def _decode_base64(google_url: str) -> str | None:
         path_id = segs[-1].split('?')[0]
         padded  = path_id + '=' * (-len(path_id) % 4)
         raw     = base64.urlsafe_b64decode(padded)
-        match = re.search(rb'https?://[\x21-\x7e]+', raw)
-        if match:
-            candidate = match.group(0).decode('utf-8', errors='ignore').rstrip('.')
-            if _is_valid_article_url(candidate):
+
+        # Pattern 1: all printable-ASCII URL bytes (most reliable)
+        for m in re.finditer(rb'https?://[\x21-\x7e]+', raw):
+            candidate = m.group(0).decode('utf-8', errors='ignore').rstrip('.)')
+            if _is_valid_article_url(candidate) and 'google.com' not in candidate:
                 return _clean_url(candidate)
+
+        # Pattern 2: URL may contain non-ASCII chars after UTF-8 decode
+        text = raw.decode('utf-8', errors='ignore')
+        for m in re.finditer(r'https?://[^\x00-\x1f\s"\'<>\\]+', text):
+            candidate = m.group(0).rstrip('.)')
+            if _is_valid_article_url(candidate) and 'google.com' not in candidate:
+                return _clean_url(candidate)
+
     except Exception:
         pass
     return None
@@ -703,16 +714,16 @@ def decode_link(google_url: str) -> str:
         _tier_hits["B_zyte"] += 1
         return decoded
 
-    # Tier C: scrape Google redirect page for embedded article URL
-    decoded = _decode_scrape(google_url)
-    if decoded:
-        _tier_hits["C_scrape"] += 1
-        return decoded
-
-    # Tier D: googlenewsdecoder library
+    # Tier D: googlenewsdecoder library (moved before Tier C — avoids hitting Google directly)
     decoded = _decode_gnd(google_url)
     if decoded:
         _tier_hits["D_gnd"] += 1
+        return decoded
+
+    # Tier C: scrape Google redirect page (last resort — can trigger CAPTCHA)
+    decoded = _decode_scrape(google_url)
+    if decoded:
+        _tier_hits["C_scrape"] += 1
         return decoded
 
     _tier_hits["fail"] += 1
@@ -735,14 +746,28 @@ def build_query(intent_kw: str, industry_terms: list, use_sites: bool) -> str:
 
 
 def fetch_rss(url: str) -> list:
+    global _CAPTCHA_BACKOFF_UNTIL
+    # Honour any active global CAPTCHA backoff before making this request
+    wait = _CAPTCHA_BACKOFF_UNTIL - time.time()
+    if wait > 0:
+        time.sleep(wait + random.uniform(0, 5))
+
     try:
         r = _get_session().get(url, timeout=20)
+        if r.status_code == 429:
+            _CAPTCHA_BACKOFF_UNTIL = time.time() + 120
+            print("  [RSS 429] Rate-limited — global backoff 2 min")
+            return []
         if r.status_code != 200:
             return []
         content = r.content
         if b"<item>" not in content:
-            if b"<html" in content[:200] or b"captcha" in content[:500].lower():
-                print(f"  [RSS BLOCKED] Google returned HTML/captcha — possible rate limit")
+            snippet = content[:1000].lower()
+            if b"captcha" in snippet or b"unusual traffic" in snippet:
+                _CAPTCHA_BACKOFF_UNTIL = time.time() + 180
+                print("  [RSS CAPTCHA] Google CAPTCHA detected — global backoff 3 min")
+            elif b"<html" in content[:200]:
+                print(f"  [RSS BLOCKED] Google returned HTML — possible rate limit")
             return []
         content = re.sub(rb'\s+xmlns(?::\w+)?="[^"]+"', b'', content)
         root  = ET.fromstring(content)
