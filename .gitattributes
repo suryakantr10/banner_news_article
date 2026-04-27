@@ -1,0 +1,5 @@
+# Auto-generated files — always keep the remote (CI-committed) version on merge conflicts
+docs/news_data.json          merge=ours
+docs/news_data_opening.json  merge=ours
+docs/news_data_closing.json  merge=ours
+docs/company_website_latest.json merge=ours
