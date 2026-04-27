@@ -449,8 +449,8 @@ MIN_RELEVANCE_SCORE = 2
 PROXIES = []   # Add your own proxies here if needed (separate from Zyte)
 
 BATCH_SIZE   = 40
-BATCH_PAUSE  = (35, 55)
-WORKERS      = 2
+BATCH_PAUSE  = (5, 15)
+WORKERS      = 8
 
 # ─────────────────────────────────────────────────────────
 # HTTP SESSION POOL
