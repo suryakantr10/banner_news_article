@@ -151,34 +151,29 @@ OPENING_KWS = [
 ]
 
 CLOSING_KWS = [
+    # 🔴 Highest signal — confirmed closure
     "store closing",
     "permanent closure",
+    "going out of business",
+    "store closing sale",
+    "everything must go",
+
+    # 🟠 Multi-location / chain closures
     "closing stores",
+    "closing locations",
     "shutting down locations",
+    "closing all locations",
+
+    # 🟡 Financial distress signals
     "chapter 11",
     "bankruptcy",
     "liquidation",
-    "going out of business",
-    "last day",
-
-    # Newly added unique keywords
-    "closing soon",
-    "closing",
-    "closures",
-    "shutting down",
-    "shutters",
-    "permanent closing",
-    "going-out-of-business",
-    "everything must go",
-    "store closing sale",
-    "final day",
-    "final closing",
     "ceases operations",
-    "store to close",
-    "stores to close",
-    "closing all locations",
-    "closing locations",
-    "shutter stores"
+
+    # 🟢 Soft signals
+    "closing soon",
+    "shutters",
+    "last day",
 ]
 
 # ─────────────────────────────────────────────────────────
