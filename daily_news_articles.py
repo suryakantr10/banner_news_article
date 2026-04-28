@@ -121,54 +121,33 @@ TARGET_SITES = [
 SITE_QUERY = " OR ".join([f"site:{s}" for s in TARGET_SITES[:8]])
 
 OPENING_KWS = [
+    # 🔴 Highest signal — direct opening confirmation
     "grand opening",
     "now open",
-    "opening soon",
-    "new store location",
-    "coming soon",
-    "set to open",
-    "breaks ground",
-    "store opening",
-    "location opening",
-    "now hiring",
+    "soft opening",
+    "open for business",
+    "ribbon cutting",
 
-    # Newly added unique keywords
+    # 🟠 Pre-opening announcements
+    "opening soon",
+    "coming soon",
+    "plans to open",
     "new store",
     "new location",
-    "opens new",
-    "opening in",
-    "to open",
-    "plans to open",
-    "will open",
-    "opening date",
-    "opening weekend",
-    "soft opening",
-    "ribbon cutting",
-    "open for business",
-    "doors open",
     "expanding to",
-    "announced plans",
-    "plans announced",
-    "permit filed",
-    "building permit",
-    "permit application",
-    "zoning approval",
-    "site plan approved",
-    "lease signed",
-    "signed lease",
-    "retail space leased",
-    "land acquired",
-    "site acquired",
-    "broke ground",
+
+    # 🟡 Construction / development phase
+    "breaks ground",
     "groundbreaking ceremony",
     "under construction",
     "construction underway",
-    "construction started",
-    "construction begins",
-    "tenant improvement",
-    "interior build-out",
+    "certificate of occupancy",
+
+    # 🟢 Early-stage / permit signals
+    "permit filed",
+    "zoning approval",
+    "lease signed",
     "build out",
-    "certificate of occupancy"
 ]
 
 CLOSING_KWS = [
