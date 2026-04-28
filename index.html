@@ -2792,7 +2792,7 @@
     }
 
     function cwDoneKey(r) {
-        return 'cwdone-' + (r.link || (r.company + '|' + r.address));
+        return 'cwdone-' + r.company + '|' + r.address;
     }
 
     function toggleCompanyWebDone(key) {
