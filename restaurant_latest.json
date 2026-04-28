@@ -1,7 +1,37 @@
 {
-  "last_updated": "2026-04-27 22:56 UTC",
+  "last_updated": "2026-04-28 01:20 UTC",
   "total": 60,
   "data": [
+    {
+      "date": "April 27, 2026",
+      "url": "https://whatnow.com/houston/restaurants/nothing-bundt-cakes-to-sweeten-up-the-ravenwood-village-shopping-center/",
+      "title": "Nothing Bundt Cakes to Sweeten Up the Ravenwood Village Shopping Center",
+      "address": "245 I-45, Huntsville, TX 77340"
+    },
+    {
+      "date": "April 27, 2026",
+      "url": "https://whatnow.com/las-vegas/restaurants/coffee-cure-by-loulou-is-coming-to-the-sharewestside-development/",
+      "title": "Coffee Cure By LouLou is coming to the shareWESTSIDE Development",
+      "address": "1100 D St, Las Vegas, NV 89106"
+    },
+    {
+      "date": "April 27, 2026",
+      "url": "https://whatnow.com/houston/restaurants/tacos-frontera-to-bring-authentic-tijuana-style-taqueria-to-pasadena/",
+      "title": "Tacos Frontera to Bring Authentic Tijuana Style Taqueria to Pasadena",
+      "address": "2536 Spencer Hwy, Pasadena, TX 77504"
+    },
+    {
+      "date": "April 27, 2026",
+      "url": "https://whatnow.com/san-diego/restaurants/five-corners-coffee-bakery-opening-in-bankers-hill/",
+      "title": "Five Corners Coffee & Bakery Opening in Bankers Hill",
+      "address": "3407 First Ave., San Diego, CA 92103"
+    },
+    {
+      "date": "April 27, 2026",
+      "url": "https://whatnow.com/atlanta/restaurants/larita-cafe-to-join-brookhaven-community/",
+      "title": "Larita Cafe To Join Brookhaven Community | What Now Atlanta",
+      "address": "1420 Lake Hearn Dr NE, Brookhaven, GA 30319"
+    },
     {
       "date": "April 27, 2026",
       "url": "https://whatnow.com/san-diego/restaurants/luga-cafe-kitchen-coming-to-city-heights/",
@@ -331,36 +361,6 @@
       "url": "https://whatnow.com/houston/restaurants/pizzana-acclaimed-los-angeles-based-pizzeria-to-open-its-second-houston-location/",
       "title": "Pizzana, Acclaimed Los Angeles Based Pizzeria, to Open its Second Houston Location",
       "address": "1085 Gessner Rd, Houston, TX 77055"
-    },
-    {
-      "date": "April 24, 2026",
-      "url": "https://whatnow.com/new-orleans/restaurants/origami-sushi-prepping-new-uptown-location/",
-      "title": "Origami Sushi Prepping New Uptown Location",
-      "address": "7626 Maple St, New Orleans, LA 70118"
-    },
-    {
-      "date": "April 24, 2026",
-      "url": "https://whatnow.com/new-orleans/restaurants/new-seafood-and-gumbo-spot-planned-for-algiers/",
-      "title": "New Seafood and Gumbo Spot Planned for Algiers",
-      "address": "3613 General Meyer Ave, New Orleans, LA 70114"
-    },
-    {
-      "date": "April 24, 2026",
-      "url": "https://whatnow.com/nashville/restaurants/mount-pleasant-coffee-co-planning-new-location-in-tennessee/",
-      "title": "Mount Pleasant Coffee Co. Planning New Location in Tennessee",
-      "address": "106 N Main St, Mt Pleasant, TN 38474, USA"
-    },
-    {
-      "date": "April 24, 2026",
-      "url": "https://whatnow.com/memphis/restaurants/roll-with-it-bringing-southern-style-cuisine-to-memphis/",
-      "title": "Roll With It Bringing Southern-Style Cuisine to Memphis",
-      "address": "582 E Raines Rd, Memphis, TN 38109"
-    },
-    {
-      "date": "April 24, 2026",
-      "url": "https://whatnow.com/boston/restaurants/the-reserve-steakhouse-nears-downtown-haverhill-debut/",
-      "title": "The Reserve Steakhouse Nears Downtown Haverhill Debut",
-      "address": "77 Washington St, Haverhill, MA 01832"
     }
   ]
 }
