@@ -1,5 +1,5 @@
 {
-  "last_updated": "April 27, 2026 23:16 UTC",
+  "last_updated": "April 29, 2026 21:25 UTC",
   "data": [
     {
       "company": "ALDI",
@@ -429,63 +429,15 @@
     },
     {
       "company": "Five Below",
+      "address": "1038 Crossroads Dr, Statesville, NC, 28625",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/nc/statesville/1038-crossroads-dr/coming-soon"
+    },
+    {
+      "company": "Five Below",
       "address": "1649 N Expwy, Griffin, GA, 30223",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/ga/griffin/1649-n-expwy/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "3201 N White Sands Blvd, Alamogordo, NM, 88310",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/nm/alamogordo/3201-n-white-sands-blvd/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "644 E Main St, Waynesboro, PA, 17268",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/pa/waynesboro/644-e-main-st/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "5537 Grove Blvd, Hoover, AL, 35226",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/al/hoover/5537-grove-blvd/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "256 Black Gold Blvd, Hazard, KY, 41701",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/ky/hazard/256-black-gold-blvd/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "13710 W Bell Rd, Surprise, AZ, 85374",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/az/surprise/13710-w-bell-rd/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "480 Stillwater Ave, Bangor, ME, 04401",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/me/bangor/480-stillwater-ave/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "28201 Chardon Rd, Willoughby Hills, OH, 44092",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/oh/willoughby-hills/28201-chardon-rd/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "2921 Boca Chica Blvd, Brownsville, TX, 78521",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/tx/brownsville/2921-boca-chica-blvd/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "4222 E Ontario Ranch Rd, Ontario, CA, 91762",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/ca/ontario/4222-e-ontario-ranch-rd/coming-soon"
     },
     {
       "company": "Five Below",
@@ -495,15 +447,63 @@
     },
     {
       "company": "Five Below",
-      "address": "1038 Crossroads Dr, Statesville, NC, 28625",
+      "address": "4222 E Ontario Ranch Rd, Ontario, CA, 91762",
       "opening_date": "",
-      "link": "https://locations.fivebelow.com/nc/statesville/1038-crossroads-dr/coming-soon"
+      "link": "https://locations.fivebelow.com/ca/ontario/4222-e-ontario-ranch-rd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "2921 Boca Chica Blvd, Brownsville, TX, 78521",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/tx/brownsville/2921-boca-chica-blvd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "28201 Chardon Rd, Willoughby Hills, OH, 44092",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/oh/willoughby-hills/28201-chardon-rd/coming-soon"
     },
     {
       "company": "Five Below",
       "address": "7285 Arroyo Crossing Pkwy, Las Vegas, NV, 89113",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/nv/las-vegas/7285-arroyo-crossing-pkwy/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "13710 W Bell Rd, Surprise, AZ, 85374",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/az/surprise/13710-w-bell-rd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "644 E Main St, Waynesboro, PA, 17268",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/pa/waynesboro/644-e-main-st/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "256 Black Gold Blvd, Hazard, KY, 41701",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/ky/hazard/256-black-gold-blvd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "5537 Grove Blvd, Hoover, AL, 35226",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/al/hoover/5537-grove-blvd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "3201 N White Sands Blvd, Alamogordo, NM, 88310",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/nm/alamogordo/3201-n-white-sands-blvd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "480 Stillwater Ave, Bangor, ME, 04401",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/me/bangor/480-stillwater-ave/coming-soon"
     },
     {
       "company": "HomeGoods",
@@ -921,7 +921,7 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "Three Notch Road & N Shangri-La Drive, Lexington Park, MD 20653",
+      "address": "21841 Three Notch Road, Lexington Park, MD 20653-5524",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-MD"
     },
@@ -948,12 +948,6 @@
       "address": "840 Lexington Street, Waltham, MA 02452",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-MA"
-    },
-    {
-      "company": "Jersey Mike's",
-      "address": "5135 Lake Michigan Drive, Allendale, MI 49401-9376",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-MI"
     },
     {
       "company": "Jersey Mike's",
@@ -1089,7 +1083,7 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "194 W 237th Street, Bronx, NY 10470-2005",
+      "address": "193 W 237th Street, Bronx, NY 10470-2005",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-NY"
     },
@@ -1341,12 +1335,6 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "10049 Lemon Creek Boulevard, Boerne, TX 78015-1501",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-TX"
-    },
-    {
-      "company": "Jersey Mike's",
       "address": "9911 Brodie Lane, Austin, TX 78748-5802",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-TX"
@@ -1470,12 +1458,6 @@
       "address": "5708 N Pioneer Canyon Drive, Ridgefield, WA 98642-1036",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-WA"
-    },
-    {
-      "company": "Jersey Mike's",
-      "address": "253 Three Springs Drive, Weirton, WV 26062-3814",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-WV"
     },
     {
       "company": "Jersey Mike's",
@@ -1638,60 +1620,6 @@
       "address": "262 East Main Street",
       "opening_date": "March 17, 2026",
       "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-johnny-cash-pkwy"
-    },
-    {
-      "company": "LongHorn Steakhouse",
-      "address": "1608 Julian R Allsbrook Hwy, Weldon, NC 27890",
-      "opening_date": "OPENS: May 11",
-      "link": "https://www.longhornsteakhouse.com/locations/new-locations"
-    },
-    {
-      "company": "LongHorn Steakhouse",
-      "address": "12237 Montana Ave, El Paso, TX 79938",
-      "opening_date": "OPENING SPRING 2026",
-      "link": "https://www.longhornsteakhouse.com/locations/new-locations"
-    },
-    {
-      "company": "LongHorn Steakhouse",
-      "address": "16329 S Boulevard Place, Plainfield, IL 60586",
-      "opening_date": "OPENING SPRING 2026",
-      "link": "https://www.longhornsteakhouse.com/locations/new-locations"
-    },
-    {
-      "company": "LongHorn Steakhouse",
-      "address": "650 W. Central Texas Expressway, Harker Heights, TX 76548",
-      "opening_date": "OPENING SPRING 2026",
-      "link": "https://www.longhornsteakhouse.com/locations/new-locations"
-    },
-    {
-      "company": "LongHorn Steakhouse",
-      "address": "12609 E US 290 Hwy EB, Manor, TX 78653",
-      "opening_date": "OPENING SUMMER 2026",
-      "link": "https://www.longhornsteakhouse.com/locations/new-locations"
-    },
-    {
-      "company": "LongHorn Steakhouse",
-      "address": "187 Watauga Village Dr, Boone, NC 28607",
-      "opening_date": "Now Open",
-      "link": "https://www.longhornsteakhouse.com/locations/new-locations"
-    },
-    {
-      "company": "LongHorn Steakhouse",
-      "address": "3325 Tanger Blvd, Locust Grove, GA 30248",
-      "opening_date": "Now Open",
-      "link": "https://www.longhornsteakhouse.com/locations/new-locations"
-    },
-    {
-      "company": "LongHorn Steakhouse",
-      "address": "2020 Veterans Drive, Pell City, AL 35125",
-      "opening_date": "Now Open",
-      "link": "https://www.longhornsteakhouse.com/locations/new-locations"
-    },
-    {
-      "company": "LongHorn Steakhouse",
-      "address": "27490 W Lugonia Ave, Redlands, CA 92374",
-      "opening_date": "Now Open",
-      "link": "https://www.longhornsteakhouse.com/locations/new-locations"
     },
     {
       "company": "Wawa",
@@ -2439,6 +2367,30 @@
     },
     {
       "company": "TJ Maxx",
+      "address": "1428 W. Airline Hwy, LaPlace",
+      "opening_date": "May 28, 2026",
+      "link": "https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1683&ref=grandOpenings"
+    },
+    {
+      "company": "TJ Maxx",
+      "address": "2530 Hylan Boulevard, Staten Island",
+      "opening_date": "May 28, 2026",
+      "link": "https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=165&ref=grandOpenings"
+    },
+    {
+      "company": "TJ Maxx",
+      "address": "8540 Factory Shops Blvd, Jeffersonville",
+      "opening_date": "May 28, 2026",
+      "link": "https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1485&ref=grandOpenings"
+    },
+    {
+      "company": "TJ Maxx",
+      "address": "2607 Decherd Blvd, Winchester",
+      "opening_date": "May 28, 2026",
+      "link": "https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1687&ref=grandOpenings"
+    },
+    {
+      "company": "TJ Maxx",
       "address": "280 Black Gold Blvd, Hazard",
       "opening_date": "May 17, 2026",
       "link": "https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1694&ref=grandOpenings"
@@ -2480,96 +2432,6 @@
       "link": "https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1457&ref=grandOpenings"
     },
     {
-      "company": "Kirkland's",
-      "address": "Ann Arbor, MI Maple Village 341 N. Maple Road Ann Arbor, MI 48103",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Kirkland's",
-      "address": "West Long Branch, NJ Consumer Center 310 State Route 36 West Long Branch, NJ 07764",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Kirkland's",
-      "address": "Deerfield Beach, FL Deerfield Mall 3888 West Hillsboro Blvd Deerfield, FL 33442",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Kirkland's",
-      "address": "Wayne, PA Gateway Shopping Center 221 Swedesford Road, Space 183 Wayne, PA 19087",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Kirkland's",
-      "address": "Washington, PA Tanger Outlet 2200 Tanger Boulevard Washington, PA 15301",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Kirkland's",
-      "address": "Freehold, NJ Freehold Raceway Mall 3710 Route 9 South Freehold, NJ 07728",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Kirkland's",
-      "address": "Valley Stream, NY Green Acres Commons 2034 Sunrise Highway Valley Stream, NY 11581",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Kirkland's",
-      "address": "Anderson, SC Anderson Station 166 Station Drive Anderson, SC 29621",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Kirkland's",
-      "address": "Nashville, TN One Bellevue Place 8167 Sawyer Brown Road Nashville, TN 37221",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Kirkland's",
-      "address": "Durham, NC Renaissance Village 8200 Renaissance Parkway Durham, NC 27713",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Yard House",
-      "address": "Santa Clarita 24201 Magic Mountain Pkway Santa Clarita, CA 91355",
-      "opening_date": "Now Open",
-      "link": "https://www.yardhouse.com/locations/new-locations"
-    },
-    {
-      "company": "Yard House",
-      "address": "Millbury 8190 Elk Grove Blvd Elk Grove, CA 95757",
-      "opening_date": "OPENING SUMMER 2026",
-      "link": "https://www.yardhouse.com/locations/new-locations"
-    },
-    {
-      "company": "Yard House",
-      "address": "Elk Grove 8190 Elk Grove Blvd Elk Grove, CA 95757",
-      "opening_date": "OPENING SUMMER 2026",
-      "link": "https://www.yardhouse.com/locations/new-locations"
-    },
-    {
-      "company": "Yard House",
-      "address": "Sparks Sparks 1160 Scheels Drive Sparks, NV 89434",
-      "opening_date": "OPENING SUMMER 2026",
-      "link": "https://www.yardhouse.com/locations/new-locations"
-    },
-    {
-      "company": "Yard House",
-      "address": "Corpus Christi S. Padre Island Drive Corpus Christi,TX 78411",
-      "opening_date": "OPENING SUMMER 2026",
-      "link": "https://www.yardhouse.com/locations/new-locations"
-    },
-    {
       "company": "Natural Grocers",
       "address": "Rock Springs, WY",
       "opening_date": "4/29/2026",
@@ -2607,26 +2469,14 @@
     },
     {
       "company": "Capital Grille",
-      "address": "Nashville1223 BroadwayTennessee, TN 37203-3117(615) 258-5321",
+      "address": "Nashville1223 BroadwayNashville, TN 37203-3117(615) 258-5321",
       "opening_date": "NOW OPEN!",
       "link": "https://www.thecapitalgrille.com/locations/new-locations"
     },
     {
       "company": "Capital Grille",
-      "address": "Lone Tree9067 Westview RoadColorado, CO 80124-5134(303) 302-0746",
+      "address": "Lone Tree9067 Westview RoadLone Tree, CO 80124-5134(303) 302-0746",
       "opening_date": "NOW OPEN!",
-      "link": "https://www.thecapitalgrille.com/locations/new-locations"
-    },
-    {
-      "company": "Capital Grille",
-      "address": "Panama City, PanamaAvenida Roberto Motta, Panamá, Panama 0801",
-      "opening_date": "Opens:",
-      "link": "https://www.thecapitalgrille.com/locations/new-locations"
-    },
-    {
-      "company": "Capital Grille",
-      "address": "Ho Chi Minh City, VietnamBitexco Financial Tower, No. 2 Hải Triều Street, District 1, Vietnam 700000",
-      "opening_date": "Opens:",
       "link": "https://www.thecapitalgrille.com/locations/new-locations"
     }
   ]
