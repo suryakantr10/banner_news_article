@@ -2794,12 +2794,19 @@
             document.getElementById('companyWebEmptyState').classList.add('hidden');
             document.getElementById('companyWebStatsContainer').style.display = 'none';
 
-            const res = await fetch(COMPANY_WEB_JSON_URL + '?t=' + Date.now());
-            if (!res.ok) throw new Error('fetch failed');
+            // Try master first; fall back to latest snapshot if master not yet generated
+            let res = await fetch(COMPANY_WEB_JSON_URL + '?t=' + Date.now());
+            if (!res.ok) {
+                res = await fetch('docs/company_website_latest.json' + '?t=' + Date.now());
+                if (!res.ok) throw new Error('fetch failed');
+            }
             const data = await res.json();
 
             document.getElementById('companyWebLastUpdated').textContent = data.last_updated || '—';
-            companyWebRows = data.data || [];
+            // Normalise records from either file format
+            companyWebRows = (data.data || []).map(r => ({
+                is_new: false, first_seen: '', ...r
+            }));
             filteredCompanyWebRows = [...companyWebRows];
 
             // Populate company dropdown dynamically
@@ -2845,7 +2852,7 @@
         const term    = document.getElementById('companyWebSearchInput').value.toLowerCase();
         const company = document.getElementById('companyWebCompanyFilter').value;
         const doneF   = document.getElementById('companyWebDoneFilter').value;
-        const newF    = document.getElementById('companyWebNewFilter').value;
+        const newF    = (document.getElementById('companyWebNewFilter') || {value:'all'}).value;
         filteredCompanyWebRows = companyWebRows.filter(r => {
             const matchTerm    = !term    || ['address','opening_date','company'].some(k => (r[k]||'').toLowerCase().includes(term));
             const matchCompany = company === 'all' || r.company === company;
