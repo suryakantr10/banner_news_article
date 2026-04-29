@@ -68,6 +68,60 @@ except ImportError:
 nest_asyncio.apply()
 
 
+# ── Master-file helpers ───────────────────────────────────────────────────────
+
+MASTER_PATH = os.path.join("docs", "company_website_master.json")
+
+
+def _record_key(record: dict) -> str:
+    """Stable identity key used to detect duplicates across runs."""
+    company = (record.get("company") or "").lower().strip()
+    address = re.sub(r"\s+", " ", (record.get("address") or "").lower().strip())
+    return f"{company}|{address}"
+
+
+def update_master(fresh_records: list[dict]) -> tuple[list[dict], int]:
+    """
+    Merge today's scraped records into the persistent master file.
+
+    Rules:
+      • Records already in the master  → is_new = False
+      • Brand-new records              → is_new = True, first_seen = today (UTC)
+      • If an existing record had no opening_date and we now have one, update it.
+
+    Returns (merged_records, new_count).
+    """
+    today_str = datetime.now(timezone.utc).strftime("%B %d, %Y")
+
+    existing: dict[str, dict] = {}
+    if os.path.exists(MASTER_PATH):
+        try:
+            with open(MASTER_PATH, "r", encoding="utf-8") as f:
+                master_data = json.load(f)
+            for rec in master_data.get("data", []):
+                rec["is_new"] = False          # clear flag from the previous run
+                existing[_record_key(rec)] = rec
+            print(f"[Master] Loaded {len(existing)} existing record(s) from {MASTER_PATH}")
+        except Exception as e:
+            print(f"[Master] Could not read existing master ({e}). Starting fresh.")
+
+    new_count = 0
+    for rec in fresh_records:
+        key = _record_key(rec)
+        if key in existing:
+            if rec.get("opening_date") and not existing[key].get("opening_date"):
+                existing[key]["opening_date"] = rec["opening_date"]
+        else:
+            rec = dict(rec)           # don't mutate the original
+            rec["is_new"]     = True
+            rec["first_seen"] = today_str
+            existing[key]     = rec
+            new_count        += 1
+
+    merged = list(existing.values())
+    return merged, new_count
+
+
 # ── Shared helpers ────────────────────────────────────────────────────────────
 
 DATE_RE = re.compile(
@@ -2120,31 +2174,72 @@ def main():
         if driver:
             driver.quit()
 
-    print(f"\nTotal records collected: {len(all_stores)}")
+    print(f"\nTotal records collected this run: {len(all_stores)}")
 
-    # ── Save JSON ──
+    # ── Merge into master + save JSON ──
     os.makedirs("docs", exist_ok=True)
-    output = {
-        "last_updated": datetime.now(timezone.utc).strftime("%B %d, %Y %H:%M UTC"),
+    now_str = datetime.now(timezone.utc).strftime("%B %d, %Y %H:%M UTC")
+
+    merged_records, new_count = update_master(all_stores)
+
+    master_output = {
+        "last_updated":   now_str,
+        "total_records":  len(merged_records),
+        "new_this_run":   new_count,
+        "data":           merged_records,
+    }
+    with open(MASTER_PATH, "w", encoding="utf-8") as f:
+        json.dump(master_output, f, indent=2, ensure_ascii=False)
+    print(f"Master  → {MASTER_PATH}  ({len(merged_records)} total, {new_count} NEW)")
+
+    # ── Also save current-run snapshot (no is_new / first_seen clutter) ──
+    snapshot_output = {
+        "last_updated": now_str,
         "data": all_stores,
     }
-    out_path = os.path.join("docs", "company_website_latest.json")
-    with open(out_path, "w", encoding="utf-8") as f:
-        json.dump(output, f, indent=2, ensure_ascii=False)
-    print(f"Saved → {out_path}")
+    snapshot_path = os.path.join("docs", "company_website_latest.json")
+    with open(snapshot_path, "w", encoding="utf-8") as f:
+        json.dump(snapshot_output, f, indent=2, ensure_ascii=False)
+    print(f"Snapshot → {snapshot_path}")
 
-    # ── Also save Excel for convenience ──
-    if all_stores:
-        df = pd.DataFrame(all_stores, columns=["company", "address", "opening_date", "link"])
-        today_str = date.today().strftime("%B %d, %Y")
+    # ── Save Excel (master data, new rows highlighted yellow) ──
+    if merged_records:
+        from openpyxl.styles import PatternFill
+        NEW_FILL = PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")
+
+        cols = ["company", "address", "opening_date", "link", "is_new", "first_seen"]
+        # Ensure every record has all columns (backfill missing keys)
+        for rec in merged_records:
+            rec.setdefault("is_new",     False)
+            rec.setdefault("first_seen", "")
+
+        df = pd.DataFrame(merged_records, columns=cols)
+        today_str  = date.today().strftime("%B %d, %Y")
         excel_path = f"company_website_openings_{today_str}.xlsx"
+
         with pd.ExcelWriter(excel_path, engine="openpyxl") as writer:
-            df.to_excel(writer, index=False, sheet_name="Openings")
-            ws = writer.sheets["Openings"]
-            for col in ws.columns:
+            # Sheet 1 – all records, new rows highlighted
+            df.to_excel(writer, index=False, sheet_name="All Openings")
+            ws_all = writer.sheets["All Openings"]
+            for row_idx, is_new in enumerate(df["is_new"], start=2):
+                if is_new:
+                    for col_idx in range(1, len(cols) + 1):
+                        ws_all.cell(row=row_idx, column=col_idx).fill = NEW_FILL
+            for col in ws_all.columns:
                 max_len = max(len(str(cell.value or "")) for cell in col)
-                ws.column_dimensions[col[0].column_letter].width = min(max_len + 4, 60)
-        print(f"Saved → {excel_path}")
+                ws_all.column_dimensions[col[0].column_letter].width = min(max_len + 4, 60)
+
+            # Sheet 2 – new records only
+            new_df = df[df["is_new"] == True]
+            if not new_df.empty:
+                new_df.to_excel(writer, index=False, sheet_name="New This Run")
+                ws_new = writer.sheets["New This Run"]
+                for col in ws_new.columns:
+                    max_len = max(len(str(cell.value or "")) for cell in col)
+                    ws_new.column_dimensions[col[0].column_letter].width = min(max_len + 4, 60)
+
+        new_label = f"{new_count} new row(s) highlighted in yellow" if new_count else "no new rows"
+        print(f"Excel   → {excel_path}  ({new_label})")
 
 
 if __name__ == "__main__":
