@@ -1074,7 +1074,7 @@
         <div id="companywebTabContent" class="hidden">
 
             <!-- Stats -->
-            <div id="companyWebStatsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 fade-in" style="display:none;">
+            <div id="companyWebStatsContainer" class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8 fade-in" style="display:none;">
                 <div class="stats-card rounded-2xl p-6 card-accent-blue">
                     <div class="flex items-center justify-between">
                         <div>
@@ -1108,6 +1108,17 @@
                         </div>
                     </div>
                 </div>
+                <div class="stats-card rounded-2xl p-6" style="background:rgba(15,23,42,0.7);border:1px solid rgba(234,179,8,0.3);">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">New This Run</p>
+                            <p class="text-3xl font-bold text-yellow-400" id="companyWebNewCount">0</p>
+                        </div>
+                        <div class="w-12 h-12 rounded-xl bg-yellow-500/10 flex items-center justify-center">
+                            <i class="fas fa-star text-yellow-400 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Filters -->
@@ -1124,6 +1135,11 @@
                     <option value="all">All Status</option>
                     <option value="pending">Pending</option>
                     <option value="done">Done</option>
+                </select>
+                <select id="companyWebNewFilter" onchange="filterCompanyWebRows()" class="input-field px-4 py-3 text-sm">
+                    <option value="all">All Entries</option>
+                    <option value="new">New Only ✨</option>
+                    <option value="existing">Existing Only</option>
                 </select>
                 <button onclick="downloadCompanyWebCSV()" class="btn-download px-5 py-3 rounded-xl font-medium flex items-center gap-2 text-sm whitespace-nowrap">
                     <i class="fas fa-download"></i><span>Download CSV</span>
@@ -1147,9 +1163,11 @@
                     <thead><tr>
                         <th class="px-3 py-3 w-12 text-center">Done</th>
                         <th class="px-3 py-3 w-10">#</th>
+                        <th class="px-3 py-3 w-20 text-center">Status</th>
                         <th class="px-3 py-3 w-32">Company</th>
                         <th class="px-3 py-3">Address</th>
                         <th class="px-3 py-3 w-32">Opening Date</th>
+                        <th class="px-3 py-3 w-28">First Seen</th>
                         <th class="px-3 py-3 w-20">Link</th>
                     </tr></thead>
                     <tbody id="companyWebTableBody"></tbody>
@@ -1204,7 +1222,7 @@
     const DAILY_NEWS_JSON_URL    = 'docs/news_data.json';
     const DAILY_NEWS_EXT_URL     = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/daily_news_extraction_latest.json';
     const WARN_JSON_URL          = 'https://raw.githubusercontent.com/suryakantr10/banner_news_article/main/warn_latest.json';
-    const COMPANY_WEB_JSON_URL   = 'docs/company_website_latest.json';
+    const COMPANY_WEB_JSON_URL   = 'docs/company_website_master.json';
 
     let storeArticles = [], filteredStoreArticles = [];
     let historicalArticles = [], filteredHistoricalArticles = [];
@@ -2818,6 +2836,8 @@
         setCount('companyWebCompanyCount', uniqueCompanies);
         const doneCount = companyWebRows.filter(r => localStorage.getItem(cwDoneKey(r)) === 'true').length;
         setCount('companyWebDoneCount', doneCount);
+        const newCount = companyWebRows.filter(r => r.is_new === true).length;
+        setCount('companyWebNewCount', newCount);
         document.getElementById('companyWebStatsContainer').style.display = rows.length ? 'grid' : 'none';
     }
 
@@ -2825,12 +2845,14 @@
         const term    = document.getElementById('companyWebSearchInput').value.toLowerCase();
         const company = document.getElementById('companyWebCompanyFilter').value;
         const doneF   = document.getElementById('companyWebDoneFilter').value;
+        const newF    = document.getElementById('companyWebNewFilter').value;
         filteredCompanyWebRows = companyWebRows.filter(r => {
             const matchTerm    = !term    || ['address','opening_date','company'].some(k => (r[k]||'').toLowerCase().includes(term));
             const matchCompany = company === 'all' || r.company === company;
             const isDone       = localStorage.getItem(cwDoneKey(r)) === 'true';
             const matchDone    = doneF === 'all' || (doneF === 'done' ? isDone : !isDone);
-            return matchTerm && matchCompany && matchDone;
+            const matchNew     = newF  === 'all' || (newF  === 'new'  ? r.is_new === true : r.is_new !== true);
+            return matchTerm && matchCompany && matchDone && matchNew;
         });
         updateCompanyWebStats(filteredCompanyWebRows);
         renderCompanyWebTable();
@@ -2851,7 +2873,8 @@
         tbody.innerHTML = filteredCompanyWebRows.map((r, i) => {
             const key    = cwDoneKey(r);
             const isDone = localStorage.getItem(key) === 'true';
-            const rowBg  = isDone ? 'background:rgba(16,185,129,0.06);' : '';
+            const isNew  = r.is_new === true;
+            const rowBg  = isDone ? 'background:rgba(16,185,129,0.06);' : isNew ? 'background:rgba(234,179,8,0.05);' : '';
             const safeKey = key.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
             const linkCell = r.link
                 ? `<a href="${escapeHtml(r.link)}" target="_blank" rel="noopener noreferrer"
@@ -2859,14 +2882,18 @@
                       <i class="fas fa-external-link-alt mr-1"></i>View
                    </a>`
                 : `<span class="text-gray-600 text-xs">—</span>`;
+            const statusCell = isNew
+                ? `<span class="px-2 py-0.5 rounded-full text-xs font-bold bg-yellow-500/20 text-yellow-300 border border-yellow-500/40 whitespace-nowrap">✨ NEW</span>`
+                : `<span class="text-gray-600 text-xs">—</span>`;
             return `
-            <tr style="${rowBg}" class="border-t border-white/5 transition-colors">
+            <tr style="${rowBg}" class="border-t border-white/5 transition-colors ${isNew ? 'border-l-2 border-l-yellow-500/40' : ''}">
                 <td class="px-3 py-3 text-center">
                     <label class="cursor-pointer inline-flex items-center justify-center w-6 h-6 rounded-md border-2 transition-all ${isDone ? 'bg-emerald-500 border-emerald-500' : 'border-gray-600 hover:border-emerald-500'}" onclick="toggleCompanyWebDone('${safeKey}')">
                         ${isDone ? '<i class="fas fa-check text-white text-xs"></i>' : ''}
                     </label>
                 </td>
                 <td class="px-3 py-3 text-gray-600 text-xs font-semibold">${i+1}</td>
+                <td class="px-3 py-3 text-center">${statusCell}</td>
                 <td class="px-3 py-3">
                     <span class="px-2 py-1 rounded-full text-xs font-semibold bg-indigo-900/40 text-indigo-300 border border-indigo-700/30">${escapeHtml(r.company||'—')}</span>
                 </td>
@@ -2874,6 +2901,7 @@
                     <span class="line-clamp-2 block" title="${escapeHtml(r.address||'')}">${highlight(r.address||'—', term)}</span>
                 </td>
                 <td class="px-3 py-3 text-xs whitespace-nowrap ${isDone ? 'text-gray-600' : 'text-gray-300'}">${highlight(r.opening_date||'—', term)}</td>
+                <td class="px-3 py-3 text-xs whitespace-nowrap text-gray-500">${escapeHtml(r.first_seen||'—')}</td>
                 <td class="px-3 py-3">${linkCell}</td>
             </tr>`;
         }).join('');
@@ -2883,10 +2911,10 @@
 
     function downloadCompanyWebCSV() {
         if (!filteredCompanyWebRows.length) return;
-        const headers = ['company','address','opening_date','link'];
-        const labels  = ['Company','Address','Opening Date','Link'];
+        const headers = ['company','address','opening_date','link','is_new','first_seen'];
+        const labels  = ['Company','Address','Opening Date','Link','Is New','First Seen'];
         const csv = [labels.join(','), ...filteredCompanyWebRows.map(r =>
-            headers.map(k => `"${(r[k]||'').replace(/"/g,'""')}"`).join(',')
+            headers.map(k => `"${(r[k]!==undefined?String(r[k]):'').replace(/"/g,'""')}"`).join(',')
         )].join('\n');
         dlCSV('\uFEFF' + csv, `company_website_openings_${TODAY}.csv`);
         showToast('Company Website CSV downloaded!');
