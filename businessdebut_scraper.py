@@ -9,6 +9,7 @@ import json
 import os
 import time
 from datetime import datetime, date
+from pathlib import Path
 
 import pandas as pd
 import requests
@@ -122,6 +123,27 @@ def main():
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(json_payload, f, ensure_ascii=False, indent=2, cls=DateEncoder)
     print(f"Saved JSON to {json_path}")
+
+    # ── Master file — accumulates all daily results ───────────────────────────
+    BIZ_DIR = Path("data/businessdebut")
+    BIZ_DIR.mkdir(parents=True, exist_ok=True)
+    MASTER_FILE = BIZ_DIR / "businessdebut_master.csv"
+
+    df_new = df.copy()
+    df_new['Date_Appended'] = today.strftime("%Y-%m-%d")
+    df_new['date'] = pd.to_datetime(df_new['date'], errors='coerce')
+
+    if MASTER_FILE.exists():
+        df_master = pd.read_csv(MASTER_FILE, encoding='utf-8')
+        df_master['date'] = pd.to_datetime(df_master['date'], errors='coerce')
+        df_master = pd.concat([df_master, df_new], ignore_index=True)
+    else:
+        df_master = df_new
+
+    df_master = df_master.drop_duplicates(subset=['link'])
+    df_master = df_master.sort_values('date', ascending=False)
+    df_master.to_csv(MASTER_FILE, index=False, encoding='utf-8')
+    print(f"✓ Master file updated: {MASTER_FILE}  ({len(df_master)} total rows)")
 
 
 if __name__ == "__main__":

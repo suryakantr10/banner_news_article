@@ -1950,6 +1950,24 @@ def run_all(
     combined.to_csv(combined_path, index=False)
     log.info(f"\nCombined file saved → {combined_path}  ({len(combined)} total rows)")
 
+    # ── Master file — accumulates all daily results ───────────────────────────
+    MASTER_FILE = out / "warn_master.csv"
+
+    df_new = combined.copy()
+    df_new['Date_Appended'] = today
+
+    if MASTER_FILE.exists():
+        df_master = pd.read_csv(MASTER_FILE, encoding='utf-8')
+        df_master = pd.concat([df_master, df_new], ignore_index=True)
+    else:
+        df_master = df_new
+
+    df_master = df_master.drop_duplicates(subset=['state', 'company', 'notice_date'])
+    _sort_dt = pd.to_datetime(df_master['notice_date'], errors='coerce')
+    df_master = df_master.iloc[_sort_dt.argsort()[::-1].values]
+    df_master.to_csv(MASTER_FILE, index=False, encoding='utf-8')
+    log.info(f"Master file updated → {MASTER_FILE}  ({len(df_master)} total rows)")
+
     return combined
 
 
