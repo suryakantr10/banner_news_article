@@ -1,5 +1,5 @@
 {
-  "last_updated": "April 29, 2026 21:45 UTC",
+  "last_updated": "May 01, 2026 05:36 UTC",
   "data": [
     {
       "company": "ALDI",
@@ -429,51 +429,9 @@
     },
     {
       "company": "Five Below",
-      "address": "1038 Crossroads Dr, Statesville, NC, 28625",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/nc/statesville/1038-crossroads-dr/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "1649 N Expwy, Griffin, GA, 30223",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/ga/griffin/1649-n-expwy/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "3706 E Shaw Ave, Clovis, CA, 93619",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/ca/clovis/3706-e-shaw-ave/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "4222 E Ontario Ranch Rd, Ontario, CA, 91762",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/ca/ontario/4222-e-ontario-ranch-rd/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "2921 Boca Chica Blvd, Brownsville, TX, 78521",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/tx/brownsville/2921-boca-chica-blvd/coming-soon"
-    },
-    {
-      "company": "Five Below",
       "address": "28201 Chardon Rd, Willoughby Hills, OH, 44092",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/oh/willoughby-hills/28201-chardon-rd/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "7285 Arroyo Crossing Pkwy, Las Vegas, NV, 89113",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/nv/las-vegas/7285-arroyo-crossing-pkwy/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "13710 W Bell Rd, Surprise, AZ, 85374",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/az/surprise/13710-w-bell-rd/coming-soon"
     },
     {
       "company": "Five Below",
@@ -495,6 +453,36 @@
     },
     {
       "company": "Five Below",
+      "address": "1649 N Expwy, Griffin, GA, 30223",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/ga/griffin/1649-n-expwy/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "3706 E Shaw Ave, Clovis, CA, 93619",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/ca/clovis/3706-e-shaw-ave/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "4222 E Ontario Ranch Rd, Ontario, CA, 91762",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/ca/ontario/4222-e-ontario-ranch-rd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "7285 Arroyo Crossing Pkwy, Las Vegas, NV, 89113",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/nv/las-vegas/7285-arroyo-crossing-pkwy/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "13710 W Bell Rd, Surprise, AZ, 85374",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/az/surprise/13710-w-bell-rd/coming-soon"
+    },
+    {
+      "company": "Five Below",
       "address": "3201 N White Sands Blvd, Alamogordo, NM, 88310",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/nm/alamogordo/3201-n-white-sands-blvd/coming-soon"
@@ -504,6 +492,12 @@
       "address": "480 Stillwater Ave, Bangor, ME, 04401",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/me/bangor/480-stillwater-ave/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "1038 Crossroads Dr, Statesville, NC, 28625",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/nc/statesville/1038-crossroads-dr/coming-soon"
     },
     {
       "company": "HomeGoods",
@@ -759,6 +753,12 @@
     },
     {
       "company": "Jersey Mike's",
+      "address": "10700 Clarcona-Ocoee Road, Apopka, FL 32703-8780",
+      "opening_date": "In Development",
+      "link": "https://www.jerseymikes.com/locations/coming-soon/US-FL"
+    },
+    {
+      "company": "Jersey Mike's",
       "address": "43 Blake Blvd, Celebration, FL 34747-4515",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-FL"
@@ -784,12 +784,6 @@
     {
       "company": "Jersey Mike's",
       "address": "1319 Saxon Drive, New Smyrna Beach, FL 32169-3160",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-FL"
-    },
-    {
-      "company": "Jersey Mike's",
-      "address": "10700 Clarcona-Ocoee Road, Ocoee, FL 32703",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-FL"
     },
@@ -1335,7 +1329,7 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "9911 Brodie Lane, Austin, TX 78748-5802",
+      "address": "9901 Brodie Lane, Austin, TX 78748-5802",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-TX"
     },
@@ -1473,6 +1467,24 @@
     },
     {
       "company": "Chick-fil-A",
+      "address": "2977 Market Drive",
+      "opening_date": "May 7, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-east-cartmill"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "6430 S Cedar St",
+      "opening_date": "May 7, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-south-cedar"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "193 Covenant Drive",
+      "opening_date": "May 7, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-batesville"
+    },
+    {
+      "company": "Chick-fil-A",
       "address": "1015 Vinehaven Drive NE",
       "opening_date": "May 1, 2026",
       "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-dale-earnhardt-blvd"
@@ -1602,24 +1614,6 @@
       "address": "2430 N Morton St",
       "opening_date": "March 19, 2026",
       "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-franklin-indiana"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "3169 Godwin Blvd",
-      "opening_date": "March 19, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-planters-station"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "",
-      "opening_date": "March 11, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-new-york-expansion"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "262 East Main Street",
-      "opening_date": "March 17, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-johnny-cash-pkwy"
     },
     {
       "company": "Wawa",
@@ -2430,6 +2424,66 @@
       "address": "901 West 135th St, Kansas City",
       "opening_date": "March 26, 2026",
       "link": "https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1457&ref=grandOpenings"
+    },
+    {
+      "company": "Kirkland's",
+      "address": "Ann Arbor, MI Maple Village 341 N. Maple Road Ann Arbor, MI 48103",
+      "opening_date": "Coming Soon",
+      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
+    },
+    {
+      "company": "Kirkland's",
+      "address": "West Long Branch, NJ Consumer Center 310 State Route 36 West Long Branch, NJ 07764",
+      "opening_date": "Coming Soon",
+      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
+    },
+    {
+      "company": "Kirkland's",
+      "address": "Deerfield Beach, FL Deerfield Mall 3888 West Hillsboro Blvd Deerfield, FL 33442",
+      "opening_date": "Coming Soon",
+      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
+    },
+    {
+      "company": "Kirkland's",
+      "address": "Wayne, PA Gateway Shopping Center 221 Swedesford Road, Space 183 Wayne, PA 19087",
+      "opening_date": "Coming Soon",
+      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
+    },
+    {
+      "company": "Kirkland's",
+      "address": "Washington, PA Tanger Outlet 2200 Tanger Boulevard Washington, PA 15301",
+      "opening_date": "Coming Soon",
+      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
+    },
+    {
+      "company": "Kirkland's",
+      "address": "Freehold, NJ Freehold Raceway Mall 3710 Route 9 South Freehold, NJ 07728",
+      "opening_date": "Coming Soon",
+      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
+    },
+    {
+      "company": "Kirkland's",
+      "address": "Valley Stream, NY Green Acres Commons 2034 Sunrise Highway Valley Stream, NY 11581",
+      "opening_date": "Coming Soon",
+      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
+    },
+    {
+      "company": "Kirkland's",
+      "address": "Anderson, SC Anderson Station 166 Station Drive Anderson, SC 29621",
+      "opening_date": "Coming Soon",
+      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
+    },
+    {
+      "company": "Kirkland's",
+      "address": "Nashville, TN One Bellevue Place 8167 Sawyer Brown Road Nashville, TN 37221",
+      "opening_date": "Coming Soon",
+      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
+    },
+    {
+      "company": "Kirkland's",
+      "address": "Durham, NC Renaissance Village 8200 Renaissance Parkway Durham, NC 27713",
+      "opening_date": "Coming Soon",
+      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
     },
     {
       "company": "Natural Grocers",
