@@ -1,7 +1,265 @@
 {
-  "last_updated": "2026-04-30 01:22 UTC",
+  "last_updated": "2026-05-01 02:40 UTC",
   "total": 60,
   "data": [
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/houston/restaurants/joe-the-juice-to-debut-in-uptown-park/",
+      "title": "Joe & The Juice to Debut in Uptown Park",
+      "address": "1121 Uptown Park Blvd, Houston, TX 77056"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/sacramento/restaurants/kings-fish-house-hooks-spot-in-westfield-galleria-at-roseville/",
+      "title": "King’s Fish House Hooks Spot in Westfield Galleria at Roseville",
+      "address": "1151 Galleria Blvd, Roseville, CA 95678"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/las-vegas/restaurants/everything-philly-co-to-bring-philly-swag-and-eats-to-the-valley/",
+      "title": "Everything Philly & Co. to Bring Philly Swag and Eats to the Valley",
+      "address": "110 S Rainbow Blvd, Las Vegas, NV 89145"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/san-francisco/restaurants/mixt-to-open-new-location-in-walnut-creek-this-summer/",
+      "title": "Mixt to Open New Location in Walnut Creek This Summer",
+      "address": "1101 S California Blvd, Walnut Creek, CA 94596"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/houston/restaurants/quan-gi-to-undergo-a-129000-renovation/",
+      "title": "Quan Gi to Undergo a $129,000 Renovation",
+      "address": "6968 Wilcrest Dr, Houston, TX 77072"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/toronto/restaurants/cafe-panchita-opening-new-location-in-oakville/",
+      "title": "Cafe Panchita Opening New Location in Oakville",
+      "address": "94 George St, Oakville, ON L6J 1H6, Canada"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/los-angeles/restaurants/wine-and-eggs-planning-wine-bar-in-culver-city/",
+      "title": "Wine and Eggs Planning Wine Bar In Culver City | What Now Los Angeles",
+      "address": "6142 Washington Blvd, Culver City, CA 90232"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/toronto/restaurants/esquire-restaurant-expanding-to-downtown-toronto/",
+      "title": "Esquire Restaurant Expanding to Downtown Toronto",
+      "address": "566 Queen St W, Toronto, ON M5V 2B5, Canada"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/toronto/restaurants/quickbite-collective-planning-major-ontario-expansion/",
+      "title": "QuickBite Collective Planning Major Ontario Expansion",
+      "address": ""
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/san-antonio/restaurants/artea-bubble-tea-to-open-new-san-antonio-location-at-encino-commons/",
+      "title": "Artea Bubble Tea to Open New San Antonio Location at Encino Commons",
+      "address": "21114 US-281, San Antonio, TX 78258, USA"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/washington-dc/restaurants/the-tackle-shop-to-open-in-yards-arena/",
+      "title": "The Tackle Shop to Open in Yards Marina",
+      "address": "301 Water St SE, Washington, DC 20003"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/denver/restaurants/barcelona-wine-bar-to-serve-spanish-wines-and-tapas-at-new-denver-restaurant/",
+      "title": "Barcelona Wine Bar to Serve Spanish Wines and Tapas at New Denver Restaurant",
+      "address": "8101 E Belleview Ave, Denver, CO 80237"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/charleston/restaurants/melrose-market-to-bring-european-inspired-all-day-brasserie-to-columbia-this-spring/",
+      "title": "Melrose Market Brings All-Day Brasserie to Columbia",
+      "address": "2710 Gervais St. #300, Columbia, SC 29204"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/memphis/restaurants/waffle-house-cooks-up-new-jonesboro-location/",
+      "title": "Waffle House Cooks up New Jonesboro Location",
+      "address": ""
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/atlanta/restaurants/the-roux-kitchen-planning-opening-in-old-fourth-ward/",
+      "title": "The Roux Kitchen Planning Opening In Old Fourth Ward | What Now Atlanta",
+      "address": "537 Edgewood Ave SE, Atlanta, GA 30312"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/atlanta/restaurants/buckhead-brewing-lodge-planning-restaurant-entertainment-in-buckhead/",
+      "title": "Buckhead Brewing & Lodge Planning Restaurant, Entertainment in Buckhead | What Now Atlanta",
+      "address": "128 E Andrews Dr NW, Atlanta, GA 30305"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/detroit/restaurants/midlands-tavern-on-main-owner-changing-concept-planning-summer-opening/",
+      "title": "Midland’s Tavern On Main Owner Changing Concept, Planning Summer Opening",
+      "address": "101 E Main St, Midland, MI 48640"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/portland/restaurants/simply-beautiful-cakes-bakery-coffee-opening-in-vancouver/",
+      "title": "Simply Beautiful Cakes, Bakery & Coffee Opening in Vancouver",
+      "address": "516 SE Chkalov Dr #3, Vancouver, WA 98683"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/san-antonio/restaurants/a-mar-bringing-upscale-mexican-seafood-to-san-antonios-pearl/",
+      "title": "(a) mar. Bringing Upscale Mexican Seafood to San Antonio’s Pearl",
+      "address": "403 Pearl Pkwy, San Antonio, TX 78215, USA"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/orlando/restaurants/kpc-urban-korean-food-bringing-the-urban-flavors-of-seoul-to-your-table/",
+      "title": "KPC Urban Korean Food Bringing “the Urban Flavors of Seoul to Your Table”",
+      "address": "6083 W Irlo Bronson Memorial Hwy, Kissimmee, FL 34747"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/orlando/restaurants/new-thai-sushi-restaurant-planned-for-palm-bays-heritage-square/",
+      "title": "New Thai & Sushi Restaurant Planned for Palm Bay’s Heritage Square",
+      "address": "130 St Johns Heritage Pkwy, Palm Bay, FL 32907"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/orlando/restaurants/bojangles-has-new-winter-garden-location-in-the-works/",
+      "title": "Bojangles Has a New Winter Garden Location in the Works",
+      "address": "17981 W Space Coast Pkwy, Winter Garden, FL 34787"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/jacksonville/restaurants/peppers-cocina-mexicana-tequila-bar-replacing-the-floridian-in-st-augustine/",
+      "title": "Pepper’s Cocina Mexicana & Tequila Bar Replacing the Floridian in St. Augustine",
+      "address": "72 Spanish St, St. Augustine, FL 32084"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/jacksonville/restaurants/broski-fish-chicken-plans-new-jacksonville-location/",
+      "title": "Broski Fish & Chicken Plans New Jacksonville Location",
+      "address": "5940 Atlantic Blvd, Jacksonville, FL 32207"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/jacksonville/restaurants/new-dominican-restaurant-looks-to-be-opening-in-jacksonville/",
+      "title": "New Dominican Restaurant Looks to Be Opening in Jacksonville",
+      "address": "116 N Julia St, Jacksonville, FL 32202"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/tampa/restaurants/brooksville-bagels-making-progress-towards-opening/",
+      "title": "Brooksville Bagels Making Progress Towards Opening",
+      "address": "28.559369194490696, -82.3973660911594"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/tampa/restaurants/with-temple-terrace-opening-byte-embarks-on-expansion-path/",
+      "title": "With Temple Terrace Opening, Byte Embarks on Expansion Path",
+      "address": ""
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/tampa/restaurants/on-the-heels-of-tokyo-swim-club-news-the-tung-brothers-plan-new-concept-mei/",
+      "title": "On the Heels of Tokyo Swim Club News, the Tung Brothers Plan New Concept: Mei",
+      "address": "320 3rd St S, St. Petersburg, FL 33701"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/denver/restaurants/makfam-to-open-second-larger-denver-location-in-north-art-district/",
+      "title": "MAKfam to Open Second Denver Location in North Art District",
+      "address": ""
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/new-york/restaurants/hunters-steak-ale-house-and-3-other-restaurants-closed-in-new-york-in-april-2026/",
+      "title": "Hunter’s Steak & Ale House and 3 Other Restaurants Closed in New York in April 2026",
+      "address": ""
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/los-angeles/restaurants/flavez-burger-opening-doors-in-tarzana-soon/",
+      "title": "Flavez Burger Opening Doors In Tarzana Soon | What Now Los Angeles",
+      "address": "6120 Reseda Blvd, Tarzana, CA 91356"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/chicago/restaurants/chicago-pickle-eatery-in-wicker-park-open-avondale-location-coming-back/",
+      "title": "Chicago Pickle Eatery in Wicker Park Open, Avondale Location Coming Back",
+      "address": "3055 N Milwaukee Ave, Chicago, IL 60618"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/austin/restaurants/franchisees-bringing-duffs-wings-to-cedar-park/",
+      "title": "Franchisees Bringing Duff’s Wings To Cedar Park | What Now Austin",
+      "address": "12233 Ranch Rd 620 N, Austin, TX 78750"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/boston/restaurants/halva-mediterranean-grill-relocating-in-watertown-new-breakfast-concept-taking-over-current-space/",
+      "title": "Halva Mediterranean Grill Relocating in Watertown, New Breakfast Concept Taking Over Current Space",
+      "address": "55 Main St, Watertown, MA 02472"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/miami/restaurants/whits-frozen-custard-opening-in-fort-lauderdale/",
+      "title": "Whit's Frozen Custard Opening in Fort Lauderdale",
+      "address": "4336 N Federal Hwy, Fort Lauderdale, FL 33308"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/charleston/restaurants/big-daves-chews-and-brews-to-debut-in-myrtle-beach-this-summer/",
+      "title": "Big Dave’s Chews and Brews to Debut in Myrtle Beach",
+      "address": "400 Mr. Joe White Ave. Myrtle Beach, SC 29577"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/austin/restaurants/soupleaf-hot-pot-team-bringing-new-mama-lin-restaurant-to-san-marcos/",
+      "title": "Soupleaf Hot Pot Team Bringing New Mama Lin Restaurant To San Marcos | What Now Austin",
+      "address": "900 Bugg Ln, San Marcos, TX 78666"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/dallas/restaurants/nine-year-old-mansfield-brewery-confirms-final-closing-date/",
+      "title": "Nine-Year-Old Mansfield Brewery Confirms Final Closing Date",
+      "address": "117 N Main St, Mansfield, TX 76063"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/san-antonio/restaurants/hawaiian-bros-expanding-in-san-antonio-with-new-austin-highway-location/",
+      "title": "Hawaiian Bros Expanding in San Antonio With New Austin Highway Location",
+      "address": "1434 Austin Hwy, San Antonio, TX 78209, USA"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/houston/restaurants/houston-craft-brewery-set-to-close-this-may-after-nearly-a-decade-in-operation/",
+      "title": "Houston Craft Brewery Set to Close This May After Nearly a Decade in Operation",
+      "address": "1902 Washington Ave Suite E, Houston, TX 77007, United States"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/boston/restaurants/commune-all-day-cafe-bringing-globally-inspired-bites-and-beverages-to-billerica/",
+      "title": "Commune All Day Cafe Bringing Globally Inspired Bites and Beverages to Billerica",
+      "address": "164 Lexington Rd, Suite 2, Billerica, MA 01821"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/miami/restaurants/noble-33-hospitality-group-bringing-meduza-mediterrania-to-miami/",
+      "title": "Noble 33 Hospitality Group Bringing Mēdüzā Mediterrania to Miami",
+      "address": "Miami Beach, Florida"
+    },
+    {
+      "date": "April 30, 2026",
+      "url": "https://whatnow.com/houston/restaurants/new-upscale-dining-concept-set-to-open-in-houstons-energy-corridor/",
+      "title": "New Upscale Dining Concept Set to Open in Houston’s Energy Corridor",
+      "address": "11720 Katy Fwy, Houston, TX 77079"
+    },
     {
       "date": "April 29, 2026",
       "url": "https://whatnow.com/miami/restaurants/don-pan-is-bringing-its-venezuelan-specialities-to-pompano-beach/",
@@ -103,264 +361,6 @@
       "url": "https://whatnow.com/new-orleans/restaurants/upcoming-jamaican-spot-in-slidell-to-feature-island-cuisine-and-live-music/",
       "title": "Upcoming Jamaican Spot in Slidell to Feature Island Cuisine and Live Music",
       "address": "Slidell, LA"
-    },
-    {
-      "date": "April 29, 2026",
-      "url": "https://whatnow.com/san-antonio/restaurants/san-antonio-steakhouse-with-70-year-history-to-serve-final-meal-in-may/",
-      "title": "San Antonio Steakhouse With 70-Year History to Serve Final Meal in May",
-      "address": "8400 N New Braunfels Ave, San Antonio, TX 78209"
-    },
-    {
-      "date": "April 29, 2026",
-      "url": "https://whatnow.com/philadelphia/restaurants/chicken-salad-chick-set-to-debut-in-greater-philadelphia-through-family-led-franchise-deal/",
-      "title": "Chicken Salad Chick Coming to Greater Philadelphia Area",
-      "address": ""
-    },
-    {
-      "date": "April 29, 2026",
-      "url": "https://whatnow.com/charlotte/restaurants/sharigato-to-open-hand-roll-sushi-bar-at-the-joinery/",
-      "title": "Sharigato to Open Hand-Roll Sushi Bar at The Joinery",
-      "address": "420 E 22nd Street, Charlotte, NC 28206, USA"
-    },
-    {
-      "date": "April 29, 2026",
-      "url": "https://whatnow.com/new-orleans/restaurants/hospitality-veteran-launching-all-day-cafe-concept-in-lafayette/",
-      "title": "Hospitality Veteran Launching All-Day Café Concept in Lafayette",
-      "address": "1905 Kaliste Saloom Rd, Lafayette, LA 70508"
-    },
-    {
-      "date": "April 29, 2026",
-      "url": "https://whatnow.com/los-angeles/restaurants/new-spanish-inspired-dining-concept-opens-in-west-adams-area-of-los-angeles/",
-      "title": "New Spanish-Inspired Dining Concept Opens in West Adams Area of Los Angeles",
-      "address": "3321 S La Cienega Blvd Suite G, Los Angeles, CA 90016, United States"
-    },
-    {
-      "date": "April 29, 2026",
-      "url": "https://whatnow.com/columbus/restaurants/dunkin-expands-central-ohio-footprint-with-new-south-side-columbus-location/",
-      "title": "Dunkin’ Expands Central Ohio Footprint With New South Side Columbus Location",
-      "address": "3444 S High St, Columbus, OH 43207, USA"
-    },
-    {
-      "date": "April 29, 2026",
-      "url": "https://whatnow.com/detroit/restaurants/odysseus-cafe-to-debut-in-downtown-farmington-next-month/",
-      "title": "Odysseus Cafe to Debut in Downtown Farmington Next Month",
-      "address": "23629 Farmington Rd, Farmington, MI 48336"
-    },
-    {
-      "date": "April 29, 2026",
-      "url": "https://whatnow.com/jacksonville/restaurants/the-buoy-to-serve-up-locally-caught-seafood-in-jacksonvilles-fairfax-neighborhood/",
-      "title": "The Buoy to Serve Up Locally Caught Seafood in Jacksonville’s Fairfax Neighborhood",
-      "address": "4323 Herschel St, Jacksonville, FL 32210"
-    },
-    {
-      "date": "April 29, 2026",
-      "url": "https://whatnow.com/jacksonville/restaurants/southern-smokehouse-planned-for-northpoint-park/",
-      "title": "Southern Smokehouse Planned for Northpoint Park",
-      "address": "12741 Yellow Bluff Rd, Jacksonville, FL 32226"
-    },
-    {
-      "date": "April 29, 2026",
-      "url": "https://whatnow.com/tampa/restaurants/salty-neighborhood-bar-grill-opening-in-venice-this-fall/",
-      "title": "Salty Neighborhood Bar & Grill Opening in Venice This Fall",
-      "address": "4187 S Tamiami Trl, Venice, FL 34293"
-    },
-    {
-      "date": "April 29, 2026",
-      "url": "https://whatnow.com/new-york/restaurants/tokyo-chef-brings-acclaimed-pizza-concept-to-new-york-neighborhood/",
-      "title": "Tokyo Chef Brings Acclaimed Pizza Concept to New York Neighborhood",
-      "address": "123 St Marks Pl, New York, NY 10009"
-    },
-    {
-      "date": "April 29, 2026",
-      "url": "https://whatnow.com/new-york/restaurants/chef-daniel-boulud-bringing-two-concepts-to-the-new-bilt-headquarters/",
-      "title": "Chef Daniel Boulud Bringing Two Concepts to the New Bilt Headquarters",
-      "address": "837 Washington St, New York, NY 10014"
-    },
-    {
-      "date": "April 29, 2026",
-      "url": "https://whatnow.com/miami/restaurants/huey-magoos-is-bringing-its-wildly-popular-chicken-tenders-to-jupiter/",
-      "title": "Huey Magoo's is Bringing its Wildly Popular Chicken Tenders to Jupiter",
-      "address": "6390 W Indiantown Rd, Jupiter, FL 33458"
-    },
-    {
-      "date": "April 29, 2026",
-      "url": "https://whatnow.com/miami/restaurants/grand-public-kitchen-bar-to-open-in-coconut-grove-this-spring/",
-      "title": "Grand Public Kitchen + Bar To Open In Coconut Grove This Spring | What Now Miami",
-      "address": "3015 Grand Ave, Coconut Grove, FL 33133"
-    },
-    {
-      "date": "April 28, 2026",
-      "url": "https://whatnow.com/houston/restaurants/nick-the-greek-to-open-in-the-valley-ranch-town-center/",
-      "title": "Nick The Greek to Open in the Valley Ranch Town Center",
-      "address": "11805 Grand Pkwy, New Caney, TX 77357"
-    },
-    {
-      "date": "April 28, 2026",
-      "url": "https://whatnow.com/las-vegas/restaurants/sizzle-stack-burger-builds-ground-up-eatery-for-the-valley/",
-      "title": "Sizzle Stack Burger Builds Ground Up Eatery for the Valley",
-      "address": "3585 S Fort Apache Rd, Las Vegas, NV 89147"
-    },
-    {
-      "date": "April 28, 2026",
-      "url": "https://whatnow.com/austin/restaurants/michelin-acclaimed-group-bringing-concept-to-austin/",
-      "title": "Michelin-Acclaimed Group Bringing Concept To Austin | What Now Austin",
-      "address": "96 Red River St, Austin, TX 78701"
-    },
-    {
-      "date": "April 28, 2026",
-      "url": "https://whatnow.com/denver/restaurants/little-man-ice-cream-rebranding-three-shops-in-denver-and-fort-collins/",
-      "title": "Little Man Ice Cream Rebranding Three Shops in Denver and Fort Collins",
-      "address": ""
-    },
-    {
-      "date": "April 28, 2026",
-      "url": "https://whatnow.com/philadelphia/restaurants/boschetto-to-bring-fast-casual-italian-concept-to-berkeley-heights-excited-to-see-our-brand-evolve/",
-      "title": "Boschetto Expands With Second NJ Location",
-      "address": "300 Connell Dr. Berkeley Heights, NJ 07922"
-    },
-    {
-      "date": "April 28, 2026",
-      "url": "https://whatnow.com/detroit/restaurants/new-manna-modern-kitchen-concept-planned-for-port-huron/",
-      "title": "New 'Manna Modern Kitchen' Concept Planned for Port Huron",
-      "address": ""
-    },
-    {
-      "date": "April 28, 2026",
-      "url": "https://whatnow.com/los-angeles/restaurants/grecos-new-york-pizzeria-returning-to-sherman-oaks-culinary-scene/",
-      "title": "Greco’s New York Pizzeria Returning To Sherman Oaks Culinary Scene | What Now Los Angeles",
-      "address": "4319 Woodman Ave, Sherman Oaks, CA 91423"
-    },
-    {
-      "date": "April 28, 2026",
-      "url": "https://whatnow.com/san-diego/restaurants/firehouse-subs-coming-to-poway-and-grantville/",
-      "title": "Firehouse Subs Coming to Poway and Grantville",
-      "address": "13452 Poway Rd, Poway, CA 92064"
-    },
-    {
-      "date": "April 28, 2026",
-      "url": "https://whatnow.com/philadelphia/restaurants/proximity-wine-bar-to-bring-modern-enoteca-experience-to-chester-county/",
-      "title": "Proximity Wine Bar to Open Modern Enoteca in Chester County",
-      "address": "1701 W Doe Run Rd., Kennett Square, PA 19348"
-    },
-    {
-      "date": "April 28, 2026",
-      "url": "https://whatnow.com/chicago/restaurants/north-shore-distillery-plans-mundelein-relocation-tasting-room-to-follow/",
-      "title": "North Shore Distillery Plans Mundelein Relocation, Tasting Room to Follow",
-      "address": "901 E Orchard St, Mundelein, IL 60060"
-    },
-    {
-      "date": "April 28, 2026",
-      "url": "https://whatnow.com/phoenix/restaurants/metro-phoenix-mediterranean-inspired-restaurant-closes-over-the-weekend/",
-      "title": "Metro Phoenix Mediterranean-Inspired Restaurant Closes Over the Weekend",
-      "address": "3150 E Ray Rd #104, Gilbert, AZ 85296, United States"
-    },
-    {
-      "date": "April 28, 2026",
-      "url": "https://whatnow.com/austin/restaurants/11-year-old-austin-dog-friendly-bar-set-to-close-on-may-30/",
-      "title": "11-Year-Old Austin Dog-Friendly Bar Set to Close on May 30",
-      "address": "6700 Burnet Rd, Austin, TX 78757"
-    },
-    {
-      "date": "April 28, 2026",
-      "url": "https://whatnow.com/atlanta/restaurants/jeremiahs-opens-3-atlanta-locations-accelerates-expansion/",
-      "title": "Jeremiah’s Opens 3 Atlanta Locations, Accelerates Expansion | What Now Atlanta",
-      "address": ""
-    },
-    {
-      "date": "April 28, 2026",
-      "url": "https://whatnow.com/las-vegas/restaurants/popular-doughnut-chain-brings-limited-time-mothers-day-specials/",
-      "title": "Popular Doughnut Chain Brings Limited-Time Mother’s Day Specials",
-      "address": ""
-    },
-    {
-      "date": "April 27, 2026",
-      "url": "https://whatnow.com/houston/restaurants/nothing-bundt-cakes-to-sweeten-up-the-ravenwood-village-shopping-center/",
-      "title": "Nothing Bundt Cakes to Sweeten Up the Ravenwood Village Shopping Center",
-      "address": "245 I-45, Huntsville, TX 77340"
-    },
-    {
-      "date": "April 27, 2026",
-      "url": "https://whatnow.com/las-vegas/restaurants/coffee-cure-by-loulou-is-coming-to-the-sharewestside-development/",
-      "title": "Coffee Cure By LouLou is coming to the shareWESTSIDE Development",
-      "address": "1100 D St, Las Vegas, NV 89106"
-    },
-    {
-      "date": "April 27, 2026",
-      "url": "https://whatnow.com/houston/restaurants/tacos-frontera-to-bring-authentic-tijuana-style-taqueria-to-pasadena/",
-      "title": "Tacos Frontera to Bring Authentic Tijuana Style Taqueria to Pasadena",
-      "address": "2536 Spencer Hwy, Pasadena, TX 77504"
-    },
-    {
-      "date": "April 27, 2026",
-      "url": "https://whatnow.com/san-diego/restaurants/five-corners-coffee-bakery-opening-in-bankers-hill/",
-      "title": "Five Corners Coffee & Bakery Opening in Bankers Hill",
-      "address": "3407 First Ave., San Diego, CA 92103"
-    },
-    {
-      "date": "April 27, 2026",
-      "url": "https://whatnow.com/atlanta/restaurants/larita-cafe-to-join-brookhaven-community/",
-      "title": "Larita Cafe To Join Brookhaven Community | What Now Atlanta",
-      "address": "1420 Lake Hearn Dr NE, Brookhaven, GA 30319"
-    },
-    {
-      "date": "April 27, 2026",
-      "url": "https://whatnow.com/san-diego/restaurants/luga-cafe-kitchen-coming-to-city-heights/",
-      "title": "Lugā Cafe & Kitchen Coming to City Heights",
-      "address": "4280 El Cajon Blvd, San Diego, CA 92105"
-    },
-    {
-      "date": "April 27, 2026",
-      "url": "https://whatnow.com/san-diego/restaurants/the-owners-of-the-roxy-encinitas-working-on-something-mysterious-in-encinitas/",
-      "title": "The Owners of The Roxy Encinitas Working on Something Mysterious in Encinitas",
-      "address": "511 S Coast Hwy 101, Encinitas, CA 92024"
-    },
-    {
-      "date": "April 27, 2026",
-      "url": "https://whatnow.com/detroit/restaurants/rent-free-cafe-and-bar-to-serve-up-lattes-and-cocktails-in-eastern-market/",
-      "title": "‘Rent Free' Cafe and Bar to Serve Up Lattes and Cocktails in Eastern Market",
-      "address": "1347 Fisher Fwy, Detroit, MI 48207"
-    },
-    {
-      "date": "April 27, 2026",
-      "url": "https://whatnow.com/philadelphia/restaurants/wabi-nori-expands-to-phillys-midtown-village-with-third-location/",
-      "title": "Wabi Nori Expands to Midtown Village with New Location",
-      "address": "110 S 11th St. Philadelphia, PA 19107"
-    },
-    {
-      "date": "April 27, 2026",
-      "url": "https://whatnow.com/atlanta/restaurants/dishs-bagels-to-combine-new-york-style-bagels-and-southern-hospitality/",
-      "title": "Dish’s Bagels To Combine New York-Style Bagels and Southern Hospitality | What Now Atlanta",
-      "address": "1410 Lake Hearn Dr NE, Atlanta, GA 30319"
-    },
-    {
-      "date": "April 27, 2026",
-      "url": "https://whatnow.com/philadelphia/restaurants/7th-street-burger-expands-in-new-jersey-with-3-new-locations/",
-      "title": "7th Street Burger Expands in New Jersey With 3 New Locations",
-      "address": ""
-    },
-    {
-      "date": "April 27, 2026",
-      "url": "https://whatnow.com/chicago/restaurants/cafe-with-drinks-from-around-the-world-coming-to-downtown-rockford/",
-      "title": "Cafe with Drinks From Around the World to Debut in Downtown Rockford",
-      "address": "130 N 1st St, Rockford, IL 61107"
-    },
-    {
-      "date": "April 27, 2026",
-      "url": "https://whatnow.com/los-angeles/restaurants/santa-monica-entrepreneurs-opening-west-side-oyster-club/",
-      "title": "Santa Monica Entrepreneurs Opening West Side Oyster Club | What Now Los Angeles",
-      "address": "1355 Ocean Ave, Santa Monica, CA 90401"
-    },
-    {
-      "date": "April 27, 2026",
-      "url": "https://whatnow.com/los-angeles/restaurants/la-based-hospitality-group-expanding-further-in-2027/",
-      "title": "LA-Based Hospitality Group Expanding Further in 2027 | What Now Los Angeles",
-      "address": "11920 San Vicente Blvd, Los Angeles, CA 90049"
-    },
-    {
-      "date": "April 27, 2026",
-      "url": "https://whatnow.com/los-angeles/restaurants/the-h-wood-group-planning-new-concept-for-west-hollywood/",
-      "title": "The h.wood Group Planning New Concept For West Hollywood | What Now Los Angeles",
-      "address": "9229 Sunset Blvd, West Hollywood, CA 90069"
     }
   ]
 }
