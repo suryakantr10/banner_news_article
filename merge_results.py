@@ -7,6 +7,9 @@ both scraper jobs complete.
 import json
 import os
 from datetime import datetime, timezone
+from pathlib import Path
+
+import pandas as pd
 
 DOCS        = "docs"
 INPUTS      = ["news_data_opening.json", "news_data_closing.json"]
@@ -44,3 +47,28 @@ with open(output_path, "w", encoding="utf-8") as f:
     )
 
 print(f"Merged {len(merged)} unique articles → {output_path}")
+
+# ── Master file — accumulates all daily results ───────────────────────────────
+DAILY_DIR = Path("data/daily_news")
+DAILY_DIR.mkdir(parents=True, exist_ok=True)
+MASTER_FILE = DAILY_DIR / "daily_news_master.csv"
+
+today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+df_new = pd.DataFrame(merged)
+if not df_new.empty:
+    df_new["Date_Appended"] = today_str
+    df_new["published_date"] = pd.to_datetime(df_new["published_date"], errors="coerce")
+
+    if MASTER_FILE.exists():
+        df_master = pd.read_csv(MASTER_FILE, encoding="utf-8")
+        df_master["published_date"] = pd.to_datetime(df_master["published_date"], errors="coerce")
+        df_master = pd.concat([df_master, df_new], ignore_index=True)
+    else:
+        df_master = df_new
+
+    df_master = df_master.drop_duplicates(subset=["direct_link", "title"])
+    df_master = df_master.sort_values("published_date", ascending=False)
+    df_master.to_csv(MASTER_FILE, index=False, encoding="utf-8")
+    print(f"Master file updated: {MASTER_FILE}  ({len(df_master)} total rows)")
+else:
+    print("No articles to append to master file.")
