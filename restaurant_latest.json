@@ -1,7 +1,43 @@
 {
-  "last_updated": "2026-05-03 01:21 UTC",
+  "last_updated": "2026-05-04 01:20 UTC",
   "total": 60,
   "data": [
+    {
+      "date": "May 03, 2026",
+      "url": "https://whatnow.com/washington-dc/restaurants/giordanos-pizza-to-help-dc-greet-the-heat/",
+      "title": "Giordano’s Pizza to Help DC Greet the Heat",
+      "address": "600 14th St NW, Washington, DC 20005"
+    },
+    {
+      "date": "May 03, 2026",
+      "url": "https://whatnow.com/memphis/restaurants/latest-from-tekila-group-nears-opening/",
+      "title": "Latest from TEKILA Group Nears Opening",
+      "address": "181 Norfleet Dr, Senatobia, MS 38668"
+    },
+    {
+      "date": "May 03, 2026",
+      "url": "https://whatnow.com/memphis/restaurants/playa-bowls-sets-grand-opening-for-collierville-location/",
+      "title": "Playa Bowls Sets Grand Opening for Collierville Location",
+      "address": "1335 W Poplar Ave, Collierville, TN 38017"
+    },
+    {
+      "date": "May 03, 2026",
+      "url": "https://whatnow.com/memphis/restaurants/ritual-bistro-brewing-up-may-opening/",
+      "title": "Ritual Bistro Brewing up May Opening",
+      "address": "505 S Main St, Memphis, TN 38103"
+    },
+    {
+      "date": "May 03, 2026",
+      "url": "https://whatnow.com/dallas/restaurants/cafe-momentum-bringing-good-food-and-social-justice-to-new-flagship-location/",
+      "title": "Cafe Momentum Bringing Good Food and Social Justice to New Flagship Location",
+      "address": "3001 Greenwood St, Dallas, TX 75204"
+    },
+    {
+      "date": "May 03, 2026",
+      "url": "https://whatnow.com/dallas/restaurants/murphys-law-brewery-pizza-readying-burleson-debut/",
+      "title": "Murphy’s Law Brewery & Pizza Readying Burleson Debut",
+      "address": "309 W Hidden Creek Pkwy, Burleson, TX 76028"
+    },
     {
       "date": "May 02, 2026",
       "url": "https://whatnow.com/washington-dc/restaurants/coopers-hawk-winery-and-restaurant-preparing-for-woodbridge-opening/",
@@ -325,42 +361,6 @@
       "url": "https://whatnow.com/new-york/restaurants/zaab-zaab-co-owner-planning-east-village-cafe/",
       "title": "Zaab Zaab Co-Owner Planning East Village Café",
       "address": "164 1st Ave, New York, NY 10009"
-    },
-    {
-      "date": "May 01, 2026",
-      "url": "https://whatnow.com/new-orleans/restaurants/sushi-restaurant-kotobuki-planning-a-return-to-the-east-village/",
-      "title": "Sushi Restaurant Kotobuki Planning a Return to the East Village",
-      "address": "8 Stuyvesant St, New York, NY 10003"
-    },
-    {
-      "date": "May 01, 2026",
-      "url": "https://whatnow.com/charlotte/restaurants/karak-house-coffee-bringing-middle-eastern-flavors-to-uptown-charlotte/",
-      "title": "Karak House Coffee Bringing Middle Eastern Flavors to Uptown Charlotte",
-      "address": "220 N Pine St, Charlotte, NC 28202, USA"
-    },
-    {
-      "date": "May 01, 2026",
-      "url": "https://whatnow.com/new-york/restaurants/chef-enrique-olveras-noho-mexican-restaurant-to-close-this-may/",
-      "title": "Chef Enrique Olvera’s NoHo Mexican Restaurant to Close This May",
-      "address": "372 Lafayette St, New York, NY 10012"
-    },
-    {
-      "date": "May 01, 2026",
-      "url": "https://whatnow.com/charlotte/restaurants/finders-coffee-set-to-open-in-south-end-this-summer/",
-      "title": "Finders Coffee Set to Open in South End This Summer",
-      "address": "1617 S Tryon Street, Charlotte, NC 28203"
-    },
-    {
-      "date": "May 01, 2026",
-      "url": "https://whatnow.com/houston/restaurants/turquoise-wine-bar-to-debut-in-texas-opening-in-blackhorse-ranch/",
-      "title": "Turquoise Wine Bar to Debut in Texas, Opening in Blackhorse Ranch",
-      "address": "16518 House Hahl Rd, Cypress, TX 77433"
-    },
-    {
-      "date": "May 01, 2026",
-      "url": "https://whatnow.com/boston/restaurants/figaros-italian-sandwich-shop-expanding-to-bostons-fenway/",
-      "title": "Figaro's Italian Sandwich Shop Expanding to Boston's Fenway",
-      "address": "92 Peterborough St, Boston, MA 02215"
     }
   ]
 }
