@@ -224,13 +224,17 @@ def main():
 
     print("Total articles found:", len(df))
 
+    # ── Output directory (shared by daily XLSX and master file) ─────────────
+    CT_SCOOP_DIR = Path("data/ct_scoop")
+    CT_SCOOP_DIR.mkdir(parents=True, exist_ok=True)
+
     # Save to Excel (fallback to CSV if openpyxl is missing)
-    export_path = f"ct_scoop_links_{datetime.now().strftime('%Y-%m-%d')}.xlsx"
+    export_path = CT_SCOOP_DIR / f"ct_scoop_links_{datetime.now().strftime('%Y-%m-%d')}.xlsx"
     try:
         df.to_excel(export_path, index=False)
         print(f"Saved {len(df)} records to {export_path}")
     except ModuleNotFoundError as exc:
-        fallback_path = export_path.replace(".xlsx", ".csv")
+        fallback_path = str(export_path).replace(".xlsx", ".csv")
         df.to_csv(fallback_path, index=False)
         print(
             "openpyxl not installed (", exc, "); saved to CSV instead:", fallback_path
@@ -251,8 +255,6 @@ def main():
     print(f"Saved JSON to {json_path}")
 
     # ── Master file — accumulates all daily results ──────────────────────────
-    CT_SCOOP_DIR = Path("data/ct_scoop")
-    CT_SCOOP_DIR.mkdir(parents=True, exist_ok=True)
     MASTER_FILE = CT_SCOOP_DIR / "ct_scoop_master.csv"
 
     df_new = df.copy()

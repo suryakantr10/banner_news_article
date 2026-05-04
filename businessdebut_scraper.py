@@ -101,8 +101,12 @@ def main():
 
     print(f"\nDone! {len(df)} articles scraped.")
 
+    # ── Output directory (shared by daily CSV and master file) ───────────────
+    BIZ_DIR = Path("data/businessdebut")
+    BIZ_DIR.mkdir(parents=True, exist_ok=True)
+
     # Save CSV
-    export_path = f"businessdebut_articles_{datetime.now().strftime('%Y-%m-%d')}.csv"
+    export_path = BIZ_DIR / f"businessdebut_articles_{datetime.now().strftime('%Y-%m-%d')}.csv"
     df_csv = df.copy()
     if "date" in df_csv.columns:
         df_csv["date"] = df_csv["date"].astype(str)
@@ -125,8 +129,6 @@ def main():
     print(f"Saved JSON to {json_path}")
 
     # ── Master file — accumulates all daily results ───────────────────────────
-    BIZ_DIR = Path("data/businessdebut")
-    BIZ_DIR.mkdir(parents=True, exist_ok=True)
     MASTER_FILE = BIZ_DIR / "businessdebut_master.csv"
 
     df_new = df.copy()

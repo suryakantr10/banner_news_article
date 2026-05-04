@@ -191,9 +191,13 @@ for i, row in enumerate(rows, 1):
 
     time.sleep(0.3)   # polite delay between article requests
 
+# ── Output directory (shared by daily CSV and master file) ───────────────────
+REST_DIR = Path("data/restaurant")
+REST_DIR.mkdir(parents=True, exist_ok=True)
+
 # ── Save CSV ──────────────────────────────────────────────────────────────────
 today    = datetime.now().strftime("%Y-%m-%d")
-csv_file = f"Daily_restaurants_{today}.csv"
+csv_file = REST_DIR / f"Daily_restaurants_{today}.csv"
 df       = pd.DataFrame(rows, columns=["date", "title", "address", "url"])
 df.to_csv(csv_file, index=False, encoding="utf-8")
 print(f"\n✅ CSV  saved → {csv_file} ({len(df)} rows)")
@@ -210,8 +214,6 @@ with open("restaurant_latest.json", "w", encoding="utf-8") as f:
 print(f"✅ JSON saved → restaurant_latest.json ({len(rows)} records)")
 
 # ── Master file — accumulates all daily results ───────────────────────────────
-REST_DIR = Path("data/restaurant")
-REST_DIR.mkdir(parents=True, exist_ok=True)
 MASTER_FILE = REST_DIR / "restaurant_master.csv"
 
 df_new = df.copy()

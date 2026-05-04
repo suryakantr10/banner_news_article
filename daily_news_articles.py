@@ -1068,8 +1068,12 @@ If none, write: None
           f"({len(batches)} batch{'es' if len(batches) > 1 else ''} "
           f"× ≤{_CLAUDE_BATCH} articles)")
 
+    # ── Output directory (shared by daily XLSX and master file) ─────────────
+    DAILY_DIR = Path("data/daily_news")
+    DAILY_DIR.mkdir(parents=True, exist_ok=True)
+
     # ── Excel export ──────────────────────────────────────
-    fname = f"Retail_Update_{NOW_UTC.strftime('%Y%m%d_%H%M')}{_suffix}.xlsx"
+    fname = DAILY_DIR / f"Retail_Update_{NOW_UTC.strftime('%Y%m%d_%H%M')}{_suffix}.xlsx"
     with pd.ExcelWriter(fname, engine="openpyxl") as writer:
         df.to_excel(writer, index=False, sheet_name="News")
         ws = writer.sheets["News"]
@@ -1078,8 +1082,6 @@ If none, write: None
             ws.column_dimensions[col_cells[0].column_letter].width = min(max_len + 2, 60)
 
     # ── Master file — accumulates all daily results ───────────────────────────
-    DAILY_DIR = Path("data/daily_news")
-    DAILY_DIR.mkdir(parents=True, exist_ok=True)
     MASTER_FILE = DAILY_DIR / "daily_news_master.csv"
 
     df_new = df.copy()

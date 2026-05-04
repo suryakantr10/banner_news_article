@@ -64,8 +64,7 @@ jobs:
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add ct_scoop_latest.json
-          git add ct_scoop_links_*.xlsx || true
+          git add ct_scoop_latest.json || true
           git add data/ct_scoop/ || true
           git diff --staged --quiet || git commit -m "Auto-update: Daily CT Scoop fetch $(date +'%Y-%m-%d')"
           git pull --rebase origin main
