@@ -1,0 +1,266 @@
+{
+  "last_updated": "2026-05-05",
+  "data": [
+    {
+      "store_name": "No qualifying business found (movie theater chain)",
+      "location": "N/A",
+      "event_type": "Closing",
+      "event_date": "N/A",
+      "status": "N/A — MSN page returned no article body",
+      "short_description": "Article only shows MSN wrapper with no article text. No business name, location, or details available.",
+      "article_link": "https://www.msn.com/en-us/money/companies/movie-theater-chain-with-locations-in-8-states-files-for-bankruptcy-again/ar-AA1HVXbo"
+    },
+    {
+      "store_name": "No qualifying business found (Lidl Melksham)",
+      "location": "N/A",
+      "event_type": "Opening",
+      "event_date": "N/A",
+      "status": "N/A — 504 Gateway Timeout",
+      "short_description": "Article could not be fetched due to server error. No business details available.",
+      "article_link": "https://www.hellorayo.co.uk/greatest-hits/salisbury/news/melksham-lidl-relocation"
+    },
+    {
+      "store_name": "No qualifying business found (Urban Milwaukee bars/restaurants)",
+      "location": "N/A",
+      "event_type": "Opening",
+      "event_date": "N/A",
+      "status": "N/A — no article body returned",
+      "short_description": "Article URL returned no extractable content. No business details available.",
+      "article_link": "https://urbanmilwaukee.com/2026/05/04/grand-openings-new-bars-and-restaurants-that-opened-in-april-3/"
+    },
+    {
+      "store_name": "Mr. Po' Boyz Burgers and Seafood",
+      "location": "2605 E. Lucas St., Beaumont, TX (zip not specified)",
+      "event_type": "Opening",
+      "event_date": "Soft launch: April 24; Grand opening: May 16",
+      "status": "soft launch; grand opening on May 16",
+      "short_description": "Mr. Po' Boyz Burgers and Seafood soft-launched on April 24 at a familiar north end Beaumont location with a Mardi Gras color scheme. A formal grand opening is scheduled for May 16. The restaurant serves a variety of burgers and seafood items.",
+      "article_link": "https://www.beaumontenterprise.com/business/article/mr-po-boyz-burgers-wings-seafood-soft-launches-22233544.php"
+    },
+    {
+      "store_name": "Campers Inn RV of Wilmington",
+      "location": "Address not specified",
+      "event_type": "Opening",
+      "event_date": "May 14–17, 2026",
+      "status": "grand opening event May 14–17",
+      "short_description": "Campers Inn RV is holding a company-wide grand opening event May 14–17 covering all newly rebranded Lazydays locations and current Campers Inn locations. This location is one of multiple operating under the Campers Inn brand as part of the expansion.",
+      "article_link": "https://rv-pro.com/news/campers-inn-rv-to-hold-largest-grand-opening-in-company-history/"
+    },
+    {
+      "store_name": "Campers Inn RV of Knoxville",
+      "location": "Address not specified",
+      "event_type": "Opening",
+      "event_date": "May 14–17, 2026",
+      "status": "grand opening event May 14–17",
+      "short_description": "Campers Inn RV is holding a company-wide grand opening event May 14–17. This location is one of multiple operating under the Campers Inn brand as part of the rebranding and integration of Lazydays locations.",
+      "article_link": "https://rv-pro.com/news/campers-inn-rv-to-hold-largest-grand-opening-in-company-history/"
+    },
+    {
+      "store_name": "Airstream of Knoxville",
+      "location": "Address not specified",
+      "event_type": "Opening",
+      "event_date": "May 14–17, 2026",
+      "status": "grand opening event May 14–17",
+      "short_description": "Operating under the Campers Inn RV umbrella, this location is part of the coordinated four-day grand opening event. It is one of multiple newly rebranded sites participating in the festivities.",
+      "article_link": "https://rv-pro.com/news/campers-inn-rv-to-hold-largest-grand-opening-in-company-history/"
+    },
+    {
+      "store_name": "Campers Inn RV of Johnstown",
+      "location": "Address not specified",
+      "event_type": "Opening",
+      "event_date": "May 14–17, 2026",
+      "status": "grand opening event May 14–17",
+      "short_description": "Operating under the Campers Inn RV umbrella, this location is part of the coordinated four-day grand opening event. It is one of multiple newly rebranded sites participating in the festivities.",
+      "article_link": "https://rv-pro.com/news/campers-inn-rv-to-hold-largest-grand-opening-in-company-history/"
+    },
+    {
+      "store_name": "Campers Inn RV of Ramsey",
+      "location": "Address not specified",
+      "event_type": "Opening",
+      "event_date": "May 14–17, 2026",
+      "status": "grand opening event May 14–17",
+      "short_description": "Operating under the Campers Inn RV umbrella, this location is part of the coordinated four-day grand opening event. It is one of multiple newly rebranded sites participating in the festivities.",
+      "article_link": "https://rv-pro.com/news/campers-inn-rv-to-hold-largest-grand-opening-in-company-history/"
+    },
+    {
+      "store_name": "Airstream of Minnesota",
+      "location": "Address not specified",
+      "event_type": "Opening",
+      "event_date": "May 14–17, 2026",
+      "status": "grand opening event May 14–17",
+      "short_description": "Operating under the Campers Inn RV umbrella, this location is part of the coordinated four-day grand opening event. It is one of multiple newly rebranded sites participating in the festivities.",
+      "article_link": "https://rv-pro.com/news/campers-inn-rv-to-hold-largest-grand-opening-in-company-history/"
+    },
+    {
+      "store_name": "Campers Inn RV of St. George",
+      "location": "Address not specified",
+      "event_type": "Opening",
+      "event_date": "May 14–17, 2026",
+      "status": "grand opening event May 14–17",
+      "short_description": "Operating under the Campers Inn RV umbrella, this location is part of the coordinated four-day grand opening event. It is one of multiple newly rebranded sites participating in the festivities.",
+      "article_link": "https://rv-pro.com/news/campers-inn-rv-to-hold-largest-grand-opening-in-company-history/"
+    },
+    {
+      "store_name": "Campers Inn RV of Tucson",
+      "location": "Address not specified",
+      "event_type": "Opening",
+      "event_date": "May 14–17, 2026",
+      "status": "grand opening event May 14–17",
+      "short_description": "Operating under the Campers Inn RV umbrella, this location is part of the coordinated four-day grand opening event. It is one of multiple newly rebranded sites participating in the festivities.",
+      "article_link": "https://rv-pro.com/news/campers-inn-rv-to-hold-largest-grand-opening-in-company-history/"
+    },
+    {
+      "store_name": "Campers Inn RV of Milford",
+      "location": "Address not specified",
+      "event_type": "Opening",
+      "event_date": "May 14–17, 2026",
+      "status": "grand opening event May 14–17",
+      "short_description": "Operating under the Campers Inn RV umbrella, this location is part of the coordinated four-day grand opening event. It is one of multiple newly rebranded sites participating in the festivities.",
+      "article_link": "https://rv-pro.com/news/campers-inn-rv-to-hold-largest-grand-opening-in-company-history/"
+    },
+    {
+      "store_name": "Lazydays Powered by Campers Inn RV (Tampa flagship)",
+      "location": "Address not specified — Tampa, FL",
+      "event_type": "Opening",
+      "event_date": "May 14–17, 2026",
+      "status": "grand opening; reimagined Tampa flagship debut",
+      "short_description": "The Tampa location debuts as \"Lazydays Powered by Campers Inn RV,\" symbolizing the blending of two industry leaders. It is the headline property of the four-day grand opening event, featuring a free RV giveaway on May 16.",
+      "article_link": "https://rv-pro.com/news/campers-inn-rv-to-hold-largest-grand-opening-in-company-history/"
+    },
+    {
+      "store_name": "No qualifying business found (Mouth by Southwest Valley restaurants)",
+      "location": "N/A",
+      "event_type": "Opening",
+      "event_date": "N/A",
+      "status": "N/A — no article body returned",
+      "short_description": "Article URL returned no extractable content. No business details available.",
+      "article_link": "https://mouthbysouthwest.com/2026/05/04/april-recap-6-notable-restaurants-cafes-now-open-in-the-valley/"
+    },
+    {
+      "store_name": "No qualifying business found (Colorado green chili restaurant)",
+      "location": "N/A",
+      "event_type": "Opening",
+      "event_date": "N/A",
+      "status": "N/A — MSN page returned no article body",
+      "short_description": "Article only shows MSN wrapper with no article text. No business name, location, or details available.",
+      "article_link": "https://www.msn.com/en-us/foodanddrink/foodnews/colorado-born-green-chili-restaurant-opening-new-location/ar-AA21yB7O"
+    },
+    {
+      "store_name": "jjStacks",
+      "location": "71 South Main St., Newtown, CT (zip not specified)",
+      "event_type": "Opening",
+      "event_date": "Ribbon-cutting: May 18, 2026",
+      "status": "grand opening on May 18",
+      "short_description": "jjStacks, a bar and grill offering over 100 wing varieties, burgers, and a sports bar atmosphere, has opened at the former Eggs & Co. space in Newtown. A ribbon-cutting ceremony is scheduled for 2 p.m. on May 18. The Newtown location marks the brand's first brick-and-mortar restaurant.",
+      "article_link": "https://patch.com/connecticut/newtown/new-restaurant-celebrate-grand-opening-newtown"
+    },
+    {
+      "store_name": "Saucy! by KFC",
+      "location": "5484 Lena Road, Bradenton, FL (zip not specified)",
+      "event_type": "Opening",
+      "event_date": "May 4, 2026 (Monday)",
+      "status": "opening soon; grand opening at 11 a.m. Monday",
+      "short_description": "Saucy! by KFC is opening its first Manatee County location at 5484 Lena Road, off State Road 70 near Interstate 75 in Bradenton. The grand opening is scheduled for 11 a.m. Monday with giveaways and complimentary bites. The location introduces two new menu items: the Big Sammie and Saucy! x DRIPS by Pepsi drinks.",
+      "article_link": "https://www.aol.com/news/kfc-gives-bradenton-saucy-treatment-095000024.html"
+    },
+    {
+      "store_name": "Jersey Mike's Subs",
+      "location": "660 Merril Road, Pittsfield, MA (zip not specified) — Stop & Shop Plaza",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "opening soon",
+      "short_description": "A job posting on Indeed revealed a new Jersey Mike's Subs location is planned for 660 Merril Road in Pittsfield, in the Stop & Shop Plaza next to Pizza Hut. The franchise will be operated by Liotta Brothers LLC, with limited details available so far. No confirmed opening date has been announced.",
+      "article_link": "https://wupe.com/ixp/922/p/jersey-mikes-pittsfield-opening/"
+    },
+    {
+      "store_name": "Market on Morehead",
+      "location": "Address not specified — uptown/South End, Charlotte, NC, near Carson Station light rail",
+      "event_type": "Opening",
+      "event_date": "May 2026 (exact date not specified)",
+      "status": "in the final stages of construction and inspections; opening in May",
+      "short_description": "Market on Morehead is a full-service restaurant and bar opening in Charlotte in May 2026, positioned near the light rail's Carson Station with seating for 200 inside and 150 outdoors. The restaurant is a sister spot to Market on Main in Columbia, South Carolina, and features a 25-foot LED Jumbotron, a 40-seat bar, and Rail Trail patio views. Co-founder Josh Willoughby has worked for the past year to finalize the space.",
+      "article_link": "https://www.aol.com/news/restaurant-rail-trail-patio-views-115557091.html"
+    },
+    {
+      "store_name": "No qualifying business found (restaurant chain with 3,193 locations)",
+      "location": "N/A",
+      "event_type": "Closing",
+      "event_date": "N/A",
+      "status": "N/A — MSN page returned no article body",
+      "short_description": "Article only shows MSN wrapper with no article text. No business name, location, or details available.",
+      "article_link": "https://www.msn.com/en-us/money/companies/restaurant-chain-with-3-193-locations-shut-down-after-bankruptcy-filing/ss-AA1ZVfWR"
+    },
+    {
+      "store_name": "No qualifying business found (Canal Lock Salon)",
+      "location": "N/A",
+      "event_type": "Opening",
+      "event_date": "N/A",
+      "status": "N/A — 403 Forbidden",
+      "short_description": "Article could not be fetched. No business details available.",
+      "article_link": "https://miamivalleytoday.com/canal-lock-salon-holds-grand-opening-in-tipp-city/"
+    },
+    {
+      "store_name": "Centara Life Namba Hotel Osaka",
+      "location": "Namba district, Osaka, Japan — near Nankai Shin-Imamiya and Namba Stations (full address not specified)",
+      "event_type": "Opening",
+      "event_date": "Now open (as of article date)",
+      "status": "now officially open",
+      "short_description": "Centara Hotels & Resorts has opened Centara Life Namba Hotel Osaka, its second property in Japan, in the heart of Osaka's Namba district. The hotel features 300 non-smoking rooms, a rooftop lounge (SORA), and a breakfast dining venue (DINING). It is positioned as a lifestyle-led property offering convenience and value for a range of travellers.",
+      "article_link": "https://www.breakingtravelnews.com/news/article/grand-opening-of-centara-life-namba-hotel-osaka/"
+    },
+    {
+      "store_name": "Ramee Collection Airport Road, Mohali",
+      "location": "Airport Road, Mohali, India (full address not specified)",
+      "event_type": "Opening",
+      "event_date": "May 4, 2026",
+      "status": "opening announced",
+      "short_description": "Ramee Group of Hotels announced the opening of Ramee Collection Airport Road, Mohali, developed in partnership with Pure Hotel Pvt. Ltd. This marks the Group's first entry into the Tricity market of Mohali, Chandigarh, and Panchkula, and follows the brand's boutique presence in Amritsar. The property is positioned as a boutique hospitality destination targeting the North India luxury travel market.",
+      "article_link": "https://hospibuz.com/hotel/Hotel-listicles/ramee-group-of-hotels-marks-its-tricity-debut-with-the-grand-opening-of-ramee-collection-airport-road-mohali-11798065"
+    },
+    {
+      "store_name": "L.L.Bean",
+      "location": "Address not specified — Delaware County (Delco), PA",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "coming soon",
+      "short_description": "Delco is getting its first L.L.Bean store, located near where longtime competitor Eddie Bauer previously closed. No opening date or exact address was provided in the article.",
+      "article_link": "https://patch.com/pennsylvania/haverford/fire-impacts-shopping-center-llbean-store-coming-soon-delco-business-news"
+    },
+    {
+      "store_name": "L.L.Bean",
+      "location": "Address not specified — Delaware County (Delco), PA",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "coming soon",
+      "short_description": "This article references the same upcoming L.L.Bean store in Delco as Article 16, near the former Eddie Bauer location. No opening date or exact address is provided.",
+      "article_link": "https://patch.com/pennsylvania/ardmore/amp/34053906/fire-impacts-shopping-center-llbean-store-coming-soon-main-line-business-news"
+    },
+    {
+      "store_name": "No qualifying business found (Amoh Resort)",
+      "location": "N/A",
+      "event_type": "Opening",
+      "event_date": "N/A",
+      "status": "N/A — 403 Forbidden",
+      "short_description": "Article could not be fetched. No business details available.",
+      "article_link": "https://www.travelandtourworld.com/news/article/amoh-resorts-grand-opening-how-it-enhances-rhodes-reputation-as-a-luxury-travel-destination-and-the-fusion-of-tradition-and-modernity-in-design-what-you-need-to-know/"
+    },
+    {
+      "store_name": "No qualifying business found (KFC Saucy Florida)",
+      "location": "N/A",
+      "event_type": "Opening",
+      "event_date": "N/A",
+      "status": "N/A — MSN page returned no article body",
+      "short_description": "Article only shows MSN wrapper with no article text. No business name, location, or details available.",
+      "article_link": "https://www.msn.com/en-us/foodanddrink/foodnews/kfc-expands-saucy-s-florida-footprint-with-a-new-location-of-concept-restaurant/ar-AA22c1AB"
+    },
+    {
+      "store_name": "No qualifying business found (Smokey Bones)",
+      "location": "N/A",
+      "event_type": "Closing",
+      "event_date": "N/A",
+      "status": "N/A — 403 Forbidden",
+      "short_description": "Article could not be fetched. No business details available.",
+      "article_link": "https://dailyvoice.com/ma/tyngsborough/smokey-bones-shutters-all-locations-nationwide-what-to-know/"
+    }
+  ]
+}
