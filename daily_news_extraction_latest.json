@@ -1450,6 +1450,276 @@
       "short_description": "Murry's Restaurant is planning to open \"Downtown Murry's\" in the space being vacated by Sycamore at 800 E. Broadway in downtown Columbia, with a fall 2026 opening anticipated. This is a duplicate of the event covered in Articles 95 and 97.",
       "article_link": "https://abc17news.com/news/top-stories/2026/05/04/downtown-columbia-restaurant-set-to-close-new-one-to-replace-it/",
       "published_date": "2026-05-04 12:44:56"
+    },
+    {
+      "store_name": "Kansas City bar and bookstore (name not specified)",
+      "location": "Crossroads, Kansas City, MO (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "plans reopening after Crossroads closure",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, a popular Kansas City bar and bookstore is planning to reopen after closing its Crossroads location. No further details available.",
+      "article_link": "https://www.msn.com/en-us/travel/news/popular-kansas-city-bar-and-bookstore-plans-reopening-after-crossroads-closure/ar-AA2271OJ",
+      "published_date": "2026-05-04 11:16:16"
+    },
+    {
+      "store_name": "Ming Moon Wolverhampton",
+      "location": "A449 Stafford Road, Oxley area, Wolverhampton, West Midlands, UK",
+      "event_type": "Closing",
+      "event_date": "May 9, 2026",
+      "status": "closing from May 9",
+      "short_description": "Ming Moon, a Chinese buffet restaurant on Stafford Road in Wolverhampton, is closing on May 9, 2026, after 20 years in operation since 2006. The restaurant cited a move into a \"new chapter\" and directed customers to its remaining location at 16 Hurst Street, Birmingham B5 4BN.",
+      "article_link": "https://www.birminghammail.co.uk/black-country/chinese-buffet-restaurant-announces-shock-33883569",
+      "published_date": "2026-05-04 10:57:28"
+    },
+    {
+      "store_name": "TX-based burger chain (name not specified)",
+      "location": "Tampa Bay, FL (address not specified; third Tampa Bay location)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "welcomes third Tampa Bay restaurant",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, a Texas-based burger chain open 24/7 has opened its third Tampa Bay restaurant. Chain name not available.",
+      "article_link": "https://www.msn.com/en-us/money/companies/tx-based-burger-chain-open-247-welcomes-third-tampa-bay-restaurant/ar-AA22aGBi",
+      "published_date": "2026-05-04 10:48:16"
+    },
+    {
+      "store_name": "Ramee Group boutique hotel",
+      "location": "Mohali, India (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "Not specified",
+      "short_description": "Article could not be fetched (403 error). Based on title, Ramee Group is opening a high-end boutique hotel in Mohali. No further details available.",
+      "article_link": "https://www.travelandtourworld.com/news/article/ramee-group-targets-tricity-hospitality-growth-with-high-end-boutique-hotel-opening-in-mohali/",
+      "published_date": "2026-05-04 10:23:01"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article covers adjusted UK supermarket opening hours for the May Bank Holiday Monday. No new opening or closure event is described.",
+      "article_link": "https://www.aol.com/articles/supermarket-opening-times-may-bank-094002034.html",
+      "published_date": "2026-05-04 10:07:01"
+    },
+    {
+      "store_name": "Trattoria Tennie / Five Below / PetSmart (Manitowoc)",
+      "location": "Manitowoc, WI (addresses not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "Not specified",
+      "short_description": "Article could not be fetched (406 error). Based on title, article covers new restaurant Trattoria Tennie and retailers Five Below and PetSmart opening in Manitowoc in April. No further details available.",
+      "article_link": "https://www.htrnews.com/story/money/2026/05/04/trattoria-tennie-five-below-petsmart-manitowoc-business-news/89896967007/",
+      "published_date": "2026-05-04 10:02:00"
+    },
+    {
+      "store_name": "Mad Anthony's Pizza",
+      "location": "Eighth Street (former Voodoo Brew Pub space), Cincinnati, OH (address not specified beyond \"Eighth Street\")",
+      "event_type": "Opening",
+      "event_date": "Later this month (relative to 2026-05-04)",
+      "status": "opening its first storefront",
+      "short_description": "Mad Anthony's Pizza is opening its first storefront location in downtown Cincinnati in the former Voodoo Brew Pub space on Eighth Street, expanding beyond its existing presence at Covington Yard. The new location will feature a larger Italian-American menu with sandwiches, mozzarella sticks, wings, and a full bar, and will be open until midnight on weekdays and 2 a.m. on weekends.",
+      "article_link": "https://www.cincinnati.com/story/entertainment/dining/2026/05/04/mad-anthonys-pizza-opening-new-location-on-eight-street-in-cincinnati/89920160007/",
+      "published_date": "2026-05-04 09:48:00"
+    },
+    {
+      "store_name": "13 new restaurants (Middletown, DE)",
+      "location": "Warwick Road, Middletown, DE (addresses not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "Not specified",
+      "short_description": "Article could not be fetched (406 error). Based on title, article covers 13 new restaurants open or planned along a busy road in Middletown, Delaware. No further details available.",
+      "article_link": "https://www.delawareonline.com/story/life/food/2026/05/04/on-busy-middletown-warwick-road-13-new-restaurants-are-open-or-planned/89822036007/",
+      "published_date": "2026-05-04 09:18:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article is a monthly business roundup for Springfield/Sangamon County, IL. The article body is truncated and provides no specific named business openings or closures with actionable details.",
+      "article_link": "https://www.sj-r.com/story/business/2026/05/04/top-business-restaurant-news-around-springfield-in-april/89877153007/",
+      "published_date": "2026-05-04 09:04:00"
+    },
+    {
+      "store_name": "Oaks Village grocery store",
+      "location": "1104 E. Fourth St., Monroe, MI",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "for sale",
+      "short_description": "The former Oaks Village grocery store at 1104 E. Fourth St. in Monroe is for sale. The article notes the owners want to address negative social media posts about the property; no specific closure date was provided in the available text.",
+      "article_link": "https://www.monroenews.com/story/news/2026/05/04/oaks-village-grocery-store-monroe-michigan/89889571007/",
+      "published_date": "2026-05-04 08:47:00"
+    },
+    {
+      "store_name": "RH Outlet",
+      "location": "200 Ikea Drive, Paramus, NJ",
+      "event_type": "Opening",
+      "event_date": "Not specified (announced April 27, 2026)",
+      "status": "opened",
+      "short_description": "RH Outlet has opened a 50,700-square-foot freestanding store at Ikea Drive Plaza, 200 Ikea Drive in Paramus, New Jersey, relocating from another site in the borough. The store offers RH's furniture, lighting, textiles, décor, and outdoor collections at outlet pricing.",
+      "article_link": "https://www.aol.com/news/massive-luxury-home-furnishing-store-162128413.html",
+      "published_date": "2026-05-04 07:25:57"
+    },
+    {
+      "store_name": "Jennie McAlpine's restaurant (name not specified)",
+      "location": "Address not specified (UK)",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "confirms closure",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, Coronation Street star Jennie McAlpine has confirmed the closure of her award-winning restaurant. No further details available.",
+      "article_link": "https://www.msn.com/en-ca/entertainment/celebrity/coronation-street-star-jennie-mcalpine-confirms-closure-of-her-award-winning-restaurant/ar-AA1HTPit",
+      "published_date": "2026-05-04 07:12:21"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article could not be fetched (500 server error). Based on title, article is a guide to Korean grocery stores in metro Phoenix — no specific opening or closure event.",
+      "article_link": "https://www.aol.com/news/guide-every-korean-market-metro-120038865.html",
+      "published_date": "2026-05-04 06:48:45"
+    },
+    {
+      "store_name": "Hyundai Department Store (pop-up)",
+      "location": "Shin Kong Mitsukoshi Zhonggang branch, Taichung, Taiwan",
+      "event_type": "Opening",
+      "event_date": "Not specified (3-month pop-up planned)",
+      "status": "will launch a three-month pop-up",
+      "short_description": "Hyundai Department Store announced plans to launch a three-month pop-up at Shin Kong Mitsukoshi's Zhonggang branch in Taichung, Taiwan, building on a successful October 2025 pop-up at a Taipei Shin Kong Mitsukoshi location. The company may consider opening permanent stores in Taiwan depending on performance.",
+      "article_link": "https://pulse.mk.co.kr/news/english/12035093",
+      "published_date": "2026-05-04 05:44:45"
+    },
+    {
+      "store_name": "Hyundai Department Store (flagship, Omotesando)",
+      "location": "Omotesando, Tokyo, Japan (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Within first half of 2026",
+      "status": "plans to open a flagship store in Omotesando within the first half of this year",
+      "short_description": "Hyundai Department Store plans to open a flagship store in Omotesando, Japan within the first half of 2026, having already opened a regular store in Japan. The company is also planning a pop-up store in Hong Kong as early as next year.",
+      "article_link": "https://pulse.mk.co.kr/news/english/12035093",
+      "published_date": "2026-05-04 05:44:45"
+    },
+    {
+      "store_name": "Bearú (second location)",
+      "location": "New Ross, Co Wexford, Ireland (address not specified; near main premises)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "expanding to a second, separate location",
+      "short_description": "Bearú, a multi award-winning restaurant in Wexford, is opening a second location in New Ross, Co. Wexford, close to its existing premises. The new venture will showcase the work of recently crowned Best Pastry Chef in Leinster, Claire Griffin.",
+      "article_link": "https://www.independent.ie/business/small-business/award-winning-wexford-restaurant-to-open-second-premises-after-double-success-at-chef-awards/a1977048103.html",
+      "published_date": "2026-05-04 05:40:00"
+    },
+    {
+      "store_name": "Haus of Innergy",
+      "location": "Near East Louetta and Lexington roads, Spring, TX (address not specified)",
+      "event_type": "Opening",
+      "event_date": "April 25, 2026 (grand opening event)",
+      "status": "now open",
+      "short_description": "Haus of Innergy, a locally owned fitness studio specializing in group classes, is now open near East Louetta and Lexington roads in Spring, Texas, with a grand opening event held on April 25, 2026. The studio is owned and operated by Shelita White-Russ, a certified spin instructor.",
+      "article_link": "https://communityimpact.com/houston/spring-klein/business/2026/05/04/haus-of-innergy-fitness-center-now-open-in-spring/",
+      "published_date": "2026-05-04 05:00:00"
+    },
+    {
+      "store_name": "The Crack'd Egg",
+      "location": "Brentwood, PA (address not specified)",
+      "event_type": "Closing",
+      "event_date": "May 10, 2026",
+      "status": "retiring from the restaurant business effective May 10, 2026",
+      "short_description": "The Crack'd Egg in Brentwood announced it is permanently closing on May 10, 2026, with owners citing unsustainable costs and pressure. The owners stated \"everything must go\" and plans for a going-out-of-business sale were noted.",
+      "article_link": "https://www.cbsnews.com/pittsburgh/news/the-crackg-egg-restaurant-closing-brentwood/",
+      "published_date": "2026-05-04 04:58:00"
+    },
+    {
+      "store_name": "Sabores Latinos",
+      "location": "91 Morris St., Morristown, NJ",
+      "event_type": "Opening",
+      "event_date": "Last month (relative to 2026-05-04)",
+      "status": "opened last month",
+      "short_description": "Sabores Latinos opened in Morristown last month, run by the same owners as Chef Freddy's Table, serving traditional Latin American dishes including fajitas, pupusas, and baleadas, as well as burgers, ribs, seafood, and breakfast.",
+      "article_link": "https://patch.com/new-jersey/ridgewood/5-new-restaurants-try-opened-north-nj-last-month-0",
+      "published_date": "2026-05-04 04:18:25"
+    },
+    {
+      "store_name": "Srirangam-Veg Restaurant",
+      "location": "2311 Route 206, Belle Mead, NJ",
+      "event_type": "Opening",
+      "event_date": "Last month (relative to 2026-05-04; grand opening on a Friday)",
+      "status": "held its grand opening",
+      "short_description": "Srirangam-Veg Restaurant, formerly Mango Tree, held its grand opening in Belle Mead, New Jersey, serving North and South Indian vegetarian food including dosas, vadas, and fresh coffee.",
+      "article_link": "https://patch.com/new-jersey/ridgewood/5-new-restaurants-try-opened-north-nj-last-month-0",
+      "published_date": "2026-05-04 04:18:25"
+    },
+    {
+      "store_name": "Uni Uni Bubble Tea",
+      "location": "485 Marin Drive, Jersey City, NJ",
+      "event_type": "Opening",
+      "event_date": "Mid-April 2026",
+      "status": "opened in mid-April",
+      "short_description": "The first New Jersey location of Uni Uni Bubble Tea opened in mid-April 2026 in Jersey City, in the former leasing office of KRE in a residential building. The menu features more than 40 drinks and snacks with 19 toppings, and the space provides WiFi and electrical outlets for working and studying.",
+      "article_link": "https://patch.com/new-jersey/ridgewood/5-new-restaurants-try-opened-north-nj-last-month-0",
+      "published_date": "2026-05-04 04:18:25"
+    },
+    {
+      "store_name": "7-Eleven",
+      "location": "645 store locations, USA (addresses not specified)",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "closes 645 stores",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, 7-Eleven has closed 645 stores with a 75% off sale launched. No further details available.",
+      "article_link": "https://www.msn.com/en-us/lifestyle/lifestyle-buzz/major-high-street-convenience-chain-closes-645-stores-75-off-sale-launched/ar-AA224kNn",
+      "published_date": "2026-05-04 04:03:30"
+    },
+    {
+      "store_name": "Waterway Tavern",
+      "location": "1882 Goose Creek Road SW Unit 1, Ocean Isle Beach, NC 28469",
+      "event_type": "Opening",
+      "event_date": "In the next couple of weeks (relative to 2026-05-03)",
+      "status": "targeting an opening in the next couple of weeks",
+      "short_description": "Waterway Tavern is preparing to open at 1882 Goose Creek Road SW Unit 1, Ocean Isle Beach, NC, in the clubhouse, with owner Brittany Bowers targeting an opening within a couple of weeks. No further details were provided in the article.",
+      "article_link": "https://www.businessdebut.com/6-new-restaurants-opening-across-north-carolina-may-3-2026/",
+      "published_date": "2026-05-04 03:29:39"
+    },
+    {
+      "store_name": "Toast",
+      "location": "120 Barnhardt Street, Greensboro, NC 27406",
+      "event_type": "Opening",
+      "event_date": "May 1, 2026 (target)",
+      "status": "targeting a May 1 opening",
+      "short_description": "Toast is a new full-service restaurant and bar at 120 Barnhardt Street in Greensboro, owned by Kristen Wallace-Williams, targeting a May 1, 2026 opening with hiring and onboarding underway.",
+      "article_link": "https://www.businessdebut.com/6-new-restaurants-opening-across-north-carolina-may-3-2026/",
+      "published_date": "2026-05-04 03:29:39"
+    },
+    {
+      "store_name": "Peak Pizza Bar",
+      "location": "2968 Old Cullowhee Road, Cullowhee, NC 28723",
+      "event_type": "Opening",
+      "event_date": "Soft opening next week (relative to 2026-05-03)",
+      "status": "targeting a soft opening next week, pending final fire and health inspections",
+      "short_description": "Peak Pizza Bar is preparing to open at 2968 Old Cullowhee Road in Cullowhee, NC, targeting a soft opening pending final fire and health inspections. The fast-casual, counter-service restaurant will focus on New York-style pizza.",
+      "article_link": "https://www.businessdebut.com/6-new-restaurants-opening-across-north-carolina-may-3-2026/",
+      "published_date": "2026-05-04 03:29:39"
+    },
+    {
+      "store_name": "Good Times Lounge",
+      "location": "300 N College St, Charlotte, NC 28202",
+      "event_type": "Opening",
+      "event_date": "June 2026",
+      "status": "targeting a June opening",
+      "short_description": "Good Times Lounge, a cocktail-focused concept from owner Kristen Wallace-Williams, is targeting a June 2026 opening at 300 N College St in Uptown Charlotte. The concept will bring an upscale nightlife experience to the Uptown area.",
+      "article_link": "https://www.businessdebut.com/6-new-restaurants-opening-across-north-carolina-may-3-2026/",
+      "published_date": "2026-05-04 03:29:39"
+    },
+    {
+      "store_name": "Miró Spanish Grille (second location)",
+      "location": "4905 Ashley Park Lane, Charlotte, NC 28210",
+      "event_type": "Opening",
+      "event_date": "Late summer to early fall 2026",
+      "status": "targeting a late summer to early fall opening",
+      "short_description": "Miró Spanish Grille is planning a second location at 4905 Ashley Park Lane in Charlotte's SouthPark area, targeting a late summer to early fall 2026 opening. The new location will build on the brand's nearly three-decade presence in the market with an updated design and expanded experience.",
+      "article_link": "https://www.businessdebut.com/6-new-restaurants-opening-across-north-carolina-may-3-2026/",
+      "published_date": "2026-05-04 03:29:39"
     }
   ]
 }
