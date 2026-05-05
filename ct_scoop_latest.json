@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-04",
+  "last_updated": "2026-05-05",
   "data": [
     {
       "heading": "WETHERSFIELD SCOOP: Ortigia Ristorante proposed in Historic Wethersfield!",
@@ -22,6 +22,11 @@
       "link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/new-haven-scoop-papas-loca-sets-opening-date-in-new-haven"
     },
     {
+      "heading": "NEW LONDON SCOOP: New speakeasy & restaurant with live entertainment planned in New London!",
+      "date": "2026-05-04",
+      "link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/new-london-scoop-new-speakeasy-restaurant-with-live-entertainment-planned-in-new-london"
+    },
+    {
       "heading": "EAST HARTFORD SCOOP: Demolition begins ahead of large scale development",
       "date": "2026-05-03",
       "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/east-hartford-scoop-demolition-begins-ahead-of-large-scale-development"
@@ -35,16 +40,6 @@
       "heading": "COLCHESTER SCOOP: Goodwill opening new boutique concept!",
       "date": "2026-05-03",
       "link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/colchester-scoop-goodwill-opening-new-boutique-concept"
-    },
-    {
-      "heading": "GLASTONBURY SCOOP: The Shops at Somerset Square welcoming 5 new restaurants and a new tenant!",
-      "date": "2026-05-02",
-      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/glastonbury-scoop-the-shops-at-somerset-square-welcoming-5-new-restaurants-and-a-new-tenant"
-    },
-    {
-      "heading": "SEYMOUR SCOOP: Big Dipper celebrates grand opening in Seymour",
-      "date": "2026-05-02",
-      "link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/seymour-scoop-big-dipper-celebrates-grand-opening-in-seymour"
     }
   ]
 }
