@@ -3810,6 +3810,206 @@
       "short_description": "Article could not be fetched (403 error). Based on title, a new Chipotle in the Flint area has set an opening date. No further details available.",
       "article_link": "https://www.mlive.com/news/flint/2026/05/new-chipotle-sets-opening-date-body-found-in-mt-morris-township-and-more-flint-area-news.html",
       "published_date": "2026-05-03 12:00:00"
+    },
+    {
+      "store_name": "Fox in the Snow (Clintonville café)",
+      "location": "Clintonville, Columbus, OH (former Hot Chicken Takeover space; address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "set to open",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, Fox in the Snow is opening a Clintonville café in the former Hot Chicken Takeover space. No further details available.",
+      "article_link": "https://www.msn.com/en-us/money/companies/fox-in-the-snow-to-open-clintonville-caf%C3%A9-in-former-hot-chicken-takeover-space/ar-AA22aWxn",
+      "published_date": "2026-05-03 11:58:22"
+    },
+    {
+      "store_name": "Nordstrom (two store closures)",
+      "location": "Two locations, USA (addresses not specified)",
+      "event_type": "Closing",
+      "event_date": "Within the next month (relative to 2026-05-03)",
+      "status": "closing two stores over next month",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, Nordstrom is closing two stores over the next month. No further details available.",
+      "article_link": "https://www.msn.com/en-us/money/companies/nordstrom-closing-two-stores-over-next-month/ar-AA21RPrM",
+      "published_date": "2026-05-03 11:04:27"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article body was not accessible (MSN shell page only). Article covers an animal refuge expanding to a second location — not a qualifying retail or restaurant event.",
+      "article_link": "https://www.msn.com/en-us/news/us/north-jersey-animal-refuge-expands-opens-2nd-location/ar-AA220Sfk",
+      "published_date": "2026-05-03 10:50:57"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article body was not accessible (MSN shell page only). Article covers a historical McDonald's that has never served customers — no opening or closure event.",
+      "article_link": "https://www.msn.com/en-my/news/other/why-this-mcdonalds-open-since-the-1970s-has-never-served-a-single-customer/ar-AA21vRd5",
+      "published_date": "2026-05-03 10:44:50"
+    },
+    {
+      "store_name": "Burj Al Arab",
+      "location": "Dubai, UAE (own man-made island; address not specified)",
+      "event_type": "Remodel",
+      "event_date": "Not specified (closed with immediate effect; reopen expected late 2027)",
+      "status": "shut for a major refurbishment programme; not expected to reopen until late 2027",
+      "short_description": "The Burj Al Arab in Dubai, described as the world's only \"seven-star\" hotel, has closed with immediate effect for a major refurbishment programme involving redesign of all 198 suites and upgrades to spa and other guest areas. The hotel first opened in 1999 and is not expected to reopen until late 2027.",
+      "article_link": "https://www.express.co.uk/news/world/2201229/worlds-most-famous-seven-star-hotel-closes-dubai",
+      "published_date": "2026-05-03 09:53:00"
+    },
+    {
+      "store_name": "Marriott International (Mediterranean expansion)",
+      "location": "Greece (Athens, Crete, Paros, Zakynthos; addresses not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "accelerates Mediterranean expansion with nearly thousand new rooms",
+      "short_description": "Article could not be fetched (403 error). Based on title, Marriott International is accelerating Mediterranean expansion with nearly 1,000 new rooms across Greece including Athens, Crete, Paros, and Zakynthos. No further details available.",
+      "article_link": "https://www.travelandtourworld.com/news/article/greece-joins-athens-crete-paros-and-zakynthos-in-taking-the-center-stage-as-marriott-international-accelerates-mediterranean-expansion-with-nearly-thousand-new-rooms/",
+      "published_date": "2026-05-03 09:28:53"
+    },
+    {
+      "store_name": "Tamashii Ramen House",
+      "location": "2701 W Memorial Rd, Oklahoma City, OK (south of Quail Springs Mall)",
+      "event_type": "Opening",
+      "event_date": "Mid-April 2026",
+      "status": "open by mid-April",
+      "short_description": "Tamashii Ramen House is opening a new location at 2701 W Memorial Rd in north Oklahoma City, its fourth location in the metro area. Work on the interior was still underway at time of publication, with the business targeting a mid-April opening.",
+      "article_link": "https://www.aol.com/news/whats-tamashii-ramen-house-open-100355222.html",
+      "published_date": "2026-05-03 08:25:49"
+    },
+    {
+      "store_name": "Chicago-based sandwich shop (name not specified)",
+      "location": "Delaware (first Delaware store; address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "opening its first Delaware store",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, a Chicago-based sandwich shop is opening its first Delaware store. Shop name not available.",
+      "article_link": "https://www.msn.com/en-us/money/companies/this-chicago-based-sandwich-shop-is-opening-its-first-delaware-store/ar-AA21ChTz",
+      "published_date": "2026-05-03 08:06:34"
+    },
+    {
+      "store_name": "Carvel (first Sarasota location)",
+      "location": "Sarasota, FL (address not specified; article body truncated)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "opening first Sarasota shop soon",
+      "short_description": "Article body was truncated after only one sentence. Based on available text, a well-known sweet treat spot (Carvel per Article 226) is opening the first of four planned Sarasota locations. This is a duplicate of Article 226.",
+      "article_link": "https://www.heraldtribune.com/story/entertainment/dining/2026/05/03/popular-ice-cream-chain-opening-first-sarasota-shop-soon/89897500007/",
+      "published_date": "2026-05-03 08:02:00"
+    },
+    {
+      "store_name": "Humdoo Ice Cream",
+      "location": "Buckingham, Bucks County, PA (former Candlewyck spot; address not specified)",
+      "event_type": "Opening",
+      "event_date": "Summer 2026",
+      "status": "readies for summer open",
+      "short_description": "Article could not be fetched (406 error). Based on title, Humdoo Ice Cream, a popular NJ ice cream shop, is coming to Buckingham in Bucks County, Pennsylvania in the former Candlewyck spot, readying for a summer opening. No further details available.",
+      "article_link": "https://www.phillyburbs.com/story/lifestyle/food/2026/05/03/humdoo-ice-cream-coming-to-buckingham-in-former-candlewyck-spot-bucks-county-flemington/89882619007/",
+      "published_date": "2026-05-03 08:01:00"
+    },
+    {
+      "store_name": "Wegmans (Pittsburgh area)",
+      "location": "Pittsburgh area, PA (address not specified; first Pittsburgh area location)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "officially purchases land to build first Pittsburgh area location",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, Wegmans has officially purchased land to build its first Pittsburgh area location. No further details available.",
+      "article_link": "https://www.msn.com/en-us/money/careersandeducation/wegmans-officially-purchases-land-to-build-first-pittsburgh-area-location/ar-AA22aPBP",
+      "published_date": "2026-05-03 07:52:30"
+    },
+    {
+      "store_name": "Raising Cane's (May 2026 openings)",
+      "location": "7 states, USA (addresses not specified)",
+      "event_type": "Opening",
+      "event_date": "May 2026",
+      "status": "opening new locations in 7 states in May",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, Raising Cane's is opening new locations in 7 states in May 2026. No further details available.",
+      "article_link": "https://www.msn.com/en-us/money/companies/raising-canes-opening-new-locations-in-7-states-in-may-see-the-list/ar-AA229LBV",
+      "published_date": "2026-05-03 07:05:58"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article covers a Nationwide Building Society campaign for accessible high streets. No specific retail or restaurant opening or closure event is described.",
+      "article_link": "https://www.express.co.uk/finance/personalfinance/2200348/nationwide-uk-high-streets-won-t-survive-1-reason",
+      "published_date": "2026-05-03 07:04:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article covers Star Wars Day merchandise launches at Disney Store and Disney Parks — no qualifying retail opening or closure event.",
+      "article_link": "https://disneyparksblog.com/products/new-star-wars-day-merch-coming-to-disney-store-and-disney-parks/",
+      "published_date": "2026-05-03 07:00:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article covers Alton Towers extending its opening hours for half-term with a new evening event. No new retail or restaurant opening or closure event is described.",
+      "article_link": "https://www.birminghammail.co.uk/whats-on/family-kids-news/alton-towers-extends-opening-hours-33865380",
+      "published_date": "2026-05-03 06:00:00"
+    },
+    {
+      "store_name": "Publix (Yorktown store)",
+      "location": "Yorktown, NY (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "signs lease",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, Publix has officially signed a lease for a Yorktown store. No further details available.",
+      "article_link": "https://www.msn.com/en-us/money/companies/it-s-official-publix-signs-lease-for-yorktown-store/ar-AA22cbKV",
+      "published_date": "2026-05-03 05:06:29"
+    },
+    {
+      "store_name": "Derby Bar and Grill",
+      "location": "Guckeen, MN (address not specified; former Derby Inn location)",
+      "event_type": "Opening",
+      "event_date": "Not specified (opened after February 13, 2026 purchase)",
+      "status": "is open",
+      "short_description": "The Derby Bar and Grill has opened in Guckeen, Minnesota in the space of the former Derby Inn, under new ownership of Scott Vaske and Kris Grev who purchased the property on February 13, 2026. The new owners undertook an extensive renovation including repainting, new flooring, revamped bar, new light fixtures, and new barstools before opening.",
+      "article_link": "https://www.faribaultcountyregister.com/news/local-news/2026/05/03/the-all-new-derby-bar-and-grill-is-open/",
+      "published_date": "2026-05-03 05:01:07"
+    },
+    {
+      "store_name": "O'Reilly Auto Parts",
+      "location": "Milford Plaza, Milford, CT (address not specified; 52nd CT store)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "to open its 52nd CT store",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, O'Reilly Auto Parts is opening its 52nd Connecticut store at the Milford Plaza. No further details available.",
+      "article_link": "https://www.msn.com/en-us/money/companies/o-reilly-auto-parts-to-open-its-52nd-ct-store-at-the-milford-plaza/ar-AA21xDu3",
+      "published_date": "2026-05-03 04:43:30"
+    },
+    {
+      "store_name": "Casino operator (WA location, name not specified)",
+      "location": "Washington state (address not specified)",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "shuts down one WA location amid ongoing financial woes",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, a casino operator has shut down one of its Washington state locations amid ongoing financial difficulties. Operator name not available.",
+      "article_link": "https://www.msn.com/en-us/money/companies/casino-operator-shuts-down-one-wa-location-amid-ongoing-financial-woes/ar-AA21FD2y",
+      "published_date": "2026-05-03 04:42:39"
+    },
+    {
+      "store_name": "Blo Blow Dry Bar (expansion)",
+      "location": "Southwest Las Vegas, NV (address not specified; plans to expand)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "plans to expand",
+      "short_description": "Blo Blow Dry Bar, a family-owned blow-dry bar in southwest Las Vegas operated by Azure White and her daughters, is planning to expand. The article is a profile of the existing location and expansion plans, with no specific new address or opening date provided.",
+      "article_link": "https://www.reviewjournal.com/business/vegas-business/small-business/mane-attraction-family-owned-las-vegas-blow-dry-bar-plans-to-expand-3796233/",
+      "published_date": "2026-05-03 03:00:00"
     }
   ]
 }
