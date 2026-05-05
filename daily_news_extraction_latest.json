@@ -300,6 +300,446 @@
       "short_description": "Article could not be fetched. No business details available.",
       "article_link": "https://dailyvoice.com/ma/tyngsborough/smokey-bones-shutters-all-locations-nationwide-what-to-know/",
       "published_date": "2026-05-03 10:20:37"
+    },
+    {
+      "store_name": "Kerala Hotel and Restaurants Association (KHRA) member hotels/restaurants (statewide)",
+      "location": "Kerala, India (statewide; specific addresses not specified)",
+      "event_type": "Closing",
+      "event_date": "May 6, 2026",
+      "status": "statewide shutdown on May 6",
+      "short_description": "KHRA announced a statewide shutdown of hotels and restaurants on May 6 to protest a sharp increase in commercial LPG prices, with cylinders now costing beyond ₹3,000 in the state. Industry representatives warned that menu prices may need to rise by 50–60% to sustain operations.",
+      "article_link": "https://madhyamamonline.com/amp/kerala/hotels-in-kerala-to-close-shutters-on-may-6-protesting-lpg-price-hike-1516610",
+      "published_date": "2026-05-03 10:13:58"
+    },
+    {
+      "store_name": "No qualifying business found (Warrington supermarket)",
+      "location": "N/A",
+      "event_type": "Opening",
+      "event_date": "N/A",
+      "status": "N/A — MSN page returned no article body",
+      "short_description": "Article only shows MSN wrapper with no article text. No business name, location, or details available.",
+      "article_link": "https://www.msn.com/en-gb/money/other/supermarket-giant-is-looking-to-open-three-new-stores-in-warrington/ar-AA22cSit",
+      "published_date": "2026-05-03 02:02:15"
+    },
+    {
+      "store_name": "Racket Social Club",
+      "location": "21676 FM 1093, Richmond, TX (zip not specified)",
+      "event_type": "Opening",
+      "event_date": "February 21 (year not specified in article)",
+      "status": "opened Feb. 21",
+      "short_description": "Indoor padel club offering climate-controlled courts, a pro shop, upscale snack bar, and stretch-out area. Opened February 21 in Richmond, TX.",
+      "article_link": "https://communityimpact.com/houston/katy-fulshear/business/2026/05/04/9-businesses-now-open-in-katy-fulshear/",
+      "published_date": "2026-05-04 21:39:00"
+    },
+    {
+      "store_name": "Turan Uyghur Kitchen",
+      "location": "402 W. Grand Parkway, Ste. 108, Katy, TX (zip not specified)",
+      "event_type": "Opening",
+      "event_date": "February 24 (year not specified in article)",
+      "status": "opened Feb. 24",
+      "short_description": "Restaurant specializing in Central Asian, Uyghur cuisine with menu items including pearl noodles, kabobs, and tugur dumplings. Opened February 24 in Katy, TX.",
+      "article_link": "https://communityimpact.com/houston/katy-fulshear/business/2026/05/04/9-businesses-now-open-in-katy-fulshear/",
+      "published_date": "2026-05-04 21:39:00"
+    },
+    {
+      "store_name": "Gyro Hut",
+      "location": "Address not specified — Katy-Fulshear area, TX",
+      "event_type": "Opening",
+      "event_date": "Not specified (article text truncated after \"Opened F\")",
+      "status": "opened (date truncated in article text)",
+      "short_description": "New York-inspired restaurant offering Mediterranean cuisine including rice, salad and fry platters as well as sandwiches. Article text was truncated after the opening date reference; additional businesses from the list of 9 may exist but could not be extracted.",
+      "article_link": "https://communityimpact.com/houston/katy-fulshear/business/2026/05/04/9-businesses-now-open-in-katy-fulshear/",
+      "published_date": "2026-05-04 21:39:00"
+    },
+    {
+      "store_name": "Chiappini's Gulf Station",
+      "location": "Melrose, FL (full address not specified)",
+      "event_type": "Closing",
+      "event_date": "\"This week\" (relative to article date of May 4, 2026)",
+      "status": "closing its doors after 91 years",
+      "short_description": "Chiappini's Gulf Station, a convenience store and community gathering spot operating since 1935 in Melrose, FL, is closing this week as third-generation owners Mark and Robin Chiappini retire. No word was given on what will replace it.",
+      "article_link": "https://www.wcjb.com/2026/05/04/chiapinnis-store-closing-after-91-years-melrose-im-ready-retire/",
+      "published_date": "2026-05-04 21:21:00"
+    },
+    {
+      "store_name": "Crumbl",
+      "location": "1250 Caroline St NE, Atlanta, GA 30307 (Edgewood Retail District)",
+      "event_type": "Opening",
+      "event_date": "Late summer 2026 (approximately four months from article date)",
+      "status": "slated to open in late summer",
+      "short_description": "Utah-based dessert franchise Crumbl is opening a 1,403-square-foot location at 1250 Caroline St. NE in Atlanta's Edgewood Retail District, operated by KTP Capital as its second Crumbl location. The opening is targeted for late summer 2026, approximately four months from the article date.",
+      "article_link": "https://whatnow.com/atlanta/restaurants/crumbl-expanding-to-edgewood-retail-district-this-summer/",
+      "published_date": "2026-05-04 20:59:04"
+    },
+    {
+      "store_name": "Rainbow Cloudz",
+      "location": "Sugar Land Town Square, Sugar Land, TX (full address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "opened a new storefront",
+      "short_description": "Rainbow Cloudz has opened a second location in Sugar Land Town Square, selling plushies, Pokémon, Labubus, accessories, and other collectible items. The store also operates as a slime bar in partnership with Kawaii Slime Company and as a children's party venue.",
+      "article_link": "https://communityimpact.com/houston/sugar-land-missouri-city/business/2026/05/04/rainbow-cloudz-expands-into-sugar-land-with-new-store-party-venue/",
+      "published_date": "2026-05-04 20:27:00"
+    },
+    {
+      "store_name": "Citizens Live at the Wylie",
+      "location": "Lower Hill District, Pittsburgh, PA (full address not specified) — adjacent to PPG Paints Arena",
+      "event_type": "Opening",
+      "event_date": "Fall 2026 (first show October 2, 2026)",
+      "status": "fall debut",
+      "short_description": "Citizens Live at the Wylie is a new 4,000-capacity live music venue in Pittsburgh's Lower Hill District set to debut in fall 2026, with Pittsburgh native Wiz Khalifa headlining the kickoff on October 2. The venue features a general admission floor, balcony seating, a rooftop lounge, and premium hospitality areas.",
+      "article_link": "https://www.ticketnews.com/2026/03/citizens-live-at-the-wylie-unveils-grand-opening-lineup-with-wiz-khalifa-sting-glorilla-and-more/",
+      "published_date": "2026-05-04 20:17:04"
+    },
+    {
+      "store_name": "No qualifying business found (SEMA Show)",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A — trade show event, not a retail/restaurant opening or closure",
+      "short_description": "Article covers attendee registration for the 2026 SEMA Show at Las Vegas Convention Center. This is a trade show event, not a business opening or closure.",
+      "article_link": "https://motorsportsnewswire.com/2026/05/04/registration-now-open-for-the-2026-sema-show/",
+      "published_date": "2026-05-04 20:11:41"
+    },
+    {
+      "store_name": "Walmart",
+      "location": "860 FB Schwertner Rd, Jarrell, TX 76537",
+      "event_type": "Opening",
+      "event_date": "Construction September 2026 – August 2027 (opening date not specified)",
+      "status": "planned for construction September 2026 to August 2027",
+      "short_description": "Walmart is planning a new 174,579-square-foot store at 860 FB Schwertner Rd in Jarrell, TX, with construction estimated at $12.2 million per a Texas Department of Licensing and Regulation filing. The construction timeline runs from this September to August 2027; no specific opening date is stated.",
+      "article_link": "https://whatnow.com/austin/retail/walmart-planning-new-store-in-jarrell/",
+      "published_date": "2026-05-04 19:21:22"
+    },
+    {
+      "store_name": "Rolling Hills Consolidated Library (Riverside branch)",
+      "location": "400 Mosaic Court, St. Joseph, MO (zip not specified)",
+      "event_type": "Opening",
+      "event_date": "Soft opening: April 20; Ribbon cutting: May 7; Grand Opening: May 9",
+      "status": "grand opening on May 9",
+      "short_description": "The Rolling Hills Consolidated Library's new Riverside branch soft-opened April 20 after more than two years of planning and 18 months of construction. A ribbon-cutting is scheduled for May 7 and a grand opening on May 9 featuring an all-day open house with tours and giveaways. The 36,000-square-foot facility houses the library's largest branch, the Bookmobile office, Administration Office, and a used bookstore.",
+      "article_link": "https://www.kq2.com/news/local-news/2026/05/04/rolling-hills-library-to-celebrate-grand-opening-of-new-location/",
+      "published_date": "2026-05-04 19:03:26"
+    },
+    {
+      "store_name": "Nordstrom Rack",
+      "location": "El Camino Promenade, Encinitas, CA (zip not specified) — off El Camino Real and Via Molena",
+      "event_type": "Opening",
+      "event_date": "Grand opening: May 14, 2026",
+      "status": "slated to open; grand opening celebration May 14",
+      "short_description": "Nordstrom Rack is opening a new 24,000-square-foot location at El Camino Promenade in Encinitas with a grand opening celebration on May 14 at 9 a.m. featuring a DJ, light bites, gift card giveaways, and an Operation Warm charity shopping experience.",
+      "article_link": "https://patch.com/california/encinitas/nordstrom-rack-opening-new-north-county-store-grand-opening-celebration",
+      "published_date": "2026-05-04 18:31:57"
+    },
+    {
+      "store_name": "Carter's",
+      "location": "Miller Hill Mall, Fountain Court, Duluth, MN (full address not specified)",
+      "event_type": "Opening",
+      "event_date": "Fall 2026 (exact date not specified)",
+      "status": "opening planned for this fall; construction already underway",
+      "short_description": "Carter's children's apparel and accessories retailer is opening a new location at Miller Hill Mall in Duluth, MN, with construction already underway and an opening planned for fall 2026. This will be the first dedicated Carter's location in the Duluth area.",
+      "article_link": "https://kdhlradio.com/ixp/150/p/new-carters-store-duluth-minnesota/",
+      "published_date": "2026-05-04 17:41:01"
+    },
+    {
+      "store_name": "Piccolo's Pizzeria",
+      "location": "1805 Vestal Parkway East, Vestal, NY (zip not specified)",
+      "event_type": "Opening",
+      "event_date": "Wednesday or Thursday (relative to article date of May 4, 2026)",
+      "status": "expects to hold the grand opening starting Wednesday or Thursday",
+      "short_description": "Piccolo's Pizzeria is preparing to open at 1805 Vestal Parkway East in Vestal at the former Subway location, owned by Frank LoPiccolo who also owns Frank's Italian Restaurant in the town of Maine. The restaurant will feature indoor dining, an outdoor deck, and access from the Vestal Rail Trail.",
+      "article_link": "https://wnbf.com/piccolos-pizzeria-grand-opening/",
+      "published_date": "2026-05-04 17:17:17"
+    },
+    {
+      "store_name": "No qualifying business found (Pilot QSRs 24/7)",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A — operational hours change at existing locations, not a new opening or closure",
+      "short_description": "Article covers Pilot's transition of its existing 350+ QSR locations to 24/7 operations as part of its \"Pilot eats\" launch. This is an operational change, not a new business opening or closure.",
+      "article_link": "https://www.cspdailynews.com/foodservice/pilots-qsrs-mobile-ordering-now-open-available-around-clock",
+      "published_date": "2026-05-04 16:36:26"
+    },
+    {
+      "store_name": "No qualifying business found (Durham businesses voting)",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A — 403 Forbidden",
+      "short_description": "Article could not be fetched. No business details available.",
+      "article_link": "https://www.durhamregion.com/business/voting-is-now-open-to-find-best-durham-businesses/article_29541d74-4295-5bfc-b409-9106e4beb301.html",
+      "published_date": "2026-05-04 16:01:00"
+    },
+    {
+      "store_name": "Goodwill (Montrose Shopping Center, Rockville)",
+      "location": "Montrose Shopping Center, Rockville, MD — Randolph Road (full address not specified)",
+      "event_type": "Opening",
+      "event_date": "May 9, 2026",
+      "status": "grand opening on May 9 at 9am",
+      "short_description": "Goodwill is opening a new retail store and donation center at the Montrose Shopping Center in Rockville, MD, on May 9 at 9 a.m., offering 25% off purchases of $50 or more at the grand opening. The location takes over a space previously occupied by Planet Aid, which closed in September.",
+      "article_link": "https://mocoshow.com/2026/05/04/goodwill-offering-25-off-of-50-purchases-at-upcoming-grand-opening/",
+      "published_date": "2026-05-04 15:54:36"
+    },
+    {
+      "store_name": "Goodwill (Waters Village Shopping Center, Germantown)",
+      "location": "Waters Village Shopping Center, Germantown, MD (full address not specified)",
+      "event_type": "Opening",
+      "event_date": "Spring 2026 (exact date not specified)",
+      "status": "expected to open this spring",
+      "short_description": "A second new Goodwill location is expected to open this spring at Waters Village Shopping Center in Germantown, MD. No further details on opening date or store size were provided in the article.",
+      "article_link": "https://mocoshow.com/2026/05/04/goodwill-offering-25-off-of-50-purchases-at-upcoming-grand-opening/",
+      "published_date": "2026-05-04 15:54:36"
+    },
+    {
+      "store_name": "No qualifying business found (HTeaO D-FW)",
+      "location": "N/A",
+      "event_type": "Opening",
+      "event_date": "N/A",
+      "status": "N/A — MSN page returned no article body",
+      "short_description": "Article only shows MSN wrapper with no article text. No business name, location, or details available.",
+      "article_link": "https://www.msn.com/en-us/money/companies/popular-iced-tea-chain-hteao-to-open-new-store-in-d-fw-suburb/ar-AA22dNFY",
+      "published_date": "2026-05-04 15:47:40"
+    },
+    {
+      "store_name": "No qualifying business found (Century Communities Forney model home)",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A — homebuilder model home grand opening, not a retail/restaurant business",
+      "short_description": "Article covers a model home grand opening for homebuilder Century Communities in Forney, TX. This is a residential real estate event, not a retail or restaurant opening.",
+      "article_link": "https://quantisnow.com/insight/century-communities-announces-model-grand-opening-expanded-floor-plan-lineup-6528520",
+      "published_date": "2026-05-04 15:44:34"
+    },
+    {
+      "store_name": "No qualifying business found (Costco Franklin)",
+      "location": "N/A",
+      "event_type": "Opening",
+      "event_date": "N/A",
+      "status": "N/A — 403 Forbidden",
+      "short_description": "Article could not be fetched. No business details available.",
+      "article_link": "https://www.bizjournals.com/milwaukee/news/2026/05/04/costo-franklin-sale-closes-northwestern-mutual.html",
+      "published_date": "2026-05-04 15:41:00"
+    },
+    {
+      "store_name": "Cheddar's Scratch Kitchen",
+      "location": "Former Bahama Breeze location, Gainesville, FL (full address not specified)",
+      "event_type": "Opening",
+      "event_date": "May 11, 2026",
+      "status": "opening on May 11",
+      "short_description": "Cheddar's Scratch Kitchen is opening in a former Bahama Breeze location in Gainesville, FL on May 11, after Darden Restaurants closed all 28 Bahama Breeze US locations on April 5. Both chains are owned by Darden Restaurants, which announced half of the closed Bahama Breeze locations would be converted to other formats.",
+      "article_link": "https://www.the-sun.com/money/16310544/cheddar-scratch-kitchen-replacing-bahama-breeze-gainesville-florida/",
+      "published_date": "2026-05-04 14:52:23"
+    },
+    {
+      "store_name": "Bahama Breeze — 500 Center Blvd., Newark, DE",
+      "location": "500 Center Blvd., Newark, DE",
+      "event_type": "Closing",
+      "event_date": "April 5, 2026",
+      "status": "closed",
+      "short_description": "Bahama Breeze closed all 28 US locations on April 5, 2026, per Darden Restaurants' decision. This location was designated as a closing (not a conversion).",
+      "article_link": "https://www.the-sun.com/money/16310544/cheddar-scratch-kitchen-replacing-bahama-breeze-gainesville-florida/",
+      "published_date": "2026-05-04 14:52:23"
+    },
+    {
+      "store_name": "Bahama Breeze — 3590 Breckenridge Blvd., Duluth, GA",
+      "location": "3590 Breckenridge Blvd., Duluth, GA",
+      "event_type": "Closing",
+      "event_date": "April 5, 2026",
+      "status": "closed",
+      "short_description": "Bahama Breeze closed all 28 US locations on April 5, 2026. This location was designated as a closing (not a conversion).",
+      "article_link": "https://www.the-sun.com/money/16310544/cheddar-scratch-kitchen-replacing-bahama-breeze-gainesville-florida/",
+      "published_date": "2026-05-04 14:52:23"
+    },
+    {
+      "store_name": "Bahama Breeze — 12395 SW 88th St., Miami, FL",
+      "location": "12395 SW 88th St., Miami, FL",
+      "event_type": "Closing",
+      "event_date": "April 5, 2026",
+      "status": "closed",
+      "short_description": "Bahama Breeze closed all 28 US locations on April 5, 2026. This location was designated as a closing (not a conversion).",
+      "article_link": "https://www.the-sun.com/money/16310544/cheddar-scratch-kitchen-replacing-bahama-breeze-gainesville-florida/",
+      "published_date": "2026-05-04 14:52:23"
+    },
+    {
+      "store_name": "Bahama Breeze — 10205 Rivercoast Drive, Jacksonville, FL",
+      "location": "10205 Rivercoast Drive, Jacksonville, FL",
+      "event_type": "Closing",
+      "event_date": "April 5, 2026",
+      "status": "closed",
+      "short_description": "Bahama Breeze closed all 28 US locations on April 5, 2026. This location was designated as a closing (not a conversion).",
+      "article_link": "https://www.the-sun.com/money/16310544/cheddar-scratch-kitchen-replacing-bahama-breeze-gainesville-florida/",
+      "published_date": "2026-05-04 14:52:23"
+    },
+    {
+      "store_name": "Bahama Breeze — 1251 West Osceola Pkwy., Kissimmee, FL",
+      "location": "1251 West Osceola Pkwy., Kissimmee, FL",
+      "event_type": "Closing",
+      "event_date": "April 5, 2026",
+      "status": "closed",
+      "short_description": "Bahama Breeze closed all 28 US locations on April 5, 2026. This location was designated as a closing (not a conversion).",
+      "article_link": "https://www.the-sun.com/money/16310544/cheddar-scratch-kitchen-replacing-bahama-breeze-gainesville-florida/",
+      "published_date": "2026-05-04 14:52:23"
+    },
+    {
+      "store_name": "Bahama Breeze — 11000 Pines Blvd., Pembroke Pines, FL",
+      "location": "11000 Pines Blvd., Pembroke Pines, FL",
+      "event_type": "Closing",
+      "event_date": "April 5, 2026",
+      "status": "closed",
+      "short_description": "Bahama Breeze closed all 28 US locations on April 5, 2026. This location was designated as a closing (not a conversion).",
+      "article_link": "https://www.the-sun.com/money/16310544/cheddar-scratch-kitchen-replacing-bahama-breeze-gainesville-florida/",
+      "published_date": "2026-05-04 14:52:23"
+    },
+    {
+      "store_name": "Bahama Breeze — 1540 Rinehart Road, Sanford, FL",
+      "location": "1540 Rinehart Road, Sanford, FL",
+      "event_type": "Closing",
+      "event_date": "April 5, 2026",
+      "status": "closed",
+      "short_description": "Bahama Breeze closed all 28 US locations on April 5, 2026. This location was designated as a closing (not a conversion).",
+      "article_link": "https://www.the-sun.com/money/16310544/cheddar-scratch-kitchen-replacing-bahama-breeze-gainesville-florida/",
+      "published_date": "2026-05-04 14:52:23"
+    },
+    {
+      "store_name": "Bahama Breeze — 19600 Haggerty Road, Livonia, MI",
+      "location": "19600 Haggerty Road, Livonia, MI",
+      "event_type": "Closing",
+      "event_date": "April 5, 2026",
+      "status": "closed",
+      "short_description": "Bahama Breeze closed all 28 US locations on April 5, 2026. This location was designated as a closing (not a conversion).",
+      "article_link": "https://www.the-sun.com/money/16310544/cheddar-scratch-kitchen-replacing-bahama-breeze-gainesville-florida/",
+      "published_date": "2026-05-04 14:52:23"
+    },
+    {
+      "store_name": "Bahama Breeze — 2000 Route 38, Cherry Hill, NJ",
+      "location": "2000 Route 38, Cherry Hill, NJ",
+      "event_type": "Closing",
+      "event_date": "April 5, 2026",
+      "status": "closed",
+      "short_description": "Bahama Breeze closed all 28 US locations on April 5, 2026. This location was designated as a closing (not a conversion).",
+      "article_link": "https://www.the-sun.com/money/16310544/cheddar-scratch-kitchen-replacing-bahama-breeze-gainesville-florida/",
+      "published_date": "2026-05-04 14:52:23"
+    },
+    {
+      "store_name": "Bahama Breeze — 3309 Wake Forest Drive, Raleigh, NC",
+      "location": "3309 Wake Forest Drive, Raleigh, NC",
+      "event_type": "Closing",
+      "event_date": "April 5, 2026",
+      "status": "closed",
+      "short_description": "Bahama Breeze closed all 28 US locations on April 5, 2026. This location was designated as a closing (not a conversion).",
+      "article_link": "https://www.the-sun.com/money/16310544/cheddar-scratch-kitchen-replacing-bahama-breeze-gainesville-florida/",
+      "published_date": "2026-05-04 14:52:23"
+    },
+    {
+      "store_name": "Bahama Breeze — 320 Goddard Blvd., King of Prussia, PA",
+      "location": "320 Goddard Blvd., King of Prussia, PA",
+      "event_type": "Closing",
+      "event_date": "April 5, 2026",
+      "status": "closed",
+      "short_description": "Bahama Breeze closed all 28 US locations on April 5, 2026. This location was designated as a closing (not a conversion).",
+      "article_link": "https://www.the-sun.com/money/16310544/cheddar-scratch-kitchen-replacing-bahama-breeze-gainesville-florida/",
+      "published_date": "2026-05-04 14:52:23"
+    },
+    {
+      "store_name": "Bahama Breeze — 6100 Robinson Center Drive, Pittsburgh, PA",
+      "location": "6100 Robinson Center Drive, Pittsburgh, PA",
+      "event_type": "Closing",
+      "event_date": "April 5, 2026",
+      "status": "closed",
+      "short_description": "Bahama Breeze closed all 28 US locations on April 5, 2026. This location was designated as a closing (not a conversion).",
+      "article_link": "https://www.the-sun.com/money/16310544/cheddar-scratch-kitchen-replacing-bahama-breeze-gainesville-florida/",
+      "published_date": "2026-05-04 14:52:23"
+    },
+    {
+      "store_name": "Bahama Breeze — 2714 Potomac Mills Circle, Woodbridge, VA",
+      "location": "2714 Potomac Mills Circle, Woodbridge, VA",
+      "event_type": "Closing",
+      "event_date": "April 5, 2026",
+      "status": "closed",
+      "short_description": "Bahama Breeze closed all 28 US locations on April 5, 2026. This location was designated as a closing (not a conversion).",
+      "article_link": "https://www.the-sun.com/money/16310544/cheddar-scratch-kitchen-replacing-bahama-breeze-gainesville-florida/",
+      "published_date": "2026-05-04 14:52:23"
+    },
+    {
+      "store_name": "Bahama Breeze — 15700 Southcenter Pkwy., Tukwila, WA",
+      "location": "15700 Southcenter Pkwy., Tukwila, WA",
+      "event_type": "Closing",
+      "event_date": "April 5, 2026",
+      "status": "closed",
+      "short_description": "Bahama Breeze closed all 28 US locations on April 5, 2026. This location was designated as a closing (not a conversion).",
+      "article_link": "https://www.the-sun.com/money/16310544/cheddar-scratch-kitchen-replacing-bahama-breeze-gainesville-florida/",
+      "published_date": "2026-05-04 14:52:23"
+    },
+    {
+      "store_name": "Bahama Breeze — 499 E Altamonte Drive, Altamonte Springs, FL",
+      "location": "499 E Altamonte Drive, Altamonte Springs, FL",
+      "event_type": "Closing",
+      "event_date": "April 5, 2026",
+      "status": "set to be converted",
+      "short_description": "Bahama Breeze closed all 28 US locations on April 5, 2026. This location is listed as set to be converted to another format, per Darden Restaurants' announcement.",
+      "article_link": "https://www.the-sun.com/money/16310544/cheddar-scratch-kitchen-replacing-bahama-breeze-gainesville-florida/",
+      "published_date": "2026-05-04 14:52:23"
+    },
+    {
+      "store_name": "Bahama Breeze — 805 Brandon Town Center Drive, Brandon, FL",
+      "location": "805 Brandon Town Center Drive, Brandon, FL",
+      "event_type": "Closing",
+      "event_date": "April 5, 2026",
+      "status": "set to be converted",
+      "short_description": "Bahama Breeze closed all 28 US locations on April 5, 2026. This location is listed as set to be converted to another format.",
+      "article_link": "https://www.the-sun.com/money/16310544/cheddar-scratch-kitchen-replacing-bahama-breeze-gainesville-florida/",
+      "published_date": "2026-05-04 14:52:23"
+    },
+    {
+      "store_name": "Bahama Breeze — 14701 S Tamiami Trail, Ft. Myers, FL",
+      "location": "14701 S Tamiami Trail, Ft. Myers, FL",
+      "event_type": "Closing",
+      "event_date": "April 5, 2026",
+      "status": "set to be converted",
+      "short_description": "Bahama Breeze closed all 28 US locations on April 5, 2026. This location is listed as set to be converted to another format.",
+      "article_link": "https://www.the-sun.com/money/16310544/cheddar-scratch-kitchen-replacing-bahama-breeze-gainesville-florida/",
+      "published_date": "2026-05-04 14:52:23"
+    },
+    {
+      "store_name": "Bahama Breeze — 8160 Irlo Bronson Memorial Hwy., Kissimmee, FL",
+      "location": "8160 Irlo Bronson Memorial Hwy., Kissimmee, FL",
+      "event_type": "Closing",
+      "event_date": "April 5, 2026",
+      "status": "set to be converted",
+      "short_description": "Bahama Breeze closed all 28 US locations on April 5, 2026. This location is listed as set to be converted to another format.",
+      "article_link": "https://www.the-sun.com/money/16310544/cheddar-scratch-kitchen-replacing-bahama-breeze-gainesville-florida/",
+      "published_date": "2026-05-04 14:52:23"
+    },
+    {
+      "store_name": "Bahama Breeze — 25830 Sierra Center Blvd., Lutz, FL",
+      "location": "25830 Sierra Center Blvd., Lutz, FL",
+      "event_type": "Closing",
+      "event_date": "April 5, 2026",
+      "status": "set to be converted",
+      "short_description": "Bahama Breeze closed all 28 US locations on April 5, 2026. This location is listed as set to be converted to another format.",
+      "article_link": "https://www.the-sun.com/money/16310544/cheddar-scratch-kitchen-replacing-bahama-breeze-gainesville-florida/",
+      "published_date": "2026-05-04 14:52:23"
+    },
+    {
+      "store_name": "Bahama Breeze — 5620 W. Oak Ridge Road, Orlando, FL",
+      "location": "5620 W. Oak Ridge Road, Orlando, FL",
+      "event_type": "Closing",
+      "event_date": "April 5, 2026",
+      "status": "set to be converted",
+      "short_description": "Bahama Breeze closed all 28 US locations on April 5, 2026. This location is listed as set to be converted to another format.",
+      "article_link": "https://www.the-sun.com/money/16310544/cheddar-scratch-kitchen-replacing-bahama-breeze-gainesville-florida/",
+      "published_date": "2026-05-04 14:52:23"
+    },
+    {
+      "store_name": "Bahama Breeze — 8849 International Drive, Orlando, FL",
+      "location": "8849 International Drive, Orlando, FL",
+      "event_type": "Closing",
+      "event_date": "April 5, 2026",
+      "status": "set to be converted",
+      "short_description": "Bahama Breeze closed all 28 US locations on April 5, 2026. This location is listed as set to be converted to another format. Article text was truncated; additional conversion locations may exist but could not be extracted.",
+      "article_link": "https://www.the-sun.com/money/16310544/cheddar-scratch-kitchen-replacing-bahama-breeze-gainesville-florida/",
+      "published_date": "2026-05-04 14:52:23"
     }
   ]
 }
