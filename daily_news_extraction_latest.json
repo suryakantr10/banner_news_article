@@ -2170,6 +2170,266 @@
       "short_description": "Article body was not accessible (MSN shell page only). Based on title, Pop Mart is expanding with another Bay Area location. No further details available.",
       "article_link": "https://www.msn.com/en-us/money/companies/wildly-popular-toy-store-pop-mart-expanding-with-another-bay-area-location/ar-AA1YAgge",
       "published_date": "2026-05-02 23:45:20"
+    },
+    {
+      "store_name": "TJ Maxx (new Kent location)",
+      "location": "Canyon Ridge Plaza, 26015 104th Ave. SE, Kent, WA",
+      "event_type": "Opening",
+      "event_date": "May 14, 2026",
+      "status": "grand opening Thursday, May 14",
+      "short_description": "TJ Maxx is relocating approximately one-half mile to a new location at Canyon Ridge Plaza, 26015 104th Ave. SE in Kent, with a grand opening on May 14, 2026. The new site is next to a new Burlington store at the former TOP Food and Drug store location.",
+      "article_link": "https://www.kentreporter.com/2026/05/04/tj-maxx-moving-to-new-kent-location-on-east-hill/",
+      "published_date": "2026-05-04 23:37:23"
+    },
+    {
+      "store_name": "Burlington (new Kent location)",
+      "location": "Canyon Ridge Plaza, 26015 104th Ave. SE, Kent, WA",
+      "event_type": "Opening",
+      "event_date": "May 8, 2026",
+      "status": "grand opening Friday, May 8",
+      "short_description": "Burlington is opening a new store at Canyon Ridge Plaza, 26015 104th Ave. SE in Kent, at the former TOP Food and Drug store location, with a grand opening on May 8, 2026. It is adjacent to the new TJ Maxx location at the same site.",
+      "article_link": "https://www.kentreporter.com/2026/05/04/tj-maxx-moving-to-new-kent-location-on-east-hill/",
+      "published_date": "2026-05-04 23:37:23"
+    },
+    {
+      "store_name": "Costco",
+      "location": "Northwest corner of 27th Street and Drexel Avenue, Franklin, WI",
+      "event_type": "Opening",
+      "event_date": "November 2026",
+      "status": "planned opening date of November 2026",
+      "short_description": "The first Costco store in Milwaukee County is expected to break ground this week in Franklin, Wisconsin, on a 164,000-square-foot site at the northwest corner of 27th and Drexel Avenue, including a 12-pump gas station. The store has a planned opening date of November 2026 and is expected to create well over 100 jobs.",
+      "article_link": "https://www.wisn.com/article/first-costco-store-in-milwaukee-county-to-break-ground-this-week/71204434",
+      "published_date": "2026-05-04 22:28:00"
+    },
+    {
+      "store_name": "Sunnydale Market",
+      "location": "1515 Sunnydale Ave., Sunnydale neighborhood, San Francisco, CA",
+      "event_type": "Opening",
+      "event_date": "2027",
+      "status": "to open in 2027",
+      "short_description": "Bi-Rite, 18 Reasons, and Crankstart are opening a 2,800-square-foot nonprofit grocery store called Sunnydale Market at 1515 Sunnydale Ave. in San Francisco's Sunnydale neighborhood in 2027. Food will be sold at wholesale costs averaging 35–45% below typical grocery prices, and the store will accept SNAP and WIC vouchers. This is a duplicate of Article 118.",
+      "article_link": "https://www.sfchronicle.com/food/article/sunnydale-market-sf-22240299.php",
+      "published_date": "2026-05-04 22:20:06"
+    },
+    {
+      "store_name": "Bay Produce greenhouse",
+      "location": "Superior, WI (address not specified)",
+      "event_type": "Opening",
+      "event_date": "May 1, 2026",
+      "status": "greenhouse is open for business",
+      "short_description": "Bay Produce, the greenhouse program of the Challenge Center in Superior, Wisconsin, opened its greenhouse for its second annual flower sale as of May 1, 2026. The greenhouse is staffed by employees with developmental disabilities as part of a prevocational training program.",
+      "article_link": "https://www.fox21online.com/news/local/bay-produce-greenhouse-open-for-2nd-annual-flower-sale-in-superior/article_6424b5e5-cba9-47ed-9cc6-b4a7bf7eccb6.html",
+      "published_date": "2026-05-04 21:47:00"
+    },
+    {
+      "store_name": "McDonald's (proposed)",
+      "location": "Cowes, Phillip Island, Victoria, Australia (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "planning permit lodged; no decision made",
+      "short_description": "McDonald's lodged a planning permit for a proposed $3.4 million new store in Cowes on Phillip Island in February 2026, sparking significant local opposition. Bass Coast Shire Council stated no decision has been made and the application is currently undergoing preliminary assessment.",
+      "article_link": "https://www.ntnews.com.au/real-estate/commercial/mcdonalds-plan-for-new-phillip-island-store-sparks-fierce-backlash-from-locals/news-story/8b92d324bd2b7b38aa2bfcc3414f414a",
+      "published_date": "2026-05-04 21:44:48"
+    },
+    {
+      "store_name": "Sephora and Timberland (Houston Premium Outlets)",
+      "location": "Houston Premium Outlets, Houston, TX (address not specified)",
+      "event_type": "Opening",
+      "event_date": "This month (relative to 2026-05-04)",
+      "status": "adding Sephora, Timberland stores this month",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, Houston Premium Outlets is adding Sephora and Timberland stores this month. No further details available.",
+      "article_link": "https://www.msn.com/en-us/money/companies/houston-premium-outlets-adding-sephora-timberland-stores-this-month/ar-AA22gqux",
+      "published_date": "2026-05-04 21:42:50"
+    },
+    {
+      "store_name": "Oasis Fresh Market (south Tulsa, 6207 S. Peoria Ave.)",
+      "location": "6207 S. Peoria Ave., Tulsa, OK",
+      "event_type": "Opening",
+      "event_date": "By or before May 25, 2026",
+      "status": "will officially transition \"by or before\" May 25",
+      "short_description": "Oasis Fresh Market is acquiring and converting the former Cox Cash Saver at 6207 S. Peoria Ave. in south Tulsa into a higher-quality grocery store with fresh produce and better shelf standards, transitioning by or before May 25. This is the third full-sized Oasis location announced in Tulsa.",
+      "article_link": "https://tulsaflyer.org/2026/05/04/business/post/oasis-fresh-market-open-third-location/",
+      "published_date": "2026-05-04 21:40:39"
+    },
+    {
+      "store_name": "Oasis Fresh Market (downtown Tulsa)",
+      "location": "First floor of the ARCO apartment building, downtown Tulsa, OK (address not specified)",
+      "event_type": "Opening",
+      "event_date": "June 2026",
+      "status": "plans to open a downtown location in June",
+      "short_description": "Oasis Fresh Market plans to open a downtown Tulsa location in June 2026 on the first floor of the ARCO apartment building, which will be the first downtown grocer in over a decade.",
+      "article_link": "https://tulsaflyer.org/2026/05/04/business/post/oasis-fresh-market-open-third-location/",
+      "published_date": "2026-05-04 21:40:39"
+    },
+    {
+      "store_name": "Oasis Fresh Market (mini market, Western Supply)",
+      "location": "Western Supply apartments, Tulsa, OK (address not specified)",
+      "event_type": "Opening",
+      "event_date": "April 2026",
+      "status": "opened a mini market",
+      "short_description": "Oasis Fresh Market opened a mini market at the Western Supply apartments in Tulsa in April 2026. No further address details were provided.",
+      "article_link": "https://tulsaflyer.org/2026/05/04/business/post/oasis-fresh-market-open-third-location/",
+      "published_date": "2026-05-04 21:40:39"
+    },
+    {
+      "store_name": "Chick-fil-A (Raytown)",
+      "location": "9330 E. 350 Highway (also referenced as 9330 E. State Route 350), Raytown, MO",
+      "event_type": "Opening",
+      "event_date": "Fall 2026",
+      "status": "expected to open this fall",
+      "short_description": "Chick-fil-A confirmed a new location opening in Raytown, Missouri this fall at 9330 E. 350 Highway, on the site of a former Applebee's that has been demolished. The restaurant will be the chain's first in Raytown, owned and operated by local business owner Andrew Hartley, and is expected to create 80–120 jobs.",
+      "article_link": "https://www.kansascity.com/news/business/openings-closings/article315631809.html",
+      "published_date": "2026-05-04 21:26:37"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article covers the reopening of Big Thunder Mountain Railroad at Walt Disney World's Magic Kingdom and issues on opening day. Not a qualifying retail or restaurant opening or closure event.",
+      "article_link": "https://www.disneydining.com/could-the-lack-of-a-soft-opening-caused-big-thunder-mountains-problems-on-opening-day-at-magic-kingdom-rl1/",
+      "published_date": "2026-05-04 21:16:28"
+    },
+    {
+      "store_name": "Acme Fresh Market (Stow)",
+      "location": "Fishcreek Plaza, between Fishcreek and Kent roads, Stow, OH",
+      "event_type": "Closing",
+      "event_date": "May 5, 2026",
+      "status": "permanently closing at 9 p.m. Tuesday, May 5",
+      "short_description": "The Acme Fresh Market in Stow is permanently closing at 9 p.m. on May 5, 2026, with the store's pharmacy remaining open through May 19. The closure was attributed to financial performance challenges amid increased competition from Aldi, Giant Eagle, and Meijer within a mile radius.",
+      "article_link": "https://www.beaconjournal.com/story/grocery/stores/2026/05/04/acme-stow-closing-tuesday-may-5-fishcreek-plaza/89932297007/",
+      "published_date": "2026-05-04 21:15:00"
+    },
+    {
+      "store_name": "Nordstrom Rack (Exton)",
+      "location": "Main Street at Exton, Exton, PA (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Fall 2026",
+      "status": "expected to debut this fall",
+      "short_description": "Nordstrom Rack is opening a new 30,000-square-foot store in Exton, Pennsylvania this fall at Main Street at Exton, a shopping center that includes Walmart, Barnes & Noble, Sephora, Old Navy, and Banana Republic. This will be one of two new Nordstrom Rack locations opening in the greater Philadelphia area.",
+      "article_link": "https://whatnow.com/philadelphia/retail/nordstrom-rack-expands-to-exton-media-this-fall-with-two-stores/",
+      "published_date": "2026-05-04 20:52:29"
+    },
+    {
+      "store_name": "Nordstrom Rack (Media)",
+      "location": "The Promenade at Granite Run, Media, PA (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Fall 2026",
+      "status": "expected to debut this fall",
+      "short_description": "Nordstrom Rack is opening a second new 30,000-square-foot store in Media, Pennsylvania this fall at The Promenade at Granite Run, a shopping center that includes TJ Maxx, Michaels, Kohl's, and IKEA. Both new Pennsylvania locations will expand the company's footprint in the state.",
+      "article_link": "https://whatnow.com/philadelphia/retail/nordstrom-rack-expands-to-exton-media-this-fall-with-two-stores/",
+      "published_date": "2026-05-04 20:52:29"
+    },
+    {
+      "store_name": "Trader Joe's",
+      "location": "8111 S. Dixie Highway, West Palm Beach, FL",
+      "event_type": "Opening",
+      "event_date": "2026 (no specific date announced)",
+      "status": "expected to open this year",
+      "short_description": "Trader Joe's is opening a new store at 8111 S. Dixie Highway in West Palm Beach's South End, anchoring a mixed-use development currently under construction. The company states on its website it is working to open its doors in 2026, though no specific opening date has been announced.",
+      "article_link": "https://www.palmbeachpost.com/story/grocery/stores/2026/05/04/west-palm-beach-trader-joes-grocery-store-photos-video/89934902007/",
+      "published_date": "2026-05-04 20:52:00"
+    },
+    {
+      "store_name": "Papa's Loca",
+      "location": "New Haven, CT (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified (opening date set)",
+      "status": "sets opening date",
+      "short_description": "Article body returned only navigation links with no article content. Based on title, Papa's Loca has set an opening date in New Haven. No further details available.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/new-haven-scoop-papas-loca-sets-opening-date-in-new-haven",
+      "published_date": "2026-05-04 20:20:51"
+    },
+    {
+      "store_name": "Taco Bell",
+      "location": "5315 Rigsby Ave., San Antonio, TX",
+      "event_type": "Opening",
+      "event_date": "May 8, 2026",
+      "status": "grand opening Friday, May 8, 12 p.m.–2 p.m.",
+      "short_description": "Taco Bell is holding a grand opening at 5315 Rigsby Ave. in San Antonio on May 8, 2026, from 12–2 p.m. The first 250 guests will receive a free pair of San Antonio Missions Baseball tickets, and the first 50 customers will get a free taco with purchase.",
+      "article_link": "https://www.kens5.com/article/news/local/two-new-taco-bells-opening-in-san-antonio-this-week/273-7aa44227-45de-4c0e-ab8f-ed320d718104",
+      "published_date": "2026-05-04 20:19:00"
+    },
+    {
+      "store_name": "Taco Bell",
+      "location": "2316 W Loop 1604 South, San Antonio, TX",
+      "event_type": "Opening",
+      "event_date": "May 9, 2026",
+      "status": "grand opening Saturday, May 9, 11 a.m.–1 p.m.",
+      "short_description": "Taco Bell is holding a grand opening at 2316 W Loop 1604 South in San Antonio on May 9, 2026, from 11 a.m.–1 p.m. The first 250 guests will receive a free pair of San Antonio Missions Baseball tickets, and the first 50 customers will get a free taco with purchase.",
+      "article_link": "https://www.kens5.com/article/news/local/two-new-taco-bells-opening-in-san-antonio-this-week/273-7aa44227-45de-4c0e-ab8f-ed320d718104",
+      "published_date": "2026-05-04 20:19:00"
+    },
+    {
+      "store_name": "Boba Lounge",
+      "location": "Albuquerque, NM (address not specified; fourth New Mexico location)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "Not specified",
+      "short_description": "Article could not be fetched (403 error). Based on title, Boba Lounge is opening its fourth New Mexico location in Albuquerque. No further details available.",
+      "article_link": "https://www.bizjournals.com/albuquerque/news/2026/05/04/local-tea-chain-fills-empty-storefront.html",
+      "published_date": "2026-05-04 20:00:00"
+    },
+    {
+      "store_name": "Thai Cottage Pearland",
+      "location": "3414 Business Center Drive, Ste. 130, Pearland, TX",
+      "event_type": "Opening",
+      "event_date": "May 4, 2026",
+      "status": "soft reopening at a new location",
+      "short_description": "Thai Cottage Pearland had a soft reopening at 3414 Business Center Drive, Ste. 130 in Pearland on May 4, 2026, after closing its previous location in December. A grand opening is planned for later in May.",
+      "article_link": "https://communityimpact.com/houston/pearland-friendswood-manvel/business/2026/05/04/thai-cottage-pearland-reopens-in-new-location/",
+      "published_date": "2026-05-04 19:50:00"
+    },
+    {
+      "store_name": "Naujaat Co-op (new convenience store and community space)",
+      "location": "Naujaat, Nunavut, Canada (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Fall 2026",
+      "status": "operations expected to begin in the fall",
+      "short_description": "Arctic Co-operatives Limited is designing a modular facility combining a new convenience store and community space in Naujaat, Nunavut, with materials expected to be shipped north by sealift this summer and operations expected to begin in the fall of 2026. The project addresses the hamlet's lack of gathering places following the loss of the community hall in a fire in October 2022.",
+      "article_link": "https://nunatsiaq.com/stories/article/naujaat-co-op-plans-new-store-and-community-space/",
+      "published_date": "2026-05-04 19:30:00"
+    },
+    {
+      "store_name": "Cava",
+      "location": "Route 110 (west side, north of Michael Avenue), East Farmingdale, NY (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "wants to take over the site",
+      "short_description": "Cava is seeking to open at the former Taïm location on Route 110 in East Farmingdale, with a public hearing held before the Town of Babylon Planning Board. This would be Cava's fourth Long Island location, joining existing spots in Melville, East Northport, and Woodbury.",
+      "article_link": "https://www.newsday.com/long-island/towns/cava-east-farmingdale-taim-eg4pqcc6",
+      "published_date": "2026-05-04 19:27:50"
+    },
+    {
+      "store_name": "Taïm",
+      "location": "Route 110 (west side, north of Michael Avenue), East Farmingdale, NY (address not specified)",
+      "event_type": "Closing",
+      "event_date": "Not specified (closed approximately 2025, two years after 2023 opening)",
+      "status": "closed two years later",
+      "short_description": "Taïm, a fast-casual Mediterranean-style mini-chain, opened at the East Farmingdale site in 2023 and closed two years later. It was Taïm's first foray onto Long Island.",
+      "article_link": "https://www.newsday.com/long-island/towns/cava-east-farmingdale-taim-eg4pqcc6",
+      "published_date": "2026-05-04 19:27:50"
+    },
+    {
+      "store_name": "The Container Store + Bed Bath & Beyond (rebranded stores)",
+      "location": "98 existing Container Store locations, USA (addresses not specified)",
+      "event_type": "Remodel",
+      "event_date": "Not specified",
+      "status": "completing a \"store changing\" event at 98 retail sites",
+      "short_description": "Bed Bath & Beyond is completing a \"store changing\" event at 98 retail sites currently operated by The Container Store, rebranding them as The Container Store + Bed Bath & Beyond. The new format combines the organizing solutions and in-home services of The Container Store with the home products and furnishings of Bed Bath & Beyond.",
+      "article_link": "https://jasonmiller15.substack.com/p/why-the-new-bed-bath-and-beyond-is",
+      "published_date": "2026-05-04 19:14:48"
+    },
+    {
+      "store_name": "Mango (Türkiye stores)",
+      "location": "Türkiye (addresses not specified; ten new stores planned)",
+      "event_type": "Opening",
+      "event_date": "2026",
+      "status": "plans ten new Türkiye stores in 2026",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, Mango plans to open ten new stores in Türkiye in 2026. No further details available.",
+      "article_link": "https://www.msn.com/en-us/news/technology/mango-plans-ten-new-t%C3%BCrkiye-stores-in-2026/ar-AA221Ksb",
+      "published_date": "2026-05-04 19:11:39"
     }
   ]
 }
