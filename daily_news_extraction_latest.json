@@ -4010,6 +4010,126 @@
       "short_description": "Blo Blow Dry Bar, a family-owned blow-dry bar in southwest Las Vegas operated by Azure White and her daughters, is planning to expand. The article is a profile of the existing location and expansion plans, with no specific new address or opening date provided.",
       "article_link": "https://www.reviewjournal.com/business/vegas-business/small-business/mane-attraction-family-owned-las-vegas-blow-dry-bar-plans-to-expand-3796233/",
       "published_date": "2026-05-03 03:00:00"
+    },
+    {
+      "store_name": "Major steakhouse chain (name not specified)",
+      "location": "Address not specified",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "faces threat amid closure as bankruptcy looms",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, a major steakhouse chain faces closure threat as bankruptcy looms. Chain name not available.",
+      "article_link": "https://www.msn.com/en-us/money/companies/major-steakhouse-chain-faces-threat-amid-closure-as-bankruptcy-looms/ar-AA218j19",
+      "published_date": "2026-05-03 02:51:20"
+    },
+    {
+      "store_name": "Cure by Design (second Bengaluru store)",
+      "location": "Bengaluru, India (address not specified; second location)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "expands retail presence with second Bengaluru store",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, Cure by Design is opening a second store in Bengaluru. No further details available.",
+      "article_link": "https://www.msn.com/en-in/money/topstories/cure-by-design-expands-retail-presence-with-second-bengaluru-store/ar-AA212qQT",
+      "published_date": "2026-05-03 02:10:13"
+    },
+    {
+      "store_name": "Farmfoods (North East branch)",
+      "location": "North East, UK (address not specified)",
+      "event_type": "Closing",
+      "event_date": "Within a few days (relative to 2026-05-03)",
+      "status": "to permanently close in just a few days",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, Farmfoods has confirmed a North East branch will permanently close within a few days. No further details available.",
+      "article_link": "http://www.msn.com/en-gb/money/other/farmfoods-confirms-north-east-branch-to-permanently-close-in-just-a-few-days/ar-AA21ZBlv",
+      "published_date": "2026-05-03 01:55:52"
+    },
+    {
+      "store_name": "New shop (name not specified)",
+      "location": "Chelmsford shopping centre, Chelmsford, UK (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "set to open as part of plans to revitalise Chelmsford shopping centre",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, a new shop is set to open as part of plans to revitalise a Chelmsford shopping centre. Shop name not available.",
+      "article_link": "https://www.msn.com/en-gb/lifestyle/lifestylegeneral/new-shop-set-to-open-as-part-of-plans-to-revitalise-chelmsford-shopping-centre/ar-AA21Ysdd",
+      "published_date": "2026-05-03 01:05:25"
+    },
+    {
+      "store_name": "Big Dipper",
+      "location": "Seymour, CT (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified (grand opening)",
+      "status": "celebrates grand opening",
+      "short_description": "Article body returned only navigation links with no content. Based on title, Big Dipper celebrated its grand opening in Seymour, Connecticut. No further details available.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/seymour-scoop-big-dipper-celebrates-grand-opening-in-seymour",
+      "published_date": "2026-05-03 00:44:37"
+    },
+    {
+      "store_name": "Multiple stores (names not specified)",
+      "location": "Multiple locations, USA (addresses not specified)",
+      "event_type": "Closing",
+      "event_date": "May 2026",
+      "status": "list of stores closing in May",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, article covers a list of stores closing in May 2026. No specific names or details available.",
+      "article_link": "http://www.msn.com/en-us/money/companies/list-of-stores-closing-in-may/ar-AA22e4GO",
+      "published_date": "2026-05-03 00:33:37"
+    },
+    {
+      "store_name": "Aldi",
+      "location": "6040 Crossland Trail, Bradenton, FL",
+      "event_type": "Opening",
+      "event_date": "April 23, 2026",
+      "status": "slated to open April 23",
+      "short_description": "Aldi opened a new Florida location at 6040 Crossland Trail in Bradenton on April 23, 2026, as part of a wave of at least four new Florida store openings in April. As with all Aldi grand openings, the first 200 people in line received a gift bag and a golden ticket worth up to $100.",
+      "article_link": "https://www.aol.com/news/aldi-florida-store-openings-bring-211655748.html",
+      "published_date": "2026-05-03 00:23:25"
+    },
+    {
+      "store_name": "Aldi",
+      "location": "995 Sebastian Boulevard, Sebastian, FL",
+      "event_type": "Opening",
+      "event_date": "April 23, 2026",
+      "status": "slated to open April 23",
+      "short_description": "Aldi opened a new Florida location at 995 Sebastian Boulevard in Sebastian on April 23, 2026. This is part of a broader Florida expansion with at least four new locations in April.",
+      "article_link": "https://www.aol.com/news/aldi-florida-store-openings-bring-211655748.html",
+      "published_date": "2026-05-03 00:23:25"
+    },
+    {
+      "store_name": "Aldi",
+      "location": "458 Venice Bypass, Venice, FL",
+      "event_type": "Opening",
+      "event_date": "April 23, 2026",
+      "status": "slated to open April 23",
+      "short_description": "Aldi opened a new Florida location at 458 Venice Bypass in Venice on April 23, 2026, as part of multiple April Florida openings.",
+      "article_link": "https://www.aol.com/news/aldi-florida-store-openings-bring-211655748.html",
+      "published_date": "2026-05-03 00:23:25"
+    },
+    {
+      "store_name": "Aldi",
+      "location": "1021 Lockwood Boulevard, Oviedo, FL",
+      "event_type": "Opening",
+      "event_date": "April 30, 2026",
+      "status": "slated to open April 30",
+      "short_description": "Aldi opened a new Florida location at 1021 Lockwood Boulevard in Oviedo on April 30, 2026.",
+      "article_link": "https://www.aol.com/news/aldi-florida-store-openings-bring-211655748.html",
+      "published_date": "2026-05-03 00:23:25"
+    },
+    {
+      "store_name": "Aldi",
+      "location": "8867 S.E. Bridge Road, Hobe Sound, FL (former Winn-Dixie location)",
+      "event_type": "Opening",
+      "event_date": "Summer 2026",
+      "status": "expected to open this summer",
+      "short_description": "Aldi is opening its first Hobe Sound store at 8867 S.E. Bridge Road this summer, replacing the former Winn-Dixie which closed in November 2025 to begin its conversion. The new store will be the fourth Aldi in Martin County.",
+      "article_link": "https://www.aol.com/news/aldi-florida-store-openings-bring-211655748.html",
+      "published_date": "2026-05-03 00:23:25"
+    },
+    {
+      "store_name": "Evansville Toys & Games",
+      "location": "3820 East Morgan Avenue, Evansville, IN",
+      "event_type": "Opening",
+      "event_date": "Saturday (relative to 2026-05-03; grand opening)",
+      "status": "grand opening Saturday",
+      "short_description": "Evansville Toys & Games held a grand opening at its new 15,000-square-foot location at 3820 East Morgan Avenue in Evansville, Indiana, after being closed for about a month. The owners describe it as the largest toy store in Indiana, located next door to their original building at 3810 East Morgan.",
+      "article_link": "https://www.14news.com/2026/05/03/evansville-toys-games-back-open-new-location/",
+      "published_date": "2026-05-03 00:07:00"
     }
   ]
 }
