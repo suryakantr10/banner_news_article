@@ -2650,6 +2650,256 @@
       "short_description": "Article could not be fetched (403 error). Duplicate of Article 216. Based on title, Parker John's BBQ & Pizza and TENDEEZ Hot Chicken are opening in Wausau. No further details available.",
       "article_link": "https://wausaupilotandreview.com/2026/05/04/parker-johns-bbq-pizza-and-tendeez-hot-chicken-will-open-in-wausau/",
       "published_date": "2026-05-04 16:34:45"
+    },
+    {
+      "store_name": "Sycamore",
+      "location": "800 E. Broadway, Columbia, MO",
+      "event_type": "Closing",
+      "event_date": "May 29, 2026",
+      "status": "closure by month's end",
+      "short_description": "Sycamore is closing at 800 E. Broadway in downtown Columbia on May 29, 2026, as owners Jill and Sanford Speake move on to the next phase of their lives. A Sycamore employee aims to open a new Sycamore at a different location. This is a duplicate of Articles 95, 97, and 120.",
+      "article_link": "https://www.columbiatribune.com/story/lifestyle/food/2026/05/04/downtown-columbia-restaurant-location-changing-hands/89927470007/",
+      "published_date": "2026-05-04 16:34:00"
+    },
+    {
+      "store_name": "Murry's Restaurant (downtown location)",
+      "location": "800 E. Broadway, Columbia, MO (former Sycamore space)",
+      "event_type": "Opening",
+      "event_date": "Fall 2026",
+      "status": "planned opening at the downtown location in the fall",
+      "short_description": "Murry's Restaurant is opening a second location at 800 E. Broadway in downtown Columbia in the fall of 2026, taking over the Sycamore space while keeping its existing location at 3107 Green Meadows Way. The owners plan to maintain the classic jazz club atmosphere at the new downtown location. This is a duplicate of Articles 95, 97, and 120.",
+      "article_link": "https://www.columbiatribune.com/story/lifestyle/food/2026/05/04/downtown-columbia-restaurant-location-changing-hands/89927470007/",
+      "published_date": "2026-05-04 16:34:00"
+    },
+    {
+      "store_name": "Dutch Bros. Coffee",
+      "location": "South of U.S. Route 30 and west of Spangler Road, Plainfield, IL (vacant land; address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "proposes to open drive-up cafe",
+      "short_description": "Dutch Bros. Coffee has proposed building an approximately 1,000-square-foot drive-up cafe with two ordering lanes on a vacant acre of land in Plainfield, Illinois, pending plan commission review. Village staff has recommended approval of the plans.",
+      "article_link": "https://www.shawlocal.com/the-herald-news/2026/05/04/dutch-bros-coffee-proposes-to-open-drive-up-cafe-in-plainfield/",
+      "published_date": "2026-05-04 16:30:22"
+    },
+    {
+      "store_name": "7 Brew Coffee",
+      "location": "Former Chili's restaurant, southwest corner of Illinois Route 59 and 127th Street, Kensington Center, Plainfield, IL",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "taking over the former Chili's restaurant",
+      "short_description": "7 Brew Coffee is taking over the former Chili's restaurant at the southwest corner of Route 59 and 127th Street in Plainfield's Kensington Center, following Plainfield village trustees' unanimous approval of the plans last November. The drive-thru coffee shop's site is twice the size of other 7 Brew locations to accommodate traffic flow.",
+      "article_link": "https://www.shawlocal.com/the-herald-news/2026/05/04/dutch-bros-coffee-proposes-to-open-drive-up-cafe-in-plainfield/",
+      "published_date": "2026-05-04 16:30:22"
+    },
+    {
+      "store_name": "H-E-B (Euless / Mid-Cities)",
+      "location": "2105 Rio Grande Blvd, Euless, TX",
+      "event_type": "Opening",
+      "event_date": "May 20, 2026",
+      "status": "Not specified",
+      "short_description": "Article could not be fetched (timeout). Based on title, H-E-B has revealed the opening date for its newest Tarrant County store. This appears to be a duplicate of Article 207.",
+      "article_link": "https://www.star-telegram.com/news/business/fort-worth/article315627320.html",
+      "published_date": "2026-05-04 16:02:10"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article covers the former Argos store in Felixstowe, UK, which is back on the market to rent after a potential tenant pulled out. No confirmed new opening or closure event is described.",
+      "article_link": "https://www.eadt.co.uk/news/26066158.former-felixstowe-argos-store-goes-back-market/",
+      "published_date": "2026-05-04 16:00:00"
+    },
+    {
+      "store_name": "Wild Fryz / Dirty Fryze",
+      "location": "Adair Park, Woodstock, GA (address not specified)",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "no longer opening at Adair Park",
+      "short_description": "Wild Fryz is no longer opening at Adair Park in Woodstock; chef Thomas Cantley is rebranding the concept as Dirty Fryze and is looking for a new location. No further article details were accessible beyond the teaser text due to a paywall.",
+      "article_link": "https://www.tribuneledgernews.com/local_news/wild-fryz-no-longer-opening-at-adair-park-in-woodstock/article_c8495387-bca5-4eef-9057-c7c153d33b2b.amp.html",
+      "published_date": "2026-05-04 15:45:00"
+    },
+    {
+      "store_name": "Carvel",
+      "location": "8382 South Tamiami Trail, Pelican Plaza, Sarasota, FL",
+      "event_type": "Opening",
+      "event_date": "In the coming days (relative to 2026-05-04)",
+      "status": "expected to open in the coming days",
+      "short_description": "Carvel is opening a new soft-serve ice cream shop at 8382 South Tamiami Trail in Pelican Plaza in Sarasota, Florida, which has passed its restaurant inspection. This will be the first of four Sarasota locations franchisee Bobby Enrico plans to open over the next four years.",
+      "article_link": "https://patch.com/florida/sarasota/popular-soft-serve-ice-cream-brand-opening-new-fl-location-report",
+      "published_date": "2026-05-04 15:34:24"
+    },
+    {
+      "store_name": "Salt City Coffee (Onondaga County)",
+      "location": "Onondaga County, NY (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "newest Onondaga County location is open",
+      "short_description": "Article could not be fetched (403 error). Based on title, Salt City Coffee has opened its newest Onondaga County location. No further details available.",
+      "article_link": "https://www.syracuse.com/business/2026/05/salt-city-coffees-newest-onondaga-county-location-is-open.html",
+      "published_date": "2026-05-04 15:32:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article covers the closure of Spirit Airlines, which announced it went out of business on May 2, 2026, after 33 years. This is an airline, not a qualifying retail or restaurant event.",
+      "article_link": "https://www.aol.com/news/spirit-airlines-closure-dents-kci-212653262.html",
+      "published_date": "2026-05-04 15:26:18"
+    },
+    {
+      "store_name": "Carter's (150 store closures)",
+      "location": "150 locations nationwide, USA (addresses not specified)",
+      "event_type": "Closing",
+      "event_date": "As leases expire through 2026",
+      "status": "close 150 locations",
+      "short_description": "Article could not be fetched (403 error). Based on title, a popular mall store (Carter's, per Article 211) is closing 150 locations. This is a duplicate of Article 211.",
+      "article_link": "https://www.pennlive.com/life/2026/05/popular-mall-store-to-close-150-locations.html",
+      "published_date": "2026-05-04 15:24:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, article covers a food bank's new warehouse ribbon-cutting — not a qualifying retail or restaurant opening or closure.",
+      "article_link": "https://www.msn.com/en-us/news/us/milford-food-bank-marks-new-warehouse-completion-with-ribbon-cutting-and-open-house/ar-AA22fG1x",
+      "published_date": "2026-05-04 15:19:21"
+    },
+    {
+      "store_name": "Schnucks Fresh",
+      "location": "Jasper, IN (address not specified)",
+      "event_type": "Closing",
+      "event_date": "May 24, 2026",
+      "status": "will close on May 24",
+      "short_description": "Schnucks will close its Schnucks Fresh small-format grocery store in Jasper, Indiana on May 24, 2026, citing insufficient business since the store opened in summer 2021. The closure follows Schnucks' previous decision to wind down its Eatwell Market natural and organic banner about two years ago.",
+      "article_link": "https://www.grocerydive.com/news/schnucks-closing-fresh-store-jasper-indiana/819142/",
+      "published_date": "2026-05-04 15:14:46"
+    },
+    {
+      "store_name": "Modern Auto and Truck Parts",
+      "location": "340 W. Main St., Carrollton, OH (former Rite Aid building)",
+      "event_type": "Opening",
+      "event_date": "May 1, 2026",
+      "status": "opened",
+      "short_description": "Modern Auto and Truck Parts opened its new, larger location at 340 W. Main St. in Carrollton, Ohio on May 1, 2026, relocating to the former Rite Aid building from its previous site where it had operated for more than 60 years. The new location offers a larger showroom, expanded inventory, improved parking, and better access for customers with larger vehicles.",
+      "article_link": "https://www.yourohionews.com/carroll-county/modern-auto-opens-new-carrollton-location/1033830",
+      "published_date": "2026-05-04 14:46:05"
+    },
+    {
+      "store_name": "Whataburger",
+      "location": "8020 Texas Highway 191, Odessa, TX",
+      "event_type": "Opening",
+      "event_date": "May 4, 2026",
+      "status": "officially open Monday, May 4, at 11 a.m.",
+      "short_description": "A new Whataburger opened at 8020 Texas Highway 191 in Odessa, Texas on May 4, 2026 at 11 a.m., offering drive-thru, dine-in, curbside pickup, and delivery. The location will employ 65 workers and the first customer received a gift basket including free Whataburger for a year.",
+      "article_link": "https://www.firstalert7.com/2026/05/04/whataburger-opening-odessa-star-wars-day/?outputType=amp",
+      "published_date": "2026-05-04 14:37:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article covers the operating history and unique isolated location of the existing Clovis Colorado Grill burger restaurant, which has been open since 2005. No opening or closure event is described.",
+      "article_link": "https://www.aol.com/news/unique-location-helps-keep-clovis-204403629.html",
+      "published_date": "2026-05-04 14:33:29"
+    },
+    {
+      "store_name": "La Rosa",
+      "location": "Houston's East End, TX (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "open",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, La Rosa, a gelato and mortadella sandwich shop from the owners of Mimo, has opened in Houston's East End. No further details available.",
+      "article_link": "https://www.msn.com/en-us/foodanddrink/foodnews/mimo-owners-open-la-rosa-a-dreamy-gelato-and-mortadella-sandwich-shop-in-houston-s-east-end/ar-AA221MtO",
+      "published_date": "2026-05-04 14:31:23"
+    },
+    {
+      "store_name": "Homegrown Farmstand",
+      "location": "377 Main Ave., Suite B, De Pere, WI",
+      "event_type": "Opening",
+      "event_date": "April 4, 2026",
+      "status": "opened April 4",
+      "short_description": "Homegrown Farmstand opened at 377 Main Ave., Suite B in De Pere, Wisconsin on April 4, 2026, offering farm-to-table products from farms across Wisconsin.",
+      "article_link": "https://www.greenbaypressgazette.com/story/money/2026/05/04/green-bay-business-openings-closures-and-incoming-projects/89872794007/",
+      "published_date": "2026-05-04 14:21:00"
+    },
+    {
+      "store_name": "Gyro Guyz",
+      "location": "1981 E. Mason St., Suite 105, Green Bay, WI",
+      "event_type": "Opening",
+      "event_date": "April 4, 2026",
+      "status": "opened on April 4",
+      "short_description": "Gyro Guyz, a Mediterranean-style food restaurant, opened at 1981 E. Mason St., Suite 105 in Green Bay, Wisconsin on April 4, 2026.",
+      "article_link": "https://www.greenbaypressgazette.com/story/money/2026/05/04/green-bay-business-openings-closures-and-incoming-projects/89872794007/",
+      "published_date": "2026-05-04 14:21:00"
+    },
+    {
+      "store_name": "D-BAT Baseball and Softball Academy",
+      "location": "3525 Layden Drive, Ashwaubenon, WI",
+      "event_type": "Opening",
+      "event_date": "April 20, 2026",
+      "status": "opened April 20",
+      "short_description": "D-BAT Baseball and Softball Academy, a baseball and softball training facility, opened at 3525 Layden Drive in Ashwaubenon, Wisconsin on April 20, 2026.",
+      "article_link": "https://www.greenbaypressgazette.com/story/money/2026/05/04/green-bay-business-openings-closures-and-incoming-projects/89872794007/",
+      "published_date": "2026-05-04 14:21:00"
+    },
+    {
+      "store_name": "The Black Prince",
+      "location": "Manor Road, Woodstock, Oxfordshire, UK",
+      "event_type": "Opening",
+      "event_date": "Not specified (returning/reopening)",
+      "status": "returning from the dead, three years after its permanent closure",
+      "short_description": "The Black Prince pub in Woodstock, Oxfordshire, is reopening approximately three years after permanently closing in June 2023, when new owners shut it for the \"foreseeable future.\" The pub dates back to the 16th century and sits opposite Blenheim Palace on the banks of the River Glyme.",
+      "article_link": "https://www.witneygazette.co.uk/news/26076535.historic-oxfordshire-pub-back-dead-years-closure/",
+      "published_date": "2026-05-04 14:04:00"
+    },
+    {
+      "store_name": "Davio's Plaza Bar",
+      "location": "Reston Row, across from JW Marriott Reston Station, Reston, VA (address not specified)",
+      "event_type": "Opening",
+      "event_date": "May 7, 2026",
+      "status": "scheduled to open Thursday (May 7)",
+      "short_description": "Davio's Northern Italian Steakhouse in Reston Row is opening an outdoor Plaza Bar on May 7, 2026, located across from the JW Marriott Reston Station. The Plaza Bar will offer handcrafted cocktails, seasonal menu items, premium wines, and Davio's signature dishes with seating for 76 guests.",
+      "article_link": "https://patch.com/virginia/reston/davio-s-open-outdoor-plaza-bar-reston-row",
+      "published_date": "2026-05-04 13:55:39"
+    },
+    {
+      "store_name": "Walgreens (86th and South Cottage Grove)",
+      "location": "86th and South Cottage Grove, Chatham, Chicago, IL",
+      "event_type": "Closing",
+      "event_date": "June 4, 2026",
+      "status": "closing on June 4",
+      "short_description": "Walgreens at 86th and South Cottage Grove in Chatham is closing on June 4, 2026, citing high levels of theft and violent incidents. Community leaders and three South Side aldermen protested the closure, which follows five other South Side Walgreens closures over the past year.",
+      "article_link": "https://abc7chicago.com/post/chicago-community-leaders-speak-ahead-chatham-walgreens-pharmacy-store-closure-month/19034714/",
+      "published_date": "2026-05-04 13:46:58"
+    },
+    {
+      "store_name": "Walgreens (East 71st Street)",
+      "location": "East 71st Street, Chicago, IL (South Side; address not specified)",
+      "event_type": "Closing",
+      "event_date": "May 19, 2026",
+      "status": "slated to close May 19",
+      "short_description": "A Walgreens at East 71st Street on Chicago's South Side is slated to close on May 19, 2026. This closure is part of a series of South Side Walgreens closures over the past year.",
+      "article_link": "https://abc7chicago.com/post/chicago-community-leaders-speak-ahead-chatham-walgreens-pharmacy-store-closure-month/19034714/",
+      "published_date": "2026-05-04 13:46:58"
+    },
+    {
+      "store_name": "Greggs (third Inverness location)",
+      "location": "Inverness Shopping Park, Eastfield Way, Inverness, Scotland, UK (Unit 5B2)",
+      "event_type": "Opening",
+      "event_date": "Summer 2026 (estimated)",
+      "status": "could open during the summer",
+      "short_description": "Greggs appears set to open a third bakery in Inverness at the Inverness Shopping Park on Eastfield Way, based on a job listing for a store manager at that location. No confirmed opening date has been announced, but based on the hiring timeline of previous openings, a summer 2026 opening is anticipated.",
+      "article_link": "https://www.north-star-news.co.uk/news/third-greggs-to-open-in-inverness-434089/",
+      "published_date": "2026-05-04 13:43:00"
     }
   ]
 }
