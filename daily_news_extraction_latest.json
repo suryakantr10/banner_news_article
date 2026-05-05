@@ -1341,6 +1341,213 @@
       "status": "opened Wednesday morning",
       "short_description": "Ty's BBQ and Smashys opened a new location in Lincoln, NE on Wednesday morning after a long-anticipated wait. No address was given for the new location in the extractable portion of the article. Note: article body contained encoding artifacts that limited extractable details.",
       "article_link": "https://kearneyhub.com/news/state-regional/nebraska/collection_5ae4640e-721c-510a-b434-4a4f3627860d.html"
+    },
+    {
+      "store_name": "No qualifying business found (Seafood City Supermarket nightlife feature)",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A — feature/culture article about existing grocery store nightlife events, not a business opening or closure",
+      "short_description": "Article is a cultural feature about late-night party events at an existing Seafood City Supermarket location in Daly City, CA. No new store opening or closure is described.",
+      "article_link": "https://www.saveur.com/culture/grocery-stores-nightlife/"
+    },
+    {
+      "store_name": "No qualifying business found (Canadian chain restaurant closure)",
+      "location": "N/A",
+      "event_type": "Closing",
+      "event_date": "N/A",
+      "status": "N/A — 403 Forbidden",
+      "short_description": "Article could not be fetched. No business details available.",
+      "article_link": "https://www.insauga.com/closure-entire-chain-restaurant-shutting-down-all-locations-in-canada/"
+    },
+    {
+      "store_name": "Grocery Outlet",
+      "location": "9500 Liberia Avenue, Manassas, VA (zip not specified)",
+      "event_type": "Opening",
+      "event_date": "July 2026 (exact date not specified)",
+      "status": "doors will open in July",
+      "short_description": "Grocery Outlet is opening a new discount grocery store at 9500 Liberia Avenue in Manassas, VA in July 2026, owned and operated by local franchisee Rodney Morisson. The California-based chain, which operates more than 530 stores nationwide, sells name-brand products at reduced prices by purchasing surplus inventory and closeout products directly from suppliers. This will be the seventh Virginia location for Grocery Outlet.",
+      "article_link": "https://patch.com/virginia/manassas/new-discount-grocery-store-coming-manassas"
+    },
+    {
+      "store_name": "Hilton Leicester",
+      "location": "Near Fosse Park, Leicester, UK (full address not specified)",
+      "event_type": "Closing",
+      "event_date": "December 31, 2025",
+      "status": "shut permanently at the end of 2025",
+      "short_description": "The Hilton Leicester, near Fosse Park, shut permanently on New Year's Eve 2025, also ending the LivingWell Health Club located at the site. New owner Village Hotel Group has submitted plans to Blaby District Council for a comprehensive refurbishment of the 180-room property, including demolition of parts of the building and a redesigned gym wing, foyer, and restaurant.",
+      "article_link": "https://www.aol.com/articles/plans-refurbish-hotel-following-closure-104242328.html"
+    },
+    {
+      "store_name": "No qualifying business found (AG Gaston Motel Birmingham)",
+      "location": "N/A",
+      "event_type": "Closing",
+      "event_date": "N/A",
+      "status": "N/A — MSN page returned no article body",
+      "short_description": "Article only shows MSN wrapper with no article text. No business name, location, or details available.",
+      "article_link": "https://www.msn.com/en-us/money/realestate/ag-gaston-motel-in-birmingham-temporarily-closing-for-renovations/ar-AA221LY7"
+    },
+    {
+      "store_name": "No qualifying business found (new hotel Nov. 1)",
+      "location": "N/A",
+      "event_type": "Opening",
+      "event_date": "N/A",
+      "status": "N/A — 429 Too Many Requests; article not accessible",
+      "short_description": "Article could not be fetched. No business details available.",
+      "article_link": "https://www.dailygazette.com/ade/news/business/new-hotel-to-open-nov-1/article_59a4e4f3-e25c-5a1a-b490-de05ba31e8c7.html"
+    },
+    {
+      "store_name": "JW Marriott Detroit Water Square",
+      "location": "Former Joe Louis Arena site, immediately west of Huntington Place, Detroit, MI (full address not specified)",
+      "event_type": "Opening",
+      "event_date": "2027 (exact date not specified)",
+      "status": "currently under construction",
+      "short_description": "The 600-room JW Marriott Detroit Water Square hotel is currently under construction on the former Joe Louis Arena site adjacent to Huntington Place in downtown Detroit. The project is part of Visit Detroit's reported 1,600 new hotel rooms coming to Detroit in 2027.",
+      "article_link": "https://www.dbusiness.com/daily-news/visit-detroit-reports-1600-hotels-rooms-to-open-in-the-motor-city-in-2027/"
+    },
+    {
+      "store_name": "Unnamed second hotel (connected to Huntington Place)",
+      "location": "Immediately north of Huntington Place, spanning Congress, Fort, Cass streets and Washington Boulevard, Detroit, MI (full address not specified)",
+      "event_type": "Opening",
+      "event_date": "Site preparation expected to begin early 2027 (opening date not specified)",
+      "status": "preparing the site for construction is expected to begin in early 2027",
+      "short_description": "A yet-to-be-named $450 million hotel with approximately 600 rooms is planned immediately north of Huntington Place in downtown Detroit, developed by Congress & Associates in conjunction with the Detroit Regional Convention and Facility Authority. The project is expected to create more than 600 union construction jobs and 1,000 permanent hospitality positions. No opening date was provided in the article.",
+      "article_link": "https://www.dbusiness.com/daily-news/visit-detroit-reports-1600-hotels-rooms-to-open-in-the-motor-city-in-2027/"
+    },
+    {
+      "store_name": "No qualifying business found (most trusted grocery store ranking)",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A — survey/ranking article with no business opening or closure",
+      "short_description": "Article covers the 2026 BrandSpark Most Trusted Awards survey results for grocery stores. No new store opening or closure is described.",
+      "article_link": "https://www.marthastewart.com/most-trusted-grocery-store-11965082"
+    },
+    {
+      "store_name": "No qualifying business found (Suncoast Credit Union Polk County)",
+      "location": "N/A",
+      "event_type": "Opening",
+      "event_date": "N/A",
+      "status": "N/A — Error 451; article not accessible (geo-blocked)",
+      "short_description": "Article could not be fetched due to geographic access restriction. No business details available.",
+      "article_link": "https://www.wftv.com/news/local/new-suncoast-credit-union-branch-aims-serve-growing-polk-county/2W3L3Z7EYZALHDRHDPI4GSY2DI/"
+    },
+    {
+      "store_name": "No qualifying business found (Massachusetts restaurant 100+ years closure)",
+      "location": "N/A",
+      "event_type": "Closing",
+      "event_date": "N/A",
+      "status": "N/A — connection timed out; article not accessible",
+      "short_description": "Article could not be fetched. No business details available.",
+      "article_link": "https://live959.com/popular-massachusetts-restaurant-closing-100-years/"
+    },
+    {
+      "store_name": "No qualifying business found (Carter's 150 store closures)",
+      "location": "N/A",
+      "event_type": "Closing",
+      "event_date": "N/A",
+      "status": "N/A — 403 Forbidden",
+      "short_description": "Article could not be fetched. No business details available.",
+      "article_link": "https://www.thestreet.com/retail/mall-fashion-retailer-carters-closes-150-stores-in-turnaround-push"
+    },
+    {
+      "store_name": "The Lawrence Hotel",
+      "location": "Downtown Lawrenceville, GA (full address not specified)",
+      "event_type": "Opening",
+      "event_date": "Summer 2026 (exact date not specified)",
+      "status": "anticipated Summer 2026 opening",
+      "short_description": "The Lawrence Hotel, described as the first full-service boutique hotel of its kind in Lawrenceville, GA, is preparing for an anticipated summer 2026 opening by hosting career fair hiring events in May at the Lawrenceville Arts Theatre. Hiring events are scheduled for May 9, May 14, and May 20. Open positions span guest services, food and beverage, and housekeeping departments. Note: article body contained encoding artifacts; extracted details are based on readable portions only.",
+      "article_link": "https://www.gwinnettdailypost.com/local/the-lawrence-hotel-to-host-may-hiring-events-ahead-of-opening-in-lawrenceville/article_32da409f-8500-41a9-a723-4c037169525c.html"
+    },
+    {
+      "store_name": "Refuel (convenience store with Whataburger)",
+      "location": "Highway 181 and Freeny Road, Kenedy, TX (zip not specified)",
+      "event_type": "Opening",
+      "event_date": "Late 2026 (exact date not specified)",
+      "status": "opening in late 2026",
+      "short_description": "Refuel is opening a new convenience store in Kenedy, Texas in late 2026, partnering with Whataburger as its QSR — the first such Whataburger partnership for the chain. The Whataburger will be located adjacent to the new Refuel c-store and will feature a full menu and drive-thru service.",
+      "article_link": "https://cspdailynews.com/foodservice/refuel-open-first-whataburger-texas-convenience-store-late-2026"
+    },
+    {
+      "store_name": "House of Fries",
+      "location": "5322 Antoine Drive, Houston, TX (zip not specified) — Oak Forest neighborhood",
+      "event_type": "Closing",
+      "event_date": "May 1, 2026",
+      "status": "closed; \"Today is our last day\"",
+      "short_description": "House of Fries, a comfort-food restaurant in Houston's Oak Forest neighborhood known for loaded fries and burgers, announced its closure on May 1, 2026 through a Facebook post stating \"Today is our last day.\" The restaurant served the community for 15 years; no clear reason for the sudden closure was provided by the owners.",
+      "article_link": "https://whatnow.com/houston/restaurants/a-houston-neighborhood-restaurant-known-for-loaded-fries-has-closed/"
+    },
+    {
+      "store_name": "Boardwalk Bandit Sandwich & Soda",
+      "location": "200 Ocean Ave., Bradley Beach, NJ (zip not specified)",
+      "event_type": "Opening",
+      "event_date": "May 2026 (exact date not specified)",
+      "status": "will open in May",
+      "short_description": "Boardwalk Bandit Sandwich & Soda is opening at 200 Ocean Ave. in Bradley Beach, NJ in May 2026, from the owners of former Cherry Hill brewery Forgotten Boardwalk Brewing Co. The shop will offer primarily takeout with patio seating, serving scratch-made sodas carbonated and canned on site alongside casual seaside food items.",
+      "article_link": "https://www.aol.com/news/9-restaurants-coming-2-open-091526923.html"
+    },
+    {
+      "store_name": "Unnamed new restaurant (by Birravino owner Victor Rallo)",
+      "location": "Corner of Riverside Avenue and Bridge Avenue, Red Bank, NJ (zip not specified) — former vacant gas station building",
+      "event_type": "Opening",
+      "event_date": "Not specified (approved in early April 2026; concept and name not yet decided)",
+      "status": "approved; no concept or name yet decided",
+      "short_description": "Red Bank Planning Board approved a proposal in early April 2026 for Birravino owner Victor Rallo to convert a vacant gas station building on Riverside Avenue into a new restaurant. The concept and name have not yet been decided; the project will share a liquor license with Birravino and include a dining room, small pizza oven, kitchen, and bar and outdoor seating. Article text was truncated after this entry; additional openings referenced in the article's intro may exist but could not be fully extracted.",
+      "article_link": "https://www.aol.com/news/9-restaurants-coming-2-open-091526923.html"
+    },
+    {
+      "store_name": "No qualifying business found (Rally House Topeka relocation)",
+      "location": "N/A",
+      "event_type": "Opening",
+      "event_date": "N/A",
+      "status": "N/A — 403 Forbidden",
+      "short_description": "Article could not be fetched. No business details available.",
+      "article_link": "https://www.manilatimes.net/2026/05/04/tmt-newswire/globenewswire/rally-house-relocates-topeka-store-to-wanamaker-hills-shopping-center/2335090"
+    },
+    {
+      "store_name": "QuickChek",
+      "location": "Multiple locations — East Coast, NJ-based (specific addresses not given)",
+      "event_type": "Closing",
+      "event_date": "Not specified (ongoing)",
+      "status": "closed more stores than it's opened; store count dropped from 157 to 148",
+      "short_description": "QuickChek, the East Coast convenience store chain owned by Murphy USA, has seen its store count drop from 157 to 148 since Murphy's acquisition in January 2021, reflecting ongoing traffic declines and more closures than openings. The article contrasts QuickChek's contraction with Murphy USA's main banner, which remains on pace to open 45–55 new stores in fiscal 2026. No specific store addresses or closure dates are provided.",
+      "article_link": "https://www.cstoredive.com/news/as-murphy-usa-grows-quickchek-stalls/819139/"
+    },
+    {
+      "store_name": "Sunnydale Market",
+      "location": "1515 Sunnydale Ave., Sunnydale neighborhood, Visitacion Valley, San Francisco, CA (zip not specified) — ground floor of the new Amani building",
+      "event_type": "Opening",
+      "event_date": "Late 2027 (exact date not specified)",
+      "status": "plans to open by late 2027",
+      "short_description": "Bi-Rite, 18 Reasons, and Crankstart have announced plans to open Sunnydale Market, a nonprofit grocery store, at 1515 Sunnydale Ave. in San Francisco's Sunnydale neighborhood by late 2027. The 2,800-square-foot market will stock fresh produce and pantry staples at prices 35–45% below retail, accept SNAP and WIC, and will not sell alcohol or tobacco. The store is part of the Sunnydale Hope SF redevelopment project.",
+      "article_link": "https://sfstandard.com/2026/05/04/sunnydale-market-bi-rite-non-profit-grocery-store/"
+    },
+    {
+      "store_name": "No qualifying business found (White Castle Kissimmee)",
+      "location": "N/A",
+      "event_type": "Opening",
+      "event_date": "N/A",
+      "status": "N/A — 403 Forbidden",
+      "short_description": "Article could not be fetched. No business details available.",
+      "article_link": "https://www.bizjournals.com/orlando/news/2026/05/04/white-castle-kissimmee-restaurant-opens-new.html"
+    },
+    {
+      "store_name": "Sycamore Restaurant",
+      "location": "800 E. Broadway, Columbia, MO (zip not specified)",
+      "event_type": "Closing",
+      "event_date": "May 29, 2026",
+      "status": "set to close on May 29",
+      "short_description": "Sycamore Restaurant in downtown Columbia, MO will close on May 29, 2026, as owners announced they are moving on to the next phase of their lives. An employee hopes to reopen it at a new location, though details are limited. Murry's Restaurant is planning to open in the same space in the fall.",
+      "article_link": "https://abc17news.com/news/top-stories/2026/05/04/downtown-columbia-restaurant-set-to-close-new-one-to-replace-it/"
+    },
+    {
+      "store_name": "Murry's Restaurant (\"Downtown Murry's\")",
+      "location": "800 E. Broadway, Columbia, MO (zip not specified)",
+      "event_type": "Opening",
+      "event_date": "Fall 2026 (exact date not specified)",
+      "status": "anticipating opening in the fall",
+      "short_description": "Murry's Restaurant is planning to open a second location called \"Downtown Murry's\" at 800 E. Broadway in Columbia, MO, in the space being vacated by Sycamore Restaurant. The opening is anticipated for fall 2026.",
+      "article_link": "https://abc17news.com/news/top-stories/2026/05/04/downtown-columbia-restaurant-set-to-close-new-one-to-replace-it/"
     }
   ]
 }
