@@ -1210,6 +1210,246 @@
       "short_description": "Article is an industry trade piece about AI and technology trends in convenience stores. No specific business opening or closure is mentioned.",
       "article_link": "https://cstoredecisions.com/from-ai-to-retail-media-the-new-c-store-tech-playbook/",
       "published_date": "2026-05-04 21:33:22"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article covers cultural nightlife events at existing grocery stores (Seafood City Supermarket, Daly City, CA). No new opening or closure event is described.",
+      "article_link": "https://www.saveur.com/culture/grocery-stores-nightlife/",
+      "published_date": "2026-05-04 16:21:54"
+    },
+    {
+      "store_name": "Chain restaurant (name not specified)",
+      "location": "All locations, Canada",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "shutting down all locations in Canada",
+      "short_description": "Article could not be fetched (403 error). Based on title, an entire chain restaurant is shutting down all its Canadian locations. Chain name not available.",
+      "article_link": "https://www.insauga.com/closure-entire-chain-restaurant-shutting-down-all-locations-in-canada/",
+      "published_date": "2026-05-04 16:19:01"
+    },
+    {
+      "store_name": "Grocery Outlet",
+      "location": "9500 Liberia Avenue, Manassas, VA",
+      "event_type": "Opening",
+      "event_date": "July 2026",
+      "status": "will open in July",
+      "short_description": "Grocery Outlet is opening a new discount grocery store at 9500 Liberia Avenue in Manassas, Virginia in July 2026, independently operated by local owner Rodney Morisson. This will be the seventh Virginia location for the California-based chain, which currently operates more than 530 stores nationwide.",
+      "article_link": "https://patch.com/virginia/manassas/new-discount-grocery-store-coming-manassas",
+      "published_date": "2026-05-04 16:18:57"
+    },
+    {
+      "store_name": "Hilton Leicester (LivingWell Health Club)",
+      "location": "Near Fosse Park, Leicester, UK (address not specified)",
+      "event_type": "Closing",
+      "event_date": "End of 2025 (New Year's Eve 2025)",
+      "status": "shut permanently at the end of 2025",
+      "short_description": "The Hilton Leicester, near Fosse Park, closed permanently on New Year's Eve 2025, also ending the LivingWell Health Club located at the site. New owner Village Hotel Group has submitted plans to carry out a comprehensive refurbishment of the 180-room property.",
+      "article_link": "https://www.aol.com/articles/plans-refurbish-hotel-following-closure-104242328.html",
+      "published_date": "2026-05-04 16:13:59"
+    },
+    {
+      "store_name": "AG Gaston Motel",
+      "location": "Birmingham, AL (address not specified)",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "temporarily closing for renovations",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, the AG Gaston Motel in Birmingham is temporarily closing for renovations. No further details available.",
+      "article_link": "https://www.msn.com/en-us/money/realestate/ag-gaston-motel-in-birmingham-temporarily-closing-for-renovations/ar-AA221LY7",
+      "published_date": "2026-05-04 16:07:30"
+    },
+    {
+      "store_name": "Saranac Waterfront Lodge",
+      "location": "Saranac Lake, NY (address not specified; overlooks Lake Flower)",
+      "event_type": "Opening",
+      "event_date": "November 1 (year not specified in article)",
+      "status": "plans to finally open its doors on Nov. 1",
+      "short_description": "The Saranac Waterfront Lodge, a 93-room, four-floor hotel with a pub called the Boathouse, ballroom, event space, and multiple dining options, plans to open on November 1 after more than seven years of planning and development. The 63,000-square-foot property features a great room with wood-burning fireplace, granite bar, and a deck overlooking Lake Flower.",
+      "article_link": "https://www.dailygazette.com/ade/news/business/new-hotel-to-open-nov-1/article_59a4e4f3-e25c-5a1a-b490-de05ba31e8c7.html",
+      "published_date": "2026-05-04 16:02:21"
+    },
+    {
+      "store_name": "JW Marriott Detroit Water Square",
+      "location": "Former Joe Louis Arena site, immediately west of Huntington Place, Detroit, MI",
+      "event_type": "Opening",
+      "event_date": "2027 (site prep begins early 2027)",
+      "status": "currently under construction",
+      "short_description": "The 600-room JW Marriott Detroit Water Square is currently under construction on the former Joe Louis Arena site adjacent to Huntington Place in downtown Detroit. It is one of approximately 1,600 hotel rooms expected to open in Detroit in 2027.",
+      "article_link": "https://www.dbusiness.com/daily-news/visit-detroit-reports-1600-hotels-rooms-to-open-in-the-motor-city-in-2027/",
+      "published_date": "2026-05-04 15:42:40"
+    },
+    {
+      "store_name": "Unnamed hotel (second Huntington Place hotel)",
+      "location": "North of Huntington Place, spanning Congress, Fort, Cass streets and Washington Boulevard, Detroit, MI",
+      "event_type": "Opening",
+      "event_date": "2027 (site prep begins early 2027)",
+      "status": "expected to add approximately 600 rooms",
+      "short_description": "A yet-to-be-named $450 million hotel with approximately 600 rooms is planned immediately north of Huntington Place in downtown Detroit, developed by Congress & Associates in conjunction with the Detroit Regional Convention and Facility Authority. Site preparation is expected to begin in early 2027.",
+      "article_link": "https://www.dbusiness.com/daily-news/visit-detroit-reports-1600-hotels-rooms-to-open-in-the-motor-city-in-2027/",
+      "published_date": "2026-05-04 15:42:40"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article covers a grocery store trustworthiness survey/ranking. No specific opening or closure event is described.",
+      "article_link": "https://www.marthastewart.com/most-trusted-grocery-store-11965082",
+      "published_date": "2026-05-04 15:38:26"
+    },
+    {
+      "store_name": "Suncoast Credit Union (new branch)",
+      "location": "Polk County, FL (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "Not specified",
+      "short_description": "Article was inaccessible (Error 451 — geographic restriction). Based on title, a new Suncoast Credit Union branch is opening to serve growing Polk County. No further details available.",
+      "article_link": "https://www.wftv.com/news/local/new-suncoast-credit-union-branch-aims-serve-growing-polk-county/2W3L3Z7EYZALHDRHDPI4GSY2DI/",
+      "published_date": "2026-05-04 15:36:26"
+    },
+    {
+      "store_name": "S&S Deli",
+      "location": "Inman Square, Cambridge, MA (address not specified)",
+      "event_type": "Closing",
+      "event_date": "June 2026",
+      "status": "closing permanently sometime in June",
+      "short_description": "S&S Deli, a Cambridge institution open since 1919 and one of the oldest restaurants in Massachusetts at 107 years old, is closing permanently in June 2026. The Boston Globe reported the closure of the classic deli, known for its matzo ball soup, corned beef and pastrami reubens, and other traditional deli fare.",
+      "article_link": "https://live959.com/popular-massachusetts-restaurant-closing-100-years/",
+      "published_date": "2026-05-04 15:28:25"
+    },
+    {
+      "store_name": "Carter's (mall fashion retailer)",
+      "location": "150 store locations, USA (addresses not specified)",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "closes 150 stores in turnaround push",
+      "short_description": "Article could not be fetched (403 error). Based on title, mall fashion retailer Carter's is closing 150 stores as part of a turnaround effort. No further details available.",
+      "article_link": "https://www.thestreet.com/retail/mall-fashion-retailer-carters-closes-150-stores-in-turnaround-push",
+      "published_date": "2026-05-04 15:18:25"
+    },
+    {
+      "store_name": "The Lawrence Hotel",
+      "location": "Downtown Lawrenceville, GA (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Summer 2026",
+      "status": "anticipated Summer 2026 opening",
+      "short_description": "The Lawrence Hotel, described as the first full-service boutique hotel of its kind in Lawrenceville, is hosting a series of career fairs in May 2026 ahead of its anticipated summer opening. The hotel is seeking to fill a wide range of front-of-house and back-of-house roles across guest services, food and beverage, and housekeeping departments.",
+      "article_link": "https://www.gwinnettdailypost.com/local/the-lawrence-hotel-to-host-may-hiring-events-ahead-of-opening-in-lawrenceville/article_32da409f-8500-41a9-a723-4c037169525c.html",
+      "published_date": "2026-05-04 15:16:00"
+    },
+    {
+      "store_name": "Refuel (convenience store with Whataburger)",
+      "location": "Highway 181 and Freeny Road, Kenedy, TX",
+      "event_type": "Opening",
+      "event_date": "Late 2026",
+      "status": "opening a convenience store in Kenedy, Texas, in late 2026",
+      "short_description": "Refuel is opening a new convenience store in Kenedy, Texas in late 2026, featuring an adjacent Whataburger — the first Whataburger partnership for the Refuel brand. The Whataburger will offer its full menu including drive-thru service, complementing Refuel's in-store offerings.",
+      "article_link": "https://cspdailynews.com/foodservice/refuel-open-first-whataburger-texas-convenience-store-late-2026",
+      "published_date": "2026-05-04 14:51:26"
+    },
+    {
+      "store_name": "House of Fries",
+      "location": "5322 Antoine Drive, Houston, TX",
+      "event_type": "Closing",
+      "event_date": "May 1, 2026",
+      "status": "closed",
+      "short_description": "House of Fries, a comfort-food restaurant in Houston's Oak Forest neighborhood, announced its closure on May 1, 2026, through a Facebook post stating \"Today is our last day.\" The restaurant had served the community for 15 years and was known for its loaded fries and burgers.",
+      "article_link": "https://whatnow.com/houston/restaurants/a-houston-neighborhood-restaurant-known-for-loaded-fries-has-closed/",
+      "published_date": "2026-05-04 14:33:59"
+    },
+    {
+      "store_name": "Boardwalk Bandit Sandwich & Soda",
+      "location": "200 Ocean Ave., Bradley Beach, NJ",
+      "event_type": "Opening",
+      "event_date": "May 2026",
+      "status": "will open at 200 Ocean Ave. in May",
+      "short_description": "Boardwalk Bandit Sandwich & Soda, from the owners of former Cherry Hill brewery Forgotten Boardwalk Brewing Co., is opening at 200 Ocean Ave. in Bradley Beach in May 2026. The primarily takeout spot with patio seating will serve scratch-made carbonated sodas and casual seaside food items including a Jersey tomato sandwich and double smash burger.",
+      "article_link": "https://www.aol.com/news/9-restaurants-coming-2-open-091526923.html",
+      "published_date": "2026-05-04 13:53:33"
+    },
+    {
+      "store_name": "New restaurant (no name yet)",
+      "location": "Corner of Riverside Avenue and Bridge Avenue, Red Bank, NJ",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "approved; planning stage",
+      "short_description": "The Red Bank Planning Board approved a proposal from Birravino owner Victor Rallo to convert a vacant gas station building on Riverside Avenue into a new restaurant, which will share a liquor license with Birravino. A concept and name have not yet been decided.",
+      "article_link": "https://www.aol.com/news/9-restaurants-coming-2-open-091526923.html",
+      "published_date": "2026-05-04 13:53:33"
+    },
+    {
+      "store_name": "Rally House",
+      "location": "Wanamaker Hills Shopping Center, Topeka, KS (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "relocates Topeka store",
+      "short_description": "Article could not be fetched (403 error). Based on title, Rally House is relocating its Topeka store to Wanamaker Hills Shopping Center. No further details available.",
+      "article_link": "https://www.manilatimes.net/2026/05/04/tmt-newswire/globenewswire/rally-house-relocates-topeka-store-to-wanamaker-hills-shopping-center/2335090",
+      "published_date": "2026-05-04 13:45:56"
+    },
+    {
+      "store_name": "Murphy USA (new convenience stores)",
+      "location": "Multiple locations, USA (addresses not specified)",
+      "event_type": "Opening",
+      "event_date": "Fiscal 2026 (ongoing)",
+      "status": "on pace to hit its goal of opening between 45 and 55 new convenience stores through fiscal 2026",
+      "short_description": "Murphy USA has opened seven new-to-industry (NTI) stores so far in 2026, with 18 more under construction and an additional 25 expected to break ground within 90 days, keeping the company on pace to meet its goal of 45–55 new stores for fiscal 2026.",
+      "article_link": "https://www.cstoredive.com/news/as-murphy-usa-grows-quickchek-stalls/819139/",
+      "published_date": "2026-05-04 13:24:01"
+    },
+    {
+      "store_name": "QuickChek",
+      "location": "Multiple locations, East Coast, USA (addresses not specified)",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "more closures than openings",
+      "short_description": "QuickChek, the New Jersey-based c-store chain acquired by Murphy USA in January 2021, has seen its store count drop from 157 to 148, reflecting more closures than openings over more than five years. The chain continues to face traffic declines with no growth trajectory described in the article.",
+      "article_link": "https://www.cstoredive.com/news/as-murphy-usa-grows-quickchek-stalls/819139/",
+      "published_date": "2026-05-04 13:24:01"
+    },
+    {
+      "store_name": "Sunnydale Market (Bi-Rite nonprofit)",
+      "location": "1515 Sunnydale Ave., Visitacion Valley (Sunnydale neighborhood), San Francisco, CA",
+      "event_type": "Opening",
+      "event_date": "Late 2027",
+      "status": "plans to open a nonprofit grocery store in the Sunnydale neighborhood of Visitacion Valley by late 2027",
+      "short_description": "Bi-Rite, 18 Reasons, and Crankstart announced plans to open a 2,800-square-foot nonprofit grocery store called Sunnydale Market at 1515 Sunnydale Ave. in San Francisco's Sunnydale neighborhood by late 2027. The store will stock fresh produce and pantry staples at prices averaging 35–45% below retail, accept SNAP and WIC, and will not sell alcohol or tobacco.",
+      "article_link": "https://sfstandard.com/2026/05/04/sunnydale-market-bi-rite-non-profit-grocery-store/",
+      "published_date": "2026-05-04 13:00:00"
+    },
+    {
+      "store_name": "White Castle",
+      "location": "Kissimmee, FL / Central Florida (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "Not specified",
+      "short_description": "Article could not be fetched (403 error). Based on title, White Castle is opening a new restaurant in Central Florida (Kissimmee area). No further details available.",
+      "article_link": "https://www.bizjournals.com/orlando/news/2026/05/04/white-castle-kissimmee-restaurant-opens-new.html",
+      "published_date": "2026-05-04 13:00:00"
+    },
+    {
+      "store_name": "Sycamore Restaurant",
+      "location": "800 E. Broadway, Columbia, MO",
+      "event_type": "Closing",
+      "event_date": "May 29, 2026",
+      "status": "set to close",
+      "short_description": "Sycamore Restaurant in downtown Columbia will close on May 29, 2026, as owners are moving on to the next phase of their lives. A Sycamore employee is hoping to reopen at a new location, with limited information available on where. This is a duplicate of event covered in Articles 95 and 97.",
+      "article_link": "https://abc17news.com/news/top-stories/2026/05/04/downtown-columbia-restaurant-set-to-close-new-one-to-replace-it/",
+      "published_date": "2026-05-04 12:44:56"
+    },
+    {
+      "store_name": "Downtown Murry's",
+      "location": "800 E. Broadway, Columbia, MO",
+      "event_type": "Opening",
+      "event_date": "Fall 2026",
+      "status": "anticipating opening the new location in the fall",
+      "short_description": "Murry's Restaurant is planning to open \"Downtown Murry's\" in the space being vacated by Sycamore at 800 E. Broadway in downtown Columbia, with a fall 2026 opening anticipated. This is a duplicate of the event covered in Articles 95 and 97.",
+      "article_link": "https://abc17news.com/news/top-stories/2026/05/04/downtown-columbia-restaurant-set-to-close-new-one-to-replace-it/",
+      "published_date": "2026-05-04 12:44:56"
     }
   ]
 }
