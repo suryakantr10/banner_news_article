@@ -974,6 +974,7 @@
                             <th class="px-3 py-3 w-36">Event Date</th>
                             <th class="px-3 py-3 w-40">Status</th>
                             <th class="px-3 py-3">Description</th>
+                            <th class="px-3 py-3 w-32">Published Date</th>
                             <th class="px-3 py-3 w-20">Link</th>
                         </tr></thead>
                         <tbody id="dailyExtTableBody"></tbody>
@@ -2566,6 +2567,7 @@
             <td class="px-3 py-3 max-w-[220px]" title="${escapeHtml(r.short_description||'')}">
                 <span class="text-gray-500 text-xs line-clamp-3 block">${highlight(r.short_description||'—', term)}</span>
             </td>
+            <td class="px-3 py-3 text-gray-400 text-xs whitespace-nowrap">${escapeHtml(r.published_date||'—')}</td>
             <td class="px-3 py-3">${linkCell}</td>
         </tr>`;
     }
@@ -2578,8 +2580,8 @@
     }
 
     function csvDownloadExtraction(rows, filename) {
-        const h = ['store_name','location','event_type','event_date','status','short_description','article_link'];
-        const labels = ['Store/Restaurant Name','Location or Full Address','Event Type','Event Date','Status','Short Description','Article Link'];
+        const h = ['store_name','location','event_type','event_date','status','short_description','article_link','published_date'];
+        const labels = ['Store/Restaurant Name','Location or Full Address','Event Type','Event Date','Status','Short Description','Article Link','Published Date'];
         const csv = [labels.join(','), ...rows.map(r => h.map(k => `"${(r[k]||'').replace(/"/g,'""')}"`).join(','))].join('\n');
         dlCSV('\uFEFF' + csv, filename);
     }
