@@ -1073,7 +1073,7 @@ If none, write: None
     DAILY_DIR.mkdir(parents=True, exist_ok=True)
 
     # ── Excel export ──────────────────────────────────────
-    fname = DAILY_DIR / f"Retail_Update_{NOW_UTC.strftime('%Y%m%d_%H%M')}{_suffix}.xlsx"
+    fname = DAILY_DIR / f"Retail_Update_{NOW_UTC.strftime('%Y%_m%d_%H%M')}{_suffix}.xlsx"
     with pd.ExcelWriter(fname, engine="openpyxl") as writer:
         df.to_excel(writer, index=False, sheet_name="News")
         ws = writer.sheets["News"]

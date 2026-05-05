@@ -8,6 +8,7 @@ Run this AFTER you have:
 What it does:
   - Parses Claude's Markdown table from the output file
   - Saves daily_news_extraction_latest.json  ← dashboard reads this
+  - Appends new rows to data/daily_news/daily_news_extraction_master.csv
 
 Usage:
     python daily_news_save_output_cluade.py newsbatch_1_output.md
@@ -15,11 +16,13 @@ Usage:
     python daily_news_save_output_cluade.py --reset    # clear extraction JSON
 """
 
+import csv
 import json
 import os
 import re
 import sys
 from datetime import date
+from pathlib import Path
 
 OUTPUT_JSON = "daily_news_extraction_latest.json"
 
@@ -157,3 +160,35 @@ print(f"\n✅  Done!")
 if not APPEND_MODE:
     print(f"    Run next batch with:  python daily_news_save_output_cluade.py newsbatch_2_output.md --append")
 print(f"    When all batches done:  git add daily_news_extraction_latest.json && git commit && git push")
+
+# ─────────────────────────────────────────────────────────
+# 7. Update extraction master CSV
+# ─────────────────────────────────────────────────────────
+MASTER_COLS = ["store_name", "location", "event_type", "event_date",
+               "status", "short_description", "article_link", "published_date", "Date_Appended"]
+MASTER_FILE = Path("data/daily_news/daily_news_extraction_master.csv")
+MASTER_FILE.parent.mkdir(parents=True, exist_ok=True)
+
+existing_rows = []
+if MASTER_FILE.exists():
+    with open(MASTER_FILE, encoding="utf-8", newline="") as f:
+        reader = csv.DictReader(f)
+        existing_rows = list(reader)
+
+seen = {(r.get("article_link", ""), r.get("store_name", "")) for r in existing_rows}
+added = 0
+for rec in final_records:
+    key = (rec.get("article_link", ""), rec.get("store_name", ""))
+    if key not in seen:
+        existing_rows.append({**rec, "Date_Appended": today_str})
+        seen.add(key)
+        added += 1
+
+existing_rows.sort(key=lambda r: r.get("published_date", ""), reverse=True)
+
+with open(MASTER_FILE, "w", encoding="utf-8", newline="") as f:
+    writer = csv.DictWriter(f, fieldnames=MASTER_COLS, extrasaction="ignore")
+    writer.writeheader()
+    writer.writerows(existing_rows)
+
+print(f"📂  Extraction master updated: {MASTER_FILE}  (+{added} new, {len(existing_rows)} total)")

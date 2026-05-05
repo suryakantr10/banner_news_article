@@ -15,12 +15,13 @@ You are an expert, precise data extractor specialized in retail and restaurant o
 
 📊 Output format
 Create ONE clean Markdown table with these exact column headers (in this order):
-| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
 
 📌 Rules
 • Add one row per article in the order the articles are given
 • If an article contains multiple businesses, create a separate row for each
 • If an article includes both openings and closures, extract each separately
+• For Published Date → copy exactly the value from the "Published:" line in the article metadata
 • If an article has zero relevant business opening or closure information, still include a row with:
   - Store Name: "No qualifying business found"
   - Other columns: "N/A"
@@ -41,6 +42,7 @@ If none, write: None
 URL: https://en.clickpetroleoegas.com.br/a-traditional-sc-supermarket-will-be-demolished-to-make-way-for-a-new-r30-million-unit-in-porto-belo-featuring-4400-sq-m-140-parking-spaces-ctl01/
 Title: A traditional SC supermarket will be demolished to make way for a new R$30 million unit in Porto Belo, featuring 4,400 sq m, 140 parking spaces, and a promise to accelerate the chain's expansion on the Santa Catarina coast.
 Status hint: Opening | Industry: Grocery
+Published: 2026-05-04 02:33:00
 
 — SC 4 min of reading 0 comments A traditional SC supermarket will be demolished to make way for a new R$30 million unit in Porto Belo, featuring 4,400 sq m, 140 parking spaces, and a promise to accelerate the chain’s expansion on the Santa Catarina coast. Written by Carla Teles Published on 03/05/2026 at 23:33 Construction , Economy Follow us on Google News Be the first to react! 0 Like 0 Love 0 Haha 0 Wow 0 Sad 0 Grr Supermarket that made its mark in Porto Belo, on the North Coast of Santa Catarina, will exit the scene to make way for a new R$ 30 million unit, with a larger structure, 4,400 m² of built area, 140 parking spaces, and the promise to reinforce the network’s race along the Santa Catarina coast. Traditional supermarket in Santa Catarina will be demolished in Porto Belo to make way for a new Rede Top unit, in a R$ 30 million project that foresees 4,400 m² of built area , 140 parking spaces , and inauguration still in 2026. The replacement of the old Myatã network structure marks the company’s entry into the municipality and expands the expansion movement on the North Coast of the state. According to the portal nd+ , what transforms the project into something bigger than a simple change of address is the strategic weight of the project. Instead of partially adapting the existing property, the network decided to demolish the current building and start from scratch, betting on a more robust operation, with a more modern standard, job creation, and a focus on a city that has been gaining relevance due to tourism and consumption potential. The strongest detail of the project is the size of the new supermarket Image: Disclosure The point that stands out most is the dimension of the new structure. The new supermarket will have 4,400 m² of built area , of which 1,800 m² will be dedicated to the sales area , indicating an operation designed to support a more intense flow of consumers and expand the network’s presence in a strategic region. ARTICLE CONTINUES BELOW
 
@@ -48,6 +50,7 @@ Status hint: Opening | Industry: Grocery
 URL: https://www.msn.com/en-us/foodanddrink/foodnews/applebee-s-and-ihop-to-debut-a-combo-restaurant-in-first-ever-location-here-s-where/ar-AA1XGiq9?ocid=UCPNC1&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
 Title: Applebee’s and IHOP to debut a combo restaurant in first-ever location
 Status hint: Opening | Industry: Restaurants
+Published: 2026-05-04 01:57:33
 
 MSN
 
@@ -55,6 +58,7 @@ MSN
 URL: https://www.msn.com/en-us/money/companies/tx-based-chain-that-serves-massive-burgers-247-to-open-3rd-tampa-bay-restaurant/ar-AA21CY2h?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
 Title: TX-based chain that serves massive burgers 24/7 to open 3rd Tampa Bay restaurant
 Status hint: Opening | Industry: Restaurants
+Published: 2026-05-04 01:47:39
 
 MSN
 
@@ -62,6 +66,7 @@ MSN
 URL: https://www.msn.com/en-us/news/us/here-s-how-much-taxpayers-will-pay-for-mamdani-s-first-socialist-grocery-store-due-to-open-next-year/ar-AA20TMzv?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
 Title: Here's how much taxpayers will pay for Mamdani's first socialist grocery store due to open next year
 Status hint: Opening | Industry: Grocery
+Published: 2026-05-04 01:04:50
 
 MSN
 
@@ -69,6 +74,7 @@ MSN
 URL: https://mickeyvisit.com/disney-world-disneyland-news-may-3-2026/
 Title: Disney Announces Major Changes, Ride Closure Updates, and New Resort Perks
 Status hint: Opening | Industry: Hospitality
+Published: 2026-05-04 00:03:51
 
 This week Disney announced a dates for new fall events like the Halloween parties and festivals, changes to character interactions, and restaurant changes. Each week, there is always something new happening, whether that includes ride closures, openings, or other things that could impact your trip! We share a roundup of all of the key Disneyland and Walt Disney World news you missed with these announcements. You can also check out our roundup of the key news from last week here . Mickey Visit brings you the latest Disney news and planning resources. See the major changes coming to Disney World in May. And the newest ride closures happening at Disneyland and Disney World in May . Disney Announcements This Week First, some big stories across all of Disney that we are following. Disney World Ride Closure ALERTS, Major Park Changes, Secrets Revealed Get alerts on closures, park changes, exclusive discounts, and free printables. Trusted by 100,000+ Disney fans & planners. We interviewed popular Disney YouTubers to get their opinions on the rules content creators should follow in the parks. Read more about these informal filming rules for Disneyland and Disney World. We took a look at the biggest and most controversial theme park policy changes that continue to divide guests. See the full list here of policies guests are nostalgic for and which are debated the most. Guests who already booked vacations saved thousands by applying these four new discounts. Learn more about how to apply discounts after you already booked. Disney is making changes to the weakest ride at Disneyland and Disney World which debut later this month. Read more about these new changes. Disneyland Announcements This Week Photo via Disney Now on to Disneyland news from this week that you missed… We took a look at the major Disneyland ride additions coming soon and their construction progress. Read more about this update here. A popular Disneyland ride and restaurant are closing soon for refurbishment. 
 
@@ -76,6 +82,7 @@ This week Disney announced a dates for new fall events like the Halloween partie
 URL: https://www.msn.com/en-us/foodanddrink/foodnews/vegan-vegetarian-friendly-restaurant-closing-its-kirkwood-location/ar-AA2214ze?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
 Title: Vegan, vegetarian-friendly restaurant closing its Kirkwood location
 Status hint: Opening | Industry: Restaurants
+Published: 2026-05-03 23:52:57
 
 MSN
 
@@ -83,6 +90,7 @@ MSN
 URL: https://www.msn.com/en-gb/foodanddrink/other/opening-date-announced-for-new-edinburgh-m-s-supermarket-on-lothian-road/ar-AA21RClz?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
 Title: Opening date announced for new Edinburgh M&S supermarket on Lothian Road
 Status hint: Opening | Industry: Grocery
+Published: 2026-05-03 23:50:19
 
 MSN
 
@@ -90,6 +98,7 @@ MSN
 URL: https://www.aol.com/news/2-popular-restaurants-opening-triangle-182547713.html
 Title: These 2 popular restaurants are opening new Triangle locations. Here’s where
 Status hint: Opening | Industry: Restaurants
+Published: 2026-05-03 23:41:43
 
 Renee Umsted Wed, April 22, 2026 at 6:25 PM UTC 0 Two well-known restaurant chains in the Triangle are opening new locations. The burrito behemoth Chipotle recently launched new stores in Raleigh and Durham, including one with a “Chipotlane” drive-thru. And Chick-fil-A is now in another Triangle town — Selma. Here’s what to know about the new locations. New Chipotle stores in Raleigh and Durham Chipotle has opened two new Triangle restaurants in recent days. One opened at 4730 Guess Road in Durham on Wednesday, April 15. It’s near the new Publix in the Latta Park development. The other, at 3905 Capital Blvd. in Raleigh , began serving customers Monday, April 20 and features a Chipotlane. This drive-thru lane accommodates guests who want to pick up orders without leaving their cars. Both locations are open 10:45 a.m.-10 p.m. daily, and each will employ around 30 people. Chipotle now has 10 Durham restaurants and nine in Raleigh, but its store count in the City of Oaks is set to increase soon. The chain will open its first downtown Raleigh location this summer, Chipotle previously told The News & Observer. It will be in the Bloc[83] development on the west side of downtown, at Glenwood Avenue and Hillsborough Street. Chick-fil-A opens in Selma Chick-fil-A recently opened its newest Triangle location in Selma. (Chick-Fil-A) Chick-fil-A recently opened its first location in Selma. Advertisement Located at 201 S. Endurance Way in the Eastfield development, the restaurant spans 6,500 square feet and includes an expanded dining room, double drive-thru and dedicated lane for Chick-fil-A app users, according to a news release from developer AdVenture Development. A few of Chick-fil-A’s nearest locations to the new Selma restaurant are in Wendell, Garner and Knightdale. Known for fried chicken and waffle fries, Chick-fil-A is the fourth national restaurant to open at Eastfield , joining Olive Garden , LongHorn Steakhouse and Panda Express. Eastfield is a 435-acre “live-work-p
 
@@ -97,13 +106,15 @@ Renee Umsted Wed, April 22, 2026 at 6:25 PM UTC 0 Two well-known restaurant chai
 URL: https://www.sloughexpress.co.uk/gallery/business/705819/new-co-op-convenience-store-due-to-open-at-one-maidenhead-in-july.html
 Title: New Co-op convenience store due to open at One Maidenhead in July
 Status hint: Opening | Industry: Convenience Stores / Distributors
+Published: 2026-05-03 23:01:00
 
-Ascot car dealership manager honoured at national automotive awards
+‘Cookham made sense’ for new High Street salon, says Marlow hair stylist
 
 --- Article 150 ---
 URL: https://www.insauga.com/3-restaurants-that-opened-in-mississauga-and-brampton-in-april-2026/
 Title: 3 restaurants that opened in Mississauga and Brampton in April 2026
 Status hint: Opening | Industry: Restaurants
+Published: 2026-05-03 20:31:28
 
 [Could not fetch: 403 Client Error: Forbidden for url: https://www.insauga.com/3-restaurants-that-opened-in-mississauga-and-brampton-in-april-2026/]
 
@@ -111,6 +122,7 @@ Status hint: Opening | Industry: Restaurants
 URL: https://www.msn.com/en-us/food-and-drink/general/new-specialty-grocery-store-to-open-doors-in-mission-viejo/ar-AA21QsCv?ocid=BingNewsVerp&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
 Title: New specialty grocery store to open doors in Mission Viejo
 Status hint: Opening | Industry: Grocery
+Published: 2026-05-03 20:26:15
 
 MSN
 
@@ -118,6 +130,7 @@ MSN
 URL: https://www.msn.com/en-us/travel/news/figs-the-quaint-byob-in-fairmount-is-closing-after-25-years-and-a-new-restaurant-is-moving-in/ar-AA22esRK?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
 Title: Figs, the quaint BYOB in Fairmount, is closing after 25 years, and a new restaurant is moving in
 Status hint: Opening | Industry: Restaurants
+Published: 2026-05-03 18:30:16
 
 MSN
 
@@ -125,6 +138,7 @@ MSN
 URL: https://www.travelandtourworld.com/news/article/casa-mani-resorts-opening-in-downtown-napa-valley-a-game-changer-for-local-tourism-and-the-hospitality-landscape-all-you-need-to-know/
 Title: Casa Mani Resort’s Opening In Downtown Napa Valley A Game Changer For Local Tourism And The Hospitality Landscape: All You Need To Know
 Status hint: Opening | Industry: Hospitality
+Published: 2026-05-03 18:30:07
 
 [Could not fetch: 403 Client Error: Forbidden for url: https://www.travelandtourworld.com/news/article/casa-mani-resorts-opening-in-downtown-napa-valley-a-game-changer-for-local-tourism-and-the-hospitality-landscape-all-you-need-to-know/]
 
@@ -132,6 +146,7 @@ Status hint: Opening | Industry: Hospitality
 URL: https://www.mibolsillo.co/mcdonalds-competitors-have-shut-down-hundreds-of-restaurants-nationwide-t202605030023.html
 Title: McDonald's competitors have shut down hundreds of restaurants nationwide
 Status hint: Closing | Industry: Restaurants
+Published: 2026-05-03 18:26:00
 
 
 
@@ -139,6 +154,7 @@ Status hint: Closing | Industry: Restaurants
 URL: https://www.msn.com/en-us/lifestyle/lifestyle-buzz/historic-family-owned-furniture-store-closes-its-doors-after-165-years/ar-AA227jbe?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
 Title: Historic family-owned furniture store closes its doors after 165 years
 Status hint: Closing | Industry: Furniture / Mattress
+Published: 2026-05-03 18:14:43
 
 MSN
 
@@ -146,6 +162,7 @@ MSN
 URL: https://www.msn.com/en-us/money/companies/primark-the-international-fashion-retailer-set-to-open-new-york-flagship-at-herald-square-on-may-8/ar-AA21himw
 Title: Primark, the international fashion retailer, set to open New York flagship at Herald Square on May 8
 Status hint: Opening | Industry: Apparel
+Published: 2026-05-03 18:06:25
 
 MSN
 
@@ -153,6 +170,7 @@ MSN
 URL: https://www.bizjournals.com/triangle/news/2026/05/03/basic-brewing-taproom-restaurant-raleigh-platform.html
 Title: New brewery, restaurant to open in Kane Realty development near Boylan Heights
 Status hint: Opening | Industry: Restaurants
+Published: 2026-05-03 17:14:00
 
 [Could not fetch: 403 Client Error: Forbidden for url: https://www.bizjournals.com/triangle/news/2026/05/03/basic-brewing-taproom-restaurant-raleigh-platform.html]
 
@@ -160,6 +178,7 @@ Status hint: Opening | Industry: Restaurants
 URL: https://www.msn.com/en-us/foodanddrink/foodnews/applebee-s-is-shutting-down-more-restaurant-locations-in-these-3-states/ar-AA1X9nqg?ocid=ob-fb-frfr&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
 Title: Applebee's is shutting down more restaurant locations in these 3 states
 Status hint: Closing | Industry: Restaurants
+Published: 2026-05-03 15:03:33
 
 MSN
 
@@ -167,6 +186,7 @@ MSN
 URL: https://www.chron.com/food/article/house-of-fries-houston-texas-22238906.php
 Title: Beloved Houston restaurant shocks fans with closure after 15 years
 Status hint: Closing | Industry: Restaurants
+Published: 2026-05-03 14:44:19
 
 House of Fries, a longtime Houston, Texas, restaurant, announced it has shuttered on May 1, 2026. Getty Images One of Houston's more iconic eateries has shut down for good, and the announcement it made Friday shocked longtime fans. House of Fries, a staple of Northwest Houston for a generation, closed on May 1. On the same day, it updated its Facebook page with the restaurant's first post in nearly three years. Advertisement Article continues below this ad "Today is our last day," started the post on May 1. "This city has been through some things over the years, and so have we. Through storms, through freezes, through everything in between, we showed up. And every single time, this community showed up right back. That is not something we take lightly." After operating several restaurants over 15 years, Joe and Myriam Nabulsi opened House of Fries in 2011 at 5322 Antoine Dr., close to Pinemont Drive in the Oak Forest neighborhood of Northwest Houston. And while it certainly had fries—including beef nacho fries, chicken fajita fries, Buffalo chicken fries and Philly cheesesteak fries—House of Fries was a full-service breakfast, lunch and dinner spot. Folks could stop by for breakfast tacos in the morning, then return in the afternoon for a double meat burger or signature ABC Burger (avocado, bacon, cheese). Chicken bacon ranch fries at House of Fries in Houston, Texas. Timothy Malcolm/Chron Or maybe you'd want the OMG Burger, which featured a couple bacon fries sandwiched between two patties. Whatever you got, you had to get your fries battered for crispier texture. Advertisement Article continues below this ad "My daughter and I have many memories grabbing breakfast tacos before dropping her at OSL school around the corner," said one Facebook user commenting in the closing announcement post. "Then grabbing dinner to go when picking her up after school." House of Fries is closing because the Nabulsis are finally ready to retire. In the Facebook post on May 1, the rest
 
@@ -174,5 +194,6 @@ House of Fries, a longtime Houston, Texas, restaurant, announced it has shuttere
 URL: http://www.msn.com/en-us/foodanddrink/foodnews/little-caesars-to-open-self-service-restaurant-in-dearborn-heights-this-weekend/ar-AA226r1E?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
 Title: Little Caesars to open self-service restaurant in Dearborn Heights this weekend
 Status hint: Opening | Industry: Restaurants
+Published: 2026-05-03 14:06:52
 
 MSN

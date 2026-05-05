@@ -15,12 +15,13 @@ You are an expert, precise data extractor specialized in retail and restaurant o
 
 📊 Output format
 Create ONE clean Markdown table with these exact column headers (in this order):
-| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
 
 📌 Rules
 • Add one row per article in the order the articles are given
 • If an article contains multiple businesses, create a separate row for each
 • If an article includes both openings and closures, extract each separately
+• For Published Date → copy exactly the value from the "Published:" line in the article metadata
 • If an article has zero relevant business opening or closure information, still include a row with:
   - Store Name: "No qualifying business found"
   - Other columns: "N/A"
@@ -41,6 +42,7 @@ If none, write: None
 URL: https://premierconstructionnews.com/2026/05/04/zannier-ile-de-bendor-now-open-heralding-a-new-era-of-riviera-hospitality/
 Title: Zannier Île de Bendor, now open, heralding a new era of Riviera Hospitality
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 14:32:20
 
 Written by Amy Zannier Île de Bendor, one of Europe’s most highly anticipated openings, is now open, unveiling a new chapter for the storied private island off the coast of Bandol in Provence. Following a meticulous five-year transformation, the revived 93-key destination intertwines heritage and modernity, positioning the seven-hectare isle as the new social, culinary and wellness capital of the French Riviera. A collaboration between Société Paul Ricard and Zannier Hotels, the project honours the enduring vision of Marseille-born pastis pioneer Paul Ricard, who first brought the island to life in 1950 as a convivial gathering place steeped in old-world glamour.  Today, under the stewardship of the Ricard family – represented by great-grandson Marc de Jouffroy – and the vision of Arnaud Zannier, founder of Zannier Hotels, Île de Bendor reclaims its place as a vibrant Mediterranean enclave, reimagined for a new generation. With a joint commitment to restore and preserve its very essence, the Provençal-style village reopens as an elegant 93-key hotel, set across three island locations, complete with a holistic wellbeing centre, dedicated kids’ club, diving centre and a choice of eight dining spaces – including the second outpost of Nonna Bazaar – reframing Paul Ricard’s dream of an island imbued with soul. Zannier Île de Bendor sees distinct styles: Delos, Soukana and Madrague, thoughtfully curated across these three signature settings, all with their own ambience and guest experience. 39-key Delos encapsulates the refined spirit of the 1960s French Riviera, 49-key Soukana centres around wellbeing and reconnection, while five two-storey Madrague houses, former fishermen’s houses each with a private garden, provide authentic Provençal charm for young families near the harbour. Bespoke interiors using natural materials carry the signature of Zannier Design Studio, while the extensive renovation, mindful of preserving what came before, has been led by Hardel Le Bihan Ar
 
@@ -48,6 +50,7 @@ Written by Amy Zannier Île de Bendor, one of Europe’s most highly anticipated
 URL: https://www.msn.com/en-us/money/companies/all-smokey-bones-locations-close-nationwide-after-parent-company-files-for-bankruptcy/ar-AA21Zk8u?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
 Title: All Smokey Bones locations close nationwide after parent company files for bankruptcy
 Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-04 14:32:02
 
 MSN
 
@@ -55,6 +58,7 @@ MSN
 URL: https://www.burlingtontoday.com/local-news/the-burnt-tongue-announces-plans-to-open-here-12230846
 Title: The Burnt Tongue announces plans to open here
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 14:29:53
 
 [Could not fetch: 403 Client Error: Forbidden for url: https://www.burlingtontoday.com/local-news/the-burnt-tongue-announces-plans-to-open-here-12230846]
 
@@ -62,13 +66,15 @@ Status hint: Opening | Industry: Specialty / Other
 URL: https://www.thesun.co.uk/money/39007941/seven-chains-closing-stores-may/
 Title: Full list of seven chains closing stores for good in May
 Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-04 13:52:00
 
-Click to share on Twitter (Opens in new window) Click to share on Facebook (Opens in new window) Comments MAJOR retailers are closing more of their shops for good this month as the high street continues to struggle. Higher costs due to the conflict in the Middle East , increases in National Insurance contributions and the minimum wage have all piled pressure onto their budgets. Sign up for the Money newsletter Thank you! It means some retailers have been forced to axe stores and put expansion plans on hold in order to make ends meet. But it’s worth noting that retailers regularly open and close shops for a number of reasons, not just because they are struggling. Advertisement For example, they may have a store nearby that is performing better. Meanwhile, it could be that they want to move to a location that has a higher footfall, such as a retail park. Read more on store closures SALE AWAY Major clothing chain with over 300 stores is ending ‘everything must go sale’ GLITTER GONE High street accessory giant shuts all stores with 1,300 jobs axed Here is a full list of shops we know are shutting in May 2026. Cancer Research UK Charity shop chain Cancer Research UK is set to close 90 charity shops by the end of next month , with a further 100 more to close by April 2027. Shops in Birmingham , Bolton, Lancaster and Swindon are among the list of those being axed. The chain said rising costs and changing shopping habits are the reason for the closures. Most read in Money CHECK IT OUT Lidl rolls out biggest ever change to loyalty scheme - as popular perk axed BERRY GOOD Aldi announces major fruit change in ALL stores - and it's dropping this month GREGG-CELLENT Greggs reveals menu shake-up with 7 new items - plus return of ‘divine’ bake THAT’S A WRAP The Real Greek confirms 9 restaurants shutting in UK with over 150 jobs axed In order for the charity to focus on its research it has to close shops. The organisation plans to reduce the number of shops it has to just 320 “high
+Click to share on Twitter (Opens in new window) Click to share on Facebook (Opens in new window) Comments MAJOR retailers are closing more of their shops for good this month as the high street continues to struggle. Higher costs due to the conflict in the Middle East , increases in National Insurance contributions and the minimum wage have all piled pressure onto their budgets. Sign up for the Money newsletter Thank you! It means some retailers have been forced to axe stores and put expansion plans on hold in order to make ends meet. But it’s worth noting that retailers regularly open and close shops for a number of reasons, not just because they are struggling. Advertisement For example, they may have a store nearby that is performing better. Meanwhile, it could be that they want to move to a location that has a higher footfall, such as a retail park. Read more on store closures SALE AWAY Major clothing chain with over 300 stores is ending ‘everything must go sale’ GLITTER GONE High street accessory giant shuts all stores with 1,300 jobs axed Here is a full list of shops we know are shutting in May 2026. Cancer Research UK Charity shop chain Cancer Research UK is set to close 90 charity shops by the end of next month , with a further 100 more to close by April 2027. Shops in Birmingham , Bolton, Lancaster and Swindon are among the list of those being axed. The chain said rising costs and changing shopping habits are the reason for the closures. Most read in Money BRAKE POINT Major UK car finance firm 'on brink of COLLAPSE' amid £9bn compensation scheme MARKS & SPENDER M&S reveals biggest EVER food store coming to ancient UK town this summer CAFFEINE RUSH Pret finally launches its first ever drive-thru off major UK motorway CHECK IT OUT Lidl rolls out biggest ever change to loyalty scheme - as popular perk axed In order for the charity to focus on its research it has to close shops. The organisation plans to reduce the number of shops it has to just 320 “high-perfor
 
 --- Article 45 ---
 URL: https://www.prlog.org/13143478-sleep-basil-mattress-co-launches-new-location-page-for-cherry-hills-village-shoppers.html
 Title: Sleep Basil Mattress Co. Launches New Location Page for Cherry Hills Village Shoppers -
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 13:34:08
 
 Mattress Store Cherry Hills Village Colorado DENVER - May 4, 2026 - PRLog -- Designed as a practical guide, the page introduces visitors to Sleep Basil's Denver showroom, its curated mattress selection, personalized consultation process, and complimentary delivery service. Located just minutes from Cherry Hills Village, Sleep Basil is a locally owned, owner-operated showroom. Every visit is handled directly by founders Phil and Josh , not commissioned sales staff. With more than 25 years of combined industry experience, Phil and Josh bring deep, hands-on knowledge to every consultation. As Phil explains: "Josh and I genuinely enjoy helping people. Seeing someone who's struggled with sleep for years finally get good rest, it's one of the most fulfilling parts of our job." The Cherry Hills Village page outlines exactly what customers can expect from a Sleep Basil visit: A different kind of showroom The space is intentionally calm and unhurried, designed to help customers focus on what actually matters: how a mattress feels. A simple, guided consultation Phil or Josh will ask a few key questions about sleep position, temperature preferences, and partner movement. From there, they narrow the options to two or three mattresses that truly fit, then give customers space to test each one properly. A confident outcome Customers leave knowing they made the right choice. Sleep Basil's track record supports this: just one comfort exchange since opening, compared to industry return rates that can reach up to 40% for online mattress brands. The page also features verified reviews from customers in and around Cherry Hills Village, along with a detailed FAQ section covering financing options, delivery and setup and what to expect during a visit Those ready to experience a more thoughtful, pressure-free way to shop can explore the Cherry Hills Village page to get directions to the Denver showroom, learn more about the process, or reach out directly with any questions (https://sleepb
 
@@ -76,6 +82,7 @@ Mattress Store Cherry Hills Village Colorado DENVER - May 4, 2026 - PRLog -- Des
 URL: https://atlanta.urbanize.city/post/ladybird-westside-fum-rabbit-ears-stella-near-opening-images
 Title: Warehouse remake Ladybird Westside approaches grand opening
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 13:28:51
 
 A popular Old Fourth Ward restaurant and watering hole is weeks away from opening its second location in a transformed industrial space in West Midtown, marking one of several Star Metals District debuts timed to take advantage of 2026 FIFA World Cup crowds. LadyBird Westside, a new counterpart to the Beltline-adjacent eastside establishment, plans to open prior to June 14 to capture anticipated World Cup foot traffic, project reps tell Urbanize Atlanta. Next door to Ladybird, a high-end cocktail bar called Incognito is also on pace to open by June 14. Ladybird is expected to consume a full 1-acre parcel for several years within today’s larger, 3.3-acre Star Metals District. Designs unveiled last year by developer The Allen Morris Company depict Ladybird Westside as a leafy, largely open-air, adaptive-reuse complex tucked just east of Howell Mill Road in the Marietta Street Artery neighborhood. Planned look of Ladybird frontages along 11th Street. Royal Byckovas; via The Allen Morris Company Fresh rendering depicting interior hangout spaces at Ladybird. Royal Byckovas; via The Allen Morris Company Plans call for transforming an existing warehouse and parking lots into a “dynamic indoor-outdoor destination” with open walls and subtracted roofs, murals lining the façade, and large greenspaces. Expect a beer garden and full kitchen and bar for “a lively gathering spot unlike anything else in the area,” Allen Morris officials have said. Ladybird and the cocktail bar will operate across the street from the front doorstep of the 327-unit Stella at Star Metals tower , which wrapped construction last year. The tower’s design, as led by Oppenheim Architecture, features a curved, copper-toned facade that nods to the area’s former life as a metalworks site. As seen in January 2025, frontages along Edgehill Avenue for buildings that will become Ladybird. Google Maps Planned look of Ladybird's Edgehill Avenue facade at Star Metals. Royal Byckovas; via The Allen Morris Company Th
 
@@ -83,6 +90,7 @@ A popular Old Fourth Ward restaurant and watering hole is weeks away from openin
 URL: https://www.aol.com/news/aldi-testing-store-design-us-090909664.html
 Title: Aldi testing new store design in US. What NY shoppers should know
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 12:29:04
 
 Madison Scott, New York Connect Team Mon, May 4, 2026 at 9:09 AM UTC 0 Aldi shoppers may notice some changes within stores in New York and across the United States as the German discount grocery chain begins testing a redesigned store format with new signage, pricing language and updated visuals. Aldi South , which operates stores in Germany, Austria, Switzerland, Slovenia, Hungary, Italy, the United Kingdom, Ireland, the United States, Australia, and China, has been working on these updates as part of a broader effort to give the stores a more consistent look globally. Landini Associates , an Australian design and brand consultant agency, has been working with Aldi South to create a new format that can be adapted for all 11 countries, including the United States, the agency's website states. Here is what we know about the store changes so far, and what that could mean for New York shoppers. What will change in Aldi stores? Aldi's new store format that is being tested in stores, starting in Aventura, Florida, in September 2025. Brand consultant Landini Associates designed the format, which includes clearer messaging around everyday low prices and rotating daily specials. According to Landini Associates, their 14-year collaboration with Aldi South has worked to reinvent Aldi Australia's trading format, created Aldi's market entry format for China and invented the Aldi Corner Store, which is a smaller and local model for Australia. All of this work, the Australian agency says, has culminated into the "delivery of a singular global trading format" that can be adaptable for different store formats and structure types for the brand's stores around the world, according to its website. According to Forbes , the new store model has a flexible design that will allow Aldi to test out different formats and layouts. This could include the smaller, corner-store-style locations, like the ones in Australia, which could allow the company to open stores in urban areas and smaller ma
 
@@ -90,6 +98,7 @@ Madison Scott, New York Connect Team Mon, May 4, 2026 at 9:09 AM UTC 0 Aldi shop
 URL: http://www.msn.com/en-us/foodanddrink/foodnews/curry-a-la-flamb%C3%A9-now-open-in-glen-ellyn/ar-AA1OnOt9?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
 Title: Curry a la Flambé​ Now Open In Glen Ellyn
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 12:08:58
 
 MSN
 
@@ -97,6 +106,7 @@ MSN
 URL: https://www.msn.com/en-us/money/companies/applebee-s-franchisee-files-for-bankruptcy-and-closes-10-locations-plus-53-more-at-risk/ar-AA21UPCb?ocid=BingNewsVerp
 Title: Applebee’s franchisee files for bankruptcy and closes 10 locations (plus 53 more at risk)
 Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-04 11:40:52
 
 MSN
 
@@ -104,6 +114,7 @@ MSN
 URL: https://www.msn.com/en-us/money/companies/beloved-candy-store-lammes-abruptly-closing-all-locations-after-141-years/ar-AA220bQU?gemSnapshotKey=GM60D23F01-snapshot-18&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
 Title: Beloved candy store Lammes abruptly closing all locations after 141 years
 Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-04 11:36:32
 
 MSN
 
@@ -111,6 +122,7 @@ MSN
 URL: https://www.getsurrey.co.uk/news/surrey-news/marks-and-spencer-stores-surrey-33883477
 Title: Marks and Spencer confirms opening of 5 new stores
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 09:20:00
 
 Marks and Spencer confirms opening of 5 new stores — including 2 in Surrey Marks and Spencer is expanding across the UK with five new stores as part of a £90million investment plan Comments News Andrea Blazquez 10:20, 04 May 2026 View 2 Images Marks and Spencer confirms opening of 5 new stores — including 2 in Surrey (Image: Marks and Spencer) Marks and Spencer has unveiled four new locations across the UK, including full-line stores and food halls, with a further opening in Surrey anticipated this summer. The British retailer's latest addition opened its doors last week at Fairacres Retail Park in Abingdon, Oxfordshire, with shoppers queuing outside to be the first in. ‌ The Fairacres branch, which has created 75 new jobs, forms part of M&S's £90million investment programme, which will launch brand-new supermarkets and refurbish 11 existing stores. ‌ The two new Marks and Spencer stores in Surrey are located in Farnham and Godalming. ‌ The new food halls feature produce from M&S's Select Farm partners, alongside an in-store bakery, coffee counter, and Hot Chicken Counter. Shoppers can also browse a dedicated Flower and Wine shop, stocked with Flower Market Specials and award-winning wines. View 2 Images The new M&S branch in Oxfordshire has created 75 jobs. (Image: Marks and Spencer) ‌ Fairacres Store Manager Paddy Sunderland commented: "I grew up locally so it feels really special to be opening a brand-new store in Abingdon today. "The team have done an amazing job getting the store ready and we're proud to bring the very best of M&S Food - from trusted value to exceptional quality - to customers. "We have everything customers need for their shopping list at the store including our Bigger Pack Better Value range, which is perfect for families." Article continues below Full list of new M&S stores opening in 2026 Hatfield Oldings Corner (food) - open Luton Bramingham (food) - open Farnham, Surrey (food) - open Abingdon Fairacres (food) - open Godalming, Surrey (food
 
@@ -118,6 +130,7 @@ Marks and Spencer confirms opening of 5 new stores — including 2 in Surrey Mar
 URL: https://www.theguardian.com/travel/2026/may/04/naples-italy-rione-sanita-neighbourhood
 Title: ‘Neighbourhood renaissance’: once noble La Sanità in Naples is open for business again
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 06:00:00
 
 The elaborate staircase of the rococo Palazzo dello Spagnolo, built in 1738. Photograph: Wirestock, Inc./Alamy View image in fullscreen The elaborate staircase of the rococo Palazzo dello Spagnolo, built in 1738. Photograph: Wirestock, Inc./Alamy ‘Neighbourhood renaissance’: once noble La Sanità in Naples is open for business again After decades in the shadows, the residents of this historic quarter came together to launch local businesses and make the area an attractive proposition once more Why go now My favourite way to enter Rione Sanità is by elevator: descending from a bridge into cobblestoned streets buzzing with mopeds and flanked by opulent but decaying 18th-century palazzi. Through the grand doorways of these once noble palaces are courtyards where bakers, butchers, cobblers and the odd contraband cigarette vendor do business. La Sanità – to the locals – is a thriving working-class district with a grand history. In the 17th century, the Spanish viceroys took a fancy to the area perched on the hill above the dense and crowded streets of the old town. Its name, which translates as “healthy district”, reflected a cleaner reputation (rainfall ran downhill, depositing debris and waste in the historic centre below). They built vast houses here in the 18th century (see Palazzo dello Spagnolo and Palazzo San Felice ), with architects vying for attention as the court passed through to Capodimonte, the royal summer residence above the city. Business flourished until Napoleon arrived in the early 19th century, found the route too slow, and built the overpass that eventually suffocated the area and left it fighting for its life. Emboldened by one too many fatal gang wars and a blighted reputation, local residents came together several years ago to form associations such as Napoli in Vita , with the aim of opening up the area, supporting local business and creating employment. The result is a neighbourhood renaissance led by the community for the community, which has q
 
@@ -125,6 +138,7 @@ The elaborate staircase of the rococo Palazzo dello Spagnolo, built in 1738. Pho
 URL: https://www.msn.com/en-us/money/companies/mcdonald-s-plans-to-open-900-new-stores-by-2027-will-you-get-one/ar-AA1GSl0a?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
 Title: McDonald’s Plans To Open 900 New Stores by 2027 (Will You Get One?)
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 05:48:01
 
 MSN
 
@@ -132,6 +146,7 @@ MSN
 URL: https://www.candgnews.com/news/sheetz-set-for-may-8-grand-opening-10912
 Title: Sheetz set for May 8 grand opening
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 05:00:00
 
 Sheetz set for May 8 grand opening CLOSE [X] Contact Us | Employee Resources Publication select ▼ Birmingham-Bloomfield Eagle Farmington Press Fraser-Clinton Chronicle Grosse Pointe Times In-Focus Advertorial Macomb Chronicle Madison-Park News Metro Mount Clemens-Clinton-Harrison Journal Novi Note Rochester Post Roseville-Eastpointe Eastsider Royal Oak Review Shelby-Utica News Southfield Sun St. Clair Shores Sentinel Sterling Heights Sentry Troy Times Warren Weekly West Bloomfield Beacon Woodward Talk Advertise with us News ▼ Business & Development Features Government In-Focus Advertorial Latest News Police, Courts & Fire Schools Sports The Friday Five Calendar E-Editions Contests Legal Notices Galleries Classifieds Pieces from the former State Bank of Fraser building facade are incorporated in the new Sheetz site. Photo by Patricia O'Blenes Sheetz set for May 8 grand opening By: Gary Winkelman | Fraser-Clinton Chronicle | Published May 4, 2026 Advertisement FRASER — The long-awaited launch of a gas station/convenience store on the site of a former city landmark is nearly here. Sheetz has set Friday, May 8, as the debut day for its new site at the southeast corner of Utica and 14 Mile roads. A grand opening celebration featuring giveaways and a ceremonial ribbon-cutting is scheduled from 9 a.m. to 11 a.m. The Pennsylvania-based company, which is making an aggressive push into Michigan, is also opening an outlet in Taylor on May 8. “Opening our ninth and 10th store in Michigan is a major step forward in Sheetz’s continued growth,” Sheetz Regional Real Estate Director Justin Mandel said in a news release. “Southeast Michigan represents an important region for us, and two stores opening on the same day reflects the strong momentum behind our expansion as we invest in new communities, create jobs, and bring the Sheetz experience to more customers across this area.” Sheetz’s Fraser location will be open 24 hours providing fuel, food and other offerings. The company says 
 
@@ -139,6 +154,7 @@ Sheetz set for May 8 grand opening CLOSE [X] Contact Us | Employee Resources Pub
 URL: https://langleyadvancetimes.com/sponsored-content/the-official-jewellery-partner-of-team-canada-opens-new-store-in-langley/
 Title: The Official Jewellery Partner of Team Canada opens new store in Langley
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 04:48:02
 
 Hillberg & Berk’s vast selection of jewellery pieces are designed to be mixed, layered and worn from everyday moments to special occasions. Photo courtesy Hillberg & Berk.
 
@@ -146,6 +162,7 @@ Hillberg & Berk’s vast selection of jewellery pieces are designed to be mixed,
 URL: https://www.msn.com/en-us/money/companies/beloved-barbecue-chain-closing-locations-nationwide-following-bankruptcy-filing/ar-AA22iB8s?gemSnapshotKey=GM484D9F0D-snapshot-2&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
 Title: Beloved barbecue chain closing locations nationwide following bankruptcy filing
 Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-04 00:47:33
 
 MSN
 
@@ -153,6 +170,7 @@ MSN
 URL: https://www.travelandtourworld.com/news/article/minor-hotels-signs-anantara-somabay-resort-residences-expanding-in-egypts-red-sea-destination/
 Title: Minor Hotels Signs Anantara Somabay Resort & Residences, Expanding in Egypt’s Red Sea Destination: What You Need To Know
 Status hint: Opening | Industry: Hospitality
+Published: 2026-05-03 23:25:43
 
 [Could not fetch: 403 Client Error: Forbidden for url: https://www.travelandtourworld.com/news/article/minor-hotels-signs-anantara-somabay-resort-residences-expanding-in-egypts-red-sea-destination/]
 
@@ -160,6 +178,7 @@ Status hint: Opening | Industry: Hospitality
 URL: https://whatnow.com/memphis/restaurants/playa-bowls-sets-grand-opening-for-collierville-location/
 Title: Playa Bowls Sets Grand Opening for Collierville Location
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-03 22:32:45
 
 Playa Bowls (Image credit: @Playa Bowls on Facebook) SHARE The Collierville dining scene is about to get a little taste of the Garden State. Popular New Jersey-based chain Playa Bowls is opening a new location in the Water Tower District at Schilling Farms later this month, and it’s providing plenty of incentives to check out its arrival, reports Daily Memphian . Helmed by franchisees Amy Lupo and Jack Speed, Playa Bowls will be bringing acai bowls, smoothies, juice, and other healthy treats to 1335 W. Poplar Avenue. Playa Bowls will be holding the grand opening for its Collierville storefront on Saturday, May 9, starting at 11 am. Future regulars will want to set their alarms and ensure they arrive at the festivities early; the first 100 guests in line will win free bowls and t-shirts. This will be Lupo and Speed’s fourth area location, joining stores in East Memphis, Arlington, and Orleans Station. Even more may be in the pipeline-Speed tells Memphis Business Journal : “The quality of the product has us convinced that we can develop this entire territory — the entire Memphis area — and multiple stores will be needed.” Playa Bowls has been serving up healthier fast-casual cuisine to health conscious customers since 2014. The chain has tapped into a growing desire among diners for more nutritious options and in doing so has expanded to more than 300 locations. Love our content? Add WhatNow as a preferred source on Google to see more of our trusted coverage when you search. 1335 W Poplar Ave, Collierville, TN 38017 Be the First to Know From new restaurant openings to exciting retail launches and real estate insights, be the first to know what’s happening in Memphis Subscribe & Stay Ahead Share This Article Facebook Copy Link Print By Kelly Mintzer Follow: Kelly Mintzer is a freelance writer in the greater Philadelphia area. She's been delighted to write about the Philly and DC restaurant scenes for What Now Media since 2023. Additionally, she writes about genre media
 
@@ -167,6 +186,7 @@ Playa Bowls (Image credit: @Playa Bowls on Facebook) SHARE The Collierville dini
 URL: https://www.msn.com/en-us/health/healthtrending/historic-candy-store-chain-closing-all-locations-after-141-years/ar-AA220N3X?cvid=69f68bc35ecd4040bf542712f36d8baf&ocid=iehps&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
 Title: Historic candy store chain closing all locations after 141 years
 Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-03 20:06:07
 
 MSN
 
@@ -174,5 +194,6 @@ MSN
 URL: https://www.sooleader.com/local-news/soo-locks-visitor-center-now-open-for-the-season-12226367
 Title: Soo Locks Visitor Center now open for the season
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-03 19:50:09
 
 [Could not fetch: 403 Client Error: Forbidden for url: https://www.sooleader.com/local-news/soo-locks-visitor-center-now-open-for-the-season-12226367]

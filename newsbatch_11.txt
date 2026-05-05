@@ -15,12 +15,13 @@ You are an expert, precise data extractor specialized in retail and restaurant o
 
 📊 Output format
 Create ONE clean Markdown table with these exact column headers (in this order):
-| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
 
 📌 Rules
 • Add one row per article in the order the articles are given
 • If an article contains multiple businesses, create a separate row for each
 • If an article includes both openings and closures, extract each separately
+• For Published Date → copy exactly the value from the "Published:" line in the article metadata
 • If an article has zero relevant business opening or closure information, still include a row with:
   - Store Name: "No qualifying business found"
   - Other columns: "N/A"
@@ -41,6 +42,7 @@ If none, write: None
 URL: https://www.irvinestandard.com/2026/blk-dot-coffee-opens-alton-location/
 Title: BLK Dot Coffee opens Alton location
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 19:08:25
 
 Dining BLK Dot Coffee opens Alton location May 4, 2026 Irvine’s thriving coffee scene is getting a fresh jolt with the opening of BLK Dot Coffee at Alton Retail Center. The new spot expands the brand’s strong local presence, joining its popular Irvine outposts at Irvine Spectrum Center and The Market Place. BLK Dot is famous for its signature VTM coffee, crafted using a “phin” – a traditional metal filter that slow-drips the brew one drop at a time over ice and condensed milk. The result is a bold, clean cup that is stronger than espresso and smoother than cold brew, without heavy acidity. Fans online rave about the bold flavors and hearty, locally sourced food offerings, with the hot honey avocado toast and the Ultimate Brekkie Bowl standing out as fast favorites. Popular Articles Celebrity chef brings star power to new Irvine food hall Marble Steakhouse is a cut above the rest What’s new in Irvine’s culinary scene Subscribe to get the latest stories and community news from Irvine Standard delivered straight to your inbox. " * " indicates required fields More from Irvine Standard The Dish highlights area’s best eats Irvine food lovers now have a new way to discover their next unforgettable meal with the launch of The Dish … Spring fling: 4 places to celebrate this season It has been said that spring is nature’s way to say “Let’s party!” For the culinarily inclined, that translates to … On a roll for spring Originally a pancake known as the spring dish, the spring roll has existed in China for 1,500 years. It continues … Din Tai Fung brings iconic dumplings to Irvine The popular, family-owned restaurant is now open in a spacious new location at Spectrum Center
 
@@ -48,6 +50,7 @@ Dining BLK Dot Coffee opens Alton location May 4, 2026 Irvine’s thriving coffe
 URL: https://www.msn.com/en-us/money/companies/here-s-where-new-in-n-out-locations-are-opening-next/ar-AA1ZWf7h?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
 Title: Here’s where new In-N-Out locations are opening next
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 18:42:41
 
 MSN
 
@@ -55,13 +58,15 @@ MSN
 URL: https://www.the-sun.com/money/16312231/jpmorgan-chase-bank-replacing-rite-aid-dayton-ohio/
 Title: JPMorgan Chase snaps up vacant Rite Aid location and swings doors open to sprawling 25,000-square-foot branch
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 18:37:03
 
-Click to share on Twitter (Opens in new window) Click to share on Facebook (Opens in new window) Comments CHASE Bank has bought a lot previously owned by the struggling pharmacy chain Rite Aid. Rite Aid has sold many of its lots to retail rivals, including Goodwill and Dollar Tree . Sign up for the Money newsletter Thank you! The latest Rite Aid to be lost to competitors is one in Dayton, Ohio . Chase Bank is expected to open the new branch this fall. Advertisement Dayton’s planning commission unanimously approved plans for the new 3,477-square-foot Chase Bank at the end of last month. It’s set to have a 25,000-square-foot parking lot, a drive-up ATM, and a bike rack. read more on chase bank GRAB YOUR WALLET Full list of Chase Bank's monthly fees including single charge up to $95 MONEY TALKS Chase Bank chief reacts to warnings over new $6.6 trillion banking change When the spot is converted to a bank, Chase will close one of its nearby locations in the city. Now that the plans have been approved, Chase Bank needs to seek a Certificate of Zoning Compliance and initiate the building permit process. Rite Aid exited the location in 2024 before filing for Chapter 11 bankruptcy last year, its second in two years. The pharmacy chain has gone through several rounds of closures since its bankruptcy . Most read in Money SHOP SHAKEUP Walmart shelves will look different under a new bill targeting everyday items CHECKED OUT Walmart ends self-checkouts at one store as it plans to remodel 650 locations PAY PAINS All 2,021 Home Depot locations brace for $25 policy under new 'rate' bill COST-LY DECISION Costco to uphold $15 minimum policy without exception in US city Meanwhile, Chase Bank is changing its operation this year, including closing many of its branches. Chase Bank branches closing this year 257 Pine Avenue, Long Beach, California 401 E. Ocean Boulevard, Long Beach, California 4225 East Towne Boulevard, Madison, Wisconsin 2314 N. Chester Avenue, Bakersfield, California 556
+Click to share on Twitter (Opens in new window) Click to share on Facebook (Opens in new window) Comments CHASE Bank has bought a lot previously owned by the struggling pharmacy chain Rite Aid. Rite Aid has sold many of its lots to retail rivals, including Goodwill and Dollar Tree . Sign up for the Money newsletter Thank you! The latest Rite Aid to be lost to competitors is one in Dayton, Ohio . Chase Bank is expected to open the new branch this fall. Advertisement Dayton’s planning commission unanimously approved plans for the new 3,477-square-foot Chase Bank at the end of last month. It’s set to have a 25,000-square-foot parking lot, a drive-up ATM, and a bike rack. read more on chase bank GRAB YOUR WALLET Full list of Chase Bank's monthly fees including single charge up to $95 MONEY TALKS Chase Bank chief reacts to warnings over new $6.6 trillion banking change When the spot is converted to a bank, Chase will close one of its nearby locations in the city. Now that the plans have been approved, Chase Bank needs to seek a Certificate of Zoning Compliance and initiate the building permit process. Rite Aid exited the location in 2024 before filing for Chapter 11 bankruptcy last year, its second in two years. The pharmacy chain has gone through several rounds of closures since its bankruptcy . Most read in Money PAY PAINS All 2,021 Home Depot locations brace for $25 policy under new 'rate' bill SHOP SHAKEUP Walmart shelves will look different under a new bill targeting everyday items CHECKED OUT Walmart ends self-checkouts at one store as it plans to remodel 650 locations PAID MORE Every Texas Roadhouse in US state must follow $10.98 policy from Sept 30 Meanwhile, Chase Bank is changing its operation this year, including closing many of its branches. Chase Bank branches closing this year 257 Pine Avenue, Long Beach, California 401 E. Ocean Boulevard, Long Beach, California 4225 East Towne Boulevard, Madison, Wisconsin 2314 N. Chester Avenue, Bakersfield, California 55
 
 --- Article 204 ---
 URL: https://www.bizjournals.com/orlando/news/2026/05/04/rocket-fizz-to-close-winter-park.html
 Title: Longtime Park Avenue shop to close in Winter Park. Here’s what may replace it.
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 18:28:00
 
 [Could not fetch: 403 Client Error: Forbidden for url: https://www.bizjournals.com/orlando/news/2026/05/04/rocket-fizz-to-close-winter-park.html]
 
@@ -69,6 +74,7 @@ Status hint: Opening | Industry: Specialty / Other
 URL: https://www.postbulletin.com/business/mcalisters-deli-to-open-its-first-rochester-location-on-may-11
 Title: McAlister’s Deli to open its first Rochester location on May 11
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 18:21:19
 
 [Could not fetch: 403 Client Error: Forbidden for url: https://www.postbulletin.com/business/mcalisters-deli-to-open-its-first-rochester-location-on-may-11]
 
@@ -76,6 +82,7 @@ Status hint: Opening | Industry: Specialty / Other
 URL: https://libn.com/2026/05/04/nassau-financial-opens-first-suffolk-county-branch/
 Title: Nassau Financial opens its first Suffolk County branch
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 18:16:59
 
 
 
@@ -83,6 +90,7 @@ Status hint: Opening | Industry: Specialty / Other
 URL: https://www.wfaa.com/article/news/local/h-e-b-announces-opening-date-for-new-mid-cities-store/287-b24ada5f-9078-4486-88ef-8e67d380fcd8
 Title: H-E-B announces opening date for new Mid-Cities store
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 18:06:00
 
 Local News H-E-B announces opening date for new Mid-Cities store H-E-B's newest store in Euless will open later this month, the grocery chain announced. H-E-B holding job fairs for new locations. EULESS, Texas — H-E-B' s newest North Texas store has an official opening date, the grocer said. The new Mid-Cities location will open to the public at 6 a.m. on Wednesday, May 20, at 2105 Rio Grande Blvd in Euless, the retailer said in a press release. H-E-B broke ground on the store in November, 2024. The store will include a full-service H-E-B Pharmacy with a drive-thru, True Texas BBQ restaurant, and H-E-B Curbside and home delivery, H-E-B previously announced. The location will also have a fuel station with a car wash. Grand opening celebrations will include a celebration with corporate and local leaders, H-E-B said. More in Local New Southlake Town Square tenants include multiple firsts for Tarrant County Big neighborhoods, retail centers follow explosive growth to Forney Close Ad
 
@@ -90,6 +98,7 @@ Local News H-E-B announces opening date for new Mid-Cities store H-E-B's newest 
 URL: https://www.popville.com/2026/05/dc-bouldering-project-opening-second-location-columbia-heights/
 Title: HUGE NEWS: Bouldering Project opening a second location in Columbia Heights!!
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 18:05:22
 
 14th and Irving Street, NW back in 2005 Boom! Thanks to all who passed on from the Bouldering Project : “We’re excited to share some big news: Bouldering Project has signed a lease to open a second climbing gym in Washington, DC, located at DC USA Mall in Columbia Heights. This new location, which will provide easy Metro access as well as ample parking, will offer expansive bouldering terrain, energizing fitness and yoga spaces, welcoming youth areas, and plenty of room to gather and hang out. Best of all, membership includes access to all Bouldering Project gyms, which means members will have access to two gyms within Washington, DC. We’re also gearing up to make some meaningful investments in our Eckington gym . Watch for exciting updates to come including locker room improvements, new fitness equipment, and fresh climbs arriving later this year. Thanks for being part of our community — we can’t wait to continue growing with you. See you on the wall.” From IG: “We’ve signed a lease to open a second Bouldering Project gym in Columbia Heights. This new location, which will provide easy Metro access as well as ample parking, will offer expansive bouldering terrain, energizing fitness and yoga spaces, welcoming youth areas, and plenty of room to gather and hang out. Best of all, membership includes access to all Bouldering Project gyms, which members will have access to two gyms within Washington, DC. We’re also gearing up to make some meaningful investments in our Eckington gym. Watch for exciting updates to come including locker room improvements, new fitness equipment, and fresh climbs arriving later this year.” From their website: “We’re stoked to welcome our second location to Washington, D.C. – Bouldering Project Columbia Heights. Like our other Bouldering Project locations, this new gym will be beautifully designed by our in-house team, offering world-class bouldering terrain, a functional fitness area with brand new equipment, and a fresh yoga studio. We’re al
 
@@ -97,6 +106,7 @@ Status hint: Opening | Industry: Specialty / Other
 URL: https://www.prnewswire.com/news-releases/burn-boot-camp-expands-dc-metro-presence-with-new-bethesda-location-302761670.html
 Title: Burn Boot Camp Expands D.C. Metro Presence with New Bethesda Location
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 18:05:00
 
 New Bethesda gym builds on Burn Boot Camp's growing footprint while serving an expanding local fitness community BETHESDA, Md. , May 4, 2026 /PRNewswire/ -- Burn Boot Camp , a nationwide leader in fitness and community-focused training, has announced the opening of a new Burn Boot Camp location in Bethesda on April 27, 2026. The new gym is located at 5425 Wisconsin Avenue and will offer Burn Boot Camp's signature high-energy workouts, expert training and supportive community. Burn Boot Camp is known for its empowering approach to fitness, offering 45-minute camps designed for all fitness levels, complimentary childwatch and a focus on strength, conditioning and confidence, both inside and outside the gym. The new Burn Boot Camp Bethesda location is owned and operated by local franchise partners Meg and Gerald Agyin. "We're excited to continue growing Burn Boot Camp's presence in the D.C. metro area with the opening of our new Bethesda location," said Amber Burke, chief operating officer of Burn Boot Camp. "This community has shown strong demand for our approach to fitness, and this new location allows us to support even more members with the training, accountability and sense of connection that define the Burn experience. We're proud to partner with passionate franchise owners to bring that experience to life in Bethesda." For more information about Burn Boot Camp Bethesda, camp schedules or membership options, visit burnbootcamp.com/locations/bethesda-md . About Burn Boot Camp Founded in 2012 by husband wife duo Devan and Morgan Kline, Burn Boot Camp is a U.S.-based fitness franchise that helps women and their families build strength, confidence and healthy lifestyles. With unlimited 45-minute circuit style camps, complimentary childwatch, and a proprietary floating floor designed to protect joints and help prevent injury, Burn Boot Camp serves over 145,000 members nationwide. The brand has more than 400 locations open and over 620 open and awarded territories comb
 
@@ -104,6 +114,7 @@ New Bethesda gym builds on Burn Boot Camp's growing footprint while serving an e
 URL: https://www.bizjournals.com/baltimore/news/2026/05/04/natural-market-timonium-closing-juice-bar.html
 Title: Juice bar and market to close after 38 years
 Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-04 18:03:00
 
 [Could not fetch: 403 Client Error: Forbidden for url: https://www.bizjournals.com/baltimore/news/2026/05/04/natural-market-timonium-closing-juice-bar.html]
 
@@ -111,6 +122,7 @@ Status hint: Closing | Industry: Specialty / Other
 URL: https://patch.com/new-jersey/across-nj/major-clothing-retailer-new-jersey-closing-150-u-s-stores
 Title: Major Clothing Retailer In New Jersey Closing 150 U.S. Stores
 Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-04 17:53:14
 
 Business & Tech Major Clothing Retailer In New Jersey Closing 150 U.S. Stores The children's clothier is closing locations nationwide this year in a bid to stay afloat after being battered by tariffs. Alexis Tarrazi , Patch Staff Posted Mon, May  4, 2026 at 1:53 pm ET A popular mall retailer with stores in New Jersey is closing 150 locations nationwide this year in a bid to stay afloat after being battered by tariffs. The children’s clothier Carter’s has not disclosed what stores will be shuttered but said in a press release that stores would close as their leases expired as part of its turn-around push. Atlanta-based Carter’s, which also operates the OshKosh and B’Gosh labels, has 21 stores in New Jersey. Find out what's happening in Across New Jersey for free with the latest updates from Patch. 1255 Raritan Road, Unit #160, Clark 852 State Route 3, Suite 234, Clifton 374 State Route 10, East Hanover 17 The Promenade, Edgewater 651 Kapkowski Rd., #2008, Elizabeth 3710 US 9, Space B112, Freehold 222 Passaic Street, Garfield 420 Marketplace Boulevard, Space 420, Hamilton Township 2101 Route 35, Plot #28, Holmdel 537 Monmouth Rd., Space 101, Jackson 30 Mall Drive West, Suite A51, Jersey City 160 Passaic Avenue, Suite 4, Kearny 3371 U.S. Highway 1, Unit 158, Lawrenceville 3105 Kennedy Boulevard, Space #105, North Bergen 300 US Highway 202, Raritan 395 Mount Hope Avenue. Suite T09, Rockaway 275 NJ-10 East, Suite 31, Succasunna 910 Springfield Rd., Union 1515 Route 22, Suite 40, Watchung 1653 State Route 23, Wayne 250 Woodbridge Center Drive, Space 1350, Woodbridge Douglas C. Palladini, the former CEO of Carter’s, said last fall after the release of the company’s third-quarter 2025 earnings report that the company had made “meaningful progress in stabilizing our business. But, he added, “elevated product costs, in part due to the impact of higher tariffs, as well as additional investment, weighed meaningfully on our profitability.” Carter’s previously planned to close 10
 
@@ -118,6 +130,7 @@ Business & Tech Major Clothing Retailer In New Jersey Closing 150 U.S. Stores Th
 URL: https://b105country.com/new-carters-store-duluth-minnesota/
 Title: Another Big Retailer To Open New Store In Minnesota
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 17:41:01
 
 Another Big Retailer To Open New Store In Minnesota David Drew David Drew Published: May 4, 2026 Nick Cooper - TSM Duluth Share on Facebook Share on Twitter It wasn't long ago that I shared the news that the Miller Hill Mall was celebrating the opening of JD Sports, bringing the global sports fashion retailer to the Northland for the first time. That was good news for shoppers in the area, and now, more good news has arrived that will have an impact on the holiday shopping season. Miller Hill Mall has announced that another national retailer is coming to the Fountain Court, and this one is aimed squarely at families with young children. Construction is already underway, with an opening planned for this fall. Carter's To Open New Location In Duluth Carter's , the nationally recognized children's apparel and accessories retailer, will be joining the Miller Hill Mall lineup this fall. The brand carries a wide selection of clothing, essentials, and accessories for babies and young children, and, according to the mall, it's one Northland shoppers have been asking for. Get our free mobile app That certainly makes sense since, for parents and grandparents in the Duluth area, the nearest Carter's locations have all required a significant drive south, with stores in St. Cloud, Coon Rapids, Roseville, and at outlet centers in Albertville and Eagan. Having a dedicated Carter's location right here in Duluth is the kind of addition that will add convenience for local families and provide another place to shop in time for the upcoming holiday season, as the mall expects the store to open this fall. A Brand With More Than 160 Years Behind It Carter's isn't a brand that needs much of an introduction to anyone who has raised a child in the last several decades; it's a brand my kids wore at times growing up, it does have an interesting history. The company was founded in 1865 by William Carter, an English immigrant who started the William Carter Company in Needham, Massachusetts — re
 
@@ -125,6 +138,7 @@ Another Big Retailer To Open New Store In Minnesota David Drew David Drew Publis
 URL: https://eastcobbnews.com/cobb-fire-station-12-holds-ribbon-cutting-and-grand-opening/
 Title: Cobb Fire Station 12 holds ribbon-cutting and grand opening
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 17:32:20
 
 [Could not fetch: 403 Client Error: Forbidden for url: https://eastcobbnews.com/cobb-fire-station-12-holds-ribbon-cutting-and-grand-opening/]
 
@@ -132,13 +146,15 @@ Status hint: Opening | Industry: Specialty / Other
 URL: https://www.yogonet.com/international/news/2026/05/04/119423-ballys-chicago-tops-off-permanent-casino-targets-2027-opening
 Title: Bally’s Chicago tops off permanent casino, targets 2027 opening
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 17:18:59
 
-Notice :  Undefined index: debug in /home3/ioehyphp/public_html/index.php on line 2 Notice :  Undefined index: ultimo_idioma in /home3/ioehyphp/public_html/custom/config/system.ini.php on line 35 Notice :  Constant _HTTP_HTTPS_ already defined in /home3/ioehyphp/public_html/custom/config/constantes.php on line 12 Notice :  Constant _TITULO_SITIO_ already defined in /home3/ioehyphp/public_html/custom/config/constantes.php on line 33 Notice :  Constant _NOMBRE_SITIO_ already defined in /home3/ioehyphp/public_html/custom/config/constantes.php on line 34 Notice :  Constant _USUARIO_TWITTER_ already defined in /home3/ioehyphp/public_html/custom/config/constantes.php on line 41 Notice :  Constant _EMAIL_CONTACTO_TO_ already defined in /home3/ioehyphp/public_html/custom/config/constantes.php on line 59 Notice :  Constant _EMAIL_SUSCRIPCION_BRASIL_TO_ already defined in /home3/ioehyphp/public_html/custom/config/constantes.php on line 62 Notice :  Constant _PRESERVACION_FILTROS_LISTADO_ACTIVADO_ already defined in /home3/ioehyphp/public_html/custom/config/constantes.php on line 71 Notice :  Constant _CODIGO_GOOGLE_ANALYTICS_ already defined in /home3/ioehyphp/public_html/custom/config/constantes.php on line 73 Notice :  Constant _CODIGO_GOOGLE_ANALYTICS_AMP_ already defined in /home3/ioehyphp/public_html/custom/config/constantes.php on line 74 Notice :  Constant _SMTP_USERNAME_ already defined in /home3/ioehyphp/public_html/custom/config/constantes.php on line 83 Notice :  Constant _SMTP_PASSWORD_ already defined in /home3/ioehyphp/public_html/custom/config/constantes.php on line 84 Notice :  Constant _SMTP_DEBUG_ already defined in /home3/ioehyphp/public_html/custom/config/constantes.php on line 87 Notice :  Constant _CDN_IMAGENES_ already defined in /home3/ioehyphp/public_html/custom/config/constantes.php on line 142 Notice :  Constant _CDN_IMAGENES_BYPASS_ already defined in /home3/ioehyphp/public_html/custom/config/constantes.php on line 143 Notice :  Constant _URL_LINKE
+[Could not fetch: 503 Server Error: Service Unavailable for url: https://www.yogonet.com/international/news/2026/05/04/119423-ballys-chicago-tops-off-permanent-casino-targets-2027-opening]
 
 --- Article 215 ---
 URL: https://wkzo.com/2026/05/04/opening-day-for-new-chick-fil-a-is-thursday/
 Title: Opening day for new Chick-fil-a in Lansing is Thursday
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 17:15:26
 
 [Could not fetch: 403 Client Error: Forbidden for url: https://wkzo.com/2026/05/04/opening-day-for-new-chick-fil-a-is-thursday/]
 
@@ -146,6 +162,7 @@ Status hint: Opening | Industry: Specialty / Other
 URL: https://www.wausaudailyherald.com/story/money/2026/05/04/parker-johns-bbq-pizza-and-tendeez-hot-chicken-to-open-at-former-2510-restaurant-in-wausau/89927705007/
 Title: Parker John's BBQ & Pizza and TENDEEZ Hot Chicken will open in Wausau
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 17:14:00
 
 MONEY Parker John's BBQ & Pizza and TENDEEZ Hot Chicken will open in Wausau The former 2510 Restaurant space in Wausau will soon be home to three distinct businesses, including two new restaurants and the existing 2510 Bakery and Deli. Caitlin Shuda Wausau Daily Herald Updated May 4, 2026, 12:14 p.m. CT WAUSAU – Parker John’s BBQ & Pizza and TENDEEZ Hot Chicken will open in Wausau.
 
@@ -153,6 +170,7 @@ MONEY Parker John's BBQ & Pizza and TENDEEZ Hot Chicken will open in Wausau The 
 URL: https://newjersey.news12.com/bus-service-to-replace-metro-north-waterbury-branch-trains-during-station-construction
 Title: Bus Service To Replace Metro North Waterbury Branch Trains During Station Construction
 Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-04 17:11:48
 
 [Could not fetch: 404 Client Error: Not Found for url: https://newjersey.news12.com/bus-service-to-replace-metro-north-waterbury-branch-trains-during-station-construction]
 
@@ -160,6 +178,7 @@ Status hint: Closing | Industry: Specialty / Other
 URL: https://www.chron.com/food/article/chachos-restaurant-closes-houston-22240259.php
 Title: Popular Tex-Mex chain quietly shuts down Houston location
 Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-04 17:04:39
 
 There are now only two Chacho's locations open in Houston. Chyna Blackmon A popular Tex-Mex chain has closed the doors of one of its Houston locations after apparently losing its lease, according to signage outside the restaurant. Instead of cars lined up at its drive-thru lanes , the Chacho's at 6006 Westheimer Rd. now sits empty, with signs on the doors, windows, and a message written directly on the blank menu board: "Closed. Lost our lease. Visit us at Chacho's South Loop by Reliant or Chacho's Tidwell." Advertisement Article continues below this ad Chacho's website still lists the Westheimer restaurant among its roundup of seven open locations across the state, so it's unclear when it closed. Chron has reached out for comment but did not hear back. We attempted to call the other Houston outposts, specifically located at 5350 North Fwy and 2700 S Loop W., but they did not answer. Outside the now-shuttered Chacho's along Westheimer Road in Houston, Texas. Chyna Blackmon/Chron John Burke founded Chacho's in 1998 in San Antonio. The fast-casual restaurant became quickly known for its 24-hour service, but it also had growing pains. The restaurant was "pretty unsuccessful the first decade," according to its website . Burke and his wife later turned the restaurant around by focusing on larger portions and better ingredients. The business soon expanded to several locations in San Antonio and Houston. Signs posted outside on the empty menu boards at the former Chacho's at 6006 Westheimer Rd. Chyna Blackmon Signs posted outside Chacho's at 6006 Westheimer Rd. Chyna Blackmon Chacho's is now closed at 6006 Westheimer Rd. Chyna Blackmon Chacho's prides itself on "small batch scratch-made cooking" and "stronger" margaritas made with fresh lime juice. Aside from that, the restaurant chain's menu is fairly similar to other Tex-Mex places. There are tacos, gorditas, burritos, nachos, quesadillas and, of course, fajitas. Advertisement Article continues below this ad In January, 
 
@@ -167,6 +186,7 @@ There are now only two Chacho's locations open in Houston. Chyna Blackmon A popu
 URL: https://www.aol.com/news/local-developer-invests-40-million-161702476.html
 Title: Local developer invests $40 million in now-open Driving Park apartments
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 16:47:48
 
 Danae King, Columbus Dispatch Mon, May 4, 2026 at 4:17 PM UTC 0 Woda Cooper Companies invested $40 million in the Driving Park area of Columbus' East Side with the construction of Granville Woods Lofts. The affordable housing development includes 118 units at 860 and 910 Rhoads Ave., right off East Livingston Avenue. The two buildings are four stories tall and feature more than 142,000 square feet of space for 10 one-bedroom units; 86 two-bedroom units; and 22 three-bedroom units. Woda Cooper, a Columbus-based developer of affordable housing, co-developed the property with the Gertrude Wood Community Foundation . The foundation is a local nonprofit that focuses on supporting the academic, social and emotional development of Driving Park youth via programs and services, according to a news release from Woda Cooper. How much do the apartments cost? The first phase of the development, Granville Woods Lofts I, has units that are market rate and ones that rent to those making 50%, 60% and 80% of area median income. Rents start at $775 per month and go to $1,350. The second phase has units that start at $390 a month and go to $1,230, catering to residents earning 30%, 50%, 60% and 80% of area median income. For an individual, 30% of median income in Columbus is $22,900 annually and 80% is $61,050 annually. Advertisement A rendering of what Granville Woods Lofts are anticipated to look like. Woda Cooper Companies hosted a grand opening event for the east side apartments on April 28. “Housing costs are beginning to stabilize but many families are still feeling squeezed," Columbus Mayor Andrew Ginther said in a news release. "Everybody who works in this community should be able to live here." The opening of the community is part of a larger city strategy, he said, as Columbus gave around $4.9 million in affordable housing bond funding to support the project. What amenities are onsite at Granville Woods Lofts? Granville Woods Lofts' units are handicap-accessible and designed 
 
@@ -174,5 +194,6 @@ Danae King, Columbus Dispatch Mon, May 4, 2026 at 4:17 PM UTC 0 Woda Cooper Comp
 URL: https://wausaupilotandreview.com/2026/05/04/parker-johns-bbq-pizza-and-tendeez-hot-chicken-will-open-in-wausau/
 Title: Parker John’s BBQ & Pizza and TENDEEZ Hot Chicken will open in Wausau
 Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 16:34:45
 
 [Could not fetch: 403 Client Error: Forbidden for url: https://wausaupilotandreview.com/2026/05/04/parker-johns-bbq-pizza-and-tendeez-hot-chicken-will-open-in-wausau/]
