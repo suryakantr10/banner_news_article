@@ -1,0 +1,181 @@
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+
+--- Article 301 ---
+URL: https://nypost.com/2026/05/03/business/manhattans-redeye-grill-to-close-after-30-years/
+Title: Manhattan’s Redeye Grill to close after 30 years
+Status hint: Opening | Industry: Specialty / Other
+
+Bye, bye, Redeye. Fireman Hospitality Group’s Redeye Grill, a Manhattan dining institution since 1995, will serve its last cowboy ribeye steak and shellfish tower on July 12, Realty Check has learned. CEO Ben Grossman, who’s run the 11-location eatery empire since founder Shelly Fireman passed away at 93 last October, said, “After 30 unforgettable years, we made the difficult decision to close Redeye. We are very grateful for our time here.” 3 The Redeye Grill, which will close in July, was a favorite of Carnegie Hall audiences. Google Maps The American brasserie at 890 Seventh Ave. between West 56th and 57th streets was a favorite of audiences at Carnegie Hall across the street. Grossman said business largely rebounded after the pandemic, but, “Our lease was up and although we and [landlord] Vornado talked in good faith, we couldn’t mutually agree on new terms.” A source said the 2020 lockdown and slower business that followed impacted Redeye more than the other Fireman places.  A Vornado rep declined to comment. What Fireman branded as the “Home of the Famous Dancing Shrimp” was the scene of his well-attended memorial last year which drew Jerry Seinfeld, NYC Hospitality Alliance executive director Andrew Rigie and Vornado chairman Steven Roth. Grossman emphasized that his other restaurants — from three-year-old Paris Bar on West 57th Street to nearly 40-year-old Trattoria dell’ Arte next door to Redeye — were all doing fine. In a week that saw a rare, giant mouthful of Manhattan restaurant news, we also learned that widely praised West 10th Street Italian spot L’Artusi is expanding uptown. 3 L’Artusi will open a new location at 1271 Sixth Ave. next year. Google Maps It will open next year at Rockefeller Group’s 1271 Sixth Ave., which is home to one of Midtown’s most impressive group of restaurants — Avra Estiatorio, Cuerno and The Capital Grille. L’Artusi will have 6,000 square feet in the former home of Ted’s Montana Grill, the steakhouse that quietly closed last
+
+--- Article 302 ---
+URL: https://www.live5news.com/2026/05/03/rodney-scotts-bbq-officially-close/
+Title: Rodney Scott’s BBQ to officially close
+Status hint: Closing | Industry: Specialty / Other
+
+Share Add Us On Google Add as a preferred source on Google CHARLESTON, S.C. (WCSC) — A popular Charleston barbecue restaurant is officially closing its doors on Sunday. Rodney Scott’s BBQ General Manager Sam Ayala says the restaurant, located at 1011 King St., will close at 5 p.m. until further notice. The closure comes as Pihakis Restaurant Group, which operates some Rodney Scott’s locations, faces a lawsuit from supplier Evans Meats, Inc., alleging breach of contract and claiming the group owes $394,238.74, along with more than $12 million in liens tied to the restaurant group’s properties filed by landlord/developer Michael Mouron, who alleges unpaid rent at multiple locations., according to public records. Customers also reacted to the sudden closure while dining on the last day of operation. “Hopefully somebody comes around and saves it because it’s a great place. No, it’s a shame. I mean, we feel for all the people working here because they’re all doing a great job, you know, and then it’s just it’s like a light strike, right? So unexpected. And, I hope some investors come and save it because it’s a really wonderful place,” Jerry and Kathy Manese, visitors from Myrtle Beach, both said. “We were really excited because he’s like, ‘Oh, this is a Michelin restaurant. This is really cool. It’s like the best barbecue.’ So, we’re like, ‘We got to check it out.’ So, we came over here, and then we were shocked to hear it’s closing at 5:00 today. And there was only so much you could order off the menu now, but I got the last order of catfish, and they were so good. And the hushpuppies were amazing. They were like the best hushpuppies I’ve ever had. Everything was so good, and the staff, they’re wonderful,” Kathy Manese said. “We hope that some investors come and save it because it’s really wonderful. I mean, we would definitely come back. And I’m so glad we didn’t wait till tomorrow because you know we got in today, at least you know. It’s very casual there, but the foo
+
+--- Article 303 ---
+URL: https://meyka.com/blog/mcdonalds-rival-closes-may-03-burger-chain-shuts-locations-0305/
+Title: McDonald’s Rival Closes May 03: Burger Chain Shuts Locations
+Status hint: Closing | Industry: Specialty / Other
+
+Global Market Insights McDonald’s Rival Closes May 03: Burger Chain Shuts Locations By Huzaifa Zahoor May 3, 2026 5 min read AI Summary Share with: preferred News Source Select Meyka as your preferred News Source Key Points McDonald's rivals close locations amid franchise disputes and rising costs. The Habit Burger and Hardee's franchisee ARC Burger shut down restaurants across multiple states. Subway's 729 additional closures signal broader fast-casual burger segment collapse. Market consolidation favors McDonald's expansion while weaker competitors face extinction. Sentiment: NEGATIVE ( -0.90 ) Be the first to rate this article Upvote this Downvote this The fast-casual burger industry is facing significant headwinds as major McDonald’s rivals close locations across the United States. The Habit Burger, a 56-year-old chain founded in Santa Barbara, California, operates over 380 restaurants but is quietly shutting down select locations. Meanwhile, a major Hardee’s franchisee, ARC Burger LLC, closed all 77 of its locations after a lawsuit from Hardee’s Restaurants LLC over alleged franchise fee failures. These closures signal deeper challenges in the competitive burger market, where chains struggle with franchise disputes, rising operational costs, and shifting consumer dining habits. Understanding why McDonald’s rivals are contracting helps investors assess the health of the broader quick-service restaurant sector. Why McDonald’s Rivals Are Closing Locations The burger chain industry faces mounting pressures that force even established players to shutter restaurants. McDonald’s competitors struggle with franchise disputes, labor costs, and changing consumer preferences. The Habit Burger and Hardee’s franchisees represent two different failure modes in this challenging market. Franchise Disputes and Legal Battles ARC Burger LLC, a major Hardee’s franchisee, closed all 77 locations after Hardee’s Restaurants LLC filed a lawsuit in November 2025 for alleged failure to p
+
+--- Article 304 ---
+URL: https://www.postandcourier.com/news/rodney-scott-bbq-king-street-charleston-closing/article_ecb38562-ef13-497e-831b-a743d396964b.html
+Title: Charleston location of Rodney Scott’s BBQ now closed ‘until further notice.’ Here’s what we know.
+Status hint: Opening | Industry: Specialty / Other
+
+Facebook Twitter WhatsApp SMS Email [+] Add Post and Courier News on Google Facebook Twitter WhatsApp SMS Email Print Copy article link Save CHARLESTON — The King Street location of Rodney Scott’s BBQ closed at 5 p.m. on May 3, and will remain shuttered “until further notice,” staff confirmed to The Post and Courier. The closure was due to circumstances that were out of management’s control, operating partner Sam Ayala said in a message to staff. Known as one of Charleston’s preeminent pitmasters, Rodney Scott first opened his namesake restaurant in 2017, partnering with Nick Pihakis of Jim N' Nick's to do so. At the downtown destination, Scott shares the whole hog cooking traditions he has honed since preparing his first pig at age 11 at his family’s now-famous Hemingway eatery, Scott’s Bar-B-Que. In 2018, barely a week after Scott won a James Beard award for Best Chef: Southeast, the pair announced plans to add a second location in Birmingham. They’ve since debuted Rodney Scott’s BBQ outposts across the Southeast under the Pihakis Restaurant Group umbrella. The group also operates other concepts, including Joyland, which shuttered its Charleston location earlier this year. The closure of the original Rodney Scott’s BBQ at 1011 King St. comes less than a week after the restaurant, the Pihakis Restauraunt Group and other affiliated LLCs were named as defendants in a breach of contract lawsuit filed in Charleston County on April 27. Buy Now A picture of Rodney Scott hangs from the wall while customers wait for take-out orders after the restaurant closed at 5 p.m., Sunday, May 3, 2026, in Charleston. Henry Taylor/Staff The lawsuit alleges that plaintiff Itria Ventures agreed to lend $350,000 to borrowers Rodney Scott’s BBQ and RSBBQ Partners. Nick Pihakis, his restaurant and investment groups , and JER Spirits Investments guaranteed the loan and are also listed as defendants. The borrowers and guarantors failed to pay the lender in accordance with the agreed-upon paym
+
+--- Article 305 ---
+URL: https://www.msn.com/en-us/money/companies/the-habit-burger-grill-quietly-closes-locations/ar-AA2276om?gemSnapshotKey=GM60E59BEC-snapshot-1&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: The Habit Burger & Grill quietly closes locations
+Status hint: Closing | Industry: Specialty / Other
+
+MSN
+
+--- Article 306 ---
+URL: https://www.shawlocal.com/daily-chronicle/2026/05/03/dekalb-elementary-school-adopted-with-5k-donation-from-new-burlington-store/
+Title: DeKalb elementary school ‘adopted’ with $5K donation from new Burlington store
+Status hint: Opening | Industry: Specialty / Other
+
+DeKalb’s Tyler Elementary School students and staff were surprised on Friday with a $5,000 donation through Adopt A Classroom, given by Burlington Stores during the store’s grand opening. The department store, 2250 Sycamore Road, partnered with national nonprofit AdoptAClassroom.org , according to a news release. Tyler Elementary was selected to receive the funds, which will be used for school supplies for students. A representative from AdoptAClassroom.org reached out DeKalb School District 428 and school administrators and helped to secure the donation for Tyler Elementary, which will support 12 classrooms with new supplies. Tyler Elementary School students pose with a check denoting a $5,000 donation through Adopt A Classroom to the school from Burlington Stores. The donation was given as a surprise during the store's grand opening on Friday, May 1, 2026, in DeKalb. (Photo provided by DeKalb School District 428) Tyler Elementary Principal Candice Coleman said in a new release that the teachers will use the funds on a number of new classroom items, including hands-on manipulatives for reading and math, flexible seating and positive behavior incentives. “On behalf of Tyler Elementary and all of DeKalb CUSD 428, I would like to thank Burlington for their generous donation through their partnership with AdoptAClassroom.org to our school and welcome them to our community,” Coleman said in the release. “The donation was a surprise to our teachers, and I know they will be excited to have these additional and unexpected funds to help purchase materials that will enhance their classrooms and provide our students with more resources to help them succeed.” DeKalb second-grade teacher Kristina Swanson, math interventionist Alex Patinka and fourth-grade teacher Hannah Clark, along with Tyler Elementary School students, attended the grand opening event of the new Burlington store at 2250 Sycamore Road on Friday, May 1, 2026. The District 428 crowd was surprised with a $5,000 d
+
+--- Article 307 ---
+URL: https://www.msn.com/en-us/sports/golf/tiger-woods-backed-mini-golf-chain-sets-opening-for-5-8m-texas-course/ar-AA1ZRXY0?ocid=hpdhp17&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Tiger Woods-backed mini-golf chain sets opening for $5.8M Texas course
+Status hint: Opening | Industry: Specialty / Other
+
+MSN
+
+--- Article 308 ---
+URL: https://wbxxfm.com/ixp/689/p/wmu-oakland-intersection-closure/
+Title: WMU To Permanently Close Dangerous Campus Intersection
+Status hint: Closing | Industry: Specialty / Other
+
+WMU to Convert Hazardous Oakland Drive Intersection Into Green Space Lauren Gordon Lauren Gordon Published: May 3, 2026 Oliver Lane/Oakland Drive - Google Maps Share on Facebook Share on Twitter The project will be completed over the summer break, permanently closing the intersection before students return in the fall. Here's why officials have made the decision to close the dangerous intersection: Get our free mobile app We Michiganders know that spring is synonymous with construction season. Kalamazoo residents can expect to encounter major projects in their travels across town such as: Burdick St. water main replacement project happening this summer. Construction along US-131 for a new auxiliary lane to Stadium Dr. Work surrounding the new event center downtown. Alongside these major infrastructure projects, smaller changes across Kalamazoo may be less visible but still impactful. Such as the permanent closure of the Oliver Lane and Oakland Drive intersection near the WMU campus. Read More: WMU's Free Seed Library Isn't Just For Students According to a press release from Facilities Management at the university, the road closure is slated to start on Thursday, May 7 and construction will begin sometime after commencement ceremonies have finished. The project is expected to be completed prior to fall move-in. Why did the university decide to close the intersection for good? Oliver Lane, Oakland Dr, Kalamazoo Oliver Lane/Oakland Drive - Google Maps loading... Well, if you've ever tried to exit onto Oakland Drive via Oliver Lane, you probably had to take a leap of faith . According to officials the motivation for the redesign is safety-focused and will, [resolve] a longstanding safety issue. Insufficient sight distance at this location makes turning from Oliver Lane onto busy south or northbound Oakland difficult and potentially hazardous...Moving forward, those looking to enter East Campus from Oakland Drive should do so from the traffic light at the intersection wi
+
+--- Article 309 ---
+URL: https://www.fox2detroit.com/news/little-caesars-opens-michigans-first-self-service-self-checkout-store-dearborn-heights
+Title: Little Caesars opens Michigan's first self-service, self-checkout store in Dearborn Heights
+Status hint: Opening | Industry: Specialty / Other
+
+Little Caesars opens first self-serve store in Dearborn Heights Little Caesars opened its first self-service, self-checkout store in Michigan on Saturday. Customers say it will make their busy lives a bit easier. DEARBORN HEIGHTS, Mich. (FOX 2) - Little Caesars held the grand opening of its first self-service, self-checkout location in Michigan on Saturday. The backstory: The store in Dearborn Heights is the second of its kind nationwide, following the debut of the local chain’s Rockford location last year. What you can do: Customers place orders through the mobile app or website and then pick up their food at a designated area. Hot-N-Ready stations allow customers to select items, scan them and pay at self-checkout kiosks before leaving. What they're saying: "We know that many of our guests are in a hurry and want something seamless, easy and fun. You can do this so quickly and seamlessly — it makes your dinner, snack or lunch as easy as possible," said Trish Heusel, Vice President of Innovation at Little Caesars. A customer told FOX 2 Detroit the new concept will make busy lives a bit easier. Local perspective: The restaurant hosted its official ribbon-cutting ceremony at noon, bringing together company executives, crew members and members of the local community. The first 100 customers in line received a promotional card for one free pizza per week for a year with the purchase of Crazy Bread each time. The Dearborn Heights store, located at 25320 Van Born Road near Gulley Road and the Taylor border, is open from 10:30 a.m. to 11 p.m. Sunday through Thursday and until midnight on Fridays and Saturdays. Image 1 of 7 ▼ The Source: Information for this story came from previous FOX 2 reporting. Dearborn Heights Business
+
+--- Article 310 ---
+URL: https://www.pressandjournal.co.uk/fp/news/moray/7007677/elgin-aldi-parking-concerns-moray-council/
+Title: Aldi told plans for new Elgin store don’t have enough parking spaces
+Status hint: Opening | Industry: Specialty / Other
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.pressandjournal.co.uk/fp/news/moray/7007677/elgin-aldi-parking-concerns-moray-council/]
+
+--- Article 311 ---
+URL: https://www.burymercury.co.uk/news/26068911.east-england-co-op-expands-snappy-shopper-service/
+Title: Suffolk stores offer brand new delivery service
+Status hint: Opening | Industry: Specialty / Other
+
+East of England Co-op expands Snappy Shopper service Business Suffolk By 
+            Thomas Marks Live Reporter Share 0 Comments They offer delivery in under an hour. (Image: East of England Co-op) This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
+        and has been written by our American colleagues.
+        It does not necessarily reflect the view of The Herald. Regional shop expands its range of stores which offer convenient delivery option in Suffolk. The East of England Co-op has expanded its Snappy Shopper delivery service to 43 stores, building on earlier growth in January, when the service increased from five to fifteen locations. Simon Dryell, chief commercial officer at East of England Co-op , said: "We’re excited to expand Snappy Shopper to a further 28 stores, taking the total to 43 across our region. "Convenience is a key focus for us, and this rollout means more customers can access quick, reliable grocery delivery from their local East of England Co-op Food store." The delivery service is run in partnership with Nash, which manages logistics through courier platforms such as Uber Direct, Just Eat Go, and Stuart. This approach allows the Co-op to offer delivery without needing its own dedicated fleet, making the service both flexible and efficient. The expanded service includes in-store upgrades, enabling staff to handle multiple delivery platforms using a single device, improving efficiency and customer service. The Suffolk stores it will be available in are: Barham Barking Road, Needham Market Chantry, Ipswich Combs Ford Garrick Way, Ipswich Great Cornard Henley Rise, Ipswich Long Melford Rands Way, Ipswich Rushmere, Ipswich Walton, Felixstowe West Bergholt Woodbridge Mike Callachan, CEO of Snappy Shopper, said: "East of England Co-op has been a fantastic partner for Snappy Shopper and the results delivered so far have shown the strong demand for convenient, locally fulfilled grocery delivery a
+
+--- Article 312 ---
+URL: http://www.wdsu.com/article/spirit-airlines-shuts-down-bankruptcy-what-to-know/71194343
+Title: Here's what to know about Spirit Airlines shutting down
+Status hint: Closing | Industry: Specialty / Other
+
+Here’s what to know about Spirit Airlines shutting down — and what to do if you had a flight with the airline Here’s what to know about Spirit Airlines shutting down — and what to do if you had a flight with the airline The Trump administration is currently working with other airlines to provide temporary relief to travelers, but consumer advocates expect that Spirit's closure will ultimately push ticket prices up. Empty customer service counters and canceled flights as Spirit Airlines begins shutting down operations. I'm upset. I'm upset and then also it makes me nervous. The Department of Transportation says some airlines are capping ticket prices for Spirit customers scrambling to rebook. Others have pledged to hold down fares on popular Spirit routes, but the relief is expected to be short-lived, according to the National Consumers League. We know that when Spirit began flying off. Particular route that other airlines would respond by lowering their prices. And so without Spirit in the game anymore, I think what consumers can expect is that there will be less pressure on prices, which is particularly painful now, given how expensive flights are becoming because of the jet fuel prices related to the Iran war. In *** press release announcing its windown, Spirit said, quote, The sudden and sustained rise in fuel prices in recent weeks ultimately has left us with No alternative. Spirit was in dire straits long before the war with Iran. Transportation Secretary Sean Duffy said the Trump administration had been weighing *** potential bailout of Spirit, but in the end *** deal didn't come together. He also addressed other low-cost airlines seeking government relief due to high jet fuel prices from the war. I would say that at this point I don't think it's necessary. They do have access to cash if they want to come to the US government. We would be *** lender of last resort. And asked about concerns that ticket prices will increase, Secretary Duffy said it is something 
+
+--- Article 313 ---
+URL: https://www.msn.com/en-us/money/companies/macy-s-shuttering-14-locations-in-12-states-with-first-closure-date-announced-full-list/ar-AA20Ypa1?ocid=OIE9HP&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Macy's shuttering 14 locations in 12 states with first closure date announced
+Status hint: Closing | Industry: Specialty / Other
+
+MSN
+
+--- Article 314 ---
+URL: https://www.the-sun.com/money/16307480/two-brand-new-goodwill-stores-maryland/
+Title: Two new Goodwill stores move into prime retail locations
+Status hint: Opening | Industry: Specialty / Other
+
+Click to share on Twitter (Opens in new window) Click to share on Facebook (Opens in new window) Comments GOODWILL shoppers are getting two new thrift stores at busy shopping centers, with the first opening in days. The nonprofit has confirmed a grand opening date for one store, while another is expected to follow this spring. Sign up for the Money newsletter Thank you! Goodwill is opening two new stores in prime shopping centers Credit: Getty The first new location will open at Montrose Shopping Center in Rockville, Maryland , on Saturday, May 9. Advertisement The store will be located at 5520 Randolph Road. It will include both a retail shop and a donation center. A banner outside the building confirms the opening date and notes that donations are already being accepted. READ MORE ON MONEY SPEND AND SAVE Goodwill to offer 'bonus points' to shoppers under new VIP program SECONDHAND SCORE Underrated kitchenware brand to thrift at Goodwill - it's not Le Creuset Goodwill is taking over the space formerly occupied by Planet Aid. Plans for the new store were first reported in December. Construction has since moved forward, with the interior now appearing complete ahead of opening day. Planet Aid’s thrift store and donation center closed at the Randolph Road site in September. Most read in Money SHOP SHAKEUP Walmart shelves will look different under a new bill targeting everyday items CHECKED OUT Walmart ends self-checkouts at one store as it plans to remodel 650 locations PAY PAINS All 2,021 Home Depot locations brace for $25 policy under new 'rate' bill OH, SHOP IT Goodwill snaps up former Rite Aid and opens sprawling 18,200-square-foot store A representative said at the time that the closure was part of a planned relocation, but a nearby replacement has not yet been announced. Advertisement Goodwill will also keep operating its Boiling Brook Parkway store, just over a mile away. The Rockville opening comes as Goodwill prepares another Montgomery County location at Wat
+
+--- Article 315 ---
+URL: https://rollingout.com/2026/05/03/mcdonalds-rivals-close-hundred-locations/
+Title: 3 McDonald’s rivals close hundreds of U.S. locations
+Status hint: Closing | Industry: Specialty / Other
+
+Domino’s CEO reveals threats hitting pizza sales
+
+--- Article 316 ---
+URL: https://www.the-sun.com/money/16307306/bj-wholsale-rolls-out-hours-change-cheaper-gas/
+Title: Costco rival rolls out hours change across all stores
+Status hint: Opening | Industry: Specialty / Other
+
+Click to share on Twitter (Opens in new window) Click to share on Facebook (Opens in new window) Comments A COSTCO rival has confirmed it is rolling out a key change across all stores that will be good news for those hunting for cheaper gas. The change affects both its stores and gas stations, giving members more access six days a week. Sign up for the Money newsletter Thank you! Costco’s rival is extending store and gas station hours nationwide Credit: Alamy The company says its fuel prices are about 20 cents less per gallon on average than local gas stations. Credit: AP Advertisement BJ’s Wholesale Club , a rival to Costco and Sam’s Club , has rolled out new store hours with an extra hour open per day. Its warehouses will now stay open from 8 am to 10 pm Monday through Saturday. On Sundays, clubs will open from 8 am to 9 pm. BJ’s Gas locations will open even earlier, from 6:30 am to 10 pm Monday through Saturday. READ MORE ON MONEY BATTLE IT OUT Costco rolls out 'military' parking lot change to fight 'war zone' chaos GRAB A CART Costco sets August deadline for shoppers as new warehouse plans confirmed Sunday gas hours will run from 6:30 am to 9 pm. The company says its fuel prices are about 20 cents less per gallon on average than local gas stations. Gas prices can climb when crude oil costs rise, while seasonal summer-blend fuel and higher travel demand can also push prices up at the pump. Costco has long used member-only gas as a draw for drivers looking to save, with the chain advertising low, exclusive fuel prices for members. Advertisement Most read in Money SHOP SHAKEUP Walmart shelves will look different under a new bill targeting everyday items CHECKED OUT Walmart ends self-checkouts at one store as it plans to remodel 650 locations PAY PAINS All 2,021 Home Depot locations brace for $25 policy under new 'rate' bill OH, SHOP IT Goodwill snaps up former Rite Aid and opens sprawling 18,200-square-foot store BJ’s is now competing for those same bargain-hunting
+
+--- Article 317 ---
+URL: https://www.msn.com/en-us/foodanddrink/foodnews/houston-halal-barbecue-spot-levant-bbq-to-open-new-texas-locations-in-sugar-land-and-frisco/ar-AA21qXMp?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Houston halal barbecue spot Levant BBQ to open new Texas locations in Sugar Land and Frisco
+Status hint: Opening | Industry: Specialty / Other
+
+MSN
+
+--- Article 318 ---
+URL: https://www.msn.com/en-us/news/us/buc-ees-expansion-roundup-every-new-location-opening-in-2027/ar-AA22bBlX?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Buc-ee's expansion roundup: Every new location opening in 2027
+Status hint: Opening | Industry: Specialty / Other
+
+MSN
+
+--- Article 319 ---
+URL: https://www.msn.com/en-us/health/healthtrending/popular-barbecue-chain-abruptly-closes-all-locations-nationwide/ar-AA226zkJ?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Popular barbecue chain abruptly closes all locations nationwide
+Status hint: Closing | Industry: Specialty / Other
+
+MSN
+
+--- Article 320 ---
+URL: https://www.mlive.com/news/flint/2026/05/new-chipotle-sets-opening-date-body-found-in-mt-morris-township-and-more-flint-area-news.html
+Title: New Chipotle sets opening date, body found in pond by fishermen and more Flint-area news
+Status hint: Opening | Industry: Specialty / Other
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.mlive.com/news/flint/2026/05/new-chipotle-sets-opening-date-body-found-in-mt-morris-township-and-more-flint-area-news.html]

@@ -1,0 +1,185 @@
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+
+--- Article 81 ---
+URL: https://www.inc.com/lucia-auerbach/grocery-stores-were-just-named-the-most-trustworthy-in-the-us-heres-why/91340059
+Title: These 2 Grocery Stores Were Just Named the Most Trustworthy in the U.S.—Here's Why They Earned the Title
+Status hint: Opening | Industry: Grocery
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.inc.com/lucia-auerbach/grocery-stores-were-just-named-the-most-trustworthy-in-the-us-heres-why/91340059]
+
+--- Article 82 ---
+URL: https://en.sedaily.com/finance/2026/05/05/lotte-department-store-debuts-chilbo-jewelry-brand-chloisu
+Title: Lotte Department Store Debuts Chilbo Jewelry Brand Chloisu as Industry First
+Status hint: Opening | Industry: Department Stores
+
+| Summary | Save A A A A view of the Chloesoo signature store that opened on the third floor of Avenuel at Lotte Department Store's main branch. Photo courtesy of Lotte Department Store Lotte Department Store said Wednesday it will open a Chloisu store on the third floor of Avenuel at its main branch, marking the first such opening by a retailer in Korea. Chloisu is a brand founded by Lee Soo-kyung, a Korean master artisan of chilbo who has carried on the tradition of the craft since 1968. Chilbo is a traditional craft technique in which a vitreous glaze is applied to a metal surface and then fired multiple times at high temperatures of around 800 degrees Celsius, characterized by delicate coloring and expressive depth. The craft recently drew attention when President Lee Jae-myung presented a chilbo piece as a gift to Chinese President Xi Jinping and his wife Peng Liyuan at a state dinner following the Korea-China summit. The new store will showcase around 30 art pieces and chilbo jewelry items. Operating as a flagship store, it will also display works worth approximately 300 million won ($220,000), including Lee's signature piece "Fantasia." The store is the only offline space where Chloisu products can be purchased, aside from the gallery at the brand's headquarters in Ulsan. Lotte is also running various promotions to mark the store opening. Customers who spend 7 million won or more will receive a beach towel featuring Chloisu's signature pattern. Additional gifts including diaries, scarves, norigae (traditional Korean ornaments) and wooden combs will be offered based on purchase amounts. "As the inflow of foreign tourists expands, we have further strengthened the department store's luxury curation competitiveness by introducing chilbo jewelry that embodies Korean aesthetic sensibility at Avenuel in our main branch," said Jung Soo-yeon, head of Lotte Department Store's Beauty & Accessories Division. # LotteDepartmentStore # Chloisu # ChilboJewelry # KoreanCraft 
+
+--- Article 83 ---
+URL: https://hercanberra.com.au/food-drink/every-new-restaurant-cafe-and-closure-you-need-to-know-about-in-canberra-right-now/
+Title: Every new restaurant, cafe and closure you need to know about in Canberra right now
+Status hint: Opening | Industry: Restaurants
+
+You’re going to want a bigger appetite for this update on Canberra’s dining scene. From Vietnamese salted iced coffee and bánh mì landing on Allara Street, to cult pizza names expanding into Campbell and a dessert lab landing in Tuggeranong, there’s plenty to put on your radar (and your plate). Alongside the new arrivals, there are some bittersweet farewells, and big moves reshaping the city’s dining map. OPENINGS AND MOVES Hanoi Holic had us at Vietnamese salted iced coffee… Allara Street has a new addition with the opening of Hanoi Holic and the menu has us drooling. Along with a Vietnamese salted iced coffee, here you’ll also find bánh mì (including a brekkie version with eggs and pork), bún and fresh rice paper rolls. Open Monday to Saturday from 10 am until 5 pm, find it at 33 Allara Street in the City. Chef Hem’s cult-favourite Sliceria lands in Campbell Chef Hem – Canberra’s world-ranked pizza maestro – has brought his cult Sliceria to East Traders Hall. That’s right, Campbell has gotten a whole lot tastier. Opening inside East Traders Hall , the expansive new food and lifestyle precinct at ANZAC Park East, it joins Capital Brewing Co. ’s Lager House and Lava Coffee in a venue that’s quickly becoming one of the most exciting dining destinations in Canberra. Read all about it here . All-you-can-eat hotpot in Dickson Hotpot fans, meet your new happy place. 101c Hotpot in Dickson is serving up all-you-can-eat hotpot for just $49 per person, giving you 100 minutes to eat your fill. Choose from six soup bases (the Szechuan chilli is not for the faint-hearted), then load up on everything from fish roe dumplings and beef meatballs to thick noodles and thinly sliced meats. There’s even a dessert buffet waiting at the end, and kids under 1.2 metres eat free. One tip: wear a dark shirt. Find them at 6 Cape Street, Dickson – open seven days for lunch and dinner. Craving pizza in Braddon? Try Bella Pizza CBR There’s a new pizza spot on Lonsdale Street and it’s worth know
+
+--- Article 84 ---
+URL: https://www.msn.com/en-ca/news/us/owners-of-longtime-northwest-houston-restaurant-announce-they-re-closed/ar-AA22iOhG?cvid=69f8fd37b4204e33a4faaf3272b48bc6&ocid=hpmsn
+Title: Owners of longtime northwest Houston restaurant announce they're closed
+Status hint: Closing | Industry: Restaurants
+
+MSN
+
+--- Article 85 ---
+URL: https://oanow.com/life-entertainment/local/food-drink/article_fc1b37b4-bf5d-4539-a67c-1d455da7893b.html
+Title: Tex-Mex restaurant to open in downtown Opelika
+Status hint: Opening | Industry: Restaurants
+
+Banditos on 10th Street in Opelika, pictured here on Monday, May 4, 2026. Adam Sparks / Facebook Twitter Bluesky WhatsApp SMS Email Print Copy article link Save Brionna McCall A new Tex-Mex restaurant is hosting its grand opening in downtown Opelika on Tuesday. kA 5:ClQ=ECQmq2?5:E@D[ 2? :>>6CD:G6 %6I\|6I 4@?46AE @H?65 3J E96 9FD32?5\2?5\H:76 5F@ y24@3 U2>Aj v23: '2?w@C?[ :D =@42E65 2E c_c $] `_E9 $E[ H96C6 k2 9C67lQ9EEADi^^@2?@H]4@>^=:76\6?E6CE2:?>6?E^=@42=^7@@5\5C:?<^2CE:4=6074h4f7c3\36e5\c6ac\2g6d\2226b6ha7b42]9E>=Q E2C86ElQ03=2?<Qmx? %96 }@@5k^2m FD65 E@ 36] k^Am kA 5:ClQ=ECQm%96 '2?w@C?D D2:5 E96J D>@<6 2== @7 E96 >62E @?D:E6 2?5 >2<6 6G6CJE9:?8 7C@> D4C2E49] %96J D2:5 E96:C >@DE H6==\<?@H? @776C:?8D 2C6 E96 $>@<65 qC:D<6E rCF?49HC2A 2?5 E96:C 49:AD[ H9:49 E96J 7CJ 6I4=FD:G6=J :? 3667 E2==@H 2?5 E@DD :? 49:=: =:>6] k^Am People are also reading… High school softball postseason: Beauregard, Central-Phenix City win area championships; more area scores, schedules High school baseball playoffs: Central-Phenix City advances; final area scores Tex-Mex restaurant to open in downtown Opelika A four-sport athlete and class leader, Beauregard’s Lane Wilson earns state recognition Piedmont Columbus Regional opens its first Auburn location Auburn High alum Matthew Caldwell inks deal with Los Angeles Rams Why Auburn University received a $49M Pentagon contract Auburn football gains commitment from 2027 wide receiver Hanwha Defense USA to open a new Opelika facility How Lee-Scott Academy avoided a late scare to down Thorsby, advance in 3A playoffs ACS educator honored with scholarship in her name Tennessee man facing child sexual abuse materials charges, Auburn police say Auburn football adds commitment from 3-star offensive lineman How many Auburn players signed with NFL teams as undrafted free agents following the draft OCS breaks ground on expansion at Fox Run kA 5:ClQ=ECQm“(6 49@D6 ~A6=:<2 3642FD6 @7 E96 4@>>F?:EJ H6 7@F?5 96C6 D:?46 >@G:?8 E@ E96 2C62 2 76H J62CD 324< 7C@
+
+--- Article 86 ---
+URL: https://www.msn.com/en-my/news/other/tamil-film-karuppu-to-lead-fst-s-new-era-after-cinema-group-unveils-rebrand-and-expansion-plans/ar-AA228PPh?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Tamil film 'Karuppu' to lead FST’s new era after cinema group unveils rebrand and expansion plans
+Status hint: Opening | Industry: Movie Theatres
+
+MSN
+
+--- Article 87 ---
+URL: https://www.mainstreetnews.com/jackson/news/community-says-farewell-to-grocery-store/image_327cd4c6-3d52-40f6-b669-6748f5ba9c25.html
+Title: Community says farewell to grocery store
+Status hint: Opening | Industry: Grocery
+
+Facebook Twitter WhatsApp SMS Email Print Copy article link Save Former employees and patrons of Bell's Food Store and B&T Food Fresh gathered last week for a final celebration as the store shut down after many years in Jefferson. The store is being converted to an Ace Hardware store and plans to open in a few months after renovations are completed. Photo submitted by Mayor Dawn Maddox Facebook Twitter WhatsApp SMS Email Print Copy article link Save × Post a comment as Guest × Report × Watch this discussion. Stop watching this discussion. (0) comments Welcome to the discussion. Log In Keep it Clean. Please avoid obscene, vulgar, lewd,
+racist or sexually-oriented language. PLEASE TURN OFF YOUR CAPS LOCK. Don't Threaten. Threats of harming another
+person will not be tolerated. Be Truthful. Don't knowingly lie about anyone
+or anything. Be Nice. No racism, sexism or any sort of -ism
+that is degrading to another person. Be Proactive. Use the 'Report' link on
+each comment to let us know of abusive posts. Share with Us. We'd love to hear eyewitness
+accounts, the history behind an article. Post a comment Watch this discussion. Stop watching this discussion. Latest Jackson News Community Calendar: Week of May 6 Man airlifted after fiery crash on Brockton Loop Road Driver arrested after 100 mph pursuit ends at Jefferson gas station Recent police reports made by Commerce PD Recent police reports made in Arcade Church News: Week of May 6 Keep Jackson County Beautiful’s Spring Recycling Day sees record numbers Georgia taxpayers to get rebates from the state within weeks Most Popular Articles Images Commented Articles Maddox: Pot, kettle, black Woman killed in single-vehicle crash in Commerce Flashback Forty: Take a look back at the headline over four decades Jefferson unveils new city brand Commerce planners give nod to Hwy. 441 commercial development Ace Hardware to replace B&T's Food Fresh location in Jefferson Jefferson’s Growth Is Outpacing Its roads and retail Groundbreakin
+
+--- Article 88 ---
+URL: https://drugstorenews.com/bjs-wholesale-club-eyes-second-texas-location
+Title: BJ’s Wholesale Club eyes second Texas location
+Status hint: Opening | Industry: Grocery Wholesale
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://drugstorenews.com/bjs-wholesale-club-eyes-second-texas-location]
+
+--- Article 89 ---
+URL: https://whatnow.com/los-angeles/retail/altitude-trampoline-park-charting-expansion-in-southern-california/
+Title: Altitude Trampoline Park Charting Expansion In Southern California
+Status hint: Opening | Industry: Experiential
+
+Altitude Trampoline Park (Image credit: https://www.altitudetrampolinepark.com/) SHARE Family entertainment franchise Altitude Trampoline Park is expanding along the West Coast. California franchisee Guru Murari has multiple locations in the pipeline across the state this year, including a spot in Ventura. Murari has expanded to four locations over the past 18 months that span across Northern and Southern California. Northern California locations include spots in Folsom, Milpitas and Manteca, and Murari has one location in Southern California in San Dimas. This month, Murari will be unveiling his fifth location with the brand in Anaheim. The Ventura location, which will open at Pacific View Mall , is one of three slated to open by the end of this year, along with a spot in Northern California and another location heading to Riverside County. Altitude Trampoline Park features a variety of trampoline-based games as well as arcades and other unique takes on sports. Murari told What Now Los Angeles that the forthcoming locations this year will each be designed to cater to their communities. They will each feature a broader range of attractions beyond the trampoline park, including mini golf, bowling, ax throwing and archery. Murari is one of the first franchisees bringing the Altitude concept to a West Coast audience. Through his expansion, he is looking to define the brand for a California audience and cement Altitude as one of the top family entertainment concepts for customers, transforming it into a “one-stop shop” for family entertainment. To accomplish this, he is investing in technology and looking to create entertainment complexes that cater to all ages with far-reaching appeal for families. “We want to define that trampoline park means it’s an Altitude Trampoline Park,” Murari said. “That’s our goal. That’s what we want to define with the combination of technology and customer service.” Altitude Trampoline Park now has more than 60 locations across the country,
+
+--- Article 90 ---
+URL: https://www.bizjournals.com/triad/news/2026/05/04/positano-italian-restaurant-greensboro-nc-closes.html
+Title: Positano closes Greensboro location after 25 years as restaurants continue to face challenges
+Status hint: Closing | Industry: Restaurants
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.bizjournals.com/triad/news/2026/05/04/positano-italian-restaurant-greensboro-nc-closes.html]
+
+--- Article 91 ---
+URL: https://www.the-sun.com/money/16311716/eddie-v-prime-seafood-mothers-day-special-hours/
+Title: Olive Garden sister restaurant issues major ‘hours’ update at ALL locations
+Status hint: Opening | Industry: Restaurants
+
+Click to share on Twitter (Opens in new window) Click to share on Facebook (Opens in new window) Comments A SISTER chain to Olive Garden has made a significant hours change at all of its locations across the United States. The popular restaurant brand has been making waves in 2026 for several reasons, including the implementation of a strict dress code . Sign up for the Money newsletter Thank you! Eddie V’s Prime Seafood and Olive Garden are both owned by parent company Darden Restaurants, hence the “sister” relationship. While the high-end seafood/steakhouse has only about 32 locations nationwide compared to Olive Garden’s more than 950, it’s continuing to expand in 2026. Advertisement A new restaurant just opened on April 26 in Palm Beach Gardens, Florida, for instance, according to The Palm Beach Post . Another in the Alpharetta area of Atlanta, Georgia, also arrived earlier this year. Read More on Olive Garden BANG FOR BUCK Olive Garden diners get FIVE meals for under $30 with this loophole CARDS DOWN Olive Garden rule means your table size will automatically cost you more With Mother’s Day approaching, Eddie V’s has also committed to a business hours adjustment in honor of the special day. All locations will be serving a Mother’s Day Brunch between 10 am and 2 pm local time on May 10. Additionally, the day before — May 9 — will also have an early Mother’s Day Brunch from 11 am to 2 pm. There’s even a unique “prix fixe menu” being served during the brunch hours with two courses and several limited-time cocktails. Most read in Money SHOP SHAKEUP Walmart shelves will look different under a new bill targeting everyday items CHECKED OUT Walmart ends self-checkouts at one store as it plans to remodel 650 locations PAY PAINS All 2,021 Home Depot locations brace for $25 policy under new 'rate' bill OH, SHOP IT Goodwill snaps up former Rite Aid and opens sprawling 18,200-square-foot store The standard dinner menu is available all day. Pricing will vary by state and is d
+
+--- Article 92 ---
+URL: https://www.berkeleyside.org/2026/05/04/berkeley-mills-furniture-store-reopens
+Title: Berkeley Mills furniture store reopened soon after bankruptcy and closure
+Status hint: Opening | Industry: Furniture / Mattress
+
+The custom furniture shop Berkeley Mills announced its closure in July after 37 years, citing “ high costs and low margins ” along with mounting debt, and filed for Chapter 7 bankruptcy in August. But after finding new investors, the shop is open for business again with co-founder Gene Agress back at the helm after stepping down as CEO in early 2025 due to health issues. READ our story on the closure Berkeley Mills furniture store is closing Friday after 37 years July 16, 2025 July 16, 2025, 3:26 p.m. “We opened about five months ago, but we didn’t let anybody know because there was so much work we had to do to get open again,” said Agress. Agress was able to hire back 11 of the 30 employees who were laid off in July, and is hoping to hire back a few more. Agress, 78, is also healthy again, after undergoing heart surgery, he said, and is now in the process of nursing his company back to health. Berkeley Mills’ rebirth story begins the day the company was supposed to end for good. Agress was inside the company’s 32,000-square-foot shop, where Berkeley Mills was holding a sale of its showroom items, when a longtime client walked in and offered to make an investment in the company to keep it alive. “He comes in, he sits down and he says, ‘I want you to make me a kitchen — two, in fact,’” said Agress. “And I said, ‘I’m sorry, but I’m going out of business, how can I possibly make your kitchens?’ And he says, ‘What do you need to be back in business?’” The client was joined by a friend in making the investment. Agress said he was not able to disclose the names of the investors, only saying that they both made fortunes in computers. He also did not disclose the amount of the investment, but said “it was only just enough.” Bankruptcy documents show that in September, Agress bought all the personal property assets of Berkeley Mills, including machinery, vehicles, workshop gear, intellectual property, phone numbers and website domains for $450,000. And while he is the owner 
+
+--- Article 93 ---
+URL: https://www.newsobserver.com/living/food-drink/article315572929.html
+Title: The hottest club in Raleigh might be inside this popular grocery store
+Status hint: Opening | Industry: Grocery
+
+Two popular North Carolina grocery stores have beer and wine bars. Robert Willett rwillett@newsobserver.com Key Takeaways Key Takeaways AI-generated summary reviewed by our newsroom. Read our AI Policy. Lowes Foods operates The Beer Den where shoppers can sip beer, wine and mimosas. A Harris Teeter store in the Brier Creek area gained viral attention for its taproom. Some Harris Teeter stores serve alcohol on site, with live music weekly. In a world where many local taprooms are folding , the grocery store bar remains. Many Triangle grocers sell beer and wine, but few serve it on site. Anyone who’s ever been in a Lowes Foods knows about The Beer Den, where shoppers can sip wine, beer and even mimosas. But Lowes Foods isn’t the only North Carolina grocer with a bar. Shoppers can get their adult beverages at Harris Teeter Taprooms , too. Viral video at Harris Teeter Taproom Public awareness of one such bar, at Harris Teeter’s store in the Brier Creek area, increased recently, after a video of some of the taproom’s customers went kind of viral. Harris Teeter shared the video on its Facebook page Tuesday, April 14, but storyteller Liz Z Pardue reshared it this week. It shows a group of women dancing in the store to live music by Mike Davis . View this post on Instagram A post shared by Liz Z Pardue (@liz.z.pardue) Both posts received a lot of engagement. Harris Teeter’s post has more than 4,000 likes, nearly 300 comments and more than 225 shares as of Wednesday, April 29. Liz Z Pardue’s Instagram Reel had been viewed about 486,000 times as of April 29, and it had more than 23,000 likes. The taprooms are open daily, but live music only happens once a week . At the Brier Creek location, customers can hear from musicians on Thursdays from 5 p.m. to 8 p.m. Where are Harris Teeter Taprooms? Not every Harris Teeter has a taproom. The company shared with The News & Observer this list of the North Carolina stores that do have a taproom: 11109 US Highway 15-501, Aberdeen 2810 Te
+
+--- Article 94 ---
+URL: https://www.aol.com/news/chicken-restaurant-bb-q-open-173407750.html
+Title: Chicken restaurant bb.q to open in former Brew City on Shrewsbury Street
+Status hint: Opening | Industry: Restaurants
+
+Toni Caushi, Worcester Telegram & Gazette Updated Tue, May 5, 2026 at 2:55 PM UTC 0 The space at 104 Shrewsbury St. will soon be filled with a chicken restaurant. WORCESTER – Barbecue chicken lovers will soon have a reason to cross Shrewsbury Street when a franchise opens its doors in June at the former Brew City. The franchise bb.q chicken, its name in lowercase letters, is looking to open its second location in the area . A Shrewsbury eatery along Route 9 opened for business last year. The company lists other Massachusetts locations in Boston, Cambridge, Quincy and Lowell. The space at 104 Shrewsbury St. was home for many years to Brew City, a once-popular restaurant. Brew City temporarily closed following the COVID-19 pandemic amid business restrictions, reopening in 2021 . It remained active at least until June 2022, according to promotional posts on social media. Since then, the restaurant has sat vacant, with signs still displayed above the front door and on awnings. While the License Commission granted bb.q chicken approvals for liquor and common victualer licenses in May 2025, city spokesperson Thomas Matthews added that the owners are doing a complete renovation of the space and are looking to open in June. Advertisement A banner with the bb.q chicken logo now hangs above the windows, stating, "Opening Soon." Another banner in the back of the restaurant – often used as the main entrance – states that the location is hiring. Attempts to reach the owners were not immediately successful. The franchise bb.q chicken was founded in South Korea in 1995. It expanded to the United States in 2014 and now has more than 200 locations across the country, with more than 3,500 worldwide. Compared to regular barbecue-style cooking, Korean fried chicken is double-fried and flavored with hand-brushed sauces. This style of barbecue chicken is a growing trend in Central Massachusetts, with other locations in Worcester including Cluck & Crispy Chicken at 118 Cambridge St. and B
+
+--- Article 95 ---
+URL: https://www.komu.com/news/midmissourinews/murrys-restaurant-announces-downtown-columbia-location/article_4ae7bbcb-eaa6-468b-998d-2d941af17a8d.html
+Title: Murry's Restaurant announces downtown Columbia location
+Status hint: Opening | Industry: Restaurants
+
+Facebook Twitter WhatsApp SMS Email Murry's plans to open a second location, in downtown Columbia, in the fall in the space previously occupied by Sycamore. Facebook Twitter WhatsApp SMS Email Print Copy article link Save Facebook Twitter WhatsApp SMS Email Print Copy article link Save COLUMBIA — Murry's Restaurant announced plans to open a second location in downtown Columbia in the fall of 2026 through a social media post on Sunday. The restaurant's current location is off Green Meadows Road near Providence Road. The restaurant's second location will in the space currently occupied by Sycamore downtown, which is at East Broadway and Eighth Street. The owners of Murry's said they hope to maintain the "welcoming jazz club atmosphere" their customers expect and look forward to contributing to the "vibrant downtown energy." “Our friends, Sanford and Jill Speake, are looking forward to their retirement," the Murry's owners said in the post. "The legacy and impact that Sycamore leaves behind will be deeply felt by the restaurant community. We are grateful for this opportunity and for the support that Columbia has shown us for over 40 years." In a social media post from Sycamore, Sanford and Jill announced the closing of their restaurant and that they plan on "moving on to the next phase." Murry's will document its progress of transforming the new location on social media and looks forward to welcoming guests, according to the post. Katy Taylor, a Jefferson City resident and Murry's customer, said she hoped the new location might alleviate some of the demand at the jazz club's current site. "For another side of town to have them close by, and maybe free this up a little bit so it's not so crowded, would be great," Taylor said. Sycamore's last day of business will be May 29, but one of its longtime employees hopes to open a new Sycamore in a different location, according to the post. To report an error or typo, email news@komu.com . Click here to add KOMU 8 News as a sour
+
+--- Article 96 ---
+URL: https://www.postregister.com/news/local/idaho-falls-shilo-inn-closure-didnt-stop-cinco-de-mayo-celebration/article_3667adff-9af4-4d00-a26a-fa8d8cfaaae1.amp.html
+Title: Idaho Falls Shilo Inn closure didn't stop Cinco de Mayo Celebration
+Status hint: Closing | Industry: Hospitality
+
+Workers were busy Friday setting up for the 40th anniversary of the East Idaho Cinco de Mayo Celebration in the Snake River Convention Center at the Shilo Inn in Idaho Falls. ALLEN THAYER/athayer@postregister.com ▲ David Rail, owner of the Troli restaurant that went out of business last Tuesday with the Shilo Inn being closed, takes a few moments Friday to talk about the East Idaho Cinco de Mayo Celebration in the Snake River Convention Center. ALLEN THAYER/athayer@postregister.com ▲ Workers set up the Snake River Convention Center for the East Idaho Cinco de Mayo Celebration held last weekend at the Shilo Inn in Idaho Falls. ALLEN THAYER/athayer@postregisster.com ▲ The doors of the Shilo Inn in Idaho Falls remain locked Friday, but the East Idaho Cinco de Mayo Celebration occurred as planned last weekend in the Snake River Convention Center. ALLEN THAYER/athayer@postregister.com ▲ ALLEN THAYER
+athayer@postregister.com Updated 16 hrs ago Ramifications from the U.S. Bankruptcy Court closing the Shilo Inn in Idaho Falls last Tuesday were still being felt Friday. In addition to the fewer than 15 hotel employees who lost their jobs, David Rail had to tell the 18 employees of his Trofi restaurant and Flying Goose Lounge at the hotel they also were out of work. Two bankruptcy officials shut down the hotel in the aftermath of Shilo Management Corporation filing for Chapter 11 bankruptcy in 2020. A court order last month revealed the case is being converted to Chapter 7 bankruptcy which means the estate and all its assets will be liquidated. The chain-locked front doors at the hotel lobby left no way for Rail to keep his businesses open. While Rail has access to his kitchen, restaurant and bar, patrons no longer do. “The public can’t get to the restaurant or the bar, because they would have to go through that hotel lobby,” Rail said, “and that’s chained up.” But Rail was able to get the judge in charge of the bankruptcy case to accept his pleadings to stay at the hotel for 
+
+--- Article 97 ---
+URL: https://krcgtv.com/news/local/murrys-to-move-to-sycamore-restaurant-location-in-columbia
+Title: Murry's to move to Sycamore restaurant location in Columbia
+Status hint: Opening | Industry: Restaurants
+
+
+
+--- Article 98 ---
+URL: https://neon.reviewjournal.com/dining-out/jonas-brothers-restaurant-to-close-on-the-las-vegas-strip-3334450/
+Title: Jonas Brothers restaurant to close on the Las Vegas Strip
+Status hint: Opening | Industry: Restaurants
+
+Joe Jonas, Kevin Jonas and Nick Jonas of the musical group Jonas Brothers arrive at the grand opening of their family restaurant, Nellie's Southern Kitchen, at MGM Grand on June 04, 2022 in Las Vegas, Nevada. (Photo by Denise Truscello/Getty Images) Kevin Jonas Sr. performs at the grand opening of Nellie's Southern Kitchen at MGM Grand on June 04, 2022 in Las Vegas, Nevada. (Denise Truscello/Getty Images) At Nellie's Southern Kitchen in MGM Grand on the Las Vegas Strip, Southern rolls, inspired by egg rolls, are stuffed with pulled barbecue chicken, mac and cheese, and drunken collards. (Sabin Orr) A spread from Nellie's Southern Kitchen in MGM Grand on the Las Vegas Strip. (Nelllie's Southern Kitchen) At Nellie's Southern Kitchen in MGM Grand on the Las Vegas Strip, traditional shrimp and grits receives a twist with grits that are cooled, cut and fried into cakes, instead of being served loose and creamy in the usual way. (Sabin Orr) Home >> Dining Out By Johnathan L. Wright / Las Vegas Review-Journal May 4, 2026 - 9:55 am Updated May 4, 2026 - 6:54 pm Nellie’s Southern Kitchen, the restaurant from the Jonas Brothers and family, will close on or before June 1 at the MGM Grand on the Las Vegas Strip. TheStreet.com, the financial news site, recently reported on the closure, citing an email from the brand that said it was directing its efforts elsewhere as its Vegas lease approached the end. Neon has requested a statement from MGM Resorts International on the closing but has not yet received a response. Nellie’s Southern Kitchen opened in June 2022, a project of Denise and Kevin Jonas Sr., their famous singing sons (Kevin, Joe, Nick), and other son Franklin. The restaurant, an outpost of the North Carolina original, celebrates the recipes and cooking of Grandma Nellie, paternal grandmother of Kevin Sr., as reimagined for the Strip. The Jonas family, including the Jonas Brothers, attended the grand opening. The band was in the middle of a residency at Dolby Live when N
+
+--- Article 99 ---
+URL: https://baltimorefishbowl.com/stories/furniture-retailer-7th-avenue-to-open-showroom-in-harbor-east/
+Title: Furniture retailer 7th Avenue to open showroom in Harbor East
+Status hint: Opening | Industry: Furniture / Mattress
+
+Los Angeles-based furniture retailer 7th Avenue plans to open its first Maryland showroom this fall in Baltimore’s Harbor East. The 1,028-square-foot showroom will be located at 830 Aliceanna St. “We are always on the lookout for trendy up-and-coming brands to complement our curated retail mix, and 7th Avenue is the perfect fit,” Harbor East President Tim O’Donald said in a statement. “This showroom will be the first one in Maryland, joining a distinguished lineup of retailers, including Alo Yoga, Patagonia, Chanel Beauty, Saatva, and others who are also choosing Harbor East as their first Maryland store.” 7th Avenue is known for their modular sofas and sectionals, which employ water-repellent and stain-resistant fabrics, memory foam-blend cushions, covers that can be removed and machine-washed, and back cushions that can be adjusted to the customer’s desired firmness. The company also sells other indoor and outdoor seating, including daybeds, armchairs, and more. “Bringing 7th Avenue to Harbor East is more than just a new location; it’s a milestone in our mission to redefine modern living,” said Clary Groen, vice president of real estate for 7th Avenue, in a statement. “Baltimore has an incredible energy, and we couldn’t think of a better place than this vibrant, waterfront district to showcase our commitment to design that is as functional as it is beautiful.” Related Marcus Dieterle Managing Editor Marcus Dieterle is the managing editor of Baltimore Fishbowl, telling the stories of communities across the Baltimore region. Marcus helped lead the team to win a Best of Show award for Website of General... More by Marcus Dieterle
+
+--- Article 100 ---
+URL: https://kearneyhub.com/news/state-regional/nebraska/collection_5ae4640e-721c-510a-b434-4a4f3627860d.html
+Title: What’s open, what's gone: A guide to Lincoln's shifting restaurant scene for March, April
+Status hint: Opening | Industry: Restaurants
+
+Here is a roundup of recent restaurant news. Find out who has closed, where new restaurants are opening and other tidbits. For fans of toasted subs: A new best bud is coming to Lincoln There’s been a lot of buzz about a new sandwich shop coming to the Telegraph District. It’s got the Magic Mushroom, Sensi Kush, Kali Mist and Icky Sticky. And there's also the Acapulco Gold and Panama Red for those of you who can remember the ’70s. × This page requires Javascript. Javascript is required for you to be able to read premium content. Please enable it in your browser settings. kAmxE H:== 92G6 2 7F== 32C[ D@>6 EC:AAJ 2CE 2?5 2 =2:5\324< G:36]k^Am kAm(92E r9632 wFE H:== ?@E 92G6 :D 2?J %wr @C rqs :? :ED D2?5H:496D H96? :E @A6?D :? yF=J]k^Am kAmr@\@H?6C p?5C62 #6>2<=FD D2:5 =2DE H66< E96 H665\E96>65 DF3 D9@A 4@F=5 @A6? 2E a__ $] a`DE $E] :? yF=J] %96 D:E6 H2D @?46 @44FA:65 3J 4@>>6C4:2= C62= 6DE2E6 7:C> {66 U2>Aj pDD@4:2E6D]k^Am kAm#6>2<=FD D2:5 r9632 5@6D?’E 4FE 4@C?6CD 2?5 A2:CD 9:89\BF2=:EJ >62ED H:E9 :ED AC@AC:6E2CJ 3C625 E92E’D 96=A65 >2<6 r9632’D E@2DE65 DF3D — H6==[ E96 E@2DE @7 E96 E@H?D E96JVC6 =@42E65]k^Am kAm}63C2D<2’D 7:CDE r9632 wFE H:== 6>A=@J 36EH66? b_ 2?5 d_ 6>A=@J66D] #6>2<=FD D2:5 D96 2?5 96C 4@\@H?6C 9FD32?5[ p2C@?[ 2C6 DE:== H@C<:?8 @FE D@>6 @7 E96 56E2:=D =:<6 E96 9@FCD @7 @A6C2E:@?[ 3FE E96J 4@F=5?’E 36 92AA:6C H:E9 E96 =@42E:@?]k^Am kAm}@H[ E96 7@@5 H@?’E 86E J@F 9:89[ 3FE J@F’== 36 23=6 E@ 6?;@J 2 4@4<E2:= @C 2 366C 2D H6== 2D >@C6 E92? 2 5@K6? EJA6D @7 E@2DE65 D2?5H:496D[ >F?49:6D WD:56D 2?5 56DD6CEDX 2?5 4@EE@?>@FE9 4FC6D W5C:?<DX]k^Am kAm#6>2<=FD[ H9@ 2=D@ @H?D r@=5 $E@?6 rC62>6CJ 2E $@FE9!@:?E6 !2G:=:@?D[ E@@=D 2C@F?5 E@H? :? E96 r9632 wFE G2?] $96 D2JD :7 J@F D66 96C[ 7=28 96C 5@H? 2?5 D96’== D92C6 D@>6 DH28 — C:89E ?@H ;FDE DE:4<6CD[ 3FE E96C6’== 36 >@C6 E@ 4@>6 :? E96 7FEFC6]k^Am The wait is over: Ty’s BBQ and Smashys opens new location The long and much-anticipated wait is over. Ty’s BBQ and Smashys ' new location opened Wednesday morning at t

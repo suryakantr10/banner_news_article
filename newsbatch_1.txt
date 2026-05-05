@@ -1,0 +1,178 @@
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+
+--- Article 1 ---
+URL: https://www.msn.com/en-us/money/companies/movie-theater-chain-with-locations-in-8-states-files-for-bankruptcy-again/ar-AA1HVXbo?cvid=9E03F8833B0141E1B0B99DC687FDC754&ocid=hpmsn&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Movie theater chain with locations in 8 states files for bankruptcy again
+Status hint: Closing | Industry: Movie Theatres
+
+MSN
+
+--- Article 2 ---
+URL: https://www.hellorayo.co.uk/greatest-hits/salisbury/news/melksham-lidl-relocation
+Title: Supermarket chain unveils new store plans for Wiltshire town
+Status hint: Opening | Industry: Grocery
+
+[Could not fetch: 504 Server Error: Gateway Timeout for url: https://www.hellorayo.co.uk/greatest-hits/salisbury/news/melksham-lidl-relocation]
+
+--- Article 3 ---
+URL: https://urbanmilwaukee.com/2026/05/04/grand-openings-new-bars-and-restaurants-that-opened-in-april-3/
+Title: Grand Openings: New Bars and Restaurants That Opened in April
+Status hint: Opening | Industry: Restaurants
+
+
+
+--- Article 4 ---
+URL: https://www.beaumontenterprise.com/business/article/mr-po-boyz-burgers-wings-seafood-soft-launches-22233544.php
+Title: Mr. Po' Boyz soft launched new restaurant, grand opening in May
+Status hint: Opening | Industry: Restaurants
+
+Mr. Po’ Boyz in Beaumont is featured in this Enterprise photo from May 1, 2026. This classic drive-in diner style building has been the home of many establishments. Mbu Maqungo/For The Beaumont Enterprise The street sign for Mr. Po’ Boyz in Beaumont is featured in this Enterprise photo from May 1, 2026. This classic drive-in diner style building has been the home of many establishments. Mbu Maqungo/For The Beaumont Enterprise A familiar north end Beaumont restaurant space became home to a new business April 24. Mr. Po’ Boyz Burgers and Seafood is serving a variety of items at 2605 E. Lucas St. Social media posts from Wilbert Paul Jr. began promoting the restaurant in February. Advertisement Article continues below this ad RELATED: Read about what came before Mr. Po' Boyz A Mardi Gras color scheme was also painted over the old Mr. Burger and Smash Wagon. This soft launch will be followed by a grand opening on May 16.
+
+--- Article 5 ---
+URL: https://rv-pro.com/news/campers-inn-rv-to-hold-largest-grand-opening-in-company-history/
+Title: Campers Inn RV To Hold Largest Grand Opening in Company History
+Status hint: Opening | Industry: Hospitality
+
+Campers Inn RV announced its company-wide grand opening event, May 14-17. This marks a major milestone in its continued growth, the rebranding and integration of multiple Lazydays locations across the country, alongside the highly anticipated grand opening of the reimagined Tampa flagship — Lazydays Powered by Campers Inn RV and campground. This historic four-day grand opening event features coordinated festivities across all newly rebranded locations and current Campers Inn locations, Campers Inn said. The weekend is highlighted by a free RV giveaway on Saturday May 16 at 4 p.m. Two winners will be selected, but they must be present at one of the dealerships at the time of drawing to redeem the prize, the company said. As part of the expansion, the following locations are operating under Campers Inn: Campers Inn RV of Wilmington Campers Inn RV of Knoxville Airstream of Knoxville Campers Inn RV of Johnstown Campers Inn RV of Ramsey Airstream of Minnesota Campers Inn RV of St. George Campers Inn RV of Tucson Campers Inn RV of Milford In addition, the Tampa location debuts as Lazydays Powered by Campers Inn RV, symbolizing the blending of two industry leaders and a bold step into the future of RV retail, camping and service. This strategic growth strengthens Campers Inn RV’s national presence to 50-plus locations across 23 states, the company said, delivering even greater access to inventory, service and expertise for RVers coast to coast. “This grand opening is about bringing the full Campers Inn RV experience to more customers and more communities,” said Campers Inn RV COO Ben Hirsch. “For us, being the RVer’s trusted resource means helping customers feel welcomed, informed and supported throughout their entire RV journey. That starts with how we greet people, how we guide them through decisions, how we deliver their RV and how we stand behind them in service. We’re building our teams, training and processes around that promise because the experience customers have 
+
+--- Article 6 ---
+URL: https://mouthbysouthwest.com/2026/05/04/april-recap-6-notable-restaurants-cafes-now-open-in-the-valley/
+Title: April recap: 6 notable restaurants & cafés now open in the Valley
+Status hint: Opening | Industry: Restaurants
+
+
+
+--- Article 7 ---
+URL: https://www.msn.com/en-us/foodanddrink/foodnews/colorado-born-green-chili-restaurant-opening-new-location/ar-AA21yB7O?ocid=BingNewsVerp&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Colorado-born green chili restaurant opening new location
+Status hint: Opening | Industry: Restaurants
+
+MSN
+
+--- Article 8 ---
+URL: https://patch.com/connecticut/newtown/new-restaurant-celebrate-grand-opening-newtown
+Title: New Restaurant To Celebrate Grand Opening In Newtown
+Status hint: Opening | Industry: Restaurants
+
+Restaurants & Bars New Restaurant To Celebrate Grand Opening In Newtown A ribbon-cutting is set for May 18 at the new bar and grill on South Main Street. Hayleigh Evans , Patch Staff Posted Mon, May  4, 2026 at 1:02 pm ET NEWTOWN, CT — A new bar and grill offering stacked burgers, dozens of wing flavors and a sports bar atmosphere has opened in Newtown and will celebrate its grand opening later this month. jjStacks, located at 71 South Main St. in the former Eggs & Co. space, is set to hold a ribbon-cutting ceremony at 2 p.m. on Monday, May 18, town officials said. The restaurant is owned by Joe Attonito, who has more than 30 years of experience in food service and previously operated the Stacks Mobile food truck. The Newtown location marks the brand’s first brick-and-mortar restaurant. Find out what's happening in Newtown for free with the latest updates from Patch. The menu includes more than 100 varieties of wings, a range of burgers, sandwiches and wraps, as well as specialty items like a “Grand Slam Burger Challenge” featuring multiple beef patties, bacon, cheese and a large portion of fries. Beer and wine are currently available, with full bar service expected in the future. The restaurant is open daily from 11 a.m. to 11 p.m. Find out what's happening in Newtown for free with the latest updates from Patch. Newtown Economic and Community Development Director John Voket said the new location builds on the brand’s popularity from its mobile operation. “This is something Attonito has been working toward for some time,” Voket said. “He has already built a strong following locally, and this new location gives him a permanent presence in a well-traveled area.” Town officials and members of the Economic Development Commission are expected to attend the ribbon-cutting. Get more local news delivered straight to your inbox. Sign up for free Patch newsletters and alerts. Share Join the conversation
+
+--- Article 9 ---
+URL: https://www.aol.com/news/kfc-gives-bradenton-saucy-treatment-095000024.html
+Title: KFC gives Bradenton the ‘Saucy!’ treatment with new restaurant opening soon
+Status hint: Opening | Industry: Restaurants
+
+Jason Dill Fri, May 1, 2026 at 9:50 AM UTC 0 The local chicken wars have a new participant. According to a news release, fast-food restaurant Saucy! by KFC opens Monday at 5484 Lena Road in Bradenton. The restaurant features chicken tenders, sauces, chicken sandwiches, desserts and beverages. The opening is part of KFC’s expansion of the new concept, which already has four locations in the Tampa Bay area. However, the Bradenton location will be its first for Manatee County. KFC parent company Yum! Brands Inc., launched the Saucy! concept in Orlando with 11 different sauces , according to Nation’s Restaurant News. Advertisement The Lena Road location is off State Road 70 near Interstate 75. The grand opening is scheduled to begin at 11 a.m. Monday. There are giveaways planned and complimentary bites, according to the news release. The Bradenton location will also have two new menu items: the Big Sammie, comprised of two chicken tenders with greens, hashbrown straws and choice of Saucy! sauce wedged in a King’s Hawaiian roll; and Saucy! x DRIPS by Pepsi, a collection of four mood-inspired drinks. Saucy! by KFC is opening its first Manatee County restaurant on Monday, May 4 at 5484 Lena Road near State Road 70 and Interstate 75. The sauces at Saucy! have expanded since it opened to include 13 sauces. They are Classic BBQ, Saucy’s Sauce, Chimichurri Ranch, Saucy Ranch, Smokey Bacon Ranch, Salsa Ranchero, Fiery Buffalo, Jalapeno Pesto Ranch, Thai Sweet ‘N Spicy, Korean Sweet Heat, Sweet ‘N Saucy BBQ, Creole Honey Mustard and Sweet Teriyaki. For more information, visit Saucy.KFC.com . Saucy! by KFC is opening its first Manatee County restaurant on Monday, May 4 at 5484 Lena Road near State Road 70 and Interstate 75.
+
+--- Article 10 ---
+URL: https://wupe.com/ixp/922/p/jersey-mikes-pittsfield-opening/
+Title: New Restaurant Alert: Jersey Mike’s Subs Is Opening A New Location In Berkshire County
+Status hint: Opening | Industry: Restaurants
+
+New Restaurant Alert: Jersey Mike’s Subs Is Opening A New Location In Berkshire County Ryan Pause Ryan Pause Published: May 4, 2026 Canva Share on Facebook Share on Twitter If you're looking for a taste of New Jersey, nothing beats Jersey Mike's Subs. I usually try to hit one when I travel outside the Berkshires, but now I might actually have to add it to my list of places to stop for lunch! Getty Images Getty Images loading... Who is Jersey Mike's Subs and Its History? According to their website , Jersey Mike's has a longstanding tradition of entrepreneurship and delicious submarine sandwiches. Established on the Jersey Shore in 1956, the chain offers authentic East Coast-style subs made with the original recipe from over five decades ago. Enthusiasts of Jersey Mike's particularly enjoy their subs prepared Mike's Way™, which includes onions, lettuce, tomatoes, and a special blend of olive oil, red wine vinegar, and spices. They use only private-label meats and cheeses, sliced fresh for each sub, and stack them high on bread baked in-store. Every sandwich is prepared fresh for each customer, just like the original Jersey Mike's. The Jersey Mike's experience always features friendly banter from our energetic team. Get our free mobile app Read More: Two Drivers Busted By State Police For Racing In Pownal, Vermont Google/Streetview Google/Streetview loading... Where In Berkshire County Is Jersey Mike's Subs Opening? With very little information so far, indeed.com recently posted a job opening for a General Manager position at the soon-to-be Jersey Mike's Subs, located at 660 Merril Road in Pittsfield. This location is in the Stop & Shop Plaza, right next to Pizza Hut, in the AAA location. The franchise will be operated by Liotta Brothers LLC and will pay a salary of $55,000-$70,000 per year, full-time, plus health insurance benefits. These Are America's 10 Most Unhealthy Fast Food Restaurants Once-Beloved Fast Food Burgers That No Longer Exist These fast food burgers g
+
+--- Article 11 ---
+URL: https://www.aol.com/news/restaurant-rail-trail-patio-views-115557091.html
+Title: A new restaurant with Rail Trail patio views is opening soon in Charlotte
+Status hint: Opening | Industry: Restaurants
+
+Heidi Finley Wed, April 29, 2026 at 11:55 AM UTC 0 A destination restaurant is opening in Charlotte in May, drawing in customers looking for patio views, live music, elevated food and game day entertainment. Market on Morehead sits right at the edge of uptown and South End, perched just steps from the light rail’s Carson Station. With a prime location and seating for 200 guests inside and 150 outdoors, the full-service restaurant and bar that’s a sister spot to Market on Main in Columbia, South Carolina, is positioned to draw in big crowds for lunch, brunch and dinner. The bar at Market on Morehead offers a view of patio, which overlooks the Rail Trail in Charlotte. (Heidi Finley/CharlotteFive) What to expect at Market on Morehead Market on Morehead co-founder Josh Willoughby has worked for the past year to dial in every detail at the restaurant, which is in the final stages of construction and inspections. “We really designed it up,” Willoughby told CharlotteFive on a private tour of the space, which has been in the works since negotiations on the lease began in 2023. “We think people are really going to like it.” Market on Morehead co-founder Josh Willoughby. (Heidi Finley/CharlotteFive) Expect a polished look that meshes traditional and modern styles, coupled with high-tech touches such as zoned music, color-changing stage lights and multiple screens, including a drop-down projector screen in the private dining room for slideshows or TV viewing. The private room at Market on Morehead. (Heidi Finley/CharlotteFive) There’s a 40-seat bar with seating in view of two TVs, along with windows that open to Rail Trail views. An indoor water fountain is also an eye-catching feature, placed inside a sunken area of the restaurant that offers an elevated feel. The sunken dining area at Market on Morehead. (Heidi Finley/CharlotteFive) Market on Morehead’s patio Outside, there’s a standout feature that’s hard to miss: a 25-foot LED Jumbotron screen, so you won’t miss a moment o
+
+--- Article 12 ---
+URL: https://www.msn.com/en-us/money/companies/restaurant-chain-with-3-193-locations-shut-down-after-bankruptcy-filing/ss-AA1ZVfWR?ocid=delldhp17
+Title: Restaurant chain with 3,193 locations shut down after bankruptcy filing
+Status hint: Closing | Industry: Restaurants
+
+MSN
+
+--- Article 13 ---
+URL: https://miamivalleytoday.com/canal-lock-salon-holds-grand-opening-in-tipp-city/
+Title: Canal Lock Salon holds grand opening in Tipp City
+Status hint: Opening | Industry: Health / Beauty
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://miamivalleytoday.com/canal-lock-salon-holds-grand-opening-in-tipp-city/]
+
+--- Article 14 ---
+URL: https://www.breakingtravelnews.com/news/article/grand-opening-of-centara-life-namba-hotel-osaka/
+Title: Grand Opening of Centara Life Namba Hotel Osaka
+Status hint: Opening | Industry: Hospitality
+
+Centara Hotels & Resorts,Thailand’s leading hotel operator, celebrates the grand opening of Centara Life Namba Hotel Osaka, marking its second hotel in Japan. Now officially open, the vibrant new lifestyle property is ready to welcome guests from around the world to the heart of Osaka’s energetic Namba district. Designed to uplift everyday travel through elevated essentials and lifestyle-led comfort, the hotel offers flexibility, convenience and exceptional value in one of the city’s most dynamic neighbourhoods. Perfectly positioned just steps from Nankai Shin-Imamiya and Namba Stations, Centara Life Namba Hotel Osaka places travellers at the heart of one of the city’s most dynamic neighbourhoods. Guests can easily explore the bright lights of Dotonbori, the culinary delights of inner Namba’s hidden alleys, the fresh flavours of Kizu Wholesale Market, and the many shopping malls of Namba and Shinsaibashi, with convenient access to major attractions including the historic icon Osaka Castle. The hotel’s 300 stylish, non-smoking rooms offer flexibility for solo travellers, couples and families alike. Contemporary interiors with Osaka-inspired accents create a vibrant yet comfortable urban base, complemented by high-speed Wi-Fi, a flat-screen TV, and a dedicated work desk for seamless business or leisure stays. Family rooms with bunk beds provide a welcoming option for those travelling with children, while wheelchair-accessible rooms ensure inclusive comfort for all guests. At the heart of the hotel’s dining experience is DINING, where a hearty breakfast buffet features international favourites alongside locally inspired Osaka flavours, setting guests up perfectly for a day of exploration. Above the city, SORA, the hotel’s rooftop lounge, presents sweeping skyline views including iconic landmarks Tsutenkaku and Abeno Harukas. Throughout the property, welcoming common spaces provide the flexibility to work, unwind or connect, adapting effortlessly to each guest’s needs. 
+
+--- Article 15 ---
+URL: https://hospibuz.com/hotel/Hotel-listicles/ramee-group-of-hotels-marks-its-tricity-debut-with-the-grand-opening-of-ramee-collection-airport-road-mohali-11798065
+Title: Ramee Group of Hotels Marks its Tricity Debut with the Grand Opening of Ramee Collection Airport Road, Mohali
+Status hint: Opening | Industry: Hospitality
+
+Hotel LISTICLES Hotel Ramee Group of Hotels Marks its Tricity Debut with the Grand Opening of Ramee Collection Airport Road, Mohali Discover Ramee Collection Airport Road, Mohali—a boutique hotel redefining luxury stays and dining in North India's vibrant Tricity region. Experience elevated comfort today! Hospibuz 04 May 2026 14:29 IST Follow Us New Update A fine boutique hospitality destination, strategically positioned on Airport Road, redefines elevated stays and experiential dining in North India’s fastest-growing urban corridor Mumbai, 4th May 2026: Ramee Group of Hotels, the internationally acclaimed hospitality brand renowned for its vibrant lifestyle experiences and guest-centric service, today announced the opening of Ramee Collection Airport Road, Mohali — a fine boutique property developed in partnership with Pure Hotel Pvt. Ltd. This landmark launch marks the Group’s first foray into the Tricity market of Mohali, Chandigarh, and Panchkula, and reinforces its expanding footprint in North India following the success of its boutique presence in Amritsar. Strategically positioned on the prime Airport Road corridor, Ramee Collection Airport Road, Mohali is tailored for today’s discerning traveller — one who seeks refined stays, elevated comfort, and culinary experiences beyond the conventional. The property draws together boutique design sensibilities, a strong food and beverage identity, and seamless urban connectivity to carve a distinctive niche in one of North India’s most dynamic hospitality markets. “The Tricity region has long been on our strategic radar. Chandigarh’s planned infrastructure, Mohali’s rapidly maturing commercial landscape, and the region’s growing appetite for quality lifestyle experiences make this a compelling market for Ramee. This opening is not just about adding keys to our inventory — it is about creating a landmark destination that resonates with the aspirational traveller from Punjab, Haryana, and Himachal Pradesh alike. As Nort
+
+--- Article 16 ---
+URL: https://patch.com/pennsylvania/haverford/fire-impacts-shopping-center-llbean-store-coming-soon-delco-business-news
+Title: Fire Impacts Shopping Center; LLBean Store Coming Soon: Delco Business News
+Status hint: Opening | Industry: Retail REITs
+
+Business & Tech Fire Impacts Shopping Center; LLBean Store Coming Soon: Delco Business News What's opening, what's closing and what's changing in Delco and beyond? Here are some of the top business stories making news. June Bakan , Patch Staff Posted Sun, May  3, 2026 at 9:18 pm ET (Merion Fire Company of Ardmore) What's opening, what's closing and what's changing in the local business landscape? Here are some of the business stories making recent news across Delaware County and nearby areas. Underground Fire Near Shopping Center A powerful underground fire pushed high levels of carbon monoxide into a Wynnewood shopping center, causing power outages and keeping several stores closed the next day. More . Find out what's happening in Haverford-Havertown for free with the latest updates from Patch. L.L.Bean Store Coming Soon Delco is getting its first L.L.Bean store — right by where longtime competitor Eddie Bauer closed up shop. More . Find out what's happening in Haverford-Havertown for free with the latest updates from Patch. Demolition For Mixed-Used Development A Wayne commercial complex housing a bar known for live music would add an office, apartments and new retail under a proposed redevelopment. Under the plan, the building housing 118 North would be demolished and rebuilt with restaurant space and two additional floors up top. More . PGA Ticket Prices In The Thousands With the PGA Championship coming soon to Newtown Square, many tickets to one of golf's biggest tournaments are hitting the thousands. More . June Bakan covers the Main Line, Delaware County and Philadelphia. Are you a local business owner with big news to share, or a customer with a business or restaurant that you believe deserves a shoutout? Email june.bakan@patch.com. Get more local news delivered straight to your inbox. Sign up for free Patch newsletters and alerts. Related: PA Store Openings PA Store Closings Share Join the conversation
+
+--- Article 17 ---
+URL: https://patch.com/pennsylvania/ardmore/amp/34053906/fire-impacts-shopping-center-llbean-store-coming-soon-main-line-business-news
+Title: Fire Impacts Shopping Center; LLBean Store Coming Soon: Main Line Business News
+Status hint: Opening | Industry: Retail REITs
+
+Fire Impacts Shopping Center; LLBean Store Coming Soon: Main Line Business News | Ardmore-Merion-Wynnewood, PA Patch Sign up Ardmore, PA News Feed Events Local Businesses Classifieds Business Fire Impacts Shopping Center; LLBean Store Coming Soon: Main Line Business News What's opening, what's closing and what's changing on the Main Line and beyond? Here are some of the top business stories making news. By June Bakan , Patch Staff May 3, 2026 9:17 pm EDT View original (Merion Fire Company of Ardmore) What's opening, what's closing and what's changing in the local business landscape? Here are some of the business stories making recent news across the Main Line and nearby areas. Underground Fire Near Shopping Center Subscribe A powerful underground fire pushed high levels of carbon monoxide into a Wynnewood shopping center, causing power outages and keeping several stores closed the next day. More . L.L.Bean Store Coming Soon Delco is getting its first L.L.Bean store — right by where longtime competitor Eddie Bauer closed up shop. More . Demolition For Mixed-Used Development A Wayne commercial complex housing a bar known for live music would add an office, apartments and new retail under a proposed redevelopment. Under the plan, the building housing 118 North would be demolished and rebuilt with restaurant space and two additional floors up top. More . PGA Ticket Prices In The Thousands With the PGA Championship coming soon to Newtown Square, many tickets to one of golf's biggest tournaments are hitting the thousands. More . June Bakan covers the Main Line, Delaware County and Philadelphia. Are you a local business owner with big news to share, or a customer with a business or restaurant that you believe deserves a shoutout? Email june.bakan@patch.com. More from Ardmore, PA News | 22h Lower Merion Politicians Consider 50% Pay Raise For Themselves News | 32m Teen Driver Was High, Unlicensed In Crash That Killed Swarthmore Professor: Report News | 20h French-Inspired Po
+
+--- Article 18 ---
+URL: https://www.travelandtourworld.com/news/article/amoh-resorts-grand-opening-how-it-enhances-rhodes-reputation-as-a-luxury-travel-destination-and-the-fusion-of-tradition-and-modernity-in-design-what-you-need-to-know/
+Title: Amoh Resort’s Grand Opening How It Enhances Rhodes’ Reputation As A Luxury Travel Destination And The Fusion Of Tradition And Modernity In Design: What You Need To Know
+Status hint: Opening | Industry: Hospitality
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.travelandtourworld.com/news/article/amoh-resorts-grand-opening-how-it-enhances-rhodes-reputation-as-a-luxury-travel-destination-and-the-fusion-of-tradition-and-modernity-in-design-what-you-need-to-know/]
+
+--- Article 19 ---
+URL: https://www.msn.com/en-us/foodanddrink/foodnews/kfc-expands-saucy-s-florida-footprint-with-a-new-location-of-concept-restaurant/ar-AA22c1AB?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: KFC expands Saucy's Florida footprint with a new location of concept restaurant
+Status hint: Opening | Industry: Restaurants
+
+MSN
+
+--- Article 20 ---
+URL: https://dailyvoice.com/ma/tyngsborough/smokey-bones-shutters-all-locations-nationwide-what-to-know/
+Title: Popular BBQ Chain With Tyngsborough Location Shutters All Restaurants: What To Know
+Status hint: Closing | Industry: Restaurants
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://dailyvoice.com/ma/tyngsborough/smokey-bones-shutters-all-locations-nationwide-what-to-know/]

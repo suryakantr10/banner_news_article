@@ -1,0 +1,184 @@
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+
+--- Article 221 ---
+URL: https://www.columbiatribune.com/story/lifestyle/food/2026/05/04/downtown-columbia-restaurant-location-changing-hands/89927470007/
+Title: Sycamore plans closure by month's end. Murry's moving in
+Status hint: Opening | Industry: Specialty / Other
+
+FOOD Sycamore plans closure by month's end. Murry's moving in Charles Dunlap Columbia Daily Tribune Updated May 4, 2026, 11:34 a.m. CT A downtown Columbia staple is closing, but the space it leaves behind won't remain empty for long. Jill and Sanford Speake announced the closure of Sycamore at 800 E. Broadway in downtown Columbia on social media Sunday evening, May 3. The closing date is May 29. The Speakes are "are moving on to the next phase of our live’s [sic]," they noted in the social media announcement . This doesn't mean the complete end for Sycamore, either, just its current location. The Speakes noted that a Sycamore employee aims to open a new Sycamore in a new location. What will go in its place is a downtown location for Murry's Restaurant, which has its home at 3107 Green Meadows Way. Language in the Sycamore announcement and comments on the Murry's announcement implied the downtown spot will be a second location and not a move, which was later confirmed by Tribune staff. "The legacy and impact that Sycamore leaves behind will be deeply felt by the restaurant community. We are grateful for this opportunity and for the support that Columbia has shown us for over 40 years,” Murry's owners said in their online post. The downtown location means more guests for Murry's, which will maintain its "classic jazz club atmosphere our patrons expect," Murry's owners noted. Comments online shared sadness at the closure of Sycamore, but also fond memories from guests who ate there. There also was excitement at the prospect of the downtown Murry's location. Murry's will share progress updates on social media with a planned opening at the downtown location in the fall, the online post noted. (This story was updated with a new photo). Featured Weekly Ad
+
+--- Article 222 ---
+URL: https://www.shawlocal.com/the-herald-news/2026/05/04/dutch-bros-coffee-proposes-to-open-drive-up-cafe-in-plainfield/
+Title: Dutch Bros. Coffee proposes to open drive-up cafe in Plainfield
+Status hint: Opening | Industry: Specialty / Other
+
+A coffee shop that specializes in handcrafted coffee and espresso-based beverages as well as non-coffee beverages wants to open a drive-up cafe in Plainfield . At its meeting at 7 p.m. Tuesday, Plainfield plan commissioners are set to review plans for Dutch Bros. Coffee, which wants to build an approximately 1,000-square-foot cafe on a vacant piece of land south of U. S. Route 30 and west of Spangler Road. The land, approximately one acre in size, is zoned for business. Along with coffee, Dutch Bros. Coffee sells cold brew, teas, lemonades, smoothies and other non-alcoholic specialty drinks. The proposed drive-up cafe would have two separate lanes for ordering. A paved patio area along the building’s western side would allow for customers to place walk-up orders. “The drive-through not only allows for customers to quickly receive their purchase, but is also situated to ensure that stacked vehicles do not overflow onto Route 30,” village planner Stephen Broadwell said in a memo to plan commissioners. Plainfield village staff recommends approval of the plans. Along with Dutch Bros. Coffee’s plans, 7 Brew Coffee is taking over the former Chili’s restaurant at Illinois Route 59 and 127th Street in Plainfield. Last November, Plainfield village trustees unanimously approved plans for 7 Brew Coffee to take over the space in the Kensington Center at the southwest corner of Route 59 and 127th Street. A drive-thru coffee shop is planning to open in the space that formerly housed a Chili’s restaurant in Plainfield. (Provided by the village of Plainfield) 7 Brew Coffee specializes in serving premium espresso-based coffee, chillers, teas, infused energy drinks, sodas and smoothies. “Due to the traffic challenges in other communities, Plainfield’s 7 Brew drive-thru site is twice the size of other locations, and they have created space for cars to stack on-site that will assist with traffic flow,” Plainfield village officials said. Dutch Bros. Coffee also is planning to open a dri
+
+--- Article 223 ---
+URL: https://www.star-telegram.com/news/business/fort-worth/article315627320.html
+Title: H-E-B reveals the opening date for its newest store in Tarrant County
+Status hint: Opening | Industry: Specialty / Other
+
+H-E-B has announced the much anticipated opening date of its newest store in Tarrant County. On Monday, the retailer said the Mid-Cities H-E-B will open to customers on May 20 at 6.a.m. at 2105 Rio Grande Blvd in Euless. The store is also near Bedford and Colleyville, where residents are eagerly awaiting the grand opening of H-E-B in HEB. “H-E-B is excited to build on the company’s longstanding presence in the area and continue its expansion across North Texas,” read a statement from the company. In late April, the construction on the new H-E-B along Texas 121 in Euless appeared to be nearing completion and there were reports of new hires training already taking place. The grocer broke ground on the 126,000-square-foot store in November 2024 at the corner of Cheek-Sparger Road and Rio Grande Boulevard, down the street from Glade Park’s shopping center. H-E-B has expanded into the Metroplex, by opening stores in Allen, Frisco, Fort Worth’s Alliance, Mansfield, Prosper and Melissa. Dallas is getting its first H-E-B, too. Last summer, H-E-B announced it is building a second Fort Worth location, after Alliance, in the Walsh development off Interstate 20 just west of the Parker County line. The large H-E-B sign is up on the store and this may signal a closer than expected opening store opening date.                                                                                            Fousia Abdullahi fousia.abdullahi@star-telegram.com H-E-B, with headquarters in San Antonio, operates over 455 stores in Texas and Mexico and employs over 175,000 people This story was originally published May 4, 2026 at 11:02 AM .
+
+--- Article 224 ---
+URL: https://www.eadt.co.uk/news/26066158.former-felixstowe-argos-store-goes-back-market/
+Title: Former Argos store back on the market
+Status hint: Opening | Industry: Specialty / Other
+
+Former Felixstowe Argos store goes back on the market Business Felixstowe Suffolk By 
+            Dominic Bareham Reporter Share 0 Comments The former Argos in Hamilton Road, Felixstowe is back on the market (Image: Google Maps) This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
+        and has been written by our American colleagues.
+        It does not necessarily reflect the view of The Herald. The premises of a former Argos store in a seaside town has now come back onto the market to rent after a potential tenant pulled out. Earlier this month, this newspaper revealed that the catalogue retailer's former premises in Hamilton Road had been let, although Penn Commercial, the agents for the property, declined to confirm the tenant's identity. However, the unit is once again being advertised to let for £37,500 per annum. In January 2025, Sainsbury's confirmed the catalogue retailer would be moving into the new supermarket, also in Hamilton Road, which opened in May 2025. In January 2025, a Sainsbury's spokesperson said: "To make shopping even more convenient for customers and bring the much-loved brands of Sainsbury’s and Argos together under one roof, we plan to relocate our Argos Felixstowe store to a new location inside the Sainsbury’s supermarket we’re opening on Hamilton Road this year. "Our Argos colleagues will have the opportunity to transfer to the new store and customers will be able to enjoy choosing from thousands of Argos products while picking up their groceries.” Business Felixstowe Suffolk Share 0 Comments Get involved with the news Send your news & photos
+
+--- Article 225 ---
+URL: https://www.tribuneledgernews.com/local_news/wild-fryz-no-longer-opening-at-adair-park-in-woodstock/article_c8495387-bca5-4eef-9057-c7c153d33b2b.amp.html
+Title: Wild Fryz no longer opening at Adair Park in Woodstock
+Status hint: Opening | Industry: Specialty / Other
+
+[Could not fetch: 429 Client Error: Too Many Requests for url: https://www.tribuneledgernews.com/local_news/wild-fryz-no-longer-opening-at-adair-park-in-woodstock/article_c8495387-bca5-4eef-9057-c7c153d33b2b.amp.html]
+
+--- Article 226 ---
+URL: https://patch.com/florida/sarasota/popular-soft-serve-ice-cream-brand-opening-new-fl-location-report
+Title: Popular Soft-Serve Ice Cream Brand Opening New FL Location: Report
+Status hint: Opening | Industry: Specialty / Other
+
+Restaurants & Bars Popular Soft-Serve Ice Cream Brand Opening New FL Location: Report A nationally renowned soft-serve ice cream brand will be opening a new location in FL soon, a report said. Tiffany Razzano , Patch Staff Posted Mon, May  4, 2026 at 11:34 am ET SARASOTA, FL — Popular soft-serve ice cream franchise Carvel has a new Florida location coming soon. The brand will open an ice cream shop at 8382 South Tamiami Trail in Pelican Plaza, according to Carvel’s website . The location passed its restaurant inspection and is expected to open in the coming days, the Sarasota Herald-Tribune reported . Find out what's happening in Sarasota for free with the latest updates from Patch. The shop will offer soft and scooped ice cream, a range of toppings, shakes, Sundae Dashers, take-home treats and ice cream cakes, all made fresh, the website said. This is the first of four Sarasota locations that Carvel franchisee Bobby Enrico plans to open over the next four years, the Herald-Tribune said. Find out what's happening in Sarasota for free with the latest updates from Patch. "I'm originally from New Jersey, which is where I knew Carvel from," he said. "When I retired out of the car business after 25 years, I was still a little too young to retire completely. So we decided to franchise with a brand that's recognizable and influential." Founded in 1934, Carvel has 370 locations across the U.S., including 32 in Florida. See Also: St. Pete Barbershop Offers Rays-Themed Cuts During 'Back in the Burg' Initiative Two More Saucy! by KFC Locations Set To Open In Tampa Bay Vietnamese Coffee Shop Sets Opening Date In Grand Central District Gondola Girl Offers Scenic Boat Rides Along New Port Richey River TX-Based Burger Chain Open 24/7 Welcomes Third Tampa Bay Restaurant Get more local news delivered straight to your inbox. Sign up for free Patch newsletters and alerts. Share Join the conversation
+
+--- Article 227 ---
+URL: https://www.syracuse.com/business/2026/05/salt-city-coffees-newest-onondaga-county-location-is-open.html
+Title: Salt City Coffee’s newest Onondaga County location is open
+Status hint: Opening | Industry: Specialty / Other
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.syracuse.com/business/2026/05/salt-city-coffees-newest-onondaga-county-location-is-open.html]
+
+--- Article 228 ---
+URL: https://www.aol.com/news/spirit-airlines-closure-dents-kci-212653262.html
+Title: Spirit Airlines closure dents KCI flight schedule, hurting some travelers & staff
+Status hint: Closing | Industry: Specialty / Other
+
+Kendrick Calfee Sat, May 2, 2026 at 9:26 PM UTC 0 The closure of Spirit Airlines leaves Kansas City International Airport (MCI) with limited impact to its operations, but packs a punch for travelers seeking budget flights to Florida and Las Vegas. Spirit Airlines announced Saturday that it has gone out of business after 33 years, the Associated Press reports . The airline, which had employed about 17,000 people, has gone bankrupt twice before. However, the final blow to its ability to stay afloat came when oil prices rose during the war in Iran. Spirit, known for its bright yellow planes and budget-friendly ticket prices, served travelers with direct flights to three different locations from MCI: Fort Lauderdale, Florida; Orlando, Florida; and Las Vegas. The airline said on its website Saturday that all flights have been canceled and that customer service is no longer available. “It is with great disappointment that on May 2, 2026, Spirit Airlines started an orderly wind-down of our operations, effective immediately,” the airlines said in a statement. “To our Guests: all flights have been cancelled, and customer service is no longer available. We are proud of the impact of our ultra-low-cost model on the industry over the last 33 years and had hoped to serve our Guests for many years to come,” the statement said. A screenshot from the Kansas City International Airport website showing a Spirit Airlines flight canceled Saturday. The airline announced it’s going out of business after 33 years. (Screenshot of KCI website) Spirit suspends service in Kansas City On Saturday, MCI staff began to tear down signage at the airport terminals that formerly housed Spirit flights. A spokesperson for the airport, Jackson Overstreet, said in a phone call Saturday that the airport’s information desk can help with things like directions, general questions and airport navigation. However, Spirit is advising its customers to not go to the airport and instead check its website for refund
+
+--- Article 229 ---
+URL: https://www.pennlive.com/life/2026/05/popular-mall-store-to-close-150-locations.html
+Title: Popular mall store to close 150 locations
+Status hint: Opening | Industry: Specialty / Other
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.pennlive.com/life/2026/05/popular-mall-store-to-close-150-locations.html]
+
+--- Article 230 ---
+URL: https://www.msn.com/en-us/news/us/milford-food-bank-marks-new-warehouse-completion-with-ribbon-cutting-and-open-house/ar-AA22fG1x?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Milford Food Bank marks new warehouse completion with ribbon-cutting and open house
+Status hint: Opening | Industry: Specialty / Other
+
+MSN
+
+--- Article 231 ---
+URL: https://www.grocerydive.com/news/schnucks-closing-fresh-store-jasper-indiana/819142/
+Title: Schnucks closing another small-format store
+Status hint: Opening | Industry: Specialty / Other
+
+An article from Dive Brief Schnucks closing another small-format store The Midwest grocer will close a Schnucks Fresh location in Jasper, Indiana, in mid-May as retailers continue to struggle with alternative formats. Published May 4, 2026 Jeff Wells Lead Editor Share Copy link Email LinkedIn X/Twitter Facebook Print License Add us on Google The exterior of the Schnucks Fresh store in Jasper, Indiana. Permission granted by Schnucks Listen to the article 2 min This audio is auto-generated. Please let us know if you have feedback . Dive Brief: Schnuck Markets will close its Schnucks Fresh location in Jasper, Indiana, on May 24, the grocer announced Friday . Schnucks Chairman and CEO Todd Schnuck said in a statement that the store, which opened in summer 2021, “ simply has not generated the business it needs to stay open.” The news comes about two years after Schnucks announced it would close down its natural and organic banner , Eatwell Market, and underscores the difficulty grocers are having operating alternative formats. Dive Insight: When it opened nearly five years ago, the Jasper location marked the debut of the Schnucks Fresh concept. At just 18,000 square feet, the store is significantly smaller than its traditional supermarkets but includes a wide array of fresh products. In an interview shortly after the opening, a company executive said the chain was looking to provide a full-service store to a community that didn’t have many grocery options. But shopper demand wasn’t strong enough to keep the store in operation, according to Friday’s announcement. Schnucks still operates a Fresh store in Oak Grove Village, Missouri, that opened in 2023 , but does not have plans to open any other locations, a company spokesperson said. Numerous other grocers have opened small-format stores in recent years in an attempt to provide a more tailored grocery shopping experience, but success has been mixed. Publix did away with its Greenwise banner in 2023, while Kroger, Stop & S
+
+--- Article 232 ---
+URL: https://www.yourohionews.com/carroll-county/modern-auto-opens-new-carrollton-location/1033830
+Title: Modern Auto and Truck Parts opens Carrollton location at former Rite Aid
+Status hint: Opening | Industry: Specialty / Other
+
+Modern Auto opens new Carrollton location Move to former Rite Aid building allows expanded inventory, improved service Brendon Rogerson operates a forklift while moving inventory into Modern Auto and Truck Parts’ new Carrollton location in the former Rite Aid building ahead of its May 1 opening. Thomas Clapper Thomas Clapper Thomas Clapper FPS Staff Writer Published May 4, 2026 - 10:46 a.m. AD Modern Auto and Truck Parts opened its new, larger location in Carrollton May 1, bringing expanded inventory, improved efficiency and a more modern shopping experience while continuing a decades-long tradition of serving the community. The business is now located in the former Rite Aid building at 340 W. Main St., Carrollton. AD Manager Brendon Rogerson said the move was driven largely by the need for space to meet the demands of today’s auto parts industry. Shelves inside Modern Auto and Truck Parts’ new Carrollton location are shown prior to opening, with expanded space that will be stocked with a wider selection of tools, equipment and inventory. Thomas Clapper “Mostly, a modern-day parts store requires larger inventory levels, and the extra space in the new location will allow us to expand our inventory to better serve the community,” Rogerson said. “Additionally, more space for parking and a more well laid out storefront benefits both employees and customers by helping make our operation more efficient.” The business, a NAPA Auto Parts store, had operated for more than 60 years at its previous location, formerly known as Carson’s Auto Parts. That site has now been sold, and the business has fully transitioned to the new building. “We are not keeping the old building,” Rogerson said. “The old properties have been sold to local individuals that will operate their respective businesses out of them.” The new location offers several upgrades, including a larger showroom, expanded office space and improved parking and access, particularly for customers with larger trucks and tr
+
+--- Article 233 ---
+URL: https://www.firstalert7.com/2026/05/04/whataburger-opening-odessa-star-wars-day/?outputType=amp
+Title: Whataburger opening in Odessa on Star Wars Day
+Status hint: Opening | Industry: Specialty / Other
+
+ODESSA, Texas (KOSA) - A brand-new Whataburger is opening in Odessa just in time for Star Wars Day. The restaurant at 8020 Texas Highway 191 will officially open Monday, May 4, at 11 a.m. To celebrate, the first customer to place an order whether in the drive-thru or dining room will receive a gift basket that includes free Whataburger for a year. “Odessa is where some of the earliest Whataburger restaurants opened,” Operating Partner Eirllana Baeza said. “People in the Permian Basin have been fans of Whataburger’s bold, fresh flavors for decades. It’s exciting to bring a new restaurant to such a loyal community. We look forward to welcoming guests and serving them 24/7.” The location will offer drive-thru and dine-in service, along with curbside pickup through the Whataburger app and website. Delivery will also be available through the app. The restaurant will employ 65 local workers, known as “Family Members,” led by Baeza. Copyright 2026 KOSA. All rights reserved.
+
+--- Article 234 ---
+URL: https://www.aol.com/news/unique-location-helps-keep-clovis-204403629.html
+Title: How this unique location helps keep Clovis burger joint cooking after 20+ years
+Status hint: Opening | Industry: Specialty / Other
+
+Bryant-Jon Anteola Mon, April 27, 2026 at 8:44 PM UTC 0 Just beyond the acres of farmland on Fresno State’s campus and to the north of Highway 168, a Fresno-area restaurant operates seemingly out of place. After all, the typical path for a restaurant is to be located within a larger development like a shopping center or in a high-traffic area with good visibility. Not isolated blocks from other commercial and retail establishments. Yet the Clovis Colorado Grill restaurant has thrived in solitude for 21 years and counting. “It’s kind of become a local destination for a good burger,” said Hossein Nekumanesh, who heads the Colorado Grill operations these days and is the son of the restaurant founder Ali Nekumanesh. Despite its odd location on 0.35 acres of triangular-shaped land at the southeast corner of Barstow and Willow avenues, the Clovis Colorado Grill isn’t exactly a hidden gem. Its parking lot often is packed, with customers regularly coming in and out of the restaurant since it opened in 2005. Colorado Grill's location at Willow and Barstow avenues is uniquely isolated, caught between a freeway, orchards and an apartment complex with no other businesses around. Photographed Friday, April 24, 2026 in Clovis. (ERIC PAUL ZAMORA/ezamora@fresnobee.com) But even Ali Nekumanesh had initial reservations. “At first, I wasn’t too high on the location,” Nekumanesh said. “When we bought the land, the building there wasn’t really even a building. It was a skeleton. The boards were up. Nothing else was done. The person who had it (previously) wanted to do a convenience store. “My wife (Debbie), though, she was high on the spot. It was at the corner of a traffic light. Close to Fresno State, and Fresno State’s (campus) wasn’t going anywhere. And there was no way other businesses could come around and hide our restaurant. It became a great spot.” Colorado Grill's location at Willow and Barstow avenues, center, is uniquely isolated, caught between a freeway, orchards and an ap
+
+--- Article 235 ---
+URL: https://www.msn.com/en-us/foodanddrink/foodnews/mimo-owners-open-la-rosa-a-dreamy-gelato-and-mortadella-sandwich-shop-in-houston-s-east-end/ar-AA221MtO
+Title: Mimo owners open La Rosa, a dreamy gelato and mortadella sandwich shop in Houston's East End
+Status hint: Opening | Industry: Specialty / Other
+
+MSN
+
+--- Article 236 ---
+URL: https://www.greenbaypressgazette.com/story/money/2026/05/04/green-bay-business-openings-closures-and-incoming-projects/89872794007/
+Title: 5 Green Bay-area businesses opened or closed in April
+Status hint: Opening | Industry: Specialty / Other
+
+MONEY 5 Green Bay-area businesses opened or closed in April Ariel Perez Green Bay Press-Gazette Updated May 4, 2026, 9:21 a.m. CT Business activity continues all over Brown County with openings, closures and new projects in the works. Openings across the area include a store, a restaurant and a baseball and softball training facility. While closures include a coffeehouse and a cheese store. Three new business openings in the Green Bay area Homegrown Farmstand , 377 Main Ave., Suite B, De Pere, opened April 4. This is a local store that offers farm-to-table products from farms all over Wisconsin. Gyro Guyz , 1981 E. Mason St., Suite 105, Green Bay, opened on April 4. It's a Mediterranean-style food restaurant. D-BAT Baseball and Softball Academy , 3525 Layden Drive, in Ashwaubenon, opened April 20. It's a baseball and softball training facility.
+
+--- Article 237 ---
+URL: https://www.witneygazette.co.uk/news/26076535.historic-oxfordshire-pub-back-dead-years-closure/
+Title: Historic riverside pub back from the dead years after closing
+Status hint: Closing | Industry: Specialty / Other
+
+Oxfordshire pub back from the dead years after closure Pubs Leisure Pubs and bars Witney By 
+            Edward Burnett Reporter Share 0 Comments The Black Prince in Woodstock (Image: Andy Ffrench, Newsquest) This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
+        and has been written by our American colleagues.
+        It does not necessarily reflect the view of The Herald. A riverside pub in Oxfordshire is returning from the dead, three years after its permanent closure. The Black Prince in Manor Road in Woodstock dates back to the 16th century. Sitting opposite the grounds of Blenheim Palace on the banks of the River Glyme, the spot has always boasted a stunning riverside garden. The watering hole shut in June of 2023, after the business was sold with the new owners closing the pub for the "foreseeable future". READ MORE: Five best pubs in Cotswolds revealed including celebrity hotspot The Black Prince pub in 2026. (Image: Newsquest) An announcement from The Black Prince at the time said it believed it would reopen again at some point in the future, but this was not a certainty. "We are all very shocked and saddened that our journey together must come to an end, and would like to say thank you to everyone who has ever been in to visit us," said a pub spokesperson three years ago. "It’s the community that made us as popular as we are, and we share the sadness of the community in this news. "If we have given you great food, great service and made you feel welcomed, then we have done our jobs. We were never just a pub. We were a home to many people. "To all our customers, with two legs or four, we can only say you have all been wonderful and have given us many happy memories. READ MORE: Oxfordshire town on edge of Cotswolds named among best in UK Inside The Black Prince, when it was previously open. "You will be missed beyond measure. We hope to see as many of you as possible before the doors close, the chairs 
+
+--- Article 238 ---
+URL: https://patch.com/virginia/reston/davio-s-open-outdoor-plaza-bar-reston-row
+Title: Davios To Open Outdoor Plaza Bar At Reston Row
+Status hint: Opening | Industry: Specialty / Other
+
+Business & Tech Davio’s To Open Outdoor Plaza Bar At Reston Row The Reston Row restaurant said the new outdoor bar and dining area is scheduled to open across from JW Marriott Reston Station. Michael O'Connell , Patch Staff Posted Mon, May  4, 2026 at 9:55 am ET | Updated Mon, May  4, 2026 at 10:26 am ET The Reston Row restaurant said the new outdoor bar and dining area is scheduled to open across from JW Marriott Reston Station. (Davio's) RESTON, VA — Davio’s Northern Italian Steakhouse in Reston Row said it will open Davio’s Plaza Bar, a new outdoor bar and dining area, on Thursday in Reston. The restaurant said the space will be located across from the JW Marriott Reston Station and will offer an open-air option for guests at the development. The Plaza Bar will include handcrafted cocktails, seasonal menu items, premium wines and a selection of Davio’s signature dishes, according to a press release. The restaurant also said the outdoor space will have lounge and patio seating overlooking Comstock’s plaza. “We’re excited to introduce Davio’s Plaza Bar as an extension of our restaurant and as a destination in its own right,” Steve DiFillippo, chef and owner of Davio’s, said in the release. “With the volume of activity at Reston Station, this concept allows us to meet guests where they are — outside, social and looking for a great experience.” Find out what's happening in Reston for free with the latest updates from Patch. The Plaza Bar will have seating for 76 guests, including 16 seats at the bar, according to the release. The space will include six TVs and a dedicated outdoor bar. Davio’s said the opening expands its presence in Reston beyond its indoor dining room. The restaurant said the Plaza Bar will be open Monday through Sunday beginning May 7. Find out what's happening in Reston for free with the latest updates from Patch. Also See ... 2 Reston Restaurants Named 2026 RAMMY Awards Finalists Pop Salad, El Diez Mexican Bowls Coming Soon To Wonder In Reston Ar
+
+--- Article 239 ---
+URL: https://abc7chicago.com/post/chicago-community-leaders-speak-ahead-chatham-walgreens-pharmacy-store-closure-month/19034714/
+Title: Walgreens 86th and Cottage Grove: Leaders speak out ahead of Chatham, Chicago Walgreens pharmacy closing
+Status hint: Opening | Industry: Specialty / Other
+
+Walgreens 86th and Cottage Grove: Leaders speak out ahead of Chatham, Chicago Walgreens pharmacy closing - ABC7 Chicago walgreens Community leaders speak out ahead of Chatham Walgreens store closure next month By Jasmine Minor and Sarah Schulte Monday, May 4, 2026 11:14PM CHICAGO (WLS) -- Six Walgreens have closed on the city's South Side during the past year. One alderman calls it pharmaceutical genocide. ABC7 Chicago is now streaming 24/7. Click here to watch Walgreens says one location in Chatham is closing on June 4 because of high levels of theft and violent incidents. This is the same area where a Target store recently shut down. Enduring two kidney transplants and diabetes, Terrell Gardner takes about 14 pills a day to keep his immune system suppressed. The 69-year-old says the closure of his closest Walgreens will force him to drive several miles away to get his medicine. "Now, I've got to find another way. I've got to possibly go west to Cicero, and I'm living all the way here on the East Side," Gardner said. Patricia Shell does not have an option for another Walgreens. She uses an electric wheelchair for her once-a-month pick up for prescriptions. Shell does not drive. "This is convenient for me. I just live down the street here in the senior building, and I don't know what we're going to do. I guess I have to go strictly with my mail order people," Shell said. The Walgreens location at 86th and South Cottage Grove is the latest to announce closure. An East 71st location is slated to close May 19. Four other South Side locations have shut down over the past year in Bronzeville, Little Village, South Shore, and South Chicago neighborhoods "I've got to go to 87th and Stony Island. I mean, how do you close down all the Walgreens in this community?" said Walgreens customer Ronald Roach. Three South Side aldermen led the way inside the store on Monday to protest the June 4 closing of the Chatham location. "Walgreens should be charged with first degree corporate
+
+--- Article 240 ---
+URL: http://www.north-star-news.co.uk/news/third-greggs-to-open-in-inverness-434089/
+Title: Third Greggs to open in Inverness?
+Status hint: Opening | Industry: Specialty / Other
+
+Greggs to open third bakery in Inverness? UK retail giant has advertised for a store manager based at a unit in the Inverness Shopping Park in the Highland capital’s Eastfield Way By Philip Murray - philip.murray@hnmedia.co.uk Published: 14:43, 04 May 2026 | Updated: 15:03, 04 May 2026 A new job vacancy for a store manager has appeared to confirm that Greggs will be opening a third bakery in Inverness - this time at the Inverness Shopping Park in Eastfield Way. A third Greggs bakery could be set to open in Inverness. The UK bakery giant, which only recently opened a second Inverness outlet in the Highland capital's High Street, has advertised for a new store manager position in the city. And the job listing on Greggs' own website lists the location of the job at the Inverness Shopping Park in Eastfield Way . There is no Greggs in that location, with the city's other two outlets located in the High Street and within the Esso garage on Longman Road. A map included in the new job listing appears to place the unit towards the western end of the busy retail park, possibly within the vacant unit that sits between the JD Sports outlet on one side, and Card Factory on the other. The store in question, Unit 5B2, has been up for rent through estate agency EYCO. It lists the site as having almost 2400 square feet of floor space, and a rateable value in 2024 of £59,500. If Greggs moves into the retail park, it will mean that all of the units are now occupied. It also follows recent news that US food giant Wingstop is moving into the former Pizza Hut restaurant next to Burger King and the Vue cinema. If the new Greggs bakery is confirmed, it looks like it could open during the summer. The store manager position has a closing date of June 2. When the High Street store began hiring staff, the store manager role closing date of December 31 was almost exactly two months before the outlet opened its doors. It is not known how many jobs would be created by the new bakery, but the rece

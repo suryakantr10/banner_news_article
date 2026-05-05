@@ -1,0 +1,181 @@
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+
+--- Article 161 ---
+URL: https://www.msn.com/en-us/money/companies/popular-convenience-store-chain-announces-expansion-into-indiana/ar-AA20qXAO?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Popular convenience store chain announces expansion into Indiana
+Status hint: Opening | Industry: Convenience Stores / Distributors
+
+MSN
+
+--- Article 162 ---
+URL: https://www.msn.com/en-us/foodanddrink/foodnews/national-bookstore-chain-poised-to-reopen-arlington-location/ar-AA2225H8?ocid=BingNewsVerp&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: National bookstore chain poised to reopen Arlington location
+Status hint: Opening | Industry: Books / Toys / Gaming
+
+MSN
+
+--- Article 163 ---
+URL: https://www.the-sun.com/money/16307228/barnes-noble-open-bookstore-texas/
+Title: Barnes and Noble to open brand new bookstore with cafe in sprawling development in WEEKS
+Status hint: Opening | Industry: Books / Toys / Gaming
+
+Click to share on Twitter (Opens in new window) Click to share on Facebook (Opens in new window) Comments BARNES & Noble is set to open a brand-new bookstore, complete with an in-store cafe, in just a few weeks. Residents of Prosper, Texas will be able to visit the new location from May 20, marking the first-ever Barnes & Noble store in the town. Sign up for the Money newsletter Thank you! Barnes and Noble will open a new store in Prosper, Texas Credit: Getty It will be located at the Gates of Prosper shopping centre Credit: Getty Advertisement The opening makes up part of the Gates of Prosper shopping centre. This long-established retail destination has continued to grow since the 1990s, attracting an increasing number of well-known national brands. The new bookstore will join an already strong lineup of retailers in the area, including Chick-fil-A , Dick’s Sporting Goods, and Old Navy. Construction has been progressing steadily in recent weeks, with videos of the store taking shape already circulating on social media . Read more in Money SNAP EXPANSION Costco shoppers handed money to buy rotisserie chickens under new law CASH GRAB IRS urges Americans to claim $635 checks from $9.9m in free money Local interest has been building quickly. One user commented: “When is this opening? I’d love to have my book club there for the grand opening.” Another added: “How can I get hired!?” Located at 1191 Gate Parkway, the store is part of Barnes & Noble’s broader strategy to expand its physical footprint across the United States . Advertisement Most read in Money SHOP SHAKEUP Walmart shelves will look different under a new bill targeting everyday items CHECKED OUT Walmart ends self-checkouts at one store as it plans to remodel 650 locations PAY PAINS All 2,021 Home Depot locations brace for $25 policy under new 'rate' bill OH, SHOP IT Goodwill snaps up former Rite Aid and opens sprawling 18,200-square-foot store The launch also comes amid a wider resurgence in the US bookstore
+
+--- Article 164 ---
+URL: https://www.msn.com/en-us/money/companies/arizona-based-grocery-store-has-best-produce-according-to-readers/ar-AA225BBo
+Title: Arizona-based grocery store has best produce, according to readers
+Status hint: Opening | Industry: Grocery
+
+MSN
+
+--- Article 165 ---
+URL: https://www.msn.com/en-us/foodanddrink/foodnews/family-owned-chinese-restaurant-on-route-1-in-massachusetts-closing-after-55-years/ar-AA21FdoC?ocid=BingNewsVerp
+Title: Family-owned Chinese restaurant on Route 1 in Massachusetts closing after 55 years
+Status hint: Closing | Industry: Restaurants
+
+MSN
+
+--- Article 166 ---
+URL: https://www.msn.com/en-us/money/companies/new-grocery-store-coming-to-willoughby-hills/ar-AA21plDn?ocid=BingNewsVerp
+Title: New grocery store coming to Willoughby Hills
+Status hint: Opening | Industry: Grocery
+
+MSN
+
+--- Article 167 ---
+URL: https://www.wgrz.com/article/money/business/new-grocery-store-opens-buffalo-east-side/71-1299d291-4801-4904-8a2f-3f8491152529
+Title: New grocery store opens, aims to boost food access on Buffalo's East Side
+Status hint: Opening | Industry: Grocery
+
+Business New grocery store opens, aims to boost food access on Buffalo's East Side A new neighborhood grocery store just opened on Buffalo's East Side, with a mission that goes beyond selling food to helping meet community needs. To stream WGRZ on your phone, you need the WGRZ app. Download the WGRZ app More Videos Next up in 5 Example video title will go here for this video Next up in 5 Example video title will go here for this video BUFFALO, N.Y. — A new neighborhood grocery store has opened on the East Side of Buffalo, aiming to improve food access in a historically underserved area while also serving as a broader community resource. Casa De Mama Bodega celebrated its grand opening Saturday at 975 Broadway. Its business model that goes beyond groceries to address local needs. The store aims to help fill gaps in access to fresh food and essential items in the neighborhood. This story continues below. More in Business Grand Island attraction will not open for summer season Former OTB worker alleges retaliatory firing in lawsuit naming CEO Byron Brown East Side grocer shares budget concerns RELATED: New grocery store opens on Walden Avenue, with a focus on ethnic foods Owner Suheiri Rodriguez said the vision for the business extends into community support efforts, including plans for a nonprofit initiative. "Just seeing what people need and how we can help them especially with our non profit that we plan on opening, It Takes a Pueblo," Rodriguez said. "We are actually offering food pantry and hygiene facilities to our unhoused neighbors, so we are excited about facilitating that," A new mural was also unveiled at the store. It honors Buffalo, New York City, and the Dominican Republic, reflecting the owner's background and ties to multiple communities. Close Ad
+
+--- Article 168 ---
+URL: https://www.msn.com/en-us/money/companies/upscale-department-store-quietly-closes-its-last-oregon-location/ar-AA1Q1Tb2?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Upscale department store quietly closes its last Oregon location
+Status hint: Opening | Industry: Department Stores
+
+MSN
+
+--- Article 169 ---
+URL: https://www.pnj.com/story/entertainment/dining/2026/05/03/new-pensacola-restaurants-include-insomnia-cookies-rames-tacos/89853484007/
+Title: These 7 restaurants & sweet shops opened in the Pensacola area in April
+Status hint: Opening | Industry: Restaurants
+
+DINING These 7 restaurants & sweet shops opened in the Pensacola area in April Brittany Misencik Pensacola News Journal May 3, 2026, 4:02 a.m. CT Seven new restaurants opened in the Pensacola area during the month of April New dining options include ramen, street tacos, Indonesian skewers, and various dessert shops The new establishments are located throughout Escambia and Santa Rosa counties Several of the new restaurants are family-owned or represent expansions of existing local brands Seven new restaurants joined the Pensacola area’s dining scene in the month of April, and it's hard not to get hungry hearing about them. This month's round of restaurant openings brought the area more options for traditional ramen bowls, hot cookies and miniature doughnuts, Indonesian skewers, street tacos and much more. Let’s take a look back at April's restaurant openings in Escambia and Santa Rosa counties. Insomnia Cookies 90 E. Garden St. Late nights in downtown Pensacola have gotten a lot sweeter since Insomnia Cookies celebrated its grand opening in downtown Pensacola on April 11. The Pensacola Insomnia is the 18th store to open in Florida and the 357th to open nationwide. The sweet shop adds a new dessert option to downtown’s vibrant dining scene and neighbors Perfect Plain Brewing Co. and Union Public House. As the name indicates, cookies are the main sell at Insomnia Cookies, but its bakeries also offer other sweet treats such as ice cream, brownies, ice cream cookie sandwiches called “wiches” and cookie cakes. True Grit Kitchen & Cantina (reopening) 6675 Pine Forest Road True Grit American Bistro has taken on a new life as True Grit Kitchen & Cantina, serving up its signature Southern comfort foods with a new Cantina twist. While True Grit first opened in 2014, new owner Cristy Hunter has been transforming the restaurant since she took over in November 2022, reestablishing it as a go-to spot for chef-driven recipes and a family-friendly atmosphere. Hunter, alongside her 
+
+--- Article 170 ---
+URL: https://www.msn.com/en-us/money/companies/grocery-store-aldi-announces-opening-date-for-newest-central-georgia-store-heres-when/ar-AA21z8Al?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Grocery store Aldi announces opening date for newest Central Georgia store. Here's when
+Status hint: Opening | Industry: Grocery
+
+MSN
+
+--- Article 171 ---
+URL: https://www.thefoothillsfocus.com/city_news/gyms-across-valley-shutting-down-basketball-courts/article_5643e8f4-d6c8-40e9-ba7f-2d3b25849e3d.html
+Title: Gyms across Valley shutting down basketball courts
+Status hint: Opening | Industry: Gyms / Fitness
+
+[Could not fetch: 429 Client Error: Too Many Requests for url: https://www.thefoothillsfocus.com/city_news/gyms-across-valley-shutting-down-basketball-courts/article_5643e8f4-d6c8-40e9-ba7f-2d3b25849e3d.html]
+
+--- Article 172 ---
+URL: https://www.msn.com/en-us/money/companies/new-texas-bj-s-wholesale-club-location-offers-2-gas-for-members/ar-AA22fuGp
+Title: New Texas BJ's Wholesale Club location offers $2 gas for members
+Status hint: Opening | Industry: Grocery Wholesale
+
+MSN
+
+--- Article 173 ---
+URL: https://www.stokesentinel.co.uk/whats-on/shopping/supermarket-opening-times-bank-holiday-10947804
+Title: Supermarket opening times for May Bank Holiday 2026 including Tesco, Asda and Aldi
+Status hint: Opening | Industry: Grocery
+
+Supermarket opening times for May Bank Holiday 2026 including Tesco, Asda and Aldi Here's everything you need to know What's On Elaine Blackburne Network Content Editor and Rob Andrews Head of Content 06:53, 03 May 2026 Updated 13:39, 03 May 2026 This article contains affiliate links, we will receive a commission on any sales we generate from it. Learn more View Image Hanley Tesco Bank Holiday Monday on May 4 is a three-day weekend for many people, giving them the chance to relax either with friends or even peacefully at home. However, there are some people who will still be at work, including many supermarket workers. Most stores will be opening their doors for at least some of the bank holidays, meaning people can pop out for essential supplies or even just enjoy a trip out. However, unlike Christmas Day and Easter Sunday where shops are forced to close, there are no government restrictions on these dates. But some shops will still have changes to their usual hours to allow staff to have some time off. Most supermarkets have now confirmed their opening hours for the early bank holiday. While most operate as normal over the Saturday and Sunday, there are changes for many on Bank Holiday Monday, reports The Mirror . Here's a round-up of the major supermarkets' bank holiday Monday opening times: Aldi Aldi stores will close slightly earlier than usual. Instead of the regular 10pm closing time, most Aldi stores will shut their doors at 8pm. You can locate your nearest Aldi using the supermarket's locator tool here . Lidl Lidl has confirmed that over the early May bank holiday its opening hours will vary across the country, so customers are advised to check their local store's opening hours via the online store finder or through the Lidl Plus app. Most are likely to close earlier at 8pm. Tesco Most of Tesco's larger stores will be open from 8am to 6pm, with some open until 8pm. Tesco's smaller convenience stores will operate their regular hours, opening between 6am and 
+
+--- Article 174 ---
+URL: https://www.msn.com/en-us/money/companies/developer-gets-green-light-to-start-buying-equipment-for-new-kck-grocery-store/ar-AA20h8nn
+Title: Developer gets green light to start buying equipment for new KCK grocery store
+Status hint: Opening | Industry: Grocery
+
+MSN
+
+--- Article 175 ---
+URL: https://www.theargus.co.uk/news/26072389.major-fire-exercise-chichester-house-fraser-building/
+Title: Here's why residents may see smoke coming from a former city centre department store
+Status hint: Opening | Industry: Department Stores
+
+Major fire exercise at Chichester House of Fraser building Emergency Chichester By 
+            Joseph Blakely Reporter Share 0 Comments 2 Skip to next photo 1 / 1 Show caption 1 / 1 0 Comments This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
+        and has been written by our American colleagues.
+        It does not necessarily reflect the view of The Herald. City residents have been warned not to be alarmed if they see smoke coming from a former department store building. Chichester Fire Station will be using the former House of Fraser building on West Street to complete a major training exercise on May 11. The drill will involve a large emergency presence in the area and residents may see smoke issuing from the building, while crews simulate a fire with one casualty trapped inside. The exercise will take place between 7pm and 10pm and will include four fire engines. Firefighters from Chichester Fire Station will take part in the exercise (Image: Google) Anton Mezzone, station manager at Chichester Fire Station, said: "This training exercise will provide our crews with an opportunity to test their skills in a high-pressure scenario without the real-life stakes. "Our firefighters carry out regular training at our fire stations and training centre to ensure they are as resilient and ready as can be. "However, rarely do we get opportunities to carry out extensive training exercises in such prominent locations, and we are extremely fortunate to have the chance to carry out our exercise in this Grade II-listed building." Read more Update on plans to demolish farmhouse and build 20 new homes Dogs banned from beaches as summer rules introduced Hospital installs new 3D machine to help reduce waiting times Tower Street will be closed for the duration of the training. The exercise aims to test policies and firefighting techniques that are currently in place for incidents. No public viewing areas will be available as th
+
+--- Article 176 ---
+URL: https://www.khaleejtimes.com/business-technology-review/ras-al-khaimah-marjan-beach-wynn-al-marjan-island
+Title: Wynn Al Marjan Island to open in 2027 as UAE’s 1st fully integrated resort
+Status hint: Opening | Industry: Hospitality
+
+Recommended For You Situation safe: UAE residents advised to resume normal activities with caution after alert UAE engaged 12 ballistic missiles, 3 cruise missiles, 4 drones on May 4 UAE says Iran fired drones at Adnoc oil tanker in Strait of Hormuz, no injuries UAE air defences currently engaging missile, UAV threats Iran is the aggressor party, source of danger in Arabian Gulf: UAE President advisor
+
+--- Article 177 ---
+URL: https://www.chowhound.com/2160071/city-owned-grocery-stores-private-owned-difference/
+Title: What Are City-Owned Grocery Stores (And How Do They Differ From Your Everyday Chains)?
+Status hint: Opening | Industry: Grocery
+
+Shopping What Are City-Owned Grocery Stores (And How Do They Differ From Your Everyday Chains)? By Eugenia Lazaris May 2, 2026 8:35 pm EST monticello/Shutterstock City-owned grocery stores are getting a bit of attention lately as New York City recently announced plans to open one in each of the city's five boroughs, starting in East Harlem. But if your town doesn't have city-owned grocery stores, you might be wondering what exactly they are and how they differ from the everyday chains many people shop at. At its core, a city-owned grocery store is exactly as the name implies: owned and operated by the city in which it is located, as opposed to privately owned companies and family-owned grocery stores like Ridley's . The model allows local shoppers to better afford essential items. At privately owned grocery stores, where profit is a primary goal of the business model, customers often have to look for weekly deals on meats and other products in order to stretch their budget. But the goal of city-owned grocery stores isn't to just offer weekly specials — it is to simply offer lower prices across the board. In the case of the planned stores in NYC, the city would own the property, which would cut back on overhead, like rent, that forces privately owned grocery stores to charge higher prices, thus allowing the savings to be passed on to customers in the form of lower prices on essential goods. According to the U.S. Bureau of Labor Statistics , the average household in the United States spends more than $6,000 each year on groceries, and that price is part of an upward trend — the cost of groceries rose by 34% between 2019 and 2024. That is a clear indication that a grocery store that can help ease the burden for families could be a great solution. City-owned grocery stores are not a new concept Ultraskrip/Shutterstock The concept of government-owned grocery stores sounds like a positive one: lowering the cost of food so more people can afford to feed themselves and thei
+
+--- Article 178 ---
+URL: https://www.msn.com/en-gb/money/other/darlington-supermarket-forced-to-close-due-to-powercut/ar-AA22ee8H
+Title: Darlington supermarket forced to close due to powercut
+Status hint: Closing | Industry: Grocery
+
+MSN
+
+--- Article 179 ---
+URL: https://www.aol.com/news/kentucky-restaurant-firebirds-opening-first-110047301.html
+Title: New-to-Kentucky restaurant Firebirds is opening first location in Lexington
+Status hint: Opening | Industry: Restaurants
+
+Janet Patton Fri, May 1, 2026 at 11:00 AM UTC 0 The grill is about to fire up at a new-to-Kentucky restaurant: Firebirds Wood Fired Grill is launching in Lexington. The North Carolina-based chain announced in 2025 plans to open two restaurants in Lexington . Now the first will open at 2400 Polo Club Blvd. in Hamburg near Costco. Firebirds Wood Fired Grill’s Durango Burger, which is chili spiced and served with pepper jack cheese, fried onions and roasted garlic ranch dressing. (Provided) According to an ad on Facebook, the restaurant will open in mid-June. A spokesperson for the chain did not immediately confirm that date. An ad on Facebook from Firebirds said the Lexington restaurant will open in mid-June. The restaurant’s menu includes steaks, ribs, chops, burgers, sandwiches, chicken, seafood, pasta, salads and sides as well as desserts. On weekends, brunch is also available. Most things are cooked over an open flame. Firebirds cooks steaks, chicken and seafood over a wood-fired open-flame visible from the dining room. (Kris Decker) “We take a lot of pride in our scratch kitchen, offering bold flavors and hand-cut, aged steaks and fresh seafood, which are cooked over an open flame visible from our dining rooms,” said Eleni Gates, senior director of communications, in January 2025. “That fire is one of our main points of differentiation,” she said. “When we do open in Lexington, we’ll offer staples from our extensive lunch, dinner and weekend brunch menus and will feature our famed FIREBAR. This restaurant centerpiece offers Bar Bite features on weekdays from 4 to 7 p.m., along with the extended offerings and our signature cocktail, the Double Black Diamond Martini, which is an infusion of fresh pineapple and New Amsterdam Pineapple Vodka, garnished with a juicy fresh pineapple slice.” Firebirds Wood Fired Grill also has the FIREBAR that features craft cocktails and Bar Bites. (Provided) Carryout and catering also will be available. Advertisement There’s no word y
+
+--- Article 180 ---
+URL: https://www.msn.com/en-us/money/companies/wildly-popular-toy-store-pop-mart-expanding-with-another-bay-area-location/ar-AA1YAgge?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1&bundles=feat-es2020-c
+Title: Wildly popular toy store Pop Mart expanding with another Bay Area location
+Status hint: Opening | Industry: Books / Toys / Gaming
+
+MSN

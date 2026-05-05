@@ -1,0 +1,184 @@
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+
+--- Article 61 ---
+URL: https://www.dailygazette.com/ade/news/business/bloomberg-tops-stores-are-close-to-bankruptcy/article_a4e3de5e-a9de-54a8-976e-6b834258cf3c.html
+Title: Bloomberg: Tops stores are close to bankruptcy
+Status hint: Closing | Industry: Specialty / Other
+
+Facebook Twitter WhatsApp SMS Email Buy Now Saranac Lake’s Tops supermarket at 156 Church St., seen in 2018. (Enterprise photo — Glynis Hart) By Brittany Proulx Facebook Twitter WhatsApp SMS Email Print Copy article link Save Facebook Twitter WhatsApp SMS Email Print Copy article link Save Gift this article New subscriber benefit! Copied to clipboard Out of gifts for the month Unfortunately you've used all of your gifts this month. Your counter will reset on the first day of next month. Share this article paywall-free Email Copy Link SARANAC LAKE — A news report that Tops Friendly Markets is on the verge of bankruptcy swirled around the village Monday, but local store employees said they hadn’t heard anything. As of press time, calls to Tops’ official spokespersons had not been answered. Bloomberg, a news group that focuses mainly on financial markets, cited anonymous sources who said Tops, which has been independently owned since 2013, could seek court protection from creditors later this month. United Food and Commercial Workers union represents 12,000 Tops workers. UFCW Local One President Frank DeRiso issued a statement that Tops is currently meeting all its salary and pension obligations, and said the company has hired Evercore, a global independent private investment firm, to assist it to restructure its debt. Village mayor Clyde Rabideau released a statement in response to the Bloomberg report. “If a bankruptcy does happen, we’ve seen retailers continue to operate under this cloud, re-organize and, then, carry on, and we’ve seen subsequent buyouts,” wrote Rabideau. “We will continue to monitor this situation and look for opportunities for our community and we should only respond to facts and not rumors. Our empathy for the employees is also important as they are our neighbors and friends and we support them during uncertainty in this era of retail upheaval and revolutionary change.” From 1930 until 2001, Grand Union was the dominant grocery store in Saranac L
+
+--- Article 62 ---
+URL: https://www.foxcarolina.com/video/2026/05/03/artfully-vino-van-gogh-opens-new-location-greenville/?outputType=amp
+Title: Artfully Vino and Van Gogh opens new location in Greenville
+Status hint: Opening | Industry: Specialty / Other
+
+
+
+--- Article 63 ---
+URL: https://www.aol.com/news/bustling-lexington-highway-location-prolific-151114428.html
+Title: This bustling Lexington highway has a new location of a prolific national store
+Status hint: Opening | Industry: Specialty / Other
+
+Chris Trainor Wed, April 29, 2026 at 3:11 PM UTC 0 1 / 0 This bustling Lexington highway has a new location of a prolific national store A new Circle K store is open at 2112 Augusta Highway in Lexington, at the corner of Augusta Highway and Wise Ferry Road. (Chris Trainor/chtrainor@thestate.com) A national convenience store brand has opened a new location in a growing area of Lexington. Circle K, which has stores across the U.S. and South Carolina, debuted a new location this week at 2112 Augusta Highway. That’s at the northeast corner of Augusta Highway and Wise Ferry Road, about a mile east of Lexington High School. It’s across the road from a CubeSmart self-storage facility. Advertisement Circle K has actively grown its footprint in the Midlands, and specifically in Lexington County. For instance, the company opened a new store at 1512 North Lake Drive in Lexington in early 2025 , and debuted a location at 5904 Platt Springs Road in the Red Bank area later in 2025. The area where the new Augusta Highway Circle K is located is a bustling, growing spot. Numerous new subdivisions, including Murray Village and Hendrix Farms, are nearby, and a host of businesses, including Lowes Foods, McDonald’s, Arby’s, Sonic and more are located just to the west on Augusta Highway. There also is a Target store under development along Augusta Highway. The company has nearly 7,000 convenience stores across the U.S., according to data site ScrapeHero . Circle K started in 1951 in Texas and has grown through the years, and now has locations across the world, including in Norway, Sweden and Denmark.
+
+--- Article 64 ---
+URL: https://danangfantasticity.com/en/royal-shore-beachclub-announces-grand-opening-in-hoi-an
+Title: Royal Shore Beachclub Announces Grand Opening in Hoi An
+Status hint: Opening | Industry: Specialty / Other
+
+Discovery > Royal Shore Beachclub Announces Grand Opening in Hoi An Royal Shore Beachclub Announces Grand Opening in Hoi An 03/05/2026 Share Add to Favorites Print Royal Shore Beachclub Announces Grand Opening in Hoi An A New Beachfront Destination Redefining Coastal Vibrancy and Lifestyle Hoi An, Vietnam – 28 April 2026 – Royal Capital Group proudly announces the grand opening of its newest beachfront destination on 30 April 2026, set along the pristine coastline of Hoi An. Designed to blend elevated leisure with vibrant social energy, Royal Shore Beachclub is poised to become the region’s premier lifestyle hotspot for locals, expats, families, and groups of friends alike. Royal Shore Beachclub is poised to become the region’s premier lifestyle hotspot for locals, expats, families, and groups of friends alike. Located within two prestigious properties—Wyndham Hoi An Royal Beachfront Resort & Villas and Royal Beachfront Villas & Spa—Royal Shore Beachclub offers guests an immersive experience that combines gourmet dining, curated recreation, and dynamic entertainment, all complemented by panoramic ocean views. Guests can expect a dynamic program that captures the essence of modern beach culture with a touch of elegance. Guests can explore a diverse culinary journey across multiple outlets: Indigo , serving casual Vietnamese and Western cuisine; The Cove , offering a premium dining experience; Aura , a rooftop venue with outstanding panoramic views, including Cham Island; and The Hut , a beachfront spot ideal for fast food and refreshing drinks. The beachclub also features a wide range of recreational activities for guests of all ages, including an outdoor cinema, a kids’ playground, water sports, beach volleyball, and relaxing sunbeds, bean bags, and cabanas. These are complemented by dynamic entertainment programs such as live bands, DJs, and more. The grand opening celebration will showcase the full Royal Shore Beachclub experience, including live DJ performances, 
+
+--- Article 65 ---
+URL: https://www.thestreet.com/restaurants/after-chapter-11-smokey-bones-bbq-chain-shuts-down-all-locations
+Title: After Chapter 11, BBQ chain shuts down all locations
+Status hint: Closing | Industry: Specialty / Other
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.thestreet.com/restaurants/after-chapter-11-smokey-bones-bbq-chain-shuts-down-all-locations]
+
+--- Article 66 ---
+URL: https://www.msn.com/en-us/travel/tripideas/paris-baguette-at-garden-state-park-in-cherry-hill-now-open/ar-AA226hi2
+Title: Paris Baguette at Garden State Park in Cherry Hill now open
+Status hint: Opening | Industry: Specialty / Other
+
+MSN
+
+--- Article 67 ---
+URL: https://www.msn.com/en-us/foodanddrink/foodnews/smokey-bones-shutters-last-illinois-location-amid-nationwide-closures/ar-AA225b1b?ocid=BingNewsVerp
+Title: Smokey Bones shutters last Illinois location amid nationwide closures
+Status hint: Closing | Industry: Specialty / Other
+
+MSN
+
+--- Article 68 ---
+URL: https://nbsla.ca/msc-cruises-2028-caribbean-cruises/
+Title: MSC Cruises 2028 Caribbean Cruises Now Open: New Ships, New Routes, and Exclusive Island Escape at Sandy Cay
+Status hint: Opening | Industry: Specialty / Other
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://nbsla.ca/msc-cruises-2028-caribbean-cruises/]
+
+--- Article 69 ---
+URL: https://www.msn.com/en-us/health/other/once-booming-cookie-chain-closes-all-stores-after-chapter-11-filing/ar-AA205iyb?ocid=iehp0130&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Once-booming cookie chain closes all stores after Chapter 11 filing
+Status hint: Closing | Industry: Specialty / Other
+
+MSN
+
+--- Article 70 ---
+URL: https://www.aol.com/news/national-cowboy-museums-route-66-101544376.html
+Title: National Cowboy Museum's Route 66 exhibit is closing soon
+Status hint: Closing | Industry: Specialty / Other
+
+Brandy McDonnell, The Oklahoman Updated Fri, May 1, 2026 at 2:11 PM UTC 0 Standing in the galleries of the National Cowboy & Western Heritage Museum, David Davis isn't exaggerating when he says "the entire reason we're here is because of Route 66." "The National Cowboy Hall of Fame — which is what we used to be called — we are placed here specifically because of Route 66 ," said Davis, the museum's chief curatorial officer. "We are intrinsically tied to Route 66 ... and we're still on Route 66." In the summer of 1953, Kansas City businessman Chester A. Reynolds revealed his dream project: To establish a National Cowboy Hall of Fame . Less than two years later, nearly 50 cities and towns throughout the West had placed bids in hopes of being chosen as the location. "Colorado Springs, Dodge City and Oklahoma City were the last three choices," said Pat Fitzgerald , president and CEO of the National Cowboy & Western Heritage Museum. "Oklahoma City ... they were really smart back then, as well. They did two things: One, they said, 'We're going to donate the land,' and two, (they said), 'You're going to be on the most iconic road in the United States, which is Route 66. '" When the National Cowboy Museum opened at long last in 1965, its front doors faced a bustling stretch of one of the most famous roadways in the world. It's fitting, then, that the National Cowboy & Western Heritage Museum — now affectionately known as "The Cowboy" — has been celebrating the 100th birthday of Route 66 in 2026 with the sprawling original exhibition "Route 66: From Trails to Truck Stops ." But time is running out to see the showcase of classic cars, historic photographs and vintage signs celebrating this year's Mother Road centennial . Route 66: From Trails to Truck Stops is reaching the end of the road Sunday, May 3, as it closes to make way for the installation of the museum's 54th annual Prix de West Exhibition & Sale , one of the premier Western fine art shows in the country. “Route 66:
+
+--- Article 71 ---
+URL: https://www.chillicothegazette.com/story/news/local/2026/05/03/express-oil-change-tire-engineers-opens-in-chillicothe/89833599007/
+Title: Express Oil Change & Tire Engineers has grand opening in Chillicothe
+Status hint: Opening | Industry: Specialty / Other
+
+[Could not fetch: 406 Client Error: Not Acceptable for url: https://www.chillicothegazette.com/story/news/local/2026/05/03/express-oil-change-tire-engineers-opens-in-chillicothe/89833599007/]
+
+--- Article 72 ---
+URL: http://www.msn.com/en-us/money/companies/beloved-pizza-chain-shutters-all-of-its-locations-decision-did-not-come-easily/ar-AA22dDKo?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Beloved pizza chain shutters all of its locations: 'Decision did not come easily'
+Status hint: Closing | Industry: Specialty / Other
+
+MSN
+
+--- Article 73 ---
+URL: https://www.indianola-ia.com/grand-opening/image_8ceaa1d6-08b4-4bf9-836e-ea322e7dbfc8.html
+Title: Grand opening
+Status hint: Opening | Industry: Specialty / Other
+
+Facebook Twitter WhatsApp SMS Email Print Copy article link Save Buy Now Pageturners Bookstore celebrated its Grand Opening with a special weekend of games, prizes, local art and, of course, a reader’s wonderland. The bookstore hosted the events with the Central Iowa Independent Bookstore Crawl inspired by Independent Bookstore Day. MARK DAVITT / Independent Advocate Tags Indianola Indianola News Indianola-ia.com Local News Indianola Independent Advocate Warren County Independent Advocate Drake 400 Mark Davitt As featured on Facebook Twitter WhatsApp SMS Email Print Copy article link Save × Post a comment as Guest × Report × Watch this discussion. Stop watching this discussion. (0) comments Welcome to the discussion. Log In Keep it Clean. Please avoid obscene, vulgar, lewd,
+racist or sexually-oriented language. PLEASE TURN OFF YOUR CAPS LOCK. Don't Threaten. Threats of harming another
+person will not be tolerated. Be Truthful. Don't knowingly lie about anyone
+or anything. Be Nice. No racism, sexism or any sort of -ism
+that is degrading to another person. Be Proactive. Use the 'Report' link on
+each comment to let us know of abusive posts. Share with Us. We'd love to hear eyewitness
+accounts, the history behind an article. Post a comment Watch this discussion. Stop watching this discussion. THE LATEST RECORD-HERALD April 28 RHT Most Popular Articles Images Videos Commented Articles Warren County approves rezoning for Kruse development, finalizes budget, salaries for elected officials Allen Bert Murphy, Indianola Robert "Bob" Wilson Peck, Indianola Dwight Thomas McCormick, Indianola NEPL to host final Banned Books Dinner Club with IA’s Duncan as speaker Claire S. Dittmer, Lacona Indianola Chamber of Commerce receives grant to launch Warren County Visitor and Welcome Center Director of Art Farm Iowa visits Indianola: 'It's a good time to be an artist in Iowa' Indianola Police Reports: April 25 Indianola Fire Department delivers annual report to city council Images Video
+
+--- Article 74 ---
+URL: https://www.msn.com/en-au/news/australia/dan-murphy-s-plans-to-open-in-cowes-sparks-debate-over-phillip-island-s-character/ar-AA228cJ5?ocid=BingNewsVerp
+Title: Dan Murphy’s plans to open in Cowes sparks debate over Phillip Island's character
+Status hint: Opening | Industry: Specialty / Other
+
+MSN
+
+--- Article 75 ---
+URL: http://www.msn.com/en-us/travel/news/dave-busters-preparing-for-jack-london-square-grand-opening-monday/ar-AA21XYWO?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Dave & Buster's preparing for Jack London Square grand opening Monday
+Status hint: Opening | Industry: Specialty / Other
+
+MSN
+
+--- Article 76 ---
+URL: https://www.msn.com/en-us/news/us/ben-s-chili-bowl-hosts-grand-reopening-ribbon-cutting-of-historic-u-street-location/ar-AA22aYvs?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Ben’s Chili Bowl hosts grand reopening, ribbon cutting of historic U Street location
+Status hint: Opening | Industry: Specialty / Other
+
+MSN
+
+--- Article 77 ---
+URL: https://www.msn.com/en-us/money/companies/aldi-is-introducing-a-new-store-format-here-s-how-it-will-affect-the-way-you-shop/ar-AA22b4vL?ocid=BingNewsVerp&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Aldi is introducing a new store format—here’s how it will affect the way you shop
+Status hint: Opening | Industry: Specialty / Other
+
+MSN
+
+--- Article 78 ---
+URL: https://www.danvillesanramon.com/food/2026/05/04/rancho-cantina-owners-eye-early-summer-opening-for-new-danville-restaurant/
+Title: Rancho Cantina owners eye early-summer opening for new Danville restaurant
+Status hint: Opening | Industry: Restaurants
+
+Getting your Trinity Audio player ready... Rancho Cantina is set to take over the restaurant building at 501 Hartz Ave. vacant since Cocina Hermanas closed in March 2026. (Photo by Jeremy Walsh) Danville residents and restaurateurs Nico and Alice Tzikas are getting closer to expanding their Rancho Cantina concept – familiar to diners in Lamorinda – into their hometown for the first time. Rendering shows design concept for Rancho Cantina Danville restaurant exterior. (Image courtesy Nico Tzikas) Grounded by the same menu “inspired by the original table fare of the Golden State’s Spanish and Mexican Californios” that the couple feature in their downtown Lafayette restaurant, Rancho Cantina Danville is on track to open on the south side of Hartz Avenue by early summer as building renovations, permitting and other prep work continue to come together, the owners said. “Longtime Danville residents, we love it here. We are excited to have a place in downtown Danville and get it up and running,” Alice Tzikas told DanvilleSanRamon in a recent phone interview. “We are about halfway through with the remodel. In a perfect world, we’re open by mid-June,” Nico Tzikas added. “Summer for sure. I’ll be upset if we’re not open by July 1.” Nico Tzikas’ career in the restaurant industry has included prior ventures in Walnut Creek, San Francisco and Oakland. He’d also consulted with the original owners to help them open Rancho Cantina in Lafayette nearly a decade ago. So when the cantina on Mount Diablo Boulevard went up for sale two years ago, the couple jumped at the opportunity. They took over in Lafayette on April 15, 2024, and soon expanded the prior owners’ service model from dinner Tuesdays through Saturdays into seven days a week for lunch and dinner. “Tons of momentum the last two years,” Nico Tzikas said. They had designs on opening a second location closer to home, and the prospect of downtown Danville came into view several months ago. Nico Tzikas said he became aware that r
+
+--- Article 79 ---
+URL: https://www.toledoblade.com/business/labor/2026/05/04/furniture-retailer-enters-ohio-with-holland-area-store-job-fair-set/stories/20260504109
+Title: Furniture retailer enters Ohio with Holland-area store; job fair set
+Status hint: Opening | Industry: Furniture / Mattress
+
+
+
+--- Article 80 ---
+URL: https://cstoredecisions.com/from-ai-to-retail-media-the-new-c-store-tech-playbook/
+Title: From AI to Retail Media: The New C-Store Tech Playbook
+Status hint: Opening | Industry: Convenience Stores / Distributors
+
+Technological advancements are barreling ahead in 2026, with artificial intelligence (AI) impacting the way companies do business across industries. Savvy c-store retailers are paying attention, piloting solutions and asking how AI might help them solve specific pain points. But even if your convenience store chain isn’t integrating AI capabilities today, it’s likely to still be impacted by the way AI is beginning to influence shopper behaviors and expectations overall in the very near future. At the end of 2025, Forbes pointed out that retail was entering “the first real phase of agentic AI commerce” in 2026. In other words, AI can now search for, compare and purchase routine items for shoppers like snacks, drinks and household products, which could begin to challenge neighborhood convenience retailers’ traditional advantages of location, impulse purchases and speed. Forbes also pointed to hyper-personalization among its list of defining trends for 2026. The convenience store industry is already moving in this direction, with operators leveraging increasingly sophisticated data to deliver more precise, behavior-driven loyalty offers and promotions. Deloitte’s 17th Annual Tech Trends report noted that AI is moving “from experimentation to impact.” Essentially, companies are rebuilding workflows and systems from the ground up to better take advantage of how AI can drive results. AI is also helping businesses to integrate their traditional back office, front office and digital offerings. The report predicted that we’ll begin to see a trend of AI moving “from screens to streets” as robots “begin to navigate human spaces.” Already we’re seeing delivery robots and autonomous vehicles being piloted in certain areas of the country. Not to mention autonomous floor cleaners and checkout-free stores, just to name a few examples. The takeaway is that the tech landscape is shifting quickly, and that’s challenging companies to rethink how they operate in both big and little ways

@@ -1,0 +1,178 @@
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+
+--- Article 321 ---
+URL: https://www.msn.com/en-us/money/companies/fox-in-the-snow-to-open-clintonville-caf%C3%A9-in-former-hot-chicken-takeover-space/ar-AA22aWxn
+Title: Fox in the Snow to open Clintonville café in former Hot Chicken Takeover space
+Status hint: Opening | Industry: Specialty / Other
+
+MSN
+
+--- Article 322 ---
+URL: https://www.msn.com/en-us/money/companies/nordstrom-closing-two-stores-over-next-month/ar-AA21RPrM?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Nordstrom closing two stores over next month
+Status hint: Opening | Industry: Specialty / Other
+
+MSN
+
+--- Article 323 ---
+URL: https://www.msn.com/en-us/news/us/north-jersey-animal-refuge-expands-opens-2nd-location/ar-AA220Sfk?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: North Jersey animal refuge expands, opens 2nd location
+Status hint: Opening | Industry: Specialty / Other
+
+MSN
+
+--- Article 324 ---
+URL: https://www.msn.com/en-my/news/other/why-this-mcdonalds-open-since-the-1970s-has-never-served-a-single-customer/ar-AA21vRd5
+Title: Why this McDonald's open since the 1970s has never served a single customer
+Status hint: Opening | Industry: Specialty / Other
+
+MSN
+
+--- Article 325 ---
+URL: https://www.express.co.uk/news/world/2201229/worlds-most-famous-seven-star-hotel-closes-dubai
+Title: opened in 1999
+Status hint: Closing | Industry: Specialty / Other
+
+The Burj Al Arab has closed with immediate effect (Image: Getty) One of the world’s most recognisable hotels has closed its doors with immediate effect. The ultra-luxury property, often described as the world’s only and most famous “seven-star” hotel, first opened in 1999 and has been welcoming guests ever since. Now, after more than 25 years of continuous operation, it has shut for a major refurbishment programme and is not expected to reopen until late 2027. The Burj Al Arab sits on its own man-made island and has become one of Dubai’s most recognisable buildings, even though it is not the tallest building in the city. Article continues below ADVERTISEMENT Get the latest news from around the world and more Subscribe Invalid email We use your sign-up to provide content in ways you've consented to and to improve our understanding of you. This may include adverts from us and 3rd parties based on our understanding. You can unsubscribe at any time. Read our Privacy Policy READ MORE: High street staple shuts down in UK market town after 22 years – ‘great sadness' READ MORE: 9 UK bakeries close or crash into administration - oldest in business for 400yrs The hotel has shut for a major refurbishment programme and is not expected to reopen until late 2027 (Image: Getty) The closure follows confirmation that all 198 suites will be redesigned as part of a carefully planned restoration project . The hotel’s spa and other guest areas will also be upgraded. In late February, the building was hit by an intercepted drone, which caused minor damage to the façade and led to a small fire. However, the refurbishment had already been scheduled before that incident. In a statement on its website, the hotel said: “Jumeirah Burj Al Arab is currently undergoing a carefully phased restoration programme designed to refresh and upgrade the hotel’s iconic décor while preserving its distinctive character. Article continues below ADVERTISEMENT “The programme has been developed through long-term
+
+--- Article 326 ---
+URL: https://www.travelandtourworld.com/news/article/greece-joins-athens-crete-paros-and-zakynthos-in-taking-the-center-stage-as-marriott-international-accelerates-mediterranean-expansion-with-nearly-thousand-new-rooms/
+Title: Greece Joins Athens, Crete, Paros, and Zakynthos in Taking the Center Stage As Marriott International Accelerates Mediterranean Expansion With Nearly Thousand New Rooms
+Status hint: Opening | Industry: Specialty / Other
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.travelandtourworld.com/news/article/greece-joins-athens-crete-paros-and-zakynthos-in-taking-the-center-stage-as-marriott-international-accelerates-mediterranean-expansion-with-nearly-thousand-new-rooms/]
+
+--- Article 327 ---
+URL: https://www.aol.com/news/whats-tamashii-ramen-house-open-100355222.html
+Title: What's that? Tamashii Ramen House to open new OKC location soon
+Status hint: Opening | Industry: Specialty / Other
+
+Josh Kelly, The Oklahoman Updated Mon, April 6, 2026 at 6:29 PM UTC 0 Tamashii Ramen House is opening a new location in north Oklahoma City in April 2026, adding yet another location to the just over a decade-old business . Tamashii Ramen House , started by husband-and-wife duo Wakana Kamesato Sebacher and Matthew Sebacher in 2015, has expanded from original location in Midtown to now four locations throughout Oklahoma City. The new location, situated at 2701 W Memorial Rd, places the ramen house just south of Quail Springs Mall and near several shopping centers in the city's north corridor. Work is still being done on the interior of the location, and a recent video on social media showcases seating installation still underway. Advertisement "This milestone wouldn’t be possible without our incredible community, and we are so grateful for your support that’s allowed us to grow and bring the flavors you love to even more people," the business shared on Facebook. At this time, the business says the Memorial location will be open by mid-April. "Every bowl we serve is made with the same care and passion that started Tamashii, and we can’t wait to share it with you in our new space," they said. Tamashii Ramen House locations Tamashii Ramen House has several locations around the Oklahoma City metro area. 321 NW 8Th St, Oklahoma City 132 E 5Th St, Edmond 126 W. Main St, Norman Coming soon: 2701 W. Memorial Rd, Oklahoma City This article originally appeared on Oklahoman: Tamashii Ramen House to open new Oklahoma City location soon
+
+--- Article 328 ---
+URL: https://www.msn.com/en-us/money/companies/this-chicago-based-sandwich-shop-is-opening-its-first-delaware-store/ar-AA21ChTz?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: This Chicago-based sandwich shop is opening its first Delaware store
+Status hint: Opening | Industry: Specialty / Other
+
+MSN
+
+--- Article 329 ---
+URL: https://www.heraldtribune.com/story/entertainment/dining/2026/05/03/popular-ice-cream-chain-opening-first-sarasota-shop-soon/89897500007/
+Title: Popular ice cream chain opening first Sarasota shop soon
+Status hint: Opening | Industry: Specialty / Other
+
+DINING Popular ice cream chain opening first Sarasota shop soon Beloved sweet treat spot brings longtime favorite flavors to Sarasota. Samantha Gholar Sarasota Herald-Tribune May 3, 2026, 4:02 a.m. ET A well-known sweet treat spot is opening the first of four Sarasota locations soon.
+
+--- Article 330 ---
+URL: https://www.phillyburbs.com/story/lifestyle/food/2026/05/03/humdoo-ice-cream-coming-to-buckingham-in-former-candlewyck-spot-bucks-county-flemington/89882619007/
+Title: Popular NJ ice cream shop comes to Bucks County, readies for summer open
+Status hint: Opening | Industry: Specialty / Other
+
+[Could not fetch: 406 Client Error: Not Acceptable for url: https://www.phillyburbs.com/story/lifestyle/food/2026/05/03/humdoo-ice-cream-coming-to-buckingham-in-former-candlewyck-spot-bucks-county-flemington/89882619007/]
+
+--- Article 331 ---
+URL: https://www.msn.com/en-us/money/careersandeducation/wegmans-officially-purchases-land-to-build-first-pittsburgh-area-location/ar-AA22aPBP?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Wegmans officially purchases land to build first Pittsburgh area location
+Status hint: Opening | Industry: Specialty / Other
+
+MSN
+
+--- Article 332 ---
+URL: https://www.msn.com/en-us/money/companies/raising-canes-opening-new-locations-in-7-states-in-may-see-the-list/ar-AA229LBV
+Title: Raising Cane's opening new locations in 7 states in May. See the list
+Status hint: Opening | Industry: Specialty / Other
+
+MSN
+
+--- Article 333 ---
+URL: https://www.express.co.uk/finance/personalfinance/2200348/nationwide-uk-high-streets-won-t-survive-1-reason
+Title: not just store closures
+Status hint: Closing | Industry: Specialty / Other
+
+The building society has urged businesses to do one thing to boost footfall (Image: Getty) A major UK building society has warned that high streets won't survive unless they "support the people who use and depend on them the most". Nationwide has called on businesses across the country to rethink their "exclusion" of disabled customers in response to a drop in footfall in brick-and-mortar stores. Stephen Noakes, director of retail at Nationwide, said new research from disabled access charity Euan's Guide showed the "opportunity" to adapt the brand's presence to cater to those with accessibility needs. "Only 9% of disabled people find it easy to look up accessibility information before visiting a new place," he told the Express . "When that information is missing, 42% choose not to visit at all. It speaks volumes." Mr Noakes added that the collective spending power of disabled people and their households, coined the 'Purple Pound', stands at a staggering £446 billion a year. Article continues below ADVERTISEMENT Get personal finance news, money saving tips and advice plus selcted offers and competitions Subscribe Invalid email We use your sign-up to provide content in ways you've consented to and to improve our understanding of you. This may include adverts from us and 3rd parties based on our understanding. You can unsubscribe at any time. Read our Privacy Policy UK kitchens firm closes down after plunging into administration - in business since 1947 Petrol and diesel drivers urged to fill up before 10am on Saturday Read more: Major UK high street chain could close 100 stores - in business since 1792 Read more: Lloyds Bank update over 'account limit' that applies to all customers Read more: Major high street betting shop closing 270 UK stores - £220m in losses Nationwide's Stephen Noakes is campaigning for more accessible high streets (Image: NATIONWIDE BUILDING SOCIETY) "Any business failing to serve disabled customers is not simply neglecting its responsibilities 
+
+--- Article 334 ---
+URL: https://disneyparksblog.com/products/new-star-wars-day-merch-coming-to-disney-store-and-disney-parks/
+Title: New Star Wars Day Merch Coming to Disney Store and Disney Parks
+Status hint: Opening | Industry: Specialty / Other
+
+Disney Consumer Products As Anakin Skywalker once said: This is where the fun begins! Ready to count down to Star Wars Day with Disney Store and Disney Parks? From must-have collectibles to apparel that would impress even the most infamous of bounty hunters in the galaxy, we’re bringing Disney Parks Blog fans merchandise updates over the next few weeks to help you gear up for Star Wars Day, May the 4th 2026. Keep an eye on this page to see what fun we have in store coming to you from a galaxy far, far away…. Shopping at Walt Disney World for May the 4th Embrace the Force in a whole new way this Star Wars Day (Monday, May 4, 2026) at Walt Disney World Resort. Both Disney’s Hollywood Studios and Disney Springs will have a virtual queue in place for their May the 4th merchandise events. To participate in the May the 4th merchandise event, a virtual queue * will be in place at select locations at Disney’s Hollywood Studios and Disney Springs . Important Details Guests will need to use the My Disney Experience app to take part in this experience. For Disney’s Hollywood Studios , guests must also have a valid park admission and, if applicable, a theme park reservation for the day to join the virtual queue. You can request to join the Disney’s Hollywood Studios virtual queue beginning at 7 a.m. ET on May 4, 2026 and Disney Springs virtual queue beginning at 9 a.m. on May 4, 2026 . Plan ahead by visiting DisneyWorld.com and check the My Disney Experience App for the latest details and virtual queue availability. Plus, at the Disney’s Hollywood Studios event, you can also enjoy the convenient features of merchandise mobile checkout available in the My Disney Experience app while shopping. Simply scan merchandise items as you shop and pay right on your phone for a smooth, out-of-this-galaxy experience. Prep for May the 4th with Daily Reveals We’re officially less than one week away from Star Wars Day, but the fun doesn’t stop now… What to Know: To help prep those shopping lis
+
+--- Article 335 ---
+URL: https://www.birminghammail.co.uk/whats-on/family-kids-news/alton-towers-extends-opening-hours-33865380
+Title: Alton Towers extends opening hours for half term so you can ride for longer
+Status hint: Opening | Industry: Specialty / Other
+
+Alton Towers extends opening hours for half term so you can ride for longer Twilight at the Towers lanches on May 22, allowing visitors to ride for longer What's On Katy Hallam Audience Editor 07:00, 03 May 2026 This article contains affiliate links, we will receive a commission on any sales we generate from it. Learn more View 2 Images Alton Towers is opening for longer in May (Image: Alton Towers) Alton Towers is helping families and thrillseekers make the most of the fast approaching May half-term by extending its opening hours. Twilight at the Towers lanches on May 22, allowing visitors to ride from 10am to 8pm. Those heading to the theme park in Staffordshire can take advantage of those hours until May 31. Read more Brand new splash pad opens in lido park near Birmingham with a 'wildlife theme' Alton Towers has recently opened the world's first ride, Bluey the Ride: Here Come the Grannies! which is a must-visit for younger guests and fans of the hit show. You can also meet Bluey, Bingo, Bandit and Chilli and more of CBeebies’ biggest stars at Big Fun Show Time - a packed programme of interactive events with your favourite characters. View 2 Images The new Bluey ride is now open at Alton Towers (Image: John Parker Lee / Merlin ) Those a little older - and braver - can take on some of the UK’s most iconic rides, including Nemesis Reborn, The Smiler, Oblivion and Wicker Man, delivering a full day of non-stop adrenaline. Day tickets are available from £39. For those looking to extend the fun, Alton Towers Resort offers a range of short break packages from £70pp, giving families even more time to enjoy the rides and attractions. Read more Huge £12.5m expansion announced for Birmingham's closest lido including a 'spa and bistro' Article continues below The Resort’s themed accommodation includes the UK’s only CBeebies Land Hotel, Caribbean-inspired Splash Landings Hotel, the fantastical Alton Towers Hotel, or the magical Enchanted Village Woodland Lodges - stay over, 
+
+--- Article 336 ---
+URL: https://www.msn.com/en-us/money/companies/it-s-official-publix-signs-lease-for-yorktown-store/ar-AA22cbKV?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: It’s official: Publix signs lease for Yorktown store
+Status hint: Opening | Industry: Specialty / Other
+
+MSN
+
+--- Article 337 ---
+URL: https://www.faribaultcountyregister.com/news/local-news/2026/05/03/the-all-new-derby-bar-and-grill-is-open/
+Title: The all new Derby Bar and Grill is open
+Status hint: Closing | Industry: Specialty / Other
+
+The all new Derby Bar and Grill is open Long-time Guckeen restaurant has new owners, a new look, new name By Kevin Mertens - Staff Writer | May 3, 2026 Scott Vaske is with his girlfriend, Kris Grev, outside the Derby Bar and Grill that Vaske purchased in February. Scott Vaske, the new owner of the Derby Bar and Grill in Guckeen, admits he wasn’t actively looking to buy a restaurant when he made the decision to purchase the former Derby Inn. But that is what he did. “A lot of people were talking about it (the Derby Inn) and there were rumors that it was for sale,” Scott says. “One day I picked up the phone and asked to take a look at it.” What he and his girlfriend/partner, Kris Grev, found was a place that looked horrible and was very smelly and dirty. “It was in pretty tough shape,” Kris comments. After they were done viewing the facility, Scott shares he asked himself the question, “Do I really want to do this?” Apparently he did because he made an offer which was accepted, and two weeks later, on Feb. 13, the deal was closed. “Feb. 12 was the last day I had off,” Scott jokes. “Every day since then was spent getting the place ready until we opened.” Scott grew up in Mankato and has lived in Blue Earth since 2003. “I worked at YSI Academy in Elmore for about 15 years,” he comments. “I think I was one of the longest-tenured employees there. I had no experience in the restaurant business.” “I also had no restaurant experience – except eating at them,” Kris says with a smile. “I am an occupational therapy assistant. I work with long-term care patients.” Scott and Kristen spent countless hours cleaning, painting and making changes to the restaurant. “I am now working two full-time jobs,” Kris admits. “And I am not even joking.” The couple repainted every wall except the ceiling, had new flooring installed, revamped the bar and replaced the old light fixtures with new ones. “We also purchased new barstools,” Scott says. “And we added a pinball machine to the place.” The
+
+--- Article 338 ---
+URL: https://www.msn.com/en-us/money/companies/o-reilly-auto-parts-to-open-its-52nd-ct-store-at-the-milford-plaza/ar-AA21xDu3?ocid=finance-verthp-feeds&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: O'Reilly Auto Parts to open its 52nd CT store at the Milford Plaza
+Status hint: Opening | Industry: Specialty / Other
+
+MSN
+
+--- Article 339 ---
+URL: https://www.msn.com/en-us/money/companies/casino-operator-shuts-down-one-wa-location-amid-ongoing-financial-woes/ar-AA21FD2y?ocid=finance-verthp-feeds&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1&bundles=feat-es2020-c
+Title: Casino operator shuts down one WA location amid ongoing financial woes
+Status hint: Closing | Industry: Specialty / Other
+
+MSN
+
+--- Article 340 ---
+URL: https://www.reviewjournal.com/business/vegas-business/small-business/mane-attraction-family-owned-las-vegas-blow-dry-bar-plans-to-expand-3796233/
+Title: Mane Attraction: Family-owned Las Vegas blow-dry bar plans to expand
+Status hint: Opening | Industry: Specialty / Other
+
+Clients have their hair worked on by stylists on a busy morning at the Blo Blowdry Bar on Friday, Mar. 27, 2026, in Las Vegas. (L.E. Baskow/Las Vegas Review-Journal) @Left_Eye_Images Azure White, center, poses for a portrait with her daughters Rilee Read, left, and Bailee Read at Blo Blow Dry Bar, which they operate, on Monday, March 2, 2026, in southwest Las Vegas. (Chase Stevens/Las Vegas Review-Journal) @csstevensphoto Azure White, center, poses for a portrait with her daughters Rilee Read, left, and Bailee Read at Blo Blow Dry Bar, which they operate, on Monday, March 2, 2026, in southwest Las Vegas. (Chase Stevens/Las Vegas Review-Journal) @csstevensphoto Interior details at Blo Blow Dry Bar on Monday, March 2, 2026, in southwest Las Vegas. (Chase Stevens/Las Vegas Review-Journal) @csstevensphoto Interior details at Blo Blow Dry Bar on Monday, March 2, 2026, in southwest Las Vegas. (Chase Stevens/Las Vegas Review-Journal) @csstevensphoto Interior details at Blo Blow Dry Bar on Monday, March 2, 2026, in southwest Las Vegas. (Chase Stevens/Las Vegas Review-Journal) @csstevensphoto Interior details at Blo Blow Dry Bar on Monday, March 2, 2026, in southwest Las Vegas. (Chase Stevens/Las Vegas Review-Journal) @csstevensphoto Interior details at Blo Blow Dry Bar on Monday, March 2, 2026, in southwest Las Vegas. (Chase Stevens/Las Vegas Review-Journal) @csstevensphoto Interior details at Blo Blow Dry Bar on Monday, March 2, 2026, in southwest Las Vegas. (Chase Stevens/Las Vegas Review-Journal) @csstevensphoto Azure White, center, poses for a portrait with her daughters Rilee Read, left, and Bailee Read at Blo Blow Dry Bar, which they operate, on Monday, March 2, 2026, in southwest Las Vegas. (Chase Stevens/Las Vegas Review-Journal) @csstevensphoto Client Erika Plancarte has her hair curled by stylist Noelle Nance amongst others on a busy morning at the Blo Blowdry Bar on Friday, Mar. 27, 2026, in Las Vegas. (L.E. Baskow/Las Vegas Review-Journal) @Left_Eye_Images Blo B

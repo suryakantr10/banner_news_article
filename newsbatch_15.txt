@@ -1,0 +1,183 @@
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+
+--- Article 281 ---
+URL: https://www.birminghammail.co.uk/news/midlands-news/full-list-80-midland-areas-33846051
+Title: Full list of 80 Midland areas Lidl want to put a new store as 'finder's fee' offered
+Status hint: Opening | Industry: Specialty / Other
+
+Full list of 80 Midland areas Lidl want to put a new store as 'finder's fee' offered The supermarket chain is hoping to open hundreds of new stores in Britain Comments News Isabelle Bates Reporter 05:10, 04 May 2026 View Image Lidl Lidl has announced plans to open hundreds of new stores across Britain as part of a £600,000,000 investment. ‌ The supermarket is also offering a finder's fee to anyone who can help them discover a space for one of the new stores. ‌ It comes as a full list of ideal locations has been shared by the brand which include 80 in central England. ‌ The likes of Digbeth , Gornal, Codsall and Oldbury are all on the list as the company seeks 'freehold, leasehold, or long-leasehold sites in prominent locations with strong footfall and easy accessibility.' READ MORE: Driving licence change getting 'full rollout' across UK with drivers warned A spokesperson for Lidl added: "A competitive finder’s fee is available to anyone who successfully identifies a previously unknown site that leads to a developed store. ‌ "With locations up and down the country, each one will generate high quality jobs for local people with some of the most competitive benefits in the sector, with entry-level hourly rates of £13.45 nationally, increasing to £14.45 with length of service. "In London, hourly pay starts from £14.80, rising further to £15.30 with length of service." Richard Taylor, Chief Real Estate Officer at Lidl GB, added: "At Lidl GB, we currently have one of the most ambitious store opening programmes of any supermarket and we are more committed than ever to bringing our high quality and low priced products to even more communities across the country. ‌ “All of our stores deliver more than just affordable products. "Each one also brings quality jobs, opportunities for British suppliers to showcase the best of our home grown produce and support to local good causes in the communities each one serves. "In uncertain times, shoppers and communities can count on us.”
+
+--- Article 282 ---
+URL: https://www.msn.com/en-us/money/companies/macy-s-customers-have-5-days-to-claim-sales-before-first-of-14-stores-close/ar-AA21pld2?ocid=finance-verthp-feeds
+Title: Macy's customers have 5 days to claim sales before first of 14 stores close
+Status hint: Closing | Industry: Specialty / Other
+
+MSN
+
+--- Article 283 ---
+URL: https://www.msn.com/en-us/travel/news/spirit-says-rising-oil-prices-from-iran-war-contributed-to-closure/ar-AA22ePXW?gemSnapshotKey=GMBD23263C-snapshot-1&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Spirit says rising oil prices from Iran war contributed to closure
+Status hint: Closing | Industry: Specialty / Other
+
+MSN
+
+--- Article 284 ---
+URL: https://wpst.com/ixp/385/p/newark-airport-incident/
+Title: United flight hits truck on NJ Turnpike in too-close landing at Newark
+Status hint: Opening | Industry: Specialty / Other
+
+United airplane hits tractor-trailer and light pole on NJ Turnpike Dan Alexander Dan Alexander Published: May 3, 2026 A United Airlines plane is seen parked on the tarmac outside a restaurant at Newark Liberty International Airport in Newark, N.J., on Monday, Sept. 22, 2025. (AP Photo/Richard Vogel) Share on Facebook Share on Twitter Print this page ✈️ United flight hit the top of a truck while landing at Newark ✈️ Truck driver heard jet roar overhead before impact shattered glass ✈️ There were no serious injuries NEWARK — The roof of a tractor-trailer was brushed by the wheels of a United Airlines flight as it flew over the New Jersey Turnpike near Newark Liberty International Airport on Sunday afternoon. United flight 169, carrying 221 passengers and 10 crew members, also clipped a light pole along the highway but landed safely just after 2 p.m., according to the airline. The Boeing 767-400 arriving from Venice, Italy, taxied to the terminal and the passengers disembarked as usual. No one on board was injured. ALSO READ: Spirit Airlines shuts down, cancels all flights nationwide FAA and NTSB investigate Video of the impact shows the truck driver noticing the jet approach, followed by the scream of the jet flying over and the sound of breaking glass. Chuck Paterakis, vice president of transportation for Schmidt Bakery and owner of Baltimore-based H&S Family of Bakeries, told ABC 7 Eyewitness News his driver was delivering bread when the tires "brushed" the trailer. The driver safely pulled over and called his company. The FAA and the National Transportation Safety Administration are investigating the incident. Report a correction 👈 | 👉 Contact our newsroom Significant or historical events in New Jersey for May (in chronological order) Here are some of the historical or significant events that impacted New Jersey or happened in the Garden State during the month of May. Is there an event missing? Let us know with an email to dan.alexander@townsquaremedia.com . Thanks
+
+--- Article 285 ---
+URL: https://www.costar.com/article/2097436598/cbre-and-meta-team-up-to-open-centers-to-train-ai-data-center-workers
+Title: CBRE and Meta team up to open training sites for AI data center workers
+Status hint: Opening | Industry: Specialty / Other
+
+CBRE and Meta team up to open training sites for AI data center workers Industry faces scarcity of skilled technicians for latest systems A data center IT technician checks fiber optic cables with a visual fault locator. This is one of the roles Meta seeks to fill as part of its U.S. data center expansion. (Getty Images) By Candace Carlisle CoStar News May 4, 2026 | 2:20 AM RELATED ARTICLES Los Angeles 'mansion tax' delivers first affordable housing project Wireless network infrastructure firm expands in North Texas Fiera backs TCU Development on 21-storey rental project in Ottawa’s east end This $1 billion Texas coastal resort seeks development partners Elevator makers seek lift in US market through merger agreement The rapid growth of data centers fueled by demand for artificial intelligence has created a shortage of skilled workers. Now the world's largest commercial property services provider is joining other firms in seeking a simple solution to a complex-technology hiring problem. CBRE and Facebook parent Meta plan to create multiple U.S. training centers expected to teach thousands of technicians skilled trades to build and maintain the latest data centers. The first two training sites are set to open this summer near airports in Ohio and Indianapolis, CBRE officials told CoStar News. Meta has 28 U.S. data centers under construction or running and is spending billions of dollars to build out its support systems. Meta Public Policy Manager Kate Ross told CoStar News the industry faces a shortage she estimates of almost 350,000 trained technicians to produce and maintain complex systems used in these digital hubs. "We need people to support this physical infrastructure," said Ross. "To lay the fiber, develop it and ensure if something breaks, they are able to fix it quickly." CBRE isn't the only real estate services provider addressing the talent crunch tied to building and maintaining data centers and other real estate. Rival JLL is also seeking to recruit a d
+
+--- Article 286 ---
+URL: https://newshub.medianet.com.au/2026/05/the-regent-theatre-reborn-and-re-opened/151238/
+Title: The Regent Theatre: Reborn and Re-Opened
+Status hint: Opening | Industry: Specialty / Other
+
+Key Facts: The historic Regent Theatre in Greater Western Sydney has reopened after extensive multi-million-dollar renovations, with Ian Moss headlining a sold-out opening show. Originally established in 1935 and previously owned by TV legend Mike Walsh in 1976, the heritage-listed art deco theatre has been restored to its former glory. The venue now features a 700+ capacity, flexible seating configurations, new technical equipment, and modern amenities including licensed bars The reopening weekend featured performances by Sara Berki and Ian Moss, with future shows to include Ben Lee, Kate Ceberano, and Anh Do. The renovation aims to provide Greater Western Sydney with a premier entertainment venue for live music, comedy, and cinema, addressing the needs of the growing urban population. For years, the curtain on a once praised Sydney Theatre stayed closed. Now, Greater Western Sydney’s iconic live entertainment venue, The Regent Theatre, has officially re-opened its doors with a sold-out Official Re-Opening Show featuring legendary Australian musician Ian Moss on Saturday, 2nd May, setting the stage for a thriving new era of live performance. "It’s just fantastic to be invited to do this, in a world of shrinking festivals and live venues," said Ian Moss following his sold-out performance. "It’s fabulous to see another venue pop up, and such an iconic one like the one we have here in The Regent Theatre in Richmond!" L-R Michael Dimech (Co-Owner), Ian Moss (Artist), Hawkesbury City Council Mayor Les Sheather, Duncan MacKay (Co-Owner), Melanie Stubbings (Merana Aboriginal Community Association) After an extensive multi-million-dollar renovation, the heritage-listed art deco theatre has returned to its former glory as a premier destination for live music, comedy and cinema - injecting new life into the community and beyond. Established in 1935, The Regent Theatre (Richmond) has been at the heart of entertaining locals in the Hawkesbury and Greater Western Sydney for 90 
+
+--- Article 287 ---
+URL: https://www.msn.com/en-us/money/companies/apple-store-union-workers-at-closing-location-accuse-company-of-retaliation/ar-AA21QBNO?ocid=finance-verthp-feeds
+Title: Apple Store union workers at closing location accuse company of retaliation
+Status hint: Closing | Industry: Specialty / Other
+
+MSN
+
+--- Article 288 ---
+URL: https://www.msn.com/en-us/foodanddrink/foodnews/quiktrip-gen-4-store-opens-in-joplin/ar-AA226Nm9
+Title: QuikTrip 'Gen 4' store opens in Joplin
+Status hint: Opening | Industry: Specialty / Other
+
+MSN
+
+--- Article 289 ---
+URL: https://www.aol.com/news/smokey-bones-barbecue-chain-closes-194359946.html
+Title: Smokey Bones barbecue chain closes its Indiana store
+Status hint: Closing | Industry: Specialty / Other
+
+Cheryl V. Jackson, Kaycee Sloan and Haadiza Ogwude, Indianapolis Star Wed, April 29, 2026 at 7:43 PM UTC 0 Smokey Bones barbecue chain is closing stores, including its lone Indiana location. The chain, known for its authentic fire-grilled and house-smoked meats, closed various locations April 28 . Signage at some shops indicates all locations have been closed. The store at 1203 Apple Glen Boulevard in Fort Wayne was among 20 locations listed on the chain's website on April 29, but its hours were listed as “CLOSED” for every day this week and the site was not allowing customers to place orders there for pickup or delivery. The chain previously operated stores in Central Indiana, including spots in Indianapolis, Avon and Greenwood. A sign on the door of Smokey Bones Bar & Fire Grill, 2660 S. Dirksen Pkwy., in Springfield. The closures come after Twin Peaks Hospitality, the owner of Smokey Bones and Twin Peaks restaurants, filed for Chapter 11 bankruptcy in Texas, USA TODAY reported in January . Advertisement The chain began closing restaurants in late 2025. Smokey Bones was acquired as a 60-unit group by FAT Brands Inc. in 2023 and was spun off into Twin Hospitality in January 2025. Then, in September 2025, Twin Hospitality Group Inc. said it planned to rebrand 19 Smokey Bones locations as Twin Peaks restaurants while closing 15 underperforming sites. Restaurant news: Blake Shelton restaurant and live music venue coming to Indianapolis Contact Midwest Connect reporter Cheryl V. Jackson at cjackson@usatodayco.com or 317-444-6264. Follow her on X.com: @cherylvjackson or Bluesky: @cherylvjackson.bsky.social . This article originally appeared on Indianapolis Star: Barbecue chain closes Indiana location
+
+--- Article 290 ---
+URL: https://djsaviation.net/heres-why-spirit-airlines-shut-down/
+Title: Here’s Why Spirit Airlines Shut Down
+Status hint: Closing | Industry: Specialty / Other
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://djsaviation.net/heres-why-spirit-airlines-shut-down/]
+
+--- Article 291 ---
+URL: https://whatnow.com/memphis/restaurants/latest-from-tekila-group-nears-opening/
+Title: Latest from TEKILA Group Nears Opening
+Status hint: Opening | Industry: Specialty / Other
+
+Zona 55 Urban Kitchen (Image credit: @zona55kitchen on Instagram) SHARE Senatobia foodies will soon be able to enjoy their first taste of a brand-new dining experience. Zona 55 Urban Kitchen, the latest from TEKILA Group, is getting ready to open its doors, bringing what it promises will be a “unique” dining experience to the area. The restaurant will be welcoming guests at 181 Norfleet Drive. Zona 55 has begun actively recruiting kitchen staff-an exciting indicator that an opening can’t be too far off. Though it is not yet clear when, precisely, the concept will be customer-ready, a series of recent social media posts show that the establishment is largely finished. Pictures show that Zona 55 is a vast refined and modern space with plenty of seating and an abundance of warm, earthen coloration. A bar is prominently featured, so future customers can safely assume adult beverages will be on the menu. Information pertaining to Zona 55 is relatively sparse. However, TEKILA Group has established itself as one to watch through concepts like Fuego Vivo and Tekila Modern Mexican. Zona 55 is certain to become another feather in an already impressive culinary cap. Love our content? Add WhatNow as a preferred source on Google to see more of our trusted coverage when you search. 181 Norfleet Dr, Senatobia, MS 38668 Be the First to Know From new restaurant openings to exciting retail launches and real estate insights, be the first to know what’s happening in Memphis Subscribe & Stay Ahead Share This Article Facebook Copy Link Print By Kelly Mintzer Follow: Kelly Mintzer is a freelance writer in the greater Philadelphia area. She's been delighted to write about the Philly and DC restaurant scenes for What Now Media since 2023. Additionally, she writes about genre media for Morbidly Beautiful and co-hosts the Guilty Pleasures and No Notes podcasts. Kelly has been writing across mediums since graduating from Moravian College with a degree in English in 2008. She has covered everyt
+
+--- Article 292 ---
+URL: https://www.maidenhead-advertiser.co.uk/gallery/business/705820/opening-date-revealed-for-new-maidenhead-high-street-hays-travel-branch.html
+Title: Opening date revealed for new Maidenhead High Street Hays Travel branch
+Status hint: Opening | Industry: Specialty / Other
+
+Ascot car dealership manager honoured at national automotive awards
+
+--- Article 293 ---
+URL: https://bundabergtoday.com.au/news/2026/05/04/price-attack-sets-sights-on-bundaberg-in-expansion-spree/
+Title: Price Attack sets sights on Bundaberg in expansion spree
+Status hint: Closing | Industry: Specialty / Other
+
+Home News Price Attack sets sights on Bundaberg in expansion spree News Price Attack sets sights on Bundaberg in expansion spree 04/05/2026 Facebook Twitter Email Price Attack chief executive officer John Pascoe with Price Attack marketing and product team members Michelle Fortunaso (L) and Tasman Sinnerton (R).  (Supplied) While many retailers are consolidating or closing stores, leading professional hair care retailer Price Attack Salons has targeted Bundaberg as […] Subscribe or Login to see the rest of the content. Forgot Password Facebook Twitter Email Previous article Plan and practice taking care of yourself too Next article Gym part of multi-building development Digital Edition Subscribe Get an all ACCESS PASS to the News and your Digital Edition with an online subscription Subscribe Explore Property Bundaberg – built on service that sets them apart 05/05/2026 At Explore Property Bundaberg, real estate isn’t about doing things the same way as everyone else, it’s about doing things properly, with honesty, communication,... Tradition handed down through generations 05/05/2026 Candlelight vigils to honour victims of domestic and family violence 05/05/2026 Carinbundi’s Supported Independent Living Program needs more staff 05/05/2026 Relief for ulcers 05/05/2026 More News Candlelight vigils to honour victims of domestic and family violence Members of the Bundaberg and North Burnett Police Service will stand alongside local community members at a candlelight vigil tomorrow, Wednesday 6 May, in... Carinbundi’s Supported Independent Living Program needs more staff Carinbundi’s Supported Independent Living Program is expanding, and with new clients joining the program, new staff are needed.
+
+This program supports clients to live independently... Relief for ulcers Leg ulcers, sometimes called venous leg ulcers, are deep sores in the skin and membranes of the leg that often take a long time... Letters to the Editor PURPLE A LEGACY OF COURAGE
+
+
+Edon Place, Refuge f
+
+--- Article 294 ---
+URL: https://www.msn.com/en-us/travel/tripideas/fast-rising-la-based-kbbq-chain-opening-first-bay-area-locations/ar-AA1HRriF?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Fast-rising LA-based KBBQ chain opening first Bay Area locations
+Status hint: Opening | Industry: Specialty / Other
+
+MSN
+
+--- Article 295 ---
+URL: https://whatnow.com/memphis/restaurants/ritual-bistro-brewing-up-may-opening/
+Title: Ritual Bistro Brewing up May Opening
+Status hint: Opening | Industry: Specialty / Other
+
+Ritual Bistro (Image credit: @ritualcoffeememphis on Instagram) SHARE Get excited, Memphis coffee enthusiasts; a caffeinated new day is just over the horizon. Ritual Bistro, a new cafe concept coming to South Main Street, has set an opening date, and it’s so close you can nearly smell the java brewing. Ritual’s arrival has been hotly anticipated. The eatery is taking over the 505 South Main Street storefront that previously housed Bluff City Coffee, bringing java back to the community. Ritual is actively recruiting staff for the bistro and-most excitingly-has established an opening date. Future regulars will be able to enjoy their first taste of Ritual’s food and drink on May 27. Once opened, the concept will be greeting guests from 7 am to 2 pm, Mondays through Fridays, and from 8 am to 2 pm on Saturdays. The cafe will be closed on Sundays. Described as “A new place to connect on South Main.”, that will be providing “Coffee. Cocktails. Connections.”, Ritual has its Instagram page up and running. Excited locals can follow along to get glimpses of what’s in store when the cafe opens. Ritual promises to become an essential part of Memphis’s fabric; as a social media post states: “great cities deserve great spaces. Ritual is our contribution, a place to gather, unwind, and be part of something bigger than your daily routine.” Love our content? Add WhatNow as a preferred source on Google to see more of our trusted coverage when you search. 505 S Main St, Memphis, TN 38103 Be the First to Know From new restaurant openings to exciting retail launches and real estate insights, be the first to know what’s happening in Memphis Subscribe & Stay Ahead Share This Article Facebook Copy Link Print By Kelly Mintzer Follow: Kelly Mintzer is a freelance writer in the greater Philadelphia area. She's been delighted to write about the Philly and DC restaurant scenes for What Now Media since 2023. Additionally, she writes about genre media for Morbidly Beautiful and co-hosts the Guilty
+
+--- Article 296 ---
+URL: https://www.msn.com/en-gb/money/general/north-staffordshire-pub-back-open-with-new-landlords-too/ar-AA20GMsx?ocid=BingNewsVerp&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: North Staffordshire pub back open
+Status hint: Opening | Industry: Specialty / Other
+
+MSN
+
+--- Article 297 ---
+URL: https://www.msn.com/en-us/money/companies/36-year-old-retailer-shuts-down-website-as-all-stores-face-closure/ar-AA20YQ9d
+Title: 36-year-old retailer shuts down website as all stores face closure
+Status hint: Closing | Industry: Specialty / Other
+
+MSN
+
+--- Article 298 ---
+URL: https://www.facilitiesmanagement-now.com/article/270353/norco-announces-drop-box-locations-ondemand-voting
+Title: Norco announces drop box locations, on-demand voting
+Status hint: Closing | Industry: Specialty / Other
+
+Norco announces drop box locations, on-demand voting
+
+--- Article 299 ---
+URL: https://www.msn.com/en-us/sports/other/u-street-partially-closed-as-bens-chili-bowl-reopens/ar-AA22a7mX
+Title: U Street partially closed as Ben's Chili Bowl reopens
+Status hint: Opening | Industry: Specialty / Other
+
+MSN
+
+--- Article 300 ---
+URL: https://www.phillybite.com/index.php/local-news/12548-sheetz-launches-massive-southeast-michigan-expansion
+Title: Sheetz Launches Massive Southeast Michigan Expansion
+Status hint: Opening | Industry: Specialty / Other
+
+Sheetz Launches Massive Southeast Michigan Expansion Local News Previous Article Massive Giant Supermarket to Anchor the New Shops at Concord Next Article Big Lots Bids a Statewide Farewell to Pennsylvania Typography Smaller Small Medium Big Bigger Default Helvetica Segoe Georgia Times Reading Mode Share This MICHIGAN STATE — The biggest story in Michigan retail this year is officially rolling out, and it comes in the form of a massive, red-and-white convenience giant. Sheetz, the Pennsylvania-based convenience store and restaurant powerhouse, is currently in the middle of a staggering $500 million investment in the state, bringing an entirely new level of competition to the local market. A $500 Million Retail Milestone With ambitious plans to open 14 new locations throughout 2026, Sheetz is rapidly establishing a major footprint across Southeast Michigan. June marks a critical milestone in this aggressive rollout, with several highly anticipated sites scheduled to open their doors to the public. For Michigan residents unfamiliar with the brand's intense customer loyalty, these 24-hour locations are far more than traditional gas stations. They operate as sprawling convenience hubs, featuring the brand's famous customizable "Made-to-Order" (MTO) food and beverage menu, spacious dining areas, and specialized EV charging infrastructure designed for the modern driver. Ribbon Cuttings and New Hubs As the summer travel season kicks into high gear, Southeast Michigan shoppers and commuters should keep an eye out for grand opening celebrations. Several key locations are preparing to cut the ribbon this month, significantly boosting local job markets and providing round-the-clock service. Key openings include: Taylor (Eureka Road): Bringing the famous MTO menu and 24/7 convenience ng community and student populations. A Shifting Convenience Landscape Sheetz's entry represents a major shakeup for Michigan's convenience retail sector. By blurring the lines between a quick-serv

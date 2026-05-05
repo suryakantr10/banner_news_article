@@ -1,0 +1,178 @@
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+
+--- Article 121 ---
+URL: https://www.msn.com/en-us/travel/news/popular-kansas-city-bar-and-bookstore-plans-reopening-after-crossroads-closure/ar-AA2271OJ?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Popular Kansas City bar and bookstore plans reopening after Crossroads closure
+Status hint: Opening | Industry: Books / Toys / Gaming
+
+MSN
+
+--- Article 122 ---
+URL: https://www.birminghammail.co.uk/black-country/chinese-buffet-restaurant-announces-shock-33883569
+Title: Chinese buffet restaurant announces shock West Midlands closure after 20 years
+Status hint: Opening | Industry: Restaurants
+
+Chinese buffet restaurant announces shock West Midlands closure after 20 years Ming Moon, based on the A449 Stafford Road, said it was looking ahead to a 'new chapter' as it thanked customers for their 'continued support' Black Country Jamie Brassington Senior reporter 11:56, 04 May 2026 Updated 12:10, 04 May 2026 View Image The restaurant based on Stafford Road has served the community for two decades (Image: Google) A landmark restaurant in the West Midlands has announced its shock closure after 20 years. ‌ Ming Moon located on Stafford Road, in the Oxley area of Wolverhampton , will close its doors on May 9. ‌ The Chinese buffet restaurant first opened in 2006 and has served the local community for two decades. ‌ READ MORE: HMRC letters 'containing' £2,200 cash boost arriving on UK doorsteps Get breaking news on BirminghamLive WhatsApp , click the link to join Ming Moon said it was moving into a "new chapter" and thanked customers for their "continued support". ‌ The restaurant still has a base on Hurst Street in Birmingham city centre . In a statement issued on its Facebook page, Ming Moon said: "After 20 incredible years, we say goodbye to Ming Moon Wolverhampton. "From 2006 to 2026, it has been a place filled with celebrations, family gatherings, and unforgettable memories. ‌ "We are truly grateful for every visit and every moment shared with us. "Ming Moon Wolverhampton will be closing from May 9. "As we move into a new chapter, thank you for your continued support – it has meant everything to us." Article continues below The restaurant added: "For those wishing to continue the Ming Moon dining experience, you are welcome to visit: Ming Moon Birmingham , 16 Hurst Street, Birmingham B5 4BN. "Late Night Entrance (After 11pm): 8 Wrottesley St, Birmingham B5 4RT."
+
+--- Article 123 ---
+URL: https://www.msn.com/en-us/money/companies/tx-based-burger-chain-open-247-welcomes-third-tampa-bay-restaurant/ar-AA22aGBi?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: TX-based burger chain open 24/7 welcomes third Tampa Bay restaurant
+Status hint: Opening | Industry: Restaurants
+
+MSN
+
+--- Article 124 ---
+URL: https://www.travelandtourworld.com/news/article/ramee-group-targets-tricity-hospitality-growth-with-high-end-boutique-hotel-opening-in-mohali/
+Title: Ramee Group Targets Tricity Hospitality Growth With High-End Boutique Hotel Opening In Mohali
+Status hint: Opening | Industry: Hospitality
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.travelandtourworld.com/news/article/ramee-group-targets-tricity-hospitality-growth-with-high-end-boutique-hotel-opening-in-mohali/]
+
+--- Article 125 ---
+URL: https://www.aol.com/articles/supermarket-opening-times-may-bank-094002034.html
+Title: All supermarket opening times for the May Bank Holiday Monday
+Status hint: Opening | Industry: Grocery
+
+Tom Place Mon, May 4, 2026 at 9:40 AM UTC 0 Early May Bank Holiday Monday is here, meaning plenty of people will be enjoying an extra day off work and school. However, that also means that a number of supermarkets across the UK will be operating with different opening hours today. Supermarkets have revealed their holiday opening times for the 2026 May bank holiday - and The Standard has compiled a list of the confirmed opening times for all the major UK supermarkets, from Aldi to Waitrose. Supermarkets are being urged to restore worker pay in line with the real living wage after a raft have stepped back from matching the salary benchmark in recent years amid soaring industry cost pressures. (Alamy/PA) (Local Library) Some branches may have different opening hours, so you might want to check your local store’s specific timings before making your journey. All supermarket opening times for Early May Bank Holiday Monday: Aldi 8am - 8pm Asda 8am - 8pm Asda Express locations generally remain open 24 hours or until their usual late-night closing Co-op 8am - 8pm Convenience branches usually stay open until 10pm or 11pm Lidl 8am - 8pm Some stores in Greater London open until 10:00pm M&S 9am - 6pm M&S stores in travel hubs like stations, airports and garages usually maintain normal hours Morrisons 7am – 8pm Morrisons Daily stores typically stay open until 10pm or 11pm Sainsburys 8am - 8pm Most Sainsbury’s Local stores will stay open from 7am - 11pm Tesco 8am - 6pm Tesco Express stores usually operate normal hours Waitrose 8am - 6pm (Some larger branches may vary) Little Waitrose usually open until 10 or 11pm Read More Heathrow Airport warns war in Iran may cut passenger numbers Rail services across London face disruption over Bank Holiday London bank holiday weather: Capital stays sunny as temperatures drop
+
+--- Article 126 ---
+URL: https://www.htrnews.com/story/money/2026/05/04/trattoria-tennie-five-below-petsmart-manitowoc-business-news/89896967007/
+Title: Manitowoc's top business news in April included new restaurant opening
+Status hint: Opening | Industry: Restaurants
+
+MONEY Manitowoc's top business news in April included new restaurant opening The roundup also highlights Trattoria Tennie opening, OfficeMax closing, Five Below and PetSmart moving in, and a grandma who raised $80K for Big Brothers Big Sisters. Patti Zarling Manitowoc Herald Times Reporter May 4, 2026, 5:02 a.m. CT A construction company is suing a local restaurant developer for approximately $1 million in unpaid bills. A YouTuber from England is restoring a 1950s Burger Boat yacht once chartered by Frank Sinatra. A new Italian restaurant, Trattoria Tennie, is opening in the former Grizzly's location on Washington Street. The local OfficeMax store has closed, with Five Below and PetSmart slated to move into the space. A Manitowoc grandmother retired after raising $80,000 for Big Brothers Big Sisters over three decades. MANITOWOC – The calendar page has flipped to May, and that means it’s time for a look back and recap of my top stories for the month of April. Without further ado ... Readers flocked to my story about Quasius Construction’s move to take the developer of The Spices restaurant to court. The Sheboygan-based company says Basudev Adhikari and a number of businesses he owns owe about $1 million for work done but not paid for. Boat used by Sinatra has Manitowoc roots Another story that resonated with readers was a look at a young YouTuber from England who is refurbishing a yacht made by Burger Boat Company in the 1950s. This boat has had quite a life — it was chartered by Frank Sinatra, spent time in Asia as a house boat, as well as in San Diego, where celebrities and Saudi princes took to the waves. People caught up with March news in April This might be a bit meta for a Monday morning, but one of my top stories for April was my piece on the top stories for March. I’m so glad no one wants to miss a thing! These included stories about The Golden Flame restaurant up for sale , the S.S. Badger and more. Restaurant news is popular in April Restaurant news is us
+
+--- Article 127 ---
+URL: https://www.cincinnati.com/story/entertainment/dining/2026/05/04/mad-anthonys-pizza-opening-new-location-on-eight-street-in-cincinnati/89920160007/
+Title: Covington pizza restaurant expanding to downtown Cincinnati
+Status hint: Opening | Industry: Restaurants
+
+[Could not fetch: 406 Client Error: Not Acceptable for url: https://www.cincinnati.com/story/entertainment/dining/2026/05/04/mad-anthonys-pizza-opening-new-location-on-eight-street-in-cincinnati/89920160007/]
+
+--- Article 128 ---
+URL: https://www.delawareonline.com/story/life/food/2026/05/04/on-busy-middletown-warwick-road-13-new-restaurants-are-open-or-planned/89822036007/
+Title: On busy Middletown road, 13 new restaurants are open or planned
+Status hint: Opening | Industry: Restaurants
+
+FOOD On busy Middletown road, 13 new restaurants are open or planned Ben Mace Delaware News Journal May 4, 2026, 5:18 a.m. ET The new restaurant season is in full bloom along busy Middletown-Warwick Road in Middletown where 13 new eateries have opened or are coming soon in about a 3-mile stretch.
+
+--- Article 129 ---
+URL: https://www.sj-r.com/story/business/2026/05/04/top-business-restaurant-news-around-springfield-in-april/89877153007/
+Title: Data center OK'd, restaurants closing highlight April business news
+Status hint: Opening | Industry: Restaurants
+
+BUSINESS Data center OK'd, restaurants closing highlight April business news Claire Grant Springfield State Journal-Register May 4, 2026, 4:04 a.m. CT SPRINGFIELD – There’s never a dull moment in Sangamon County when it comes to business news. While multiple businesses opened and closed over the course of the month of April, headlines were focused on the approval of a $500 million data center in Thayer, Illinois and the grant fraud investigation into a Springfield nonprofit.
+
+--- Article 130 ---
+URL: https://www.monroenews.com/story/news/2026/05/04/oaks-village-grocery-store-monroe-michigan/89889571007/
+Title: Here's why Oaks Village grocery store is for sale
+Status hint: Opening | Industry: Grocery
+
+[Could not fetch: 406 Client Error: Not Acceptable for url: https://www.monroenews.com/story/news/2026/05/04/oaks-village-grocery-store-monroe-michigan/89889571007/]
+
+--- Article 131 ---
+URL: https://www.aol.com/news/massive-luxury-home-furnishing-store-162128413.html
+Title: Massive Luxury Home Furnishing Store Opens At IKEA-Anchored Paramus Shopping Center
+Status hint: Opening | Industry: Retail REITs
+
+Cecilia Levine Updated Mon, April 27, 2026 at 4:28 PM UTC 0 RH Outlet in Paramus — Levin Management A luxury home furnishings brand has opened a massive new store in one of New Jersey’s busiest shopping corridors, officials announced. Advertisement RH Outlet has opened at Ikea Drive Plaza, 200 Ikea Drive in Paramus, with direct access to Route 4, Route 17, and the Garden State Parkway — one of the nation’s busiest retail destinations. RH had relocated from another site in the borough to a new 50,700-square-foot freestanding building, according to Levin Management Corporation,  the leasing and managing agent for the shopping plaza. The store offers RH’s furniture, lighting, textiles, décor, and outdoor collections at outlet pricing, officials said. Store hours and additional details are available at RH.com.
+
+--- Article 132 ---
+URL: https://www.msn.com/en-ca/entertainment/celebrity/coronation-street-star-jennie-mcalpine-confirms-closure-of-her-award-winning-restaurant/ar-AA1HTPit?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Coronation Street star Jennie McAlpine confirms closure of her award-winning restaurant
+Status hint: Closing | Industry: Restaurants
+
+MSN
+
+--- Article 133 ---
+URL: https://www.aol.com/news/guide-every-korean-market-metro-120038865.html
+Title: Your guide to every Korean grocery store in metro Phoenix
+Status hint: Opening | Industry: Grocery
+
+Reia Li, Arizona Republic Updated Sun, April 26, 2026 at 1:00 PM UTC 0 When metro Phoenix got its first H Mart in 2020, it was a big deal for the Asian community and Korean food fans. People finally had access to the wide variety of ingredients, fresh vegetables and pre-marinated meats the Korean grocery store is known for. Not to mention the options in its food court, which make shopping there feel less like a chore and more like a culinary adventure. But H Mart is not the only Korean market in metro Phoenix. There are seven other markets spread all across the Valley dedicated to Korean cuisine. These markets mean that no matter which corner of the Valley you live in, you can access Korean snacks, sauces and spices. Many of the markets also offer their own freshly made banchan, such as cabbage kimchi, seaweed salad and seasoned crab. It'd be a worthy task to try every option at Nami's Market, in north Phoenix, or Seoul Market, in southwest Phoenix. Happy exploring! Korean markets in Phoenix Nami's Market Fresh produce: No. Meat and/or seafood counter: No. Prepared food: Yes. A couple opened Nami's Market after seeing the need for more Asian groceries in north Phoenix. Nami's Market sells convenience store staples like ramen, canned lattes and soy sauce, but the real centerpiece of the market is its house-made banchan . Cabbage and cucumber kimchi, fishcakes, anchovy and spicy squid fill an entire display case. Nami's Market also sells prepared food like dumplings, pork belly and onigiri, which are folded by the owner each morning. Details: 19401 N. Cave Creek Road, Suite 3, Phoenix. 602-582-0939, namismarketaz.com. Seoul Market Fresh produce: Yes. Meat and/or seafood counter: No. Prepared food: Yes. On the outside, Seoul Market seems like a convenience store, but inside, this small Korean market is stocked with ingredients, food and sauces imported from Korea. If you're looking for perilla seeds, sweet rice flour, Korean BBQ sauce or Korean snacks, this is the plac
+
+--- Article 134 ---
+URL: https://pulse.mk.co.kr/news/english/12035093
+Title: Korean department stores ride on K-culture boom to target overseas markets
+Status hint: Opening | Industry: Department Stores
+
+Korean department stores ride on K-culture boom to target overseas markets send close 사진 확대 (Hyundai Department Store) South Korean department stores are riding the wave of the K-culture boom, using fashion and beauty pop-up stores to expand into Taiwan and Hong Kong. Hyundai Department Store announced on Sunday that it will launch a three-month pop-up at Shin Kong Mitsukoshi’s Zhonggang branch in Taichung, Taiwan. Shin Kong Mitsukoshi is the top department store chain in Taiwan, attracting around 100 million visitors annually. The Zhonggang branch is the highest-grossing department store in the country. Earlier, Hyundai Department Store held a pop-up at a Shin Kong Mitsukoshi location in Taipei in October 2025, achieving the highest sales among all pop-ups in the chain’s history. Based on that success, it has planned additional pop-ups and may consider opening permanent stores depending on performance. The company is also planning to launch a pop-up store in Hong Kong as early as next year. Korean department stores are also actively entering the Japanese market. Hyundai Department Store has already opened a regular store in Japan and plans to open a flagship store in Omotesando within the first half of this year. Shinsegae Department Store is also expanding globally, operating pop-up stores in Japan, Paris, and Thailand. In July 2025, it held a K-beauty pop-up at the Printemps department store in Paris and is currently considering additional pop-ups. Lotte Department Store, in the meantime, is focusing on its direct brick-and-mortar footprint in Southeast Asian markets such as Vietnam, where it already maintains a significant presence and is reviewing plans for additional store openings. By Park Yun-gyun and Han Yubin [ⓒ Pulse by Maeil Business News Korea & mk.co.kr, All rights reserved]
+
+--- Article 135 ---
+URL: https://www.independent.ie/business/small-business/award-winning-wexford-restaurant-to-open-second-premises-after-double-success-at-chef-awards/a1977048103.html
+Title: Award-winning Wexford restaurant to open second premises after double success at chef awards
+Status hint: Opening | Industry: Restaurants
+
+Bearú owner and head chef Dave Rowley at the Yes Chef Ireland Awards. Jessica O'Connor New Ross Standard Yesterday at 07:40 Bearú, a multi award-winning restaurant that prides itself on the use of fresh, local produce is expanding to a second, separate location in New Ross, Co Wexford, just arms length from their main premises. The new venture will showcase the talents of recently crowned Best Pastry Chef in Leinster, Claire Griffin. Why you can Trust the Irish Independent: Learn about Editorial Guidelines and AI Use Latest Small Business End of an era as beloved Tipperary butcher retires after 70 years New era for Wexford hair salon after official launch following rebrand – ‘It was always my dream’ Award-winning Wexford restaurant to open second premises after double success at chef awards Derelict Guinness warehouse in Dublin has become Ireland’s biggest start-up campus End of an era as Wexford salon closes after 40 years in business Popular Kildare business to close after 60 years – ‘A sense of pride is what's keeping a lot of family-owned businesses open in Ireland’ Retailers brace for volatile 2026 as geopolitical shocks hit costs and consumer confidence Wexford garage set to close its doors for final time – ‘We poured everything into this place’ Fresh start for iconic Wexford bakery as new owners open doors to strong support Plans for iconic Wexford bar and nightclub revealed with provisional opening date announced Show more Top Stories Leinster Rugby Hugo Keenan signs new deal with IRFU and Leinster as Ireland build for 2027 World Cup assault Health Features When your child has an eating disorder: ‘Get curious about how it is serving them – because I promise you it is’ Middle East LIVE | Middle East truce in doubt as US and Iran fight for control of Strait of Hormuz and UAE reports attacks Ireland ‘Burned out, I quit my job to build cabins in the Irish woods – it’s meant to feel like a warm hug’ Latest News More Hurling Davy Fitzgerald remains as Antrim senio
+
+--- Article 136 ---
+URL: https://communityimpact.com/houston/spring-klein/business/2026/05/04/haus-of-innergy-fitness-center-now-open-in-spring/
+Title: Haus of Innergy fitness center now open in Spring
+Status hint: Opening | Industry: Gyms / Fitness
+
+Haus of Innergy fitness center now open in Spring | Community Impact | Houston Haus of Innergy fitness center now open in Spring Trending now Texas Legislature Live updates: Parents eulogize Camp Mystic victims; lawmakers urge health officials ... Dining Hibachi, Sunrise Cafe: 6 recently opened, featured dining spots in the ... Election Brett Ligon to lead Texas Senate District 4 through 2026, unofficial ... Texas Legislature Following emotional hearings, Camp Mystic says it will not reopen this ... Transportation Demolition of abandoned Northwest Mall begins to make way for pending ... Events 10 Cinco de Mayo events going on in the Greater Houston ... Events KISS Tribute Band, A Taste of Cy-Fair: 10 events to attend ... Texas Legislature Texas businesses can continue selling smokable hemp until July 27, judge ... Government Conroe ISD changes special education program, Turquoise Wine Bar opening: 5 ... Election 25K Montgomery, Harris County residents voted early in Texas Senate District ... Business Haus of Innergy fitness center now open in Spring By Sarah Brager | 11:27 AM May 4, 2026 CDT Updated 11:27 AM May 4, 2026 CDT Haus of Innergy owner and lead instructor Shelita White-Russ coaches a client through an exercise during the center's April 25 grand opening event. (Courtesy Haus of Innergy) Haus of Innergy owner and lead instructor Shelita White-Russ coaches a client through an exercise during the center's April 25 grand opening event. (Courtesy Haus of Innergy) Haus of Innergy, a locally owned fitness studio specializing in group classes, is now open near East Louetta and Lexington roads, owner Shelita White-Russ said. Meet the owner White-Russ said her inspiration to open Haus of Innergy dates back to 2010 when she started her own fitness journey, initially feeling out of place and "searching for something that felt motivating and authentic." In the years to follow, she said she went on to become a certified spin instructor and teach classes that combine fitn
+
+--- Article 137 ---
+URL: https://www.cbsnews.com/pittsburgh/news/the-crackg-egg-restaurant-closing-brentwood/
+Title: Brentwood's Crack'd Egg restaurant closing its doors
+Status hint: Closing | Industry: Restaurants
+
+The Crack'd Egg restaurant in Brentwood has announced it will be closing its doors later this month. In a lengthy social media post , the owners of The Crack'd Egg said that with costs through the roof and nonstop pressure, they've got nothing left to give and detailed their plans to close the restaurant for good. "So this is it," the owners said. "We are retiring from the restaurant business effective May 10, 2026." The owners thanked their guests over the years for making The Crack'd Egg a special place, saying that it was "something bigger than just breakfast." "We gave you everything we had," the owners said. "Every plate, every morning, every ounce of heart and passion and we'd do it all over again. Just not at the cost of our health, family and peace." The owners said to stay tuned for a going out of business sale and that "everything must go." The Crack'd Egg's controversial past In the post, the owners referenced a number of things they "survived" in recent years, including shutdowns, the Allegheny County Health Department, the bird flu, court hearings, and more. The Crack'd Egg was heavily embroiled in controversy during the COVID-19 pandemic as the restaurant defied health department closure orders and refused to enforce Pennsylvania's mask mandates at the time. The restaurant took the Allegheny County Health Department to court, ultimately appealing to the Commonwealth Court where the judges wrote that Pennsylvania's pandemic restrictions were constitutional and upheld a county ruling that shut down the Crack'd Egg. Featured Local Savings
+
+--- Article 138 ---
+URL: https://patch.com/new-jersey/ridgewood/5-new-restaurants-try-opened-north-nj-last-month-0
+Title: 5 New Restaurants To Try That Opened In North NJ Last Month
+Status hint: Opening | Industry: Restaurants
+
+Restaurants & Bars 5 New Restaurants To Try That Opened In North Jersey Last Month Want to eat out? Here are five restaurants that opened in northern New Jersey in the last few weeks. Caren Lissner , Patch Staff Posted Mon, May  4, 2026 at 12:18 am ET | Updated Mon, May  4, 2026 at 8:06 am ET (Jennifer Brown/City of Jersey City) NORTH JERSEY — With temperatures warming up, hungry New Jerseyans can head outdoors to dine. Here are five restaurant openings or reopenings Patch has written about in the last four weeks. Sabores Latinos Sabores Latinos opened last month in Morristown. Run by the same owners as Chef Freddy's Table, the chefs servce up traditional Latin American dishes, including fajitas, pupusas, and baleadas. You can also enjoy burgers, ribs, and seafood, plus breakfast. They're located at 91 Morris St. Find out more here. Find out what's happening in Ridgewood-Glen Rock for free with the latest updates from Patch. Srirangam-Veg Restaurant A vegetarian Indian restaurant held its grand opening on Friday in Belle Mead. Srirangam-Veg Restaurant, formerly Mango Tree, serves both North and South Indian food, from soft dosas to crispy vadas. They'll also pour you a fresh coffee. They're located at 2311 Route 206 in Belle Mead. Learn more here. Find out what's happening in Ridgewood-Glen Rock for free with the latest updates from Patch. Uni Uni The first location of Uni Uni Bubble Tea opened in New Jersey in mid-April in Jersey City, with its owner promising that it's a great space to sip and work. It's located in the former leasing office of KRE, which developed the residential building above it. Photo by Dan Burns The menu at Uni Uni has more than 40 drinks and snacks, and 19 toppings, combining fresh ingredients. The spot provides WiFi and electrical outlets next to the desks, because building residents like to come there for meetings, studying, and work, the owner says. Uni Uni is located at at 485 Marin Drive. Find out more here. Cortaditos Coffee The sevent
+
+--- Article 139 ---
+URL: https://www.msn.com/en-us/lifestyle/lifestyle-buzz/major-high-street-convenience-chain-closes-645-stores-75-off-sale-launched/ar-AA224kNn?ocid=up97dhp&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Major US convenience chain 7-Eleven closes 645 stores
+Status hint: Opening | Industry: Convenience Stores / Distributors
+
+MSN
+
+--- Article 140 ---
+URL: https://www.businessdebut.com/6-new-restaurants-opening-across-north-carolina-may-3-2026/
+Title: 6 new Restaurants Opening Across North Carolina [May 3, 2026]
+Status hint: Opening | Industry: Restaurants
+
+Thank you for tuning into this week's roundup of upcoming businesses in North Carolina. Business Debut interviewed each business owner to confirm the details below. Brunswick County Waterway Tavern OCEAN ISLE BEACH, NC — Waterway Tavern is preparing to open in the clubhouse at 1882 Goose Creek Road SW Unit 1, Ocean Isle Beach, NC 28469 . Owner Brittany Bowers told Business Debut the tavern is targeting an opening in the next couple of weeks. Article coming soon. Guilford County Toast GREENSBORO, NC — Toast, a new full-service restaurant and bar from owner Kristen Wallace-Williams, is targeting a May 1 opening at 120 Barnhardt Street, Greensboro, NC 27406 . Wallace-Williams told Business Debut the team is currently in hiring and onboarding as they prepare to open. Read the full article here. Jackson County Peak Pizza Bar CULLOWHEE, NC — Peak Pizza Bar is preparing to open at 2968 Old Cullowhee Road, Cullowhee, NC 28723 , with owner Justin Smith telling Business Debut the team is putting the final touches on the space and targeting a soft opening next week, pending final fire and health inspections. Peak Pizza Bar will be a fast-casual, counter-service restaurant focused on New York-style pizza. Read the full article here. Mecklenburg County Good Times Lounge CHARLOTTE, NC — Good Times Lounge, a new cocktail-focused concept from owner Kristen Wallace-Williams, is targeting a June opening at 300 N College St, Charlotte, NC 28202 . Wallace-Williams told Business Debut the concept will bring an upscale nightlife experience to Uptown. Read the full article here. Miró Spanish Grille CHARLOTTE, NC — Miró Spanish Grille is planning a second location at 4905 Ashley Park Lane, Charlotte, NC 28210 , targeting a late summer to early fall opening, co-owner Felipe Alvarez told Business Debut. The SouthPark restaurant will build on the brand’s nearly three-decade presence in the market while introducing an updated design and expanded experience. Read the full article here. Wake Cou

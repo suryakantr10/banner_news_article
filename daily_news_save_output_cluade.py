@@ -2,18 +2,16 @@
 daily_news_save_output_cluade.py
 ─────────────────────────────────
 Run this AFTER you have:
-  1. Pasted the contents of daily_news_latest.json (or a batch .txt file)
-     into Claude with the extraction prompt
-  2. Copied Claude's full Markdown table response into  claude_response.txt
+  1. Opened a newsbatch_N.txt file and pasted it into Claude.ai
+  2. Copied Claude's full Markdown table response and saved it as newsbatch_N_output.md
 
 What it does:
-  - Parses Claude's Markdown table from claude_response.txt
+  - Parses Claude's Markdown table from the output file
   - Saves daily_news_extraction_latest.json  ← dashboard reads this
-  - Clears claude_response.txt               ← ready for next run
 
 Usage:
-    python daily_news_save_output_cluade.py
-    python daily_news_save_output_cluade.py --append   # merge with existing JSON
+    python daily_news_save_output_cluade.py newsbatch_1_output.md
+    python daily_news_save_output_cluade.py newsbatch_2_output.md --append
     python daily_news_save_output_cluade.py --reset    # clear extraction JSON
 """
 
@@ -23,8 +21,11 @@ import re
 import sys
 from datetime import date
 
-RESPONSE_FILE   = "claude_response.txt"
-OUTPUT_JSON     = "daily_news_extraction_latest.json"
+OUTPUT_JSON = "daily_news_extraction_latest.json"
+
+# Determine input file from first non-flag argument
+_file_args = [a for a in sys.argv[1:] if not a.startswith("--")]
+RESPONSE_FILE = _file_args[0] if _file_args else "claude_response.txt"
 
 # ─────────────────────────────────────────────────────────
 # 0. Handle --reset flag
@@ -88,10 +89,11 @@ _COL_MAP_PATTERNS = {
     "store_name":        r"store|shop|restaurant|business|name",
     "location":          r"address|location",
     "event_type":        r"event.?type|type",
-    "event_date":        r"event.?date|date",
+    "event_date":        r"event.?date|^date$",
     "status":            r"status",
     "short_description": r"description|summary|short",
     "article_link":      r"link|url|article",
+    "published_date":    r"published",
 }
 
 if all_rows:
@@ -124,6 +126,7 @@ for row in all_rows:
         "status":            row.get("status",            ""),
         "short_description": row.get("short_description", ""),
         "article_link":      row.get("article_link",      ""),
+        "published_date":    row.get("published_date",    ""),
     })
 
 print(f"🔗  {len(new_records)} records ready")
@@ -150,11 +153,7 @@ with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
     json.dump(output, f, indent=2, ensure_ascii=False)
 print(f"💾  Saved {OUTPUT_JSON}  ({len(final_records)} records)")
 
-# ─────────────────────────────────────────────────────────
-# 7. Clear response file for next run
-# ─────────────────────────────────────────────────────────
-open(RESPONSE_FILE, "w").close()
-
 print(f"\n✅  Done!")
-print(f"    Push daily_news_extraction_latest.json to GitHub — dashboard will update.")
-print(f"    Cleared {RESPONSE_FILE} for next run.")
+if not APPEND_MODE:
+    print(f"    Run next batch with:  python daily_news_save_output_cluade.py newsbatch_2_output.md --append")
+print(f"    When all batches done:  git add daily_news_extraction_latest.json && git commit && git push")

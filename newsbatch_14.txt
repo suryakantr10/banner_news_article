@@ -1,0 +1,177 @@
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+
+--- Article 261 ---
+URL: https://www.charlotteobserver.com/charlottefive/c5-food-drink/article315559867.html
+Title: Line stretched down Sunset Road as new BBQ spot sold out before opening
+Status hint: Opening | Industry: Specialty / Other
+
+Editor’s note: The original re-opening date has now shifted to Friday, May 8. Bring on the brisket, and pass the cornbread. A new barbecue joint is opening this week in Charlotte. Quick take: 🍗 New restaurant: Honey Pies BBQ & Smokehouse 📍 Location: Sunset Road 🔥 “Grand opening” event: Drew a line down the street 🥩 Result: Sold out of everything ⏰ Opening: Now set for May 8 after restock The full details: Honey Pies BBQ & Smokehouse is set to open Friday, May 8 in the former Bubba’s Barbecue space on Sunset Road. Bubba’s was known for traditional Eastern Carolina pork barbecue, but Honey Pies is taking the location into Texas territory. The restaurant is smoking up plenty of brisket and enormous beef ribs — along with chicken and pork — to go with mac and cheese, baked beans, collard greens, potato salad and other Southern sides. Texas-style barbecue at Honey Pies BBQ & Smokehouse.                                                                                            Courtesy of Alison Council Read Next Food and Drink Haven for Eastern NC barbecue in Charlotte will now see Texas-style smoked meats January 20, 2026 5:00 AM You can craft your meal with your choice of meat and one or two sides, or there’s an option to make your meal entirely out of sides. There’s dessert on the menu, too, with sweet options including banana pudding, peach and apple cobbler, bread pudding, and pecan and sweet potato pie. Charlotteans got a first taste at an event April 25 that was planned as a grand opening event. It drew in so many people, the restaurant ran through 100 briskets and 275 racks of ribs, plus a full smoker of chicken. Apple cobbler at Honey Pies BBQ & Smokehouse.                                                                                            Courtesy of Alison Council Read Next Food and Drink I almost ruined a Charlotte date over banana pudding. Is the way I eat it that bad? April 23, 2026 6:00 AM “The line was down Sunset,” owner Alison Council told Charlo
+
+--- Article 262 ---
+URL: https://www.msn.com/en-us/travel/tripideas/stouts-signature-owner-eyes-fall-opening-for-king-william-sibling-concept/ar-AA21LGZY?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Stout's Signature owner eyes fall opening for King William sibling concept
+Status hint: Opening | Industry: Specialty / Other
+
+MSN
+
+--- Article 263 ---
+URL: https://www.aol.com/news/mezclas-chef-eyes-august-opening-200038522.html
+Title: Mezcla's Chef Eyes August Opening for New Venture, Coldbar
+Status hint: Opening | Industry: Specialty / Other
+
+Linda Lee Baird, Columbus Monthly Updated Thu, April 30, 2026 at 6:14 PM UTC 0 Mezcla's chef and owner Garrett Talmage will open Coldbar in Italian Village this summer It's been a whirlwind year so far for Garrett Talmage, chef and owner of Mezcla in Italian Village. In January, soon after being named a Best New Restaurant of 2026 by Columbus Monthly for its elevated Latin cuisine, the restaurant was forced to close after being struck by a van . Mezcla has yet to reopen, though it anticipates doing so later this spring . All the while, Talmage has had a new concept in the works. It's called Coldbar. Satisfy your hunger for food news. Subscribe to Columbus Monthly's weekly dining newsletter, Copy & Taste. Talmage says the name says it all. The concept: A "fine cocktail and cold tapas bar" also located in Italian Village. While not yet ready to reveal the address, Talmage says he is eyeing an August opening. Coldbar sounds like an ideal spot to beat the late summer heat, where the menu will center on small plates of "anything you can imagine that's cold. We'll have fun with it, too," he says. Advertisement Menu items and cocktails at Coldbar, opening in the Italian Village neighborhood in August. Think: Crudo and carpaccio, oysters, nigiri, terrines and caviar. Now, think potato salad. Talmage's new venture will find a way to tie them all together. "We're in the Midwest," he says, "so you can get caviar and potato salad at the same time." More traditional tapas like olives and deviled eggs are slated for the menu, but both will be prepared with Talmage's unique spin that includes a curry brine for the former and chili crisp shoyu flavoring for the latter. Cocktails at Coldbar You'll be able to wash your small bites down with a cocktail—Talmage suggests a Ramos gin fizz. But whatever your preferred libation, you'll be in the capable hands of Jackson Proctor, now of Bar Room at The Pizzuti , who is designing the menu. (He also developed Mezcla's cocktail program and rem
+
+--- Article 264 ---
+URL: https://www.lansingstatejournal.com/story/money/business/2026/05/04/metro-detroit-furniture-chain-opens-first-lansing-area-location/89872709007/
+Title: Metro Detroit furniture chain opens first Lansing area location
+Status hint: Opening | Industry: Specialty / Other
+
+BUSINESS Metro Detroit furniture chain opens first Lansing area location Rachel Greco Lansing State Journal May 4, 2026, 6:05 a.m. ET DELTA TWP. — Gardner White, a Warren-based furniture retail chain founded more than a century ago, has opened its first Lansing area location in a former Art Van Furniture store off West Saginaw Highway.
+
+--- Article 265 ---
+URL: https://www.msn.com/en-us/travel/news/kendra-scott-oddfellows-ice-cream-among-13-brands-opening-expanding-at-fl-outdoor-mall/ar-AA21riIb?ocid=BingNewsVerp
+Title: Kendra Scott, OddFellows Ice Cream among 13 brands opening, expanding at FL outdoor mall
+Status hint: Opening | Industry: Specialty / Other
+
+MSN
+
+--- Article 266 ---
+URL: https://www.postcrescent.com/story/money/companies/buzz/2026/05/04/4-fox-valley-businesses-opened-or-announced-closure-in-april/89890560007/
+Title: 4 Fox Valley businesses opened or announced closure in April
+Status hint: Opening | Industry: Specialty / Other
+
+BUZZ 4 Fox Valley businesses opened or announced closure in April | The Buzz Faith Huey Appleton Post-Crescent May 4, 2026, 5:02 a.m. CT Through all the April showers, and with greener pastures returning to the Fox Valley, business news may have slowed but it certainly hasn't stopped. From openings to closures, we've put together a list to recap these recent updates. 2 businesses open in the Appleton area Bowlicious Eats , 1804 S. Lawe St. in Appleton, opened on April 3 inside Long Chen Marketplace. The location is the food truck brand's first physical location, serving up dishes like loaded chicken teriyaki, smoked ribs, beef pho and chicken curry.
+
+--- Article 267 ---
+URL: https://www.bizjournals.com/sanantonio/news/2026/05/04/ihop-applebees-conversion-south-side-restaurant.html
+Title: IHOP-Applebee's combo concept plans South Side location
+Status hint: Opening | Industry: Specialty / Other
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.bizjournals.com/sanantonio/news/2026/05/04/ihop-applebees-conversion-south-side-restaurant.html]
+
+--- Article 268 ---
+URL: https://www.indianretailer.com/franchisetv/archives/news/franchise-news-tossin-pizza-opens-second-outlet-hyderabad
+Title: Franchise News: Tossin Pizza Opens Second Outlet in Hyderabad
+Status hint: Opening | Industry: Specialty / Other
+
+Food and Beverages Franchise News: Tossin Pizza Opens Second Outlet in Hyderabad BY - Franchise TV Bureau May, 04 2026 / 116 / 4 MIN READ Tossin Pizza has opened its second outlet in Hyderabad, located in Manikonda at Gandipet Mandal. The launch follows the performance of its first outlet in Gachibowli and takes the brand’s total store count to 26 across India. The expansion highlights Hyderabad’s role as a key market for organised casual dining, supported by a growing base of young consumers, rising disposable income, and demand for differentiated food formats. The Manikonda outlet has been designed to cater to both dine-in and group dining occasions, in line with demand in high-density residential and commercial areas. The menu continues to focus on gourmet pizzas and comfort-led offerings across vegetarian and non-vegetarian categories. Key items include OG Peri Peri Veg, Signature Peri Peri Chicken, Rome Around, Paneer Tikka Twist, Exotic Pomodoro, Classic Pesto Veg, Florentine Roast Chicken, Buffalo Chicken Blaze, Chicken Keema Khansa, and Rome Chicken. The brand also offers a Sicilian range, such as Grandma’s Cheesy Pie and Nonna’s Pesto Pie as part of its premium segment. In addition to pizzas, the menu includes garlic breads, pasta options such as Chicken Bolognese and Fungi Fettuccine Polo, and beverages including mojitos, iced teas, and milkshakes. The brand has also introduced a range of nine in-house dips, including Tzatziki Yogurt Dip, French Garlic Butter Dip, Cheese Garlic Ranch Dip, Hot Honey Dip, Peri Peri Aioli Dip, Pesto Aioli Dip, Aged Chilli Olive Oil Dip, Italian Tomato Marinara Dip, and Hand Ground Pesto. Some dips are offered in combined formats to support product customisation. “ Hyderabad has been an exciting market for us, and the response to our first outlet in Gachibowli has been extremely encouraging. The launch of our second outlet in Manikonda is a significant step in our growth journey and reflects the strong demand we have seen from
+
+--- Article 269 ---
+URL: https://ephemeralnewyork.wordpress.com/2026/05/04/the-return-of-a-1970s-hallmark-card-store-sign-on-a-yorkville-street/
+Title: The return of a 1970s Hallmark card store sign on a Yorkville street
+Status hint: Closing | Industry: Specialty / Other
+
+Share this: Share on X (Opens in new window) X Share on Facebook (Opens in new window) Facebook Share on Reddit (Opens in new window) Reddit Share on Tumblr (Opens in new window) Tumblr Share on Pinterest (Opens in new window) Pinterest Email a link to a friend (Opens in new window) Email Share on LinkedIn (Opens in new window) LinkedIn
+
+--- Article 270 ---
+URL: https://retailtimes.co.uk/pureseoul-opens-16th-store-marking-a-key-step-toward-doubling-store-count-this-year/
+Title: PURESEOUL opens 16th store, marking a key step toward doubling store count this year
+Status hint: Opening | Industry: Specialty / Other
+
+Securing the future of retail through seamless omnichannel integration March 23, 2026
+
+--- Article 271 ---
+URL: https://www.msn.com/en-us/travel/news/why-one-h-e-bs-north-texas-expansion-is-a-perfect-fit/ar-AA21M2tS
+Title: Why one H-E-B's North Texas expansion is a perfect fit
+Status hint: Opening | Industry: Specialty / Other
+
+MSN
+
+--- Article 272 ---
+URL: https://www.disneydining.com/its-really-happening-universal-confirms-closure-of-one-of-its-oldest-attractions-ab1/
+Title: It’s Really Happening: Universal Confirms Closure of One of Its Oldest Attractions
+Status hint: Opening | Industry: Specialty / Other
+
+For a lot of Universal Studios Florida fans, there are certain experiences that feel like they’ve always been there. You don’t think about when they opened or how many updates they’ve had—you just expect them to be part of the day. They’re the kind of attractions that quietly define what the park is. That’s why this latest update feels like such a big moment. Universal has officially confirmed that one of its oldest attractions is closing, marking the end of an era for a show that has been entertaining guests since the park’s earliest days. It’s not just another refurbishment or short-term closure. This is a full reset. Credit: Universal Orlando Resort The Final Curtain Is Set After months of speculation, there’s now a clear timeline. The original version of the Horror Makeup Show will hold its final performances on May 12, bringing decades of history to a close. For longtime visitors, that date carries weight. This isn’t a ride that quietly cycled in and out of updates over the years. It’s been a steady presence—something you could count on whether it was your first visit or your fifteenth. And now, for the first time, guests are being told that what they’ve known for years won’t be there the next time they walk through the park. A Show That Defined the Park’s Identity The Horror Makeup Show has always been a little different from everything around it. While Universal has leaned heavily into big rides and screen-based attractions, this show has stuck to something much simpler—and, in many ways, more personal. It takes place inside the Pantages Theater in the Hollywood section of the park, where guests step into what feels like a working studio. Hosts bring the audience into the process, recreating special effects and makeup techniques used in horror films, all while keeping things light, funny, and unpredictable. That mix is what made it special. It wasn’t just about what you saw—it was about how it was presented. The humor, the audience participation, and the behi
+
+--- Article 273 ---
+URL: https://www.msn.com/en-us/money/topstocks/retailers-could-close-40k-doors-but-footwear-might-be-the-exception/ar-AA21QUEI?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Retailers could close 40K doors, but footwear might be the exception
+Status hint: Closing | Industry: Specialty / Other
+
+MSN
+
+--- Article 274 ---
+URL: https://www.comingsoon.net/movies/news/2127619-x-2-alan-cumming-close-to-costars-trauma-bond?amp
+Title: X2 Actor Still Close With Costars 2 Decades After Being ‘Bonded in Trauma’
+Status hint: Opening | Industry: Specialty / Other
+
+Justin Baldoni & Blake Lively Reach Settlement, Release Joint Statement Justin Baldoni and Blake Lively have finally put an end to their lawsuits, reaching a settlement over a lawsuit that… Movies 8 hours ago
+
+--- Article 275 ---
+URL: https://thesunpapers.com/2026/05/04/deptford-town-center-stores-set-to-open-this-summer/
+Title: Three More Deptford Town Center Stores Anticipate Summer 2026 Openings
+Status hint: Opening | Industry: Specialty / Other
+
+Home News • Gloucester County News Three More Deptford Town Center Stores Anticipate Summer 2026 Openings Written by: Suzette Parmley Published: May 4, 2026 Email Facebook X WhatsApp LinkedIn Telegram Reddit First Watch, Nordstrom Rack, and Blinds To Go are set to open late summer as the next wave of stores to front a rejuvenated Deptford Town Center. - Advertisement - The final pair of additions, Aspen Dental and Chase Bank, will follow a bit later. Aspen Dental is set for a fall 2026 opening, while Chase Bank is set to debut in January 2027. Deptford Mayor Paul Medany and his Economic Development Director, Donald Banks, confirmed the timeline of openings. “[This] is just part of the economic development success in Deptford Township,” Medany said last week. “We’re as excited as everybody about these stores opening up. “Nordstrom Rack has been getting so many inquiries as to when they’re coming. …First Watch, same thing,” added Medany. “When that whole complex is done, what a fantastic addition to the Township [it will be].” From right to left, breakfast/lunch restaurant First Watch, and retailers Nordstrom Rack and Blinds To Go, respectively, are going into the spaces currently under construction at Deptford Town Center. Medany said DTC’s diverse retail mix — including an already open Aldi and Tractor Supply Co. — is expected to generate additional traffic for Deptford Mall, which sits directly across the shopping center. “It will just bring in a whole new set of customers and new ideas to use the mall,” said the long-time Mayor. “The thing with Deptford shopping center is that there’s such a great variety. It’s got everything right in the same parking lot: There’s a restaurant [First Watch]; there’s a bank [Chase]; there’s a dentist’s office [Aspen Dental]. You can go buy fertilizer and food for your horses [Tractor Supply Co.] “You can go to Aldi and get your groceries, and to Nordstrom Rack and buy new clothes,” said Medany. “It’s one-stop shopping for everythin
+
+--- Article 276 ---
+URL: https://thesunpapers.com/2026/05/04/deptford-town-center-stores-set-to-open-for-summer/
+Title: Deptford Town Center Stores Set to Open Summer 2026
+Status hint: Opening | Industry: Specialty / Other
+
+Home News • Gloucester County News Three More Deptford Town Center Stores Anticipate Summer 2026 Openings Written by: Suzette Parmley Published: May 4, 2026 Email Facebook X WhatsApp LinkedIn Telegram Reddit First Watch, Nordstrom Rack, and Blinds To Go are set to open late summer as the next wave of stores to front a rejuvenated Deptford Town Center. - Advertisement - The final pair of additions, Aspen Dental and Chase Bank, will follow a bit later. Aspen Dental is set for a fall 2026 opening, while Chase Bank is set to debut in January 2027. Deptford Mayor Paul Medany and his Economic Development Director, Donald Banks, confirmed the timeline of openings. “[This] is just part of the economic development success in Deptford Township,” Medany said last week. “We’re as excited as everybody about these stores opening up. “Nordstrom Rack has been getting so many inquiries as to when they’re coming. …First Watch, same thing,” added Medany. “When that whole complex is done, what a fantastic addition to the Township [it will be].” From right to left, breakfast/lunch restaurant First Watch, and retailers Nordstrom Rack and Blinds To Go, respectively, are going into the spaces currently under construction at Deptford Town Center. Medany said DTC’s diverse retail mix — including an already open Aldi and Tractor Supply Co. — is expected to generate additional traffic for Deptford Mall, which sits directly across the shopping center. “It will just bring in a whole new set of customers and new ideas to use the mall,” said the long-time Mayor. “The thing with Deptford shopping center is that there’s such a great variety. It’s got everything right in the same parking lot: There’s a restaurant [First Watch]; there’s a bank [Chase]; there’s a dentist’s office [Aspen Dental]. You can go buy fertilizer and food for your horses [Tractor Supply Co.] “You can go to Aldi and get your groceries, and to Nordstrom Rack and buy new clothes,” said Medany. “It’s one-stop shopping for everythin
+
+--- Article 277 ---
+URL: https://www.cheshire-live.co.uk/news/chester-cheshire-news/lidl-announces-23-cheshire-store-33849501
+Title: Lidl announces 23 Cheshire store target locations for 2026
+Status hint: Opening | Industry: Specialty / Other
+
+Lidl announces 23 Cheshire store target locations for 2026 - full list See if a new store could be opening where you live Comments News Ben Test Hurst-BM , Gary Porter Content Editor for Cheshire and Ben Hurst 06:00, 04 May 2026 Lidl has said it is looking to expand its chain across the uk and offering 'finders fees' (Image: Getty) Lidl has unveiled hundreds of target locations throughout Britain where it is looking to establish new stores - including 23 in Cheshire. All proposed locations are outlined in the retailer's newly published Site Requirements Brochure, released last week. ‌ The supermarket retailer is actively pursuing freehold, leasehold, or long-leasehold plots in high-profile areas boasting strong footfall and convenient access. Lidl announced it would offer a 'competitive finder's fee' to anyone who successfully pinpoints a previously unidentified site that ultimately results in a new store being built. ‌ Spanning locations the length and breadth of the country, the chain confirmed that each new outlet would create high-quality employment opportunities for local residents, with some of the most attractive benefits packages in the industry. Entry-level hourly wages stand at £13.45 nationally, rising to £14.45 with length of service, reports the Mirror. ‌ Richard Taylor, Chief Real Estate Officer at Lidl GB, said: "At Lidl GB, we currently have one of the most ambitious store opening programmes of any supermarket and we are more committed than ever to bringing our high quality and low priced products to even more communities across the country. All of our stores deliver more than just affordable products. Each one also brings quality jobs, opportunities for British suppliers to showcase the best of our home grown produce and support to local good causes in the communities each one serves. In uncertain times, shoppers and communities can count on us." At the beginning of this month, Lidl GB announced intentions to launch over 50 additional stores within 
+
+--- Article 278 ---
+URL: https://www.thesun.co.uk/money/38965991/supermarket-opening-times-early-may-bank-holiday-hours/
+Title: Are shops open today? Tesco, Co-op, Aldi and Sainsbury’s Early May Bank Holiday opening times revealed
+Status hint: Closing | Industry: Specialty / Other
+
+Click to share on Twitter (Opens in new window) Click to share on Facebook (Opens in new window) Comments THE Early May Bank Holiday is here, but some of us still need to stock up on supplies and grab some last-minute BBQ bargains. So here’s everything you need to know about supermarket opening times on the Early May Bank Holiday. Sign up for the Money newsletter Thank you! 7 Tesco’s hours vary depending on location on the Early May Bank Holiday Credit: Getty Tesco With around 3,000 branches across the nation, Tesco is the UK’s biggest supermarket chain. Advertisement Hours vary depending on location on the Early May Bank Holiday . The majority of large stores and large Express stores in England, Wales and Northern Ireland are open from 8am until 6pm today. Stores on the Isle of Man and in Scotland are trading longer hours of 7am to 10pm. read more on supermarkets BASKET CASE Supermarket giant extends Aldi's price match to 2,000 more stores from TODAY SALE AWAY Two supermarket chains where you can buy Claire’s jewellery - as ALL shops shut MAY BANK HOLIDAY OPENING TIMES LIVE – LATEST SHOP UPDATES There is no change to opening hours for standard Express stores. Shoppers are advised to check Tesco’s store locator to confirm their local branch’s hours: tesco.com/store-locator Sainsbury’s 7 Sainsbury’s hours can vary from location to location Credit: Alamy With roughly 1,400 locations, Sainsbury’s is Great Britain’s second-biggest supermarket chain. Advertisement Most read in Money CAFFEINE RUSH Pret finally launches its first ever drive-thru off major UK motorway CHECK IT OUT Lidl rolls out biggest ever change to loyalty scheme - as popular perk axed BERRY GOOD Aldi announces major fruit change in ALL stores - and it's dropping this month GREGG-CELLENT Greggs reveals menu shake-up with 7 new items - plus return of ‘divine’ bake The vast majority of Sainsbury’s supermarkets are open from 8am until 8pm today. Convenience stores are open as usual from 7am to 11pm. Sainsbu
+
+--- Article 279 ---
+URL: https://www.myjoyonline.com/spirit-airlines-shutting-down-after-rescue-talks-collapse/
+Title: Spirit Airlines shutting down after rescue talks collapse
+Status hint: Closing | Industry: Specialty / Other
+
+Spirit Airlines shutting down after rescue talks collapse - MyJoyOnline Home News Arts and Culture Business Sports Opinion Research Live TV/Radio Media Elections Dark Mode Dark mode International Spirit Airlines shutting down after rescue talks collapse Source : BBC 4 May 2026 4:19am Audio By Carbonatix Spirit Airlines is shutting down after failing to secure a $500m (£368m) bailout from the Trump administration. The budget airline was in talks with the US government about a rescue deal that would have saved it from going out of business. But discussions collapsed, and the carrier said in an announcement on its website on Saturday that with "great disappointment" it had "started an orderly wind-down of our operations, effective immediately". That included cancelling all of its flights, stranding many passengers and workers. Spirit was emerging from its second bankruptcy filing in recent years before the US-Israel war in Iran, but the resulting surge in jet fuel costs pushed it over the brink. "All Spirit flights have been cancelled, and Spirit Guests should not go to the airport," the company said in its statement posted early Saturday morning. Passengers reported receiving messages about the cancellations, but some still arrived at the airport in the morning with their luggage. Spirit's customer service is no longer available. The airline said it would automatically process refunds for flights purchased through Spirit with a credit or debit card to the original form of payment, but a bankruptcy court will determine how to compensate those who booked flights using a voucher, credit or airline points. Those who used a travel agent should contact the agent, it said. It also said it could not reimburse guests for emergency hotel stays or replacement flights. In the statement, Spirit's CEO Dave Davis said: "In March 2026, we reached an agreement with our bondholders on a restructuring plan that would have allowed us to emerge as a go-forward business. "However, the sudd
+
+--- Article 280 ---
+URL: https://www.filmibeat.com/photo-gallery/gopichand-34-movie-opening-107200.html
+Title: Gopichand #34 Movie Opening
+Status hint: Opening | Industry: Specialty / Other
+
