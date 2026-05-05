@@ -2430,6 +2430,226 @@
       "short_description": "Article body was not accessible (MSN shell page only). Based on title, Mango plans to open ten new stores in Türkiye in 2026. No further details available.",
       "article_link": "https://www.msn.com/en-us/news/technology/mango-plans-ten-new-t%C3%BCrkiye-stores-in-2026/ar-AA221Ksb",
       "published_date": "2026-05-04 19:11:39"
+    },
+    {
+      "store_name": "BLK Dot Coffee",
+      "location": "Alton Retail Center, Irvine, CA (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "opening",
+      "short_description": "BLK Dot Coffee has opened a new location at Alton Retail Center in Irvine, expanding the brand's local presence alongside its existing outposts at Irvine Spectrum Center and The Market Place. The shop is known for its signature VTM coffee made using a traditional Vietnamese phin filter.",
+      "article_link": "https://www.irvinestandard.com/2026/blk-dot-coffee-opens-alton-location/",
+      "published_date": "2026-05-04 19:08:25"
+    },
+    {
+      "store_name": "In-N-Out (new locations)",
+      "location": "Address not specified",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "opening next",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, In-N-Out Burger is announcing its next new locations. No further details available.",
+      "article_link": "https://www.msn.com/en-us/money/companies/here-s-where-new-in-n-out-locations-are-opening-next/ar-AA1ZWf7h",
+      "published_date": "2026-05-04 18:42:41"
+    },
+    {
+      "store_name": "Chase Bank (new Dayton branch)",
+      "location": "Former Rite Aid site, Dayton, OH (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Fall 2026",
+      "status": "expected to open this fall",
+      "short_description": "Chase Bank is opening a new 3,477-square-foot branch this fall in Dayton, Ohio, on a lot previously occupied by Rite Aid, which exited in 2024. Dayton's planning commission unanimously approved plans including a 25,000-square-foot parking lot, drive-up ATM, and bike rack.",
+      "article_link": "https://www.the-sun.com/money/16312231/jpmorgan-chase-bank-replacing-rite-aid-dayton-ohio/",
+      "published_date": "2026-05-04 18:37:03"
+    },
+    {
+      "store_name": "Chase Bank (nearby Dayton closure)",
+      "location": "Dayton, OH (address not specified)",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "will close one of its nearby locations",
+      "short_description": "When the new Dayton Chase Bank branch opens, Chase will close one of its nearby existing locations in the city. No address or specific closure date was provided.",
+      "article_link": "https://www.the-sun.com/money/16312231/jpmorgan-chase-bank-replacing-rite-aid-dayton-ohio/",
+      "published_date": "2026-05-04 18:37:03"
+    },
+    {
+      "store_name": "Rocket Fizz",
+      "location": "Park Avenue, Winter Park, FL (address not specified)",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "Not specified",
+      "short_description": "Article could not be fetched (403 error). Based on title, the longtime Park Avenue shop Rocket Fizz is closing in Winter Park. No further details available.",
+      "article_link": "https://www.bizjournals.com/orlando/news/2026/05/04/rocket-fizz-to-close-winter-park.html",
+      "published_date": "2026-05-04 18:28:00"
+    },
+    {
+      "store_name": "McAlister's Deli",
+      "location": "Rochester, MN (address not specified; first Rochester location)",
+      "event_type": "Opening",
+      "event_date": "May 11, 2026",
+      "status": "Not specified",
+      "short_description": "Article could not be fetched (403 error). Based on title, McAlister's Deli is opening its first Rochester, Minnesota location on May 11, 2026. No further details available.",
+      "article_link": "https://www.postbulletin.com/business/mcalisters-deli-to-open-its-first-rochester-location-on-may-11",
+      "published_date": "2026-05-04 18:21:19"
+    },
+    {
+      "store_name": "Nassau Financial (Suffolk County branch)",
+      "location": "Suffolk County, NY (address not specified; first Suffolk County branch)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "Not specified",
+      "short_description": "Article body returned no content. Based on title, Nassau Financial is opening its first Suffolk County branch. No further details available.",
+      "article_link": "https://libn.com/2026/05/04/nassau-financial-opens-first-suffolk-county-branch/",
+      "published_date": "2026-05-04 18:16:59"
+    },
+    {
+      "store_name": "H-E-B (Euless / Mid-Cities)",
+      "location": "2105 Rio Grande Blvd, Euless, TX",
+      "event_type": "Opening",
+      "event_date": "May 20, 2026",
+      "status": "will open to the public at 6 a.m. on Wednesday, May 20",
+      "short_description": "H-E-B's new Mid-Cities store will open at 2105 Rio Grande Blvd in Euless, Texas at 6 a.m. on May 20, 2026, following a groundbreaking in November 2024. The store will include a full-service pharmacy with drive-thru, a True Texas BBQ restaurant, H-E-B Curbside and home delivery, and a fuel station with car wash.",
+      "article_link": "https://www.wfaa.com/article/news/local/h-e-b-announces-opening-date-for-new-mid-cities-store/287-b24ada5f-9078-4486-88ef-8e67d380fcd8",
+      "published_date": "2026-05-04 18:06:00"
+    },
+    {
+      "store_name": "Bouldering Project Columbia Heights",
+      "location": "DC USA Mall, Columbia Heights, Washington, DC",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "signed a lease to open a second climbing gym",
+      "short_description": "Bouldering Project has signed a lease to open a second climbing gym in Washington, DC at DC USA Mall in Columbia Heights, offering bouldering terrain, fitness and yoga spaces, and youth areas. Membership will include access to both the new location and the existing Eckington gym.",
+      "article_link": "https://www.popville.com/2026/05/dc-bouldering-project-opening-second-location-columbia-heights/",
+      "published_date": "2026-05-04 18:05:22"
+    },
+    {
+      "store_name": "Burn Boot Camp Bethesda",
+      "location": "5425 Wisconsin Avenue, Bethesda, MD",
+      "event_type": "Opening",
+      "event_date": "April 27, 2026",
+      "status": "announced the opening",
+      "short_description": "Burn Boot Camp opened a new franchise location at 5425 Wisconsin Avenue in Bethesda, Maryland on April 27, 2026, owned and operated by local franchise partners Meg and Gerald Agyin. The gym offers 45-minute high-energy fitness camps for all fitness levels with complimentary childwatch.",
+      "article_link": "https://www.prnewswire.com/news-releases/burn-boot-camp-expands-dc-metro-presence-with-new-bethesda-location-302761670.html",
+      "published_date": "2026-05-04 18:05:00"
+    },
+    {
+      "store_name": "Juice bar and natural market (name not specified)",
+      "location": "Timonium, MD (address not specified)",
+      "event_type": "Closing",
+      "event_date": "Not specified (after 38 years)",
+      "status": "closing after 38 years",
+      "short_description": "Article could not be fetched (403 error). Based on title, a juice bar and natural market in Timonium is closing after 38 years. Business name not available.",
+      "article_link": "https://www.bizjournals.com/baltimore/news/2026/05/04/natural-market-timonium-closing-juice-bar.html",
+      "published_date": "2026-05-04 18:03:00"
+    },
+    {
+      "store_name": "Carter's (150 U.S. store closures)",
+      "location": "150 locations nationwide, USA (21 NJ stores listed; full national list not disclosed)",
+      "event_type": "Closing",
+      "event_date": "As leases expire through 2026",
+      "status": "stores would close as their leases expired",
+      "short_description": "Carter's, the Atlanta-based children's clothier that also operates OshKosh and B'Gosh, is closing 150 locations nationwide this year as leases expire, as part of a turnaround push in response to elevated tariff-driven costs. The company has 21 stores in New Jersey and has not disclosed the full list of locations to be shuttered.",
+      "article_link": "https://patch.com/new-jersey/across-nj/major-clothing-retailer-new-jersey-closing-150-u-s-stores",
+      "published_date": "2026-05-04 17:53:14"
+    },
+    {
+      "store_name": "Carter's (new Duluth store)",
+      "location": "Miller Hill Mall, Duluth, MN (Fountain Court; address not specified)",
+      "event_type": "Opening",
+      "event_date": "Fall 2026",
+      "status": "opening planned for this fall",
+      "short_description": "Carter's is opening a new location at Miller Hill Mall in Duluth, Minnesota this fall, with construction already underway. The store will be the first Carter's in the Duluth area, with the nearest existing locations requiring a significant drive south.",
+      "article_link": "https://b105country.com/new-carters-store-duluth-minnesota/",
+      "published_date": "2026-05-04 17:41:01"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article could not be fetched (403 error). Article covers the ribbon-cutting and grand opening of Cobb Fire Station 12, which is not a qualifying retail or restaurant event.",
+      "article_link": "https://eastcobbnews.com/cobb-fire-station-12-holds-ribbon-cutting-and-grand-opening/",
+      "published_date": "2026-05-04 17:32:20"
+    },
+    {
+      "store_name": "Bally's Chicago (permanent casino)",
+      "location": "Chicago, IL (address not specified)",
+      "event_type": "Opening",
+      "event_date": "2027",
+      "status": "targets 2027 opening",
+      "short_description": "Article could not be fetched (503 error). Based on title, Bally's Chicago has topped off its permanent casino building and is targeting a 2027 opening. No further details available.",
+      "article_link": "https://www.yogonet.com/international/news/2026/05/04/119423-ballys-chicago-tops-off-permanent-casino-targets-2027-opening",
+      "published_date": "2026-05-04 17:18:59"
+    },
+    {
+      "store_name": "Chick-fil-A (Lansing)",
+      "location": "Lansing, MI (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Thursday (relative to 2026-05-04)",
+      "status": "opening day is Thursday",
+      "short_description": "Article could not be fetched (403 error). Based on title, a new Chick-fil-A in Lansing is holding its opening day on Thursday. No further details available.",
+      "article_link": "https://wkzo.com/2026/05/04/opening-day-for-new-chick-fil-a-is-thursday/",
+      "published_date": "2026-05-04 17:15:26"
+    },
+    {
+      "store_name": "Parker John's BBQ & Pizza",
+      "location": "Former 2510 Restaurant space, Wausau, WI (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "will open",
+      "short_description": "Parker John's BBQ & Pizza is opening in the former 2510 Restaurant space in Wausau, alongside TENDEEZ Hot Chicken and the existing 2510 Bakery and Deli, making it three distinct businesses in the same space. No opening date or address was provided in the available article text.",
+      "article_link": "https://www.wausaudailyherald.com/story/money/2026/05/04/parker-johns-bbq-pizza-and-tendeez-hot-chicken-to-open-at-former-2510-restaurant-in-wausau/89927705007/",
+      "published_date": "2026-05-04 17:14:00"
+    },
+    {
+      "store_name": "TENDEEZ Hot Chicken",
+      "location": "Former 2510 Restaurant space, Wausau, WI (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "will open",
+      "short_description": "TENDEEZ Hot Chicken is opening in the former 2510 Restaurant space in Wausau, alongside Parker John's BBQ & Pizza and the existing 2510 Bakery and Deli. No opening date or address was provided in the available article text.",
+      "article_link": "https://www.wausaudailyherald.com/story/money/2026/05/04/parker-johns-bbq-pizza-and-tendeez-hot-chicken-to-open-at-former-2510-restaurant-in-wausau/89927705007/",
+      "published_date": "2026-05-04 17:14:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article could not be fetched (404 error). Based on title, article covers bus service replacing Metro North Waterbury Branch trains during station construction — not a qualifying retail or restaurant event.",
+      "article_link": "https://newjersey.news12.com/bus-service-to-replace-metro-north-waterbury-branch-trains-during-station-construction",
+      "published_date": "2026-05-04 17:11:48"
+    },
+    {
+      "store_name": "Chacho's",
+      "location": "6006 Westheimer Rd., Houston, TX",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "Closed. Lost our lease.",
+      "short_description": "Chacho's at 6006 Westheimer Rd. in Houston has closed after losing its lease, with signage on the doors and windows directing customers to its remaining locations at Chacho's South Loop by Reliant or Chacho's Tidwell. The closure date is unclear as the restaurant's website still listed the Westheimer location as open at time of publication.",
+      "article_link": "https://www.chron.com/food/article/chachos-restaurant-closes-houston-22240259.php",
+      "published_date": "2026-05-04 17:04:39"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article covers the grand opening of Granville Woods Lofts, an affordable housing apartment development at 860 and 910 Rhoads Ave. in Columbus, Ohio. This is a residential development, not a qualifying retail or restaurant event.",
+      "article_link": "https://www.aol.com/news/local-developer-invests-40-million-161702476.html",
+      "published_date": "2026-05-04 16:47:48"
+    },
+    {
+      "store_name": "Parker John's BBQ & Pizza / TENDEEZ Hot Chicken",
+      "location": "Former 2510 Restaurant space, Wausau, WI (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "will open",
+      "short_description": "Article could not be fetched (403 error). Duplicate of Article 216. Based on title, Parker John's BBQ & Pizza and TENDEEZ Hot Chicken are opening in Wausau. No further details available.",
+      "article_link": "https://wausaupilotandreview.com/2026/05/04/parker-johns-bbq-pizza-and-tendeez-hot-chicken-will-open-in-wausau/",
+      "published_date": "2026-05-04 16:34:45"
     }
   ]
 }
