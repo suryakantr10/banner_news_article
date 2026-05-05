@@ -657,6 +657,240 @@
       "status": "set to be converted",
       "short_description": "Bahama Breeze closed all 28 US locations on April 5, 2026. This location is listed as set to be converted to another format. Article text was truncated; additional conversion locations listed in the original article may not appear here.",
       "article_link": "https://www.the-sun.com/money/16310544/cheddar-scratch-kitchen-replacing-bahama-breeze-gainesville-florida/"
+    },
+    {
+      "store_name": "Zannier Île de Bendor",
+      "location": "Île de Bendor (private island off Bandol), Provence, France (full address not specified)",
+      "event_type": "Opening",
+      "event_date": "Now open (as of article date)",
+      "status": "now open",
+      "short_description": "Zannier Île de Bendor, a 93-key hotel on a private island off Bandol in Provence, is now open following a five-year transformation. The property is a collaboration between Société Paul Ricard and Zannier Hotels, featuring three distinct accommodation styles across the island along with eight dining spaces, a wellness centre, kids' club, and diving centre. It marks the revival of the island, which was first developed by pastis pioneer Paul Ricard in 1950.",
+      "article_link": "https://premierconstructionnews.com/2026/05/04/zannier-ile-de-bendor-now-open-heralding-a-new-era-of-riviera-hospitality/"
+    },
+    {
+      "store_name": "No qualifying business found (Smokey Bones)",
+      "location": "N/A",
+      "event_type": "Closing",
+      "event_date": "N/A",
+      "status": "N/A — MSN page returned no article body",
+      "short_description": "Article only shows MSN wrapper with no article text. No business name, location, or details available.",
+      "article_link": "https://www.msn.com/en-us/money/companies/all-smokey-bones-locations-close-nationwide-after-parent-company-files-for-bankruptcy/ar-AA21Zk8u"
+    },
+    {
+      "store_name": "No qualifying business found (The Burnt Tongue)",
+      "location": "N/A",
+      "event_type": "Opening",
+      "event_date": "N/A",
+      "status": "N/A — 403 Forbidden",
+      "short_description": "Article could not be fetched. No business details available.",
+      "article_link": "https://www.burlingtontoday.com/local-news/the-burnt-tongue-announces-plans-to-open-here-12230846"
+    },
+    {
+      "store_name": "Cancer Research UK (multiple charity shop locations)",
+      "location": "Birmingham, Bolton, Lancaster, Swindon (specific addresses not given); additional locations not specified — UK",
+      "event_type": "Closing",
+      "event_date": "By end of May 2026 (first 90); further 100 by April 2027",
+      "status": "set to close 90 charity shops by end of next month; a further 100 more to close by April 2027",
+      "short_description": "Cancer Research UK is closing 90 charity shops by the end of May 2026, with a further 100 closing by April 2027, citing rising costs and changing shopping habits. Shops in Birmingham, Bolton, Lancaster, and Swindon are among those being axed, as the charity plans to reduce its total shop count to 320 high-performing locations. The article also references closures by six additional unnamed chains in May 2026 but provides no further business-specific details.",
+      "article_link": "https://www.thesun.co.uk/money/39007941/seven-chains-closing-stores-may/"
+    },
+    {
+      "store_name": "No qualifying business found (Sleep Basil Mattress Co.)",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A — no opening event; article covers launch of a location webpage for an existing Denver showroom",
+      "short_description": "Article describes the launch of a new location page on Sleep Basil's website targeting Cherry Hills Village shoppers. The showroom itself is described as already operating in Denver; no new store opening is described.",
+      "article_link": "https://www.prlog.org/13143478-sleep-basil-mattress-co-launches-new-location-page-for-cherry-hills-village-shoppers.html"
+    },
+    {
+      "store_name": "LadyBird Westside",
+      "location": "Star Metals District, Marietta Street Artery neighborhood, West Midtown, Atlanta, GA — just east of Howell Mill Road (full address not specified)",
+      "event_type": "Opening",
+      "event_date": "Prior to June 14, 2026",
+      "status": "plans to open prior to June 14",
+      "short_description": "LadyBird Westside is an adaptive-reuse restaurant and bar opening in Atlanta's Star Metals District, serving as a second location for the existing Old Fourth Ward establishment LadyBird. The project transforms a warehouse and parking lots into an open-air complex with a beer garden, full kitchen and bar, murals, and large greenspaces. The opening is timed to capture anticipated FIFA World Cup foot traffic beginning June 14.",
+      "article_link": "https://atlanta.urbanize.city/post/ladybird-westside-fum-rabbit-ears-stella-near-opening-images"
+    },
+    {
+      "store_name": "Incognito",
+      "location": "Star Metals District, West Midtown, Atlanta, GA — adjacent to LadyBird Westside (full address not specified)",
+      "event_type": "Opening",
+      "event_date": "Prior to June 14, 2026",
+      "status": "on pace to open by June 14",
+      "short_description": "Incognito is a high-end cocktail bar opening next door to LadyBird Westside in Atlanta's Star Metals District. It is also on pace to open by June 14 to capture FIFA World Cup crowds. No further details on the concept were provided in the article.",
+      "article_link": "https://atlanta.urbanize.city/post/ladybird-westside-fum-rabbit-ears-stella-near-opening-images"
+    },
+    {
+      "store_name": "No qualifying business found (Aldi store redesign test)",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A — store redesign/reformat test, no new opening or closure",
+      "short_description": "Article covers Aldi's testing of a redesigned store format beginning in Aventura, Florida in September 2025, involving new signage, pricing language, and updated visuals. No new store opening or closure is described; this is an existing-store format test.",
+      "article_link": "https://www.aol.com/news/aldi-testing-store-design-us-090909664.html"
+    },
+    {
+      "store_name": "No qualifying business found (Curry a la Flambé)",
+      "location": "N/A",
+      "event_type": "Opening",
+      "event_date": "N/A",
+      "status": "N/A — MSN page returned no article body",
+      "short_description": "Article only shows MSN wrapper with no article text. No business name, location, or details available.",
+      "article_link": "http://www.msn.com/en-us/foodanddrink/foodnews/curry-a-la-flamb%C3%A9-now-open-in-glen-ellyn/ar-AA1OnOt9"
+    },
+    {
+      "store_name": "No qualifying business found (Applebee's franchisee closures)",
+      "location": "N/A",
+      "event_type": "Closing",
+      "event_date": "N/A",
+      "status": "N/A — MSN page returned no article body",
+      "short_description": "Article only shows MSN wrapper with no article text. No business name, location, or details available.",
+      "article_link": "https://www.msn.com/en-us/money/companies/applebee-s-franchisee-files-for-bankruptcy-and-closes-10-locations-plus-53-more-at-risk/ar-AA21UPCb"
+    },
+    {
+      "store_name": "No qualifying business found (Lammes candy store)",
+      "location": "N/A",
+      "event_type": "Closing",
+      "event_date": "N/A",
+      "status": "N/A — MSN page returned no article body",
+      "short_description": "Article only shows MSN wrapper with no article text. No business name, location, or details available.",
+      "article_link": "https://www.msn.com/en-us/money/companies/beloved-candy-store-lammes-abruptly-closing-all-locations-after-141-years/ar-AA220bQU"
+    },
+    {
+      "store_name": "Marks and Spencer — Hatfield Oldings Corner (food)",
+      "location": "Hatfield, UK (full address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified (listed as \"open\" in article)",
+      "status": "open",
+      "short_description": "M&S has opened a new food hall location at Hatfield Oldings Corner as part of its £90 million investment programme to launch new supermarkets and refurbish 11 existing stores. This is one of five new M&S locations confirmed in the article.",
+      "article_link": "https://www.getsurrey.co.uk/news/surrey-news/marks-and-spencer-stores-surrey-33883477"
+    },
+    {
+      "store_name": "Marks and Spencer — Luton Bramingham (food)",
+      "location": "Luton, UK (full address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified (listed as \"open\" in article)",
+      "status": "open",
+      "short_description": "M&S has opened a new food hall location at Luton Bramingham as part of its £90 million investment programme. This is one of five new M&S locations confirmed in the article.",
+      "article_link": "https://www.getsurrey.co.uk/news/surrey-news/marks-and-spencer-stores-surrey-33883477"
+    },
+    {
+      "store_name": "Marks and Spencer — Farnham, Surrey (food)",
+      "location": "Farnham, Surrey, UK (full address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified (listed as \"open\" in article)",
+      "status": "open",
+      "short_description": "M&S has opened a new food hall location in Farnham, Surrey as part of its £90 million investment programme. This is one of five new M&S locations confirmed in the article.",
+      "article_link": "https://www.getsurrey.co.uk/news/surrey-news/marks-and-spencer-stores-surrey-33883477"
+    },
+    {
+      "store_name": "Marks and Spencer — Abingdon Fairacres (food)",
+      "location": "Fairacres Retail Park, Abingdon, Oxfordshire, UK (full address not specified)",
+      "event_type": "Opening",
+      "event_date": "\"Last week\" (relative to article date of May 4, 2026)",
+      "status": "opened its doors last week",
+      "short_description": "M&S opened its Abingdon Fairacres food hall last week, with shoppers queuing outside to be the first in. The branch created 75 new jobs and is part of M&S's £90 million investment programme.",
+      "article_link": "https://www.getsurrey.co.uk/news/surrey-news/marks-and-spencer-stores-surrey-33883477"
+    },
+    {
+      "store_name": "Marks and Spencer — Godalming, Surrey (food)",
+      "location": "Godalming, Surrey, UK (full address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified (anticipated this summer per article)",
+      "status": "anticipated this summer",
+      "short_description": "A fifth new M&S food hall location in Godalming, Surrey is anticipated to open this summer, per the article. No further details on a specific date were provided.",
+      "article_link": "https://www.getsurrey.co.uk/news/surrey-news/marks-and-spencer-stores-surrey-33883477"
+    },
+    {
+      "store_name": "No qualifying business found (La Sanità Naples)",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A — neighborhood revitalization feature article, not a specific business opening or closure",
+      "short_description": "Article is a travel feature about the Rione Sanità neighborhood in Naples, Italy undergoing a community-led revival. No specific named business opening or closing event is described in the extracted text.",
+      "article_link": "https://www.theguardian.com/travel/2026/may/04/naples-italy-rione-sanita-neighbourhood"
+    },
+    {
+      "store_name": "No qualifying business found (McDonald's 900 new stores)",
+      "location": "N/A",
+      "event_type": "Opening",
+      "event_date": "N/A",
+      "status": "N/A — MSN page returned no article body",
+      "short_description": "Article only shows MSN wrapper with no article text. No business name, location, or details available.",
+      "article_link": "https://www.msn.com/en-us/money/companies/mcdonald-s-plans-to-open-900-new-stores-by-2027-will-you-get-one/ar-AA1GSl0a"
+    },
+    {
+      "store_name": "Sheetz (Fraser, MI)",
+      "location": "Southeast corner of Utica and 14 Mile roads, Fraser, MI (full address not specified)",
+      "event_type": "Opening",
+      "event_date": "May 8, 2026",
+      "status": "grand opening May 8",
+      "short_description": "Sheetz is opening its new Fraser, MI gas station and convenience store on May 8, 2026, with a ribbon-cutting ceremony and giveaways from 9–11 a.m. The site incorporates pieces from the former State Bank of Fraser building facade and will be open 24 hours. This is the company's ninth Michigan store, part of an aggressive push into the state.",
+      "article_link": "https://www.candgnews.com/news/sheetz-set-for-may-8-grand-opening-10912"
+    },
+    {
+      "store_name": "Sheetz (Taylor, MI)",
+      "location": "Taylor, MI (full address not specified)",
+      "event_type": "Opening",
+      "event_date": "May 8, 2026",
+      "status": "opening May 8",
+      "short_description": "Sheetz is also opening a location in Taylor, MI on the same date as its Fraser store, making it the company's tenth Michigan location. The simultaneous openings reflect the chain's expansion momentum in Southeast Michigan. No address or ceremony details were given for the Taylor location.",
+      "article_link": "https://www.candgnews.com/news/sheetz-set-for-may-8-grand-opening-10912"
+    },
+    {
+      "store_name": "No qualifying business found (Hillberg & Berk, Langley)",
+      "location": "N/A",
+      "event_type": "Opening",
+      "event_date": "N/A",
+      "status": "N/A — article body contains only a photo caption with no extractable business details",
+      "short_description": "Article text provides only a photo caption with no store address, opening date, or event details.",
+      "article_link": "https://langleyadvancetimes.com/sponsored-content/the-official-jewellery-partner-of-team-canada-opens-new-store-in-langley/"
+    },
+    {
+      "store_name": "No qualifying business found (barbecue chain closures)",
+      "location": "N/A",
+      "event_type": "Closing",
+      "event_date": "N/A",
+      "status": "N/A — MSN page returned no article body",
+      "short_description": "Article only shows MSN wrapper with no article text. No business name, location, or details available.",
+      "article_link": "https://www.msn.com/en-us/money/companies/beloved-barbecue-chain-closing-locations-nationwide-following-bankruptcy-filing/ar-AA22iB8s"
+    },
+    {
+      "store_name": "No qualifying business found (Anantara Somabay Resort)",
+      "location": "N/A",
+      "event_type": "Opening",
+      "event_date": "N/A",
+      "status": "N/A — 403 Forbidden",
+      "short_description": "Article could not be fetched. No business details available.",
+      "article_link": "https://www.travelandtourworld.com/news/article/minor-hotels-signs-anantara-somabay-resort-residences-expanding-in-egypts-red-sea-destination/"
+    },
+    {
+      "store_name": "Playa Bowls",
+      "location": "1335 W. Poplar Avenue, Collierville, TN 38017 (Water Tower District at Schilling Farms)",
+      "event_type": "Opening",
+      "event_date": "May 9, 2026",
+      "status": "grand opening on May 9",
+      "short_description": "Playa Bowls is opening a new location in Collierville, TN on May 9 at 11 a.m., offering acai bowls, smoothies, juice, and other healthy treats. The first 100 guests in line will win free bowls and t-shirts. This is the fourth area location for franchisees Amy Lupo and Jack Speed, who also operate stores in East Memphis, Arlington, and Orleans Station.",
+      "article_link": "https://whatnow.com/memphis/restaurants/playa-bowls-sets-grand-opening-for-collierville-location/"
+    },
+    {
+      "store_name": "No qualifying business found (Lammes candy store — duplicate)",
+      "location": "N/A",
+      "event_type": "Closing",
+      "event_date": "N/A",
+      "status": "N/A — MSN page returned no article body; also duplicate of Article 50",
+      "short_description": "Article only shows MSN wrapper with no article text. Also appears to be a duplicate of Article 50 covering the same Lammes candy store closure topic.",
+      "article_link": "https://www.msn.com/en-us/health/healthtrending/historic-candy-store-chain-closing-all-locations-after-141-years/ar-AA220N3X"
+    },
+    {
+      "store_name": "No qualifying business found (Soo Locks Visitor Center)",
+      "location": "N/A",
+      "event_type": "Opening",
+      "event_date": "N/A",
+      "status": "N/A — 403 Forbidden",
+      "short_description": "Article could not be fetched. No business details available.",
+      "article_link": "https://www.sooleader.com/local-news/soo-locks-visitor-center-now-open-for-the-season-12226367"
     }
   ]
 }
