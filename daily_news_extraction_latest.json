@@ -1000,6 +1000,216 @@
       "short_description": "Article could not be fetched (403 error). No business details available.",
       "article_link": "https://www.sooleader.com/local-news/soo-locks-visitor-center-now-open-for-the-season-12226367",
       "published_date": "2026-05-03 19:50:09"
+    },
+    {
+      "store_name": "Tops Friendly Markets",
+      "location": "156 Church St., Saranac Lake, NY (and other locations)",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "close to bankruptcy",
+      "short_description": "Bloomberg cited anonymous sources reporting that Tops Friendly Markets could seek court protection from creditors later in the month of the article's publication. The company has hired Evercore to assist with debt restructuring, and UFCW Local One confirmed Tops is currently meeting all salary and pension obligations. No store closures were confirmed at time of publication.",
+      "article_link": "https://www.dailygazette.com/ade/news/business/bloomberg-tops-stores-are-close-to-bankruptcy/article_a4e3de5e-a9de-54a8-976e-6b834258cf3c.html",
+      "published_date": "2026-05-03 19:34:06"
+    },
+    {
+      "store_name": "Artfully Vino and Van Gogh",
+      "location": "Greenville, SC (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "opens new location",
+      "short_description": "Artfully Vino and Van Gogh has opened a new location in Greenville. No further article body content was available beyond the title.",
+      "article_link": "https://www.foxcarolina.com/video/2026/05/03/artfully-vino-van-gogh-opens-new-location-greenville/?outputType=amp",
+      "published_date": "2026-05-03 18:15:00"
+    },
+    {
+      "store_name": "Circle K",
+      "location": "2112 Augusta Highway, Lexington, SC (at corner of Augusta Highway and Wise Ferry Road)",
+      "event_type": "Opening",
+      "event_date": "This week (relative to 2026-04-29)",
+      "status": "open",
+      "short_description": "A new Circle K convenience store has opened at 2112 Augusta Highway in Lexington, South Carolina, at the northeast corner of Augusta Highway and Wise Ferry Road. This is part of Circle K's active expansion in the Midlands and Lexington County area, following prior openings in the county in 2025.",
+      "article_link": "https://www.aol.com/news/bustling-lexington-highway-location-prolific-151114428.html",
+      "published_date": "2026-05-03 17:05:20"
+    },
+    {
+      "store_name": "Royal Shore Beachclub",
+      "location": "Hoi An coastline, Vietnam (within Wyndham Hoi An Royal Beachfront Resort & Villas and Royal Beachfront Villas & Spa)",
+      "event_type": "Opening",
+      "event_date": "April 30, 2026",
+      "status": "grand opening",
+      "short_description": "Royal Capital Group held the grand opening of Royal Shore Beachclub on April 30, 2026, along the coastline of Hoi An, Vietnam. The beachfront destination offers multiple dining outlets, recreational activities, and entertainment programming including live bands and DJs.",
+      "article_link": "https://danangfantasticity.com/en/royal-shore-beachclub-announces-grand-opening-in-hoi-an",
+      "published_date": "2026-05-03 13:41:15"
+    },
+    {
+      "store_name": "Smokey Bones",
+      "location": "All locations, nationwide USA",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "shuts down all locations",
+      "short_description": "Article could not be fetched (403 error). Based on title, Smokey Bones BBQ chain shut down all locations after a Chapter 11 filing. No further details available.",
+      "article_link": "https://www.thestreet.com/restaurants/after-chapter-11-smokey-bones-bbq-chain-shuts-down-all-locations",
+      "published_date": "2026-05-03 13:33:21"
+    },
+    {
+      "store_name": "Paris Baguette",
+      "location": "Garden State Park, Cherry Hill, NJ (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "now open",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, Paris Baguette has opened at Garden State Park in Cherry Hill. No further details available.",
+      "article_link": "https://www.msn.com/en-us/travel/tripideas/paris-baguette-at-garden-state-park-in-cherry-hill-now-open/ar-AA226hi2",
+      "published_date": "2026-05-03 12:48:09"
+    },
+    {
+      "store_name": "Smokey Bones",
+      "location": "Last Illinois location (address not specified)",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "shutters last Illinois location amid nationwide closures",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, Smokey Bones shuttered its last Illinois location as part of nationwide closures. No further details available.",
+      "article_link": "https://www.msn.com/en-us/foodanddrink/foodnews/smokey-bones-shutters-last-illinois-location-amid-nationwide-closures/ar-AA225b1b",
+      "published_date": "2026-05-03 12:31:46"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article could not be fetched (403 error). Title references MSC Cruises 2028 Caribbean bookings; no retail or restaurant opening/closure applicable.",
+      "article_link": "https://nbsla.ca/msc-cruises-2028-caribbean-cruises/",
+      "published_date": "2026-05-03 12:14:50"
+    },
+    {
+      "store_name": "Cookie chain (name not specified)",
+      "location": "All locations (USA)",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "closes all stores after Chapter 11 filing",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, a once-booming cookie chain closed all stores following a Chapter 11 bankruptcy filing. Chain name not available.",
+      "article_link": "https://www.msn.com/en-us/health/other/once-booming-cookie-chain-closes-all-stores-after-chapter-11-filing/ar-AA205iyb",
+      "published_date": "2026-05-03 11:38:14"
+    },
+    {
+      "store_name": "Route 66: From Trails to Truck Stops (exhibition)",
+      "location": "National Cowboy & Western Heritage Museum, Oklahoma City, OK (address not specified)",
+      "event_type": "Closing",
+      "event_date": "May 3, 2026",
+      "status": "closing",
+      "short_description": "The \"Route 66: From Trails to Truck Stops\" exhibition at the National Cowboy & Western Heritage Museum closed on May 3, 2026, to make way for the museum's 54th annual Prix de West Exhibition & Sale. The exhibition celebrated the 100th birthday of Route 66 in 2026 and featured classic cars, historic photographs, and vintage signs.",
+      "article_link": "https://www.aol.com/news/national-cowboy-museums-route-66-101544376.html",
+      "published_date": "2026-05-03 09:59:46"
+    },
+    {
+      "store_name": "Express Oil Change & Tire Engineers",
+      "location": "Chillicothe, OH (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "grand opening",
+      "short_description": "Article could not be fetched (406 error). Based on title, Express Oil Change & Tire Engineers held a grand opening in Chillicothe, Ohio. No further details available.",
+      "article_link": "https://www.chillicothegazette.com/story/news/local/2026/05/03/express-oil-change-tire-engineers-opens-in-chillicothe/89833599007/",
+      "published_date": "2026-05-03 09:04:00"
+    },
+    {
+      "store_name": "Pizza chain (name not specified)",
+      "location": "All locations (address not specified)",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "shutters all of its locations",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, a beloved pizza chain shuttered all of its locations, with operators stating the decision \"did not come easily.\" Chain name not available.",
+      "article_link": "http://www.msn.com/en-us/money/companies/beloved-pizza-chain-shutters-all-of-its-locations-decision-did-not-come-easily/ar-AA22dDKo",
+      "published_date": "2026-05-03 08:34:33"
+    },
+    {
+      "store_name": "Pageturners Bookstore",
+      "location": "Indianola, IA (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "celebrated its Grand Opening",
+      "short_description": "Pageturners Bookstore celebrated its grand opening with a special weekend of games, prizes, local art, and books, coinciding with the Central Iowa Independent Bookstore Crawl inspired by Independent Bookstore Day. No address or specific opening date was provided in the article.",
+      "article_link": "https://www.indianola-ia.com/grand-opening/image_8ceaa1d6-08b4-4bf9-836e-ea322e7dbfc8.html",
+      "published_date": "2026-05-03 03:13:19"
+    },
+    {
+      "store_name": "Dan Murphy's",
+      "location": "Cowes, Phillip Island, Victoria, Australia (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "plans to open",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, Dan Murphy's has plans to open in Cowes, Phillip Island, which has sparked community debate. No further details available.",
+      "article_link": "https://www.msn.com/en-au/news/australia/dan-murphy-s-plans-to-open-in-cowes-sparks-debate-over-phillip-island-s-character/ar-AA228cJ5",
+      "published_date": "2026-05-03 02:56:39"
+    },
+    {
+      "store_name": "Dave & Buster's",
+      "location": "Jack London Square, Oakland, CA (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Monday (relative to 2026-05-03)",
+      "status": "preparing for grand opening Monday",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, Dave & Buster's was preparing for a grand opening Monday at Jack London Square. No further details available.",
+      "article_link": "http://www.msn.com/en-us/travel/news/dave-busters-preparing-for-jack-london-square-grand-opening-monday/ar-AA21XYWO",
+      "published_date": "2026-05-03 01:29:28"
+    },
+    {
+      "store_name": "Ben's Chili Bowl",
+      "location": "U Street, Washington, DC (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "grand reopening, ribbon cutting",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, Ben's Chili Bowl hosted a grand reopening and ribbon-cutting ceremony at its historic U Street location. No further details available.",
+      "article_link": "https://www.msn.com/en-us/news/us/ben-s-chili-bowl-hosts-grand-reopening-ribbon-cutting-of-historic-u-street-location/ar-AA22aYvs",
+      "published_date": "2026-05-03 00:45:00"
+    },
+    {
+      "store_name": "Aldi",
+      "location": "Address not specified",
+      "event_type": "Remodel",
+      "event_date": "Not specified",
+      "status": "introducing a new store format",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, Aldi is introducing a new store format. This appears to be a duplicate/variant of Article 47.",
+      "article_link": "https://www.msn.com/en-us/money/companies/aldi-is-introducing-a-new-store-format-here-s-how-it-will-affect-the-way-you-shop/ar-AA22b4vL",
+      "published_date": "2026-05-03 00:05:01"
+    },
+    {
+      "store_name": "Rancho Cantina Danville",
+      "location": "501 Hartz Ave., Danville, CA",
+      "event_type": "Opening",
+      "event_date": "Early summer 2026 (target: mid-June; by July 1 at latest)",
+      "status": "on track to open by early summer",
+      "short_description": "Danville residents Nico and Alice Tzikas are expanding their Rancho Cantina concept from their Lafayette location to a new restaurant at 501 Hartz Ave. in downtown Danville, taking over a space vacant since Cocina Hermanas closed in March 2026. The owners are approximately halfway through a remodel and are targeting a mid-June opening.",
+      "article_link": "https://www.danvillesanramon.com/food/2026/05/04/rancho-cantina-owners-eye-early-summer-opening-for-new-danville-restaurant/",
+      "published_date": "2026-05-05 00:14:40"
+    },
+    {
+      "store_name": "Cocina Hermanas",
+      "location": "501 Hartz Ave., Danville, CA",
+      "event_type": "Closing",
+      "event_date": "March 2026",
+      "status": "closed",
+      "short_description": "Cocina Hermanas closed at 501 Hartz Ave. in Danville in March 2026, leaving the space vacant until Rancho Cantina Danville took it over. No further details about the closure were provided.",
+      "article_link": "https://www.danvillesanramon.com/food/2026/05/04/rancho-cantina-owners-eye-early-summer-opening-for-new-danville-restaurant/",
+      "published_date": "2026-05-05 00:14:40"
+    },
+    {
+      "store_name": "Furniture retailer (name not specified)",
+      "location": "Holland area, OH (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "enters Ohio with Holland-area store",
+      "short_description": "Article body was not accessible (no content returned). Based on title, an unnamed furniture retailer is entering Ohio with a new store in the Holland area, with a job fair scheduled. No further details available.",
+      "article_link": "https://www.toledoblade.com/business/labor/2026/05/04/furniture-retailer-enters-ohio-with-holland-area-store-job-fair-set/stories/20260504109",
+      "published_date": "2026-05-04 22:26:37"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article is an industry trade piece about AI and technology trends in convenience stores. No specific business opening or closure is mentioned.",
+      "article_link": "https://cstoredecisions.com/from-ai-to-retail-media-the-new-c-store-tech-playbook/",
+      "published_date": "2026-05-04 21:33:22"
     }
   ]
 }
