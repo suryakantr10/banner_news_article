@@ -21,8 +21,15 @@ jobs:
 
       - name: Install Chrome
         uses: browser-actions/setup-chrome@v2
+        id: setup-chrome
         with:
           chrome-version: stable
+          install-chromedriver: true
+
+      - name: Set Chrome paths
+        run: |
+          echo "CHROME_BIN=${{ steps.setup-chrome.outputs.chrome-path }}" >> $GITHUB_ENV
+          echo "CHROMEDRIVER_PATH=${{ steps.setup-chrome.outputs.chromedriver-path }}" >> $GITHUB_ENV
 
       - name: Set up Python
         uses: actions/setup-python@v5.6.0

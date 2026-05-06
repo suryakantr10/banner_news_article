@@ -8,6 +8,7 @@ from selenium.common.exceptions import TimeoutException, WebDriverException
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.core.os_manager import ChromeType
 from bs4 import BeautifulSoup
+import os
 import time
 import subprocess
 from datetime import datetime, timezone, timedelta
@@ -51,12 +52,24 @@ def get_driver():
         "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
     )
 
-    chrome_version = get_chrome_version()
+    # On CI: use the exact Chrome + ChromeDriver installed by browser-actions/setup-chrome
+    # (version-matched, avoids the localhost timeout caused by mismatched binaries).
+    # Locally: fall back to webdriver-manager auto-detection.
+    chrome_bin = os.environ.get("CHROME_BIN")
+    chromedriver_path = os.environ.get("CHROMEDRIVER_PATH")
 
-    # Pass the detected version so webdriver-manager downloads the exact
-    # matching ChromeDriver — prevents the localhost timeout on CI runners.
-    driver_path = ChromeDriverManager(driver_version=chrome_version).install()
-    service = Service(driver_path)
+    if chrome_bin:
+        options.binary_location = chrome_bin
+        print(f"  Using Chrome binary: {chrome_bin}")
+
+    if chromedriver_path:
+        print(f"  Using ChromeDriver: {chromedriver_path}")
+        service = Service(chromedriver_path)
+    else:
+        chrome_version = get_chrome_version()
+        driver_path = ChromeDriverManager(driver_version=chrome_version).install()
+        service = Service(driver_path)
+
     driver = webdriver.Chrome(service=service, options=options)
     driver.set_page_load_timeout(180)
     return driver
