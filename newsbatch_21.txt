@@ -1,0 +1,199 @@
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• For Published Date → copy exactly the value from the "Published:" line in the article metadata
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+
+--- Article 401 ---
+URL: https://amp.thenewstribune.com/news/business/article315607341.html
+Title: New coffee stand in University Place, local pizza chains expand, more biz news
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 12:15:00
+
+A local drive-thru coffee chain has expanded to University Place. Rainier Valley Coffee opened its new location late last month at 5915 Hannah Pierce Road, as previously reported by The News Tribune. The menu includes espressos, teas, energy drinks and smoothies. Some signature drinks include White Pass, with white chocolate white coffee and salted caramel, and the Snoqualmie, with guava, coconut and blue energy drink. Click to resize The University Place location is serving drinks and pre-packaged food but is waiting for permits to serve bites like avocado toast and breakfast sandwiches. Rainier Valley Coffee has  locations in Bonney Lake, Maple Valley, Enumclaw and Puyallup. The University Place drive-thru is open 4 a.m. to 7 p.m. Monday through Friday, 5 a.m. to 7 p.m. Saturday and 6 a.m. to 6 p.m. Sunday. Farrelli’s Pizza, a family-owned pizza chain based in DuPont, Wash., started in Lacey in 1995. It’s known for wood-fired pies, twice-daily happy hour and family-friendly dining.                                                                            Courtesy Farrelli’s Pizza More pizza options coming to the South Sound Farrelli’s Pizza , a local chain, has started work on a new location in Enumclaw, as previously reported by The News Tribune. The pizzeria will take over The Claw of Enumclaw, an event venue at 1324 Roosevelt Ave. E. The menu will include wood-fired pies, pasta, calzones and appetizers like cheesy breadsticks and baked chicken wings. Farrelli’s in Enumclaw is set to open in late June. Other Farrelli’s locations include Tacoma, Point Ruston, Parkland, Sumner and DuPont. On the Key Peninsula, Puget Sound Pizza has found a new home, as previously reported by The News Tribune. The local pizza chain will replace Figaro’s Pizza in Lakebay, 9023 Key Peninsula Highway NW. Puget Sound Pizza , which has locations in Tacoma and Lakewood, makes pies 10 or 16 inches, with build-your-own pizzas and signature pizzas, including the Big Dill with pickles, baco
+
+--- Article 402 ---
+URL: https://indianretailer.com/franchisetv/archives/news/franchise-news-blue-tokai-expands-hyderabad-second-origins-store
+Title: Franchise News: Blue Tokai Expands in Hyderabad with Second Origins Store
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 12:05:50
+
+Food and Beverages Franchise News: Blue Tokai Expands in Hyderabad with Second Origins Store BY - Franchise TV Bureau May, 04 2026 / 151 / 4 MIN READ Blue Tokai Coffee Roasters has launched its second Origins format in Hyderabad at Banjara Hills, expanding its retail presence in India’s specialty coffee segment. The new store marks the brand’s continued focus on experiential formats in a market that has seen rising consumer interest in coffee culture. “ Hyderabad is the only city where we've opened two flagships in under six months. People here don't just want a great cup, they want to understand what goes into making one. That curiosity is what makes us want to build here, for the long run, " said Shivam Shahi, Co-Founder, Blue Tokai Coffee Roasters. The Origins store is designed to showcase Indian coffee micro-lots along with a structured food offering. The format highlights sourcing practices, regional coffee profiles, and multiple brewing techniques. A key section of the store is the Play Bar, where experimental coffee lots are preserved in a controlled environment. These include rotating selections curated by the roasting team, featuring coffees fermented with farm-grown cultures, aged in wine barrels, and sourced from emerging regions such as Meghalaya. Customers can also experience seven brewing methods, including Chemex, Syphon, and Slow Drip. The outlet also features a Nitro Cold Brew tap, offering nitrogen-infused, single-origin coffee made with a proprietary extraction process. The food menu at Origins has been curated in collaboration with Auroni Mookerjee, who has previously worked with chef Ritu Dalmia’s Diva Group in Delhi, as well as Sienna Store and Cafe and The Salt House in Kolkata. The menu includes handmade pastas such as Chilli Crunch Carbonara, club sandwiches, and open-faced toasts made with sourdough bread from Suchali's Artisan Bakehouse, as well as desserts including tiramisu and Coconut Berry Lamington. Selected items from this menu are a
+
+--- Article 403 ---
+URL: https://www.chuckecheese.com/austin-south/blogs/chuckecheese-summer-hiring-2026/
+Title: 3,200 Open Roles
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 12:00:00
+
+Chuck E. Cheese Announces Largest Summer Hiring Push and Newsweek Recognition America’s No. 1 family entertainment brand, named a Newsweek America’s Greatest Workplace for Entry Level 2026, targets 3,200 new Cast Members this summer Published: May 4, 2026 by:					Allison Chouinard Chuck E. Cheese is hiring approximately 3,200 people this summer — Cast Members, kitchen staff, restaurant managers, and technical staff — with positions open now through September 1, 2026. Candidates as young as 15 are eligible. Apply at chuckejobs.com or text CHEESE to 58046 for openings near you. IRVING, Texas (May 4, 2026) — Chuck E. Cheese , the globally recognized leader in family entertainment and dining operated by CEC Entertainment, LLC, is launching a summer hiring initiative targeting approximately 3,200 technical, management, staff and Cast Member roles, with hiring between May 1 and September 1, 2026. This initiative arrives alongside a major workforce milestone: recognition by Newsweek as one of America’s Greatest Workplaces for Entry Level 2026 , in partnership with Plant-A Insights Group, and is reinforced by the company’s strong culture as evidenced by the 14-year average tenure of its field and operations leadership teams. Campaign messaging will highlight the brand’s “Work Today, Get Paid Tomorrow” benefit, which allows eligible employees early wage access. The hiring surge reflects five years of workforce demand data (2021–2026) and aligns with Chuck E. Cheese’s peak seasonal traffic period. The brand hosted nearly 45 million visits in the 2025 fiscal year and celebrated more than 500,000 birthday parties, driving increased staffing needs across fun centers during summer months. Open roles include Cast Member, Kitchen Staff, Restaurant Management and Technical Management positions, with both part-time and full-time opportunities available for candidates as young as 15. “Being recognized by Newsweek as one of America’s Greatest Workplaces for Entry Level 2026 reflects th
+
+--- Article 404 ---
+URL: https://latteluxurynews.com/2026/05/04/waldorf-astoria-morocco-opening/
+Title: Waldorf Astoria enters Morocco with opening in twin cities
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 11:56:33
+
+latteluxurynews
+
+--- Article 405 ---
+URL: https://107jamz.com/ixp/149/p/coushatta-casino-legacy-tower-opening-date/
+Title: Opening Date Announced For Coushatta Casino's New Legacy Tower
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 11:55:58
+
+Coushatta Casino’s New Legacy Tower Opening Date Announced Mike Soileau Mike Soileau Published: May 4, 2026 Mike Soileau Share on Facebook Share on Twitter Kinder, Louisiana [KNGT-FM] - If you have driven down Highway 165 in Kinder, Louisiana lately and passed by Coushatta Casino Resort, chances are you have seen the new hotel being built. It's a brand-new eight-story hotel called The Legacy, set to open in May 2026 at the resort. The new hotel features 204 guest rooms, including 100 luxury suites, and is directly connected to the largest gaming floor in Louisiana. This thing is incredible. Get our free mobile app Mike Soileau Mike Soileau loading... When it opens, visitors will also be able to see the huge new lobby that connects you to everything, like the casino entrance and the brand new Starbucks. The Hoel also features a massive seven-story LED screen on the outside of the building. They have also upgraded the casino floor in preparation for the opening of the new hotel and lobby area. They have announced that the new Legacy Hotel will open on Monday, May 18, 2026. There are also great events scheduled for this Summer at Coushatta. One is the annual two-day Coushata Powwow, held inside the pavilion behind the casino. It is a family-friendly event that you will definitely want to take the family to. Smithsonian Pow Wow Getty Images loading... Read More: Coushatta Powwow coming in June 2026 Coming up in July 2026, the Coushatta Crossroads festival will be back for its 16th year. It is a day filled with the who's who of Cajun and Zydeco music on two separate stages inside the pavilion at Coushatta. The festival date and full entertainment lineup will be announced soon. Coushatta Crossroads Festival (Photo by Mike Soileau TSM) Coushatta Crossroads Festival (Photo by Mike Soileau TSM) loading... If you’d like to stay at the new Legacy Hotel, reservations are now open. Call 888-774-7263 to book your room. Southwest Louisiana's Biggest and Most Popular Festivals Sour
+
+--- Article 406 ---
+URL: https://qctimes.com/exclusive/insight/article_8e20496f-24ce-48d7-8718-4e5d1951dc0c.html
+Title: Two new coffee shops open, new mobile bar, concrete manufacturing facility, and more Quad-Cities business news
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 11:30:00
+
+1 of 5 What began as a mobile bar under The Wandering Crowd, they have since grown into a full-service beverage catering company, Sips & Pours Co. Pictured is Cynthia Flores, owner and operator of Sips & Pours Co., inside her mobile drink truck at Marketplace at 2500 in Moline. CONTRIBUTED Lifted Energy opens second location in Silvis located at 111 Sixth Ave., formerly Charged Coffee and Cocoa Shop. The popular coffee shop serves coffee and energy drinks. From left is the watermelon and pineapple with cream, pineapple and mango with cream, and red raspberry, orange and lime with cream they serve. CONTRIBUTED Lifted Energy will hold a grand opening for its new drive-thru Silvis location from 6-9 a.m. on Friday, May 1, located at 111 Sixth Ave., formerly the Charged Coffee and Cocoa Shop shown here on Wednesday, April 29. The coffee and energy drink shop will reopen with normal hours on Monday, May 4. Business hours will be from 6 a.m.-2 p.m. Monday-Friday, 9 a.m.-2 p.m. Saturday. Closed Sunday. LAURA YEATER Lifted Energy will hold a grand opening for its new drive-thru Silvis location from 6-9 a.m. on Friday, May 1, located at 111 Sixth Ave., formerly the Charged Coffee and Cocoa Shop shown here on Wednesday, April 29. The coffee and energy drink shop will reopen with normal hours on Monday, May 4. Business hours will be from 6 a.m.-2 p.m. Monday-Friday, 9 a.m.-2 p.m. Saturday. Closed Sunday. LAURA YEATER The new Coffee House on the Island is located in Building #60, Rodman Avenue, on Rock Island Arsenal. CONTRIBUTED Gift this article New subscriber benefit! Copied to clipboard Out of gifts for the month Unfortunately you've used all of your gifts this month. Your counter will reset on the first day of next month. Share this article paywall-free Email Copy Link Facebook Twitter Bluesky WhatsApp SMS Email Print Copy article link Save LAURA YEATER Sips & Pours Co., new mobile bar, serving the Quad Cities There's a new mobile bar serving both sides of the Mississippi R
+
+--- Article 407 ---
+URL: https://njbiz.com/ocean-state-job-lot-glassboro-store-big-lots-new-jersey/
+Title: Ocean State Job Lot to open in former Big Lots Glassboro store
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-04 11:04:10
+
+
+
+--- Article 408 ---
+URL: https://www.nbc4i.com/news/local-news/columbus/dunkin-to-open-at-mill-run-this-week-offer-first-guests-free-coffee-for-100-days/amp/
+Title: Dunkin’ to open at Mill Run this week, offer first guests free coffee
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 11:00:00
+
+COLUMBUS, Ohio ( WCMH ) – A new Dunkin’ location at Mill Run in northwest Columbus near Hilliard will soon open. The coffee and donut fast food chain will begin welcoming customers at 3635 Data Point Court on Wednesday. The location will hold a grand opening celebration from 9 a.m. to 11 a.m., featuring “swag giveaways” and an appearance by Spinkes, the Dunkin’ mascot, according to a news release. The first 100 guests in line will also receive a voucher for a free medium hot or iced coffee, which will be valid for 100 days starting on May 6, according to a spokesperson for Gilligan Company, the franchisee of the Mill Run Dunkin’. At 10 a.m., the store will host a ribbon-cutting ceremony and check presentation for Columbus Humane, as part of the brand’s “ongoing commitment” to give back to the local community, the release said. A few adoptable dogs will be in attendance. In addition to the grand opening celebration, the Dunkin’ at Mill Run will operate during its regular hours on Wednesday. The store will be open from 5 a.m. to 7 p.m. daily. The Data Point Court building previously housed a Steak ’n Shake and has since been redeveloped to accommodate two tenants. A second business has not yet moved into the space. Dunkin’ – founded in 1960 in Quincy, Massachusetts – has about 10,000 locations nationwide, including more than 300 in Ohio. The chain serves a variety of hot, iced and frozen coffee drinks, along with tea, donuts, Munchkin donut holes, muffins, bagels, breakfast sandwiches, wraps and hash browns. The Mill Run development surrounding the new Dunkin’ has undergone several recent changes, including the addition of a luxury pet hotel and OhioHealth’s purchase of a newly built facility. A 120-unit apartment complex is also underway; Dune Companies broke ground on the project in October, and the first units are expected to be delivered this spring. The firm intends to complete the complex by the fall, according to NBC4’s previous reporting .
+
+--- Article 409 ---
+URL: https://www.pottsmerc.com/2026/05/04/jersey-mikes-subs-opening-third-berks-location-may-6/
+Title: Jersey Mike’s Subs opening third Berks location May 6
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 10:51:26
+
+Jersey Mike’s Subs is opening at the Exeter Commons Shopping Center in Exeter Township on Wednesday, May 6. (DONNA ROVINS – MEDIANEWS GROUP PHOTO) By Donna Rovins | drovins@pottsmerc.com | Reading Eagle PUBLISHED: May 4, 2026 at 6:51 AM EDT Getting your Trinity Audio player ready... It has taken about seven years, but Jersey Mike’s Subs is opening in Exeter Township in just a couple of days. The new store location, in the Exeter Commons Shopping Center, will officially open on Wednesday, May 6, starting with a ribbon cutting ceremony with township officials and the Greater Reading Chamber Alliance. The new Jersey Mike’s is the third Berks County location for franchise-owner Gerrit Curran and will be his 27th location. The other Berks stores are in Muhlenberg and Spring townships. “Exeter is a great part of the community we haven’t been able to engage with yet,” Curran said in an interview. “We’ve been watching it for a while, and we finally had the opportunity to come in.” Curran said at about 2,000 square feet, the Exeter restaurant is “a little bigger than we otherwise prefer, but after five, six, seven years of waiting, we didn’t want to wait any longer.” The fast casual restaurant has a team of about 20, Curran said, adding that training began on Wednesday, April 29. Orlando Rosario is the location’s general manager. He is a three-year veteran of the company and previously worked at the Muhlenberg Jersey Mike’s. Jersey Mike’s subs is opening in Exeter Township on Wednesday, May 6. In this photo, new employees are learning how to make sandwiches “the Mike’s way,” during a training session led by Filomeno Monteiro, director of field support for Jersey Mike’s.  (DONNA ROVINS – MEDIANEWS GROUP PHOTO) Wednesday’s grand opening will also include a fundraiser to benefit the Exeter Community Education Foundation. Customers who receive a special fundraising coupon distributed through a grassroots effort prior to the opening can make a minimum $3 contribution to the found
+
+--- Article 410 ---
+URL: https://www.lansingstatejournal.com/story/money/business/2026/05/04/metro-detroit-furniture-chain-opens-first-lansing-area-location/89872709007/
+Title: Metro Detroit furniture chain opens first Lansing area location
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 10:05:00
+
+BUSINESS Metro Detroit furniture chain opens first Lansing area location Rachel Greco Lansing State Journal May 4, 2026, 6:05 a.m. ET DELTA TWP. — Gardner White, a Warren-based furniture retail chain founded more than a century ago, has opened its first Lansing area location in a former Art Van Furniture store off West Saginaw Highway.
+
+--- Article 411 ---
+URL: https://www.msn.com/en-us/travel/news/kendra-scott-oddfellows-ice-cream-among-13-brands-opening-expanding-at-fl-outdoor-mall/ar-AA21riIb?ocid=BingNewsVerp
+Title: Kendra Scott, OddFellows Ice Cream among 13 brands opening, expanding at FL outdoor mall
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 10:04:35
+
+MSN
+
+--- Article 412 ---
+URL: https://www.postcrescent.com/story/money/companies/buzz/2026/05/04/4-fox-valley-businesses-opened-or-announced-closure-in-april/89890560007/
+Title: 4 Fox Valley businesses opened or announced closure in April
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 10:02:00
+
+BUZZ 4 Fox Valley businesses opened or announced closure in April | The Buzz Faith Huey Appleton Post-Crescent May 4, 2026, 5:02 a.m. CT Through all the April showers, and with greener pastures returning to the Fox Valley, business news may have slowed but it certainly hasn't stopped. From openings to closures, we've put together a list to recap these recent updates. 2 businesses open in the Appleton area Bowlicious Eats , 1804 S. Lawe St. in Appleton, opened on April 3 inside Long Chen Marketplace. The location is the food truck brand's first physical location, serving up dishes like loaded chicken teriyaki, smoked ribs, beef pho and chicken curry.
+
+--- Article 413 ---
+URL: https://www.bizjournals.com/sanantonio/news/2026/05/04/ihop-applebees-conversion-south-side-restaurant.html
+Title: IHOP-Applebee's combo concept plans South Side location
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 10:00:00
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.bizjournals.com/sanantonio/news/2026/05/04/ihop-applebees-conversion-south-side-restaurant.html]
+
+--- Article 414 ---
+URL: https://www.indianretailer.com/franchisetv/archives/news/franchise-news-tossin-pizza-opens-second-outlet-hyderabad
+Title: Franchise News: Tossin Pizza Opens Second Outlet in Hyderabad
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 09:24:40
+
+Food and Beverages Franchise News: Tossin Pizza Opens Second Outlet in Hyderabad BY - Franchise TV Bureau May, 04 2026 / 116 / 4 MIN READ Tossin Pizza has opened its second outlet in Hyderabad, located in Manikonda at Gandipet Mandal. The launch follows the performance of its first outlet in Gachibowli and takes the brand’s total store count to 26 across India. The expansion highlights Hyderabad’s role as a key market for organised casual dining, supported by a growing base of young consumers, rising disposable income, and demand for differentiated food formats. The Manikonda outlet has been designed to cater to both dine-in and group dining occasions, in line with demand in high-density residential and commercial areas. The menu continues to focus on gourmet pizzas and comfort-led offerings across vegetarian and non-vegetarian categories. Key items include OG Peri Peri Veg, Signature Peri Peri Chicken, Rome Around, Paneer Tikka Twist, Exotic Pomodoro, Classic Pesto Veg, Florentine Roast Chicken, Buffalo Chicken Blaze, Chicken Keema Khansa, and Rome Chicken. The brand also offers a Sicilian range, such as Grandma’s Cheesy Pie and Nonna’s Pesto Pie as part of its premium segment. In addition to pizzas, the menu includes garlic breads, pasta options such as Chicken Bolognese and Fungi Fettuccine Polo, and beverages including mojitos, iced teas, and milkshakes. The brand has also introduced a range of nine in-house dips, including Tzatziki Yogurt Dip, French Garlic Butter Dip, Cheese Garlic Ranch Dip, Hot Honey Dip, Peri Peri Aioli Dip, Pesto Aioli Dip, Aged Chilli Olive Oil Dip, Italian Tomato Marinara Dip, and Hand Ground Pesto. Some dips are offered in combined formats to support product customisation. “ Hyderabad has been an exciting market for us, and the response to our first outlet in Gachibowli has been extremely encouraging. The launch of our second outlet in Manikonda is a significant step in our growth journey and reflects the strong demand we have seen from
+
+--- Article 415 ---
+URL: https://ephemeralnewyork.wordpress.com/2026/05/04/the-return-of-a-1970s-hallmark-card-store-sign-on-a-yorkville-street/
+Title: The return of a 1970s Hallmark card store sign on a Yorkville street
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-04 09:00:40
+
+Share this: Share on X (Opens in new window) X Share on Facebook (Opens in new window) Facebook Share on Reddit (Opens in new window) Reddit Share on Tumblr (Opens in new window) Tumblr Share on Pinterest (Opens in new window) Pinterest Email a link to a friend (Opens in new window) Email Share on LinkedIn (Opens in new window) LinkedIn
+
+--- Article 416 ---
+URL: https://retailtimes.co.uk/pureseoul-opens-16th-store-marking-a-key-step-toward-doubling-store-count-this-year/
+Title: PURESEOUL opens 16th store, marking a key step toward doubling store count this year
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 08:54:47
+
+Securing the future of retail through seamless omnichannel integration March 23, 2026
+
+--- Article 417 ---
+URL: https://www.msn.com/en-us/travel/news/why-one-h-e-bs-north-texas-expansion-is-a-perfect-fit/ar-AA21M2tS
+Title: Why one H-E-B's North Texas expansion is a perfect fit
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 08:45:21
+
+MSN
+
+--- Article 418 ---
+URL: https://www.disneydining.com/its-really-happening-universal-confirms-closure-of-one-of-its-oldest-attractions-ab1/
+Title: It’s Really Happening: Universal Confirms Closure of One of Its Oldest Attractions
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 08:36:35
+
+For a lot of Universal Studios Florida fans, there are certain experiences that feel like they’ve always been there. You don’t think about when they opened or how many updates they’ve had—you just expect them to be part of the day. They’re the kind of attractions that quietly define what the park is. That’s why this latest update feels like such a big moment. Universal has officially confirmed that one of its oldest attractions is closing, marking the end of an era for a show that has been entertaining guests since the park’s earliest days. It’s not just another refurbishment or short-term closure. This is a full reset. Credit: Universal Orlando Resort The Final Curtain Is Set After months of speculation, there’s now a clear timeline. The original version of the Horror Makeup Show will hold its final performances on May 12, bringing decades of history to a close. For longtime visitors, that date carries weight. This isn’t a ride that quietly cycled in and out of updates over the years. It’s been a steady presence—something you could count on whether it was your first visit or your fifteenth. And now, for the first time, guests are being told that what they’ve known for years won’t be there the next time they walk through the park. A Show That Defined the Park’s Identity The Horror Makeup Show has always been a little different from everything around it. While Universal has leaned heavily into big rides and screen-based attractions, this show has stuck to something much simpler—and, in many ways, more personal. It takes place inside the Pantages Theater in the Hollywood section of the park, where guests step into what feels like a working studio. Hosts bring the audience into the process, recreating special effects and makeup techniques used in horror films, all while keeping things light, funny, and unpredictable. That mix is what made it special. It wasn’t just about what you saw—it was about how it was presented. The humor, the audience participation, and the behi
+
+--- Article 419 ---
+URL: https://www.msn.com/en-us/foodanddrink/foodnews/smokey-bones-barbecue-chain-closes-its-indiana-store/ar-AA2226Md?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Smokey Bones barbecue chain closes its Indiana store
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-04 08:00:36
+
+MSN
+
+--- Article 420 ---
+URL: https://www.msn.com/en-us/money/topstocks/retailers-could-close-40k-doors-but-footwear-might-be-the-exception/ar-AA21QUEI?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Retailers could close 40K doors, but footwear might be the exception
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-04 07:09:58
+
+MSN

@@ -1,0 +1,205 @@
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• For Published Date → copy exactly the value from the "Published:" line in the article metadata
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+
+--- Article 381 ---
+URL: https://www.msn.com/en-us/money/companies/ikea-customers-shocked-at-store-closure-announcement-in-memphis/ar-AA1WjPui?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: IKEA customers shocked at store closure announcement in Memphis
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-04 15:34:01
+
+MSN
+
+--- Article 382 ---
+URL: https://www.syracuse.com/business/2026/05/salt-city-coffees-newest-onondaga-county-location-is-open.html
+Title: Salt City Coffee’s newest Onondaga County location is open
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 15:32:00
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.syracuse.com/business/2026/05/salt-city-coffees-newest-onondaga-county-location-is-open.html]
+
+--- Article 383 ---
+URL: https://www.pennlive.com/life/2026/05/popular-mall-store-to-close-150-locations.html?outputType=amp
+Title: Popular mall store to close 150 locations
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 15:24:00
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.pennlive.com/life/2026/05/popular-mall-store-to-close-150-locations.html?outputType=amp]
+
+--- Article 384 ---
+URL: https://www.grocerydive.com/news/schnucks-closing-fresh-store-jasper-indiana/819142/
+Title: Schnucks closing another small-format store
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 15:14:46
+
+An article from Dive Brief Schnucks closing another small-format store The Midwest grocer will close a Schnucks Fresh location in Jasper, Indiana, in mid-May as retailers continue to struggle with alternative formats. Published May 4, 2026 Jeff Wells Lead Editor Share Copy link Email LinkedIn X/Twitter Facebook Print License Add us on Google The exterior of the Schnucks Fresh store in Jasper, Indiana. Permission granted by Schnucks Listen to the article 2 min This audio is auto-generated. Please let us know if you have feedback . Dive Brief: Schnuck Markets will close its Schnucks Fresh location in Jasper, Indiana, on May 24, the grocer announced Friday . Schnucks Chairman and CEO Todd Schnuck said in a statement that the store, which opened in summer 2021, “ simply has not generated the business it needs to stay open.” The news comes about two years after Schnucks announced it would close down its natural and organic banner , Eatwell Market, and underscores the difficulty grocers are having operating alternative formats. Dive Insight: When it opened nearly five years ago, the Jasper location marked the debut of the Schnucks Fresh concept. At just 18,000 square feet, the store is significantly smaller than its traditional supermarkets but includes a wide array of fresh products. In an interview shortly after the opening, a company executive said the chain was looking to provide a full-service store to a community that didn’t have many grocery options. But shopper demand wasn’t strong enough to keep the store in operation, according to Friday’s announcement. Schnucks still operates a Fresh store in Oak Grove Village, Missouri, that opened in 2023 , but does not have plans to open any other locations, a company spokesperson said. Numerous other grocers have opened small-format stores in recent years in an attempt to provide a more tailored grocery shopping experience, but success has been mixed. Publix did away with its Greenwise banner in 2023, while Kroger, Stop & S
+
+--- Article 385 ---
+URL: https://www.yourohionews.com/carroll-county/modern-auto-opens-new-carrollton-location/1033830
+Title: Modern Auto and Truck Parts opens Carrollton location at former Rite Aid
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 14:46:05
+
+Modern Auto opens new Carrollton location Move to former Rite Aid building allows expanded inventory, improved service Brendon Rogerson operates a forklift while moving inventory into Modern Auto and Truck Parts’ new Carrollton location in the former Rite Aid building ahead of its May 1 opening. Thomas Clapper Thomas Clapper Thomas Clapper FPS Staff Writer Published May 4, 2026 - 10:46 a.m. AD Modern Auto and Truck Parts opened its new, larger location in Carrollton May 1, bringing expanded inventory, improved efficiency and a more modern shopping experience while continuing a decades-long tradition of serving the community. The business is now located in the former Rite Aid building at 340 W. Main St., Carrollton. AD Manager Brendon Rogerson said the move was driven largely by the need for space to meet the demands of today’s auto parts industry. Shelves inside Modern Auto and Truck Parts’ new Carrollton location are shown prior to opening, with expanded space that will be stocked with a wider selection of tools, equipment and inventory. Thomas Clapper “Mostly, a modern-day parts store requires larger inventory levels, and the extra space in the new location will allow us to expand our inventory to better serve the community,” Rogerson said. “Additionally, more space for parking and a more well laid out storefront benefits both employees and customers by helping make our operation more efficient.” The business, a NAPA Auto Parts store, had operated for more than 60 years at its previous location, formerly known as Carson’s Auto Parts. That site has now been sold, and the business has fully transitioned to the new building. “We are not keeping the old building,” Rogerson said. “The old properties have been sold to local individuals that will operate their respective businesses out of them.” The new location offers several upgrades, including a larger showroom, expanded office space and improved parking and access, particularly for customers with larger trucks and tr
+
+--- Article 386 ---
+URL: https://www.aol.com/news/unique-location-helps-keep-clovis-204403629.html
+Title: How this unique location helps keep Clovis burger joint cooking after 20+ years
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 14:33:29
+
+Bryant-Jon Anteola Mon, April 27, 2026 at 8:44 PM UTC 0 Just beyond the acres of farmland on Fresno State’s campus and to the north of Highway 168, a Fresno-area restaurant operates seemingly out of place. After all, the typical path for a restaurant is to be located within a larger development like a shopping center or in a high-traffic area with good visibility. Not isolated blocks from other commercial and retail establishments. Yet the Clovis Colorado Grill restaurant has thrived in solitude for 21 years and counting. “It’s kind of become a local destination for a good burger,” said Hossein Nekumanesh, who heads the Colorado Grill operations these days and is the son of the restaurant founder Ali Nekumanesh. Despite its odd location on 0.35 acres of triangular-shaped land at the southeast corner of Barstow and Willow avenues, the Clovis Colorado Grill isn’t exactly a hidden gem. Its parking lot often is packed, with customers regularly coming in and out of the restaurant since it opened in 2005. Colorado Grill's location at Willow and Barstow avenues is uniquely isolated, caught between a freeway, orchards and an apartment complex with no other businesses around. Photographed Friday, April 24, 2026 in Clovis. (ERIC PAUL ZAMORA/ezamora@fresnobee.com) But even Ali Nekumanesh had initial reservations. “At first, I wasn’t too high on the location,” Nekumanesh said. “When we bought the land, the building there wasn’t really even a building. It was a skeleton. The boards were up. Nothing else was done. The person who had it (previously) wanted to do a convenience store. “My wife (Debbie), though, she was high on the spot. It was at the corner of a traffic light. Close to Fresno State, and Fresno State’s (campus) wasn’t going anywhere. And there was no way other businesses could come around and hide our restaurant. It became a great spot.” Colorado Grill's location at Willow and Barstow avenues, center, is uniquely isolated, caught between a freeway, orchards and an ap
+
+--- Article 387 ---
+URL: https://www.greenbaypressgazette.com/story/money/2026/05/04/green-bay-business-openings-closures-and-incoming-projects/89872794007/
+Title: 5 Green Bay-area businesses opened or closed in April
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 14:21:00
+
+MONEY 5 Green Bay-area businesses opened or closed in April Ariel Perez Green Bay Press-Gazette Updated May 4, 2026, 9:21 a.m. CT Business activity continues all over Brown County with openings, closures and new projects in the works. Openings across the area include a store, a restaurant and a baseball and softball training facility. While closures include a coffeehouse and a cheese store. Three new business openings in the Green Bay area Homegrown Farmstand , 377 Main Ave., Suite B, De Pere, opened April 4. This is a local store that offers farm-to-table products from farms all over Wisconsin. Gyro Guyz , 1981 E. Mason St., Suite 105, Green Bay, opened on April 4. It's a Mediterranean-style food restaurant. D-BAT Baseball and Softball Academy , 3525 Layden Drive, in Ashwaubenon, opened April 20. It's a baseball and softball training facility.
+
+--- Article 388 ---
+URL: https://www.witneygazette.co.uk/news/26076535.historic-oxfordshire-pub-back-dead-years-closure/
+Title: Historic riverside pub back from the dead years after closing
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-04 14:04:00
+
+Oxfordshire pub back from the dead years after closure Pubs Leisure Pubs and bars Witney By 
+            Edward Burnett Reporter Share 0 Comments The Black Prince in Woodstock (Image: Andy Ffrench, Newsquest) This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
+        and has been written by our American colleagues.
+        It does not necessarily reflect the view of The Herald. A riverside pub in Oxfordshire is returning from the dead, three years after its permanent closure. The Black Prince in Manor Road in Woodstock dates back to the 16th century. Sitting opposite the grounds of Blenheim Palace on the banks of the River Glyme, the spot has always boasted a stunning riverside garden. The watering hole shut in June of 2023, after the business was sold with the new owners closing the pub for the "foreseeable future". READ MORE: Five best pubs in Cotswolds revealed including celebrity hotspot The Black Prince pub in 2026. (Image: Newsquest) An announcement from The Black Prince at the time said it believed it would reopen again at some point in the future, but this was not a certainty. "We are all very shocked and saddened that our journey together must come to an end, and would like to say thank you to everyone who has ever been in to visit us," said a pub spokesperson three years ago. "It’s the community that made us as popular as we are, and we share the sadness of the community in this news. "If we have given you great food, great service and made you feel welcomed, then we have done our jobs. We were never just a pub. We were a home to many people. "To all our customers, with two legs or four, we can only say you have all been wonderful and have given us many happy memories. READ MORE: Oxfordshire town on edge of Cotswolds named among best in UK Inside The Black Prince, when it was previously open. "You will be missed beyond measure. We hope to see as many of you as possible before the doors close, the chairs 
+
+--- Article 389 ---
+URL: https://www.aol.com/entertainment/worlds-busiest-trader-joes-closing-111300322.html
+Title: 'World's busiest' Trader Joe's is closing for months
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 14:01:43
+
+Natalie Nguyen Mon, May 4, 2026 at 2:01 PM UTC 0 Trader Joe's on the Upper West Side (72nd and Broadway) will close temporarily for renovations starting May 17 -Credit:(Photo by Gary Hershorn/Getty Images) (Photo by Gary Hershorn/Getty Images) One of the most popular Trader Joe's locations in New York City is closing, but just temporarily. On May 17, the Trader Joe's on the Upper West Side of Manhattan at 72nd and Broadway is closing for renovations. To alleviate dismay from local customers, a sign placed outside the Trader Joe's reads, "We will be temporarily shutting our doors. We promise not to be gone too long & will reopen as soon as we can!" Dubbed "hands down the busiest Trader Joe's in the world" by the grocery chain , this store has triple the number of checkout stands and employees compared to most other Trader Joe's locations across the country . • Ticket prices may increase as Spirit Airlines shutdown signals 'end of budget travel' • The best Mother’s Day gifts for every kind of mom on your list—shop now Understandably, local shoppers are disappointed, although not completely taken by surprise. According to the West Side Rag , rumors had been floating around surrounding potential renovations since September 2025. The publication reported that it had received emails from customers who claimed that the Trader Joe's staff on 72nd and Broadway had been warning shoppers to brace for a brief store closure in the future. Advertisement Along with these forewarnings, the West Side Rag also received direct details about the store's temporary closure in an email on Thursday, which was sent by Nakia Rohde, spokesperson for Trader Joe's. Per the message, the shutdown could last for "several months." "We will be updating a lot, including refrigerations and vertical transportation," Rohde shared with the publication. "All the changes are to improve the in-store experience for our customers and Crew." The spokesperson further added that "some of [shoppers'] favorite Cre
+
+--- Article 390 ---
+URL: https://patch.com/virginia/reston/davio-s-open-outdoor-plaza-bar-reston-row
+Title: Davios To Open Outdoor Plaza Bar At Reston Row
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 13:55:39
+
+Business & Tech Davio’s To Open Outdoor Plaza Bar At Reston Row The Reston Row restaurant said the new outdoor bar and dining area is scheduled to open across from JW Marriott Reston Station. Michael O'Connell , Patch Staff Posted Mon, May  4, 2026 at 9:55 am ET | Updated Mon, May  4, 2026 at 10:26 am ET The Reston Row restaurant said the new outdoor bar and dining area is scheduled to open across from JW Marriott Reston Station. (Davio's) RESTON, VA — Davio’s Northern Italian Steakhouse in Reston Row said it will open Davio’s Plaza Bar, a new outdoor bar and dining area, on Thursday in Reston. The restaurant said the space will be located across from the JW Marriott Reston Station and will offer an open-air option for guests at the development. The Plaza Bar will include handcrafted cocktails, seasonal menu items, premium wines and a selection of Davio’s signature dishes, according to a press release. The restaurant also said the outdoor space will have lounge and patio seating overlooking Comstock’s plaza. “We’re excited to introduce Davio’s Plaza Bar as an extension of our restaurant and as a destination in its own right,” Steve DiFillippo, chef and owner of Davio’s, said in the release. “With the volume of activity at Reston Station, this concept allows us to meet guests where they are — outside, social and looking for a great experience.” Find out what's happening in Reston for free with the latest updates from Patch. The Plaza Bar will have seating for 76 guests, including 16 seats at the bar, according to the release. The space will include six TVs and a dedicated outdoor bar. Davio’s said the opening expands its presence in Reston beyond its indoor dining room. The restaurant said the Plaza Bar will be open Monday through Sunday beginning May 7. Find out what's happening in Reston for free with the latest updates from Patch. Also See ... 2 Reston Restaurants Named 2026 RAMMY Awards Finalists Pop Salad, El Diez Mexican Bowls Coming Soon To Wonder In Reston Ar
+
+--- Article 391 ---
+URL: https://abc7chicago.com/post/chicago-community-leaders-speak-ahead-chatham-walgreens-pharmacy-store-closure-month/19034714/
+Title: Walgreens 86th and Cottage Grove: Leaders speak out ahead of Chatham, Chicago Walgreens pharmacy closing
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-04 13:46:58
+
+Walgreens 86th and Cottage Grove: Leaders speak out ahead of Chatham, Chicago Walgreens pharmacy closing - ABC7 Chicago walgreens Community leaders speak out ahead of Chatham Walgreens store closure next month By Jasmine Minor and Sarah Schulte Monday, May 4, 2026 11:14PM CHICAGO (WLS) -- Six Walgreens have closed on the city's South Side during the past year. One alderman calls it pharmaceutical genocide. ABC7 Chicago is now streaming 24/7. Click here to watch Walgreens says one location in Chatham is closing on June 4 because of high levels of theft and violent incidents. This is the same area where a Target store recently shut down. Enduring two kidney transplants and diabetes, Terrell Gardner takes about 14 pills a day to keep his immune system suppressed. The 69-year-old says the closure of his closest Walgreens will force him to drive several miles away to get his medicine. "Now, I've got to find another way. I've got to possibly go west to Cicero, and I'm living all the way here on the East Side," Gardner said. Patricia Shell does not have an option for another Walgreens. She uses an electric wheelchair for her once-a-month pick up for prescriptions. Shell does not drive. "This is convenient for me. I just live down the street here in the senior building, and I don't know what we're going to do. I guess I have to go strictly with my mail order people," Shell said. The Walgreens location at 86th and South Cottage Grove is the latest to announce closure. An East 71st location is slated to close May 19. Four other South Side locations have shut down over the past year in Bronzeville, Little Village, South Shore, and South Chicago neighborhoods "I've got to go to 87th and Stony Island. I mean, how do you close down all the Walgreens in this community?" said Walgreens customer Ronald Roach. Three South Side aldermen led the way inside the store on Monday to protest the June 4 closing of the Chatham location. "Walgreens should be charged with first degree corporate
+
+--- Article 392 ---
+URL: https://www.ibtimes.com.au/starbucks-open-easter-sunday-2026-most-us-locations-serving-coffee-varying-hours-1865460
+Title: Is Starbucks Open on Easter Sunday 2026? Most US Locations Serving Coffee with Varying Hours
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-04 13:37:00
+
+SEATTLE — Starbucks stores across the United States will largely remain open on Easter Sunday, April 5, 2026, offering customers their favorite lattes, Frappuccinos and pastries despite the religious holiday. The coffee giant does not observe a uniform nationwide closure for Easter, unlike some retailers that shut down completely. Instead, hours vary by location based on local demand, staffing and business needs, a pattern consistent with Starbucks' approach to most holidays. A Starbucks representative confirmed to multiple news outlets that "coffeehouse hours vary by location and they may occasionally adjust their hours based on business and customer needs." The company strongly recommends that customers check specific store details using the Starbucks app or the official store locator on Starbucks.com before heading out. Easter 2026 falls on Sunday, April 5, marking the celebration of the resurrection of Jesus Christ for Christians. While many families attend church services, host brunches or participate in egg hunts, others seek their daily caffeine fix or a quick meeting spot. Starbucks positions itself as a convenient option for those on the go. Most locations are expected to operate with regular or slightly reduced Sunday hours, often opening around 6 a.m. or 7 a.m. and closing by 7 p.m. to 9 p.m., though some may open later or close earlier. Airport, mall and high-traffic urban stores tend to maintain more consistent availability, while standalone neighborhood cafes might adjust based on anticipated foot traffic. In previous years, including Easter observances in 2025 and earlier, the majority of U.S. Starbucks locations stayed open, providing continuity for loyal customers. This year's outlook mirrors that trend, with reports from USA Today, TODAY.com and other outlets confirming that Starbucks ranks among restaurants likely to welcome patrons on the holiday. For comparison, several other chains follow different patterns. Chipotle is closing all locations on
+
+--- Article 393 ---
+URL: https://baltimorefishbowl.com/stories/the-natural-market-in-timonium-to-close-after-nearly-four-decades/
+Title: The Natural Market in Timonium to close after nearly four decades
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-04 13:30:00
+
+Timonium health food store and juice bar The Natural Market has reached its natural end after 38 years in business. Owner Steve Schwarz announced Sunday on Facebook that he “has made the difficult decision to close the store and begin a new chapter.” “This was not an easy choice, as The Natural has been more than just a business—it has been a place of connection, wellness, and shared values for generations of customers,” Schwarz wrote. “We are deeply grateful for your loyalty, trust, and support over nearly four decades,” he added. “Many of you have been with us since the beginning, and it has truly been an honor to be part of your health and wellness journey.” Schwarz first opened The Natural Market in 1987 on Cranbrook Road. The business moved in 2003 to the Timonium Square shopping center, and in 2017 moved again to its current location at 65 W. Timonium Road. The Natural Market sells items like incense, essential oils, bath and body care products, protein powders, collagen, healthy bars and snacks, make-your-own peanut butter, local honey, and teas. It also sells soups made in-house and vegetarian sandwiches, juices and smoothies made to order. Artwork by local artists is displayed in the dining area at The Natural Market. Photo courtesy The Natural Market. Artwork by local artists are displayed in exhibits in business’s dining area, with most art available to purchase. The business will be open through early to mid-August, The Natural Market general manager Katie Joy said in response to a commenter on Schwarz’s Facebook post. The Natural Market will hold a going-out-of-business sale starting Monday at 9:30 a.m. with “significantly reduced prices.” The business will also be selling its equipment, furniture, and fixtures. The sale excludes all juice bar, Sunneen, Zeke’s Coffee, Hex Kombucha, and Sea moss products as well as any previously purchased items. Natural Market’s juice bar will be open Monday through Saturday, preparing juices, smoothies, and powerhouses
+
+--- Article 394 ---
+URL: https://365retail.co.uk/pureseoul-to-open-first-south-west-store-in-bath/
+Title: PURESEOUL To Open First South West Store In Bath
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 13:27:53
+
+Home News Health and Beauty PURESEOUL To Open First South West Store In Bath Facebook Twitter WhatsApp Linkedin ReddIt Email Copy URL PURESEOUL is to open its 16th UK store at SouthGate Bath, marking the Korean beauty retailer’s first location in the South West. The new store forms part of the brand’s wider 2026 expansion programme and will offer more than 1,000 Korean skincare, makeup and haircare products. PURESEOUL works directly with more than 60 brands, including Torriden , RealBarrier and Sungboon. The signing has been announced by British Land , which manages SouthGate Bath as part of its asset, development and property management remit. The retail-led destination is continuing to expand its beauty offer, with SpaceNK also set to open at the scheme. “PURESEOUL is an exciting brand that will bring something truly distinctive to Bath’s retail landscape. K-Beauty has huge momentum with UK consumers, and PURESEOUL’s highly sought-after product ranges and strong brand following make it a fantastic addition to SouthGate. With the upcoming arrival of SpaceNK, we’re continuing to evolve the destination with brands that reflect today’s customer expectations and desires, creating a complete experience unique within the region.” Laurence Budden, Senior Asset Manager, British Land “Bath is a key part of our 2026 expansion. As a globally visited city with a deep-rooted connection to wellbeing, it felt like the perfect place to bring K-beauty closer to the South West. It’s also one of the few cities where physical retail still feels genuinely exciting and brings us closer to doubling our store count this year.” Leslie Tang, CEO and Co-Founder, PURESEOUL The move follows continued growth in demand for K-Beauty in the UK. An opening date for PURESEOUL’s Bath store has not yet been confirmed. Receive sector news and insights by subscribing to the FREE 365 Retail newsletter via this link . Entries are open for the Creative Retail Awards, featuring more than 20 categories acros
+
+--- Article 395 ---
+URL: https://buildingsaltlake.com/notoriously-secretive-trader-joes-confirms-plans-for-new-store-near-daybreak/
+Title: Notoriously secretive Trader Joe’s confirms plans for new store near Daybreak
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 13:15:14
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://buildingsaltlake.com/notoriously-secretive-trader-joes-confirms-plans-for-new-store-near-daybreak/]
+
+--- Article 396 ---
+URL: https://www.oxfordmail.co.uk/news/26076335.new-lego-store-open-oxford-westgate-week/
+Title: New Lego store opens this week at Oxford Westgate shopping centre
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 13:00:00
+
+New Lego store to open at Oxford Westgate this week LEGO Oxford Westgate Leisure Shopping Oxford By 
+            Edward Burnett Reporter Share 0 Comments Inside a Lego store. (Image: Lego) This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
+        and has been written by our American colleagues.
+        It does not necessarily reflect the view of The Herald. A new Lego toy store will open this week at the Oxford Westgate shopping centre. Joining the ranks of Primark, TK Maxx, John Lewis and more, the toy shop is the latest addition to the city centre retail spot. A spokeswoman for the Westgate previously confirmed the shop would be opening in "early May". Then in February, hoardings started to appear, covering the empty ground-floor unit, which Lego is moving into. READ MORE: Oxfordshire town on edge of Cotswolds named among best in UK In an update last month, the official opening day date was confirmed to be this Thursday (May 7). The hoardings outside feature the brand's logo as well as iconic Oxford sights made in brick form, including rowers and Oxford University's Radcliffe Camera. It will be Oxfordshire's first Lego store despite selling products inside shops such as Toys R Us and supermarkets. Lego has stores in Reading, Milton Keynes, Bristol and London. READ MORE: Spice Girls reunite on stage for surprise gig after seven years Shweta Munshi, vice president of marketing at the Lego Group, said earlier: “We have found the perfect site at Westgate Oxford. "The new store will allow builders of all ages to be inspired by the endless play opportunities Lego building has to offer. "This store will be a top destination for product launches and events, while acting as a hub for our Lego community and new builders alike.” The Westgate unit was formerly a temporary Christmas decorations and gift shop in the past. Standing empty ever since, the unit is next to one of the entrances and exits to the shopping centre on 
+
+--- Article 397 ---
+URL: https://mocoshow.com/2026/05/04/fried-chicken-famous-gas-station-opens-second-montgomery-county-location/
+Title: Update: Royal Farms Delays Opening of Second Montgomery County Location
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 12:56:30
+
+Update: Royal Farms’ has confirmed that its new Silver Spring location is now scheduled to open on June 1. The chain had originally announced a May 4 opening date. Screenshot Royal Farms is bringing its signature fried chicken, made-to-order food, and 24/7 convenience to Silver Spring. The upcoming store, which will be located at 9475 Georgia Avenue, will feature eight fuel dispensers and the brand’s full lineup of fresh, made-to-order options, including its well-known fried chicken, breakfast items, and sandwiches. Like other Royal Farms locations, it will operate 24/7. In April, the chain announced, “Royal Farms, the nationally acclaimed convenience store and gas station chain known for its World-Famous Chicken, freshly brewed coffee, and made-to-order meals, is excited to announce the grand opening of its newest location Silver Spring, Maryland on May 4, 2026 .” This marks the second Royal Farms location in Montgomery County, joining the Gaithersburg store that opened in 2022. Plans have also been submitted for a potential third location at 397 Watkins Mill Road in Gaithersburg, which would be located just over a mile from the existing store. In 2024, Royal Farms was named “Best Gas Station for Food” by USA Today’s 10Best Awards . According to the article, “Royal Farms offers a breakfast menu that’s available any time of the day or night. That’s in addition to other hot food menu items, including sandwiches, burgers, hot dogs, and their popular fried chicken. The stores also sell a wide variety of packaged snacks along with fountain and bottled beverages. Some locations even feature a Blending Bar, where you can craft a milkshake.” Author Patrick Herron
+
+--- Article 398 ---
+URL: https://www.insidenova.com/news/business/after-fire-shut-down-business-silver-branch-brewing-launches-summer-pop-up-in-warrenton/article_f90be960-3341-5661-8a80-7a81ff2837d9.html
+Title: After fire shut down business, Silver Branch Brewing launches summer pop-up in Warrenton
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 12:56:00
+
+Facebook Twitter WhatsApp SMS Email Buy Now Silver Branch Brewing Company, which opened in town in fall 2023 at the former Wort Hog Brewing location, broke out the kegs for the Warrenton Fall Festival. Grace Schumacher | FauquierNow Facebook Twitter WhatsApp SMS Email Print Copy article link Save Facebook Twitter WhatsApp SMS Email Print Copy article link Save Almost a year and a half after a fire forced Silver Branch Brewing to close its Warrenton location in December 2024, the brewery is welcoming customers back for a 10-week summer pop-up. Christian Layke, co-founder and CEO of Silver Branch, told FauquierNow he’s excited to get back up and running in Warrenton, even in a limited capacity. “It’s just been way too long since we’ve had a chance to be present,” Layke said in a Friday phone call. “We’ve done a couple of things like First Fridays and such, but we’ve just been excited to be able to get back in the community.” While Layke recognizes the pop-up on the brewery's patio isn’t quite as exciting as a full reopening, he hopes it can stir up some of the same feelings. “Hopefully it’s a way of getting close enough that the magic that was Silver Branch is back in some form,” Layke said. The summer pop-up will operate as close to normal as the business has managed since the fire, with Silver Branch beer on tap and food trucks or vendors coming by each weekend. Layke added that having patrons inside will make the experience “pretty close” to how it was before the fire. While the summer shop is a short-term way to get back in business in Warrenton, the brewery and restaurant remains focused on figuring out a long-term reopening plan. Among the final hurdles is pinning down plans to reinstall the kitchen, the lack of which necessitated food trucks and vendors for the summer pop-up. Fire damage to the interior of the building and kitchen in Warrenton Station shown in a photograph shared on Jan. 17, 2025. Facebook | Silver Branch Warrenton Station Layke said the compan
+
+--- Article 399 ---
+URL: https://www.franchising.com/amp/news/20260504_fantasy_claw_arcade_opens_at_area15_on_may_7_marking_fifth_store_as_experie.html
+Title: Fantasy Claw Arcade Opens at AREA15 on May 7, Marking Fifth Store as Experiential Entertainment Brand Gains Momentum
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 12:51:15
+
+﻿ Fantasy Claw Arcade Opens at AREA15 on May 7, Marking Fifth Store as Experiential Entertainment Brand Gains Momentum ﻿ Articles News Rankings Franchises Multi-Unit Resources International Magazines Conferences Newsletters About Advertise Follow Us On: Fantasy Claw Arcade Opens at AREA15 on May 7, Marking Fifth Store as Experiential Entertainment Brand Gains Momentum Fantasy Claw Arcade Published: May 4th, 2026 Las Vegas-born concept enters one of the city's most high-profile immersive destinations as it expands its footprint and franchise platform. LAS VEGAS, May 4, 2026 // PRNewswire // -- Fantasy Claw Arcade will open its newest Las Vegas location at AREA15 on May 7, marking the company's fifth operating store and placing the fast-growing brand inside one of the most recognizable immersive entertainment destinations in the country. AREA15 describes itself as the world's first purpose-built immersive entertainment district, just minutes from the Las Vegas Strip, and says it has welcomed more than 15 million visitors to date. Located on the first floor past Omega Mart, the new, more than 2,500-square-foot Fantasy Claw Arcade location places the brand inside a venue designed to generate both discovery and repeat visits. AREA15 reports an audience mix of 70% tourists and 30% locals, 33% repeat visitation, more than 350,000 daily drive-bys along Interstate 15, and an average guest dwell time of 125 minutes, along with more than 100 million annual social media impressions and more than 500 million earned media impressions per year. The opening is more than a new location. It is a signal that Fantasy Claw Arcade is finding traction where experiential retail works best: in visually distinctive destinations that attract both tourists and locals, reward repeat visits, and generate strong social sharing. AREA15's own materials position the district as a 40-acre entertainment and retail environment with 400,000+ square feet of experiential retail and major built-in visibili
+
+--- Article 400 ---
+URL: https://catcountry1073.com/reasons-to-miss-spirit-airlines/
+Title: Spirit Airlines Shutting Down Sucks For Me: Here's 10 Reasons Why
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-04 12:46:58
+
+10 Things I’ll Honestly Miss About Spirit Airlines Joe Kelly Joe Kelly Published: May 4, 2026 Photo by Joe Raedle/Getty Images Share on Facebook Share on Twitter For the last 25 years I've flown to Florida on Spirit Airlines. I've flown to Fort Lauderdale, Fort Myers, and Orlando on many occasions. Spirit Airlines going out of business won't ruin my life - but, it's not going to make it any easier. READ MORE: Child Struck By Car at Northfield NJ Park READ MORE: New Mexican Restaurant Opens in Somers Point NJ Get our free mobile app Photo by Joe Raedle/Getty Images Photo by Joe Raedle/Getty Images loading... I Loved Flying Spirit Airlines While others knocked Spirit and complained, I have always had little bad to say about the airlines. I've always said, if you go in knowing what to expect, you aren't in danger of having your expectations blown. Sure, Spirit charged for every part of the flight experience: seats, bags, in-flight food. If you knew that going in, you were OK with it. At least I was. READ MORE: Public Attempt to Buy Spirit Airlines Photo by Joe Raedle/Getty Images Photo by Joe Raedle/Getty Images loading... 10 Things I'll Miss About Spirit Airlines 1. The Convenience. I live maybe ten minutes from Atlantic City International Airport.  A quick ride there and back. Security was never long, and, if I was just taking carry-on bags, I could literally breeze in and out of the airport.  The airport is small, so there's no really navigation or "finding my gate" required. 2. The Parking. I've been around long enough to remember the airport before the parking garage - and really before the nice parking lot that they have there now. You just kind of pulled in and parked. Sure, it's better now. Parking is so easy, and, honestly, for airport parking, it's not that expensive. 3. The Kindness of the People Who Worked For Spirit. I believe Spirit Airlines always had good people working for the company. I never had a bad word to say about anyone, from the gate agents, t

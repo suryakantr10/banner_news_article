@@ -1,0 +1,151 @@
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• For Published Date → copy exactly the value from the "Published:" line in the article metadata
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+
+--- Article 421 ---
+URL: https://www.comingsoon.net/movies/news/2127619-x-2-alan-cumming-close-to-costars-trauma-bond?amp
+Title: X2 Actor Still Close With Costars 2 Decades After Being ‘Bonded in Trauma’
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 07:04:57
+
+Evil Dead Burn Trailer Sees a Demonic Family Reunite Warner Bros. has officially unveiled the first Evil Dead Burn trailer, previewing a Deadite family reunion terrorizing a group of people as… Movies 52 minutes ago
+
+--- Article 422 ---
+URL: https://www.gbtribune.com/news/local-news/jcpenney-closing-after-90-years-in-great-bend/
+Title: JCPenney closing after 90+ years in Great Bend
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-04 07:00:00
+
+The JC Penney store at 1500 Kansas Ave. in Great Bend is on the list of 138 stores that J.C. Penney Company Inc. will close in the coming months. - photo by Susan Thacker/Great Bend Tribune Great Bend will soon lose its JCPenney department store at 1500 Kansas Ave. Last month, J.C. Penney Company Inc. announced plans to close 130-140 stores over the next few months, along with two distribution facilities. On Friday, the list of stores to close was released, and the Great Bend store was on it. Most stores will begin liquidation sales on April 17 and close in June. Four other Kansas stores are on the list: in the Hutchinson Mall, Chanute Square shopping center, the Winfield Plaza and a freestanding store in Lawrence. Shortly after the retailer’s corporate headquarters in Plano, Texas, made the announcement Friday, Yvonne Zink received a call from her daughter in Texas. Zink worked at the JCPenney store in Great Bend for 10 years before retiring in 2016. “I was really kind of surprised,” Zink said. “It’s the only department store in town, other than Wal-Mart. We have a lot of loyal customers.” She was also surprised because the heating and cooling system in the building had been upgraded in the past year or two. Customers enjoy having another shopping option here in town, but the store has also been popular with online shoppers who can pick up their JCPenney orders in Great Bend and avoid shipping charges, she noted. Employees at the store declined to comment, referring all questions to corporate headquarters. Over 90 years JCPenney opened one of its first stores in Kansas in downtown Great Bend on Aug. 25, 1923. The store remained at that location for 43 years until it relocated to 1500 Kansas Ave., with its grand opening held on Nov. 16, 1966. Marvin R. Ellison, chairman and chief executive officer of J.C. Penney, said the decision to close stores will allow the company to allocate capital more efficiently. “We understand that closing stores will impact the lives of 
+
+--- Article 423 ---
+URL: https://www.msn.com/en-us/travel/tripideas/braxton-berrios-bethenny-frankel-and-more-stars-hit-gaia-miami-s-opening/ar-AA222mjy?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Braxton Berrios, Bethenny Frankel and more stars hit Gaia Miami’s opening
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 05:39:02
+
+MSN
+
+--- Article 424 ---
+URL: https://thesunpapers.com/2026/05/04/deptford-town-center-stores-set-to-open-this-summer/
+Title: Three More Deptford Town Center Stores Anticipate Summer 2026 Openings
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 05:19:04
+
+Home News • Gloucester County News Three More Deptford Town Center Stores Anticipate Summer 2026 Openings Written by: Suzette Parmley Published: May 4, 2026 Email Facebook X WhatsApp LinkedIn Telegram Reddit First Watch, Nordstrom Rack, and Blinds To Go are set to open late summer as the next wave of stores to front a rejuvenated Deptford Town Center. - Advertisement - The final pair of additions, Aspen Dental and Chase Bank, will follow a bit later. Aspen Dental is set for a fall 2026 opening, while Chase Bank is set to debut in January 2027. Deptford Mayor Paul Medany and his Economic Development Director, Donald Banks, confirmed the timeline of openings. “[This] is just part of the economic development success in Deptford Township,” Medany said last week. “We’re as excited as everybody about these stores opening up. “Nordstrom Rack has been getting so many inquiries as to when they’re coming. …First Watch, same thing,” added Medany. “When that whole complex is done, what a fantastic addition to the Township [it will be].” From right to left, breakfast/lunch restaurant First Watch, and retailers Nordstrom Rack and Blinds To Go, respectively, are going into the spaces currently under construction at Deptford Town Center. Medany said DTC’s diverse retail mix — including an already open Aldi and Tractor Supply Co. — is expected to generate additional traffic for Deptford Mall, which sits directly across the shopping center. “It will just bring in a whole new set of customers and new ideas to use the mall,” said the long-time Mayor. “The thing with Deptford shopping center is that there’s such a great variety. It’s got everything right in the same parking lot: There’s a restaurant [First Watch]; there’s a bank [Chase]; there’s a dentist’s office [Aspen Dental]. You can go buy fertilizer and food for your horses [Tractor Supply Co.] “You can go to Aldi and get your groceries, and to Nordstrom Rack and buy new clothes,” said Medany. “It’s one-stop shopping for everythin
+
+--- Article 425 ---
+URL: https://www.cheshire-live.co.uk/news/chester-cheshire-news/lidl-announces-23-cheshire-store-33849501
+Title: Lidl announces 23 Cheshire store target locations for 2026
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 05:00:00
+
+Lidl announces 23 Cheshire store target locations for 2026 - full list See if a new store could be opening where you live Comments News Ben Test Hurst-BM , Gary Porter Content Editor for Cheshire and Ben Hurst 06:00, 04 May 2026 Lidl has said it is looking to expand its chain across the uk and offering 'finders fees' (Image: Getty) Lidl has unveiled hundreds of target locations throughout Britain where it is looking to establish new stores - including 23 in Cheshire. All proposed locations are outlined in the retailer's newly published Site Requirements Brochure, released last week. ‌ The supermarket retailer is actively pursuing freehold, leasehold, or long-leasehold plots in high-profile areas boasting strong footfall and convenient access. Lidl announced it would offer a 'competitive finder's fee' to anyone who successfully pinpoints a previously unidentified site that ultimately results in a new store being built. ‌ Spanning locations the length and breadth of the country, the chain confirmed that each new outlet would create high-quality employment opportunities for local residents, with some of the most attractive benefits packages in the industry. Entry-level hourly wages stand at £13.45 nationally, rising to £14.45 with length of service, reports the Mirror. ‌ Richard Taylor, Chief Real Estate Officer at Lidl GB, said: "At Lidl GB, we currently have one of the most ambitious store opening programmes of any supermarket and we are more committed than ever to bringing our high quality and low priced products to even more communities across the country. All of our stores deliver more than just affordable products. Each one also brings quality jobs, opportunities for British suppliers to showcase the best of our home grown produce and support to local good causes in the communities each one serves. In uncertain times, shoppers and communities can count on us." At the beginning of this month, Lidl GB announced intentions to launch over 50 additional stores within 
+
+--- Article 426 ---
+URL: https://www.thesun.co.uk/money/38965991/supermarket-opening-times-early-may-bank-holiday-hours/
+Title: Are shops open today? Tesco, Co-op, Aldi and Sainsbury’s Early May Bank Holiday opening times revealed
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-04 05:00:00
+
+Click to share on Twitter (Opens in new window) Click to share on Facebook (Opens in new window) Comments THE Early May Bank Holiday is here, but some of us still need to stock up on supplies and grab some last-minute BBQ bargains. So here’s everything you need to know about supermarket opening times on the Early May Bank Holiday. Sign up for the Money newsletter Thank you! 7 Tesco’s hours vary depending on location on the Early May Bank Holiday Credit: Getty Tesco With around 3,000 branches across the nation, Tesco is the UK’s biggest supermarket chain. Advertisement Hours vary depending on location on the Early May Bank Holiday . The majority of large stores and large Express stores in England, Wales and Northern Ireland are open from 8am until 6pm today. Stores on the Isle of Man and in Scotland are trading longer hours of 7am to 10pm. read more on supermarkets BASKET CASE Supermarket giant extends Aldi's price match to 2,000 more stores from TODAY SALE AWAY Two supermarket chains where you can buy Claire’s jewellery - as ALL shops shut MAY BANK HOLIDAY OPENING TIMES LIVE – LATEST SHOP UPDATES There is no change to opening hours for standard Express stores. Shoppers are advised to check Tesco’s store locator to confirm their local branch’s hours: tesco.com/store-locator Sainsbury’s 7 Sainsbury’s hours can vary from location to location Credit: Alamy With roughly 1,400 locations, Sainsbury’s is Great Britain’s second-biggest supermarket chain. Advertisement Most read in Money SUN SAVERS Four creative ways to add character to your home with affordable art PROFIT HIT Blow to HSBC as banking giant misses first quarter profit forecasts BRAKE POINT Major UK car finance firm 'on brink of COLLAPSE' amid £9bn compensation scheme MARKS & SPENDER M&S reveals biggest EVER food store coming to ancient UK town this summer The vast majority of Sainsbury’s supermarkets are open from 8am until 8pm today. Convenience stores are open as usual from 7am to 11pm. Sainsbury’s warns ope
+
+--- Article 427 ---
+URL: https://www.myjoyonline.com/spirit-airlines-shutting-down-after-rescue-talks-collapse/
+Title: Spirit Airlines shutting down after rescue talks collapse
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-04 04:31:50
+
+Spirit Airlines shutting down after rescue talks collapse - MyJoyOnline Home News Arts and Culture Business Sports Opinion Research Live TV/Radio Media Elections Dark Mode Dark mode International Spirit Airlines shutting down after rescue talks collapse Source : BBC 4 May 2026 4:19am Audio By Carbonatix Spirit Airlines is shutting down after failing to secure a $500m (£368m) bailout from the Trump administration. The budget airline was in talks with the US government about a rescue deal that would have saved it from going out of business. But discussions collapsed, and the carrier said in an announcement on its website on Saturday that with "great disappointment" it had "started an orderly wind-down of our operations, effective immediately". That included cancelling all of its flights, stranding many passengers and workers. Spirit was emerging from its second bankruptcy filing in recent years before the US-Israel war in Iran, but the resulting surge in jet fuel costs pushed it over the brink. "All Spirit flights have been cancelled, and Spirit Guests should not go to the airport," the company said in its statement posted early Saturday morning. Passengers reported receiving messages about the cancellations, but some still arrived at the airport in the morning with their luggage. Spirit's customer service is no longer available. The airline said it would automatically process refunds for flights purchased through Spirit with a credit or debit card to the original form of payment, but a bankruptcy court will determine how to compensate those who booked flights using a voucher, credit or airline points. Those who used a travel agent should contact the agent, it said. It also said it could not reimburse guests for emergency hotel stays or replacement flights. In the statement, Spirit's CEO Dave Davis said: "In March 2026, we reached an agreement with our bondholders on a restructuring plan that would have allowed us to emerge as a go-forward business. "However, the sudd
+
+--- Article 428 ---
+URL: https://www.filmibeat.com/photo-gallery/gopichand-34-movie-opening-107200.html
+Title: Gopichand #34 Movie Opening
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 04:30:51
+
+
+
+--- Article 429 ---
+URL: https://www.birminghammail.co.uk/news/midlands-news/full-list-80-midland-areas-33846051
+Title: Full list of 80 Midland areas Lidl want to put a new store as 'finder's fee' offered
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 04:10:00
+
+Full list of 80 Midland areas Lidl want to put a new store as 'finder's fee' offered The supermarket chain is hoping to open hundreds of new stores in Britain Comments News Isabelle Bates Reporter 05:10, 04 May 2026 View Image Lidl Lidl has announced plans to open hundreds of new stores across Britain as part of a £600,000,000 investment. ‌ The supermarket is also offering a finder's fee to anyone who can help them discover a space for one of the new stores. ‌ It comes as a full list of ideal locations has been shared by the brand which include 80 in central England. ‌ The likes of Digbeth , Gornal, Codsall and Oldbury are all on the list as the company seeks 'freehold, leasehold, or long-leasehold sites in prominent locations with strong footfall and easy accessibility.' READ MORE: Driving licence change getting 'full rollout' across UK with drivers warned A spokesperson for Lidl added: "A competitive finder’s fee is available to anyone who successfully identifies a previously unknown site that leads to a developed store. ‌ "With locations up and down the country, each one will generate high quality jobs for local people with some of the most competitive benefits in the sector, with entry-level hourly rates of £13.45 nationally, increasing to £14.45 with length of service. "In London, hourly pay starts from £14.80, rising further to £15.30 with length of service." Richard Taylor, Chief Real Estate Officer at Lidl GB, added: "At Lidl GB, we currently have one of the most ambitious store opening programmes of any supermarket and we are more committed than ever to bringing our high quality and low priced products to even more communities across the country. ‌ “All of our stores deliver more than just affordable products. "Each one also brings quality jobs, opportunities for British suppliers to showcase the best of our home grown produce and support to local good causes in the communities each one serves. "In uncertain times, shoppers and communities can count on us.”
+
+--- Article 430 ---
+URL: https://www.msn.com/en-us/money/companies/macy-s-customers-have-5-days-to-claim-sales-before-first-of-14-stores-close/ar-AA21pld2?ocid=finance-verthp-feeds
+Title: Macy's customers have 5 days to claim sales before first of 14 stores close
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-04 03:45:57
+
+MSN
+
+--- Article 431 ---
+URL: https://www.costar.com/article/2097436598/cbre-and-meta-team-up-to-open-centers-to-train-ai-data-center-workers
+Title: CBRE and Meta team up to open training sites for AI data center workers
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 02:21:59
+
+CBRE and Meta team up to open training sites for AI data center workers Industry faces scarcity of skilled technicians for latest systems A data center IT technician checks fiber optic cables with a visual fault locator. This is one of the roles Meta seeks to fill as part of its U.S. data center expansion. (Getty Images) By Candace Carlisle CoStar News May 4, 2026 | 2:20 AM RELATED ARTICLES Los Angeles 'mansion tax' delivers first affordable housing project Wireless network infrastructure firm expands in North Texas Fiera backs TCU Development on 21-storey rental project in Ottawa’s east end This $1 billion Texas coastal resort seeks development partners Elevator makers seek lift in US market through merger agreement The rapid growth of data centers fueled by demand for artificial intelligence has created a shortage of skilled workers. Now the world's largest commercial property services provider is joining other firms in seeking a simple solution to a complex-technology hiring problem. CBRE and Facebook parent Meta plan to create multiple U.S. training centers expected to teach thousands of technicians skilled trades to build and maintain the latest data centers. The first two training sites are set to open this summer near airports in Ohio and Indianapolis, CBRE officials told CoStar News. Meta has 28 U.S. data centers under construction or running and is spending billions of dollars to build out its support systems. Meta Public Policy Manager Kate Ross told CoStar News the industry faces a shortage she estimates of almost 350,000 trained technicians to produce and maintain complex systems used in these digital hubs. "We need people to support this physical infrastructure," said Ross. "To lay the fiber, develop it and ensure if something breaks, they are able to fix it quickly." CBRE isn't the only real estate services provider addressing the talent crunch tied to building and maintaining data centers and other real estate. Rival JLL is also seeking to recruit a d
+
+--- Article 432 ---
+URL: https://www.msn.com/en-us/money/companies/apple-store-union-workers-at-closing-location-accuse-company-of-retaliation/ar-AA21QBNO?ocid=finance-verthp-feeds
+Title: Apple Store union workers at closing location accuse company of retaliation
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-04 00:21:44
+
+MSN
+
+--- Article 433 ---
+URL: https://www.msn.com/en-us/foodanddrink/foodnews/quiktrip-gen-4-store-opens-in-joplin/ar-AA226Nm9
+Title: QuikTrip 'Gen 4' store opens in Joplin
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-03 23:51:13
+
+MSN
+
+--- Article 434 ---
+URL: https://djsaviation.net/heres-why-spirit-airlines-shut-down/
+Title: Here’s Why Spirit Airlines Shut Down
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-03 23:43:10
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://djsaviation.net/heres-why-spirit-airlines-shut-down/]

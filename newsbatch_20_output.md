@@ -1,0 +1,37 @@
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| IKEA | Memphis | Closing | Not specified | store closure announcement | IKEA customers are shocked at the store closure announcement in Memphis. | https://www.msn.com/en-us/money/companies/ikea-customers-shocked-at-store-closure-announcement-in-memphis/ar-AA1WjPui?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1 | 2026-05-04 15:34:01 |
+| No qualifying business found | N/A | N/A | N/A | N/A | N/A | https://www.syracuse.com/business/2026/05/salt-city-coffees-newest-onondaga-county-location-is-open.html | 2026-05-04 15:32:00 |
+| No qualifying business found | N/A | N/A | N/A | N/A | N/A | https://www.pennlive.com/life/2026/05/popular-mall-store-to-close-150-locations.html?outputType=amp | 2026-05-04 15:24:00 |
+| Schnucks Fresh | Jasper, Indiana | Closing | May 24 | closing | Schnucks will close its Schnucks Fresh location in Jasper on May 24. The store opened in summer 2021 but has not generated the business needed to stay open. | https://www.grocerydive.com/news/schnucks-closing-fresh-store-jasper-indiana/819142/ | 2026-05-04 15:14:46 |
+| Modern Auto and Truck Parts | 340 W. Main St., Carrollton | Opening | May 1 | opened | Modern Auto and Truck Parts opened its new Carrollton location at the former Rite Aid building on May 1. The larger space allows expanded inventory and improved service. | https://www.yourohionews.com/carroll-county/modern-auto-opens-new-carrollton-location/1033830 | 2026-05-04 14:46:05 |
+| Clovis Colorado Grill | southeast corner of Barstow and Willow avenues, Clovis | Opening | Not specified | has thrived | Clovis Colorado Grill has operated for 21 years at its unique isolated location. The restaurant serves burgers and has become a local destination despite limited surrounding businesses. | https://www.aol.com/news/unique-location-helps-keep-clovis-204403629.html | 2026-05-04 14:33:29 |
+| Homegrown Farmstand | 377 Main Ave., Suite B, De Pere | Opening | April 4 | opened | Homegrown Farmstand opened April 4 offering farm-to-table products from Wisconsin farms. | https://www.greenbaypressgazette.com/story/money/2026/05/04/green-bay-business-openings-closures-and-incoming-projects/89872794007/ | 2026-05-04 14:21:00 |
+| Gyro Guyz | 1981 E. Mason St., Suite 105, Green Bay | Opening | April 4 | opened | Gyro Guyz opened April 4 as a Mediterranean-style food restaurant. | https://www.greenbaypressgazette.com/story/money/2026/05/04/green-bay-business-openings-closures-and-incoming-projects/89872794007/ | 2026-05-04 14:21:00 |
+| D-BAT Baseball and Softball Academy | 3525 Layden Drive, Ashwaubenon | Opening | April 20 | opened | D-BAT Baseball and Softball Academy opened April 20 as a training facility. | https://www.greenbaypressgazette.com/story/money/2026/05/04/green-bay-business-openings-closures-and-incoming-projects/89872794007/ | 2026-05-04 14:21:00 |
+| No qualifying business found | N/A | N/A | N/A | N/A | N/A | https://www.witneygazette.co.uk/news/26076535.historic-oxfordshire-pub-back-dead-years-closure/ | 2026-05-04 14:04:00 |
+| Trader Joe's | Upper West Side (72nd and Broadway), Manhattan | Closing | May 17 | closing temporarily | Trader Joe's on the Upper West Side at 72nd and Broadway will close temporarily for renovations starting May 17. The store is known as the world's busiest Trader Joe's. | https://www.aol.com/entertainment/worlds-busiest-trader-joes-closing-111300322.html | 2026-05-04 14:01:43 |
+| Davio’s Plaza Bar | Reston Row, across from JW Marriott Reston Station | Opening | May 7 | to open | Davio’s will open Davio’s Plaza Bar outdoor bar and dining area on May 7. The space offers handcrafted cocktails, seasonal items and signature dishes with seating for 76. | https://patch.com/virginia/reston/davio-s-open-outdoor-plaza-bar-reston-row | 2026-05-04 13:55:39 |
+| Walgreens | 86th and South Cottage Grove, Chatham, Chicago | Closing | June 4 | closing | Walgreens at 86th and South Cottage Grove will close on June 4 due to safety challenges. This is part of multiple South Side closures. | https://abc7chicago.com/post/chicago-community-leaders-speak-ahead-chatham-walgreens-pharmacy-store-closure-month/19034714/ | 2026-05-04 13:46:58 |
+| No qualifying business found | N/A | N/A | N/A | N/A | N/A | https://www.ibtimes.com.au/starbucks-open-easter-sunday-2026-most-us-locations-serving-coffee-varying-hours-1865460 | 2026-05-04 13:37:00 |
+| The Natural Market | 65 W. Timonium Road, Timonium | Closing | early to mid-August | to close | The Natural Market will close after 38 years in early to mid-August. A going-out-of-business sale starts Monday with reduced prices. | https://baltimorefishbowl.com/stories/the-natural-market-in-timonium-to-close-after-nearly-four-decades/ | 2026-05-04 13:30:00 |
+| PURESEOUL | SouthGate Bath | Opening | Not specified | to open | PURESEOUL will open its first South West store at SouthGate Bath as its 16th UK store. The store will offer over 1,000 Korean beauty products. | https://365retail.co.uk/pureseoul-to-open-first-south-west-store-in-bath/ | 2026-05-04 13:27:53 |
+| No qualifying business found | N/A | N/A | N/A | N/A | N/A | https://buildingsaltlake.com/notoriously-secretive-trader-joes-confirms-plans-for-new-store-near-daybreak/ | 2026-05-04 13:15:14 |
+| Lego | Oxford Westgate shopping centre | Opening | May 7 | opens this week | New Lego store opens this week at Oxford Westgate shopping centre on May 7. | https://www.oxfordmail.co.uk/news/26076335.new-lego-store-open-oxford-westgate-week/ | 2026-05-04 13:00:00 |
+| Royal Farms | 9475 Georgia Avenue, Silver Spring | Opening | June 1 | scheduled to open | Royal Farms Silver Spring location is scheduled to open on June 1. It is the second location in Montgomery County. | https://mocoshow.com/2026/05/04/fried-chicken-famous-gas-station-opens-second-montgomery-county-location/ | 2026-05-04 12:56:30 |
+| Silver Branch Brewing | Warrenton | Opening | Not specified | launches summer pop-up | Silver Branch Brewing launches a 10-week summer pop-up in Warrenton after a fire shut down the previous location. The pop-up offers beer on tap and food trucks on the patio. | https://www.insidenova.com/news/business/after-fire-shut-down-business-silver-branch-brewing-launches-summer-pop-up-in-warrenton/article_f90be960-3341-5661-8a80-7a81ff2837d9.html | 2026-05-04 12:56:00 |
+| Fantasy Claw Arcade | AREA15, Las Vegas | Opening | May 7 | opens | Fantasy Claw Arcade opens at AREA15 on May 7, marking its fifth store. | https://www.franchising.com/amp/news/20260504_fantasy_claw_arcade_opens_at_area15_on_may_7_marking_fifth_store_as_experie.html | 2026-05-04 12:51:15 |
+| No qualifying business found | N/A | N/A | N/A | N/A | N/A | https://catcountry1073.com/reasons-to-miss-spirit-airlines/ | 2026-05-04 12:46:58 |
+
+Non-working or unusable articles List:
+• Article 361 — could not fetch (403)
+• Article 362 — text missing
+• Article 363 — text missing
+• Article 366 — could not fetch (403)
+• Article 370 — could not fetch (403)
+• Article 371 — could not fetch (503)
+• Article 372 — could not fetch (403)
+• Article 374 — could not fetch (404)
+• Article 375 — could not fetch (406)
+• Article 380 — could not fetch (403)
+• Article 395 — could not fetch (403)

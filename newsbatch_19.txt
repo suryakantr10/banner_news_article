@@ -1,0 +1,202 @@
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• For Published Date → copy exactly the value from the "Published:" line in the article metadata
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+
+--- Article 361 ---
+URL: https://www.postbulletin.com/business/mcalisters-deli-to-open-its-first-rochester-location-on-may-11
+Title: McAlister’s Deli to open its first Rochester location on May 11
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 18:21:19
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.postbulletin.com/business/mcalisters-deli-to-open-its-first-rochester-location-on-may-11]
+
+--- Article 362 ---
+URL: https://libn.com/2026/05/04/nassau-financial-opens-first-suffolk-county-branch/
+Title: Nassau Financial opens its first Suffolk County branch
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 18:16:59
+
+
+
+--- Article 363 ---
+URL: https://www.msn.com/en-us/news/us/trader-joe-s-is-expanding-in-central-florida-with-plans-for-3-more-stores-here-s-what-we-know/ar-AA21VMrg?ocid=BingNewsVerp&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Trader Joe’s is expanding in Central Florida with plans for 3 more stores
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 18:11:15
+
+MSN
+
+--- Article 364 ---
+URL: https://www.popville.com/2026/05/dc-bouldering-project-opening-second-location-columbia-heights/
+Title: HUGE NEWS: Bouldering Project opening a second location in Columbia Heights!!
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 18:05:22
+
+14th and Irving Street, NW back in 2005 Boom! Thanks to all who passed on from the Bouldering Project : “We’re excited to share some big news: Bouldering Project has signed a lease to open a second climbing gym in Washington, DC, located at DC USA Mall in Columbia Heights. This new location, which will provide easy Metro access as well as ample parking, will offer expansive bouldering terrain, energizing fitness and yoga spaces, welcoming youth areas, and plenty of room to gather and hang out. Best of all, membership includes access to all Bouldering Project gyms, which means members will have access to two gyms within Washington, DC. We’re also gearing up to make some meaningful investments in our Eckington gym . Watch for exciting updates to come including locker room improvements, new fitness equipment, and fresh climbs arriving later this year. Thanks for being part of our community — we can’t wait to continue growing with you. See you on the wall.” From IG: “We’ve signed a lease to open a second Bouldering Project gym in Columbia Heights. This new location, which will provide easy Metro access as well as ample parking, will offer expansive bouldering terrain, energizing fitness and yoga spaces, welcoming youth areas, and plenty of room to gather and hang out. Best of all, membership includes access to all Bouldering Project gyms, which members will have access to two gyms within Washington, DC. We’re also gearing up to make some meaningful investments in our Eckington gym. Watch for exciting updates to come including locker room improvements, new fitness equipment, and fresh climbs arriving later this year.” From their website: “We’re stoked to welcome our second location to Washington, D.C. – Bouldering Project Columbia Heights. Like our other Bouldering Project locations, this new gym will be beautifully designed by our in-house team, offering world-class bouldering terrain, a functional fitness area with brand new equipment, and a fresh yoga studio. We’re al
+
+--- Article 365 ---
+URL: https://www.prnewswire.com/news-releases/burn-boot-camp-expands-dc-metro-presence-with-new-bethesda-location-302761670.html
+Title: Burn Boot Camp Expands D.C. Metro Presence with New Bethesda Location
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 18:05:00
+
+New Bethesda gym builds on Burn Boot Camp's growing footprint while serving an expanding local fitness community BETHESDA, Md. , May 4, 2026 /PRNewswire/ -- Burn Boot Camp , a nationwide leader in fitness and community-focused training, has announced the opening of a new Burn Boot Camp location in Bethesda on April 27, 2026. The new gym is located at 5425 Wisconsin Avenue and will offer Burn Boot Camp's signature high-energy workouts, expert training and supportive community. Burn Boot Camp is known for its empowering approach to fitness, offering 45-minute camps designed for all fitness levels, complimentary childwatch and a focus on strength, conditioning and confidence, both inside and outside the gym. The new Burn Boot Camp Bethesda location is owned and operated by local franchise partners Meg and Gerald Agyin. "We're excited to continue growing Burn Boot Camp's presence in the D.C. metro area with the opening of our new Bethesda location," said Amber Burke, chief operating officer of Burn Boot Camp. "This community has shown strong demand for our approach to fitness, and this new location allows us to support even more members with the training, accountability and sense of connection that define the Burn experience. We're proud to partner with passionate franchise owners to bring that experience to life in Bethesda." For more information about Burn Boot Camp Bethesda, camp schedules or membership options, visit burnbootcamp.com/locations/bethesda-md . About Burn Boot Camp Founded in 2012 by husband wife duo Devan and Morgan Kline, Burn Boot Camp is a U.S.-based fitness franchise that helps women and their families build strength, confidence and healthy lifestyles. With unlimited 45-minute circuit style camps, complimentary childwatch, and a proprietary floating floor designed to protect joints and help prevent injury, Burn Boot Camp serves over 145,000 members nationwide. The brand has more than 400 locations open and over 620 open and awarded territories comb
+
+--- Article 366 ---
+URL: https://www.bizjournals.com/baltimore/news/2026/05/04/natural-market-timonium-closing-juice-bar.html
+Title: Juice bar and market to close after 38 years
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-04 18:03:00
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.bizjournals.com/baltimore/news/2026/05/04/natural-market-timonium-closing-juice-bar.html]
+
+--- Article 367 ---
+URL: https://patch.com/new-jersey/across-nj/major-clothing-retailer-new-jersey-closing-150-u-s-stores
+Title: Major Clothing Retailer In New Jersey Closing 150 U.S. Stores
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-04 17:53:14
+
+Business & Tech Major Clothing Retailer In New Jersey Closing 150 U.S. Stores The children's clothier is closing locations nationwide this year in a bid to stay afloat after being battered by tariffs. Alexis Tarrazi , Patch Staff Posted Mon, May  4, 2026 at 1:53 pm ET A popular mall retailer with stores in New Jersey is closing 150 locations nationwide this year in a bid to stay afloat after being battered by tariffs. The children’s clothier Carter’s has not disclosed what stores will be shuttered but said in a press release that stores would close as their leases expired as part of its turn-around push. Atlanta-based Carter’s, which also operates the OshKosh and B’Gosh labels, has 21 stores in New Jersey. Find out what's happening in Across New Jersey for free with the latest updates from Patch. 1255 Raritan Road, Unit #160, Clark 852 State Route 3, Suite 234, Clifton 374 State Route 10, East Hanover 17 The Promenade, Edgewater 651 Kapkowski Rd., #2008, Elizabeth 3710 US 9, Space B112, Freehold 222 Passaic Street, Garfield 420 Marketplace Boulevard, Space 420, Hamilton Township 2101 Route 35, Plot #28, Holmdel 537 Monmouth Rd., Space 101, Jackson 30 Mall Drive West, Suite A51, Jersey City 160 Passaic Avenue, Suite 4, Kearny 3371 U.S. Highway 1, Unit 158, Lawrenceville 3105 Kennedy Boulevard, Space #105, North Bergen 300 US Highway 202, Raritan 395 Mount Hope Avenue. Suite T09, Rockaway 275 NJ-10 East, Suite 31, Succasunna 910 Springfield Rd., Union 1515 Route 22, Suite 40, Watchung 1653 State Route 23, Wayne 250 Woodbridge Center Drive, Space 1350, Woodbridge Douglas C. Palladini, the former CEO of Carter’s, said last fall after the release of the company’s third-quarter 2025 earnings report that the company had made “meaningful progress in stabilizing our business. But, he added, “elevated product costs, in part due to the impact of higher tariffs, as well as additional investment, weighed meaningfully on our profitability.” Carter’s previously planned to close 10
+
+--- Article 368 ---
+URL: https://www.msn.com/en-us/foodanddrink/foodnews/line-stretched-down-sunset-road-as-new-bbq-spot-sold-out-before-opening/ar-AA22moYa
+Title: Line stretched down Sunset Road as new BBQ spot sold out before opening
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 17:45:43
+
+MSN
+
+--- Article 369 ---
+URL: https://b105country.com/new-carters-store-duluth-minnesota/
+Title: Another Big Retailer To Open New Store In Minnesota
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 17:41:01
+
+Another Big Retailer To Open New Store In Minnesota David Drew David Drew Published: May 4, 2026 Nick Cooper - TSM Duluth Share on Facebook Share on Twitter It wasn't long ago that I shared the news that the Miller Hill Mall was celebrating the opening of JD Sports, bringing the global sports fashion retailer to the Northland for the first time. That was good news for shoppers in the area, and now, more good news has arrived that will have an impact on the holiday shopping season. Miller Hill Mall has announced that another national retailer is coming to the Fountain Court, and this one is aimed squarely at families with young children. Construction is already underway, with an opening planned for this fall. Carter's To Open New Location In Duluth Carter's , the nationally recognized children's apparel and accessories retailer, will be joining the Miller Hill Mall lineup this fall. The brand carries a wide selection of clothing, essentials, and accessories for babies and young children, and, according to the mall, it's one Northland shoppers have been asking for. Get our free mobile app That certainly makes sense since, for parents and grandparents in the Duluth area, the nearest Carter's locations have all required a significant drive south, with stores in St. Cloud, Coon Rapids, Roseville, and at outlet centers in Albertville and Eagan. Having a dedicated Carter's location right here in Duluth is the kind of addition that will add convenience for local families and provide another place to shop in time for the upcoming holiday season, as the mall expects the store to open this fall. A Brand With More Than 160 Years Behind It Carter's isn't a brand that needs much of an introduction to anyone who has raised a child in the last several decades; it's a brand my kids wore at times growing up, it does have an interesting history. The company was founded in 1865 by William Carter, an English immigrant who started the William Carter Company in Needham, Massachusetts — re
+
+--- Article 370 ---
+URL: https://eastcobbnews.com/cobb-fire-station-12-holds-ribbon-cutting-and-grand-opening/
+Title: Cobb Fire Station 12 holds ribbon-cutting and grand opening
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 17:32:20
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://eastcobbnews.com/cobb-fire-station-12-holds-ribbon-cutting-and-grand-opening/]
+
+--- Article 371 ---
+URL: https://www.yogonet.com/international/news/2026/05/04/119423-ballys-chicago-tops-off-permanent-casino-targets-2027-opening
+Title: Bally’s Chicago tops off permanent casino, targets 2027 opening
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 17:18:59
+
+[Could not fetch: 503 Server Error: Service Unavailable for url: https://www.yogonet.com/international/news/2026/05/04/119423-ballys-chicago-tops-off-permanent-casino-targets-2027-opening]
+
+--- Article 372 ---
+URL: https://wkzo.com/2026/05/04/opening-day-for-new-chick-fil-a-is-thursday/
+Title: Opening day for new Chick-fil-a in Lansing is Thursday
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 17:15:26
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://wkzo.com/2026/05/04/opening-day-for-new-chick-fil-a-is-thursday/]
+
+--- Article 373 ---
+URL: https://www.wausaudailyherald.com/story/money/2026/05/04/parker-johns-bbq-pizza-and-tendeez-hot-chicken-to-open-at-former-2510-restaurant-in-wausau/89927705007/
+Title: Parker John's BBQ & Pizza and TENDEEZ Hot Chicken will open in Wausau
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 17:14:00
+
+MONEY Parker John's BBQ & Pizza and TENDEEZ Hot Chicken will open in Wausau The former 2510 Restaurant space in Wausau will soon be home to three distinct businesses, including two new restaurants and the existing 2510 Bakery and Deli. Caitlin Shuda Wausau Daily Herald Updated May 4, 2026, 12:14 p.m. CT WAUSAU – Parker John’s BBQ & Pizza and TENDEEZ Hot Chicken will open in Wausau.
+
+--- Article 374 ---
+URL: https://newjersey.news12.com/bus-service-to-replace-metro-north-waterbury-branch-trains-during-station-construction
+Title: Bus Service To Replace Metro North Waterbury Branch Trains During Station Construction
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-04 17:11:48
+
+[Could not fetch: 404 Client Error: Not Found for url: https://newjersey.news12.com/bus-service-to-replace-metro-north-waterbury-branch-trains-during-station-construction]
+
+--- Article 375 ---
+URL: https://www.columbiatribune.com/story/lifestyle/food/2026/05/04/downtown-columbia-restaurant-location-changing-hands/89927470007/
+Title: Sycamore plans closure by month's end. Murry's moving in
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 16:34:00
+
+[Could not fetch: 406 Client Error: Not Acceptable for url: https://www.columbiatribune.com/story/lifestyle/food/2026/05/04/downtown-columbia-restaurant-location-changing-hands/89927470007/]
+
+--- Article 376 ---
+URL: https://www.msn.com/en-us/news/offbeat/mon-kou-in-attleboro-to-close-for-good-next-month/ar-AA21Aj76?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Mon Kou in Attleboro to close for good next month
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-04 16:32:24
+
+MSN
+
+--- Article 377 ---
+URL: https://www.dispatch.com/story/news/local/communities/2026/05/04/columbus-east-side-has-new-community-with-affordable-accessible-housing/89824285007/
+Title: Local developer invests $40 million in now-open Driving Park apartments
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 16:17:00
+
+COMMUNITIES Local developer invests $40 million in now-open Driving Park apartments Danae King Columbus Dispatch May 4, 2026, 12:17 p.m. ET Woda Cooper Companies invested $40 million to build the Granville Woods Lofts affordable housing development in Columbus. The 118-unit complex offers apartments for residents earning between 30% and 80% of the area's median income. Monthly rents range from $390 to $1,350 depending on income level and apartment size. The development was supported by the city of Columbus and co-developed with the Gertrude Wood Community Foundation. Woda Cooper Companies invested $40 million in the Driving Park area of Columbus' East Side with the construction of Granville Woods Lofts. The affordable housing development includes 118 units at 860 and 910 Rhoads Ave., right off East Livingston Avenue. The two buildings are four stories tall and feature more than 142,000 square feet of space for 10 one-bedroom units; 86 two-bedroom units; and 22 three-bedroom units. Woda Cooper, a Columbus-based developer of affordable housing, co-developed the property with the Gertrude Wood Community Foundation . The foundation is a local nonprofit that focuses on supporting the academic, social and emotional development of Driving Park youth via programs and services, according to a news release from Woda Cooper. How much do the apartments cost? The first phase of the development, Granville Woods Lofts I, has units that are market rate and ones that rent to those making 50%, 60% and 80% of area median income. Rents start at $775 per month and go to $1,350. The second phase has units that start at $390 a month and go to $1,230, catering to residents earning 30%, 50%, 60% and 80% of area median income. For an individual, 30% of median income in Columbus is $22,900 annually and 80% is $61,050 annually. “Housing costs are beginning to stabilize but many families are still feeling squeezed," Columbus Mayor Andrew Ginther said in a news release. "Everybody who works in t
+
+--- Article 378 ---
+URL: https://www.star-telegram.com/news/business/fort-worth/article315627320.html
+Title: H-E-B reveals the opening date for its newest store in Tarrant County
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 16:02:00
+
+H-E-B has announced the much anticipated opening date of its newest store in Tarrant County. On Monday, the retailer said the Mid-Cities H-E-B will open to customers on May 20 at 6.a.m. at 2105 Rio Grande Blvd in Euless. The store is also near Bedford and Colleyville, where residents are eagerly awaiting the grand opening of H-E-B in HEB. “H-E-B is excited to build on the company’s longstanding presence in the area and continue its expansion across North Texas,” read a statement from the company. In late April, the construction on the new H-E-B along Texas 121 in Euless appeared to be nearing completion and there were reports of new hires training already taking place. The grocer broke ground on the 126,000-square-foot store in November 2024 at the corner of Cheek-Sparger Road and Rio Grande Boulevard, down the street from Glade Park’s shopping center. H-E-B has expanded into the Metroplex, by opening stores in Allen, Frisco, Fort Worth’s Alliance, Mansfield, Prosper and Melissa. Dallas is getting its first H-E-B, too. Last summer, H-E-B announced it is building a second Fort Worth location, after Alliance, in the Walsh development off Interstate 20 just west of the Parker County line. The large H-E-B sign is up on the store and this may signal a closer than expected opening store opening date.                                                                                            Fousia Abdullahi fousia.abdullahi@star-telegram.com H-E-B, with headquarters in San Antonio, operates over 455 stores in Texas and Mexico and employs over 175,000 people This story was originally published May 4, 2026 at 11:02 AM .
+
+--- Article 379 ---
+URL: https://www.eadt.co.uk/news/26066158.former-felixstowe-argos-store-goes-back-market/
+Title: Former Argos store back on the market
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 16:00:00
+
+Former Felixstowe Argos store goes back on the market Business Felixstowe Suffolk By 
+            Dominic Bareham Reporter Share 0 Comments The former Argos in Hamilton Road, Felixstowe is back on the market (Image: Google Maps) This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
+        and has been written by our American colleagues.
+        It does not necessarily reflect the view of The Herald. The premises of a former Argos store in a seaside town has now come back onto the market to rent after a potential tenant pulled out. Earlier this month, this newspaper revealed that the catalogue retailer's former premises in Hamilton Road had been let, although Penn Commercial, the agents for the property, declined to confirm the tenant's identity. However, the unit is once again being advertised to let for £37,500 per annum. In January 2025, Sainsbury's confirmed the catalogue retailer would be moving into the new supermarket, also in Hamilton Road, which opened in May 2025. In January 2025, a Sainsbury's spokesperson said: "To make shopping even more convenient for customers and bring the much-loved brands of Sainsbury’s and Argos together under one roof, we plan to relocate our Argos Felixstowe store to a new location inside the Sainsbury’s supermarket we’re opening on Hamilton Road this year. "Our Argos colleagues will have the opportunity to transfer to the new store and customers will be able to enjoy choosing from thousands of Argos products while picking up their groceries.” Business Felixstowe Suffolk Share 0 Comments Get involved with the news Send your news & photos
+
+--- Article 380 ---
+URL: https://www.bizjournals.com/milwaukee/news/2026/05/04/costo-franklin-sale-closes-northwestern-mutual.html
+Title: Construction starts soon on Costco's first Milwaukee County store after land deal
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-04 15:41:00
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.bizjournals.com/milwaukee/news/2026/05/04/costo-franklin-sale-closes-northwestern-mutual.html]
