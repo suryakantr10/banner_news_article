@@ -1950,6 +1950,216 @@
       "short_description": "Upfront is opening its second Foodstore in Rotterdam-West on June 6. The new larger location will have an expanded product range of about 180 own-brand items.",
       "article_link": "https://www.retaildetail.eu/news/food/supermarket-challenger-upfront-opens-its-second-location/",
       "published_date": "2026-05-05 10:52:08"
+    },
+    {
+      "store_name": "Convenience store chain (name not specified)",
+      "location": "Indiana (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "announces expansion into Indiana",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, a popular convenience store chain is announcing expansion into Indiana. Chain name not available.",
+      "article_link": "https://www.msn.com/en-us/money/companies/popular-convenience-store-chain-announces-expansion-into-indiana/ar-AA20qXAO",
+      "published_date": "2026-05-03 14:02:53"
+    },
+    {
+      "store_name": "National bookstore chain (name not specified)",
+      "location": "Arlington, VA (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "poised to reopen Arlington location",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, a national bookstore chain is poised to reopen its Arlington location. Chain name not available.",
+      "article_link": "https://www.msn.com/en-us/foodanddrink/foodnews/national-bookstore-chain-poised-to-reopen-arlington-location/ar-AA2225H8",
+      "published_date": "2026-05-03 12:54:07"
+    },
+    {
+      "store_name": "Barnes & Noble",
+      "location": "1191 Gate Parkway, Gates of Prosper shopping centre, Prosper, TX",
+      "event_type": "Opening",
+      "event_date": "May 20, 2026",
+      "status": "set to open",
+      "short_description": "Barnes & Noble is opening its first-ever store in Prosper, Texas on May 20, 2026, at 1191 Gate Parkway in the Gates of Prosper shopping centre. The new location will include an in-store café and is part of Barnes & Noble's broader strategy to expand its physical footprint across the United States.",
+      "article_link": "https://www.the-sun.com/money/16307228/barnes-noble-open-bookstore-texas/",
+      "published_date": "2026-05-03 12:31:36"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article body was not accessible (MSN shell page only). Article covers a reader survey on Arizona grocery store produce quality; no opening or closure event described.",
+      "article_link": "https://www.msn.com/en-us/money/companies/arizona-based-grocery-store-has-best-produce-according-to-readers/ar-AA225BBo",
+      "published_date": "2026-05-03 12:13:31"
+    },
+    {
+      "store_name": "Family-owned Chinese restaurant on Route 1 (name not specified)",
+      "location": "Route 1, Massachusetts (address not specified)",
+      "event_type": "Closing",
+      "event_date": "Not specified (after 55 years)",
+      "status": "closing after 55 years",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, a family-owned Chinese restaurant on Route 1 in Massachusetts is closing after 55 years. Restaurant name not available.",
+      "article_link": "https://www.msn.com/en-us/foodanddrink/foodnews/family-owned-chinese-restaurant-on-route-1-in-massachusetts-closing-after-55-years/ar-AA21FdoC",
+      "published_date": "2026-05-03 11:11:06"
+    },
+    {
+      "store_name": "New grocery store (name not specified)",
+      "location": "Willoughby Hills, OH (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "coming to Willoughby Hills",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, a new grocery store is coming to Willoughby Hills. Store name not available.",
+      "article_link": "https://www.msn.com/en-us/money/companies/new-grocery-store-coming-to-willoughby-hills/ar-AA21plDn",
+      "published_date": "2026-05-03 10:33:24"
+    },
+    {
+      "store_name": "Casa De Mama Bodega",
+      "location": "975 Broadway, Buffalo, NY",
+      "event_type": "Opening",
+      "event_date": "Saturday (relative to 2026-05-03; grand opening)",
+      "status": "celebrated its grand opening",
+      "short_description": "Casa De Mama Bodega celebrated its grand opening at 975 Broadway on Buffalo's East Side, aiming to improve food access in a historically underserved area. The store's business model extends beyond groceries to include a food pantry, hygiene facilities for unhoused neighbors, and a planned nonprofit initiative called \"It Takes a Pueblo.\"",
+      "article_link": "https://www.wgrz.com/article/money/business/new-grocery-store-opens-buffalo-east-side/71-1299d291-4801-4904-8a2f-3f8491152529",
+      "published_date": "2026-05-03 10:33:00"
+    },
+    {
+      "store_name": "Upscale department store (name not specified)",
+      "location": "Last Oregon location (address not specified)",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "quietly closes its last Oregon location",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, an upscale department store has quietly closed its last Oregon location. Store name not available.",
+      "article_link": "https://www.msn.com/en-us/money/companies/upscale-department-store-quietly-closes-its-last-oregon-location/ar-AA1Q1Tb2",
+      "published_date": "2026-05-03 09:55:16"
+    },
+    {
+      "store_name": "Insomnia Cookies",
+      "location": "90 E. Garden St., Pensacola, FL",
+      "event_type": "Opening",
+      "event_date": "April 11, 2026",
+      "status": "celebrated its grand opening",
+      "short_description": "Insomnia Cookies celebrated its grand opening in downtown Pensacola on April 11, 2026, becoming the 18th Florida location and 357th nationwide. The bakery offers cookies, ice cream, brownies, ice cream cookie sandwiches (\"wiches\"), and cookie cakes.",
+      "article_link": "https://www.pnj.com/story/entertainment/dining/2026/05/03/new-pensacola-restaurants-include-insomnia-cookies-rames-tacos/89853484007/",
+      "published_date": "2026-05-03 09:02:00"
+    },
+    {
+      "store_name": "True Grit Kitchen & Cantina (reopening)",
+      "location": "6675 Pine Forest Road, Pensacola area, FL",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "reopening (reestablished)",
+      "short_description": "True Grit American Bistro has reopened under a new identity as True Grit Kitchen & Cantina at 6675 Pine Forest Road, with new owner Cristy Hunter transforming the restaurant since taking over in November 2022. The restaurant serves Southern comfort foods with a new Cantina twist and positions itself as a go-to spot for chef-driven recipes in a family-friendly atmosphere.",
+      "article_link": "https://www.pnj.com/story/entertainment/dining/2026/05/03/new-pensacola-restaurants-include-insomnia-cookies-rames-tacos/89853484007/",
+      "published_date": "2026-05-03 09:02:00"
+    },
+    {
+      "store_name": "Aldi (Central Georgia)",
+      "location": "Central Georgia, USA (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified (opening date announced)",
+      "status": "announces opening date for newest Central Georgia store",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, Aldi has announced an opening date for its newest Central Georgia store. No further details available.",
+      "article_link": "https://www.msn.com/en-us/money/companies/grocery-store-aldi-announces-opening-date-for-newest-central-georgia-store-heres-when/ar-AA21z8Al",
+      "published_date": "2026-05-03 08:25:07"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article could not be fetched (429 Too Many Requests). Based on title, article covers gyms shutting down basketball courts across a valley; not a retail/restaurant opening or closure in scope.",
+      "article_link": "https://www.thefoothillsfocus.com/city_news/gyms-across-valley-shutting-down-basketball-courts/article_5643e8f4-d6c8-40e9-ba7f-2d3b25849e3d.html",
+      "published_date": "2026-05-03 07:00:00"
+    },
+    {
+      "store_name": "BJ's Wholesale Club (Texas)",
+      "location": "Texas (address not specified; new location)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "new Texas BJ's Wholesale Club location",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, a new BJ's Wholesale Club location has opened in Texas, offering $2 gas for members. No further details available.",
+      "article_link": "https://www.msn.com/en-us/money/companies/new-texas-bj-s-wholesale-club-location-offers-2-gas-for-members/ar-AA22fuGp",
+      "published_date": "2026-05-03 06:04:09"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article covers adjusted UK supermarket opening hours for the May Bank Holiday 2026. No new opening or closure event is described.",
+      "article_link": "https://www.stokesentinel.co.uk/whats-on/shopping/supermarket-opening-times-bank-holiday-10947804",
+      "published_date": "2026-05-03 05:55:16"
+    },
+    {
+      "store_name": "New KCK grocery store (name not specified)",
+      "location": "Kansas City, KS (address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "developer gets green light to start buying equipment",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, a developer has received approval to begin buying equipment for a new grocery store in Kansas City, Kansas. Store name not available.",
+      "article_link": "https://www.msn.com/en-us/money/companies/developer-gets-green-light-to-start-buying-equipment-for-new-kck-grocery-store/ar-AA20h8nn",
+      "published_date": "2026-05-03 05:18:27"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "Article covers a fire training exercise at the former House of Fraser building in Chichester. The building is vacant and the article describes no opening or closure event.",
+      "article_link": "https://www.theargus.co.uk/news/26072389.major-fire-exercise-chichester-house-fraser-building/",
+      "published_date": "2026-05-03 04:00:00"
+    },
+    {
+      "store_name": "Wynn Al Marjan Island",
+      "location": "Al Marjan Island, Ras Al Khaimah, UAE (address not specified)",
+      "event_type": "Opening",
+      "event_date": "2027",
+      "status": "to open in 2027 as UAE's 1st fully integrated resort",
+      "short_description": "Article body returned only unrelated news alerts about UAE military/security events. Based on title, Wynn Al Marjan Island is planned to open in 2027 as the UAE's first fully integrated resort. No further details available from article body.",
+      "article_link": "https://www.khaleejtimes.com/business-technology-review/ras-al-khaimah-marjan-beach-wynn-al-marjan-island",
+      "published_date": "2026-05-03 04:00:00"
+    },
+    {
+      "store_name": "New York City municipal grocery stores",
+      "location": "East Harlem, New York City, NY (and other boroughs; addresses not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "recently announced plans to open one in each of the city's five boroughs, starting in East Harlem",
+      "short_description": "New York City recently announced plans to open a city-owned grocery store in each of the city's five boroughs, starting in East Harlem. The article explains that city-owned grocery stores aim to offer lower prices across the board by eliminating rent overhead, with the city owning the property.",
+      "article_link": "https://www.chowhound.com/2160071/city-owned-grocery-stores-private-owned-difference/",
+      "published_date": "2026-05-03 01:35:00"
+    },
+    {
+      "store_name": "Darlington supermarket (name not specified)",
+      "location": "Darlington, UK (address not specified)",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "forced to close due to powercut",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, a supermarket in Darlington was forced to close due to a power cut. Store name not available; this appears to be a temporary closure, not a permanent one.",
+      "article_link": "https://www.msn.com/en-gb/money/other/darlington-supermarket-forced-to-close-due-to-powercut/ar-AA22ee8H",
+      "published_date": "2026-05-03 01:29:49"
+    },
+    {
+      "store_name": "Firebirds Wood Fired Grill",
+      "location": "2400 Polo Club Blvd., Hamburg, Lexington, KY (near Costco)",
+      "event_type": "Opening",
+      "event_date": "Mid-June 2026 (per Facebook ad; unconfirmed by chain spokesperson)",
+      "status": "will open in mid-June",
+      "short_description": "Firebirds Wood Fired Grill, a North Carolina-based chain, is opening its first Kentucky location at 2400 Polo Club Blvd. in Lexington's Hamburg area. The restaurant features a scratch kitchen with wood-fired steaks, seafood, and a full-service FIREBAR, with plans to offer lunch, dinner, and weekend brunch.",
+      "article_link": "https://www.aol.com/news/kentucky-restaurant-firebirds-opening-first-110047301.html",
+      "published_date": "2026-05-03 00:38:25"
+    },
+    {
+      "store_name": "Pop Mart",
+      "location": "Bay Area, CA (address not specified; second Bay Area location)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "expanding with another Bay Area location",
+      "short_description": "Article body was not accessible (MSN shell page only). Based on title, Pop Mart is expanding with another Bay Area location. No further details available.",
+      "article_link": "https://www.msn.com/en-us/money/companies/wildly-popular-toy-store-pop-mart-expanding-with-another-bay-area-location/ar-AA1YAgge",
+      "published_date": "2026-05-02 23:45:20"
     }
   ]
 }
