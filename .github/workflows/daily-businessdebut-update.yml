@@ -6,7 +6,7 @@ name: Daily Business Debut Update
 
 on:
   schedule:
-    - cron: '45 23 * * *'  # 4:00 AM IST daily
+    - cron: '0 21 * * *'  # 2:30 AM IST daily
   workflow_dispatch:  # Allows manual triggering from GitHub Actions tab
 
 permissions:
