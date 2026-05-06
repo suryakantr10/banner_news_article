@@ -1,7 +1,25 @@
 {
-  "last_updated": "2026-05-06 21:15 UTC",
+  "last_updated": "2026-05-06 22:00 UTC",
   "total": 60,
   "data": [
+    {
+      "date": "May 06, 2026",
+      "url": "https://whatnow.com/washington-dc/restaurants/gainesville-to-gain-south-block/",
+      "title": "Gainesville to Gain South Block",
+      "address": "13945 Promenade Commons St, Gainesville, VA 20155"
+    },
+    {
+      "date": "May 06, 2026",
+      "url": "https://whatnow.com/philadelphia/restaurants/little-susies-coffee-pies-expands-south-philly-footprint-wonderful-space/",
+      "title": "Little Susie’s Coffee & Pies Expands to South Philly",
+      "address": "800 S 9th St., Philadelphia, PA 19147"
+    },
+    {
+      "date": "May 06, 2026",
+      "url": "https://whatnow.com/charlotte/restaurants/dairi-o-plans-new-sanford-location-for-fall-2026-opening/",
+      "title": "Dairi-O Plans New Sanford Location for Fall 2026 Opening",
+      "address": ""
+    },
     {
       "date": "May 06, 2026",
       "url": "https://whatnow.com/charlotte/restaurants/cook-out-expands-footprint-with-thomasville-land-purchase-as-charlotte-location-takes-shape/",
@@ -343,24 +361,6 @@
       "url": "https://whatnow.com/chicago/restaurants/new-coffee-and-donut-concept-in-the-works-for-south-shore/",
       "title": "New Coffee and Donut Concept in the Works for South Shore",
       "address": "7104 S Jeffery Blvd, Chicago, IL 60649"
-    },
-    {
-      "date": "May 04, 2026",
-      "url": "https://whatnow.com/portland/restaurants/breakside-brewery-reflects-on-growth-challenges-and-staying-power-in-portlands-beer-scene/",
-      "title": "Breakside Brewery Reflects on Growth, Challenges, and Staying Power in Portland’s Beer Scene",
-      "address": "1570 NW 22nd Ave, Portland, OR 97210, USA"
-    },
-    {
-      "date": "May 04, 2026",
-      "url": "https://whatnow.com/denver/restaurants/michelin-recognized-soda-club-to-debut-in-denvers-ramble-hotel-this-summer/",
-      "title": "Soda Club to Open at Denver’s Ramble Hotel This Summer",
-      "address": "1260 25th St. Denver, CO 80202"
-    },
-    {
-      "date": "May 04, 2026",
-      "url": "https://whatnow.com/detroit/restaurants/a-popular-cafe-in-a-detroit-suburb-has-shut-down/",
-      "title": "A Popular Café in a Detroit Suburb Has Shut Down",
-      "address": "770 Woodward Heights, Ferndale, MI 48220"
     }
   ]
 }
