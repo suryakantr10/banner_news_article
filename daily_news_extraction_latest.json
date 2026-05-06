@@ -4610,6 +4610,226 @@
       "short_description": "N/A",
       "article_link": "https://www.bizjournals.com/milwaukee/news/2026/05/04/costo-franklin-sale-closes-northwestern-mutual.html",
       "published_date": "2026-05-04 15:41:00"
+    },
+    {
+      "store_name": "IKEA",
+      "location": "Memphis",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "store closure announcement",
+      "short_description": "IKEA customers are shocked at the store closure announcement in Memphis.",
+      "article_link": "https://www.msn.com/en-us/money/companies/ikea-customers-shocked-at-store-closure-announcement-in-memphis/ar-AA1WjPui?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
+      "published_date": "2026-05-04 15:34:01"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.syracuse.com/business/2026/05/salt-city-coffees-newest-onondaga-county-location-is-open.html",
+      "published_date": "2026-05-04 15:32:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.pennlive.com/life/2026/05/popular-mall-store-to-close-150-locations.html?outputType=amp",
+      "published_date": "2026-05-04 15:24:00"
+    },
+    {
+      "store_name": "Schnucks Fresh",
+      "location": "Jasper, Indiana",
+      "event_type": "Closing",
+      "event_date": "May 24",
+      "status": "closing",
+      "short_description": "Schnucks will close its Schnucks Fresh location in Jasper on May 24. The store opened in summer 2021 but has not generated the business needed to stay open.",
+      "article_link": "https://www.grocerydive.com/news/schnucks-closing-fresh-store-jasper-indiana/819142/",
+      "published_date": "2026-05-04 15:14:46"
+    },
+    {
+      "store_name": "Modern Auto and Truck Parts",
+      "location": "340 W. Main St., Carrollton",
+      "event_type": "Opening",
+      "event_date": "May 1",
+      "status": "opened",
+      "short_description": "Modern Auto and Truck Parts opened its new Carrollton location at the former Rite Aid building on May 1. The larger space allows expanded inventory and improved service.",
+      "article_link": "https://www.yourohionews.com/carroll-county/modern-auto-opens-new-carrollton-location/1033830",
+      "published_date": "2026-05-04 14:46:05"
+    },
+    {
+      "store_name": "Clovis Colorado Grill",
+      "location": "southeast corner of Barstow and Willow avenues, Clovis",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "has thrived",
+      "short_description": "Clovis Colorado Grill has operated for 21 years at its unique isolated location. The restaurant serves burgers and has become a local destination despite limited surrounding businesses.",
+      "article_link": "https://www.aol.com/news/unique-location-helps-keep-clovis-204403629.html",
+      "published_date": "2026-05-04 14:33:29"
+    },
+    {
+      "store_name": "Homegrown Farmstand",
+      "location": "377 Main Ave., Suite B, De Pere",
+      "event_type": "Opening",
+      "event_date": "April 4",
+      "status": "opened",
+      "short_description": "Homegrown Farmstand opened April 4 offering farm-to-table products from Wisconsin farms.",
+      "article_link": "https://www.greenbaypressgazette.com/story/money/2026/05/04/green-bay-business-openings-closures-and-incoming-projects/89872794007/",
+      "published_date": "2026-05-04 14:21:00"
+    },
+    {
+      "store_name": "Gyro Guyz",
+      "location": "1981 E. Mason St., Suite 105, Green Bay",
+      "event_type": "Opening",
+      "event_date": "April 4",
+      "status": "opened",
+      "short_description": "Gyro Guyz opened April 4 as a Mediterranean-style food restaurant.",
+      "article_link": "https://www.greenbaypressgazette.com/story/money/2026/05/04/green-bay-business-openings-closures-and-incoming-projects/89872794007/",
+      "published_date": "2026-05-04 14:21:00"
+    },
+    {
+      "store_name": "D-BAT Baseball and Softball Academy",
+      "location": "3525 Layden Drive, Ashwaubenon",
+      "event_type": "Opening",
+      "event_date": "April 20",
+      "status": "opened",
+      "short_description": "D-BAT Baseball and Softball Academy opened April 20 as a training facility.",
+      "article_link": "https://www.greenbaypressgazette.com/story/money/2026/05/04/green-bay-business-openings-closures-and-incoming-projects/89872794007/",
+      "published_date": "2026-05-04 14:21:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.witneygazette.co.uk/news/26076535.historic-oxfordshire-pub-back-dead-years-closure/",
+      "published_date": "2026-05-04 14:04:00"
+    },
+    {
+      "store_name": "Trader Joe's",
+      "location": "Upper West Side (72nd and Broadway), Manhattan",
+      "event_type": "Closing",
+      "event_date": "May 17",
+      "status": "closing temporarily",
+      "short_description": "Trader Joe's on the Upper West Side at 72nd and Broadway will close temporarily for renovations starting May 17. The store is known as the world's busiest Trader Joe's.",
+      "article_link": "https://www.aol.com/entertainment/worlds-busiest-trader-joes-closing-111300322.html",
+      "published_date": "2026-05-04 14:01:43"
+    },
+    {
+      "store_name": "Davio’s Plaza Bar",
+      "location": "Reston Row, across from JW Marriott Reston Station",
+      "event_type": "Opening",
+      "event_date": "May 7",
+      "status": "to open",
+      "short_description": "Davio’s will open Davio’s Plaza Bar outdoor bar and dining area on May 7. The space offers handcrafted cocktails, seasonal items and signature dishes with seating for 76.",
+      "article_link": "https://patch.com/virginia/reston/davio-s-open-outdoor-plaza-bar-reston-row",
+      "published_date": "2026-05-04 13:55:39"
+    },
+    {
+      "store_name": "Walgreens",
+      "location": "86th and South Cottage Grove, Chatham, Chicago",
+      "event_type": "Closing",
+      "event_date": "June 4",
+      "status": "closing",
+      "short_description": "Walgreens at 86th and South Cottage Grove will close on June 4 due to safety challenges. This is part of multiple South Side closures.",
+      "article_link": "https://abc7chicago.com/post/chicago-community-leaders-speak-ahead-chatham-walgreens-pharmacy-store-closure-month/19034714/",
+      "published_date": "2026-05-04 13:46:58"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.ibtimes.com.au/starbucks-open-easter-sunday-2026-most-us-locations-serving-coffee-varying-hours-1865460",
+      "published_date": "2026-05-04 13:37:00"
+    },
+    {
+      "store_name": "The Natural Market",
+      "location": "65 W. Timonium Road, Timonium",
+      "event_type": "Closing",
+      "event_date": "early to mid-August",
+      "status": "to close",
+      "short_description": "The Natural Market will close after 38 years in early to mid-August. A going-out-of-business sale starts Monday with reduced prices.",
+      "article_link": "https://baltimorefishbowl.com/stories/the-natural-market-in-timonium-to-close-after-nearly-four-decades/",
+      "published_date": "2026-05-04 13:30:00"
+    },
+    {
+      "store_name": "PURESEOUL",
+      "location": "SouthGate Bath",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "to open",
+      "short_description": "PURESEOUL will open its first South West store at SouthGate Bath as its 16th UK store. The store will offer over 1,000 Korean beauty products.",
+      "article_link": "https://365retail.co.uk/pureseoul-to-open-first-south-west-store-in-bath/",
+      "published_date": "2026-05-04 13:27:53"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://buildingsaltlake.com/notoriously-secretive-trader-joes-confirms-plans-for-new-store-near-daybreak/",
+      "published_date": "2026-05-04 13:15:14"
+    },
+    {
+      "store_name": "Lego",
+      "location": "Oxford Westgate shopping centre",
+      "event_type": "Opening",
+      "event_date": "May 7",
+      "status": "opens this week",
+      "short_description": "New Lego store opens this week at Oxford Westgate shopping centre on May 7.",
+      "article_link": "https://www.oxfordmail.co.uk/news/26076335.new-lego-store-open-oxford-westgate-week/",
+      "published_date": "2026-05-04 13:00:00"
+    },
+    {
+      "store_name": "Royal Farms",
+      "location": "9475 Georgia Avenue, Silver Spring",
+      "event_type": "Opening",
+      "event_date": "June 1",
+      "status": "scheduled to open",
+      "short_description": "Royal Farms Silver Spring location is scheduled to open on June 1. It is the second location in Montgomery County.",
+      "article_link": "https://mocoshow.com/2026/05/04/fried-chicken-famous-gas-station-opens-second-montgomery-county-location/",
+      "published_date": "2026-05-04 12:56:30"
+    },
+    {
+      "store_name": "Silver Branch Brewing",
+      "location": "Warrenton",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "launches summer pop-up",
+      "short_description": "Silver Branch Brewing launches a 10-week summer pop-up in Warrenton after a fire shut down the previous location. The pop-up offers beer on tap and food trucks on the patio.",
+      "article_link": "https://www.insidenova.com/news/business/after-fire-shut-down-business-silver-branch-brewing-launches-summer-pop-up-in-warrenton/article_f90be960-3341-5661-8a80-7a81ff2837d9.html",
+      "published_date": "2026-05-04 12:56:00"
+    },
+    {
+      "store_name": "Fantasy Claw Arcade",
+      "location": "AREA15, Las Vegas",
+      "event_type": "Opening",
+      "event_date": "May 7",
+      "status": "opens",
+      "short_description": "Fantasy Claw Arcade opens at AREA15 on May 7, marking its fifth store.",
+      "article_link": "https://www.franchising.com/amp/news/20260504_fantasy_claw_arcade_opens_at_area15_on_may_7_marking_fifth_store_as_experie.html",
+      "published_date": "2026-05-04 12:51:15"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://catcountry1073.com/reasons-to-miss-spirit-airlines/",
+      "published_date": "2026-05-04 12:46:58"
     }
   ]
 }
