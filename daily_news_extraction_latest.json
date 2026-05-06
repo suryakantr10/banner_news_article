@@ -4040,6 +4040,376 @@
       "short_description": "N/A",
       "article_link": "https://www.msn.com/en-us/news/us/mall-mainstay-to-close-this-summer-in-milford/ar-AA22aZro",
       "published_date": "2026-05-04 23:08:58"
+    },
+    {
+      "store_name": "Burlington",
+      "location": "26583 Carl Boyer Dr., Santa Clarita, California",
+      "event_type": "Opening",
+      "event_date": "May 8",
+      "status": "opening",
+      "short_description": "Burlington is opening a new store at 26583 Carl Boyer Dr. in Santa Clarita on May 8 as part of 26 new locations in May.",
+      "article_link": "https://www.aol.com/articles/burlington-opening-26-us-locations-222720494.html",
+      "published_date": "2026-05-04 23:00:26"
+    },
+    {
+      "store_name": "Burlington",
+      "location": "4600 W Broad St., Columbus, Ohio",
+      "event_type": "Opening",
+      "event_date": "May 8",
+      "status": "opening",
+      "short_description": "Burlington is opening a new store at 4600 W Broad St. in Columbus on May 8.",
+      "article_link": "https://www.aol.com/articles/burlington-opening-26-us-locations-222720494.html",
+      "published_date": "2026-05-04 23:00:26"
+    },
+    {
+      "store_name": "Burlington",
+      "location": "26015 104th Ave. SE, Ste 101, Kent, Washington",
+      "event_type": "Opening",
+      "event_date": "May 8",
+      "status": "opening",
+      "short_description": "Burlington is opening a new store at 26015 104th Ave. SE, Ste 101 in Kent on May 8.",
+      "article_link": "https://www.aol.com/articles/burlington-opening-26-us-locations-222720494.html",
+      "published_date": "2026-05-04 23:00:26"
+    },
+    {
+      "store_name": "Burlington",
+      "location": "700 Ocean Beach Hwy., Ste 100, Longview, Washington",
+      "event_type": "Opening",
+      "event_date": "May 8",
+      "status": "opening",
+      "short_description": "Burlington is opening a new store at 700 Ocean Beach Hwy., Ste 100 in Longview on May 8.",
+      "article_link": "https://www.aol.com/articles/burlington-opening-26-us-locations-222720494.html",
+      "published_date": "2026-05-04 23:00:26"
+    },
+    {
+      "store_name": "Burlington",
+      "location": "4045 Commonwealth Ave., Eau Claire, Wisconsin",
+      "event_type": "Opening",
+      "event_date": "May 15",
+      "status": "opening",
+      "short_description": "Burlington is opening a new store at 4045 Commonwealth Ave. in Eau Claire on May 15.",
+      "article_link": "https://www.aol.com/articles/burlington-opening-26-us-locations-222720494.html",
+      "published_date": "2026-05-04 23:00:26"
+    },
+    {
+      "store_name": "Burlington",
+      "location": "1226 S Koeller St., Oshkosh, Wisconsin",
+      "event_type": "Opening",
+      "event_date": "May 15",
+      "status": "opening",
+      "short_description": "Burlington is opening a new store at 1226 S Koeller St. in Oshkosh on May 15.",
+      "article_link": "https://www.aol.com/articles/burlington-opening-26-us-locations-222720494.html",
+      "published_date": "2026-05-04 23:00:26"
+    },
+    {
+      "store_name": "Burlington",
+      "location": "1120 Seaboard St., Myrtle Beach, South Carolina",
+      "event_type": "Opening",
+      "event_date": "May 15",
+      "status": "opening",
+      "short_description": "Burlington is opening a new store at 1120 Seaboard St. in Myrtle Beach on May 15.",
+      "article_link": "https://www.aol.com/articles/burlington-opening-26-us-locations-222720494.html",
+      "published_date": "2026-05-04 23:00:26"
+    },
+    {
+      "store_name": "Burlington",
+      "location": "1530 County Rd. 64, Elmira, New York",
+      "event_type": "Opening",
+      "event_date": "May 15",
+      "status": "opening",
+      "short_description": "Burlington is opening a new store at 1530 County Rd. 64 in Elmira on May 15.",
+      "article_link": "https://www.aol.com/articles/burlington-opening-26-us-locations-222720494.html",
+      "published_date": "2026-05-04 23:00:26"
+    },
+    {
+      "store_name": "Burlington",
+      "location": "80 S Tunnel Rd. #30, Asheville, North Carolina",
+      "event_type": "Opening",
+      "event_date": "May 15",
+      "status": "opening",
+      "short_description": "Burlington is opening a new store at 80 S Tunnel Rd. #30 in Asheville on May 15.",
+      "article_link": "https://www.aol.com/articles/burlington-opening-26-us-locations-222720494.html",
+      "published_date": "2026-05-04 23:00:26"
+    },
+    {
+      "store_name": "Burlington",
+      "location": "1717 N Dysart Rd., Avondale, Arizona",
+      "event_type": "Opening",
+      "event_date": "May 15",
+      "status": "opening",
+      "short_description": "Burlington is opening a new store at 1717 N Dysart Rd. in Avondale on May 15.",
+      "article_link": "https://www.aol.com/articles/burlington-opening-26-us-locations-222720494.html",
+      "published_date": "2026-05-04 23:00:26"
+    },
+    {
+      "store_name": "Burlington",
+      "location": "3010 Ming Ave., Bakersfield, California",
+      "event_type": "Opening",
+      "event_date": "May 15",
+      "status": "opening",
+      "short_description": "Burlington is opening a new store at 3010 Ming Ave. in Bakersfield on May 15.",
+      "article_link": "https://www.aol.com/articles/burlington-opening-26-us-locations-222720494.html",
+      "published_date": "2026-05-04 23:00:26"
+    },
+    {
+      "store_name": "Burlington",
+      "location": "10261 River Marsh Dr., Ste 149, Jacksonville, Florida",
+      "event_type": "Opening",
+      "event_date": "May 15",
+      "status": "opening",
+      "short_description": "Burlington is opening a new store at 10261 River Marsh Dr., Ste 149 in Jacksonville on May 15.",
+      "article_link": "https://www.aol.com/articles/burlington-opening-26-us-locations-222720494.html",
+      "published_date": "2026-05-04 23:00:26"
+    },
+    {
+      "store_name": "Burlington",
+      "location": "2056 IL-50, Bourbonnais, Illinois",
+      "event_type": "Opening",
+      "event_date": "May 15",
+      "status": "opening",
+      "short_description": "Burlington is opening a new store at 2056 IL-50 in Bourbonnais on May 15.",
+      "article_link": "https://www.aol.com/articles/burlington-opening-26-us-locations-222720494.html",
+      "published_date": "2026-05-04 23:00:26"
+    },
+    {
+      "store_name": "Burlington",
+      "location": "4600 Shelbyville Rd., Ste 280, Louisville, Kentucky",
+      "event_type": "Opening",
+      "event_date": "May 15",
+      "status": "opening",
+      "short_description": "Burlington is opening a new store at 4600 Shelbyville Rd., Ste 280 in Louisville on May 15.",
+      "article_link": "https://www.aol.com/articles/burlington-opening-26-us-locations-222720494.html",
+      "published_date": "2026-05-04 23:00:26"
+    },
+    {
+      "store_name": "Burlington",
+      "location": "4715 24th Ave., Fort Gratiot Township, Michigan",
+      "event_type": "Opening",
+      "event_date": "May 15",
+      "status": "opening",
+      "short_description": "Burlington is opening a new store at 4715 24th Ave. in Fort Gratiot Township on May 15.",
+      "article_link": "https://www.aol.com/articles/burlington-opening-26-us-locations-222720494.html",
+      "published_date": "2026-05-04 23:00:26"
+    },
+    {
+      "store_name": "Burlington",
+      "location": "2050 W University Dr., Ste 250, McKinney, Texas",
+      "event_type": "Opening",
+      "event_date": "May 15",
+      "status": "opening",
+      "short_description": "Burlington is opening a new store at 2050 W University Dr., Ste 250 in McKinney on May 15.",
+      "article_link": "https://www.aol.com/articles/burlington-opening-26-us-locations-222720494.html",
+      "published_date": "2026-05-04 23:00:26"
+    },
+    {
+      "store_name": "Burlington",
+      "location": "1219 N Fry Rd.",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "opening",
+      "short_description": "Burlington is opening additional new stores in May as part of its expansion to more than 1,000 locations.",
+      "article_link": "https://www.aol.com/articles/burlington-opening-26-us-locations-222720494.html",
+      "published_date": "2026-05-04 23:00:26"
+    },
+    {
+      "store_name": "Buc-ee's",
+      "location": "Huber Heights",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "could be first of many",
+      "short_description": "Buc-ee's Huber Heights store could be the first of many in Ohio according to the CEO.",
+      "article_link": "https://www.msn.com/en-us/news/other/more-buc-ee-s-in-ohio-ceo-says-huber-heights-store-could-be-first-of-many/ar-AA20hnuT?ocid=BingNewsVerp",
+      "published_date": "2026-05-04 22:42:12"
+    },
+    {
+      "store_name": "Missouri Athletic Club",
+      "location": "Clayton",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "opens third location",
+      "short_description": "Missouri Athletic Club has opened its third location in Clayton.",
+      "article_link": "https://www.msn.com/en-us/sports/other/missouri-athletic-club-opens-third-location-in-clayton/ar-AA21WW14?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
+      "published_date": "2026-05-04 22:30:00"
+    },
+    {
+      "store_name": "Sunnydale Market",
+      "location": "1515 Sunnydale Ave.",
+      "event_type": "Opening",
+      "event_date": "2027",
+      "status": "to open",
+      "short_description": "18 Reasons, Bi-Rite and Crankstart are opening Sunnydale Market nonprofit grocery store in 2027 at 1515 Sunnydale Ave. The 2,800-square-foot market will sell fresh produce, pantry staples and culturally appropriate foods at wholesale costs.",
+      "article_link": "https://www.sfchronicle.com/food/article/sunnydale-market-sf-22240299.php",
+      "published_date": "2026-05-04 22:20:06"
+    },
+    {
+      "store_name": "North Jersey animal refuge",
+      "location": "2nd location",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "opens 2nd location",
+      "short_description": "North Jersey animal refuge has opened its 2nd location.",
+      "article_link": "https://www.msn.com/en-us/news/us/north-jersey-animal-refuge-expands-opens-2nd-location/ar-AA220Sfk",
+      "published_date": "2026-05-04 22:06:42"
+    },
+    {
+      "store_name": "Acme Fresh Market",
+      "location": "Fishcreek Plaza, Stow",
+      "event_type": "Closing",
+      "event_date": "May 5",
+      "status": "permanently closing",
+      "short_description": "Acme Fresh Market in Stow is permanently closing at 9 p.m. on May 5. The pharmacy remains open through May 19 with prescriptions transferring to Bailey Road in Cuyahoga Falls.",
+      "article_link": "https://www.beaconjournal.com/story/grocery/stores/2026/05/04/acme-stow-closing-tuesday-may-5-fishcreek-plaza/89932297007/",
+      "published_date": "2026-05-04 21:45:00"
+    },
+    {
+      "store_name": "McDonald’s",
+      "location": "Cowes, Phillip Island",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "plan for new store",
+      "short_description": "McDonald’s has lodged a planning permit for a new store in Cowes on Phillip Island. The proposal has sparked backlash from locals concerned about impact on town identity and family businesses.",
+      "article_link": "https://www.ntnews.com.au/real-estate/commercial/mcdonalds-plan-for-new-phillip-island-store-sparks-fierce-backlash-from-locals/news-story/8b92d324bd2b7b38aa2bfcc3414f414a?campaignType=external&campaignChannel=syndication&campaignName=ncacont&campaignContent=&campaignSource=nt_news&campaignPlacement=spa",
+      "published_date": "2026-05-04 21:44:48"
+    },
+    {
+      "store_name": "Oasis Fresh Market",
+      "location": "6207 S. Peoria Ave.",
+      "event_type": "Opening",
+      "event_date": "by or before May 25",
+      "status": "to open",
+      "short_description": "Oasis Fresh Market is opening its third location in south Tulsa at the former Cox Cash Saver at 6207 S. Peoria Ave. by or before May 25.",
+      "article_link": "https://tulsaflyer.org/2026/05/04/business/post/oasis-fresh-market-open-third-location/",
+      "published_date": "2026-05-04 21:40:39"
+    },
+    {
+      "store_name": "Carter’s",
+      "location": "Address not specified",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "closing 150 U.S. stores",
+      "short_description": "Carter’s is closing 150 U.S. stores as leases expire. The chain has 21 stores in Virginia.",
+      "article_link": "https://patch.com/virginia/across-va/major-clothing-retailer-virginia-closing-150-u-s-stores",
+      "published_date": "2026-05-04 21:40:01"
+    },
+    {
+      "store_name": "Chick-fil-A",
+      "location": "9330 E. 350 Highway, Raytown",
+      "event_type": "Opening",
+      "event_date": "this fall",
+      "status": "will open",
+      "short_description": "Chick-fil-A will open a new location at 9330 E. 350 Highway in Raytown this fall at the site of a former Applebee’s.",
+      "article_link": "https://www.aol.com/news/another-chick-fil-location-open-212637574.html",
+      "published_date": "2026-05-04 21:26:37"
+    },
+    {
+      "store_name": "Walgreens",
+      "location": "2727 W. North Ave., Midtown, Milwaukee",
+      "event_type": "Closing",
+      "event_date": "June 23",
+      "status": "will close permanently",
+      "short_description": "Walgreens at 2727 W. North Ave. will close permanently on June 23 due to safety challenges. Prescriptions will transfer to the Miller Valley location.",
+      "article_link": "https://www.aol.com/articles/walgreens-close-midtown-store-milwaukee-211103938.html",
+      "published_date": "2026-05-04 21:16:00"
+    },
+    {
+      "store_name": "Trader Joe's",
+      "location": "West Palm Beach",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "to welcome",
+      "short_description": "West Palm Beach will welcome a new Trader Joe's store.",
+      "article_link": "https://www.palmbeachpost.com/story/grocery/stores/2026/05/04/west-palm-beach-trader-joes-grocery-store-photos-video/89934902007/",
+      "published_date": "2026-05-04 21:07:00"
+    },
+    {
+      "store_name": "Nordstrom Rack",
+      "location": "Main Street at Exton",
+      "event_type": "Opening",
+      "event_date": "this fall",
+      "status": "to debut",
+      "short_description": "Nordstrom Rack will open a new store at Main Street at Exton this fall.",
+      "article_link": "https://whatnow.com/philadelphia/retail/nordstrom-rack-expands-to-exton-media-this-fall-with-two-stores/",
+      "published_date": "2026-05-04 20:52:29"
+    },
+    {
+      "store_name": "Nordstrom Rack",
+      "location": "The Promenade at Granite Run, Media",
+      "event_type": "Opening",
+      "event_date": "this fall",
+      "status": "to debut",
+      "short_description": "Nordstrom Rack will open a new store at The Promenade at Granite Run in Media this fall.",
+      "article_link": "https://whatnow.com/philadelphia/retail/nordstrom-rack-expands-to-exton-media-this-fall-with-two-stores/",
+      "published_date": "2026-05-04 20:52:29"
+    },
+    {
+      "store_name": "Papa's Loca",
+      "location": "New Haven",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "sets opening date",
+      "short_description": "Papa's Loca has set an opening date in New Haven.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/new-haven-scoop-papas-loca-sets-opening-date-in-new-haven",
+      "published_date": "2026-05-04 20:20:51"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.bizjournals.com/albuquerque/news/2026/05/04/local-tea-chain-fills-empty-storefront.html",
+      "published_date": "2026-05-04 20:00:00"
+    },
+    {
+      "store_name": "Thai Cottage Pearland",
+      "location": "3414 Business Center Drive, Ste. 130, Pearland",
+      "event_type": "Opening",
+      "event_date": "May 4",
+      "status": "reopened",
+      "short_description": "Thai Cottage Pearland reopened at 3414 Business Center Drive, Ste. 130 on May 4 after closing in December. A grand opening is planned later in May.",
+      "article_link": "https://communityimpact.com/houston/pearland-friendswood-manvel/business/2026/05/04/thai-cottage-pearland-reopens-in-new-location/",
+      "published_date": "2026-05-04 19:50:00"
+    },
+    {
+      "store_name": "Naujaat co-op",
+      "location": "Naujaat",
+      "event_type": "Opening",
+      "event_date": "fall",
+      "status": "plans new store",
+      "short_description": "Naujaat co-op plans a new convenience store and community space opening in the fall. Materials will be shipped by sealift this summer.",
+      "article_link": "https://nunatsiaq.com/stories/article/naujaat-co-op-plans-new-store-and-community-space/",
+      "published_date": "2026-05-04 19:30:00"
+    },
+    {
+      "store_name": "Cava",
+      "location": "west side of Route 110, north of Michael Avenue, East Farmingdale",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "plans to add",
+      "short_description": "Cava plans to open at the former Taïm site on the west side of Route 110 in East Farmingdale.",
+      "article_link": "https://www.newsday.com/long-island/towns/cava-east-farmingdale-taim-eg4pqcc6",
+      "published_date": "2026-05-04 19:27:50"
+    },
+    {
+      "store_name": "Chase Bank",
+      "location": "Dayton, Ohio",
+      "event_type": "Opening",
+      "event_date": "this fall",
+      "status": "to open",
+      "short_description": "Chase Bank will open a new 3,477-square-foot branch this fall at the former Rite Aid location in Dayton.",
+      "article_link": "https://www.the-sun.com/money/16312231/jpmorgan-chase-bank-replacing-rite-aid-dayton-ohio/",
+      "published_date": "2026-05-04 18:37:03"
+    },
+    {
+      "store_name": "Rocket Fizz",
+      "location": "Park Avenue, Winter Park",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "to close",
+      "short_description": "Rocket Fizz longtime Park Avenue shop in Winter Park is closing.",
+      "article_link": "https://www.bizjournals.com/orlando/news/2026/05/04/rocket-fizz-to-close-winter-park.html",
+      "published_date": "2026-05-04 18:28:00"
     }
   ]
 }
