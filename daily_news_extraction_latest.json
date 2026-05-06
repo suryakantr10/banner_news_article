@@ -750,6 +750,206 @@
       "short_description": "Article could not be fetched (403 error). No business details available.",
       "article_link": "https://www.sooleader.com/local-news/soo-locks-visitor-center-now-open-for-the-season-12226367",
       "published_date": "2026-05-03 19:50:09"
+    },
+    {
+      "store_name": "Meijer supercenter",
+      "location": "9202 E. 56th Street, Brownsburg, Indiana",
+      "event_type": "Opening",
+      "event_date": "May 6, 2026",
+      "status": "opening soon",
+      "short_description": "Meijer is opening a 159,000-square-foot supercenter in Brownsburg this week. The store sells fresh produce, grocery items, apparel, home goods, electronics, toys, sporting goods, deli, bakery, pharmacy, salon and garden center. It includes house brands and a penny pony ride.",
+      "article_link": "https://www.aol.com/news/brownsburgs-meijer-supercenter-opening-soon-120146939.html",
+      "published_date": "2026-05-05 12:01:46"
+    },
+    {
+      "store_name": "McVey’s Seafood Boil-Off",
+      "location": "Jellystone RV Park and Resort on Luke Powers Road in Lake Charles",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "move to a larger venue in 2027",
+      "short_description": "McVey’s Seafood Boil-Off will move from Mary’s Lounge to a new larger venue in 2027 due to surging attendance and limited parking/space. The 2027 event will offer more space for teams and festivalgoers with camping options. Official date yet to be announced.",
+      "article_link": "https://gator995.com/mcveys-2027-crawfish-boil-off-off-location/",
+      "published_date": "2026-05-05 11:30:52"
+    },
+    {
+      "store_name": "Tropical Smoothie Cafe",
+      "location": "835 Rockville Pike, Suite F. at Wintergreen Plaza in Rockville",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "now open",
+      "short_description": "Tropical Smoothie Cafe is now open at the former Capital Cryo space in Rockville. The chain offers smoothies, wraps, and flatbreads and already has multiple Montgomery County locations. Other businesses expected soon at the plaza.",
+      "article_link": "https://mocoshow.com/2026/05/05/tropical-smoothie-cafe-now-open/",
+      "published_date": "2026-05-05 11:19:24"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.msn.com/en-us/money/companies/beloved-barbecue-chain-closing-locations-nationwide-following-bankruptcy-filing/ar-AA22iB8s?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
+      "published_date": "2026-05-05 10:45:05"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.insidehalton.com/business/the-burnt-tongue-to-open-burlington-location-this-summer/article_5fd5bb44-efce-5ab6-9287-f602e45143cf.html",
+      "published_date": "2026-05-05 10:00:00"
+    },
+    {
+      "store_name": "Dunkin’",
+      "location": "7357 Round House St., Fairlawn, Va.",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "grand opening this week",
+      "short_description": "New Dunkin’ in Fairlawn is set to open its doors Tuesday at 5 a.m. Grand opening includes ribbon-cutting, free coffee/donuts promotions, and $2,000 donation to Special Olympics Virginia. Open daily 5 a.m. to 9 p.m.",
+      "article_link": "https://www.wsls.com/news/local/2026/05/05/new-dunkin-in-fairlawn-celebrates-opening-with-free-coffee-donuts/",
+      "published_date": "2026-05-05 08:41:47"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.express.co.uk/news/royal/2201815/sarah-ferguson-eyes-new-location-as-she-plots-escape-route/amp",
+      "published_date": "2026-05-05 07:41:00"
+    },
+    {
+      "store_name": "Hello Gorgeous Blowouts",
+      "location": "Salon and Spa Galleria Azle in Azle, Texas",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "Now Open and Accepting New Clients",
+      "short_description": "Hello Gorgeous Blowouts is now open at Salon and Spa Galleria Azle. Owner Kyndle Noe offers blowouts, styling, extensions, updos, and conditioning treatments. Focuses on making clients feel confident and glamorous.",
+      "article_link": "https://www.24-7pressrelease.com/press-release/534485/hello-gorgeous-blowouts-now-open-and-accepting-new-clients-at-the-salon-and-spa-galleria-azle-in-azle-texas",
+      "published_date": "2026-05-05 07:03:07"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.msn.com/en-us/money/companies/smokey-bones-shutters-last-illinois-location-amid-nationwide-closures/ar-AA225b1b?ocid=BingNewsVerp&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
+      "published_date": "2026-05-05 05:36:39"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.msn.com/en-us/money/companies/beloved-candy-store-lammes-abruptly-closing-all-locations-after-141-years/ar-AA220bQU?gemSnapshotKey=GM60D23F01-snapshot-3&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
+      "published_date": "2026-05-05 05:20:05"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.msn.com/en-us/money/companies/beloved-pizza-chain-shutters-all-of-its-locations-decision-did-not-come-easily/ar-AA22dDKo?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
+      "published_date": "2026-05-05 05:15:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.msn.com/en-us/money/companies/popular-iced-tea-chain-hteao-to-open-new-store-in-d-fw-suburb/ar-AA22dNFY",
+      "published_date": "2026-05-05 05:10:18"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.suncommercial.com/gcdailyworld/article_3ce8158d-8471-5972-9ee4-bf05145e5102.html",
+      "published_date": "2026-05-05 05:00:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.msn.com/en-us/money/companies/say-goodbye-beloved-bbq-chain-quietly-closes-all-locations-following-bankruptcy/ar-AA226Hgs?gemSnapshotKey=GME157254E-snapshot-3&uxmode=ruby&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
+      "published_date": "2026-05-05 04:43:40"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.stuff.co.nz/nz-news/360974076/dunedin-i-am-sorry-bar-owner-set-lose-her-house-possible-bankruptcy-worst-case-scenario-two-venues",
+      "published_date": "2026-05-05 04:23:17"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.kctv5.com/2026/05/05/with-kc-streetcar-riverfront-extension-opening-soon-businesses-hope-benefit/",
+      "published_date": "2026-05-05 03:26:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://wcyb.com/newsletter-daily/grandfather-mountain-fireflies-viewing-lottery-opening-soon-glows-blue-ghost-firefly-synchronous-macrae-meadows-educational-programs-buy-tickets-prices-alcohol-prohibited-pets-allowed-winners-announced",
+      "published_date": "2026-05-05 02:51:32"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.msn.com/en-us/money/smallbusiness/open-for-business-jacobs-berry-farm-wedding-venue-hosts-open-house/ar-AA226FTz?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
+      "published_date": "2026-05-05 01:53:54"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.wdw-magazine.com/big-thunder-mountain-railroad-refurbishment/",
+      "published_date": "2026-05-05 01:00:52"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://motorsportsnewswire.com/2026/05/04/registration-now-open-for-the-2026-sema-show/",
+      "published_date": "2026-05-05 00:40:32"
     }
   ]
 }
