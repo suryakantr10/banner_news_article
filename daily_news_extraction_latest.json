@@ -1180,6 +1180,276 @@
       "short_description": "N/A",
       "article_link": "https://www.prlog.org/13143478-sleep-basil-mattress-co-launches-new-location-page-for-cherry-hills-village-shoppers.html",
       "published_date": "2026-05-04 13:34:08"
+    },
+    {
+      "store_name": "Proclamation Ale Company",
+      "location": "298 Kilvert St., Warwick, RI",
+      "event_type": "Closing",
+      "event_date": "Not specified (announced May 1, 2026)",
+      "status": "closed / will operate until all the brewed beer is sold",
+      "short_description": "Proclamation Ale Company in Warwick has closed after 12 years, with owner Lori Witham announcing the closure on social media on May 1. The brewery will continue operating until all brewed beer is sold, with the closure attributed to a costly legal battle with a minority partner that drained financial resources.",
+      "article_link": "https://www.aol.com/news/proclamation-ale-one-3-ri-171646119.html",
+      "published_date": "2026-05-04 13:33:31"
+    },
+    {
+      "store_name": "Ravenous Brewing Company",
+      "location": "Cumberland, RI (Address not specified)",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "shuttered / space taken over by Moniker Brewery",
+      "short_description": "Ravenous Brewing Company in Cumberland, RI has been shuttered, with the space taken over by Providence's Moniker Brewery.",
+      "article_link": "https://www.aol.com/news/proclamation-ale-one-3-ri-171646119.html",
+      "published_date": "2026-05-04 13:33:31"
+    },
+    {
+      "store_name": "Crafted Hope Brewing Company",
+      "location": "East Greenwich, RI (Address not specified)",
+      "event_type": "Closing",
+      "event_date": "May 17, 2026",
+      "status": "will shut down May 17",
+      "short_description": "Crafted Hope Brewing Company in East Greenwich will shut down on May 17 after less than two years in business.",
+      "article_link": "https://www.aol.com/news/proclamation-ale-one-3-ri-171646119.html",
+      "published_date": "2026-05-04 13:33:31"
+    },
+    {
+      "store_name": "LadyBird Westside",
+      "location": "Star Metals District, just east of Howell Mill Road, Marietta Street Artery neighborhood, West Midtown, Atlanta, GA (Address not specified)",
+      "event_type": "Opening",
+      "event_date": "Prior to June 14, 2026",
+      "status": "plans to open prior to June 14",
+      "short_description": "LadyBird Westside, a new counterpart to the Beltline-adjacent Old Fourth Ward LadyBird, plans to open in a transformed industrial warehouse space at the Star Metals District in West Midtown prior to June 14 to capture anticipated FIFA World Cup foot traffic. The adaptive-reuse complex will feature a beer garden, full kitchen and bar, open walls, and large greenspaces across a 1-acre parcel.",
+      "article_link": "https://atlanta.urbanize.city/post/ladybird-westside-fum-rabbit-ears-stella-near-opening-images",
+      "published_date": "2026-05-04 13:28:51"
+    },
+    {
+      "store_name": "Incognito (cocktail bar)",
+      "location": "Star Metals District, West Midtown, Atlanta, GA (next to LadyBird Westside; Address not specified)",
+      "event_type": "Opening",
+      "event_date": "Prior to June 14, 2026",
+      "status": "on pace to open by June 14",
+      "short_description": "Incognito, a high-end cocktail bar, is on pace to open by June 14 next door to LadyBird Westside in the Star Metals District in West Midtown Atlanta.",
+      "article_link": "https://atlanta.urbanize.city/post/ladybird-westside-fum-rabbit-ears-stella-near-opening-images",
+      "published_date": "2026-05-04 13:28:51"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.aol.com/news/aldi-testing-store-design-us-090909664.html",
+      "published_date": "2026-05-04 12:29:04"
+    },
+    {
+      "store_name": "Marks and Spencer (Abingdon)",
+      "location": "Fairacres Retail Park, Abingdon, Oxfordshire (Address not specified)",
+      "event_type": "Opening",
+      "event_date": "Last week (relative to publication date of May 4, 2026)",
+      "status": "opened its doors last week",
+      "short_description": "Marks and Spencer opened a new food hall at Fairacres Retail Park in Abingdon, Oxfordshire last week as part of its £90 million investment programme, creating 75 new jobs. The store features produce from M&S's Select Farm partners, an in-store bakery, coffee counter, Hot Chicken Counter, and a Flower and Wine shop.",
+      "article_link": "https://www.getsurrey.co.uk/news/surrey-news/marks-and-spencer-stores-surrey-33883477",
+      "published_date": "2026-05-04 09:20:00"
+    },
+    {
+      "store_name": "Marks and Spencer (Farnham)",
+      "location": "Farnham, Surrey (Address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "open",
+      "short_description": "Marks and Spencer has opened a new food store in Farnham, Surrey as part of its £90 million investment programme.",
+      "article_link": "https://www.getsurrey.co.uk/news/surrey-news/marks-and-spencer-stores-surrey-33883477",
+      "published_date": "2026-05-04 09:20:00"
+    },
+    {
+      "store_name": "Marks and Spencer (Godalming)",
+      "location": "Godalming, Surrey (Address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "open (further opening anticipated this summer per article)",
+      "short_description": "Marks and Spencer has confirmed a new food store in Godalming, Surrey as part of the same expansion programme, with a further Surrey opening anticipated this summer.",
+      "article_link": "https://www.getsurrey.co.uk/news/surrey-news/marks-and-spencer-stores-surrey-33883477",
+      "published_date": "2026-05-04 09:20:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.msn.com/en-us/health/other/once-booming-cookie-chain-closes-all-stores-after-chapter-11-filing/ar-AA205iyb",
+      "published_date": "2026-05-04 09:06:58"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.theguardian.com/travel/2026/may/04/naples-italy-rione-sanita-neighbourhood",
+      "published_date": "2026-05-04 06:00:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://langleyadvancetimes.com/sponsored-content/the-official-jewellery-partner-of-team-canada-opens-new-store-in-langley/",
+      "published_date": "2026-05-04 04:48:02"
+    },
+    {
+      "store_name": "Smokey Bones (Hempfield)",
+      "location": "Hempfield, PA (Address not specified)",
+      "event_type": "Closing",
+      "event_date": "April 28, 2026",
+      "status": "closed",
+      "short_description": "All three remaining Smokey Bones locations in the Pittsburgh area closed on April 28, 2026 after parent company Fat Brands filed for bankruptcy. Customers reported no advance notice of the closures; gift cards are being treated as unsecured claims in the bankruptcy with little likelihood of recovery.",
+      "article_link": "https://www.cbsnews.com/pittsburgh/news/smokey-bones-pittsburgh-closed-gift-cards/",
+      "published_date": "2026-05-05 23:10:46"
+    },
+    {
+      "store_name": "Smokey Bones (Cranberry)",
+      "location": "Cranberry, PA (Address not specified)",
+      "event_type": "Closing",
+      "event_date": "April 28, 2026",
+      "status": "closed",
+      "short_description": "Same closure event as above — the Cranberry Township Smokey Bones closed April 28, 2026 as part of the nationwide shutdown.",
+      "article_link": "https://www.cbsnews.com/pittsburgh/news/smokey-bones-pittsburgh-closed-gift-cards/",
+      "published_date": "2026-05-05 23:10:46"
+    },
+    {
+      "store_name": "Smokey Bones (Pittsburgh Mills, Frazer)",
+      "location": "Pittsburgh Mills, Frazer, PA (Address not specified)",
+      "event_type": "Closing",
+      "event_date": "April 28, 2026",
+      "status": "closed",
+      "short_description": "Same closure event — the Smokey Bones at Pittsburgh Mills in Frazer closed April 28, 2026. A fourth Robinson Township location is also referenced as having closed approximately two to three weeks prior.",
+      "article_link": "https://www.cbsnews.com/pittsburgh/news/smokey-bones-pittsburgh-closed-gift-cards/",
+      "published_date": "2026-05-05 23:10:46"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.ebar.com/story/165967/News/News%20Briefs%3A%20Graton%20unveils%20resort%2C%20casino%20expansion",
+      "published_date": "2026-05-05 22:52:01"
+    },
+    {
+      "store_name": "RoadHouse Cinemas",
+      "location": "Former Desert Sky Cinema site, Duvall Mine Rd. (just west of I-19), Sahuarita, AZ (Address not specified)",
+      "event_type": "Opening",
+      "event_date": "Fall 2026",
+      "status": "plan to open this fall / just started a major remodel project",
+      "short_description": "RoadHouse Cinemas is undertaking a major remodel of the former Desert Sky Cinema site on Duvall Mine Rd. in Sahuarita, AZ, with plans to open in fall 2026 in time for the holiday movie season. The restaurant-cinema will feature luxury reclining seats and a new exterior mural by public artist Joe Pagac inspired by cowboys and western imagery.",
+      "article_link": "https://www.kgun9.com/news/community-inspired-journalism/sahuarita-and-green-valley-news/first-look-exclusive-updates-on-sahuarita-roadhouse-cinemas-tentative-opening-new-mural-artist-selected",
+      "published_date": "2026-05-05 22:08:20"
+    },
+    {
+      "store_name": "TownePlace Suites by Marriott Sidney",
+      "location": "Corner of Pat Bay Highway and Stirling Way, Sidney, BC, Canada (Address not specified)",
+      "event_type": "Opening",
+      "event_date": "May 4, 2026",
+      "status": "grand opening on May 4",
+      "short_description": "TownePlace Suites by Marriott Sidney held its grand opening on May 4, 2026 with a ribbon-cutting ceremony at the corner of the Pat Bay Highway and Stirling Way in Sidney, BC. The three-storey, 129-room extended-stay hotel is a $35 million development by the Ontario-based Kothari Group, featuring studio, one-bedroom, and two-bedroom suites with full kitchens.",
+      "article_link": "https://victoriabuzz.com/2026/05/sidneys-newest-hotel-is-now-open-with-a-new-restaurant-coming-soon-photos/",
+      "published_date": "2026-05-05 21:50:47"
+    },
+    {
+      "store_name": "Acuyo",
+      "location": "Alberni Street between Bute and Thurlow, Vancouver, BC, Canada (Address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "officially opening its doors",
+      "short_description": "Acuyo, an elevated Mexican restaurant founded by four partners with roots in Guadalajara, Mexico, has officially opened on the Alberni Street block in Vancouver. The restaurant focuses on authentic Mexican cuisine rooted in tradition, with Head Chef Rafael Chavez leading a menu that includes tableside guacamole and a selection of regional tacos.",
+      "article_link": "https://dailyhive.com/vancouver/acuyo-vancouver-2026",
+      "published_date": "2026-05-05 21:19:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://13wham.com/news/local/new-grocery-store-opens-in-ovid-after-devastating-big-m-fire",
+      "published_date": "2026-05-05 21:11:17"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://13wham.com/news/local/new-grocery-store-opens-in-ovid-ny-after-big-m-fire-providing-some-relief-in-a-food-desert-main-street-village-block-destroyed-seneca-county-finger-lakes",
+      "published_date": "2026-05-05 21:09:15"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://valorinternational.globo.com/business/news/2026/05/05/hotels-expand-amid-foreign-tourism-growth.ghtml",
+      "published_date": "2026-05-05 21:00:36"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.bizjournals.com/philadelphia/news/2026/05/05/village-whiskey-nashville-jose-garces.html",
+      "published_date": "2026-05-05 20:27:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.yourcentralvalley.com/news/new-poke-restaurant-clovis/",
+      "published_date": "2026-05-05 20:20:09"
+    },
+    {
+      "store_name": "Heydude",
+      "location": "1708 S. Congress Ave., Austin, TX",
+      "event_type": "Opening",
+      "event_date": "May 8–9, 2026 (opening celebration)",
+      "status": "opening / grand opening celebration May 8 and 9",
+      "short_description": "Casual footwear brand Heydude is opening its first-ever \"Icon store\" at 1708 S. Congress Ave. in Austin, TX, in the former location of Limbo Jewelry, Triple Z Threadz, and Dope Daughters. The 3,300-square-foot store carries the brand's largest product selection and features a stage for musical performances, with opening weekend festivities including complimentary food, beverages, and live music.",
+      "article_link": "https://austin.culturemap.com/news/fashion/heydude-opening-south-congress/",
+      "published_date": "2026-05-05 20:20:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.laughingplace.com/disney-parks/disney-cruise-line-expands-the-play-project-espn/",
+      "published_date": "2026-05-05 19:56:18"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://local12.com/news/local/shoppers-in-nky-will-soon-have-new-grocery-option-groceries-shop-store-publix-super-market-cold-spring-kentucky-alexandria-pike-grand-opening-date-food-snacks-drinks-liquor-beer-workers-working-job-opportunity-cincinnati",
+      "published_date": "2026-05-05 19:52:31"
     }
   ]
 }
