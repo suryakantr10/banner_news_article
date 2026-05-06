@@ -460,7 +460,11 @@ else:
     # ────────────────────────────────────────────────
     # Master file — accumulates all daily results
     # ────────────────────────────────────────────────
-    MASTER_FILE = STORE_NEWS_DIR / "banner_news_master.csv"
+    MASTER_BANNER_NEWS_FILE = Path("master_file")
+    MASTER_BANNER_NEWS_FILE.mkdir(parents=True, exist_ok=True)
+
+
+    MASTER_FILE = MASTER_BANNER_NEWS_FILE / "banner_news_master.csv"
 
     if all_rows:
         df_new = pd.DataFrame(all_rows)
