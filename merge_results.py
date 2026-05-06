@@ -49,9 +49,9 @@ with open(output_path, "w", encoding="utf-8") as f:
 print(f"Merged {len(merged)} unique articles → {output_path}")
 
 # ── Master file — accumulates all daily results ───────────────────────────────
-DAILY_DIR = Path("data/daily_news")
-DAILY_DIR.mkdir(parents=True, exist_ok=True)
-MASTER_FILE = DAILY_DIR / "daily_news_master.csv"
+MASTER_DIR = Path("master_file")
+MASTER_DIR.mkdir(parents=True, exist_ok=True)
+MASTER_FILE = MASTER_DIR / "daily_news_master.csv"
 
 today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 df_new = pd.DataFrame(merged)
