@@ -191,9 +191,12 @@ for i, row in enumerate(rows, 1):
 
     time.sleep(0.3)   # polite delay between article requests
 
-# ── Output directory (shared by daily CSV and master file) ───────────────────
+# ── Output directories ────────────────────────────────────────────────────────
 REST_DIR = Path("data/restaurant")
 REST_DIR.mkdir(parents=True, exist_ok=True)
+
+MASTER_DIR = Path("master_file")
+MASTER_DIR.mkdir(parents=True, exist_ok=True)
 
 # ── Save CSV ──────────────────────────────────────────────────────────────────
 today    = datetime.now().strftime("%Y-%m-%d")
@@ -214,7 +217,7 @@ with open("restaurant_latest.json", "w", encoding="utf-8") as f:
 print(f"✅ JSON saved → restaurant_latest.json ({len(rows)} records)")
 
 # ── Master file — accumulates all daily results ───────────────────────────────
-MASTER_FILE = REST_DIR / "restaurant_master.csv"
+MASTER_FILE = MASTER_DIR / "restaurant_master.csv"
 
 df_new = df.copy()
 df_new['Date_Appended'] = today

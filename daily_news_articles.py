@@ -1072,6 +1072,10 @@ If none, write: None
     DAILY_DIR = Path("data/daily_news")
     DAILY_DIR.mkdir(parents=True, exist_ok=True)
 
+    MASTER_DAILY_NEWS_FILE = Path("master_file")
+    MASTER_DAILY_NEWS_FILE.mkdir(parents=True, exist_ok=True)
+
+
     # ── Excel export ──────────────────────────────────────
     fname = DAILY_DIR / f"Retail_Update_{NOW_UTC.strftime('%Y%_m%d_%H%M')}{_suffix}.xlsx"
     with pd.ExcelWriter(fname, engine="openpyxl") as writer:
@@ -1082,7 +1086,7 @@ If none, write: None
             ws.column_dimensions[col_cells[0].column_letter].width = min(max_len + 2, 60)
 
     # ── Master file — accumulates all daily results ───────────────────────────
-    MASTER_FILE = DAILY_DIR / "daily_news_master.csv"
+    MASTER_FILE = MASTER_DAILY_NEWS_FILE / "daily_news_master.csv"
 
     df_new = df.copy()
     df_new['Date_Appended'] = NOW_UTC.strftime("%Y-%m-%d")
