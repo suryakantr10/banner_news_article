@@ -228,6 +228,9 @@ def main():
     CT_SCOOP_DIR = Path("data/ct_scoop")
     CT_SCOOP_DIR.mkdir(parents=True, exist_ok=True)
 
+    MASTER_CT_SCOOP_FILE = Path("master_file")
+    MASTER_CT_SCOOP_FILE.mkdir(parents=True, exist_ok=True)
+
     # Save to Excel (fallback to CSV if openpyxl is missing)
     export_path = CT_SCOOP_DIR / f"ct_scoop_links_{datetime.now().strftime('%Y-%m-%d')}.xlsx"
     try:
@@ -255,7 +258,7 @@ def main():
     print(f"Saved JSON to {json_path}")
 
     # ── Master file — accumulates all daily results ──────────────────────────
-    MASTER_FILE = CT_SCOOP_DIR / "ct_scoop_master.csv"
+    MASTER_FILE = MASTER_CT_SCOOP_FILE / "ct_scoop_master.csv"
 
     df_new = df.copy()
     df_new['Date_Appended'] = today.strftime("%Y-%m-%d")
