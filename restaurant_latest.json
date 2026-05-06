@@ -1,7 +1,25 @@
 {
-  "last_updated": "2026-05-05 23:47 UTC",
+  "last_updated": "2026-05-06 01:16 UTC",
   "total": 60,
   "data": [
+    {
+      "date": "May 05, 2026",
+      "url": "https://whatnow.com/houston/restaurants/laderach-chocolate-to-remodel-its-galleria-mall-location/",
+      "title": "Läderach Chocolate to Remodel Its Galleria Mall Location",
+      "address": "5135 W Alabama St, Houston, TX 77056"
+    },
+    {
+      "date": "May 05, 2026",
+      "url": "https://whatnow.com/dallas/restaurants/summer-moon-coffee-files-papers-for-new-dfw-location/",
+      "title": "Summer Moon Coffee Files Papers for New DFW Location",
+      "address": "4325 W University Dr #10, Prosper, TX 75078"
+    },
+    {
+      "date": "May 05, 2026",
+      "url": "https://whatnow.com/jacksonville/restaurants/amore-mio-builds-momentum-in-st-johns-county/",
+      "title": "Amore Mio Builds Momentum in St. John’s County",
+      "address": "4021 County Rd 210 Ste 3, St Johns, FL 32259"
+    },
     {
       "date": "May 05, 2026",
       "url": "https://whatnow.com/los-angeles/restaurants/16-handles-slated-to-join-san-fernando-valley-amid-entry-into-california/",
@@ -343,24 +361,6 @@
       "url": "https://whatnow.com/orlando/restaurants/new-eggdose-planned-on-west-colonial-drive-in-winter-garden/",
       "title": "New Eggdose Planned on West Colonial Drive in Winter Garden",
       "address": "12615 W Colonial Dr, Winter Garden, FL 34787"
-    },
-    {
-      "date": "May 01, 2026",
-      "url": "https://whatnow.com/boston/restaurants/phinista-cafe-bringing-vietnamese-french-fusion-fare-to-packards-corner/",
-      "title": "Phinista Cafe Bringing Vietnamese-French Fusion Fare to Packard's Corner",
-      "address": "1092 Commonwealth Ave, Boston, MA 02134"
-    },
-    {
-      "date": "May 01, 2026",
-      "url": "https://whatnow.com/orlando/restaurants/4-rivers-smokehouse-opening-in-orlando-international-airport/",
-      "title": "4 Rivers Smokehouse Opening in Orlando International Airport",
-      "address": "9102 Jeff Fuqua Blvd #1521, Orlando, FL 32827"
-    },
-    {
-      "date": "May 01, 2026",
-      "url": "https://whatnow.com/jacksonville/restaurants/m-shack-plans-expansion-to-second-location/",
-      "title": "M Shack Plans Expansion to Second Location",
-      "address": ""
     }
   ]
 }
