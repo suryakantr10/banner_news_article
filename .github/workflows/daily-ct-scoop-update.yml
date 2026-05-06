@@ -28,7 +28,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install selenium pandas python-dateutil openpyxl
+          pip install selenium pandas python-dateutil openpyxl supabase
 
       - name: Install Google Chrome Stable
         run: |
@@ -60,12 +60,19 @@ jobs:
           export GOOGLE_CHROME_BIN=/usr/bin/google-chrome-stable
           python ct_scoop_scraper.py
 
+      - name: Sync master file to Supabase
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+        run: python sync_to_supabase.py
+
       - name: Commit and push changes
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add ct_scoop_latest.json || true
           git add data/ct_scoop/ || true
+          git add master_file/ || true
           git diff --staged --quiet || git commit -m "Auto-update: Daily CT Scoop fetch $(date +'%Y-%m-%d')"
           git pull --rebase origin main
           git push origin main

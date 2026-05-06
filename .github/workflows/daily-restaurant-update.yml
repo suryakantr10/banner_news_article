@@ -33,10 +33,16 @@ jobs:
       - name: Install Python dependencies
         run: |
           pip install --upgrade pip
-          pip install selenium beautifulsoup4 requests pandas openpyxl webdriver-manager
+          pip install selenium beautifulsoup4 requests pandas openpyxl webdriver-manager supabase
 
       - name: Run restaurant scraper
         run: python restaurant_scraper.py
+
+      - name: Sync master file to Supabase
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+        run: python sync_to_supabase.py
 
       - name: Commit and push JSON + CSV
         run: |
@@ -45,6 +51,7 @@ jobs:
 
           git add restaurant_latest.json || true
           git add data/restaurant/ || true
+          git add master_file/ || true
 
           if git diff --cached --quiet; then
             echo "No changes to commit"
