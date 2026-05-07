@@ -1,10 +1,10 @@
 {
-  "generated": "2026-05-06T23:02:04.910191+00:00",
+  "generated": "2026-05-07T05:36:48.341174+00:00",
   "articles": [
     {
       "status": "Opening",
       "industry": "Hospitality",
-      "region": "Canada",
+      "region": "USA",
       "title": "Essentia Hotels & Resorts announces its 81-key Nagpur property open for business",
       "source": "ET Hospitality",
       "published_date": "2026-05-06 12:30:00",
@@ -26,7 +26,7 @@
     {
       "status": "Opening",
       "industry": "Grocery",
-      "region": "Canada",
+      "region": "USA",
       "title": "Budget supermarket chain gives update on new store plan",
       "source": "The York Press",
       "published_date": "2026-05-05 11:07:38",
@@ -35,24 +35,57 @@
       "relevance_score": 8
     },
     {
+      "status": "Closing",
+      "industry": "Home Improvement / Building Materials",
+      "region": "Canada",
+      "title": "SCHEELS Home and Hardware Store closing in Fargo",
+      "source": "Valley News Live",
+      "published_date": "2026-05-07 03:07:00",
+      "direct_link": "https://www.valleynewslive.com/2026/05/07/scheels-home-hardware-store-closing-fargo/",
+      "keyword": "store closing",
+      "relevance_score": 7
+    },
+    {
       "status": "Opening",
-      "industry": "Health / Beauty",
+      "industry": "Gyms / Fitness",
       "region": "USA",
-      "title": "Hello Gorgeous Blowouts Now Open and Accepting New Clients at the Salon and Spa Galleria Azle in Azle, Texas",
-      "source": "24-7 Press Release Newswire",
-      "published_date": "2026-05-05 07:03:07",
-      "direct_link": "https://www.24-7pressrelease.com/press-release/534485/hello-gorgeous-blowouts-now-open-and-accepting-new-clients-at-the-salon-and-spa-galleria-azle-in-azle-texas",
+      "title": "Medford: Rogue Rock Gym is now open after being closed for months",
+      "source": "KDRV",
+      "published_date": "2026-05-07 00:35:00",
+      "direct_link": "https://www.kdrv.com/video/medford-rogue-rock-gym-is-now-open-after-being-closed-for-months/video_40bcaf94-6d0b-5b49-a6ad-5e4ca043a931.html",
       "keyword": "now open",
-      "relevance_score": 8
+      "relevance_score": 7
+    },
+    {
+      "status": "Opening",
+      "industry": "Hospitality",
+      "region": "USA",
+      "title": "‘The No Doubt Experience’ now open at The Venetian Resort Las Vegas",
+      "source": "KLAS 8 News Now",
+      "published_date": "2026-05-06 23:48:16",
+      "direct_link": "https://www.8newsnow.com/news/las-vegas-now/the-no-doubt-experience-now-open-at-the-venetian-resort-las-vegas/",
+      "keyword": "now open",
+      "relevance_score": 7
+    },
+    {
+      "status": "Opening",
+      "industry": "Restaurants",
+      "region": "USA",
+      "title": "KFC gives Bradenton the ‘Saucy!’ treatment with new restaurant opening soon",
+      "source": "AOL.com",
+      "published_date": "2026-05-06 22:41:46",
+      "direct_link": "https://www.aol.com/news/kfc-gives-bradenton-saucy-treatment-095000024.html",
+      "keyword": "opening soon",
+      "relevance_score": 7
     },
     {
       "status": "Opening",
       "industry": "Hospitality",
       "region": "Canada",
       "title": "Rio Grande Resort to host grand opening in July",
-      "source": "The Del Norte Prospector",
+      "source": "The Monte Vista Journal",
       "published_date": "2026-05-06 20:54:16",
-      "direct_link": "http://www.delnorteprospector.com/stories/rio-grande-resort-to-host-grand-opening-in-july,134131",
+      "direct_link": "https://montevistajournal.com/stories/rio-grande-resort-to-host-grand-opening-in-july,134131",
       "keyword": "grand opening",
       "relevance_score": 7
     },
@@ -114,7 +147,7 @@
     {
       "status": "Closing",
       "industry": "Apparel",
-      "region": "Canada",
+      "region": "USA",
       "title": "Iconic clothing store shutters more locations",
       "source": "PennLive.com",
       "published_date": "2026-05-06 17:00:00",
@@ -125,12 +158,23 @@
     {
       "status": "Opening",
       "industry": "Grocery",
-      "region": "Canada",
+      "region": "USA",
       "title": "Supermarket applies to sell alcohol 24 hours a day at new store",
       "source": "Bucks Free Press",
       "published_date": "2026-05-06 15:00:00",
       "direct_link": "https://www.bucksfreepress.co.uk/news/26082931.high-wycombe-iceland-applies-24-7-alcohol-sale-licence/",
       "keyword": "new store",
+      "relevance_score": 7
+    },
+    {
+      "status": "Opening",
+      "industry": "Hospitality",
+      "region": "Canada",
+      "title": "Cinder + Salt celebrates grand opening at The Charter Hotel Seattle",
+      "source": "Seattle Refined",
+      "published_date": "2026-05-06 13:10:41",
+      "direct_link": "https://seattlerefined.com/lifestyle/cinder-salt-coastal-kitchen-the-charter-hotel-seattle-curio-collection-downtown-pike-place-market-elliott-bay-dining-drinks-pnw",
+      "keyword": "grand opening",
       "relevance_score": 7
     },
     {
@@ -149,16 +193,16 @@
       "industry": "Restaurants",
       "region": "USA",
       "title": "Four Oxfordshire restaurants at risk of permanent closure with jobs at risk",
-      "source": "Oxford Mail",
+      "source": "Herald Series",
       "published_date": "2026-05-06 10:17:00",
-      "direct_link": "https://www.oxfordmail.co.uk/news/26081940.four-oxfordshire-restaurants-risk-closure-jobs-risk/",
+      "direct_link": "https://www.heraldseries.co.uk/news/26081940.four-oxfordshire-restaurants-risk-closure-jobs-risk/",
       "keyword": "permanent closure",
       "relevance_score": 7
     },
     {
       "status": "Closing",
       "industry": "Sporting Goods",
-      "region": "USA",
+      "region": "Canada",
       "title": "Outdoor retailer closes locations, facing bankruptcy after 60 years in business",
       "source": "Lehighvalleylive.com",
       "published_date": "2026-05-06 09:00:00",
@@ -178,13 +222,24 @@
       "relevance_score": 7
     },
     {
+      "status": "Opening",
+      "industry": "Hospitality",
+      "region": "Canada",
+      "title": "Looking back in Benzie: Sells Hotel hosts grand opening",
+      "source": "MSN",
+      "published_date": "2026-05-06 07:50:34",
+      "direct_link": "https://www.msn.com/en-us/travel/article/looking-back-in-benzie-sells-hotel-hosts-grand-opening/ar-AA2257E5?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
+      "keyword": "grand opening",
+      "relevance_score": 7
+    },
+    {
       "status": "Closing",
       "industry": "Apparel",
-      "region": "Canada",
+      "region": "USA",
       "title": "Upstate cowboy apparel store closing after 30 years",
-      "source": "FOX5 Vegas",
+      "source": "FOX Carolina News",
       "published_date": "2026-05-06 03:29:00",
-      "direct_link": "https://www.fox5vegas.com/video/2026/05/06/upstate-cowboy-apparel-store-closing-after-30-years/",
+      "direct_link": "https://www.foxcarolina.com/video/2026/05/06/upstate-cowboy-apparel-store-closing-after-30-years/",
       "keyword": "store closing",
       "relevance_score": 7
     },
@@ -212,28 +267,6 @@
     },
     {
       "status": "Closing",
-      "industry": "Restaurants",
-      "region": "USA",
-      "title": "1 York County Hardee's restaurant closed, another closing soon",
-      "source": "AOL.com",
-      "published_date": "2026-05-06 02:15:17",
-      "direct_link": "https://www.aol.com/articles/1-york-county-hardees-restaurant-180927590.html",
-      "keyword": "closing soon",
-      "relevance_score": 7
-    },
-    {
-      "status": "Opening",
-      "industry": "Hospitality",
-      "region": "Canada",
-      "title": "Cinder + Salt celebrates grand opening at The Charter Hotel Seattle",
-      "source": "Seattle Refined",
-      "published_date": "2026-05-06 01:55:39",
-      "direct_link": "https://seattlerefined.com/lifestyle/cinder-salt-coastal-kitchen-the-charter-hotel-seattle-curio-collection-downtown-pike-place-market-elliott-bay-dining-drinks-pnw",
-      "keyword": "grand opening",
-      "relevance_score": 7
-    },
-    {
-      "status": "Closing",
       "industry": "Jewelry & Accessories",
       "region": "USA",
       "title": "Doylestown jewelry store closing as owner retires after 20 years",
@@ -241,17 +274,6 @@
       "published_date": "2026-05-05 23:27:15",
       "direct_link": "https://www.msn.com/en-us/money/companies/doylestown-jewelry-store-closing-as-owner-retires-after-20-years/ar-AA21F3nP?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
       "keyword": "store closing",
-      "relevance_score": 7
-    },
-    {
-      "status": "Opening",
-      "industry": "Restaurants",
-      "region": "USA",
-      "title": "Sidney’s newest hotel is now open with a new restaurant coming soon (PHOTOS)",
-      "source": "Victoria Buzz",
-      "published_date": "2026-05-05 21:50:47",
-      "direct_link": "https://victoriabuzz.com/2026/05/sidneys-newest-hotel-is-now-open-with-a-new-restaurant-coming-soon-photos/",
-      "keyword": "now open",
       "relevance_score": 7
     },
     {
@@ -332,31 +354,9 @@
       "relevance_score": 7
     },
     {
-      "status": "Opening",
-      "industry": "Restaurants",
-      "region": "USA",
-      "title": "Wild Ocean Sushi and Bar restaurant now open in Colonial Heights",
-      "source": "AOL.com",
-      "published_date": "2026-05-05 16:46:00",
-      "direct_link": "https://www.aol.com/news/wild-ocean-sushi-bar-restaurant-144703531.html",
-      "keyword": "now open",
-      "relevance_score": 7
-    },
-    {
-      "status": "Opening",
-      "industry": "Restaurants",
-      "region": "USA",
-      "title": "KFC gives Bradenton the ‘Saucy!’ treatment with new restaurant opening soon",
-      "source": "AOL.com",
-      "published_date": "2026-05-05 15:43:24",
-      "direct_link": "https://www.aol.com/news/kfc-gives-bradenton-saucy-treatment-095000024.html",
-      "keyword": "opening soon",
-      "relevance_score": 7
-    },
-    {
       "status": "Closing",
       "industry": "Restaurants",
-      "region": "Canada",
+      "region": "USA",
       "title": "Popular Asian restaurant chain closing all locations in Canada, including 6 in Ontario",
       "source": "Simcoe.com",
       "published_date": "2026-05-05 15:32:00",
@@ -367,7 +367,7 @@
     {
       "status": "Opening",
       "industry": "Health / Beauty",
-      "region": "Canada",
+      "region": "USA",
       "title": "Korean beauty retailer signs for new store in Bath",
       "source": "BE News",
       "published_date": "2026-05-05 15:09:02",
@@ -387,25 +387,25 @@
       "relevance_score": 7
     },
     {
-      "status": "Closing",
+      "status": "Opening",
       "industry": "Restaurants",
       "region": "USA",
+      "title": "Wild Ocean Sushi and Bar restaurant now open in Colonial Heights",
+      "source": "The Progress Index",
+      "published_date": "2026-05-05 14:47:03",
+      "direct_link": "https://www.progress-index.com/videos/entertainment/dining/2026/05/05/wild-ocean-sushi-and-bar-colonial-heights-restaurant-all-you-can-eat/89944333007/",
+      "keyword": "now open",
+      "relevance_score": 7
+    },
+    {
+      "status": "Closing",
+      "industry": "Restaurants",
+      "region": "Canada",
       "title": "Restaurant chain with 3,193 locations shut down after bankruptcy filing",
       "source": "MSN",
       "published_date": "2026-05-05 14:19:41",
       "direct_link": "https://www.msn.com/en-us/money/companies/restaurant-chain-with-3-193-locations-shut-down-after-bankruptcy-filing/ss-AA1ZVfWR?ocid=m402lp%E2%80%8B",
       "keyword": "bankruptcy",
-      "relevance_score": 7
-    },
-    {
-      "status": "Opening",
-      "industry": "Retail REITs",
-      "region": "USA",
-      "title": "gorjana Jewelry Brand Now Open at Lakeside Shopping Center",
-      "source": "New Orleans Magazine",
-      "published_date": "2026-05-05 14:07:00",
-      "direct_link": "https://www.myneworleans.com/laguna-beach-jewelry-brand-now-open-in-lakeside-shopping-center/",
-      "keyword": "now open",
       "relevance_score": 7
     },
     {
@@ -432,14 +432,47 @@
     },
     {
       "status": "Opening",
-      "industry": "Restaurants",
+      "industry": "Specialty / Other",
       "region": "USA",
-      "title": "Pascucci Italian Restaurant Prepares for New Location, New Name, & New Concept",
-      "source": "News Channel 3-12",
-      "published_date": "2026-05-05 02:02:30",
-      "direct_link": "https://keyt.com/news/money-and-business/2026/05/04/pascucci-italian-restaurant-prepares-for-new-name-and-concept/",
-      "keyword": "new location",
-      "relevance_score": 7
+      "title": "New pediatric behavioral health hospital open for business in Taylorsville",
+      "source": "KUTV",
+      "published_date": "2026-05-07 04:35:26",
+      "direct_link": "https://kutv.com/features/pay-it-forward/new-pediatric-behavioral-health-hospital-open-for-business-in-taylorsville",
+      "keyword": "open for business",
+      "relevance_score": 5
+    },
+    {
+      "status": "Closing",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "Early bird tickets closing soon for Royal Navy event",
+      "source": "Daily Echo",
+      "published_date": "2026-05-07 02:30:00",
+      "direct_link": "https://www.dailyecho.co.uk/news/26082943.early-bird-tickets-closing-soon-hms-collingwood-event/",
+      "keyword": "closing soon",
+      "relevance_score": 5
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "MPAC Breaks Ground on Expansion and Restoration Project",
+      "source": "NewJerseyStage.com",
+      "published_date": "2026-05-06 23:07:59",
+      "direct_link": "https://www.newjerseystage.com/articles2/2026/05/06/mpac-breaks-ground-on-expansion-and-restoration-project/",
+      "keyword": "breaks ground",
+      "relevance_score": 5
+    },
+    {
+      "status": "Closing",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "Members of Maryland's congressional delegation want answers about Apple store closing",
+      "source": "CBS News",
+      "published_date": "2026-05-06 22:49:00",
+      "direct_link": "https://www.cbsnews.com/baltimore/video/members-of-marylands-congressional-delegation-want-answers-about-apple-store-closing/",
+      "keyword": "store closing",
+      "relevance_score": 5
     },
     {
       "status": "Opening",
@@ -481,7 +514,7 @@
       "title": "Nordstrom Rack Plans To Open New South Bay Store",
       "source": "Patch",
       "published_date": "2026-05-06 20:59:26",
-      "direct_link": "https://patch.com/california/palosverdes/nordstrom-rack-plans-open-new-south-bay-store",
+      "direct_link": "https://patch.com/california/palosverdes/amp/34072429/nordstrom-rack-plans-to-open-new-south-bay-store",
       "keyword": "plans to open",
       "relevance_score": 5
     },
@@ -522,6 +555,17 @@
       "status": "Opening",
       "industry": "Specialty / Other",
       "region": "USA",
+      "title": "Burlington to open over two dozen new stores across country in May",
+      "source": "AOL.com",
+      "published_date": "2026-05-06 19:38:56",
+      "direct_link": "https://www.aol.com/articles/burlington-open-over-two-dozen-193856123.html",
+      "keyword": "new store",
+      "relevance_score": 5
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "USA",
       "title": "Wells Fargo now open in Georgetown's Parmer Ranch Marketplace",
       "source": "Community Impact | News",
       "published_date": "2026-05-06 19:38:00",
@@ -555,22 +599,22 @@
       "status": "Opening",
       "industry": "Specialty / Other",
       "region": "USA",
-      "title": "Jersey Mike’s franchisee is scouting Pittsfield for a potential new location",
-      "source": "The Berkshire Eagle",
-      "published_date": "2026-05-06 19:00:00",
-      "direct_link": "https://www.berkshireeagle.com/business/jerseys-mikes-possible-opening-pittsfield/article_2409e5f6-7f01-4351-a5ed-667e233a9862.html",
-      "keyword": "new location",
-      "relevance_score": 5
-    },
-    {
-      "status": "Opening",
-      "industry": "Specialty / Other",
-      "region": "Canada",
       "title": "The Hub on Broadway is open for business in Alexandria",
       "source": "Alexandria Echo Press",
       "published_date": "2026-05-06 18:11:51",
       "direct_link": "https://www.echopress.com/news/the-hub-on-broadway-is-open-for-business-in-alexandria",
       "keyword": "open for business",
+      "relevance_score": 5
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "New Store Sells World Of Snacks",
+      "source": "WilmingtonBiz",
+      "published_date": "2026-05-06 18:08:51",
+      "direct_link": "https://www.wilmingtonbiz.com/restaurants/2026/05/06/new_store_sells_world_of_snacks/27470",
+      "keyword": "new store",
       "relevance_score": 5
     },
     {
@@ -587,12 +631,23 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
-      "title": "New Store Sells World Of Snacks",
-      "source": "WilmingtonBiz",
-      "published_date": "2026-05-06 17:09:51",
-      "direct_link": "https://www.wilmingtonbiz.com/restaurants/2026/05/06/new_store_sells_world_of_snacks/27470",
-      "keyword": "new store",
+      "region": "Canada",
+      "title": "Citizens Live at the Wylie Unveils Grand Opening Lineup With Wiz Khalifa, Sting, GloRilla and More",
+      "source": "TicketNews",
+      "published_date": "2026-05-06 17:30:47",
+      "direct_link": "https://www.ticketnews.com/2026/03/citizens-live-at-the-wylie-unveils-grand-opening-lineup-with-wiz-khalifa-sting-glorilla-and-more/",
+      "keyword": "grand opening",
+      "relevance_score": 5
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "Canada",
+      "title": "THE DISH: Sarap Filipino BBQ & Grill to hold grand opening",
+      "source": "Bakersfield.com",
+      "published_date": "2026-05-06 17:15:00",
+      "direct_link": "https://www.bakersfield.com/entertainment/food/the-dish-sarap-filipino-bbq-grill-to-hold-grand-opening/article_74909e92-0de4-4a40-97c3-58c51da26c84.amp.html",
+      "keyword": "grand opening",
       "relevance_score": 5
     },
     {
@@ -618,6 +673,17 @@
       "relevance_score": 5
     },
     {
+      "status": "Closing",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "Mambo Seafood stuns by closing all locations in shocking San Antonio exit",
+      "source": "Yahoo",
+      "published_date": "2026-05-06 15:51:33",
+      "direct_link": "https://www.yahoo.com/news/articles/mambo-seafood-stuns-closing-locations-155133698.html",
+      "keyword": "closing all locations",
+      "relevance_score": 5
+    },
+    {
       "status": "Opening",
       "industry": "Specialty / Other",
       "region": "USA",
@@ -629,20 +695,20 @@
       "relevance_score": 5
     },
     {
-      "status": "Closing",
+      "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "Canada",
-      "title": "Mambo Seafood stuns by closing all locations in shocking San Antonio exit",
-      "source": "MySA",
-      "published_date": "2026-05-06 15:01:22",
-      "direct_link": "https://www.mysanantonio.com/food/article/mambo-seafood-san-antonio-22244554.php",
-      "keyword": "closing all locations",
+      "region": "USA",
+      "title": "Bi-Rite Market Plans New Location in the Richmond District; Brianne O'Leary Gagnon and Sam Mogannam Discuss",
+      "source": "Deli Market News",
+      "published_date": "2026-05-06 15:35:39",
+      "direct_link": "https://www.delimarketnews.com/whats-store/bi-rite-market-plans-new-location-richmond-district-brianne-oleary-gagnon-and-sam-mogannam-discuss/deli-staff/wed-05062026-0835/21485",
+      "keyword": "new location",
       "relevance_score": 5
     },
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "Publix Super Markets executes lease on new store in Yorktown, Va.",
       "source": "Drug Store News",
       "published_date": "2026-05-06 14:57:15",
@@ -653,7 +719,29 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "Canada",
+      "region": "USA",
+      "title": "VenHub expands production facility, adds new store locations",
+      "source": "Investing.com UK",
+      "published_date": "2026-05-06 14:28:57",
+      "direct_link": "https://m.uk.investing.com/news/stock-market-news/venhub-expands-production-facility-adds-new-store-locations-93CH-4653721?ampMode=1",
+      "keyword": "new store",
+      "relevance_score": 5
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "Now Open: Mayfair’s New Contemporary Japanese Dining Destination, MA/NA",
+      "source": "Hospitality & Catering News",
+      "published_date": "2026-05-06 14:25:42",
+      "direct_link": "https://www.hospitalityandcateringnews.com/2026/05/now-open-mayfairs-new-contemporary-japanese-dining-destination-ma-na/",
+      "keyword": "now open",
+      "relevance_score": 5
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "USA",
       "title": "Predicting Soft Opening Dates for Rock 'n' Roller Coaster Starring The Muppets & Soarin' Across America",
       "source": "BlogMickey.com",
       "published_date": "2026-05-06 14:09:06",
@@ -664,7 +752,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "DigiPlus confirms interest in expanding to “adjacent and complementary” gaming segments",
       "source": "CDC Gaming",
       "published_date": "2026-05-06 13:54:08",
@@ -675,12 +763,23 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "Canada",
+      "region": "USA",
       "title": "Dierbergs opens new store in University City",
       "source": "KSDK",
       "published_date": "2026-05-06 12:52:00",
       "direct_link": "https://www.ksdk.com/video/news/dierbergs-opens-new-store-in-university-city/63-1c7fa9d8-27ba-4aae-805e-e55b7fcf3288",
       "keyword": "new store",
+      "relevance_score": 5
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "JPS breaks ground on new public hospital in Fort Worth, part of $2.5 billion expansion project",
+      "source": "MSN",
+      "published_date": "2026-05-06 12:09:15",
+      "direct_link": "https://www.msn.com/en-us/money/realestate/jps-breaks-ground-on-new-public-hospital-in-fort-worth-part-of-2-5-billion-expansion-project/ar-AA214Flo",
+      "keyword": "breaks ground",
       "relevance_score": 5
     },
     {
@@ -698,17 +797,6 @@
       "status": "Opening",
       "industry": "Specialty / Other",
       "region": "USA",
-      "title": "VenHub expands production facility, adds new store locations By Investing.com",
-      "source": "Investing.com UK",
-      "published_date": "2026-05-06 11:38:00",
-      "direct_link": "https://uk.investing.com/news/stock-market-news/venhub-expands-production-facility-adds-new-store-locations-93CH-4653721",
-      "keyword": "new store",
-      "relevance_score": 5
-    },
-    {
-      "status": "Opening",
-      "industry": "Specialty / Other",
-      "region": "USA",
       "title": "Open for business: Arcadia businesses frustrated by SR 70 construction",
       "source": "WINK News",
       "published_date": "2026-05-06 11:07:00",
@@ -719,7 +807,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "Canada",
+      "region": "USA",
       "title": "Open For Business: A Tale of Two Kingstons",
       "source": "Shawangunk Journal",
       "published_date": "2026-05-06 10:04:34",
@@ -741,7 +829,7 @@
     {
       "status": "Closing",
       "industry": "Specialty / Other",
-      "region": "Canada",
+      "region": "USA",
       "title": "Seaside 7-Eleven to close as company shutters hundreds of North America stores",
       "source": "MSN",
       "published_date": "2026-05-06 09:27:53",
@@ -752,12 +840,34 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "Canada",
+      "region": "USA",
+      "title": "Legendary Jersey Shore nightclub expanding to 9 bars with new rooftop space",
+      "source": "MSN",
+      "published_date": "2026-05-06 08:59:08",
+      "direct_link": "https://www.msn.com/en-us/travel/tripideas/legendary-jersey-shore-nightclub-expanding-to-9-bars-with-new-rooftop-space/ar-AA21tbHK?ocid=BingNewsVerp&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
+      "keyword": "expanding to",
+      "relevance_score": 5
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "USA",
       "title": "Shakers Public House owner plans to open a tavern in Grove City",
       "source": "AOL.com",
       "published_date": "2026-05-06 08:16:32",
       "direct_link": "https://www.aol.com/articles/shakers-public-house-owner-plans-182912804.html",
       "keyword": "plans to open",
+      "relevance_score": 5
+    },
+    {
+      "status": "Closing",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "Historic candy store chain closing all locations after 141 years",
+      "source": "MSN",
+      "published_date": "2026-05-06 08:12:18",
+      "direct_link": "https://www.msn.com/en-us/health/healthtrending/historic-candy-store-chain-closing-all-locations-after-141-years/ar-AA220N3X?cvid=69f24cb445574bdeaa86bec52055c1ad&ocid=zdhp",
+      "keyword": "closing all locations",
       "relevance_score": 5
     },
     {
@@ -807,7 +917,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "Canada",
+      "region": "USA",
       "title": "New Buc-ee’s does $1 million on day one, their biggest grand opening ever",
       "source": "MSN",
       "published_date": "2026-05-06 03:43:02",
@@ -818,7 +928,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "Canada",
+      "region": "USA",
       "title": "Superdrug to open new store in Cwmbran Retail Park tomorrow",
       "source": "South Wales Argus",
       "published_date": "2026-05-06 03:00:00",
@@ -851,12 +961,23 @@
     {
       "status": "Closing",
       "industry": "Specialty / Other",
-      "region": "Canada",
+      "region": "USA",
       "title": "Most Kern County Rite Aid stores to close amid latest bankruptcy filing",
       "source": "MSN",
       "published_date": "2026-05-05 23:40:50",
       "direct_link": "https://www.msn.com/en-us/money/companies/most-kern-county-rite-aid-stores-to-close-amid-latest-bankruptcy-filing/ar-AA1GPvVd?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
       "keyword": "bankruptcy",
+      "relevance_score": 5
+    },
+    {
+      "status": "Closing",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "Beloved barbecue chain closing locations nationwide following bankruptcy filing",
+      "source": "MSN",
+      "published_date": "2026-05-05 22:25:44",
+      "direct_link": "https://www.msn.com/en-us/money/companies/beloved-barbecue-chain-closing-locations-nationwide-following-bankruptcy-filing/ar-AA22iB8s?gemSnapshotKey=GME157254E-snapshot-3&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
+      "keyword": "closing locations",
       "relevance_score": 5
     },
     {
@@ -929,17 +1050,6 @@
       "status": "Opening",
       "industry": "Specialty / Other",
       "region": "Canada",
-      "title": "Citizens Live at the Wylie Unveils Grand Opening Lineup With Wiz Khalifa, Sting, GloRilla and More",
-      "source": "TicketNews",
-      "published_date": "2026-05-05 20:09:36",
-      "direct_link": "https://www.ticketnews.com/2026/03/citizens-live-at-the-wylie-unveils-grand-opening-lineup-with-wiz-khalifa-sting-glorilla-and-more/",
-      "keyword": "grand opening",
-      "relevance_score": 5
-    },
-    {
-      "status": "Opening",
-      "industry": "Specialty / Other",
-      "region": "USA",
       "title": "Abilities Unlimited Celebrates Grand Opening of New Burke Avenue Location in Jonesboro",
       "source": "Jonesboro Right Now",
       "published_date": "2026-05-05 19:43:05",
@@ -963,7 +1073,7 @@
       "industry": "Specialty / Other",
       "region": "USA",
       "title": "Popular restaurant chain is opening a new location in Raleigh area. Here’s when",
-      "source": "News & Observer",
+      "source": "Raleigh News & Observer",
       "published_date": "2026-05-05 18:55:16",
       "direct_link": "https://www.newsobserver.com/living/food-drink/article315638652.html",
       "keyword": "new location",
@@ -972,7 +1082,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "Popular Union Square shawarma spot is expanding to a new S.F. neighborhood, and possibly beyond",
       "source": "The Business Journals",
       "published_date": "2026-05-05 18:52:00",
@@ -994,7 +1104,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "Canada",
+      "region": "USA",
       "title": "Ferrari-150-themed Piccolo's Pizza by Frank holds soft opening in Vestal",
       "source": "Press & Sun-Bulletin",
       "published_date": "2026-05-05 18:10:55",
@@ -1060,17 +1170,6 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
-      "title": "Ukraine open for business",
-      "source": "open4business.com.ua",
-      "published_date": "2026-05-05 15:52:07",
-      "direct_link": "https://open4business.com.ua/en/tag/monty_python_and_the_holy_grail/",
-      "keyword": "open for business",
-      "relevance_score": 5
-    },
-    {
-      "status": "Opening",
-      "industry": "Specialty / Other",
       "region": "Canada",
       "title": "Sabai Thai Street Food Grand Opening in SoDo May 18",
       "source": "Bungalower",
@@ -1082,7 +1181,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "Boundless Matro Boutique Village Celebrates Grand Opening",
       "source": "Retail & Leisure International",
       "published_date": "2026-05-05 15:38:02",
@@ -1137,7 +1236,7 @@
     {
       "status": "Opening",
       "industry": "Grocery",
-      "region": "Canada",
+      "region": "USA",
       "title": "Supermarket Chain Suzala Plans Expansion In Tbilisi",
       "source": "BM.GE",
       "published_date": "2026-05-05 13:47:50",
@@ -1170,7 +1269,7 @@
     {
       "status": "Closing",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "Golden Corral franchisees close locations, no bankruptcy",
       "source": "MSN",
       "published_date": "2026-05-05 12:22:12",
@@ -1201,14 +1300,14 @@
       "relevance_score": 5
     },
     {
-      "status": "Closing",
+      "status": "Opening",
       "industry": "Specialty / Other",
       "region": "USA",
-      "title": "Beloved barbecue chain closing locations nationwide following bankruptcy filing",
-      "source": "MSN",
-      "published_date": "2026-05-05 10:45:05",
-      "direct_link": "https://www.msn.com/en-us/money/companies/beloved-barbecue-chain-closing-locations-nationwide-following-bankruptcy-filing/ar-AA22iB8s?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
-      "keyword": "closing locations",
+      "title": "Meet the couple building a mini-empire of queer-focused bars. Now open: Fathom",
+      "source": "WBEZ Chicago",
+      "published_date": "2026-05-05 10:35:00",
+      "direct_link": "https://www.wbez.org/food-drink/2026/05/05/dorothy-downstairs-fathom-bar-queer-owned-business-chicago",
+      "keyword": "now open",
       "relevance_score": 5
     },
     {
@@ -1225,17 +1324,6 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "Canada",
-      "title": "New Dunkin’ in Fairlawn to celebrate grand opening with free coffee, donuts",
-      "source": "WSLS",
-      "published_date": "2026-05-05 08:41:47",
-      "direct_link": "https://www.wsls.com/news/local/2026/05/05/new-dunkin-in-fairlawn-celebrates-opening-with-free-coffee-donuts/",
-      "keyword": "grand opening",
-      "relevance_score": 5
-    },
-    {
-      "status": "Opening",
-      "industry": "Specialty / Other",
       "region": "USA",
       "title": "Sarah Ferguson 'eyes new location' as she plots 'escape route'",
       "source": "Daily Express",
@@ -1246,8 +1334,19 @@
     },
     {
       "status": "Opening",
-      "industry": "Specialty / Other",
+      "industry": "Health / Beauty",
       "region": "USA",
+      "title": "Hello Gorgeous Blowouts Now Open and Accepting New Clients at the Salon and Spa Galleria Azle in Azle, Texas",
+      "source": "24-7 Press Release Newswire",
+      "published_date": "2026-05-05 07:03:07",
+      "direct_link": "https://www.24-7pressrelease.com/press-release/534485/hello-gorgeous-blowouts-now-open-and-accepting-new-clients-at-the-salon-and-spa-galleria-azle-in-azle-texas",
+      "keyword": "grand opening",
+      "relevance_score": 5
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "Canada",
       "title": "New Xfinity Stores Coming Soon to Calumet City and Oak Lawn",
       "source": "Comcast Corporation",
       "published_date": "2026-05-05 07:00:00",
@@ -1259,6 +1358,17 @@
       "status": "Closing",
       "industry": "Specialty / Other",
       "region": "USA",
+      "title": "Bloomberg: Tops stores are close to bankruptcy",
+      "source": "The Daily Gazette",
+      "published_date": "2026-05-05 07:00:00",
+      "direct_link": "https://www.dailygazette.com/ade/news/business/bloomberg-tops-stores-are-close-to-bankruptcy/article_a4e3de5e-a9de-54a8-976e-6b834258cf3c.html",
+      "keyword": "bankruptcy",
+      "relevance_score": 5
+    },
+    {
+      "status": "Closing",
+      "industry": "Specialty / Other",
+      "region": "Canada",
       "title": "Beloved candy store Lammes abruptly closing all locations after 141 years",
       "source": "MSN",
       "published_date": "2026-05-05 05:20:05",
@@ -1290,68 +1400,112 @@
     },
     {
       "status": "Closing",
-      "industry": "Specialty / Other",
+      "industry": "Restaurants",
       "region": "USA",
-      "title": "Say goodbye: Beloved BBQ chain quietly closes all locations following bankruptcy",
+      "title": "Figs, the quaint BYOB in Fairmount, is closing after 25 years, and a new restaurant is moving in",
       "source": "MSN",
-      "published_date": "2026-05-05 04:43:40",
-      "direct_link": "https://www.msn.com/en-us/money/companies/say-goodbye-beloved-bbq-chain-quietly-closes-all-locations-following-bankruptcy/ar-AA226Hgs?gemSnapshotKey=GME157254E-snapshot-3&uxmode=ruby&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
-      "keyword": "bankruptcy",
-      "relevance_score": 5
-    },
-    {
-      "status": "Opening",
-      "industry": "Specialty / Other",
-      "region": "USA",
-      "title": "With KC Streetcar Riverfront extension opening soon, businesses hope to benefit",
-      "source": "KCTV",
-      "published_date": "2026-05-05 03:26:00",
-      "direct_link": "https://www.kctv5.com/2026/05/05/with-kc-streetcar-riverfront-extension-opening-soon-businesses-hope-benefit/",
-      "keyword": "opening soon",
-      "relevance_score": 5
-    },
-    {
-      "status": "Opening",
-      "industry": "Specialty / Other",
-      "region": "Canada",
-      "title": "Open for Business: Jacobs Berry Farm wedding venue hosts open house",
-      "source": "MSN",
-      "published_date": "2026-05-05 01:53:54",
-      "direct_link": "https://www.msn.com/en-us/money/smallbusiness/open-for-business-jacobs-berry-farm-wedding-venue-hosts-open-house/ar-AA226FTz?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
-      "keyword": "open for business",
-      "relevance_score": 5
+      "published_date": "2026-05-07 03:40:59",
+      "direct_link": "https://www.msn.com/en-us/travel/news/figs-the-quaint-byob-in-fairmount-is-closing-after-25-years-and-a-new-restaurant-is-moving-in/ar-AA22esRK?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
+      "keyword": "last day",
+      "relevance_score": 4
     },
     {
       "status": "Closing",
-      "industry": "Specialty / Other",
+      "industry": "Home Improvement / Building Materials",
       "region": "USA",
-      "title": "Entries closing soon: afaqs! Marketers Excellence Awards 2026 enters final call",
-      "source": "afaqs!",
-      "published_date": "2026-05-04 23:50:37",
-      "direct_link": "https://www.afaqs.com/afaqs-live-events/entries-closing-soon-afaqs-marketers-excellence-awards-2026-enters-final-call-11800478",
-      "keyword": "closing soon",
-      "relevance_score": 5
+      "title": "Saks and century-old hardware store close amid shifting retail trends",
+      "source": "MSN",
+      "published_date": "2026-05-07 02:17:08",
+      "direct_link": "https://www.msn.com/en-us/news/insight/saks-and-century-old-hardware-store-close-amid-shifting-retail-trends/gm-GME925D54A?ocid=TobArticle",
+      "keyword": "chapter 11",
+      "relevance_score": 4
     },
     {
       "status": "Opening",
       "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "E-Mart is speeding up its global business expansion by opening a \"no-brand\" specialty store in Mongo..",
+      "source": "매일경제",
+      "published_date": "2026-05-07 02:06:28",
+      "direct_link": "https://www.mk.co.kr/en/business/12038936",
+      "keyword": "plans to open",
+      "relevance_score": 4
+    },
+    {
+      "status": "Opening",
+      "industry": "Restaurants",
       "region": "Canada",
-      "title": "Join us for Capriotti’s Grand Opening Celebration in Cape Coral, FL!",
-      "source": "yoursun.com",
-      "published_date": "2026-05-04 23:05:10",
-      "direct_link": "https://www.yoursun.com/local-events?_evDiscoveryPath=/event%2F3598807-join-us-for-capriotti-s-grand-opening-celebration-in-cape-coral-fl-",
+      "title": "New lakefront restaurant opening in the Cleveland Metroparks soon",
+      "source": "AOL.com",
+      "published_date": "2026-05-07 01:42:38",
+      "direct_link": "https://www.aol.com/news/lakefront-restaurant-opening-cleveland-metroparks-222223184.html",
       "keyword": "grand opening",
-      "relevance_score": 5
+      "relevance_score": 4
+    },
+    {
+      "status": "Opening",
+      "industry": "Hospitality",
+      "region": "USA",
+      "title": "New hotel to open Nov. 1",
+      "source": "The Daily Gazette",
+      "published_date": "2026-05-06 23:35:08",
+      "direct_link": "https://www.dailygazette.com/ade/news/business/new-hotel-to-open-nov-1/article_59a4e4f3-e25c-5a1a-b490-de05ba31e8c7.html",
+      "keyword": "under construction",
+      "relevance_score": 4
+    },
+    {
+      "status": "Opening",
+      "industry": "Grocery",
+      "region": "USA",
+      "title": "New butcher and food store set to open on Burnham-On-Sea High Street",
+      "source": "Burnham-On-Sea.com",
+      "published_date": "2026-05-06 23:18:23",
+      "direct_link": "https://www.burnham-on-sea.com/news/new-butcher-and-food-store-set-to-open-on-burnham-on-sea-high-street/",
+      "keyword": "new store",
+      "relevance_score": 4
+    },
+    {
+      "status": "Closing",
+      "industry": "Restaurants",
+      "region": "USA",
+      "title": "Longtime KCK Mexican restaurant closing at end of May",
+      "source": "FOX4KC.com",
+      "published_date": "2026-05-06 23:12:41",
+      "direct_link": "https://fox4kc.com/news/longtime-kck-mexican-restaurant-closing-at-end-of-may/",
+      "keyword": "last day",
+      "relevance_score": 4
+    },
+    {
+      "status": "Opening",
+      "industry": "Restaurants",
+      "region": "Canada",
+      "title": "Sonic to open car-hop restaurant in Kapolei in mid-May",
+      "source": "Honolulu Star-Advertiser",
+      "published_date": "2026-05-06 23:07:13",
+      "direct_link": "https://www.staradvertiser.com/2026/05/06/breaking-news/sonic-to-open-car-hop-restaurant-in-kapolei-in-mid-may/",
+      "keyword": "grand opening",
+      "relevance_score": 4
     },
     {
       "status": "Opening",
       "industry": "Restaurants",
       "region": "USA",
-      "title": "New lakefront restaurant opening in the Cleveland Metroparks soon",
-      "source": "FOX 8 News",
-      "published_date": "2026-05-06 22:22:23",
-      "direct_link": "https://fox8.com/news/new-lakefront-restaurant-opening-in-the-cleveland-metroparks-soon/",
-      "keyword": "construction underway",
+      "title": "Deliveroo expanding into restaurant bookings after US takeover",
+      "source": "The York Press",
+      "published_date": "2026-05-06 23:03:58",
+      "direct_link": "https://www.yorkpress.co.uk/news/national/26084599.deliveroo-expanding-restaurant-bookings-us-takeover/",
+      "keyword": "new store",
+      "relevance_score": 4
+    },
+    {
+      "status": "Opening",
+      "industry": "Grocery",
+      "region": "Canada",
+      "title": "New specialty grocery store to open doors in Mission Viejo",
+      "source": "MSN",
+      "published_date": "2026-05-06 22:38:54",
+      "direct_link": "https://www.msn.com/en-us/food-and-drink/general/new-specialty-grocery-store-to-open-doors-in-mission-viejo/ar-AA21QsCv?ocid=BingNewsVerp",
+      "keyword": "expanding to",
       "relevance_score": 4
     },
     {
@@ -1367,8 +1521,19 @@
     },
     {
       "status": "Opening",
+      "industry": "Grocery",
+      "region": "USA",
+      "title": "Butler loses only full-service grocery store after more than six decades",
+      "source": "WPTA | 21Alive | Fort Wayne, IN",
+      "published_date": "2026-05-06 22:09:00",
+      "direct_link": "https://www.21alivenews.com/2026/05/06/butler-loses-only-full-service-grocery-store-after-more-than-six-decades/?outputType=amp",
+      "keyword": "ribbon cutting",
+      "relevance_score": 4
+    },
+    {
+      "status": "Opening",
       "industry": "Hospitality",
-      "region": "Canada",
+      "region": "USA",
       "title": "California’s huge new surf park promises 1,000 waves an hour, luxe desert resort as opening date revealed",
       "source": "New York Post",
       "published_date": "2026-05-06 22:06:00",
@@ -1378,8 +1543,30 @@
     },
     {
       "status": "Opening",
-      "industry": "Mass Merchandisers",
+      "industry": "Hospitality",
       "region": "USA",
+      "title": "Sushi By Bou At The FIDI Hotel Downtown NYC Opening May",
+      "source": "Hoodline",
+      "published_date": "2026-05-06 22:03:19",
+      "direct_link": "https://hoodline.com/2026/05/pop-art-omakase-hits-fidi-as-sushi-by-bou-rolls-onto-stone-street/",
+      "keyword": "coming soon",
+      "relevance_score": 4
+    },
+    {
+      "status": "Opening",
+      "industry": "Grocery",
+      "region": "USA",
+      "title": "Tucked inside this Koreatown grocery store is a secret food counter serving a loaded $15 comfort meal",
+      "source": "Secret Los Angeles",
+      "published_date": "2026-05-06 22:00:00",
+      "direct_link": "https://secretlosangeles.com/koreatown-secret-udon-meal-15-dollars/",
+      "keyword": "now open",
+      "relevance_score": 4
+    },
+    {
+      "status": "Opening",
+      "industry": "Mass Merchandisers",
+      "region": "Canada",
       "title": "Famed Discount Store is Opening More Than 20 Locations This Summer",
       "source": "InspireMore",
       "published_date": "2026-05-06 21:56:58",
@@ -1389,35 +1576,35 @@
     },
     {
       "status": "Opening",
-      "industry": "Hospitality",
+      "industry": "Restaurants",
+      "region": "Canada",
+      "title": "Second Denny’s restaurant set to open in Tyler this summer",
+      "source": "AOL.com",
+      "published_date": "2026-05-06 21:55:42",
+      "direct_link": "https://www.aol.com/news/second-denny-restaurant-set-open-215542317.html",
+      "keyword": "grand opening",
+      "relevance_score": 4
+    },
+    {
+      "status": "Opening",
+      "industry": "Apparel",
       "region": "USA",
-      "title": "Sushi By Bou At The FIDI Hotel Downtown NYC Opening May",
-      "source": "Hoodline",
-      "published_date": "2026-05-06 21:56:15",
-      "direct_link": "https://hoodline.com/2026/05/pop-art-omakase-hits-fidi-as-sushi-by-bou-rolls-onto-stone-street/",
-      "keyword": "coming soon",
+      "title": "Mall fashion retailer closes 150 stores in turnaround push",
+      "source": "thestreet.com",
+      "published_date": "2026-05-06 21:29:33",
+      "direct_link": "https://www.thestreet.com/retail/mall-fashion-retailer-carters-closes-150-stores-in-turnaround-push",
+      "keyword": "new store",
       "relevance_score": 4
     },
     {
       "status": "Closing",
       "industry": "Hospitality",
-      "region": "USA",
+      "region": "Canada",
       "title": "Nevada Flying J to close as part of casino resort shut down",
       "source": "CDLLife",
       "published_date": "2026-05-06 21:21:44",
       "direct_link": "https://cdllife.com/2026/nevada-flying-j-to-close-as-part-of-casino-resort-shut-down/",
       "keyword": "last day",
-      "relevance_score": 4
-    },
-    {
-      "status": "Opening",
-      "industry": "Hospitality",
-      "region": "USA",
-      "title": "Primm, Nevada 2026: The Last Hotel and Casino Close, Transforming Once-Bustling Travel Stop into a Ghost Town",
-      "source": "Travel And Tour World",
-      "published_date": "2026-05-06 21:11:40",
-      "direct_link": "https://www.travelandtourworld.com/news/article/primm-nevada-2026-the-last-hotel-and-casino-close-transforming-once-bustling-travel-stop-into-a-ghost-town/",
-      "keyword": "coming soon",
       "relevance_score": 4
     },
     {
@@ -1454,6 +1641,28 @@
       "relevance_score": 4
     },
     {
+      "status": "Opening",
+      "industry": "Restaurants",
+      "region": "USA",
+      "title": "Popular Raleigh pizzeria owner is opening a new restaurant. Here’s when & where",
+      "source": "Raleigh News & Observer",
+      "published_date": "2026-05-06 20:28:43",
+      "direct_link": "https://amp.newsobserver.com/living/food-drink/article315654663.html",
+      "keyword": "coming soon",
+      "relevance_score": 4
+    },
+    {
+      "status": "Opening",
+      "industry": "Restaurants",
+      "region": "USA",
+      "title": "A new restaurant opened in JoCo, serving up one of the Triangle’s biggest trends",
+      "source": "Raleigh News & Observer",
+      "published_date": "2026-05-06 20:20:40",
+      "direct_link": "https://www.newsobserver.com/living/food-drink/article315657225.html",
+      "keyword": "new location",
+      "relevance_score": 4
+    },
+    {
       "status": "Closing",
       "industry": "Restaurants",
       "region": "USA",
@@ -1477,13 +1686,24 @@
     },
     {
       "status": "Opening",
+      "industry": "Grocery",
+      "region": "USA",
+      "title": "Woodard Properties responds to grocery store design concerns in Fifeville",
+      "source": "WVIR",
+      "published_date": "2026-05-06 19:42:24",
+      "direct_link": "https://www.29news.com/video/2026/05/06/woodard-properties-responds-grocery-store-design-concerns-fifeville/?outputType=amp",
+      "keyword": "new location",
+      "relevance_score": 4
+    },
+    {
+      "status": "Opening",
       "industry": "Restaurants",
       "region": "USA",
       "title": "New restaurants opening from Baltimore to Frederick",
       "source": "Baltimore Sun",
       "published_date": "2026-05-06 19:23:08",
       "direct_link": "https://www.baltimoresun.com/2026/05/06/which-new-restaurants-will-satisfy-your-appetite-from-baltimore-to-frederick/",
-      "keyword": "open for business",
+      "keyword": "soft opening",
       "relevance_score": 4
     },
     {
@@ -1499,13 +1719,35 @@
     },
     {
       "status": "Opening",
-      "industry": "Jewelry & Accessories",
+      "industry": "Restaurants",
       "region": "USA",
+      "title": "A host of new restaurants opened in metro Detroit, and several restaurants reopened for the spring. See link below ⬇️ 📸 Provided by Balam Coffee & Wine Bar",
+      "source": "facebook.com",
+      "published_date": "2026-05-06 19:00:32",
+      "direct_link": "https://www.facebook.com/detroitfreepress/posts/a-host-of-new-restaurants-opened-in-metro-detroit-and-several-restaurants-reopen/1428555245983290/",
+      "keyword": "open for business",
+      "relevance_score": 4
+    },
+    {
+      "status": "Closing",
+      "industry": "Hospitality",
+      "region": "Canada",
+      "title": "Last Primm resort to close, employees only have weeks to leave",
+      "source": "AOL.com",
+      "published_date": "2026-05-06 18:13:37",
+      "direct_link": "https://www.aol.com/news/last-primm-resort-close-employees-162116285.html",
+      "keyword": "last day",
+      "relevance_score": 4
+    },
+    {
+      "status": "Opening",
+      "industry": "Jewelry & Accessories",
+      "region": "Canada",
       "title": "Luxury jewelry store will close on KC’s Country Club Plaza this summer",
       "source": "AOL.com",
       "published_date": "2026-05-06 18:09:45",
       "direct_link": "https://www.aol.com/news/luxury-jewelry-store-close-kc-170134093.html",
-      "keyword": "new location",
+      "keyword": "new store",
       "relevance_score": 4
     },
     {
@@ -1533,7 +1775,7 @@
     {
       "status": "Opening",
       "industry": "Grocery",
-      "region": "USA",
+      "region": "Canada",
       "title": "This NYC Neighborhood May Have The Cheapest Grocery Stores For Fresh Produce",
       "source": "AOL.com",
       "published_date": "2026-05-06 17:32:08",
@@ -1555,10 +1797,10 @@
     {
       "status": "Opening",
       "industry": "Restaurants",
-      "region": "Canada",
-      "title": "‘Different kind of pressure’: Fort St. John’s MasterChef finalist prepares for opening of pop-up restaurant at Rootstock Ranch.",
+      "region": "USA",
+      "title": "‘Different kind of pressure’: Fort St. John’s MasterChef finalist prepares for opening of pop-up restaurant at Rootstock Ranch",
       "source": "Energeticcity",
-      "published_date": "2026-05-06 17:26:40",
+      "published_date": "2026-05-06 17:27:46",
       "direct_link": "https://energeticcity.ca/2026/05/06/different-kind-of-pressure-fort-st-johns-masterchef-finalist-prepares-for-opening-of-pop-up-restaurant-at-rootstock-ranch/",
       "keyword": "soft opening",
       "relevance_score": 4
@@ -1587,17 +1829,6 @@
     },
     {
       "status": "Closing",
-      "industry": "Hospitality",
-      "region": "USA",
-      "title": "Last Primm resort to close, employees only have weeks to leave",
-      "source": "AOL.com",
-      "published_date": "2026-05-06 16:27:30",
-      "direct_link": "https://www.aol.com/articles/last-primm-resort-close-employees-162116588.html",
-      "keyword": "last day",
-      "relevance_score": 4
-    },
-    {
-      "status": "Closing",
       "industry": "Restaurants",
       "region": "USA",
       "title": "Rodney Scott's BBQ restaurant group hit with nearly $14M in lawsuits, liens ahead of closure",
@@ -1621,7 +1852,7 @@
     {
       "status": "Opening",
       "industry": "Pet Care",
-      "region": "USA",
+      "region": "Canada",
       "title": "Best Pet Store 2026",
       "source": "Newsweek",
       "published_date": "2026-05-06 16:00:01",
@@ -1652,17 +1883,6 @@
       "relevance_score": 4
     },
     {
-      "status": "Opening",
-      "industry": "Grocery",
-      "region": "USA",
-      "title": "All supermarket opening times for the May Bank Holiday Monday",
-      "source": "AOL.com",
-      "published_date": "2026-05-06 15:54:54",
-      "direct_link": "https://www.aol.com/articles/supermarket-opening-times-may-bank-094002034.html",
-      "keyword": "new location",
-      "relevance_score": 4
-    },
-    {
       "status": "Closing",
       "industry": "Restaurants",
       "region": "USA",
@@ -1676,23 +1896,12 @@
     {
       "status": "Opening",
       "industry": "Restaurants",
-      "region": "USA",
+      "region": "Canada",
       "title": "New-to-Kentucky restaurant Firebirds is opening first location in Lexington",
       "source": "AOL.com",
       "published_date": "2026-05-06 15:48:59",
       "direct_link": "https://www.aol.com/news/kentucky-restaurant-firebirds-opening-first-110047301.html",
-      "keyword": "now open",
-      "relevance_score": 4
-    },
-    {
-      "status": "Opening",
-      "industry": "Apparel",
-      "region": "USA",
-      "title": "Mall fashion retailer closes 150 stores in turnaround push",
-      "source": "thestreet.com",
-      "published_date": "2026-05-06 15:46:59",
-      "direct_link": "https://www.thestreet.com/retail/mall-fashion-retailer-carters-closes-150-stores-in-turnaround-push",
-      "keyword": "new store",
+      "keyword": "grand opening",
       "relevance_score": 4
     },
     {
@@ -1704,17 +1913,6 @@
       "published_date": "2026-05-06 15:43:57",
       "direct_link": "https://614now.com/2026/food-drink/family-owned-restaurant-opening-second-columbus-location",
       "keyword": "grand opening",
-      "relevance_score": 4
-    },
-    {
-      "status": "Opening",
-      "industry": "Restaurants",
-      "region": "USA",
-      "title": "Major restaurant chain could 'run out of money' with all 47 stores at risk of closing",
-      "source": "The Herald",
-      "published_date": "2026-05-06 15:38:44",
-      "direct_link": "https://www.heraldscotland.com/news/national/uk-today/26083055.las-iguanas-restaurants-risk-amid-financial-difficulties/",
-      "keyword": "new store",
       "relevance_score": 4
     },
     {
@@ -1751,6 +1949,17 @@
       "relevance_score": 4
     },
     {
+      "status": "Closing",
+      "industry": "Hospitality",
+      "region": "Canada",
+      "title": "AG Gaston Motel in Birmingham temporarily closing for renovations",
+      "source": "MSN",
+      "published_date": "2026-05-06 15:17:04",
+      "direct_link": "https://www.msn.com/en-us/money/realestate/ag-gaston-motel-in-birmingham-temporarily-closing-for-renovations/ar-AA221LY7?ocid=BingNewsVerp",
+      "keyword": "last day",
+      "relevance_score": 4
+    },
+    {
       "status": "Opening",
       "industry": "Pharmaceutical / Medical",
       "region": "USA",
@@ -1764,7 +1973,7 @@
     {
       "status": "Opening",
       "industry": "Convenience Stores / Distributors",
-      "region": "USA",
+      "region": "Canada",
       "title": "Asian-inspired c-stores see growing popularity",
       "source": "C-Store Dive",
       "published_date": "2026-05-06 14:40:02",
@@ -1781,6 +1990,17 @@
       "published_date": "2026-05-06 14:30:37",
       "direct_link": "https://davidsoncountysource.com/after-20-years-beloved-restaurant-12-south-taproom-announces-closure/",
       "keyword": "last day",
+      "relevance_score": 4
+    },
+    {
+      "status": "Opening",
+      "industry": "Restaurants",
+      "region": "USA",
+      "title": "Major restaurant chain could 'run out of money' with all 47 stores at risk of closing",
+      "source": "Wandsworth Times",
+      "published_date": "2026-05-06 14:15:00",
+      "direct_link": "https://www.wandsworthguardian.co.uk/news/national/uk-today/26083055.las-iguanas-restaurants-risk-amid-financial-difficulties/",
+      "keyword": "new store",
       "relevance_score": 4
     },
     {
@@ -1808,7 +2028,7 @@
     {
       "status": "Closing",
       "industry": "Hospitality",
-      "region": "USA",
+      "region": "Canada",
       "title": "Buffalo Bill's Casino, other Primm resort destinations permanently closing",
       "source": "ktnv.com",
       "published_date": "2026-05-06 13:37:33",
@@ -1819,7 +2039,7 @@
     {
       "status": "Closing",
       "industry": "Restaurants",
-      "region": "USA",
+      "region": "Canada",
       "title": "After more than 50 years of free wine pours, a classic SF restaurant may close",
       "source": "MSN",
       "published_date": "2026-05-06 13:34:32",
@@ -1861,20 +2081,20 @@
       "relevance_score": 4
     },
     {
-      "status": "Closing",
+      "status": "Opening",
       "industry": "Hospitality",
       "region": "USA",
       "title": "Last resort in Primm, former gambling mecca at the California-Nevada border, will close",
-      "source": "Los Angeles Times",
+      "source": "AOL.com",
       "published_date": "2026-05-06 12:00:00",
-      "direct_link": "https://www.latimes.com/california/story/2026-05-06/last-gambling-resort-in-primm-nevada-former-gambling-mecca-is-set-to-close",
-      "keyword": "last day",
+      "direct_link": "https://www.aol.com/finance/last-resort-primm-former-gambling-120000833.html",
+      "keyword": "new location",
       "relevance_score": 4
     },
     {
       "status": "Opening",
       "industry": "Grocery",
-      "region": "Canada",
+      "region": "USA",
       "title": "New grocery store opens, aims to boost food access on Buffalo's East Side",
       "source": "MSN",
       "published_date": "2026-05-06 11:44:37",
@@ -1896,7 +2116,7 @@
     {
       "status": "Opening",
       "industry": "Grocery",
-      "region": "Canada",
+      "region": "USA",
       "title": "Kingston musician opens low-cost food store for the community",
       "source": "The Kingston Whig Standard",
       "published_date": "2026-05-06 11:29:42",
@@ -1906,13 +2126,24 @@
     },
     {
       "status": "Opening",
-      "industry": "Department Stores",
+      "industry": "Grocery",
       "region": "USA",
-      "title": "First look inside Harvey Norman as Sutton Coldfield's new department store opens",
+      "title": "All supermarket opening times for the Early May Bank Holiday Monday, from Tesco to Aldi",
+      "source": "AOL.com",
+      "published_date": "2026-05-06 10:32:09",
+      "direct_link": "https://www.aol.com/supermarket-opening-times-early-may-140445406.html",
+      "keyword": "new location",
+      "relevance_score": 4
+    },
+    {
+      "status": "Closing",
+      "industry": "Restaurants",
+      "region": "Canada",
+      "title": "Del Taco’s Tucker restaurant, other Georgia locations close permanently",
       "source": "MSN",
-      "published_date": "2026-05-06 11:28:20",
-      "direct_link": "https://www.msn.com/en-gb/news/newsbirmingham/first-look-inside-harvey-norman-as-sutton-coldfields-new-department-store-opens-today/ar-AA1ZYDrW?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
-      "keyword": "new store",
+      "published_date": "2026-05-06 10:31:43",
+      "direct_link": "https://www.msn.com/en-us/money/companies/del-taco-s-tucker-restaurant-other-georgia-locations-close-permanently/ar-AA1WGwzn?ocid=BingNewsVerp&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
+      "keyword": "bankruptcy",
       "relevance_score": 4
     },
     {
@@ -1928,8 +2159,8 @@
     },
     {
       "status": "Closing",
-      "industry": "Hospitality, Restaurants",
-      "region": "Canada",
+      "industry": "Hospitality",
+      "region": "USA",
       "title": "Newcastle restaurant loved for steaks and delicious Sunday dinners set to close this year",
       "source": "Chronicle Live",
       "published_date": "2026-05-06 10:13:00",
@@ -1973,7 +2204,7 @@
     {
       "status": "Opening",
       "industry": "Gyms / Fitness",
-      "region": "Canada",
+      "region": "USA",
       "title": "Opening timeline remains unclear for high-end gym in Leland",
       "source": "Wilmington Star-News",
       "published_date": "2026-05-06 09:03:00",
@@ -2037,14 +2268,14 @@
       "relevance_score": 4
     },
     {
-      "status": "Closing",
+      "status": "Opening",
       "industry": "Hospitality",
       "region": "USA",
       "title": "Remaining Primm resort set to close; employees given weeks to pack up",
       "source": "KLAS 8 News Now",
       "published_date": "2026-05-06 05:23:52",
       "direct_link": "https://www.8newsnow.com/news/local-news/remaining-primm-resort-set-to-close-employees-given-weeks-to-pack-up/",
-      "keyword": "last day",
+      "keyword": "now open",
       "relevance_score": 4
     },
     {
@@ -2067,17 +2298,6 @@
       "published_date": "2026-05-06 04:59:03",
       "direct_link": "https://www.msn.com/en-us/money/companies/convenience-store-chain-closing-645-locations-as-part-of-major-makeover/ar-AA20Su71?gemSnapshotKey=GME1C2224F-snapshot-2&uxmode=ruby&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
       "keyword": "plans to open",
-      "relevance_score": 4
-    },
-    {
-      "status": "Closing",
-      "industry": "Grocery",
-      "region": "Canada",
-      "title": "Kai Trump sparks debate as she shops at the 'world's most expensive' grocery store",
-      "source": "MSN",
-      "published_date": "2026-05-06 03:47:01",
-      "direct_link": "https://www.msn.com/en-us/entertainment/entertainment-celebrity/kai-trump-sparks-debate-as-she-shops-at-the-world-s-most-expensive-grocery-store/ar-AA1XStpc?ocid=SYSDHP",
-      "keyword": "bankruptcy",
       "relevance_score": 4
     },
     {
@@ -2126,6 +2346,17 @@
     },
     {
       "status": "Closing",
+      "industry": "Grocery",
+      "region": "USA",
+      "title": "Kai Trump sparks debate as she shops at the 'world's most expensive' grocery store",
+      "source": "MSN",
+      "published_date": "2026-05-06 02:53:47",
+      "direct_link": "https://www.msn.com/en-us/entertainment/entertainment-celebrity/kai-trump-sparks-debate-as-she-shops-at-the-world-s-most-expensive-grocery-store/ar-AA1XStpc?ocid=SYSDHP&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
+      "keyword": "bankruptcy",
+      "relevance_score": 4
+    },
+    {
+      "status": "Closing",
       "industry": "Books / Toys / Gaming",
       "region": "USA",
       "title": "Fiction for $1? Massive closing sale is underway at Lloyd Center’s outlet bookstore",
@@ -2138,7 +2369,7 @@
     {
       "status": "Opening",
       "industry": "Grocery",
-      "region": "Canada",
+      "region": "USA",
       "title": "Grocery store Aldi announces opening date for newest Central Georgia store. Here's when",
       "source": "MSN",
       "published_date": "2026-05-06 00:35:06",
@@ -2160,7 +2391,7 @@
     {
       "status": "Opening",
       "industry": "Grocery",
-      "region": "Canada",
+      "region": "USA",
       "title": "Specialty grocery store opens doors in Dana Point",
       "source": "MSN",
       "published_date": "2026-05-06 00:07:23",
@@ -2182,7 +2413,7 @@
     {
       "status": "Closing",
       "industry": "Restaurants",
-      "region": "USA",
+      "region": "Canada",
       "title": "After all of Pittsburgh area's Smokey Bones restaurants close, what should consumers do with gift cards?",
       "source": "CBS News",
       "published_date": "2026-05-05 23:10:46",
@@ -2193,23 +2424,12 @@
     {
       "status": "Opening",
       "industry": "Grocery",
-      "region": "Canada",
+      "region": "USA",
       "title": "The Best Grocery Store Bakery Hack You've Never Heard Of",
       "source": "AOL.com",
       "published_date": "2026-05-05 23:09:18",
       "direct_link": "https://www.aol.com/best-grocery-store-bakery-hack-070000698.html",
       "keyword": "new store",
-      "relevance_score": 4
-    },
-    {
-      "status": "Opening",
-      "industry": "Grocery",
-      "region": "USA",
-      "title": "All supermarket opening times for the Early May Bank Holiday Monday, from Tesco to Aldi",
-      "source": "AOL.com",
-      "published_date": "2026-05-05 23:02:16",
-      "direct_link": "https://www.aol.com/supermarket-opening-times-early-may-140445406.html",
-      "keyword": "new location",
       "relevance_score": 4
     },
     {
@@ -2226,7 +2446,7 @@
     {
       "status": "Opening",
       "industry": "Movie Theatres",
-      "region": "USA",
+      "region": "Canada",
       "title": "First Look: Exclusive updates on Sahuarita RoadHouse Cinemas: Tentative opening + new mural artist selected",
       "source": "KGUN 9",
       "published_date": "2026-05-05 22:08:20",
@@ -2236,8 +2456,19 @@
     },
     {
       "status": "Opening",
-      "industry": "Grocery",
+      "industry": "Hospitality, Restaurants",
       "region": "Canada",
+      "title": "Sidney’s newest hotel is now open with a new restaurant coming soon (PHOTOS)",
+      "source": "Victoria Buzz",
+      "published_date": "2026-05-05 21:50:47",
+      "direct_link": "https://victoriabuzz.com/2026/05/sidneys-newest-hotel-is-now-open-with-a-new-restaurant-coming-soon-photos/",
+      "keyword": "grand opening",
+      "relevance_score": 4
+    },
+    {
+      "status": "Opening",
+      "industry": "Grocery",
+      "region": "USA",
       "title": "New grocery store opens in Ovid after devastating Big M fire",
       "source": "13wham.com",
       "published_date": "2026-05-05 21:11:17",
@@ -2248,7 +2479,7 @@
     {
       "status": "Opening",
       "industry": "Grocery",
-      "region": "Canada",
+      "region": "USA",
       "title": "New grocery store opens in Ovid after Big M fire, providing some relief in a food desert",
       "source": "13wham.com",
       "published_date": "2026-05-05 21:09:15",
@@ -2259,7 +2490,7 @@
     {
       "status": "Opening",
       "industry": "Restaurants",
-      "region": "USA",
+      "region": "Canada",
       "title": "🍽️Whitbread's announcement will see 200 restaurants shut down",
       "source": "facebook.com",
       "published_date": "2026-05-05 21:03:09",
@@ -2292,7 +2523,7 @@
     {
       "status": "Opening",
       "industry": "Grocery",
-      "region": "USA",
+      "region": "Canada",
       "title": "grocery store produce",
       "source": "The Berkshire Eagle",
       "published_date": "2026-05-05 20:51:45",
@@ -2347,7 +2578,7 @@
     {
       "status": "Opening",
       "industry": "Grocery",
-      "region": "Canada",
+      "region": "USA",
       "title": "Shoppers in Tri-State will soon have new grocery store option",
       "source": "WKRC",
       "published_date": "2026-05-05 19:52:31",
@@ -2468,7 +2699,7 @@
     {
       "status": "Opening",
       "industry": "Pharmaceutical / Medical",
-      "region": "USA",
+      "region": "Canada",
       "title": "ChristianaCare's Middletown Health Center will expand cancer services",
       "source": "MSN",
       "published_date": "2026-05-05 18:06:05",
@@ -2488,20 +2719,9 @@
       "relevance_score": 4
     },
     {
-      "status": "Opening",
-      "industry": "Restaurants",
-      "region": "USA",
-      "title": "Figs, the quaint BYOB in Fairmount, is closing after 25 years, and a new restaurant is moving in",
-      "source": "MSN",
-      "published_date": "2026-05-05 17:54:35",
-      "direct_link": "https://www.msn.com/en-us/travel/news/figs-the-quaint-byob-in-fairmount-is-closing-after-25-years-and-a-new-restaurant-is-moving-in/ar-AA22esRK",
-      "keyword": "plans to open",
-      "relevance_score": 4
-    },
-    {
       "status": "Closing",
       "industry": "Grocery",
-      "region": "USA",
+      "region": "Canada",
       "title": "Mark Wahlberg in Akron? No, but he visited this grocery store in 2023",
       "source": "Akron Beacon Journal",
       "published_date": "2026-05-05 17:39:00",
@@ -2511,8 +2731,19 @@
     },
     {
       "status": "Opening",
-      "industry": "Retail REITs",
+      "industry": "Restaurants",
       "region": "USA",
+      "title": "Longtime Wichita Falls restaurant not closing despite owner's illness",
+      "source": "AOL.com",
+      "published_date": "2026-05-05 17:36:33",
+      "direct_link": "https://www.aol.com/news/pats-not-closing-family-says-094831971.html",
+      "keyword": "open for business",
+      "relevance_score": 4
+    },
+    {
+      "status": "Opening",
+      "industry": "Retail REITs",
+      "region": "Canada",
       "title": "May 5: Kendra Scott opens store in Fort Wayne Jefferson Pointe Shopping Center",
       "source": "Fort Wayne Business Weekly",
       "published_date": "2026-05-05 17:34:00",
@@ -2533,6 +2764,17 @@
     },
     {
       "status": "Opening",
+      "industry": "Convenience Stores / Distributors",
+      "region": "Canada",
+      "title": "Major US convenience chain 7-Eleven closes 645 stores",
+      "source": "MSN",
+      "published_date": "2026-05-05 17:03:07",
+      "direct_link": "http://www.msn.com/en-us/lifestyle/lifestyle-buzz/major-high-street-convenience-chain-closes-645-stores-75-off-sale-launched/ar-AA224kNn?ocid=socialshare&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
+      "keyword": "plans to open",
+      "relevance_score": 4
+    },
+    {
+      "status": "Opening",
       "industry": "Restaurants",
       "region": "USA",
       "title": "New meat market, restaurant opened in April, while Smokey Bones closed",
@@ -2545,7 +2787,7 @@
     {
       "status": "Closing",
       "industry": "Restaurants",
-      "region": "Canada",
+      "region": "USA",
       "title": "Niagara Falls restaurant ordered to temporarily close during inspection",
       "source": "Niagara This Week",
       "published_date": "2026-05-05 16:37:12",
@@ -2611,7 +2853,7 @@
     {
       "status": "Closing",
       "industry": "Hospitality",
-      "region": "Canada",
+      "region": "USA",
       "title": "Northumberland pub with 'perfect' Sunday dinners to close just months after re-opening",
       "source": "Chronicle Live",
       "published_date": "2026-05-05 15:10:23",
@@ -2623,22 +2865,22 @@
       "status": "Opening",
       "industry": "Hospitality",
       "region": "USA",
-      "title": "Trader Joe’s Second McKinney Location Gets Official Opening Date",
-      "source": "Local Profile",
-      "published_date": "2026-05-05 15:00:00",
-      "direct_link": "https://www.localprofile.com/amp/food-drink/trader-joes-second-mckinney-location-gets-official-opening-date-12237092",
-      "keyword": "ribbon cutting",
+      "title": "St. Regis Costa Mujeres Resort Opening Near Cancún in Late June, Now Accepting Reservations",
+      "source": "Upgraded Points",
+      "published_date": "2026-05-05 15:05:00",
+      "direct_link": "https://upgradedpoints.com/news/st-regis-costa-mujeres/",
+      "keyword": "now open",
       "relevance_score": 4
     },
     {
       "status": "Opening",
-      "industry": "Restaurants",
+      "industry": "Hospitality",
       "region": "USA",
-      "title": "Burgers and comfort food restaurant now open at Eagan's Viking Lakes",
-      "source": "Yahoo",
-      "published_date": "2026-05-05 14:59:53",
-      "direct_link": "https://www.yahoo.com/lifestyle/articles/burgers-comfort-food-restaurant-now-145953001.html",
-      "keyword": "build out",
+      "title": "Trader Joe’s Second McKinney Location Gets Official Opening Date",
+      "source": "Local Profile",
+      "published_date": "2026-05-05 15:00:00",
+      "direct_link": "https://www.localprofile.com/amp/food-drink/trader-joes-second-mckinney-location-gets-official-opening-date-12237092",
+      "keyword": "new store",
       "relevance_score": 4
     },
     {
@@ -2666,7 +2908,7 @@
     {
       "status": "Closing",
       "industry": "Restaurants",
-      "region": "USA",
+      "region": "Canada",
       "title": "Franco Manca confirms 16 sites to be SHUT with 225 jobs lost as restaurants 'no longer sustainable'",
       "source": "The Sun",
       "published_date": "2026-05-05 13:25:00",
@@ -2688,7 +2930,7 @@
     {
       "status": "Opening",
       "industry": "Convenience Stores / Distributors",
-      "region": "USA",
+      "region": "Canada",
       "title": "Police appeal following attempted burglary at village convenience store",
       "source": "Chester Standard",
       "published_date": "2026-05-05 12:49:14",
@@ -2699,7 +2941,7 @@
     {
       "status": "Opening",
       "industry": "Grocery",
-      "region": "Canada",
+      "region": "USA",
       "title": "Newest Fort Worth-area H-E-B supermarket to open by the end of May",
       "source": "MSN",
       "published_date": "2026-05-05 12:45:13",
@@ -2715,13 +2957,13 @@
       "source": "The Business Journals",
       "published_date": "2026-05-05 12:45:00",
       "direct_link": "https://www.bizjournals.com/phoenix/news/2026/05/05/flower-child-plans-3-west-valley-locations.html",
-      "keyword": "plans to open",
+      "keyword": "new store",
       "relevance_score": 4
     },
     {
       "status": "Opening",
       "industry": "Grocery",
-      "region": "USA",
+      "region": "Canada",
       "title": "New grocery store development proposed for Hurstbourne Parkway",
       "source": "AOL.com",
       "published_date": "2026-05-05 12:34:21",
@@ -2744,17 +2986,6 @@
       "status": "Opening",
       "industry": "Grocery",
       "region": "USA",
-      "title": "New specialty grocery store to open doors in Mission Viejo",
-      "source": "MSN",
-      "published_date": "2026-05-05 12:05:51",
-      "direct_link": "https://www.msn.com/en-us/money/companies/new-specialty-grocery-store-to-open-doors-in-mission-viejo/ar-AA21QsCv?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
-      "keyword": "expanding to",
-      "relevance_score": 4
-    },
-    {
-      "status": "Opening",
-      "industry": "Grocery",
-      "region": "USA",
       "title": "Brand new Greggs, KFC and PureGym to open in old 14,230 sq ft Lidl supermarket",
       "source": "The Sun",
       "published_date": "2026-05-05 11:38:00",
@@ -2765,7 +2996,7 @@
     {
       "status": "Opening",
       "industry": "Gyms / Fitness",
-      "region": "Canada",
+      "region": "USA",
       "title": "Local gym Crux Climbing Center debuts new South Austin location",
       "source": "Community Impact | News",
       "published_date": "2026-05-05 11:00:00",
@@ -2793,17 +3024,6 @@
       "published_date": "2026-05-05 10:52:00",
       "direct_link": "https://www.edp24.co.uk/news/26077529.real-greek-norwich-stay-open-rescue-deal/",
       "keyword": "under construction",
-      "relevance_score": 4
-    },
-    {
-      "status": "Closing",
-      "industry": "Restaurants",
-      "region": "Canada",
-      "title": "Darden Restaurants to close all Bahama Breeze locations",
-      "source": "AOL.com",
-      "published_date": "2026-05-05 10:33:12",
-      "direct_link": "https://www.aol.com/articles/daren-restaurants-close-bahama-breeze-130245398.html",
-      "keyword": "closing all locations",
       "relevance_score": 4
     },
     {
@@ -2875,7 +3095,7 @@
     {
       "status": "Opening",
       "industry": "Health / Beauty",
-      "region": "Canada",
+      "region": "USA",
       "title": "Salon reveals growth strategy as it hits location No. 7",
       "source": "The Business Journals",
       "published_date": "2026-05-05 09:00:00",
@@ -2898,17 +3118,28 @@
       "status": "Opening",
       "industry": "Restaurants",
       "region": "USA",
+      "title": "Breakfast tacos now a quick stop in North Augusta with opening of restaurant inspired by San Antonio",
+      "source": "Post and Courier",
+      "published_date": "2026-05-05 09:00:00",
+      "direct_link": "https://www.postandcourier.com/northaugusta/business/beanie-bens-breakfast-tacos-open-beacon-bluff-north-augusta/article_5fb50bd2-9953-4440-bb3a-2aba9eebebe2.html",
+      "keyword": "now open",
+      "relevance_score": 4
+    },
+    {
+      "status": "Opening",
+      "industry": "Restaurants",
+      "region": "USA",
       "title": "Pub Restaurant Faces Closure As Jobs Put At Risk",
       "source": "HFM – Local Radio For Market Harborough",
       "published_date": "2026-05-05 07:21:24",
       "direct_link": "https://harboroughfm.co.uk/hfm-pub-restaurant-faces-closure-as-jobs-put-at-risk/",
-      "keyword": "plans to open",
+      "keyword": "new store",
       "relevance_score": 4
     },
     {
       "status": "Opening",
       "industry": "Mass Merchandisers",
-      "region": "USA",
+      "region": "Canada",
       "title": "Discount store new anchor of Turlock Town Center",
       "source": "Turlock Journal",
       "published_date": "2026-05-05 07:00:00",
@@ -2941,7 +3172,7 @@
     {
       "status": "Opening",
       "industry": "Grocery",
-      "region": "Canada",
+      "region": "USA",
       "title": "Mercadona will open a new supermarket in Portugal and is hiring part-time: salaries up to €10,457/year and an extra week of vacation",
       "source": "lnginnorthernbc.ca",
       "published_date": "2026-05-05 05:59:38",
@@ -2951,129 +3182,195 @@
     },
     {
       "status": "Closing",
-      "industry": "Restaurants",
+      "industry": "Specialty / Other",
       "region": "Canada",
-      "title": "Barbecue chain which once boasted over 100 locations abruptly closes all remaining restaurants",
-      "source": "MSN",
-      "published_date": "2026-05-05 03:12:17",
-      "direct_link": "https://www.msn.com/en-us/foodanddrink/foodnews/barbecue-chain-which-once-boasted-over-100-locations-abruptly-closes-all-remaining-restaurants/ar-AA221NbA?ocid=stripeocid&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
-      "keyword": "closing all locations",
-      "relevance_score": 4
-    },
-    {
-      "status": "Opening",
-      "industry": "Furniture / Mattress",
-      "region": "USA",
-      "title": "Former furniture store converted to affordable apartments in City Heights",
-      "source": "MSN",
-      "published_date": "2026-05-05 00:45:00",
-      "direct_link": "https://www.msn.com/en-us/money/realestate/former-furniture-store-converted-to-affordable-apartments-in-city-heights/ar-AA218kSo?ocid=BingNewsVerp&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
-      "keyword": "grand opening",
-      "relevance_score": 4
-    },
-    {
-      "status": "Opening",
-      "industry": "Footwear",
-      "region": "USA",
-      "title": "N.J. mall opening 1st eco-friendly women’s shoe store location",
-      "source": "NJ.com",
-      "published_date": "2026-05-05 00:02:00",
-      "direct_link": "https://www.nj.com/bergen/2026/05/nj-mall-opening-1st-eco-friendly-womens-shoe-store-location.html",
-      "keyword": "new location",
-      "relevance_score": 4
-    },
-    {
-      "status": "Opening",
-      "industry": "Footwear",
-      "region": "USA",
-      "title": "Vivaia opening 1st N.J. shoe store at Westfield Garden State Plaza in Paramus",
-      "source": "Yahoo",
-      "published_date": "2026-05-05 00:02:00",
-      "direct_link": "https://www.yahoo.com/news/articles/vivaia-opening-1st-n-j-210046738.html",
-      "keyword": "new location",
-      "relevance_score": 4
-    },
-    {
-      "status": "Opening",
-      "industry": "Grocery",
-      "region": "USA",
-      "title": "Sprouts grocery store development gets nod from Wheaton board",
-      "source": "Daily Herald",
-      "published_date": "2026-05-04 23:49:37",
-      "direct_link": "https://www.dailyherald.com/20260504/news/sprouts-grocery-store-development-gets-nod-from-wheaton-board/",
-      "keyword": "now open",
-      "relevance_score": 4
-    },
-    {
-      "status": "Opening",
-      "industry": "Grocery Wholesale",
-      "region": "USA",
-      "title": "New Texas BJ's Wholesale Club location offers $2 gas for members",
-      "source": "MSN",
-      "published_date": "2026-05-04 23:40:22",
-      "direct_link": "https://www.msn.com/en-us/money/companies/new-texas-bj-s-wholesale-club-location-offers-2-gas-for-members/ar-AA22fuGp?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
-      "keyword": "grand opening",
-      "relevance_score": 4
-    },
-    {
-      "status": "Opening",
-      "industry": "Convenience Stores / Distributors",
-      "region": "USA",
-      "title": "Major US convenience chain 7-Eleven closes 645 stores",
-      "source": "MSN",
-      "published_date": "2026-05-04 23:39:36",
-      "direct_link": "https://www.msn.com/en-us/lifestyle/lifestyle-buzz/major-high-street-convenience-chain-closes-645-stores-75-off-sale-launched/ar-AA224kNn?ocid=iehpELMEMhx",
-      "keyword": "plans to open",
-      "relevance_score": 4
-    },
-    {
-      "status": "Opening",
-      "industry": "Convenience Stores / Distributors",
-      "region": "USA",
-      "title": "Couple opens new Rexford gas station and convenience store, their second",
-      "source": "The Business Journals",
-      "published_date": "2026-05-04 23:37:00",
-      "direct_link": "https://www.bizjournals.com/albany/news/2026/05/04/rexford-sunoco-gas-station-sehgal.html",
-      "keyword": "new store",
-      "relevance_score": 4
-    },
-    {
-      "status": "Closing",
-      "industry": "Movie Theatres",
-      "region": "USA",
-      "title": "Big Sky Cinema in Dillon set to close after decades of business",
-      "source": "Montana State Exponent",
-      "published_date": "2026-05-04 22:39:42",
-      "direct_link": "https://www.msuexponent.com/news/state/big-sky-cinema-in-dillon-set-to-close-after-decades-of-business/article_3a48dd60-4bd2-5cbd-8750-5aeda9ffa889.html",
-      "keyword": "last day",
-      "relevance_score": 4
-    },
-    {
-      "status": "Opening",
-      "industry": "Furniture / Mattress",
-      "region": "Canada",
-      "title": "Furniture retailer enters Ohio with Holland-area store; job fair set",
-      "source": "Toledo Blade",
-      "published_date": "2026-05-04 22:26:37",
-      "direct_link": "https://www.toledoblade.com/business/labor/2026/05/04/furniture-retailer-enters-ohio-with-holland-area-store-job-fair-set/stories/20260504109",
-      "keyword": "soft opening",
-      "relevance_score": 4
-    },
-    {
-      "status": "Opening",
-      "industry": "Convenience Stores / Distributors",
-      "region": "USA",
-      "title": "New Co-op convenience store due to open at One Maidenhead in July",
-      "source": "Slough Express",
-      "published_date": "2026-05-04 21:58:12",
-      "direct_link": "https://www.sloughexpress.co.uk/gallery/business/705819/new-co-op-convenience-store-due-to-open-at-one-maidenhead-in-july.html?flip=true",
-      "keyword": "new store",
-      "relevance_score": 4
+      "title": "340 car parks could close",
+      "source": "Daily Express",
+      "published_date": "2026-05-07 04:17:00",
+      "direct_link": "https://www.express.co.uk/news/uk/2202654/uks-largest-parking-company-plunges",
+      "keyword": "liquidation",
+      "relevance_score": 2
     },
     {
       "status": "Opening",
       "industry": "Specialty / Other",
       "region": "Canada",
+      "title": "Coffee shop set to open inside Sainsbury's later this year",
+      "source": "Bournemouth Echo",
+      "published_date": "2026-05-07 04:00:00",
+      "direct_link": "https://www.bournemouthecho.co.uk/news/26082650.costa-coffee-store-open-alder-road-sainsburys/",
+      "keyword": "plans to open",
+      "relevance_score": 2
+    },
+    {
+      "status": "Closing",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "'Crucial' banking hub opens in town centre after branch closure",
+      "source": "Lancashire Telegraph",
+      "published_date": "2026-05-07 04:00:00",
+      "direct_link": "https://www.lancashiretelegraph.co.uk/news/26084046.nelson-banking-hub-opens-permanent-site-scotland-road/",
+      "keyword": "permanent closure",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "Golf businesses open for the season",
+      "source": "Leelanau News",
+      "published_date": "2026-05-07 03:05:53",
+      "direct_link": "https://www.leelanaunews.com/article/7684,golf-businesses-open-for-the-season",
+      "keyword": "open for business",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "French Bakery Chain Paul Reimagines Modern Store Network",
+      "source": "restaurantandcafe.co.nz",
+      "published_date": "2026-05-07 03:04:19",
+      "direct_link": "https://restaurantandcafe.co.nz/french-bakery-chain-paul-reimagines-modern-store-network/",
+      "keyword": "new store",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "Oakberry is opening another location in Waikiki",
+      "source": "KITV",
+      "published_date": "2026-05-07 02:51:32",
+      "direct_link": "https://www.kitv.com/oakberry-is-opening-another-location-in-waikiki/collection_76a9d3df-df48-4a09-bd40-858057f0e2c6.html",
+      "keyword": "new location",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "Canada",
+      "title": "Pete’s Chanute location goes solar; Iola and Humboldt stores are next",
+      "source": "The Iola Register",
+      "published_date": "2026-05-07 02:10:24",
+      "direct_link": "https://www.iolaregister.com/news/local-news/petes-iola-franchise-to-add-solar-power",
+      "keyword": "under construction",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "Canada",
+      "title": "Pittsburgh mall officially sold; latest on possible Wegmans location there",
+      "source": "MSN",
+      "published_date": "2026-05-07 01:57:11",
+      "direct_link": "https://www.msn.com/en-us/money/companies/pittsburgh-mall-officially-sold-latest-on-possible-wegmans-location-there/ar-AA21Vv4L?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
+      "keyword": "plans to open",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "Oakberry to open second Oahu location in Waikiki",
+      "source": "KITV",
+      "published_date": "2026-05-07 01:49:00",
+      "direct_link": "https://www.kitv.com/news/business/oakberry-to-open-second-oahu-location-in-waikiki/article_a131494c-ece7-41f1-917b-2b33e15dfed7.html",
+      "keyword": "new location",
+      "relevance_score": 2
+    },
+    {
+      "status": "Closing",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "List of Stores Closing in May",
+      "source": "Newsweek",
+      "published_date": "2026-05-07 00:24:00",
+      "direct_link": "https://www.newsweek.com/list-of-stores-closing-in-may-11863925",
+      "keyword": "chapter 11",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "Police charge 6 teen girls with beating woman inside Sephora store in Shadyside",
+      "source": "TribLIVE.com",
+      "published_date": "2026-05-07 00:05:53",
+      "direct_link": "https://community.triblive.com/c/bridgeville-signal-item/news/4046876",
+      "keyword": "open for business",
+      "relevance_score": 2
+    },
+    {
+      "status": "Closing",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "MANSFIELD SCOOP: Dad's Doughs closing Mansfield doughnut shop",
+      "source": "The Connecticut Scoop",
+      "published_date": "2026-05-06 23:45:46",
+      "direct_link": "https://www.theconnecticutscoop.com/all-tolland-county-posts/mansfield-scoop-dads-doughs-closing-mansfield-doughnut-shop",
+      "keyword": "last day",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "No Brand to Expand Mongolia Stores, Targets 50 Outlets in a Decade",
+      "source": "Seoul Economic Daily",
+      "published_date": "2026-05-06 23:44:59",
+      "direct_link": "https://en.sedaily.com/finance/2026/05/07/no-brand-to-expand-mongolia-stores-targets-50-outlets-in-a",
+      "keyword": "plans to open",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "Fast-growing New York-style bagel shop to open new location in the Heights",
+      "source": "Houston Chronicle",
+      "published_date": "2026-05-06 22:44:40",
+      "direct_link": "https://www.houstonchronicle.com/news/houston-texas/article/jeffs-bagels-houston-heights-22244945.php",
+      "keyword": "plans to open",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "Disney Springs Permit Points to Major New Retail Brand After May 1 Closure",
+      "source": "disneydining.com",
+      "published_date": "2026-05-06 22:43:01",
+      "direct_link": "https://www.disneydining.com/disney-springs-permit-points-to-major-new-retail-brand-after-may-1-closure-bwb1/",
+      "keyword": "new location",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "What new businesses opened in SLO County last month? See the buzziest additions",
+      "source": "San Luis Obispo Tribune",
+      "published_date": "2026-05-06 22:04:59",
+      "direct_link": "https://www.sanluisobispo.com/news/local/article315606792.html",
+      "keyword": "now open",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "Ikea’s 9th Texas store opening this month",
+      "source": "Furniture Today",
+      "published_date": "2026-05-06 21:53:01",
+      "direct_link": "https://www.furnituretoday.com/furniture-retailer/ikeas-9th-texas-store-opening-this-month/",
+      "keyword": "opening soon",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "USA",
       "title": "Oshkosh committee advances plan for new Woodman’s store",
       "source": "WTAQ",
       "published_date": "2026-05-06 21:43:58",
@@ -3085,11 +3382,11 @@
       "status": "Opening",
       "industry": "Specialty / Other",
       "region": "USA",
-      "title": "Police charge 6 teen girls with beating woman inside Sephora store in Shadyside",
-      "source": "TribLIVE.com",
-      "published_date": "2026-05-06 21:32:59",
-      "direct_link": "https://triblive.com/local/police-charge-6-teen-girls-with-beating-woman-inside-sephora-store-in-shadyside/",
-      "keyword": "open for business",
+      "title": "Meijer Opens Stores In 3 MW States",
+      "source": "The Shelby Report",
+      "published_date": "2026-05-06 21:34:03",
+      "direct_link": "https://theshelbyreport.com/2026/05/06/meijer-opens-three-new-supercenters-across-mi-in-and-oh/",
+      "keyword": "ribbon cutting",
       "relevance_score": 2
     },
     {
@@ -3101,6 +3398,28 @@
       "published_date": "2026-05-06 21:28:41",
       "direct_link": "https://whatnow.com/charlotte/restaurants/dairi-o-plans-new-sanford-location-for-fall-2026-opening/",
       "keyword": "new location",
+      "relevance_score": 2
+    },
+    {
+      "status": "Closing",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "Essential retailer closes hundreds of stores as protests grow",
+      "source": "thestreet.com",
+      "published_date": "2026-05-06 21:25:33",
+      "direct_link": "https://www.thestreet.com/retail/essential-retailer-walgreens-shuts-hundreds-of-stores-as-protests-grow",
+      "keyword": "closing stores",
+      "relevance_score": 2
+    },
+    {
+      "status": "Closing",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "Closing down sales reach 80% as Macy’s pulls the plug on 8 more stores",
+      "source": "the-sun.com",
+      "published_date": "2026-05-06 21:24:48",
+      "direct_link": "https://www.the-sun.com/money/16322802/macys-store-closures-sales-bold-new-chapter/",
+      "keyword": "closing stores",
       "relevance_score": 2
     },
     {
@@ -3148,6 +3467,39 @@
       "relevance_score": 2
     },
     {
+      "status": "Closing",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "Pittsburgh Post-Gazette avoids closure, will continue to publish thanks to nonprofit sale",
+      "source": "MSN",
+      "published_date": "2026-05-06 20:38:05",
+      "direct_link": "https://www.msn.com/en-us/news/us/pittsburgh-post-gazette-avoids-closure-will-continue-to-publish-thanks-to-nonprofit-sale/ar-AA20SwA6?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
+      "keyword": "going out of business",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "Shoe Show opening in Gateway Town Center",
+      "source": "Jacksonville Daily Record",
+      "published_date": "2026-05-06 20:30:00",
+      "direct_link": "https://www.jaxdailyrecord.com/news/2026/may/06/shoe-show-opening-in-gateway-town-center/",
+      "keyword": "build out",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "Rodney Scott’s BBQ Announces Temporary Closure Of Its Locations—Here’s What We Know",
+      "source": "Southern Living",
+      "published_date": "2026-05-06 20:06:38",
+      "direct_link": "https://www.southernliving.com/rodney-scotts-bbq-closed-11965522",
+      "keyword": "open for business",
+      "relevance_score": 2
+    },
+    {
       "status": "Opening",
       "industry": "Specialty / Other",
       "region": "USA",
@@ -3172,7 +3524,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "Mystic Lake Amphitheater in Shakopee will open June 20 with homegrown lineup",
       "source": "Pioneer Press",
       "published_date": "2026-05-06 19:45:18",
@@ -3195,7 +3547,7 @@
       "status": "Opening",
       "industry": "Specialty / Other",
       "region": "Canada",
-      "title": "After a 6-year wait, The Hat finally opens Las Vegas location",
+      "title": "After a 7-year wait, The Hat finally opens Las Vegas location",
       "source": "Las Vegas Review-Journal",
       "published_date": "2026-05-06 19:25:21",
       "direct_link": "https://neon.reviewjournal.com/dining-out/after-a-6-year-wait-the-hat-finally-opens-las-vegas-location-3334535/",
@@ -3227,7 +3579,7 @@
     {
       "status": "Closing",
       "industry": "Specialty / Other",
-      "region": "Canada",
+      "region": "USA",
       "title": "Lawton's CashSaver To Close May 15, Offers 25-40% Off Storewide Discounts",
       "source": "KLAW 101",
       "published_date": "2026-05-06 19:00:10",
@@ -3243,7 +3595,7 @@
       "source": "Sassy Mama Singapore",
       "published_date": "2026-05-06 18:52:42",
       "direct_link": "https://www.sassymamasg.com/play-rainforest-wild-asia-kids-adventure-park-guide/",
-      "keyword": "now open",
+      "keyword": "soft opening",
       "relevance_score": 2
     },
     {
@@ -3272,6 +3624,17 @@
       "status": "Opening",
       "industry": "Specialty / Other",
       "region": "USA",
+      "title": "Popular Tucson Coffee Shop Desert Drifter Opens 2nd Location, With More On The Way",
+      "source": "Patch",
+      "published_date": "2026-05-06 18:06:38",
+      "direct_link": "https://patch.com/arizona/tucson/popular-tucson-coffee-shop-desert-drifter-opens-2nd-location-more-way",
+      "keyword": "now open",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "Canada",
       "title": "Proposals for two new Grocery Outlet stores make progress in Oakland",
       "source": "East Bay Times",
       "published_date": "2026-05-06 17:56:43",
@@ -3282,7 +3645,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "Buck Mason Plans to Open First San Diego Store in La Jolla",
       "source": "WhatNow",
       "published_date": "2026-05-06 17:43:47",
@@ -3293,7 +3656,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "Snake & Skein to open larger Lancaster city store after move from Elizabethtown",
       "source": "LancasterOnline",
       "published_date": "2026-05-06 17:42:00",
@@ -3310,6 +3673,17 @@
       "published_date": "2026-05-06 17:36:33",
       "direct_link": "http://middletownpress.com/business/article/ross-dress-for-less-hamden-newington-connecticut-22243050.php",
       "keyword": "open for business",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "Publix may have changed its open carry guns rule in Florida stores",
+      "source": "The Palm Beach Post",
+      "published_date": "2026-05-06 17:34:00",
+      "direct_link": "https://www.palmbeachpost.com/story/grocery/stores/2026/05/06/publix-updates-open-carry-policy-signs-in-florida-grocery-stores/89962309007/",
+      "keyword": "new store",
       "relevance_score": 2
     },
     {
@@ -3337,12 +3711,12 @@
     {
       "status": "Closing",
       "industry": "Specialty / Other",
-      "region": "USA",
-      "title": "Closing down sales reach 80% as Macy’s pulls the plug on 8 more stores",
-      "source": "the-sun.com",
-      "published_date": "2026-05-06 17:24:20",
-      "direct_link": "https://www.the-sun.com/money/16322802/macys-store-closures-sales-bold-new-chapter/",
-      "keyword": "closing stores",
+      "region": "Canada",
+      "title": "This Village District store is closing soon. Here’s when to shop in Raleigh",
+      "source": "AOL.com",
+      "published_date": "2026-05-06 17:26:09",
+      "direct_link": "https://www.aol.com/news/village-district-store-closing-soon-131401603.html",
+      "keyword": "store closing",
       "relevance_score": 2
     },
     {
@@ -3350,7 +3724,7 @@
       "industry": "Specialty / Other",
       "region": "USA",
       "title": "Hyde Lounge inside T-Mobile Arena in Las Vegas announces closure on social media",
-      "source": "FOX5 Vegas",
+      "source": "fox5vegas.com",
       "published_date": "2026-05-06 17:24:00",
       "direct_link": "https://www.fox5vegas.com/2026/05/06/hyde-lounge-inside-t-mobile-arena-las-vegas-announces-closure-social-media/",
       "keyword": "permanent closure",
@@ -3375,7 +3749,7 @@
       "source": "facebook.com",
       "published_date": "2026-05-06 17:23:19",
       "direct_link": "https://www.facebook.com/detroitfreepress/posts/after-operating-for-two-years-the-dime-stores-rochester-hills-location-will-shut/1428498479322300/",
-      "keyword": "new location",
+      "keyword": "new store",
       "relevance_score": 2
     },
     {
@@ -3426,17 +3800,6 @@
       "status": "Opening",
       "industry": "Specialty / Other",
       "region": "USA",
-      "title": "More seafood, custard and dining options open in metro Detroit",
-      "source": "AOL.com",
-      "published_date": "2026-05-06 16:52:33",
-      "direct_link": "https://www.aol.com/articles/more-seafood-custard-dining-options-145722514.html",
-      "keyword": "now open",
-      "relevance_score": 2
-    },
-    {
-      "status": "Opening",
-      "industry": "Specialty / Other",
-      "region": "USA",
       "title": "Milton getting its first Chipotle location",
       "source": "MiltonToday.ca",
       "published_date": "2026-05-06 16:32:28",
@@ -3458,34 +3821,12 @@
     {
       "status": "Closing",
       "industry": "Specialty / Other",
-      "region": "USA",
-      "title": "Essential retailer shuts hundreds of stores as protests grow",
-      "source": "thestreet.com",
-      "published_date": "2026-05-06 15:49:35",
-      "direct_link": "https://www.thestreet.com/retail/essential-retailer-walgreens-shuts-hundreds-of-stores-as-protests-grow",
-      "keyword": "chapter 11",
-      "relevance_score": 2
-    },
-    {
-      "status": "Closing",
-      "industry": "Specialty / Other",
-      "region": "USA",
-      "title": "107-year-old beloved burger chain closes locations",
-      "source": "thestreet.com",
-      "published_date": "2026-05-06 15:48:24",
-      "direct_link": "https://www.thestreet.com/restaurants/aw-restaurant-chain-closes-locations-nationwide",
-      "keyword": "going out of business",
-      "relevance_score": 2
-    },
-    {
-      "status": "Opening",
-      "industry": "Specialty / Other",
       "region": "Canada",
-      "title": "Former Mi Luna chef to open new business in downtown Olympia",
+      "title": "This Durham store is closing after more than 40 years. Here’s why & last days",
       "source": "AOL.com",
-      "published_date": "2026-05-06 15:40:27",
-      "direct_link": "https://www.aol.com/news/former-mi-luna-chef-open-120000457.html",
-      "keyword": "plans to open",
+      "published_date": "2026-05-06 16:13:13",
+      "direct_link": "https://www.aol.com/news/durham-store-closing-more-40-114654646.html",
+      "keyword": "store closing",
       "relevance_score": 2
     },
     {
@@ -3557,6 +3898,17 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "New JD store in Tallaght giving away vouchers and prizes this weekend",
+      "source": "Dublin Live",
+      "published_date": "2026-05-06 15:22:14",
+      "direct_link": "https://www.dublinlive.ie/news/new-jd-store-tallaght-giving-33899678",
+      "keyword": "new store",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
       "region": "Canada",
       "title": "Barnes & Noble to open downtown Seattle store Wednesday",
       "source": "KING5.com",
@@ -3591,22 +3943,22 @@
       "status": "Opening",
       "industry": "Specialty / Other",
       "region": "USA",
-      "title": "Jet Food stores sells fuels business, eyes retail growth",
-      "source": "C-Store Dive",
-      "published_date": "2026-05-06 14:50:02",
-      "direct_link": "https://www.cstoredive.com/news/jet-food-stores-sells-fuels-business-to-colonial-oil/819370/",
-      "keyword": "new store",
-      "relevance_score": 2
-    },
-    {
-      "status": "Opening",
-      "industry": "Specialty / Other",
-      "region": "USA",
       "title": "The new Wetherspoon pubs that could open in London including Heathrow Airport",
       "source": "London Now",
       "published_date": "2026-05-06 14:40:00",
       "direct_link": "https://www.london-now.co.uk/news/26081680.wetherspoon-open-new-london-pubs-including-heathrow/",
       "keyword": "plans to open",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "Canada",
+      "title": "5 things: Shop Heroic Wholesale Outlet opens in Carmichael",
+      "source": "The Business Journals",
+      "published_date": "2026-05-06 14:39:00",
+      "direct_link": "https://www.bizjournals.com/sacramento/news/2026/05/06/5-things-shop-heroic-wholesale-opens-carmichael.html",
+      "keyword": "coming soon",
       "relevance_score": 2
     },
     {
@@ -3621,14 +3973,14 @@
       "relevance_score": 2
     },
     {
-      "status": "Opening",
+      "status": "Closing",
       "industry": "Specialty / Other",
       "region": "USA",
       "title": "This Cary store has permanently closed after 3 years. Here’s why",
       "source": "AOL.com",
       "published_date": "2026-05-06 14:10:53",
       "direct_link": "https://www.aol.com/news/cary-store-permanently-closed-3-200327778.html",
-      "keyword": "new store",
+      "keyword": "closing stores",
       "relevance_score": 2
     },
     {
@@ -3676,17 +4028,6 @@
       "relevance_score": 2
     },
     {
-      "status": "Closing",
-      "industry": "Specialty / Other",
-      "region": "USA",
-      "title": "MANSFIELD SCOOP: Dad's Doughs closing Mansfield doughnut shop",
-      "source": "The Connecticut Scoop",
-      "published_date": "2026-05-06 13:35:21",
-      "direct_link": "https://www.theconnecticutscoop.com/all-tolland-county-posts/mansfield-scoop-dads-doughs-closing-mansfield-doughnut-shop",
-      "keyword": "last day",
-      "relevance_score": 2
-    },
-    {
       "status": "Opening",
       "industry": "Specialty / Other",
       "region": "USA",
@@ -3700,7 +4041,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "Canada",
+      "region": "USA",
       "title": "Wells Fargo celebrates its newest Long Island branch",
       "source": "Long Island Business News",
       "published_date": "2026-05-06 13:06:55",
@@ -3728,6 +4069,17 @@
       "published_date": "2026-05-06 12:47:49",
       "direct_link": "https://blockclubchicago.org/2026/05/06/fat-chriss-pizza-and-such-closing-in-andersonville-after-9-years/",
       "keyword": "last day",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "Canada",
+      "title": "Which Big-Box Store Chain Has Dominated 2026: Walmart, Target, or Costco?",
+      "source": "AOL.com",
+      "published_date": "2026-05-06 12:42:22",
+      "direct_link": "https://www.aol.com/finance/big-box-store-chain-dominated-193340692.html",
+      "keyword": "plans to open",
       "relevance_score": 2
     },
     {
@@ -3778,17 +4130,6 @@
       "status": "Opening",
       "industry": "Specialty / Other",
       "region": "USA",
-      "title": "What new businesses opened in SLO County last month? See the buzziest additions",
-      "source": "AOL.com",
-      "published_date": "2026-05-06 12:03:11",
-      "direct_link": "https://www.aol.com/news/businesses-opened-slo-county-last-160000264.html",
-      "keyword": "new location",
-      "relevance_score": 2
-    },
-    {
-      "status": "Opening",
-      "industry": "Specialty / Other",
-      "region": "USA",
       "title": "Activate Opens First Malaysia Location in Kuala Lumpur in Partnership with Kara Holdings",
       "source": "Taiwan News",
       "published_date": "2026-05-06 12:00:00",
@@ -3821,7 +4162,7 @@
     {
       "status": "Closing",
       "industry": "Specialty / Other",
-      "region": "Canada",
+      "region": "USA",
       "title": "Queues down the street in Newcastle as new sandwich shop sells out of food on opening day",
       "source": "Chronicle Live",
       "published_date": "2026-05-06 11:28:00",
@@ -3832,7 +4173,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "Aldi adds 4 more Florida stores in May. Here are the newest locations",
       "source": "Treasure Coast News",
       "published_date": "2026-05-06 11:25:00",
@@ -3843,7 +4184,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "Downtown Silver Spring 7-Eleven to Close Today at Station Square",
       "source": "Source of the Spring",
       "published_date": "2026-05-06 11:00:14",
@@ -3874,6 +4215,17 @@
       "relevance_score": 2
     },
     {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "RED the Steakhouse opening new East Side location",
+      "source": "MSN",
+      "published_date": "2026-05-06 10:31:58",
+      "direct_link": "http://www.msn.com/en-us/news/us/red-the-steakhouse-opening-new-east-side-location/ar-AA22sMal?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
+      "keyword": "new location",
+      "relevance_score": 2
+    },
+    {
       "status": "Closing",
       "industry": "Specialty / Other",
       "region": "USA",
@@ -3893,6 +4245,17 @@
       "published_date": "2026-05-06 09:30:00",
       "direct_link": "https://www.thebanner.com/culture/food-drink/italian-libs-grill-liberatores-baltimore-restaurant-GCZHQ7X2WZFGXKMBUX3Q6MMDE4/",
       "keyword": "going out of business",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "subsidised places open for Royal Navy and Royal Marines families",
+      "source": "Cobseo - The Confederation of Service Charities",
+      "published_date": "2026-05-06 09:16:10",
+      "direct_link": "https://www.cobseo.org.uk/the-weekender-returns-for-2026-subsidised-places-open-for-royal-navy-and-royal-marines-families/",
+      "keyword": "now open",
       "relevance_score": 2
     },
     {
@@ -3964,17 +4327,6 @@
     {
       "status": "Closing",
       "industry": "Specialty / Other",
-      "region": "USA",
-      "title": "Family meat empire to close after more than 80 years",
-      "source": "7NEWS",
-      "published_date": "2026-05-06 08:07:00",
-      "direct_link": "https://7news.com.au/news/jack-purcell-meats-collapses-amid-mounting-pressure-on-family-food-businesses-c-22245247",
-      "keyword": "liquidation",
-      "relevance_score": 2
-    },
-    {
-      "status": "Closing",
-      "industry": "Specialty / Other",
       "region": "Canada",
       "title": "Exact date high street giant will close only Stirling branch",
       "source": "Daily Record",
@@ -3986,7 +4338,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "Canada",
+      "region": "USA",
       "title": "Pureseoul to make regional debut with new Bath store",
       "source": "TheIndustry.beauty",
       "published_date": "2026-05-06 06:51:33",
@@ -4008,7 +4360,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "Canada",
+      "region": "USA",
       "title": "Big grocers demand crackdown on Aldi and Lidl store expansion loophole",
       "source": "Retail Gazette",
       "published_date": "2026-05-06 05:55:11",
@@ -4041,7 +4393,7 @@
     {
       "status": "Closing",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "F45 Training locations close on the Sunshine Coast",
       "source": "Australasian Leisure Management Magazine",
       "published_date": "2026-05-06 05:13:14",
@@ -4052,7 +4404,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "Canada",
+      "region": "USA",
       "title": "Lidl wins planning battle for controversial Leicestershire village store",
       "source": "Leicestershire Live",
       "published_date": "2026-05-06 05:00:00",
@@ -4102,6 +4454,17 @@
       "published_date": "2026-05-06 02:00:00",
       "direct_link": "https://www.castanet.net/news/Kelowna/612734/Oh-Baby-opens-new-Bernard-Avenue-store-in-Kelowna-consolidates-Ellis-Street-locations",
       "keyword": "new location",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "Kura sushi bar set to open in Denton with robot servers, conveyor belts and prizes",
+      "source": "Denton Record-Chronicle",
+      "published_date": "2026-05-06 00:22:50",
+      "direct_link": "https://dentonrc.com/business/kura-sushi-bar-set-to-open-in-denton-with-robot-servers-conveyor-belts-and-prizes/article_22a72549-9445-4867-b06c-645deb53ee1d.html",
+      "keyword": "soft opening",
       "relevance_score": 2
     },
     {
@@ -4162,12 +4525,23 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "Popular sports bar opens Newtown location, replacing Iron Hill Brewery",
       "source": "PhillyBurbs",
       "published_date": "2026-05-05 21:59:00",
-      "direct_link": "https://www.buckscountycouriertimes.com/story/lifestyle/food/2026/05/05/p-j-whelihans-now-open-in-newtown-replaces-closed-iron-hill-brewery-bucks-county-sports-bar/89951812007/",
-      "keyword": "now open",
+      "direct_link": "https://www.phillyburbs.com/story/lifestyle/food/2026/05/05/p-j-whelihans-now-open-in-newtown-replaces-closed-iron-hill-brewery-bucks-county-sports-bar/89951812007/",
+      "keyword": "grand opening",
+      "relevance_score": 2
+    },
+    {
+      "status": "Closing",
+      "industry": "Specialty / Other",
+      "region": "Canada",
+      "title": "All Smokey Bones locations close, including in Colonie",
+      "source": "MSN",
+      "published_date": "2026-05-05 21:58:52",
+      "direct_link": "https://www.msn.com/en-us/money/companies/all-smokey-bones-locations-close-including-in-colonie/ar-AA221csf",
+      "keyword": "bankruptcy",
       "relevance_score": 2
     },
     {
@@ -4179,28 +4553,6 @@
       "published_date": "2026-05-05 21:57:42",
       "direct_link": "https://www.msn.com/en-us/money/companies/two-more-saucy-by-kfc-locations-set-to-open-in-tampa-bay/ar-AA22awwH",
       "keyword": "under construction",
-      "relevance_score": 2
-    },
-    {
-      "status": "Opening",
-      "industry": "Specialty / Other",
-      "region": "USA",
-      "title": "RED the Steakhouse opening new east side location",
-      "source": "AOL.com",
-      "published_date": "2026-05-05 21:45:42",
-      "direct_link": "https://www.aol.com/news/red-steakhouse-opening-east-side-214542888.html",
-      "keyword": "new location",
-      "relevance_score": 2
-    },
-    {
-      "status": "Opening",
-      "industry": "Specialty / Other",
-      "region": "USA",
-      "title": "M/I Homes Now Selling at Cay at Coasterra; Model Homes Officially Open",
-      "source": "Weekly Voice",
-      "published_date": "2026-05-05 21:40:24",
-      "direct_link": "https://weeklyvoice.com/m-i-homes-now-selling-at-cay-at-coasterra-model-homes-officially-open/",
-      "keyword": "now open",
       "relevance_score": 2
     },
     {
@@ -4239,7 +4591,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "Wegmans officially purchases land to build first Pittsburgh-area location",
       "source": "MSN",
       "published_date": "2026-05-05 21:07:40",
@@ -4261,7 +4613,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "Burlington opening May 15 in St. Johns Town Center",
       "source": "Jacksonville Daily Record",
       "published_date": "2026-05-05 20:48:00",
@@ -4283,9 +4635,9 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "Popular burger chain is opening new Triangle location soon. Here’s when & where",
-      "source": "News & Observer",
+      "source": "Raleigh News & Observer",
       "published_date": "2026-05-05 20:06:12",
       "direct_link": "https://www.newsobserver.com/living/food-drink/article315641787.html",
       "keyword": "grand opening",
@@ -4314,9 +4666,31 @@
       "relevance_score": 2
     },
     {
+      "status": "Closing",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "107-year-old beloved burger chain closes locations",
+      "source": "Yahoo Finance Singapore",
+      "published_date": "2026-05-05 19:27:59",
+      "direct_link": "https://sg.finance.yahoo.com/news/107-old-beloved-burger-chain-192759062.html",
+      "keyword": "going out of business",
+      "relevance_score": 2
+    },
+    {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "Canada",
+      "region": "USA",
+      "title": "Hero Doughnuts founder apparently reopening Homewood location",
+      "source": "Bham Now",
+      "published_date": "2026-05-05 19:26:54",
+      "direct_link": "https://bhamnow.com/2026/05/05/hero-doughnuts-founder-apparently-reopening-homewood-location/",
+      "keyword": "now open",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "USA",
       "title": "In‑N‑Out Burger opening 5 new locations in 5 states",
       "source": "WGNO",
       "published_date": "2026-05-05 19:22:23",
@@ -4327,11 +4701,11 @@
     {
       "status": "Closing",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "Beloved sandwich chain saw at least 729 locations close in 2025",
       "source": "MLive.com",
       "published_date": "2026-05-05 19:20:00",
-      "direct_link": "https://www.mlive.com/business/2026/05/beloved-sandwich-chain-saw-at-least-729-locations-close-in-2025.html?outputType=amp",
+      "direct_link": "https://www.mlive.com/business/2026/05/beloved-sandwich-chain-saw-at-least-729-locations-close-in-2025.html",
       "keyword": "bankruptcy",
       "relevance_score": 2
     },
@@ -4349,7 +4723,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "Sign of the times? Costco is opening standalone gas stations",
       "source": "MSN",
       "published_date": "2026-05-05 19:13:42",
@@ -4360,7 +4734,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "Canada",
+      "region": "USA",
       "title": "Publix announces opening date for new NKY store",
       "source": "AOL.com",
       "published_date": "2026-05-05 19:11:39",
@@ -4404,7 +4778,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "Canada",
+      "region": "USA",
       "title": "Publix sets opening date for Cold Spring store, its second in Greater Cincinnati",
       "source": "The Business Journals",
       "published_date": "2026-05-05 18:33:00",
@@ -4426,7 +4800,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "Another Trader Joe's location is coming to Tarrant County, the retailer confirms",
       "source": "WFAA",
       "published_date": "2026-05-05 18:24:00",
@@ -4437,7 +4811,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "Canada",
+      "region": "USA",
       "title": "Second Publix in northern Kentucky area announces opening date",
       "source": "WLWT",
       "published_date": "2026-05-05 18:12:00",
@@ -4457,9 +4831,20 @@
       "relevance_score": 2
     },
     {
+      "status": "Closing",
+      "industry": "Specialty / Other",
+      "region": "Canada",
+      "title": "Macy’s permanently closing 14 stores despite strong holiday sales",
+      "source": "MSN",
+      "published_date": "2026-05-05 17:09:20",
+      "direct_link": "https://www.msn.com/en-us/money/companies/macy-s-permanently-closing-14-stores-despite-strong-holiday-sales/ar-AA22qYGO?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
+      "keyword": "closing locations",
+      "relevance_score": 2
+    },
+    {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "A national tool store is opening a Peoria location this summer",
       "source": "AOL.com",
       "published_date": "2026-05-05 16:55:58",
@@ -4476,6 +4861,17 @@
       "published_date": "2026-05-05 16:46:22",
       "direct_link": "https://www.kentucky.com/lexgoeat/restaurants/article315640365.html",
       "keyword": "last day",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "Burlington sets opening date for new Oshkosh store",
+      "source": "Oshkosh Northwestern",
+      "published_date": "2026-05-05 16:40:00",
+      "direct_link": "https://www.thenorthwestern.com/story/money/companies/2026/05/05/burlington-oshkosh-store-opening-date-may-15-koeller-street/89946074007/",
+      "keyword": "new store",
       "relevance_score": 2
     },
     {
@@ -4526,33 +4922,11 @@
       "status": "Opening",
       "industry": "Specialty / Other",
       "region": "USA",
-      "title": "Lidl GB wants to invest in 6 new stores on Fylde coast potentially creating hundreds of jobs for local people",
-      "source": "Blackpool Gazette",
-      "published_date": "2026-05-05 15:47:00",
-      "direct_link": "https://www.blackpoolgazette.co.uk/news/lidl-gb-wants-to-invest-in-six-new-supermarkets-on-fylde-coast-8501401",
-      "keyword": "plans to open",
-      "relevance_score": 2
-    },
-    {
-      "status": "Opening",
-      "industry": "Specialty / Other",
-      "region": "USA",
       "title": "Italian deli to open on Plant Street in Winter Garden",
       "source": "The Business Journals",
       "published_date": "2026-05-05 15:45:00",
       "direct_link": "https://www.bizjournals.com/orlando/news/2026/05/05/cosa-nostra-italian-deli-winter-garden-plant-st.html",
       "keyword": "plans to open",
-      "relevance_score": 2
-    },
-    {
-      "status": "Opening",
-      "industry": "Specialty / Other",
-      "region": "USA",
-      "title": "New Burlington store coming to Illinois next week. Here's where",
-      "source": "Peoria Journal Star",
-      "published_date": "2026-05-05 15:29:00",
-      "direct_link": "https://www.pjstar.com/story/news/local/2026/05/05/burlington-opening-26-stores-in-may-new-illinois-locations-dekalb-bourbonnais/89944591007/",
-      "keyword": "new store",
       "relevance_score": 2
     },
     {
@@ -4592,11 +4966,11 @@
       "status": "Closing",
       "industry": "Specialty / Other",
       "region": "USA",
-      "title": "Macy’s Permanently Closing 14 Stores Despite Strong Holiday Sales",
-      "source": "FinanceBuzz",
-      "published_date": "2026-05-05 14:30:00",
-      "direct_link": "https://financebuzz.com/news/macys-closes-stores-may-2026",
-      "keyword": "closing stores",
+      "title": "Major road closing for works costing £193,000",
+      "source": "EDP24",
+      "published_date": "2026-05-05 14:28:00",
+      "direct_link": "https://www.edp24.co.uk/news/26078990.a140-closed-resurfacing-hempnall-long-stratton/",
+      "keyword": "liquidation",
       "relevance_score": 2
     },
     {
@@ -4625,17 +4999,6 @@
       "status": "Opening",
       "industry": "Specialty / Other",
       "region": "USA",
-      "title": "Pittsburgh mall officially sold; latest on possible Wegmans location there",
-      "source": "MSN",
-      "published_date": "2026-05-05 13:58:28",
-      "direct_link": "https://www.msn.com/en-us/money/companies/pittsburgh-mall-officially-sold-latest-on-possible-wegmans-location-there/ar-AA21Vv4L",
-      "keyword": "plans to open",
-      "relevance_score": 2
-    },
-    {
-      "status": "Opening",
-      "industry": "Specialty / Other",
-      "region": "Canada",
       "title": "3 retailers expanding their car wash empires",
       "source": "C-Store Dive",
       "published_date": "2026-05-05 13:46:32",
@@ -4701,17 +5064,6 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
-      "title": "Local developer invests $40 million in now-open Driving Park apartments",
-      "source": "MSN",
-      "published_date": "2026-05-05 12:39:50",
-      "direct_link": "https://www.msn.com/en-us/money/realestate/local-developer-invests-40-million-in-now-open-driving-park-apartments/ar-AA22mzL1?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
-      "keyword": "now open",
-      "relevance_score": 2
-    },
-    {
-      "status": "Opening",
-      "industry": "Specialty / Other",
       "region": "Canada",
       "title": "Mortantra Expands Presence with New Chandigarh Store",
       "source": "english.punjabkesari.com",
@@ -4723,7 +5075,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "Canada",
+      "region": "USA",
       "title": "Third Greggs to open in Inverness?",
       "source": "Strathspey Herald",
       "published_date": "2026-05-05 12:30:00",
@@ -4734,7 +5086,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "The 12 Lancashire locations on Lidl's 'wishlist'",
       "source": "Lancashire Evening Post",
       "published_date": "2026-05-05 12:01:00",
@@ -4756,7 +5108,7 @@
     {
       "status": "Closing",
       "industry": "Specialty / Other",
-      "region": "Canada",
+      "region": "USA",
       "title": "Popular barbecue chain abruptly closes all locations nationwide",
       "source": "MSN",
       "published_date": "2026-05-05 11:32:59",
@@ -4789,23 +5141,12 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "Canada",
+      "region": "USA",
       "title": "Target, HomeGoods and others opening in Buckeye's Verrado Marketplace",
       "source": "The Arizona Republic",
       "published_date": "2026-05-05 11:02:00",
       "direct_link": "https://www.azcentral.com/story/news/local/southwest-valley/2026/05/05/buckeye-verrado-marketplace-opening/89934729007/",
       "keyword": "under construction",
-      "relevance_score": 2
-    },
-    {
-      "status": "Opening",
-      "industry": "Specialty / Other",
-      "region": "USA",
-      "title": "Home Bargains set to open new £5 million Hertfordshire store",
-      "source": "The Comet",
-      "published_date": "2026-05-05 10:37:10",
-      "direct_link": "https://www.thecomet.net/news/26078459.home-bargains-set-open-new-st-albans-store-weekend/",
-      "keyword": "new store",
       "relevance_score": 2
     },
     {
@@ -4855,7 +5196,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "Canada",
+      "region": "USA",
       "title": "Aldi to create 80 jobs at new Merseyside stores",
       "source": "LBN Daily",
       "published_date": "2026-05-05 08:43:12",
@@ -4866,7 +5207,18 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "Canada",
+      "region": "USA",
+      "title": "New Dunkin’ in Fairlawn to celebrate grand opening with free coffee, donuts",
+      "source": "WSLS",
+      "published_date": "2026-05-05 08:41:47",
+      "direct_link": "https://www.wsls.com/news/local/2026/05/05/new-dunkin-in-fairlawn-celebrates-opening-with-free-coffee-donuts/",
+      "keyword": "ribbon cutting",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "USA",
       "title": "Trial by Fire: Why Disney’s Refusal to Soft-Open Big Thunder Mountain Led to a Day-One Disaster",
       "source": "disneydining.com",
       "published_date": "2026-05-05 08:34:04",
@@ -4888,7 +5240,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "Over 100 stores open at new Prince Buthelezi Mall in Empangeni",
       "source": "Bizcommunity",
       "published_date": "2026-05-05 07:54:53",
@@ -4932,12 +5284,23 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "Canada",
+      "region": "USA",
       "title": "DigiPlus says 'exploring opportunities to expand into complementary segments'",
       "source": "ABS-CBN",
       "published_date": "2026-05-05 06:23:26",
       "direct_link": "https://www.abs-cbn.com/news/business/2026/5/5/digiplus-says-exploring-opportunities-to-expand-into-complementary-segments-1423",
       "keyword": "soft opening",
+      "relevance_score": 2
+    },
+    {
+      "status": "Closing",
+      "industry": "Specialty / Other",
+      "region": "USA",
+      "title": "The all new Derby Bar and Grill is open",
+      "source": "fairmontsentinel.com",
+      "published_date": "2026-05-05 06:02:00",
+      "direct_link": "https://www.fairmontsentinel.com/news/local-news/2026/05/05/the-all-new-derby-bar-and-grill-is-open/",
+      "keyword": "last day",
       "relevance_score": 2
     },
     {
@@ -4969,161 +5332,7 @@
       "title": "Opening date set for new Boyes store in 'vibrant' Leicestershire town",
       "source": "Leicestershire Live",
       "published_date": "2026-05-05 05:00:00",
-      "direct_link": "https://www.leicestermercury.co.uk/whats-on/store-boyes-opening-new-location-10946089",
-      "keyword": "new store",
-      "relevance_score": 2
-    },
-    {
-      "status": "Closing",
-      "industry": "Specialty / Other",
-      "region": "USA",
-      "title": "‘Dunedin, I am sorry’: Bar owner set to lose her house, possible bankruptcy, in ‘worst case scenario’ as two venues close",
-      "source": "Stuff",
-      "published_date": "2026-05-05 04:23:17",
-      "direct_link": "https://www.stuff.co.nz/nz-news/360974076/dunedin-i-am-sorry-bar-owner-set-lose-her-house-possible-bankruptcy-worst-case-scenario-two-venues",
-      "keyword": "liquidation",
-      "relevance_score": 2
-    },
-    {
-      "status": "Closing",
-      "industry": "Specialty / Other",
-      "region": "USA",
-      "title": "Asda trialing new in store ticket system to tackle shoplifting",
-      "source": "The Mirror",
-      "published_date": "2026-05-05 03:26:27",
-      "direct_link": "https://www.mirror.co.uk/news/uk-news/asda-could-implement-vending-machines-37110365",
-      "keyword": "liquidation",
-      "relevance_score": 2
-    },
-    {
-      "status": "Opening",
-      "industry": "Specialty / Other",
-      "region": "USA",
-      "title": "First Costco store in Milwaukee County to break ground this week",
-      "source": "WISN",
-      "published_date": "2026-05-05 03:15:00",
-      "direct_link": "https://www.wisn.com/article/first-costco-store-in-milwaukee-county-to-break-ground-this-week/71204434",
-      "keyword": "under construction",
-      "relevance_score": 2
-    },
-    {
-      "status": "Opening",
-      "industry": "Specialty / Other",
-      "region": "Canada",
-      "title": "Developer says it can bring Dick’s House of Sport and 50 more stores to Joliet",
-      "source": "Shaw Local",
-      "published_date": "2026-05-05 02:33:00",
-      "direct_link": "https://www.shawlocal.com/the-herald-news/2026/05/05/developer-says-it-can-bring-dicks-house-of-sport-and-50-more-stores-to-joliet/",
-      "keyword": "grand opening",
-      "relevance_score": 2
-    },
-    {
-      "status": "Opening",
-      "industry": "Specialty / Other",
-      "region": "Canada",
-      "title": "H-E-B opening, oyster bar closing, ‘Dutton Ranch,’ dissing DFW airport. Today’s top stories",
-      "source": "AOL.com",
-      "published_date": "2026-05-05 01:49:44",
-      "direct_link": "https://www.aol.com/news/h-e-b-opening-oyster-210942433.html",
-      "keyword": "grand opening",
-      "relevance_score": 2
-    },
-    {
-      "status": "Opening",
-      "industry": "Specialty / Other",
-      "region": "Canada",
-      "title": "Ayala says Makro to open soon at new Arca South mall",
-      "source": "ABS-CBN",
-      "published_date": "2026-05-05 01:46:58",
-      "direct_link": "https://www.abs-cbn.com/news/business/2026/5/4/ayala-says-makro-to-open-soon-at-new-arca-south-mall-2323",
-      "keyword": "grand opening",
-      "relevance_score": 2
-    },
-    {
-      "status": "Opening",
-      "industry": "Specialty / Other",
-      "region": "USA",
-      "title": "Tanaka Ramen & Izakaya to open seventh Hawaii location with new yakitori menu",
-      "source": "The Business Journals",
-      "published_date": "2026-05-05 00:48:00",
-      "direct_link": "https://www.bizjournals.com/pacific/news/2026/05/04/tanaka-ramen-izakaya-to-open-7th-hawaii-restaurant.html",
-      "keyword": "new location",
-      "relevance_score": 2
-    },
-    {
-      "status": "Closing",
-      "industry": "Specialty / Other",
-      "region": "USA",
-      "title": "Morrisons manager fired for tackling violent serial shoplifter 'blown away' by protest outside store",
-      "source": "MSN",
-      "published_date": "2026-05-05 00:45:00",
-      "direct_link": "https://www.msn.com/en-ie/money/other/morrisons-manager-fired-for-tackling-violent-serial-shoplifter-blown-away-by-protest-outside-store/ar-AA21MkNC",
-      "keyword": "going out of business",
-      "relevance_score": 2
-    },
-    {
-      "status": "Opening",
-      "industry": "Specialty / Other",
-      "region": "USA",
-      "title": "DoorDash adds SNAP payment options for delivery from Kroger stores",
-      "source": "Treasure Coast News",
-      "published_date": "2026-05-04 23:40:00",
-      "direct_link": "https://www.tcpalm.com/story/money/food/2026/05/04/doordash-ebt-snap-payment-options-kroger-grocery-delivery/89935792007/",
-      "keyword": "coming soon",
-      "relevance_score": 2
-    },
-    {
-      "status": "Opening",
-      "industry": "Specialty / Other",
-      "region": "Canada",
-      "title": "TJ Maxx moving to new Kent location on East Hill",
-      "source": "Kent Reporter",
-      "published_date": "2026-05-04 23:37:23",
-      "direct_link": "https://www.kentreporter.com/2026/05/04/tj-maxx-moving-to-new-kent-location-on-east-hill/",
-      "keyword": "grand opening",
-      "relevance_score": 2
-    },
-    {
-      "status": "Closing",
-      "industry": "Specialty / Other",
-      "region": "USA",
-      "title": "Mall mainstay to close this summer in Milford",
-      "source": "MSN",
-      "published_date": "2026-05-04 23:08:58",
-      "direct_link": "https://www.msn.com/en-us/news/us/mall-mainstay-to-close-this-summer-in-milford/ar-AA22aZro?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
-      "keyword": "closing locations",
-      "relevance_score": 2
-    },
-    {
-      "status": "Opening",
-      "industry": "Specialty / Other",
-      "region": "USA",
-      "title": "More Buc-ee's in Ohio? CEO says Huber Heights store could be first of many",
-      "source": "MSN",
-      "published_date": "2026-05-04 22:42:12",
-      "direct_link": "https://www.msn.com/en-us/news/other/more-buc-ee-s-in-ohio-ceo-says-huber-heights-store-could-be-first-of-many/ar-AA20hnuT?ocid=BingNewsVerp",
-      "keyword": "grand opening",
-      "relevance_score": 2
-    },
-    {
-      "status": "Opening",
-      "industry": "Specialty / Other",
-      "region": "USA",
-      "title": "Missouri Athletic Club opens third location in Clayton",
-      "source": "MSN",
-      "published_date": "2026-05-04 22:30:00",
-      "direct_link": "https://www.msn.com/en-us/sports/other/missouri-athletic-club-opens-third-location-in-clayton/ar-AA21WW14?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
-      "keyword": "new location",
-      "relevance_score": 2
-    },
-    {
-      "status": "Opening",
-      "industry": "Specialty / Other",
-      "region": "Canada",
-      "title": "As grocery prices soar, S.F. cult-favorite store to open a nonprofit market",
-      "source": "San Francisco Chronicle",
-      "published_date": "2026-05-04 22:20:06",
-      "direct_link": "https://www.sfchronicle.com/food/article/sunnydale-market-sf-22240299.php",
+      "direct_link": "https://www.leicestermercury.co.uk/whats-on/store-boyes-opening-new-location-10946089.amp",
       "keyword": "new store",
       "relevance_score": 2
     }
