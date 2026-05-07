@@ -11,7 +11,6 @@ Usage:
 
 import json
 import time
-from datetime import date
 from pathlib import Path
 
 import requests
@@ -45,18 +44,6 @@ def fetch_article_text(url: str, max_chars: int = 2500) -> str:
 
     except Exception as exc:
         return f"[Error fetching article: {exc}]"
-
-
-def save_extraction_json(data: list[dict], non_working: list[dict] | None = None):
-    """Save extraction results to ct_scoop_extraction_latest.json."""
-    payload = {
-        "last_updated": date.today().isoformat(),
-        "data": data,
-        "non_working": non_working or [],
-    }
-    out = Path("ct_scoop_extraction_latest.json")
-    out.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"✓ Saved {len(data)} rows to {out}")
 
 
 def main():
