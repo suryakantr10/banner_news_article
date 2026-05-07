@@ -362,11 +362,24 @@ GEO_BLOCK_PATTERN = re.compile(
     r'germany|france|spain|italy|netherlands|sweden|norway|denmark|'
     r'singapore|hong kong|japan|china|korea|'
     r'montenegro|hungary|pakistan|'
+    r'london|manchester|birmingham|leeds|bristol|liverpool|'
+    r'edinburgh|glasgow|cardiff|belfast|sheffield|nottingham|'
+    r'oxfordshire|yorkshire|wycombe|scarborough|battersea|brixton|'
+    r'coventry|leicester|bournemouth|wandsworth|'
     r'\.co\.uk|\.co\.za|\.com\.au|\.co\.nz|\.ie)\b',
     re.IGNORECASE
 )
 
+GEO_BLOCK_DOMAIN_SUFFIXES = {
+    '.co.uk', '.co.za', '.co.nz', '.co.in',
+    '.com.au', '.com.sg',
+    '.ie',
+    '.in',
+    '.au',
+}
+
 GEO_BLOCK_DOMAINS = {
+    'aol.com',
     'iol.co.za', 'ewn.co.za', 'jamaicaobserver.com', 'thesun.co.uk',
     'mirror.co.uk', 'express.co.uk', 'independent.co.uk', 'birminghammail.co.uk',
     'thestar.co.uk', 'examinerlive.co.uk', 'swindonadvertiser.co.uk',
@@ -388,6 +401,8 @@ def is_geo_relevant(title: str, url: str, source: str) -> bool:
     try:
         domain = url.split('/')[2].replace('www.', '').lower()
         if domain in GEO_BLOCK_DOMAINS:
+            return False
+        if any(domain.endswith(suffix) for suffix in GEO_BLOCK_DOMAIN_SUFFIXES):
             return False
     except Exception:
         pass
