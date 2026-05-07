@@ -1635,7 +1635,7 @@
                 if (!isNaN(d.getTime())) pubDate = d.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' });
             } catch {}
             const key      = histDoneKey(a);
-            const isDone   = localStorage.getItem(key) === 'true';
+            const isDone   = doneKeys.has(key);
             const safeKey  = key.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
             const rowBg    = isDone ? 'background:rgba(16,185,129,0.06);' : '';
             const title    = escapeHtml(a.Title || '');
@@ -1668,14 +1668,28 @@
     }
 
     function histDoneKey(a) {
-        return 'histdone-' + (a.Link || (a.Store + '|' + a.Title));
+        return 'done-' + (a.Link || (a.Store + '|' + a.Title));
     }
 
-    function toggleHistDone(key) {
-        if (localStorage.getItem(key) === 'true') { localStorage.removeItem(key); }
-        else { localStorage.setItem(key, 'true'); }
+    async function toggleHistDone(key) {
+        const isDone = doneKeys.has(key);
+        if (isDone) {
+            doneKeys.delete(key);
+            try { await _sb.from('article_marks').delete().eq('article_key', key); } catch(e) {}
+        } else {
+            doneKeys.add(key);
+            try {
+                await _sb.from('article_marks').upsert({
+                    article_key: key,
+                    is_done: true,
+                    marked_by: _currentUserEmail,
+                    marked_at: new Date().toISOString()
+                }, { onConflict: 'article_key' });
+            } catch(e) {}
+        }
         updateHistStats();
         renderHistoricalTable();
+        renderStoreArticles();
     }
 
     function renderStoreArticles() {
@@ -1779,6 +1793,7 @@
             el.style.cssText = UNDONE_STYLE;
             el.querySelector('i').className = 'fas fa-check text-white text-xs opacity-0 transition-opacity duration-200';
             el.title = 'Mark as done';
+            renderHistoricalTable();
             try {
                 await _sb.from('article_marks').delete().eq('article_key', key);
             } catch (e) {
@@ -1787,6 +1802,7 @@
                 el.style.cssText = DONE_STYLE;
                 el.querySelector('i').className = 'fas fa-check text-white text-xs opacity-100 transition-opacity duration-200';
                 el.title = 'Marked as done — click to undo';
+                renderHistoricalTable();
                 showToast('Failed to save — try again', 'error');
             }
         } else {
@@ -1795,6 +1811,7 @@
             el.style.cssText = DONE_STYLE;
             el.querySelector('i').className = 'fas fa-check text-white text-xs opacity-100 transition-opacity duration-200';
             el.title = 'Marked as done — click to undo';
+            renderHistoricalTable();
             try {
                 await _sb.from('article_marks').upsert({
                     article_key: key,
@@ -1808,6 +1825,7 @@
                 el.style.cssText = UNDONE_STYLE;
                 el.querySelector('i').className = 'fas fa-check text-white text-xs opacity-0 transition-opacity duration-200';
                 el.title = 'Mark as done';
+                renderHistoricalTable();
                 showToast('Failed to save — try again', 'error');
             }
         }
