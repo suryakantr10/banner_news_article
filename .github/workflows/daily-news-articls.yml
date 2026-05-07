@@ -116,18 +116,13 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # Pull latest before staging so there are no local commits to conflict during rebase
-          git pull --rebase origin main
           git add docs/news_data.json || true
-          git add master_file/ || true
+          git add master_file/daily_news_master.csv || true
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
             git commit -m "chore: daily news update $(date -u '+%Y-%m-%d %H:%M UTC')"
-            # Retry push up to 3 times in case another job races us
-            for i in 1 2 3; do
-              git push origin main && break
-              echo "Push attempt $i failed, pulling and retrying..."
-              git pull --rebase origin main
-            done
+            # Merge remote changes; keep our freshly generated files on any conflict
+            git pull --no-rebase -X ours origin main
+            git push origin main
           fi
