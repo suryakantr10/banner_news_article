@@ -53,6 +53,9 @@ jobs:
           echo "--- which chromedriver ---"
           which chromedriver || true
 
+      - name: Remove mismatched system ChromeDriver
+        run: sudo rm -f /usr/bin/chromedriver /usr/bin/chromedriver-*
+
       - name: Run CT Scoop scraper
         run: |
           # Ensure the script sees the installed Chrome binary
