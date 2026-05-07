@@ -350,6 +350,9 @@
                     <button id="storeSubTabHistoricalBtn" class="sub-tab-btn" onclick="switchStoreSubTab('historical')">
                         <i class="fas fa-clock-rotate-left mr-1"></i> Historical
                     </button>
+                    <button id="storeSubTabMgmtBtn" class="sub-tab-btn hidden" onclick="switchStoreSubTab('management')">
+                        <i class="fas fa-chart-pie mr-1"></i> Management
+                    </button>
                 </div>
             </div>
 
@@ -530,6 +533,47 @@
                     </div>
                 </div>
             </div><!-- /storeHistoricalSubTab -->
+
+            <!-- MANAGEMENT SUB-TAB -->
+            <div id="storeManagementSubTab" class="hidden">
+                <div id="mgmtLoadingState" class="flex flex-col items-center justify-center py-20">
+                    <i class="fas fa-spinner fa-spin text-4xl text-blue-400 mb-4"></i>
+                    <p class="text-gray-400">Loading management data…</p>
+                </div>
+                <div id="mgmtContent" class="hidden">
+                    <div id="mgmtStatsRow" class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6"></div>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <!-- Analyst Breakdown -->
+                        <div class="glass rounded-2xl overflow-hidden">
+                            <div class="px-4 py-3 border-b border-white/5 flex items-center justify-between">
+                                <h3 class="text-sm font-semibold text-gray-200"><i class="fas fa-users mr-2 text-blue-400"></i>Analyst Breakdown</h3>
+                                <span id="mgmtLastRefresh" class="text-xs text-gray-500"></span>
+                            </div>
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-sm text-gray-300">
+                                    <thead class="text-xs text-gray-500 uppercase bg-white/3">
+                                        <tr class="border-b border-white/5">
+                                            <th class="px-4 py-3 text-left">Analyst</th>
+                                            <th class="px-4 py-3 text-center">Assigned</th>
+                                            <th class="px-4 py-3 text-center">Done</th>
+                                            <th class="px-4 py-3 text-center">Pending</th>
+                                            <th class="px-4 py-3 text-center">Progress</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="mgmtAnalystBody"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- Activity Feed -->
+                        <div class="glass rounded-2xl overflow-hidden">
+                            <div class="px-4 py-3 border-b border-white/5">
+                                <h3 class="text-sm font-semibold text-gray-200"><i class="fas fa-bolt mr-2 text-yellow-400"></i>Recent Activity</h3>
+                            </div>
+                            <div id="mgmtActivityFeed" class="divide-y divide-white/5 overflow-y-auto" style="max-height:420px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /storeManagementSubTab -->
 
         </div>
 
@@ -1500,12 +1544,18 @@
     // ── STORE SUB-TAB SWITCH ──────────────────────────────────────────────────
     function switchStoreSubTab(subTab) {
         activeStoreSubTab = subTab;
-        const isArticles = subTab === 'articles';
+        const isArticles   = subTab === 'articles';
+        const isHistorical = subTab === 'historical';
+        const isMgmt       = subTab === 'management';
         document.getElementById('storeArticlesSubTab').classList.toggle('hidden', !isArticles);
-        document.getElementById('storeHistoricalSubTab').classList.toggle('hidden', isArticles);
+        document.getElementById('storeHistoricalSubTab').classList.toggle('hidden', !isHistorical);
+        document.getElementById('storeManagementSubTab').classList.toggle('hidden', !isMgmt);
         document.getElementById('storeSubTabArticlesBtn').classList.toggle('active', isArticles);
-        document.getElementById('storeSubTabHistoricalBtn').classList.toggle('active', !isArticles);
-        if (!isArticles && historicalArticles.length === 0) loadHistoricalData();
+        document.getElementById('storeSubTabHistoricalBtn').classList.toggle('active', isHistorical);
+        document.getElementById('storeSubTabMgmtBtn').classList.toggle('active', isMgmt);
+        if (isHistorical && historicalArticles.length === 0) loadHistoricalData();
+        if (isMgmt) loadMgmtDashboard();
+        if (!isMgmt && _mgmtRefreshInterval) { clearInterval(_mgmtRefreshInterval); _mgmtRefreshInterval = null; }
     }
 
     // ── HISTORICAL DATA ───────────────────────────────────────────────────────
@@ -2993,6 +3043,129 @@
         loadStoreData();
     });
 
+    // ── MANAGEMENT DASHBOARD ─────────────────────────────────────────────────
+    const MGMT_WHITELIST = [
+        'Suryakantr@retailstat.com',
+        'Ashwinn@retailstat.com',
+        'mukeshj@retailstat.com',
+        'shipraj@retailstat.com',
+        'parthc@retailstat.com',
+    ];
+    let _mgmtRefreshInterval = null;
+
+    async function loadMgmtDashboard() {
+        document.getElementById('mgmtLoadingState').classList.remove('hidden');
+        document.getElementById('mgmtContent').classList.add('hidden');
+        if (historicalArticles.length === 0) await loadHistoricalData();
+        try {
+            const { data: marks, error } = await _sb.from('article_marks').select('*');
+            if (error) throw error;
+            renderMgmtDashboard(marks || []);
+            if (_mgmtRefreshInterval) clearInterval(_mgmtRefreshInterval);
+            _mgmtRefreshInterval = setInterval(async () => {
+                if (activeStoreSubTab !== 'management') return;
+                const { data: m } = await _sb.from('article_marks').select('*');
+                if (m) renderMgmtDashboard(m);
+            }, 60000);
+        } catch (err) {
+            console.error('Management load error:', err);
+            document.getElementById('mgmtLoadingState').innerHTML =
+                '<p class="text-red-400 text-center py-10">Failed to load management data.</p>';
+        }
+    }
+
+    function renderMgmtDashboard(marks) {
+        const doneMap = {};
+        for (const m of marks) { if (m.is_done) doneMap[m.article_key] = m; }
+
+        const total   = historicalArticles.length;
+        const done    = historicalArticles.filter(a => doneMap['done-' + a.Link]).length;
+        const pending = total - done;
+        const pct     = total > 0 ? Math.round(done / total * 100) : 0;
+
+        document.getElementById('mgmtStatsRow').innerHTML = [
+            { label: 'Total Articles', value: total,        color: 'blue',   icon: 'file-alt'    },
+            { label: 'Done',           value: done,         color: 'green',  icon: 'check-circle' },
+            { label: 'Pending',        value: pending,      color: 'orange', icon: 'clock'        },
+            { label: 'Completion',     value: pct + '%',    color: 'indigo', icon: 'chart-pie'    },
+        ].map(s => `
+            <div class="stats-card rounded-2xl p-5 card-accent-${s.color}">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">${s.label}</p>
+                        <p class="text-2xl font-bold text-white">${s.value}</p>
+                    </div>
+                    <div class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center">
+                        <i class="fas fa-${s.icon} text-gray-300 text-lg"></i>
+                    </div>
+                </div>
+            </div>`).join('');
+
+        // Analyst breakdown
+        const analystMap = {};
+        for (const a of historicalArticles) {
+            const name = a.Analyst || 'Unknown';
+            if (!analystMap[name]) analystMap[name] = { assigned: 0, done: 0, lastActivity: null };
+            analystMap[name].assigned++;
+            const mark = doneMap['done-' + a.Link];
+            if (mark) {
+                analystMap[name].done++;
+                const t = mark.marked_at;
+                if (!analystMap[name].lastActivity || t > analystMap[name].lastActivity)
+                    analystMap[name].lastActivity = t;
+            }
+        }
+        const analystRows = Object.entries(analystMap)
+            .sort((a, b) => b[1].done - a[1].done)
+            .map(([name, s]) => {
+                const p = s.assigned > 0 ? Math.round(s.done / s.assigned * 100) : 0;
+                const barColor = p >= 80 ? 'bg-green-500' : p >= 50 ? 'bg-yellow-500' : 'bg-red-500';
+                return `<tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                    <td class="px-4 py-3 font-medium">${name}</td>
+                    <td class="px-4 py-3 text-center">${s.assigned}</td>
+                    <td class="px-4 py-3 text-center text-green-400 font-semibold">${s.done}</td>
+                    <td class="px-4 py-3 text-center text-orange-400">${s.assigned - s.done}</td>
+                    <td class="px-4 py-3">
+                        <div class="flex items-center gap-2">
+                            <div class="flex-1 bg-gray-700 rounded-full h-1.5">
+                                <div class="${barColor} h-1.5 rounded-full" style="width:${p}%"></div>
+                            </div>
+                            <span class="text-xs text-gray-400 w-8 text-right">${p}%</span>
+                        </div>
+                    </td>
+                </tr>`;
+            }).join('');
+        document.getElementById('mgmtAnalystBody').innerHTML =
+            analystRows || '<tr><td colspan="5" class="px-4 py-6 text-center text-gray-500">No data</td></tr>';
+
+        // Activity feed
+        const articlesByKey = {};
+        for (const a of historicalArticles) articlesByKey['done-' + a.Link] = a;
+        const activities = marks
+            .filter(m => m.is_done && m.marked_at)
+            .sort((a, b) => new Date(b.marked_at) - new Date(a.marked_at))
+            .slice(0, 50);
+        document.getElementById('mgmtActivityFeed').innerHTML = activities.map(m => {
+            const art      = articlesByKey[m.article_key];
+            const title    = art ? (art.Title || art.Link || m.article_key) : m.article_key.replace(/^done-/, '');
+            const analyst  = art ? (art.Analyst || '—') : '—';
+            const markedBy = m.marked_by || '—';
+            const when     = m.marked_at ? new Date(m.marked_at).toLocaleString() : '—';
+            return `<div class="px-4 py-3">
+                <p class="text-sm text-gray-200 font-medium truncate" title="${title}">${title}</p>
+                <div class="flex flex-wrap gap-x-4 mt-1 text-xs text-gray-500">
+                    <span><i class="fas fa-user mr-1"></i>${analyst}</span>
+                    <span><i class="fas fa-check-circle mr-1 text-green-500"></i>${markedBy}</span>
+                    <span><i class="fas fa-clock mr-1"></i>${when}</span>
+                </div>
+            </div>`;
+        }).join('') || '<div class="px-4 py-8 text-center text-gray-500 text-sm">No activity recorded yet</div>';
+
+        document.getElementById('mgmtLastRefresh').textContent = 'Updated ' + new Date().toLocaleTimeString();
+        document.getElementById('mgmtLoadingState').classList.add('hidden');
+        document.getElementById('mgmtContent').classList.remove('hidden');
+    }
+
     // ── Auth guard ───────────────────────────────────────────────────────────
     const _SUPA_URL  = "https://ffxkqaetxxpbtwvljmhv.supabase.co";
     const _SUPA_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZmeGtxYWV0eHhwYnR3dmxqbWh2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc0MDE5NjIsImV4cCI6MjA5Mjk3Nzk2Mn0.qwYStWgM5DKQhJX3EtC2rjwMk49aejosEJmW5b60h8U";
@@ -3015,6 +3188,11 @@
         if (el) {
             el.textContent = session.user.email;
             el.title = session.user.email;
+        }
+
+        // Show Management tab only for whitelisted users
+        if (MGMT_WHITELIST.map(e => e.toLowerCase()).includes(session.user.email.toLowerCase())) {
+            document.getElementById('storeSubTabMgmtBtn').classList.remove('hidden');
         }
     })();
 

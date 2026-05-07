@@ -1,0 +1,202 @@
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• For Published Date → copy exactly the value from the "Published:" line in the article metadata
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+
+--- Article 461 ---
+URL: https://english.punjabkesari.com/business/mortantra-expands-presence-with-new-chandigarh-store/
+Title: Mortantra Expands Presence with New Chandigarh Store
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 12:31:34
+
+Business Mortantra Expands Presence with New Chandigarh Store By: Mayank Singh On: Tuesday, May 5, 2026 6:01 PM Google News Follow Us Mortantra jewellery store: Mortantra, a ceremonial Indian jewellery house built on the country’s living craft traditions, announces the opening of its second retail jewellery store in Chandigarh . With its first flagship store rooted in Ahmedabad, Mortantra now brings its craft heritage to Chandigarh, this expansion marks an important milestone in the brand’s journey to bring its legacy of craftsmanship to a wider audience. The new store in Chandigarh reflects the ethos that defines Mortantra. Shaped by regional artistry, the space feels warm and open, with details that speak of craft even beyond jewellery, honouring the skill and intention behind every handcrafted piece. Known for its discerning clientele and genuine appreciation for fine craftsmanship, Chandigarh presents a natural setting for Mortantra’s craft-forward design thinking. The store invites jewellery enthusiasts to experience each piece as an expression of legacy of culture and living heritage. Mortantra’s collections are characterised by intricate detailing and a strong grounding in Indian heirloom traditions. Each piece carries design philosophies passed down through generations of artisans. The Chandigarh store houses these signature offerings, giving the audience an opportunity to engage closely with the craftsmanship and stories behind each creation. “Chandigarh feels instinctive,” said ShailiNaimishSakhpara, Co-Founder, Mortantra. “Punjab celebrates with its whole heart, and that spirit is deeply natural to the way ceremonial jewellery is worn and lived with. We are not revivalists. Heritage does not need revival, it needs continuity. We are here to keep what is beautiful in circulation, carried from one moment to the next, from one generation to the next.” With its second store, Mortantra carries forward the measured, values-led growth rooted in Ahmedabad, anchor
+
+--- Article 462 ---
+URL: https://www.strathspey-herald.co.uk/news/third-greggs-to-open-in-inverness-434164/
+Title: Third Greggs to open in Inverness?
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 12:30:00
+
+Greggs to open third bakery in Inverness? UK retail giant has advertised for a store manager based at a unit in the Inverness Shopping Park in the Highland capital’s Eastfield Way By Philip Murray - philip.murray@hnmedia.co.uk Published: 13:30, 05 May 2026 A new job vacancy for a store manager has appeared to confirm that Greggs will be opening a third bakery in Inverness - this time at the Inverness Shopping Park in Eastfield Way. A third Greggs bakery could be set to open in Inverness. The UK bakery giant, which only recently opened a second Inverness outlet in the Highland capital's High Street, has advertised for a new store manager position in the city. And the job listing on Greggs' own website lists the location of the job at the Inverness Shopping Park in Eastfield Way . There is no Greggs in that location, with the city's other two outlets located in the High Street and within the Esso garage on Longman Road. A map included in the new job listing appears to place the unit towards the western end of the busy retail park, possibly within the vacant unit that sits between the JD Sports outlet on one side, and Card Factory on the other. The store in question, Unit 5B2, has been up for rent through estate agency EYCO. It lists the site as having almost 2400 square feet of floor space, and a rateable value in 2024 of £59,500. If Greggs moves into the retail park, it will mean that all of the units are now occupied. It also follows recent news that US food giant Wingstop is moving into the former Pizza Hut restaurant next to Burger King and the Vue cinema. If the new Greggs bakery is confirmed, it looks like it could open during the summer. The store manager position has a closing date of June 2. When the High Street store began hiring staff, the store manager role closing date of December 31 was almost exactly two months before the outlet opened its doors. It is not known how many jobs would be created by the new bakery, but the recently opened High Street shop a
+
+--- Article 463 ---
+URL: https://www.lep.co.uk/news/the-12-lancashire-locations-on-lidls-wishlist-and-another-supermarket-set-for-a-relocation-8499973
+Title: The 12 Lancashire locations on Lidl's 'wishlist'
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 12:01:00
+
+The 12 Lancashire locations on Lidl's 'wishlist' - and another supermarket set for a relocation By Catherine Musgrove Senior reporter Published 5th May 2026, 13:01 BST There’s a finders fee for anyone who can help Lidl find suitable plots in 12 places across Lancashire. Lidl has revealed hundreds of target locations across Great Britain where it is seeking sites for new stores  - including 12 in Lancashire . The discount giant has just released a Site Requirements Brochure, which lists the following locations as ‘new store sites required’: - Bamber Bridge - Blackpool - Bispham - Blackpool - Marton - Blackpool - Thornton - Chorley - Fleetwood - Garstang - Lancaster - Leyland - Lytham - Penwortham - Preston East Advertisement Hide Ad Advertisement Hide Ad As well as this, the current branch in New Hall Lane, Preston, is listed for relocation. Lidl says it is “actively seeking freehold, leasehold, or long-leasehold sites in prominent locations with strong footfall and easy accessibility”. A competitive finder’s fee is available to anyone who successfully identifies a previously unknown site that leads to a developed store. Lidl | Local Library Richard Taylor, Chief Real Estate Officer at Lidl GB, said: "At Lidl GB, we currently have one of the most ambitious store opening programmes of any supermarket and we are more committed than ever to bringing our high quality and low priced products to even more communities across the country. “All of our stores deliver more than just affordable products. Each one also brings quality jobs, opportunities for British suppliers to showcase the best of our home grown produce and support to local good causes in the communities each one serves. In uncertain times, shoppers and communities can count on us.” Jobs Advertisement Hide Ad Advertisement Hide Ad Each new site will generate dozens of jobs for local people with some of the most competitive benefits in the sector, with entry-level hourly rates of £13.45 nationally, increasing to 
+
+--- Article 464 ---
+URL: https://www.indystar.com/story/grocery/stores/2026/05/05/meijer-opening-brownsburg-store-with-indiana-brands-see-whats-inside-when-does-it-open/89925668007/
+Title: Brownsburg's new Meijer supercenter opening soon. See the store
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 12:01:00
+
+GROCERY STORES Brownsburg's new Meijer supercenter opening soon. See the store Cheryl V. Jackson Indianapolis Star May 5, 2026, 8:01 a.m. ET Meijer comes to Brownsburg this week with a week of giveaways and celebrations at Indiana’s newest supercenter. The 159,000-square-foot store will open at 9202 E. 56th Street , selling fresh produce, grocery items, apparel, home goods, electronics, toys and sporting goods. “You can either come in and get everything you need for the week or the month,” Store Director Rebecca Miller told IndyStar. “Cataldo said.”You can get in and out quickly if just to grab and go or something to bring home for dinner.” Shoppers will find a deli featuring meats that are cut in-house daily; a produce section with products from hundreds of farms throughout the Midwest; and a bakery selling cupcake bouquets and customizable cakes. A pharmacy providing health screenings, immunizations, a drive-through option and a Higi health station that lets shoppers measure their blood pressure, heart rate, weight and BMI for free, while the large pet department is stocked with food, toys and treats. A Great Clips salon and a garden center are also on site; and Sandy, the penny pony ride, is up front near the self-checkout stations and cashier lanes. The mechanical horse that has been at the stores for 60 years will continue to cost one cent. Indiana brands in stock at Meijer Offerings include several house brands. “You’ll see more Meijer brands that bring the value to customers that they’re looking for as they’re going shopping these days,” Meijer spokesperson Erin Cataldo said. Among those are basic Meijer brand items, premium Frederik's by Meijer foods, True Goodness organic products and Purple Cow ice cream. Ophelia Roe and Falls Creek are among the house clothing brands. The Brownsburg store will also carry several Indiana products, including: Little Bee Honey House honey Breadworks by Bridges baked goods Bohman Bee Company honey DeBrand Fine Chocolates Groo
+
+--- Article 465 ---
+URL: https://www.msn.com/en-us/health/healthtrending/popular-barbecue-chain-abruptly-closes-all-locations-nationwide/ar-AA226zkJ
+Title: Popular barbecue chain abruptly closes all locations nationwide
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-05 11:32:59
+
+MSN
+
+--- Article 466 ---
+URL: https://www.readingchronicle.co.uk/news/26078400.zara-opens-bigger-new-store-oracle-reading/
+Title: Zara store open to complete transformation of Oracle
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 11:30:00
+
+Zara opens bigger new store at The Oracle in Reading Central Reading House of Fraser Planning Applications Reading Borough Council Zara Leisure Local government Planning and development Shopping Reading By 
+            James Aldridge Local Democracy Reporter Share 0 Comments 4 Skip to next photo 1 / 1 Show caption 1 / 1 0 Comments This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
+        and has been written by our American colleagues.
+        It does not necessarily reflect the view of The Herald. What is the Public Notice Portal? Find, save and share Public Notices that affect you in the area. Search the Public Notice Portal What is the Public Notice Portal? What is the Public Notice Portal? The Public Notice Portal carries statutory public notices published in local newspapers and is the fastest and most effective way of finding out what is happening in YOUR neighbourhood. Search the Public Notice Portal A leading global fashion brand has opened in a new, enlarged store in Reading's prime shopping centre, completing a years-long project. Zara, the global fashion retailer, has opened a new store at the upper level of The Oracle Shopping Centre. It has moved into a more spacious unit, created from the former House of Fraser department store and Five Guys burger outlet. Zara was open with staff selling clothing for people of all ages on Friday, May 1. A post on The Oracle Instagram page states: “Find the bigger and better Zara store on Level 2, in between Joe & The Juice and H&M. “The perfect spot for your summer shopping.” An accompanying video shows its clothing range, minimalist design, fitting rooms and self-service checkouts. The opening has seen the completion of the transformation of the House of Fraser store, which closed down in October 2023. First phase of The Oracle transformation complete as new burger joint confirmed The Oracle went into a 'wilderness year' with the former department store fully clos
+
+--- Article 467 ---
+URL: https://www.startribune.com/328-grill-opening-address-menu-tay-ho-closing-smack-shack-1029-bar/601817551
+Title: Cult favorite burger spot 328 Grill opening in Hastings on May 11
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 11:07:15
+
+Counter Intelligence Cult favorite burger spot 328 Grill opening in Hastings on May 11 Plus: Smack Shack owners buy a dive bar, Tay Ho is closing, a spicy new restaurant in Lyn-Lake and more food news. By Joy Summers The Minnesota Star Tribune May 5, 2026 at 11:00AM The 328 Grill will open in Hastings on May 11 with its signature burgers, patty melt, wild rice poutine and more. (Alex Kormann/The Minnesota Star Tribune) Advertisement Comment Gift Share Listen Print Mik German is a community builder, from his backyard burger competitions that have launched some of the Twin Cities’ most beloved burger phenoms to the steady stream of customers who call his 328 Grill their home base for comfort fare. He inspires goodwill among the highly opinionated local burger fandom. Now they’re going to have to expand their commute as German opens his first full-time restaurant in Hastings. 328 Grill will hold its grand opening at 350 W. 33rd St. starting May 11. And German is ready for the opening rush. “We get 100 cars that drive by every day‚” he said. As he’s been working on the restaurant (the former Me & Julio), people have been knocking, ready for the chance to see what they’re building. The opportunity to move to Hastings came the way opportunity finds a guy like German, a self-described “St. Paul kid”: through personal connections. He was helping out someone who knew someone who was looking for a good fit for the building, and voila! A new burger destination was born. German is a hospitality industry lifer, having spent time at iconic places like O’Gara’s, where he came up with the idea for the Minnesota wild rice poutine , a gooey concoction of the state’s official soup, cheese curds and tots. He made his name as a long-term pop-up inside St. Paul Park’s American Legion, located at 328 Broadway Av. “We didn’t mean to stay five years,” said German. But the temporary spot became home — and, ultimately, the perfect jumping off point for his own business. The new 328 Grill will
+
+--- Article 468 ---
+URL: https://www.azcentral.com/story/news/local/southwest-valley/2026/05/05/buckeye-verrado-marketplace-opening/89934729007/
+Title: Target, HomeGoods and others opening in Buckeye's Verrado Marketplace
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 11:02:00
+
+SOUTHWEST VALLEY Target, HomeGoods and others opening in Buckeye's Verrado Marketplace Corina Vanek Arizona Republic May 5, 2026, 5:02 a.m. MT The first retailers at Verrado Marketplace, a 500,000-square-foot shopping center under construction in Buckeye, will begin opening May 13. The shopping center, developed by Phoenix-based Vestar, the developer of Desert Ridge Marketplace and Tempe Marketplace, is located at Interstate 10 and Verrado Way, and cost about $275 million to develop.
+
+--- Article 469 ---
+URL: https://open.kg/en/news/exclusive/96462-kyrgyzskie-filmy-predstavjat-na-kinorynke-v-kannah.html
+Title: open.kg
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 10:19:57
+
+From May 12 to 18, 2026, a delegation from the Kyrgyz film industry will participate in the largest global film market — Marché du Film, which takes place as part of the Cannes Film Festival. The Ministry of Culture of Kyrgyzstan announced plans to present a national stand, Kyrgyz Cinema, where the potential for the development of local cinematography and opportunities for international cooperation will be showcased. During the event, the delegation will hold meetings with representatives of the film industry from Asia and Europe, including producers, distributors, and festival program directors. The main focus will be on issues of co-production and expanding the international distribution of Kyrgyz films. Participation in this event is particularly significant in light of the 85th anniversary of Kyrgyz cinema and the growing interest in the Asian direction within the Marché du Film program. Negotiations are also planned regarding the development of series production and the preservation of the heritage of the "Kyrgyz Keremet" era, including aspects of digitization and restoration of classic films. As part of the film market, Kyrgyzfilm will present two feature films: "Kara Kyzyl Sary" (directed by Aktan Arym Kubat) and "Buiruk" (directed by Dastan Madalbekov). Additionally, an important achievement has been the inclusion of the international documentary film festival UmutDoc in the Cannes Docs program, which opens new opportunities for collaboration with leading representatives of the global film industry. The organization of the Kyrgyz delegation's participation is carried out by the Department of Cinematography, aimed at promoting the national film industry on the international stage.
+
+--- Article 470 ---
+URL: https://www.express.co.uk/news/uk/2201808/21-uk-leisure-centres-administration-oldest-1928
+Title: oldest open since 1928
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-05 09:32:00
+
+Leisure centres in the UK are facing financial difficulties (Image: Getty) A number of the UK's leisure centres are transitioning through an administration process. Last month, Fusion Lifestyle announced that it had appointed administrators , but insisted that its centres would remain open, and members could continue to use them. Established in April 2000 after a decision by a London borough council to outsource the management of the leisure facilities, the firm managed a "diverse portfolio of facilities" - from Wales to the capital, and as far north as Newcastle. Nadeem Sweiss and Adam Stephens of S&W Partners LLP were appointed as joint administrators of Fusion on 1 April, and the charity continues to trade under the arrangement. It added: "The affairs, business, and property of the charity over which they are appointed are managed by them as agents and without personal liability." Article continues below ADVERTISEMENT Get the day's biggest headlines in UK and World news and more Subscribe Invalid email We use your sign-up to provide content in ways you've consented to and to improve our understanding of you. This may include adverts from us and 3rd parties based on our understanding. You can unsubscribe at any time. Read our Privacy Policy It comes as leisure centres in Britain face cost pressures due to inflation and a lack of financial support from the government. READ MORE: UK pottery company collapses into administration - in business for 217 years READ MORE: Major airline crashes into bankruptcy - selling its planes List of centres caught up in administration West Devon Borough Council has awarded a contract to Parkwood Leisure to run the centres managed by Fusion. These include: Article continues below ADVERTISEMENT Dartmouth Leisure Centre Article continues below ADVERTISEMENT Ivybridge Leisure Centre Quayside Leisure Centre Totnes Leisure Centre Parklands Leisure Centre Meadowlands Leisure Centre On April 10, Somerset Council stepped in to protect : Frome
+
+--- Article 471 ---
+URL: https://www.ctinsider.com/business/article/ny-grocer-ct-decicco-greenwich-retail-jobs-22241021.php
+Title: DeCicco & Sons starts hiring for first Connecticut store in Greenwich
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 09:13:07
+
+An artist's rendition of the new DeCicco & Sons supermarket that will open in Greenwich this summer. This will be the first Connecticut location for the Pelham, N.Y.-based supermarket chain. Contributed photo A Pelham, N.Y. grocery chain that is opening its first Connecticut store this summer has begun hiring workers for the new supermarket. DeCicco & Sons will hold a pair of job fairs this week at the supermarket on 21 Glenville St. in Greenwich, according to company officials. This week's job fair will be from 10 a.m. to 5 p.m. on Wednesday and Friday at the store, which is currently under construction. Advertisement Article continues below this ad The new 20,000-square-foot supermarket is going into a former Stop & Shop location that closed in 2023 . DeCicco & Sons has 11 stores in Westchester and Putnam counties in New York State. For those unable to make this week's job fairs, company officials have said they will hold job fairs every Wednesday and Friday at the store throughout the remainder of May. Greenwich officials approved plans for the new supermarket in October 2024 . More For You MilkShake Factory opens Darien shop, second in Connecticut “It feels like a real old scoop shop that you used to go to as a kid," said owner Scott Ackerman of his new MilkShake Factory chain store. Grocery store proposed for former East Haven Rite Aid location A New York State grocer that has a Connecticut supermarket Bethel now wants to open a location in East Haven.. CT-based electrical manufacturer Hubbell to make $3 billion acquisition The acquisition will significantly expand the reach of electrical-products manufacturer Hubbell, one of the largest companies based in Connecticut. Cameras are scanning license plates at some Lowe’s and Home Depot stores in CT Connecticut police departments have access to the license plate scanning cameras that have popped up in the parking lots of stores like Lowe’s and Home Depot. Life-sciences firm IDEX to close facility in CT, lay off mo
+
+--- Article 472 ---
+URL: https://www.metrowestdailynews.com/story/business/2026/05/05/party-city-coming-back-to-massachusetts-its-inside-43-staples-stores-supplies-balloons-balloons/89879495007/
+Title: Staples partners with Party City to expand services for celebrations
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-05 08:47:00
+
+BUSINESS Staples partners with Party City to expand services for celebrations Bailey Allen USA TODAY NETWORK - New England May 5, 2026, 4:47 a.m. ET Once an emporium of Mylar balloons, plastic tablecloths, and Mardi Gras beads, Party City is making a comeback in Massachusetts and across the country – inside a familiar office supply store. Party City, which filed for bankruptcy twice and closed its brick-and-mortar locations , is now operating inside more than 700 Staples stores nationwide — including those in Bellingham, Natick, and Westborough — according to an April 21 press release . This means customers can now buy party supplies and personalized signs, invitations, and banners all under one roof , Staples and Party City said. Among the aisles of printer paper, swivel chairs, and pencil cases, shoppers will find a section with tanks of helium and a wall of colorful balloon options. "By bringing Party City into Staples stores, we're expanding what customers can accomplish in one place – combining helium balloons and party supplies with our print and marketing services to offer a complete solution for celebrations, from graduations to grand openings and everything in between," Marshall Warkentin, president of Staples' U.S. retail, said in a statement . More Staples locations are slated to add Party City sections by the end of the year, according to the release. Customers can also find Party City on Staples.com . Soon, the Staples website and app will have a page to schedule balloon pickups, the companies said. Party City is located inside these Staples stores in MA Party City now sells balloons and other Party City supplies and decorations at 43 Massachusetts Staples stores , according to the two companies: Acton: 145 Great Road (Route 2A), Acton, MA 01720 Auburn: 436 Southbridge St., Suite 2, Auburn, MA 01501 Bellingham: 284 Hartford Ave., Bellingham, MA 02019 Boston: 1 Washington St., Boston, MA 02108 Braintree: 500 Grossman Drive, Braintree, MA 02184 Brighton: 
+
+--- Article 473 ---
+URL: https://lbndaily.co.uk/amp/aldi-to-create-80-jobs-at-new-merseyside-stores
+Title: Aldi to create 80 jobs at new Merseyside stores
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 08:43:12
+
+Supermarket giant Aldi is carrying out a public consultation on plans to build new stores in Wirral and Liverpool, creating around 80 jobs. Tony McDonough reports Image of a proposed new Aldi store in Seacombe in Wirral Aldi is continuing its expansion in Merseyside with a new store planned for Seacombe in Wirral and Wavertree in Liverpool. Creating 40 jobs, the Seacombe outlet will be located at a vacant, brownfield site off Birkenhead Road. Aldi has started a public consultation on the plans as it prepares a planning application that will be submitted to Wirral Council for approval. Opposite the junction with Kelvin Road, this site has had a number of previous uses including as a timber yard and pallet centre, and currently serves as a lorry park. Aldi said: “An opportunity exists to transform this site, creating a new Aldi food store and improve shopping options for residents in the area.” A public consultation on the plans has started and runs until May 11. Stephen Jones, real estate manager for Aldi, said: “Having been vacant for over a decade, we’re excited to be bringing forward plans that would regenerate this strategic site, setting new standards for development in this part of Seacombe. “We’d like to encourage the community to have their say by providing their feedback via our consultation website.” Image of a proposed new Aldi store in Wavertree in Wirral A public consultation is also open , running until May13, on Aldi’s proposals for a new store Wavertree Retail Park that would also see the creation of 40 jobs. This would be located on the site of the former Buzz Bingo and would include heat pumps and solar panels. READ MORE: Liverpool… a city fit for Kings? READ MORE: Stena to invest £14m in Irish Sea vessel upgrades “Aldi has identified a clear need for a discount retailer in this part of Liverpool, with local shopping options in the immediate area limited to more expensive competitors,” the company said. “A new Aldi food store at this site would impr
+
+--- Article 474 ---
+URL: https://www.wsls.com/news/local/2026/05/05/new-dunkin-in-fairlawn-celebrates-opening-with-free-coffee-donuts/
+Title: New Dunkin’ in Fairlawn to celebrate grand opening with free coffee, donuts
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 08:41:47
+
+New Dunkin’ in Fairlawn to celebrate grand opening with free coffee, donuts The ribbon-cutting ceremony will feature a $2,000 check presentation to Special Olympics Virginia 10 News Digital Team Published: May 5, 2026 at 4:41 AM Updated: May 5, 2026 at 7:50 AM (AP Photo/Charles Krupa) (Charles Krupa,  Copyright 2025 The Associated Press. All rights reserved) FAIRLAWN, Va. – Yummy deals are brewing at the new Dunkin’ in Fairlawn as it celebrates its grand opening this week. Located at 7357 Round House St., the restaurant is set to open its doors Tuesday at 5 a.m. Early risers will have a chance to win a coupon book for “Free Donuts for a Year,” while supplies last. On Wednesday, the first 100 people in line starting at 5 a.m. will score 100 days of free coffee. Recommended Videos The ribbon-cutting ceremony will be held on Tuesday at 11 a.m., featuring a $2,000 check presentation to Special Olympics Virginia. Local athletes will be on site to accept the donation. The new Dunkin’ will be open daily from 5 a.m. to 9 p.m. Copyright 2026 by WSLS 10 - All rights reserved.
+
+--- Article 475 ---
+URL: https://www.disneydining.com/could-the-lack-of-a-soft-opening-caused-big-thunder-mountains-problems-on-opening-day-at-magic-kingdom-rl1/
+Title: Trial by Fire: Why Disney’s Refusal to Soft-Open Big Thunder Mountain Led to a Day-One Disaster
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 08:34:04
+
+On May 3, 2026, Frontierland was supposed to be the center of the Disney universe for all the right reasons. After a staggering 16-month refurbishment—the longest closure in the attraction’s history— Big Thunder Mountain Railroad was finally back. Thousands of fans, many of whom had camped out since the pre-dawn hours, were ready to experience the “Motherlode” finale and the buttery-smooth glide of brand-new steel tracks. Credit: Renato Mitra, Unsplash But by late afternoon, the “Wildest Ride in the Wilderness” had turned into a literal “Trial by Fire.” As smoke billowed from the mountain’s peak and sirens echoed across former Rivers of America, a celebratory day dissolved into a chaotic evacuation. While Disney has officially remained quiet on the cause, the theme park community has identified a glaring culprit: Disney’s unprecedented decision to skip the “soft opening” phase for one of its most complex overhauls ever. A Break in Protocol: No Safety Net for the Mountain The controversy erupted after reports from park insiders, including a viral analysis that highlighted the lack of testing. Historically, Disney is the gold standard for “stress-testing” new attractions. When TRON Lightcycle / Run and Tiana’s Bayou Adventure launched, they underwent weeks of unannounced soft openings and technical rehearsals. These windows allow Imagineers to see how the ride reacts to the unpredictable variables of thousands of human bodies, high Florida humidity, and continuous 12-hour operation. Credit: Disney However, for Big Thunder’s 2026 return , Disney threw out the playbook. There were no “surprise” openings for general guests in the days leading up to May 3. The ride went from a construction site to a 210-minute standby wait in a matter of hours. “It was a management gamble that prioritized a ‘big splash’ grand opening over operational stability,” says one industry analyst. “By skipping soft openings, they essentially used paying guests as their final test subjects. Yesterd
+
+--- Article 476 ---
+URL: https://www.petoskeynews.com/story/business/2026/05/05/pecado-fashion-boutique-reopens-at-new-downtown-petoskey-location/89931818007/
+Title: PECADO fashion boutique reopens at new downtown Petoskey location
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 08:03:00
+
+BUSINESS PECADO boutique reopens at new downtown Petoskey location M. Alan Scott The Petoskey News-Review May 5, 2026, 4:03 a.m. ET PECADO Fashion House Boutique has reopened in downtown Petoskey at a location double the size and with a larger selection of women’s merchandise. The retail store, owned by Alona Ausdemore, closed its doors on East Lake Street in September because it had outgrown the location. Ausdemore wanted to double her space to meet growing demand.
+
+--- Article 477 ---
+URL: https://www.bizcommunity.com/article/over-100-stores-open-at-new-prince-buthelezi-mall-in-empangeni-403599a
+Title: Over 100 stores open at new Prince Buthelezi Mall in Empangeni
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 07:54:53
+
+Over 100 stores open at new Prince Buthelezi Mall in Empangeni
+
+--- Article 478 ---
+URL: https://www.msn.com/en-ca/money/other/aldi-reveals-five-new-store-openings-in-the-next-few-days-is-one-coming-to-a-town-near-you/ar-AA1S4FQt?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Aldi reveals five new store openings in the next few days
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 07:26:53
+
+MSN
+
+--- Article 479 ---
+URL: https://www.firstpost.com/entertainment/mantra-muughda-box-office-anupam-patnaiks-supernatural-horror-comedy-collects-rs-73-17-lakhs-in-three-days-witnesses-200-jump-from-the-opening-day-14007757.html
+Title: 'Mantra Muughda' Box-Office: Anupam Patnaik's supernatural-horror comedy collects Rs 73.17 Lakhs in three days, witnesses 200% jump from the opening day
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 07:03:29
+
+[Could not fetch: 404 Client Error: Not Found for url: https://www.firstpost.com/entertainment/mantra-muughda-box-office-anupam-patnaiks-supernatural-horror-comedy-collects-rs-73-17-lakhs-in-three-days-witnesses-200-jump-from-the-opening-day-14007757.html]
+
+--- Article 480 ---
+URL: https://www.msn.com/en-us/news/technology/mango-plans-ten-new-t%C3%BCrkiye-stores-in-2026/ar-AA221Ksb?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Mango plans ten new Türkiye stores in 2026
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 06:54:30
+
+MSN

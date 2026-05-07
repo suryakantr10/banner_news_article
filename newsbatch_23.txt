@@ -1,0 +1,205 @@
+You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+
+🔍 Extract these fields
+• Store/Shop/Restaurant Name
+• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
+• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
+• Event Date
+  - For openings → Opening Date
+  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
+• Status
+  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
+  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
+  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
+• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+
+📊 Output format
+Create ONE clean Markdown table with these exact column headers (in this order):
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
+
+📌 Rules
+• Add one row per article in the order the articles are given
+• If an article contains multiple businesses, create a separate row for each
+• If an article includes both openings and closures, extract each separately
+• For Published Date → copy exactly the value from the "Published:" line in the article metadata
+• If an article has zero relevant business opening or closure information, still include a row with:
+  - Store Name: "No qualifying business found"
+  - Other columns: "N/A"
+
+🚫 Strict constraints
+• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+
+📎 Final section (mandatory)
+At the very end of your response, add:
+Non-working or unusable articles List:
+• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
+If none, write: None
+
+✅ Articles below — extract now:
+
+
+--- Article 441 ---
+URL: https://www.aol.com/news/national-tool-store-opening-peoria-145106144.html
+Title: A national tool store is opening a Peoria location this summer
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 16:55:58
+
+JJ Bullock, Peoria Journal Star Tue, May 5, 2026 at 2:51 PM UTC 0 A national tool store is opening a Peoria location this summer PEORIA — A national tool retailer is coming to a popular shopping center. Harbor Freight is opening at the Willow Knolls Shopping Center this summer, according to the company. The new store is expected to create 10 to 15 new jobs. Advertisement Harbor Freight, founded in 1977, has more than 1,600 stores nationwide. It's nearest store to Peoria is in East Peoria. It also has a location in Pekin. More: 'Dual-identity space' aims to open in Downtown Peoria by August This article originally appeared on Journal Star: National tool retailer Harbor Freight is coming to Peoria
+
+--- Article 442 ---
+URL: https://www.kentucky.com/lexgoeat/restaurants/article315640365.html
+Title: Lexington sports bar known as ‘Hooters in plaid’ closing after seven years
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-05 16:46:22
+
+Key Takeaways Key Takeaways AI-generated summary reviewed by our newsroom. Read our AI Policy. Tilted Kilt will end service on May 16 after seven years as it preps to change direction. Owner Jamie Daniel announced staff were told the restaurant will change direction. Daniel plans to keep 1030 S. Broadway and unveil a new concept later this year. Tilted Kilt , a British-themed sports bar that featured “Kilt Girls” (and the occasional Tilt Guy) is closing later this month. Owner Jamie Daniel said employees were told on Monday that the restaurant and bar will be closing after seven years. The last day of service will be May 16. “Yesterday I let the staff know we are going to be changing things up,” Daniel said. “It’s been seven years since we opened ... and we are looking to go in a different direction.” Tilted Kilt, which opened on South Broadway, features lots and lots of TVs for catching all the sports action.                                                                                            Rob Bolson Daniel said that he plans to keep the space at 1030 S. Broadway that sits beside KSBar and Grille. He said a new concept will be coming later this year, which he hopes to announce this month. Last summer, KSBar and Grille closed for several months for a refresh as well. Tilted Kilt opened in March 2019 with a menu of pub food and an atmosphere of “Hooters in plaid.” But the COVID pandemic hit many sports bars particularly hard, and the Tilted Kilt chain, which has undergone restructuring and ownership changes, dwindled from a high of about 90 locations nationwide to six today. Daniels said the restaurant will have specials in the weeks leading up to closing, and he hopes the bar’s regulars will come out for a “Last Call at Tilted Kilt” to say goodbye to their favorite Kilt girl or guy. “It has been our pleasure to serve the Lexington community over the last seven years,” Daniel said in a statement. “We hope you will stop by to celebrate with us one last time a
+
+--- Article 443 ---
+URL: https://www.thenorthwestern.com/story/money/companies/2026/05/05/burlington-oshkosh-store-opening-date-may-15-koeller-street/89946074007/
+Title: Burlington sets opening date for new Oshkosh store
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 16:40:00
+
+COMPANIES Burlington sets opening date for new Oshkosh store The off-price retailer opens May 15 at 1226 S. Koeller St. in Oshkosh, featuring a reimagined layout with wider aisles and bold signage as Burlington pushes toward 100+ new stores by year end. Justin Marville Oshkosh Northwestern May 5, 2026, 11:40 a.m. CT OSHKOSH – Burlington has an official start date . The new Oshkosh branch of the national off-price retailer will open its doors May 15 at 1226 S. Koeller St. in the space previously vacated by fabrics store Joann between T.J. Maxx and Shopko Optical.
+
+--- Article 444 ---
+URL: https://communityimpact.com/houston/conroe-montgomery/dining/2026/05/05/bamburger-opens-new-location-along-hwy-105-in-montgomery/
+Title: Bamburger opens new location along Hwy. 105 in Montgomery
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 16:37:00
+
+Bamburger opens new location along Hwy. 105 in Montgomery | Community Impact | Houston Bamburger opens new location along Hwy. 105 in Montgomery Trending now Election Hoisington, Blevins, Sellars win Conroe council races, municipal judge heads to ... Election Countryman reelected Montgomery mayor, Fox wins in council race, unofficial results ... Dining Hibachi, Sunrise Cafe: 6 recently opened, featured dining spots in the ... Transportation Demolition of abandoned Northwest Mall begins to make way for pending ... Texas Legislature 51K low-income students to receive Texas Education Freedom Account funding Texas Legislature Following emotional hearings, Camp Mystic says it will not reopen this ... Election Brett Ligon to lead Texas Senate District 4 through 2026, unofficial ... Election Q&A: John Cornyn and Ken Paxton face off in May Republican ... Dining Bamburger opens new location along Hwy. 105 in Montgomery Election What Conroe-, Montgomery-area voters should know for the May 2 election Dining Bamburger opens new location along Hwy. 105 in Montgomery By Lizzy Spangler | 11:37 AM May 5, 2026 CDT Updated 11:37 AM May 5, 2026 CDT The restaurant serves smashburgers, fries cooked in beef tallow and hand-spun milkshakes. (Courtesy Bamburger) The restaurant serves smashburgers, fries cooked in beef tallow and hand-spun milkshakes. (Courtesy Bamburger) A new location of Bamburger is now open in Montgomery, owner Juan Pablo confirmed. The restaurant, located along Hwy. 105, serves smashburgers, fries cooked in beef tallow and hand-spun milkshakes. Opened April 8 15260 Hwy. 105 W., Ste. 136, Montgomery https://bamburger.online By Lizzy Spangler Editor Lizzy serves as editor for the Conroe/Montgomery and Tomball/Magnolia editions of Community Impact . Joining CI in August 2022, she covered government for Conroe, Jersey Village, Magnolia, Montgomery and Tomball prior to becoming editor. When not working, Lizzy enjoys hanging out with her dog, Twix, or watching reality TV. Ex
+
+--- Article 445 ---
+URL: https://whatnow.com/austin/retail/international-apparel-brand-manyavar-expanding-to-leander/
+Title: International Apparel Brand Manyavar Expanding To Leander
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 16:34:22
+
+Manyavar (Image credit: Manyavar) SHARE A boutique Indian clothing store is planning a location in Leander, according to a recent filing with the Texas Department of Licensing and Regulation. Manyavar is bringing a location to 15205 Ronald Reagan Blvd #700 in Leander. The 3,050-square-foot project is slated for construction from July to November, according to the filing. Manyavar, based in India and spearheaded by Ravi Modi , has grown into an international brand. The apparel brand offers various Indian-inspired designs ranging from Sherwanis to Sarees. It offers plenty of celebration wear designed for events such as weddings and engagements. The brand has expanded to more than 600 stores, with international locations in the U.A.E., Canada, the United Kingdom and the U.S. There is currently a handful of Manyavar stores across the U.S., including spots in Dallas, Houston, San Francisco, Chicago and New Jersey. Love our content? Add WhatNow as a preferred source on Google to see more of our trusted coverage when you search. 15205 Ronald Reagan Blvd #700, Leander, TX 78641 Be the First to Know From new restaurant openings to exciting retail launches and real estate insights, be the first to know what’s happening in Austin Subscribe & Stay Ahead Share This Article Facebook Copy Link Print By Emily McGinn Senior Regional Reporter Follow: Emily McGinn is a passionate writer from the Los Angeles area. She has experience reporting on local news and the restaurant industry, and in multimedia writing for podcasts and videos. In her free time, she enjoys exploring restaurants and finding new coffee shops to try. Previous Article Walmart Planning New Store In Jarrell Leave a Comment Leave a Reply Cancel reply Other Relevant News Burnet To Receive New HTeaO Location May 6, 2026 Emily McGinn New Restaurant Slated For Tech Ridge Center May 5, 2026 Emily McGinn Eldorado Cafe Expanding, Planning Renovations May 5, 2026 Emily McGinn Good BBQ Company Expanding To Hudson Bend May 5, 20
+
+--- Article 446 ---
+URL: https://www.the-sun.com/money/16317130/little-caesars-opens-second-self-checkout-location-michigan/
+Title: Domino’s rival introduces ultra-fast self-checkout store
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 16:23:03
+
+Credit: Getty Click to share on Twitter (Opens in new window) Click to share on Facebook (Opens in new window) Comments A POPULAR pizza chain is amping up its speed with a new self-serve location. Little Caesars opened its second self-service restaurant in the US on Sunday in Dearborn Heights, Michigan. Sign up for the Money newsletter Thank you! The Domino’s rival introduced changes that reduce interaction with staff, making for the shortest restaurant visits possible . The first location of this type opened in October in Rockford, Illinois . Advertisement Customers can place an order through the Little Caesars’ mobile app or website and pick up their order in a designated area of the store. Those who do not want to order ahead can choose items from Hot-N-Ready stations, then scan them and pay at self-checkout kiosks. Read more on Store Changes SHELF SHIFT Aldi may feel very different, from middle aisle madness to new 'price language' COSMETIC COMPETITION Walmart takes on Sephora with new 'aisle' change at 400 stores Coolers with beverages available for purchase can be found alongside the Hot-N-Ready stations. The kiosks are similar to what one might find at a convenience store , offering a quick and seamless independent checkout process. “We know that many of our guests are in a hurry and want something seamless, easy and fun,” said Little Caesars’ Vice President of Innovation, Trish Heusel, said at the Sunday opening . “You can do this so quickly and seamlessly — it makes your dinner, snack or lunch as easy as possible,” she continued. Most read in Money BUSY BEAVER Buc-ee’s brings 70,000-square-foot mega stop to the state’s first location PAY PAINS All 2,021 Home Depot locations brace for $25 policy under new 'rate' bill CONSTRUCTION ZONE Your next shopping trip at Walmart may look much different CLOTHES COLLAB Target shelves will soon look very different under new $5 minimum policy The ribbon cutting ceremony in Dearborn Heights took place at 12 p.m. on Sunday.
+
+--- Article 447 ---
+URL: https://www.yorkpress.co.uk/news/26080544.m-s-denies-closure-rumours-scarborough-town-centre-store/
+Title: High street giant responds to rumours about closure of North Yorkshire store
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 16:11:47
+
+M&S denies closure rumours in Scarborough town centre store North Yorkshire Council Economy Local government Scarborough By 
+            Anttoni James Numminen Local Democracy Reporter Share 0 Comments 2 Skip to next photo 1 / 1 Show caption 1 / 1 0 Comments This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
+        and has been written by our American colleagues.
+        It does not necessarily reflect the view of The Herald. A high street giant has responded to rumours about the future of one of its stores in North Yorkshire. ​Over the bank holiday weekend, several posts in Scarborough -related social media groups suggested that the Marks & Spencer store in Scarborough town centre would be shutting down. ​One such post, which stated “It’s closing! Scarborough town is dead” above a photograph of the department store at 8 Newborough, attracted more than 300 comments from concerned members of the public. ​However, on Monday, May 5, a spokesperson for the retailer confirmed that the shop will remain open. ​The spokesperson told the Local Democracy Reporting Service (LDRS): “There are no plans to close the store.” ​They added: “We will share any updates if plans change.” Newborough, Scarborough. Google Maps ​Many who commented on the erroneous social media post correctly highlighted that there was an absence of information to back up the claim about the store’s supposed closure. ​One social media user commented “not sure this is fact”, while another added “fake news”. ​Hundreds of commenters said they were worried about the future of the town centre businesses and highlighted the closure of other shops in Scarborough town centre in recent years. ​Last year, the retailer Next was given permission to expand its Seamer Road premises as part of the closure of its town centre site. ​Commenting on Facebook, one user said: “Why does everything have to be out of town retail parks? If, like me, you don’t drive, they are alway
+
+--- Article 448 ---
+URL: https://www.bizjournals.com/orlando/news/2026/05/05/cosa-nostra-italian-deli-winter-garden-plant-st.html
+Title: Italian deli to open on Plant Street in Winter Garden
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 15:45:00
+
+[Could not fetch: 403 Client Error: Forbidden for url: https://www.bizjournals.com/orlando/news/2026/05/05/cosa-nostra-italian-deli-winter-garden-plant-st.html]
+
+--- Article 449 ---
+URL: https://patch.com/illinois/northbrook/familiar-national-retail-name-makes-comeback-4-new-il-stores
+Title: Familiar National Retail Name Makes Comeback With 4 New IL Stores
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-05 15:09:31
+
+Business & Tech Familiar National Retail Name Makes Comeback With 4 New IL Stores See where you will be able to go to find this familiar name in home goods that closed its last 11 Illinois spots in 2023. Eric DeGrechie , Patch Staff Posted Tue, May  5, 2026 at 10:09 am CT A national home goods retailer that declared bankruptcy and shuttered its 11 remaining Illinois locations in 2023 is making a comeback this month. The Container Store has begun what it calls a chainwide "store changing" event that will result in the return of Bed Bath & Beyond branding and products. Bed Bath & Beyond will return to 98 locations nationwide — including these four in Illinois: Find out what's happening in Northbrook for free with the latest updates from Patch. 908 West North Ave., Chicago 101 Skokie Blvd., Northbrook 610 Oakbrook Center, Oak Brook 1460 East Golf Road, Schaumburg "This is a reset with purpose," said Jen Pape, Senior Vice President of Stores at The Container Store. "We are actively reshaping our stores to make room for what's next. By streamlining select categories today, we're creating the space and flexibility needed to introduce Bed Bath & Beyond products and deliver a more complete home experience for our customers." RELATED: Illinois Bed Bath & Beyond Closing Sales To Begin Amid Bankruptcy Find out what's happening in Northbrook for free with the latest updates from Patch. The company said it will liquidate about 30 percent of The Container Store products. Beginning in May, the identified locations are expected to transition to The Container Store + Bed Bath & Beyond format. The company said the reimagined stores will "combine The Container Store's organizing solutions, in-home services and expertise with an expanded home assortment and complementary offerings from Bed Bath & Beyond." RELATED: The Container Store Files For Bankruptcy — What Happens To IL Locations The former New Jersey-based Bed Bath & Beyond company announced in 2023 that it would file for Chapter
+
+--- Article 450 ---
+URL: http://www.msn.com/en-us/foodanddrink/foodnews/beloved-west-babylon-waterfront-spot-south-swell-shutting-down-for-season/ar-AA220Uhc?ocid=BingNewsVerp&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
+Title: Beloved West Babylon waterfront spot South Swell shutting down for season
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 14:58:41
+
+MSN
+
+--- Article 451 ---
+URL: https://www.msn.com/en-us/travel/tips/spirit-airlines-has-shut-down-what-now/ar-AA22pa4x?ocid=Peregrine
+Title: Spirit Airlines has shut down. What now?
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-05 14:34:40
+
+MSN
+
+--- Article 452 ---
+URL: https://www.edp24.co.uk/news/26078990.a140-closed-resurfacing-hempnall-long-stratton/
+Title: Major road closing for works costing £193,000
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-05 14:28:00
+
+A140 closed for resurfacing between Hempnall and Long Stratton Traffic Long Stratton By 
+            Iona Goodall Live Reporter Share 0 Comments Part of the A140 is closing for resurfacing works (Image: Google Maps) This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
+        and has been written by our American colleagues.
+        It does not necessarily reflect the view of The Herald. A major road is closing for a project costing £193,000. The resurfacing works taking place on the A140 are planned to start on Monday, May 18, and will last five nights. To ensure the safety of the workforce and the public, a temporary road closure will be in place from 8pm until 6am between the Hempnall roundabout and the roundabout north of the Long Stratton bypass. Norfolk County Council's Infrastructure Department, along with its contractors, is handling the works. There will be a signed diversion route in place. While access to properties within the closure area will be maintained, there may be some delays. A shuttle bus will be provided for services affected by the closures, with the bus number showing as 36 S. It will pick up passengers at the same time from stops in Norwich as the 36B operates, then run non-stop to Tasburgh, before operating via Tharston into Long Stratton. The same will apply in reverse. The bus will accept tickets for First passengers on the 82s departing Norwich Bus Station at 8.25pm and 10.25pm and from Long Stratton at 9.35pm, which will also operate via Tharston in both directions. Traffic Long Stratton Share 0 Comments Get involved with the news Send your news & photos
+
+--- Article 453 ---
+URL: https://www.boutiquehotelier.com/corsham-house-beckford-group-opening-news/
+Title: Corsham House to open 16 July 2026 under the Beckford Group
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 14:14:43
+
+[Could not fetch: 403 Client Error: HTTP Forbidden for url: https://www.boutiquehotelier.com/corsham-house-beckford-group-opening-news/]
+
+--- Article 454 ---
+URL: https://williamsonsource.com/ice-cream-shop-sweethaven-to-open-in-brentwood/
+Title: Ice Cream Shop Sweethaven to Open in Brentwood
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 14:00:02
+
+photo by Donna Vissman/Franklin Location Locally owned ice cream shop Sweethaven will open a new location in Brentwood. This will be the ice cream shop’s third location. Sharing the news on social media, Sweethaven stated, “The secret’s out: BRENTWOOD! Coming June 2026 Stay tuned for grand opening updates. So grateful for this sweet community!” More Eat & Drink News Sweethaven’s newest location will be in the CityPark development on Franklin Road, next to Taziki’s. CityPark is a walkable, mixed-use community in the heart of Brentwood’s business and retail districts at the intersection of Franklin Road and Executive Center Drive, featuring retail shops, restaurants, workspaces, a Hilton Garden Inn Hotel, and the Tapestry apartments. The Britts first opened Sweethaven in their Westhaven neighborhood in Franklin in 2020, with the purpose of making it a place to celebrate. They previously shared with us, “We believe every day should be a celebration, which inspired us to create a sprinkle bar offering artisan toppings and beautiful sprinkle blends! We also host seasonal cookie decorating classes and private parties!” After the beloved Baskin-Robbins in downtown Franklin closed, the Britts opened their second location in the newly renovated ice cream shop in 2022. The ice cream shop has grown from offering eight flavors to a rotating 16 flavors, with gluten-free options. They also have a selection of frozen yogurt, ice cream cakes, shakes, and floats. While we don’t have an exact opening date, the ice cream stores are typically open from noon until 9 pm. Share on Facebook Tweet Please join our FREE Newsletter
+
+--- Article 455 ---
+URL: https://www.cstoredive.com/news/3-retailers-expanding-their-car-wash-empires/817581/
+Title: 3 retailers expanding their car wash empires
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 13:46:32
+
+An article from 3 retailers expanding their car wash empires Couche-Tard, QuikTrip and Madison Capital Group are all looking to add large numbers of locations or expand into new markets. Published May 5, 2026 Jessica Loder Senior Editor Share Copy link Email LinkedIn X/Twitter Facebook Print License Add us on Google Alimentation Couche-Tard is expanding the Clean Freak and Rainstorm car wash banners it bought in 2022. Courtesy of Liquid Barcodes Listen to the article 3 min This audio is auto-generated. Please let us know if you have feedback . While some convenience retailers are focusing their growth on their store count, others are looking outside the box with car wash updates and expansions. Some retailers are taking their car washes to the next level with updated car wash tunnels and subscription services. Others are expanding the reach of their car wash empires. A car wash at a convenience store can bring in customers who might not otherwise stop — and once they’re on the property, advertising or loyalty tie-ins can draw them inside the store. Here’s how Alimentation Couche-Tard, QuikTrip and Madison Capital Group have all recently expanded their car wash ambitions. Circle K makes the most out of its M&A Alimentation Couche-Tard, parent company of the Circle K and Holiday banners, raised a few eyebrows in late 2022 when it agreed to acquire True Blue Car Wash . When the deal closed, Couche-Tard took ownership of more than 60 Clean Freak and Rainstorm car washes in Arizona, Texas, Illinois and Indiana. Couche-Tard has continued growing the brands by both expanding in existing markets and opening in new states. Clean Freak, in particular, has been expanding into new markets. The company opened its first car wash in Florida on April 9, 2025, in Wesley Chapel, according to a company spokesperson. Since then, Couche-Tard has opened two more — a second in Wesley Chapel last year and another alongside a new Circle K in Parrish earlier this year. A fourth in the state 
+
+--- Article 456 ---
+URL: https://abc7news.com/post/dave-busters-opens-newest-location-jack-london-square-bringing-jobs-new-life-oaklands-waterfront/19038173/
+Title: Dave & Buster's opens newest location at Jack London Square bringing jobs and new life to Oakland's waterfront
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 13:40:49
+
+Dave & Buster's opens newest location at Jack London Square bringing jobs and new life to Oakland's waterfront - ABC7 San Francisco ARTS & ENTERTAINMENT Dave & Buster's opens new Oakland location in Jack London Square By Gloria Rodríguez Tuesday, May 5, 2026 1:24PM OAKLAND, Calif. (KGO) -- Dave & Buster's, a national chain of entertainment venues that combines a restaurant, sports-bar atmosphere and a large arcade under one roof -- has opened its latest location on Oakland's waterfront on Monday. The grand opening kicked off with a ribbon-cutting ceremony and gifted the first 100 guests with free unlimited video game play for the day. Gabriela Alonso, a San Francisco resident who made the trip across the Bay Bridge and was among the first in line among dozens who waited for their doors to open, said he thinks the new restaurant will bring more crowds and business to Oakland. MORE: H Mart opens first East Bay location to eager crowds after years of wait The restaurant and arcade's general manager said the new location is also expected to boost local employment. "We hired 155 of the most talented Oakland people to bring the fun to the city. This is going to bring good times, a place to distract and a safe place to have fun," said Gil Sumlin, general manager of Dave & Buster's at Jack London Square. Leaders in the area say the business could help attract more visitors. "We have an incredible waterfront in downtown Oakland. It is accessible by train, by BART and by foot and it is another amazing reason to come down here," said Savlan Hauser, executive director of the Jack London Improvement District. MORE: Taco Bell Cantina opens at SF's Fisherman's Wharf, bringing energy and visitors The opening comes as a new state law that took effect this year lifted long-standing use restrictions at Jack London Square. City leaders say removing those barriers could allow more types of businesses to move into the area. "It opens the door for several different opportunities," said Oa
+
+--- Article 457 ---
+URL: https://www.indianretailer.com/news/hettich-expands-hex-store-network-new-launch-solapur
+Title: Hettich Expands HeX Store Network with New Launch in Solapur
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 13:28:43
+
+Stores Hettich Expands HeX Store Network with New Launch in Solapur BY - Indian Retailer Bureau Sub Editor May 05, 2026 May 05, 2026 / 1165 / 3 MIN READ Follow Us Hettich has expanded its experiential retail footprint in India with the launch of a new Hettich Exclusive (HeX) store in Solapur, as part of its ongoing network expansion strategy. The HeX format is designed to offer immersive spaces where customers can explore furniture fittings and home solutions through a hands-on experience. The Solapur store features curated walkthroughs of contemporary furniture integrated with advanced fittings, architectural door hardware, furniture lighting, and built-in kitchen appliances. The outlet also offers free design services, enabling customers to work with professional designers to plan and visualise furniture for their homes, supporting a more streamlined design-to-execution process. Rahul Thakkar, Director – Sales, Hettich India said, “Solapur is steadily evolving, with homeowners increasingly embracing modern design and premium living spaces. The demand for high-quality, functional, and well-crafted furniture with innovative fittings is clearly on the rise here. Our new HeX store brings award-winning German innovation closer to customers, offering an immersive space to explore and experience the magic of our thoughtfully designed solutions.” The Solapur store is part of Hettich’s broader plan to expand its HeX store network across India during the year, complementing its existing experience centres. The company continues to focus on solutions that are functional, durable, and aligned with evolving consumer preferences. The new store is located at Mother Modular Kitchens and Interiors, further strengthening Hettich’s presence in regional markets. Hettich Store launch expansion retail india india retail Popular Articles D2C & New Commerce [D2C 100] How Third Wave Coffee is Brewing a New Culture Retail & Business Best Gifting Ideas for Mother’s Day: Thoughtful Picks She
+
+--- Article 458 ---
+URL: https://www.longislandpress.com/2026/05/05/port-book-report-opening/
+Title: Port Washington welcomes new chapter as Book RePort sets opening date
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 13:20:43
+
+Local News Port Washington welcomes new chapter as Book RePort sets opening date By Larissa Fuentes Comments Posted on May 5, 2026 Owners of Book RePort Kathleen Schechter (L.) and Mara Silverstein R.) prepare to open an independent book store. Photo provided by Kathleen Schechter On a quiet stretch of Main Street, where storefronts ebb and flow with the rhythms of small-town life, a new chapter is about to begin, one written not just in ink and paper, but in the shared hopes of a community. Book RePort, an independent bookstore founded by Port Washington residents Mara Silverstein and Kathleen Schechter, will open Friday, May 15, at 40 Main St., bringing books, coffee and a renewed sense of gathering space to the heart of town. The 1,500-square-foot shop arrives after years of anticipation following the closure of a beloved local bookstore that once anchored the community. What started as a series of meetings among residents determined to fill that void grew into a grassroots effort and eventually a business shaped by collective enthusiasm. “Book RePort is more than a bookstore,” Silverstein said. “It’s a space for connection, conversation, and community. We wanted to create a place where people feel welcome to spend time, discover books, and engage with one another.” The store will offer a curated selection of books for all ages, alongside a small café serving coffee and tea, as well as games, stationery and gifts. But its founders say the mission extends beyond retail. Regular programming will include children’s storytime, book clubs, author events and community gatherings. Schechter, a former English teacher with a background in literacy, said engaging young readers is central to that vision. “We want kids to feel just as much ownership of this space as adults,” she said. “Books can be a powerful way to build confidence, curiosity, and connection.” That philosophy inspired the “Book RePorters” program, a youth council for students in grades 3 and up. Participant
+
+--- Article 459 ---
+URL: https://www.msn.com/en-us/travel/news/rain-can-t-stop-the-fun-at-knoebels-100th-opening-day/ar-AA21IPtQ?ocid=BingNewsVerp
+Title: Rain Can’t Stop the Fun at Knoebels’ 100th Opening Day
+Status hint: Closing | Industry: Specialty / Other
+Published: 2026-05-05 12:54:06
+
+MSN
+
+--- Article 460 ---
+URL: https://markets.businessinsider.com/news/stocks/trugolf-links-regional-developer-signs-lease-for-second-location-1036106245
+Title: TRUGOLF LINKS REGIONAL DEVELOPER SIGNS LEASE FOR SECOND LOCATION
+Status hint: Opening | Industry: Specialty / Other
+Published: 2026-05-05 12:52:17
+
+TRUGOLF LINKS REGIONAL DEVELOPER SIGNS LEASE FOR SECOND LOCATION PRESS RELEASE GlobeNewswire May. 5, 2026, 08:30 AM Flagship Location Coming to Farmingdale, New York Featuring “Eatertainment” Experience CENTERVILLE, UTAH, May  05, 2026  (GLOBE NEWSWIRE) -- TruGolf Links today announced a lease signed by Long Island Regional Developer, Gio Dinsay, for 1741 Broadhollow Road in Farmingdale, formerly occupied by the Suffolk County OTB for three decades. The 6,120SF flagship facility is the second signed on Long Island by Gio Dinsay, Regional Developer for TruGolf Links, and it will include an upscale restaurant and full bar component with plans to open this Fall. As retail destinations diversify and work to create more compelling reasons to visit, adding this type of facility/concept is an ideal way to draw more customers on a regular basis to benefit the entire community. A Nasdaq-listed tech and manufacturing company of high-tech golf simulators, TruGolf (Nasdaq:TRUG) has historically sold their tech throughout the United States to end-users. Now, the company is rolling out their own brick and mortar TruGolf Links Center franchised locations with a new, proprietary, best-in-class operating model that offers a high-end entertainment experience for guests, the best indoor golf technology available, and a fresh design. “This location in Farmingdale is a great site, and we are excited to be bringing a flagship TruGolf Links Center there later this year,” said Dr. Ben Litalien, Chief Development Officer for TruGolf. “This facility will be providing an unparalleled golf simulator experience for avid golfers and amateurs as well, and feature our multi-sport arcade and elevated food & beverage experience. It will be an incredible addition to the community.” The new flagship will be positioned in a premium and easily accessible location in Sherwood Plaza on Broadhollow Road and Sherwood Avenue. The new TruGolf Links Center facility includes five premium golf simulators and the

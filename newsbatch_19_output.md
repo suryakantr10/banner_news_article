@@ -1,32 +1,30 @@
 | Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| No qualifying business found | N/A | N/A | N/A | N/A | N/A | https://www.postbulletin.com/business/mcalisters-deli-to-open-its-first-rochester-location-on-may-11 | 2026-05-04 18:21:19 |
-| Nassau Financial | Address not specified | Opening | Not specified | opens its first Suffolk County branch | Nassau Financial opens its first Suffolk County branch. | https://libn.com/2026/05/04/nassau-financial-opens-first-suffolk-county-branch/ | 2026-05-04 18:16:59 |
-| Trader Joe’s | Central Florida | Opening | Not specified | plans for 3 more stores | Trader Joe’s is expanding in Central Florida with plans for 3 more stores. | https://www.msn.com/en-us/news/us/trader-joe-s-is-expanding-in-central-florida-with-plans-for-3-more-stores-here-s-what-we-know/ar-AA21VMrg?ocid=BingNewsVerp&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1 | 2026-05-04 18:11:15 |
-| Bouldering Project | DC USA Mall in Columbia Heights | Opening | Not specified | opening a second location | Bouldering Project has signed a lease to open a second climbing gym in Columbia Heights at DC USA Mall. The new location will offer expansive bouldering terrain, fitness and yoga spaces, youth areas and gathering space. Membership includes access to all gyms. | https://www.popville.com/2026/05/dc-bouldering-project-opening-second-location-columbia-heights/ | 2026-05-04 18:05:22 |
-| Burn Boot Camp Bethesda | 5425 Wisconsin Avenue, Bethesda, Md. | Opening | April 27, 2026 | opening of a new location | Burn Boot Camp opened a new location in Bethesda on April 27 at 5425 Wisconsin Avenue. The gym offers 45-minute camps for all fitness levels with complimentary childwatch. | https://www.prnewswire.com/news-releases/burn-boot-camp-expands-dc-metro-presence-with-new-bethesda-location-302761670.html | 2026-05-04 18:05:00 |
-| No qualifying business found | N/A | N/A | N/A | N/A | N/A | https://www.bizjournals.com/baltimore/news/2026/05/04/natural-market-timonium-closing-juice-bar.html | 2026-05-04 18:03:00 |
-| Carter’s | Address not specified | Closing | Not specified | closing 150 U.S. stores | Carter’s is closing 150 U.S. stores as leases expire. The chain has 21 stores in New Jersey. | https://patch.com/new-jersey/across-nj/major-clothing-retailer-new-jersey-closing-150-u-s-stores | 2026-05-04 17:53:14 |
-| No qualifying business found | N/A | N/A | N/A | N/A | N/A | https://www.msn.com/en-us/foodanddrink/foodnews/line-stretched-down-sunset-road-as-new-bbq-spot-sold-out-before-opening/ar-AA22moYa | 2026-05-04 17:45:43 |
-| Carter's | Miller Hill Mall, Duluth | Opening | this fall | to open | Carter's will open a new location in the Fountain Court at Miller Hill Mall this fall. | https://b105country.com/new-carters-store-duluth-minnesota/ | 2026-05-04 17:41:01 |
-| No qualifying business found | N/A | N/A | N/A | N/A | N/A | https://eastcobbnews.com/cobb-fire-station-12-holds-ribbon-cutting-and-grand-opening/ | 2026-05-04 17:32:20 |
-| No qualifying business found | N/A | N/A | N/A | N/A | N/A | https://www.yogonet.com/international/news/2026/05/04/119423-ballys-chicago-tops-off-permanent-casino-targets-2027-opening | 2026-05-04 17:18:59 |
-| No qualifying business found | N/A | N/A | N/A | N/A | N/A | https://wkzo.com/2026/05/04/opening-day-for-new-chick-fil-a-is-thursday/ | 2026-05-04 17:15:26 |
-| Parker John’s BBQ & Pizza | former 2510 Restaurant space in Wausau | Opening | Not specified | will open | Parker John’s BBQ & Pizza and TENDEEZ Hot Chicken will open in the former 2510 Restaurant space in Wausau. | https://www.wausaudailyherald.com/story/money/2026/05/04/parker-johns-bbq-pizza-and-tendeez-hot-chicken-to-open-at-former-2510-restaurant-in-wausau/89927705007/ | 2026-05-04 17:14:00 |
-| No qualifying business found | N/A | N/A | N/A | N/A | N/A | https://newjersey.news12.com/bus-service-to-replace-metro-north-waterbury-branch-trains-during-station-construction | 2026-05-04 17:11:48 |
-| No qualifying business found | N/A | N/A | N/A | N/A | N/A | https://www.columbiatribune.com/story/lifestyle/food/2026/05/04/downtown-columbia-restaurant-location-changing-hands/89927470007/ | 2026-05-04 16:34:00 |
-| No qualifying business found | N/A | N/A | N/A | N/A | N/A | https://www.msn.com/en-us/news/offbeat/mon-kou-in-attleboro-to-close-for-good-next-month/ar-AA21Aj76?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1 | 2026-05-04 16:32:24 |
-| Granville Woods Lofts | 860 and 910 Rhoads Ave., Columbus | Opening | Not specified | now-open | Granville Woods Lofts affordable housing development is now open with 118 units. Woda Cooper Companies invested $40 million. | https://www.dispatch.com/story/news/local/communities/2026/05/04/columbus-east-side-has-new-community-with-affordable-accessible-housing/89824285007/ | 2026-05-04 16:17:00 |
-| Mid-Cities H-E-B | 2105 Rio Grande Blvd in Euless | Opening | May 20 | will open | H-E-B Mid-Cities will open to customers on May 20 at 6 a.m. at 2105 Rio Grande Blvd in Euless. | https://www.star-telegram.com/news/business/fort-worth/article315627320.html | 2026-05-04 16:02:00 |
-| No qualifying business found | N/A | N/A | N/A | N/A | N/A | https://www.eadt.co.uk/news/26066158.former-felixstowe-argos-store-goes-back-market/ | 2026-05-04 16:00:00 |
-| No qualifying business found | N/A | N/A | N/A | N/A | N/A | https://www.bizjournals.com/milwaukee/news/2026/05/04/costo-franklin-sale-closes-northwestern-mutual.html | 2026-05-04 15:41:00 |
+| Dime Store | Rochester Hills | Closing | Sunday, May 10 | permanent closure; last day of service will be Sunday, May 10 | After operating for two years, the Dime Store's Rochester Hills location will shutter. Last day of service is Sunday, May 10. Detroit location remains open. | https://www.facebook.com/detroitfreepress/posts/after-operating-for-two-years-the-dime-stores-rochester-hills-location-will-shut/1428498479322300/ | 2026-05-06 17:23:19 |
+| Frost Bank | 170 Alliance Blvd., Ste. 100, Hutto | Opening | next month | expected to open in Hutto next month | Frost Bank to open new location in Hutto next month offering banking, investment, insurance, mortgage, notary services and lobby ATM. | https://communityimpact.com/austin/pflugerville-hutto/business/2026/05/06/frost-bank-to-open-new-location-in-hutto/ | 2026-05-06 17:20:00 |
+| Dime Store | Rochester Hills | Closing | Sunday, May 10 | permanent closure; last day of service will be Sunday, May 10 | Dime Store to close Rochester Hills location; Detroit to remain open. Last day Sunday, May 10. | https://www.freep.com/story/entertainment/dining/2026/05/06/rochester-hills-dime-store-restaurant-to-close/89962200007/ | 2026-05-06 17:12:00 |
+| Victoria's Secret | Woodburn Premium Outlets | Opening | summer 2026 | scheduled to open during summer 2026 | Woodburn Premium Outlets adds Victoria's Secret store scheduled to open summer 2026. | https://www.aol.com/news/woodburn-premium-outlets-adds-retail-175652435.html | 2026-05-06 17:05:01 |
+| No qualifying business found | N/A | N/A | N/A | N/A | N/A | https://www.southbmore.com/2026/05/06/seven-retail-businesses-slated-to-open-at-baltimore-peninsula/ | 2026-05-06 16:55:16 |
+| Chipotle | Milton | Opening | Not specified | getting its first Chipotle location | Milton getting its first Chipotle location. | https://www.miltontoday.ca/local-business/milton-getting-its-first-chipotle-location-12238448 | 2026-05-06 16:32:28 |
+| Macy’s | multiple (updated list) | Closing | 2026 | closing more stores in 2026 | Macy’s closing more stores in 2026 with updated list of locations. | https://www.msn.com/en-us/money/companies/macy-s-is-closing-more-stores-in-2026-see-an-updated-list-of-locations-that-will-shutter-soon/ar-AA213chV | 2026-05-06 16:20:22 |
+| Vaguely Reminiscent | 728 Ninth St., Durham | Closing | Not specified (final days) | closing its doors for good | Durham store Vaguely Reminiscent closing after more than 40 years as owner retires. | https://www.aol.com/news/durham-store-closing-more-40-114654646.html | 2026-05-06 16:13:13 |
+| Killer Burger | 1909 Taylor St., Suite A, Houston | Opening | Not specified | to open first Houston location | Killer Burger to open first Houston location. | https://www.restaurantnews.com/killer-burger-houston-texas-opening-strategic-growth-050626/ | 2026-05-06 15:33:24 |
+| DICK’S House of Sport | The Valley, San Diego | Opening | Not specified | to welcome California’s first | The Valley in San Diego to welcome California’s first DICK’S House of Sport location. | https://www.businesswire.com/news/home/20260506741760/en/The-Valley-in-San-Diego-to-Welcome-Californias-First-DICKS-House-of-Sport-Location | 2026-05-06 15:30:00 |
+| New Mediterranean eatery | Grandview | Opening | Not specified | opening in Grandview | New Mediterranean eatery opening in Grandview. | https://614now.com/2026/food-drink/new-mediterranean-eatery-joining-local-food-hall | 2026-05-06 15:29:41 |
+| Al’s Yum Yum | 126 San Jose Blvd, Fruit Cove | Opening | Not specified | opening in Fruit Cove | Al’s Yum Yum opening in Fruit Cove. | https://whatnow.com/jacksonville/restaurants/als-yum-yum-opening-in-fruit-cove/ | 2026-05-06 15:25:58 |
+| The Village | 723 S. Flores St., Southtown, San Antonio | Opening | later this year | plans to open ... later this year | San Antonio native to open women-only members club The Village in Southtown. | https://www.expressnews.com/business/article/san-antonio-members-club-the-village-southtown-22243485.php | 2026-05-06 15:05:16 |
+| Wico Street Beer Co. | Pigtown, Baltimore | Closing | end of May | permanent closure of its taproom | Pigtown Neighborhood Brewery Wico Street Beer Co. announces sudden taproom closure at end of May. | https://whatnow.com/news/local-news/pigtown-neighborhood-brewery-announces-sudden-taproom-closure/ | 2026-05-06 15:24:52 |
+| JD | The Square Shopping Centre, Tallaght | Opening | Thursday, May 7 | opens on Thursday, May 7 | New JD store in Tallaght opening May 7 with vouchers and prizes. | https://www.dublinlive.ie/news/new-jd-store-tallaght-giving-33899678 | 2026-05-06 15:22:14 |
+| Barnes & Noble | 520 Pike Street, downtown Seattle | Opening | Wednesday | to open downtown Seattle store Wednesday | Barnes & Noble to open downtown Seattle store Wednesday. | https://www.king5.com/article/money/business/barnes-and-noble-opens-downtown-seattle-store/281-00eb4cc0-0b74-4330-b8c7-558b2374a750 | 2026-05-06 15:12:00 |
+| No qualifying business found | N/A | N/A | N/A | N/A | N/A | https://www.bizjournals.com/sacramento/news/2026/05/06/5-things-shop-heroic-wholesale-opens-carmichael.html | 2026-05-06 14:39:00 |
 
-Non-working or unusable articles List:
-• Article 361 — could not fetch (403)
-• Article 366 — could not fetch (403)
-• Article 370 — could not fetch (403)
-• Article 371 — could not fetch (503)
-• Article 372 — could not fetch (403)
-• Article 374 — could not fetch (404)
-• Article 375 — could not fetch (406)
-• Article 380 — could not fetch (403)
+**Non-working or unusable articles List:**
+- Article 361 — Could not fetch (403)
+- Article 363 — Could not fetch (403)
+- Article 365 — Could not fetch (403)
+- Article 366 — Limited text (title only)
+- Article 369 — Could not fetch (403)
+- Article 370 — Text missing
+- Article 375 — Road closure (not business)
+- Article 376 — Limited text
+- Article 380 — Could not fetch (403)
