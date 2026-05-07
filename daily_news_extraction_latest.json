@@ -230,6 +230,246 @@
       "short_description": "N/A",
       "article_link": "https://www.heraldtribune.com/story/entertainment/dining/2026/05/06/two-popular-downtown-sarasota-restaurants-open-new-locations-same-day/89946893007/",
       "published_date": "2026-05-06 08:04:00"
+    },
+    {
+      "store_name": "Sells Hotel",
+      "location": "Address not specified",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "hosts grand opening",
+      "short_description": "Sells Hotel hosts grand opening.",
+      "article_link": "https://www.msn.com/en-us/travel/article/looking-back-in-benzie-sells-hotel-hosts-grand-opening/ar-AA2257E5",
+      "published_date": "2026-05-06 07:50:34"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.foxcarolina.com/video/2026/05/06/upstate-cowboy-apparel-store-closing-after-30-years/",
+      "published_date": "2026-05-06 03:29:00"
+    },
+    {
+      "store_name": "Macy's",
+      "location": "Grossmont Center and West Valley Mall in California; Northlake Mall in Georgia; Grandville, Michigan; Saint Cloud, Minnesota; The Mall at Fox Run in New Hampshire; Boulevard Mall in New York; Pittsburgh Mills in Pennsylvania (and others)",
+      "event_type": "Closing",
+      "event_date": "May 2026 (some in March, April 26)",
+      "status": "permanently closing; completed their liquidation sales and ceased operations; shuttered",
+      "short_description": "Macy’s is permanently closing 14 department store locations across the United States in May 2026 as part of \"Bold New Chapter\" restructuring prioritizing digital over physical retail. Major sites include those in CA, GA, MI, MN, NH, NY, PA. Staff offered severance or transfers.",
+      "article_link": "https://www.koranmanado.co.id/en/macys-closes-fourteen-stores-digital-shift",
+      "published_date": "2026-05-06 03:22:19"
+    },
+    {
+      "store_name": "Hershey Inn & Suites",
+      "location": "Dauphin County",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "now open",
+      "short_description": "Hershey Inn & Suites now open in Dauphin County.",
+      "article_link": "https://www.msn.com/en-us/travel/tripideas/hershey-inn-suites-now-open-in-dauphin-county/ar-AA22c0Vc",
+      "published_date": "2026-05-06 03:07:12"
+    },
+    {
+      "store_name": "Doylestown jewelry store",
+      "location": "Doylestown",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "closing as owner retires",
+      "short_description": "Doylestown jewelry store closing as owner retires after 20 years.",
+      "article_link": "https://www.msn.com/en-us/money/companies/doylestown-jewelry-store-closing-as-owner-retires-after-20-years/ar-AA21F3nP",
+      "published_date": "2026-05-05 23:27:15"
+    },
+    {
+      "store_name": "Nazca Lines Restaurant",
+      "location": "3260 N. U.S. Highway 17-92 in Longwood",
+      "event_type": "Opening",
+      "event_date": "next month",
+      "status": "to open next month",
+      "short_description": "The Nazca Lines Restaurant, a Peruvian restaurant built with intention with custom kitchen and heritage menu (lomo saltado, seco a la limeña, ají de gallina), will open in the old Happy Teriyaki space. Executive chef is former Off the Hook chef Santiago Gomero.",
+      "article_link": "https://www.orlandoweekly.com/food-drink/tip-jar/nazca-lines-peruvian-restaurant-to-open-in-longwood-michi-ramen-and-hibachi-tsaocha-now-open-in-colonialtown/",
+      "published_date": "2026-05-05 21:13:02"
+    },
+    {
+      "store_name": "Michi Ramen & Hibachi and Tsaocha",
+      "location": "3863 E. Colonial Drive in Colonialtown",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "has opened",
+      "short_description": "Michi Ramen & Hibachi and Tsaocha (bubble tea, fried chicken, egg waffles) has opened in the old Noodles & Co. space.",
+      "article_link": "https://www.orlandoweekly.com/food-drink/tip-jar/nazca-lines-peruvian-restaurant-to-open-in-longwood-michi-ramen-and-hibachi-tsaocha-now-open-in-colonialtown/",
+      "published_date": "2026-05-05 21:13:02"
+    },
+    {
+      "store_name": "Azal Coffee",
+      "location": "150 Cranes Roost Blvd. in Altamonte Springs",
+      "event_type": "Opening",
+      "event_date": "next month",
+      "status": "will ... next month",
+      "short_description": "Azal Coffee will offer Yemeni, Saudi and Turkish coffees, teas, fruit drinks, desserts and pastries at 150 Cranes Roost Blvd. in Altamonte Springs next month.",
+      "article_link": "https://www.orlandoweekly.com/food-drink/tip-jar/nazca-lines-peruvian-restaurant-to-open-in-longwood-michi-ramen-and-hibachi-tsaocha-now-open-in-colonialtown/",
+      "published_date": "2026-05-05 21:13:02"
+    },
+    {
+      "store_name": "Don Patron Bar Bistro Lounge",
+      "location": "34 E. Main St. in Apopka",
+      "event_type": "Opening",
+      "event_date": "this summer",
+      "status": "to open this summer",
+      "short_description": "Don Patron Bar Bistro Lounge to open in the old Pretty in Pink Tea Room space this summer at 34 E. Main St. in Apopka with wagyu sliders, lobster quesadillas, chimichurri NY strip and live DJs.",
+      "article_link": "https://www.orlandoweekly.com/food-drink/tip-jar/nazca-lines-peruvian-restaurant-to-open-in-longwood-michi-ramen-and-hibachi-tsaocha-now-open-in-colonialtown/",
+      "published_date": "2026-05-05 21:13:02"
+    },
+    {
+      "store_name": "Hooked Fish Camp",
+      "location": "old Hooters building near the Seminole Towne Center in Sanford",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "has opened",
+      "short_description": "Hooked Fish Camp from F&D Restaurant Concepts has opened in the old Hooters building near the Seminole Towne Center in Sanford with Southern-leaning seafood dishes.",
+      "article_link": "https://www.orlandoweekly.com/food-drink/tip-jar/nazca-lines-peruvian-restaurant-to-open-in-longwood-michi-ramen-and-hibachi-tsaocha-now-open-in-colonialtown/",
+      "published_date": "2026-05-05 21:13:02"
+    },
+    {
+      "store_name": "Haven Restaurant",
+      "location": "2208 W Morrison Ave, Hyde Park, South Tampa",
+      "event_type": "Closing",
+      "event_date": "May 21",
+      "status": "will serve its last meal on May 21",
+      "short_description": "Haven in South Tampa will serve its last meal on May 21. Bern’s Steak House Group called it the end of \"a successful and well-loved run.\"",
+      "article_link": "https://925maxima.com/2026/05/05/haven-restaurant-to-close-this-month-new-seafood-concept-peddler-potter-coming-soon/",
+      "published_date": "2026-05-05 19:21:06"
+    },
+    {
+      "store_name": "Peddler + Potter Oyster House",
+      "location": "2208 W Morrison Ave",
+      "event_type": "Opening",
+      "event_date": "fall 2027",
+      "status": "won't open until fall 2027; Coming Soon",
+      "short_description": "Bern's Steak House Group plans to replace with new seafood concept Peddler + Potter Oyster House featuring daily changing seafood menu, raw bar with Florida oysters, open kitchen.",
+      "article_link": "https://925maxima.com/2026/05/05/haven-restaurant-to-close-this-month-new-seafood-concept-peddler-potter-coming-soon/",
+      "published_date": "2026-05-05 19:21:06"
+    },
+    {
+      "store_name": "Butler Food Center",
+      "location": "Butler",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "“is done”; may have closed its doors for good",
+      "short_description": "Butler Food Center “is done” per city official. Store in foreclosure after new owners (post-2023 sale) faced issues; one owner liquidated assets and fled. Sign notes varying hours.",
+      "article_link": "https://www.kpcnews.com/thestar/article_5d0eb403-9860-4a6a-b0f9-4173fc284fce.html",
+      "published_date": "2026-05-05 18:59:00"
+    },
+    {
+      "store_name": "Kitchen + Kocktails",
+      "location": "New York’s Times Square",
+      "event_type": "Opening",
+      "event_date": "this summer",
+      "status": "will open a location ... this summer",
+      "short_description": "Kitchen + Kocktails soul food restaurant (elevated comfort food like shrimp and grits, chicken and waffles) is expanding to New York City’s Times Square this summer. Also expanding to Boston.",
+      "article_link": "https://www.yahoo.com/news/articles/popular-dallas-based-restaurant-expanding-172214125.html",
+      "published_date": "2026-05-05 17:22:14"
+    },
+    {
+      "store_name": "Wingstop",
+      "location": "108 N. Reading Road, Cloister Shopping Center, Ephrata",
+      "event_type": "Opening",
+      "event_date": "May 11",
+      "status": "will open a new location May 11",
+      "short_description": "Wingstop will open its third Lancaster County location May 11 in Ephrata in the former Blair’s Closet space.",
+      "article_link": "https://lancasteronline.com/business/whats_in_store/chicken-wing-chain-wingstop-expanding-to-ephrata-with-third-lancaster-county-restaurant/article_beac03c2-6a6e-4233-9c03-095c10ff1c54.html",
+      "published_date": "2026-05-05 17:15:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.al.com/life/2026/05/popular-alabama-restaurant-known-for-its-unique-comfort-food-opens-new-location.html",
+      "published_date": "2026-05-05 17:11:00"
+    },
+    {
+      "store_name": "Basil Box",
+      "location": "all locations in Canada (including 6 in Ontario)",
+      "event_type": "Closing",
+      "event_date": "Final Day May 14",
+      "status": "closing all locations ... this month",
+      "short_description": "Popular Asian restaurant chain Basil Box is closing all locations in Canada this month (final day May 14), including six in Ontario.",
+      "article_link": "https://www.simcoe.com/news/basil-box-closing-canada-locations-2026/article_62aa6c75-7629-5f35-80a4-6484c621260a.html",
+      "published_date": "2026-05-05 15:32:00"
+    },
+    {
+      "store_name": "PURESEOUL",
+      "location": "SouthGate Bath (circa 2,000 sq ft unit)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "signs for new store",
+      "short_description": "Korean beauty retailer PURESEOUL signed for new store at SouthGate Bath to showcase K-beauty brands (Torriden, Sungboon Editor, etc.) with workshops.",
+      "article_link": "https://benews.co.uk/korean-beauty-retailer-signs-for-new-store-in-bath/",
+      "published_date": "2026-05-05 15:09:02"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://bringmethenews.com/minnesota-lifestyle/burgers-and-comfort-food-restaurant-now-open-at-eagans-viking-lakes",
+      "published_date": "2026-05-05 15:00:53"
+    },
+    {
+      "store_name": "Wild Ocean Sushi and Bar",
+      "location": "Colonial Heights",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "restaurant now open",
+      "short_description": "Wild Ocean Sushi and Bar restaurant now open in Colonial Heights.",
+      "article_link": "https://www.progress-index.com/videos/entertainment/dining/2026/05/05/wild-ocean-sushi-and-bar-colonial-heights-restaurant-all-you-can-eat/89944333007/",
+      "published_date": "2026-05-05 14:47:03"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.msn.com/en-us/money/companies/restaurant-chain-with-3-193-locations-shut-down-after-bankruptcy-filing/ss-AA1ZVfWR",
+      "published_date": "2026-05-05 14:19:41"
+    },
+    {
+      "store_name": "Sheraton Kota Kinabalu Hotel",
+      "location": "Kota Kinabalu",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "official grand opening",
+      "short_description": "Official grand opening of Sheraton Kota Kinabalu Hotel.",
+      "article_link": "https://www.dailyexpress.com.my/watch/FH0aBkmrRlQ/official-grand-opening-of-sheraton-kota-kinabalu-hotel/",
+      "published_date": "2026-05-05 12:23:09"
+    },
+    {
+      "store_name": "Fajitas Mexican restaurant",
+      "location": "new location",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "opens in a new location",
+      "short_description": "Fajitas Mexican restaurant opens in a new location.",
+      "article_link": "https://www.walls102.com/2026/05/05/fajitas-mexican-restaurant-opens-in-a-new-location-6/",
+      "published_date": "2026-05-05 12:21:13"
+    },
+    {
+      "store_name": "New pediatric behavioral health hospital",
+      "location": "Taylorsville",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "open for business",
+      "short_description": "New pediatric behavioral health hospital open for business in Taylorsville.",
+      "article_link": "https://kutv.com/features/pay-it-forward/new-pediatric-behavioral-health-hospital-open-for-business-in-taylorsville",
+      "published_date": "2026-05-07 04:35:26"
     }
   ]
 }
