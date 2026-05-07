@@ -572,6 +572,29 @@
                             <div id="mgmtActivityFeed" class="divide-y divide-white/5 overflow-y-auto" style="max-height:420px;"></div>
                         </div>
                     </div>
+
+                    <!-- Daily Completions -->
+                    <div class="glass rounded-2xl overflow-hidden mt-6">
+                        <div class="px-4 py-3 border-b border-white/5 flex flex-wrap items-center gap-3 justify-between">
+                            <h3 class="text-sm font-semibold text-gray-200"><i class="fas fa-calendar-days mr-2 text-green-400"></i>Daily Completions</h3>
+                            <div class="flex items-center gap-2 flex-wrap">
+                                <input type="date" id="mgmtDateFrom" class="input-field text-xs px-3 py-1.5 rounded-lg" oninput="applyMgmtDateFilter()">
+                                <span class="text-gray-500 text-xs">to</span>
+                                <input type="date" id="mgmtDateTo" class="input-field text-xs px-3 py-1.5 rounded-lg" oninput="applyMgmtDateFilter()">
+                                <button onclick="clearMgmtDateFilter()" class="text-xs text-gray-500 hover:text-gray-300 transition-colors px-2 py-1 rounded border border-white/10">Clear</button>
+                            </div>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm text-gray-300">
+                                <thead id="mgmtDailyHead" class="text-xs text-gray-500 uppercase"></thead>
+                                <tbody id="mgmtDailyBody"></tbody>
+                            </table>
+                        </div>
+                        <div class="px-4 py-2 border-t border-white/5 text-xs text-gray-500 flex justify-between">
+                            <span>Showing <span id="mgmtDailyRowCount" class="text-gray-300 font-semibold">0</span> day(s)</span>
+                            <span id="mgmtDailyTotalLabel"></span>
+                        </div>
+                    </div>
                 </div>
             </div><!-- /storeManagementSubTab -->
 
@@ -3162,8 +3185,82 @@
         }).join('') || '<div class="px-4 py-8 text-center text-gray-500 text-sm">No activity recorded yet</div>';
 
         document.getElementById('mgmtLastRefresh').textContent = 'Updated ' + new Date().toLocaleTimeString();
+
+        // Daily completions
+        _mgmtMarks = marks;
+        renderMgmtDailyTable();
+
         document.getElementById('mgmtLoadingState').classList.add('hidden');
         document.getElementById('mgmtContent').classList.remove('hidden');
+    }
+
+    let _mgmtMarks = [];
+
+    function renderMgmtDailyTable() {
+        const fromVal = document.getElementById('mgmtDateFrom').value;  // 'YYYY-MM-DD' or ''
+        const toVal   = document.getElementById('mgmtDateTo').value;
+
+        // Build articlesByKey for analyst lookup
+        const articlesByKey = {};
+        for (const a of historicalArticles) articlesByKey['done-' + a.Link] = a;
+
+        // Filter done marks with a date, apply optional range filter
+        const rows = _mgmtMarks.filter(m => {
+            if (!m.is_done || !m.marked_at) return false;
+            const d = m.marked_at.slice(0, 10);
+            if (fromVal && d < fromVal) return false;
+            if (toVal   && d > toVal)   return false;
+            return true;
+        });
+
+        // Build pivot: dateMap[date][analyst] = count
+        const dateMap = {};
+        const analystSet = new Set();
+        for (const m of rows) {
+            const date    = m.marked_at.slice(0, 10);
+            const art     = articlesByKey[m.article_key];
+            const analyst = art ? (art.Analyst || 'Unknown') : 'Unknown';
+            analystSet.add(analyst);
+            if (!dateMap[date]) dateMap[date] = {};
+            dateMap[date][analyst] = (dateMap[date][analyst] || 0) + 1;
+        }
+
+        const analysts = [...analystSet].sort();
+        const dates    = Object.keys(dateMap).sort((a, b) => b.localeCompare(a)); // newest first
+
+        // Header
+        document.getElementById('mgmtDailyHead').innerHTML = `
+            <tr class="border-b border-white/5">
+                <th class="px-4 py-3 text-left sticky left-0 bg-gray-900/80">Date</th>
+                ${analysts.map(a => `<th class="px-4 py-3 text-center">${a}</th>`).join('')}
+                <th class="px-4 py-3 text-center text-gray-300">Total</th>
+            </tr>`;
+
+        // Body
+        let grandTotal = 0;
+        document.getElementById('mgmtDailyBody').innerHTML = dates.map(date => {
+            const dayTotal = analysts.reduce((s, a) => s + (dateMap[date][a] || 0), 0);
+            grandTotal += dayTotal;
+            return `<tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                <td class="px-4 py-3 font-medium text-gray-200 sticky left-0 bg-transparent whitespace-nowrap">${date}</td>
+                ${analysts.map(a => {
+                    const count = dateMap[date][a] || 0;
+                    return `<td class="px-4 py-3 text-center ${count > 0 ? 'text-green-400 font-semibold' : 'text-gray-600'}">${count > 0 ? count : '—'}</td>`;
+                }).join('')}
+                <td class="px-4 py-3 text-center font-bold text-blue-400">${dayTotal}</td>
+            </tr>`;
+        }).join('') || `<tr><td colspan="${analysts.length + 2}" class="px-4 py-8 text-center text-gray-500">No completions in selected range</td></tr>`;
+
+        document.getElementById('mgmtDailyRowCount').textContent = dates.length;
+        document.getElementById('mgmtDailyTotalLabel').textContent = grandTotal > 0 ? `Total completed: ${grandTotal}` : '';
+    }
+
+    function applyMgmtDateFilter() { renderMgmtDailyTable(); }
+
+    function clearMgmtDateFilter() {
+        document.getElementById('mgmtDateFrom').value = '';
+        document.getElementById('mgmtDateTo').value   = '';
+        renderMgmtDailyTable();
     }
 
     // ── Auth guard ───────────────────────────────────────────────────────────
