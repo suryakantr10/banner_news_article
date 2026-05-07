@@ -542,35 +542,34 @@
                 </div>
                 <div id="mgmtContent" class="hidden">
                     <div id="mgmtStatsRow" class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6"></div>
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                        <!-- Analyst Breakdown -->
-                        <div class="glass rounded-2xl overflow-hidden">
-                            <div class="px-4 py-3 border-b border-white/5 flex items-center justify-between">
-                                <h3 class="text-sm font-semibold text-gray-200"><i class="fas fa-users mr-2 text-blue-400"></i>Analyst Breakdown</h3>
-                                <span id="mgmtLastRefresh" class="text-xs text-gray-500"></span>
-                            </div>
-                            <div class="overflow-x-auto">
-                                <table class="w-full text-sm text-gray-300">
-                                    <thead class="text-xs text-gray-500 uppercase bg-white/3">
-                                        <tr class="border-b border-white/5">
-                                            <th class="px-4 py-3 text-left">Analyst</th>
-                                            <th class="px-4 py-3 text-center">Assigned</th>
-                                            <th class="px-4 py-3 text-center">Done</th>
-                                            <th class="px-4 py-3 text-center">Pending</th>
-                                            <th class="px-4 py-3 text-center">Progress</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="mgmtAnalystBody"></tbody>
-                                </table>
-                            </div>
+                    <!-- Analyst Breakdown (full width) -->
+                    <div class="glass rounded-2xl overflow-hidden mb-6">
+                        <div class="px-4 py-3 border-b border-white/5 flex items-center justify-between">
+                            <h3 class="text-sm font-semibold text-gray-200"><i class="fas fa-users mr-2 text-blue-400"></i>Analyst Breakdown</h3>
+                            <span id="mgmtLastRefresh" class="text-xs text-gray-500"></span>
                         </div>
-                        <!-- Activity Feed -->
-                        <div class="glass rounded-2xl overflow-hidden">
-                            <div class="px-4 py-3 border-b border-white/5">
-                                <h3 class="text-sm font-semibold text-gray-200"><i class="fas fa-bolt mr-2 text-yellow-400"></i>Recent Activity</h3>
-                            </div>
-                            <div id="mgmtActivityFeed" class="divide-y divide-white/5 overflow-y-auto" style="max-height:420px;"></div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm text-gray-300">
+                                <thead class="text-xs text-gray-500 uppercase bg-white/3">
+                                    <tr class="border-b border-white/5">
+                                        <th class="px-4 py-3 text-left">Analyst</th>
+                                        <th class="px-4 py-3 text-center">Assigned</th>
+                                        <th class="px-4 py-3 text-center">Done</th>
+                                        <th class="px-4 py-3 text-center">Pending</th>
+                                        <th class="px-4 py-3 text-center">Progress</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="mgmtAnalystBody"></tbody>
+                            </table>
                         </div>
+                    </div>
+
+                    <!-- Activity Feed (full width) -->
+                    <div class="glass rounded-2xl overflow-hidden mb-6">
+                        <div class="px-4 py-3 border-b border-white/5">
+                            <h3 class="text-sm font-semibold text-gray-200"><i class="fas fa-bolt mr-2 text-yellow-400"></i>Recent Activity</h3>
+                        </div>
+                        <div id="mgmtActivityFeed" class="divide-y divide-white/5 overflow-y-auto" style="max-height:360px;"></div>
                     </div>
 
                     <!-- Daily Completions -->
