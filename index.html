@@ -1537,7 +1537,7 @@
         empty.classList.add('hidden');
         document.getElementById('histStatsContainer').style.display = 'none';
         try {
-            const res = await fetch('data/store_news/banner_news_master.csv?t=' + Date.now());
+            const res = await fetch('master_file/banner_news_master.csv?t=' + Date.now());
             if (!res.ok) throw new Error('fetch failed');
             const text = await res.text();
             historicalArticles = parseSimpleCSV(text);
