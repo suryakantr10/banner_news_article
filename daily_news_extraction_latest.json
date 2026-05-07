@@ -5010,6 +5010,636 @@
       "short_description": "Popular steakhouse RED the Steakhouse to add new location in Woodmere.",
       "article_link": "https://www.the-sun.com/money/16322421/red-the-steakhouse-new-restaurant-opening-ohio/",
       "published_date": "2026-05-06 19:48:40"
+    },
+    {
+      "store_name": "Skyline Chili",
+      "location": "6945 South Liberty Drive, Liberty Township, OH",
+      "event_type": "Opening",
+      "event_date": "2027",
+      "status": "broke ground; projects the new restaurant to open in 2027",
+      "short_description": "Skyline Chili broke ground on a new location at 6945 South Liberty Drive in Liberty Township, Butler County, on May 5, 2026. The new restaurant will seat approximately 100 guests and include a drive-thru; the site previously housed a First Financial Bank branch.",
+      "article_link": "https://www.yahoo.com/news/articles/skyline-breaks-ground-liberty-twp-201455350.html",
+      "published_date": "2026-05-05 20:14:55"
+    },
+    {
+      "store_name": "Shake Shack",
+      "location": "1600 Village Market Place, Morrisville, NC (Park West Village)",
+      "event_type": "Opening",
+      "event_date": "May 13, 2026",
+      "status": "open to the public starting May 13",
+      "short_description": "Shake Shack is opening at Park West Village in Morrisville, with a preview event on May 12 and a public grand opening on May 13, 2026 at 10 a.m. The first guests on opening day will receive custom totes and North Carolina-themed tumbler cups, and the chain will donate $1 per sandwich sold to Neighbor Up.",
+      "article_link": "https://www.newsobserver.com/living/food-drink/article315641787.html",
+      "published_date": "2026-05-05 20:06:12"
+    },
+    {
+      "store_name": "Goodwill (Tyrone)",
+      "location": "Tyrone, PA (street address not specified)",
+      "event_type": "Closing",
+      "event_date": "May 30, 2026",
+      "status": "close the Tyrone store, effective May 30",
+      "short_description": "Goodwill of the Southern Alleghenies is closing its Tyrone location effective May 30, 2026, citing rising fuel and logistics costs. All four staff members have been offered continued employment at nearby Huntingdon and Altoona locations; discounts will be offered through May to clear inventory.",
+      "article_link": "https://www.aol.com/news/goodwill-store-blair-county-closing-191027994.html",
+      "published_date": "2026-05-05 19:54:41"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.nny360.com/top_stories/potsdam-specialty-paper-bought-by-twin-rivers-will-keep-mill-open/article_1ac79be6-45b7-5700-8217-6f54d85897f4.html",
+      "published_date": "2026-05-05 19:52:42"
+    },
+    {
+      "store_name": "A&W Restaurant (River Hills Mall, Mankato)",
+      "location": "River Hills Mall, Mankato, MN (street address not specified)",
+      "event_type": "Closing",
+      "event_date": "April 29, 2026",
+      "status": "closed",
+      "short_description": "The A&W franchise location in River Hills Mall in Mankato closed on April 29, 2026 due to financial distress, as announced by the franchisee on Facebook. The restaurant had opened in late 2018.",
+      "article_link": "https://sg.finance.yahoo.com/news/107-old-beloved-burger-chain-192759062.html",
+      "published_date": "2026-05-05 19:27:59"
+    },
+    {
+      "store_name": "A&W Restaurant (Pocatello)",
+      "location": "1335 N. Arthur Ave., Pocatello, ID",
+      "event_type": "Closing",
+      "event_date": "April 2, 2026",
+      "status": "permanently closed",
+      "short_description": "The A&W franchise location at 1335 N. Arthur Ave. in Pocatello permanently closed on April 2, 2026 after the franchisee was struggling financially and had its franchise contract pulled by A&W corporation. No further details on the closure reason were provided.",
+      "article_link": "https://sg.finance.yahoo.com/news/107-old-beloved-burger-chain-192759062.html",
+      "published_date": "2026-05-05 19:27:59"
+    },
+    {
+      "store_name": "Hero Doughnuts (Homewood)",
+      "location": "Homewood, AL (street address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "apparently reopening",
+      "short_description": "Hero Doughnuts founder Wil Drake has posted a note on the Homewood location's door indicating the restaurant is coming back, days after the Pihakis Restaurant Group closed all their Hero Diner, Rodney Scott BBQ, Little Donkey, and Luca Lagatto locations. Hero is the third PRG restaurant to reopen in Homewood under new ownership by former founders and local investors.",
+      "article_link": "https://bhamnow.com/2026/05/05/hero-doughnuts-founder-apparently-reopening-homewood-location/",
+      "published_date": "2026-05-05 19:26:54"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://wgno.com/news/business/in%E2%80%91n%E2%80%91out-burger-opening-5-new-locations-in-5-states/",
+      "published_date": "2026-05-05 19:22:23"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.mlive.com/business/2026/05/beloved-sandwich-chain-saw-at-least-729-locations-close-in-2025.html",
+      "published_date": "2026-05-05 19:20:00"
+    },
+    {
+      "store_name": "Eldorado Cafe",
+      "location": "3300 W. Anderson Lane, Suite 303, Austin, TX 78757 (expanding into Suite 301)",
+      "event_type": "Opening",
+      "event_date": "Construction June 2026 – Spring 2027",
+      "status": "construction slated to begin in June and be completed in spring 2027",
+      "short_description": "Eldorado Cafe at 3300 W. Anderson Lane is expanding by taking over the adjacent 4,400-square-foot Suite 301 space, doubling its size and increasing seating from 80 to 150. Construction is slated to begin in June 2026 and be completed in spring 2027 per a Texas Department of Licensing and Regulation filing.",
+      "article_link": "https://whatnow.com/austin/restaurants/eldorado-cafe-expanding-planning-renovations/",
+      "published_date": "2026-05-05 19:18:17"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.msn.com/en-us/money/economy/sign-of-the-times-costco-is-opening-standalone-gas-stations/ar-AA1Z7lHl",
+      "published_date": "2026-05-05 19:13:42"
+    },
+    {
+      "store_name": "Publix Super Market (Cold Spring)",
+      "location": "5401 Alexandria Pike, Cold Spring, KY",
+      "event_type": "Opening",
+      "event_date": "June 17, 2026",
+      "status": "grand opening on June 17 at 7 a.m.",
+      "short_description": "Publix Super Market at Cold Spring Pointe will open its doors at 7 a.m. on June 17, 2026, in a 48,387-square-foot store at 5401 Alexandria Pike. This is the second of five Publix supermarkets planned for the Northern Kentucky area.",
+      "article_link": "https://www.aol.com/articles/publix-announces-opening-date-nky-183552593.html",
+      "published_date": "2026-05-05 19:11:39"
+    },
+    {
+      "store_name": "Mendocino Farms (Scottsdale — The Promenade)",
+      "location": "16203 N. Scottsdale Rd., Ste 100, Scottsdale, AZ",
+      "event_type": "Opening",
+      "event_date": "June 2, 2026",
+      "status": "set to open at 10:30 a.m. on June 2",
+      "short_description": "Mendocino Farms is opening its second Scottsdale location at 16203 N. Scottsdale Rd., Ste 100 at The Promenade on June 2, 2026 at 10:30 a.m. The California-based fast-casual restaurant is known for its sandwiches and salads and will be open daily from 10:30 a.m. to 9 p.m.",
+      "article_link": "https://www.abc15.com/entertainment/events/mendocino-farms-to-debut-new-scottsdale-location-this-summer-and-expand-to-phoenix",
+      "published_date": "2026-05-05 19:01:00"
+    },
+    {
+      "store_name": "Mendocino Farms (Phoenix — Arcadia)",
+      "location": "Near 44th Street and Indian School Road, Phoenix, AZ (street address not specified)",
+      "event_type": "Opening",
+      "event_date": "Summer 2026",
+      "status": "opening this summer",
+      "short_description": "Mendocino Farms is opening a third Valley location this summer in Phoenix's Arcadia neighborhood, near 44th Street and Indian School Road. No specific opening date was provided in the article.",
+      "article_link": "https://www.abc15.com/entertainment/events/mendocino-farms-to-debut-new-scottsdale-location-this-summer-and-expand-to-phoenix",
+      "published_date": "2026-05-05 19:01:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://johnsoncountypost.com/2026/05/05/ulta-beauty-shawnee-overland-park-285733/",
+      "published_date": "2026-05-05 19:00:48"
+    },
+    {
+      "store_name": "Necoa (Domain Northside pop-up)",
+      "location": "Domain Northside, Austin, TX (street address not specified)",
+      "event_type": "Opening",
+      "event_date": "Early March 2026 (through May 31, 2026)",
+      "status": "pop-up showroom launched in early March",
+      "short_description": "Necoa, a Korean water purification brand, launched a mobile pop-up showroom at Domain Northside in early March 2026, available through May 31. The brand also opened a permanent showroom at Barton Creek Square.",
+      "article_link": "https://communityimpact.com/austin/lake-travis-westlake/business/2026/05/05/korean-water-purification-brand-necoa-debuts-2-austin-locations/",
+      "published_date": "2026-05-05 18:56:00"
+    },
+    {
+      "store_name": "Necoa (Barton Creek Square)",
+      "location": "Barton Creek Square shopping center, Austin, TX (street address not specified)",
+      "event_type": "Opening",
+      "event_date": "April 11, 2026",
+      "status": "officially opened",
+      "short_description": "Necoa opened its second-largest Texas hub at Barton Creek Square shopping center on April 11, 2026. The brand offers smart water purifiers and faucets with built-in filters.",
+      "article_link": "https://communityimpact.com/austin/lake-travis-westlake/business/2026/05/05/korean-water-purification-brand-necoa-debuts-2-austin-locations/",
+      "published_date": "2026-05-05 18:56:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.bizjournals.com/cincinnati/news/2026/05/05/when-publix-open-cold-spring-grocery-store-date.html",
+      "published_date": "2026-05-05 18:33:00"
+    },
+    {
+      "store_name": "Mike's Pizza Garage and Bar",
+      "location": "Next to Stone Lake Beach and The Twirl restaurant, Cassopolis, MI (street address not specified)",
+      "event_type": "Opening",
+      "event_date": "Early June 2026",
+      "status": "plans to open the doors in early June",
+      "short_description": "Mike Vite, owner of The Twirl restaurant, is opening Mike's Pizza Garage and Bar next door to Stone Lake Beach in Cassopolis, with plans to open in early June. The new restaurant will be built from shipping containers and will feature a full menu including pizza, sandwiches, and a full bar with upper and lower decks overlooking the beach and amphitheater.",
+      "article_link": "https://www.heraldpalladium.com/leaderpub/communities/cassopolis/the-twirl-owner-to-open-pizza-parlor-bar-on-cassopolis-beachfront/article_0eef6c6b-17e6-57d9-8a08-7f1fdfab6f2f.html",
+      "published_date": "2026-05-05 18:30:00"
+    },
+    {
+      "store_name": "Trader Joe's (Mansfield)",
+      "location": "3020 Matlock Road, Mansfield, TX",
+      "event_type": "Opening",
+      "event_date": "Construction expected to complete March 2027",
+      "status": "construction is expected to be completed in March 2027",
+      "short_description": "Trader Joe's confirmed plans to open a new Tarrant County location in Mansfield, TX at 3020 Matlock Road, per a Texas Department of Licensing and Regulation filing. No specific opening date or timeline was confirmed by the retailer; construction is expected to complete by March 2027.",
+      "article_link": "https://www.wfaa.com/article/money/trader-joes-mansfield-tarrant-county-new-store-opening/287-23ce0d36-c811-4f64-bc39-ce748dde9eb1",
+      "published_date": "2026-05-05 18:24:00"
+    },
+    {
+      "store_name": "Publix Super Market (Cold Spring)",
+      "location": "5401 Alexandria Pike, Cold Spring, KY",
+      "event_type": "Opening",
+      "event_date": "June 17, 2026",
+      "status": "grand opening on June 17 at 7 a.m.",
+      "short_description": "The second Publix in the Northern Kentucky area will hold its grand opening at 5401 Alexandria Pike on June 17, 2026 at 7 a.m., in a 48,387-square-foot store creating 140 jobs. The location will also include a Publix Liquors.",
+      "article_link": "https://www.wlwt.com/article/publix-northern-kentucky-opening-date-cold-spring/71220829",
+      "published_date": "2026-05-05 18:12:00"
+    },
+    {
+      "store_name": "TJ Maxx (Kent, WA)",
+      "location": "Canyon Ridge Plaza, Kent, WA (street address not specified; approximately 20 miles south of Seattle)",
+      "event_type": "Opening",
+      "event_date": "May 14, 2026",
+      "status": "grand opening on May 14",
+      "short_description": "TJ Maxx is relocating about half a mile to Canyon Ridge Plaza in Kent, Washington, with a 25,383-square-foot grand opening on May 14, 2026 from 8 a.m. to 10 p.m. The store will be situated next to the new Burlington (opening May 8) at the former TOP Food and Drug store location, and will donate $10,000 to Habitat for Humanity Seattle-King County.",
+      "article_link": "https://www.the-sun.com/money/16317700/tj-maxx-new-store-open-kent-washington/",
+      "published_date": "2026-05-05 17:23:02"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.msn.com/en-us/money/companies/macy-s-permanently-closing-14-stores-despite-strong-holiday-sales/ar-AA22qYGO",
+      "published_date": "2026-05-05 17:09:20"
+    },
+    {
+      "store_name": "Harbor Freight",
+      "location": "Willow Knolls Shopping Center, Peoria, IL (street address not specified)",
+      "event_type": "Opening",
+      "event_date": "Summer 2026",
+      "status": "opening this summer",
+      "short_description": "Harbor Freight is opening at the Willow Knolls Shopping Center in Peoria this summer, according to the company. The new store is expected to create 10 to 15 new jobs.",
+      "article_link": "https://www.aol.com/news/national-tool-store-opening-peoria-145106144.html",
+      "published_date": "2026-05-05 16:55:58"
+    },
+    {
+      "store_name": "Tilted Kilt",
+      "location": "1030 S. Broadway, Lexington, KY",
+      "event_type": "Closing",
+      "event_date": "May 16, 2026",
+      "status": "closing after seven years; last day of service will be May 16",
+      "short_description": "Tilted Kilt, a British-themed sports bar, is closing on May 16, 2026 after seven years in operation, with the owner planning to change direction and introduce a new concept at the same space later this year. The Lexington franchise is one of only six remaining Tilted Kilt locations nationwide.",
+      "article_link": "https://www.kentucky.com/lexgoeat/restaurants/article315640365.html",
+      "published_date": "2026-05-05 16:46:22"
+    },
+    {
+      "store_name": "Burlington (Oshkosh)",
+      "location": "1226 S. Koeller St., Oshkosh, WI",
+      "event_type": "Opening",
+      "event_date": "May 15, 2026",
+      "status": "opens May 15",
+      "short_description": "Burlington will open its new Oshkosh location on May 15, 2026 at 1226 S. Koeller St., taking the space previously vacated by Joann between T.J. Maxx and Shopko Optical. The new store features a reimagined layout with wider aisles and bold signage.",
+      "article_link": "https://www.thenorthwestern.com/story/money/companies/2026/05/05/burlington-oshkosh-store-opening-date-may-15-koeller-street/89946074007/",
+      "published_date": "2026-05-05 16:40:00"
+    },
+    {
+      "store_name": "Bamburger",
+      "location": "15260 Hwy. 105 W., Ste. 136, Montgomery, TX",
+      "event_type": "Opening",
+      "event_date": "April 8, 2026",
+      "status": "opened April 8",
+      "short_description": "A new Bamburger location opened on April 8, 2026 at 15260 Hwy. 105 W., Ste. 136 in Montgomery, serving smashburgers, fries cooked in beef tallow, and hand-spun milkshakes. Owner Juan Pablo confirmed the opening.",
+      "article_link": "https://communityimpact.com/houston/conroe-montgomery/dining/2026/05/05/bamburger-opens-new-location-along-hwy-105-in-montgomery/",
+      "published_date": "2026-05-05 16:37:00"
+    },
+    {
+      "store_name": "Manyavar",
+      "location": "15205 Ronald Reagan Blvd #700, Leander, TX 78641",
+      "event_type": "Opening",
+      "event_date": "July–November 2026 (construction window)",
+      "status": "slated for construction from July to November",
+      "short_description": "Manyavar, an international Indian apparel brand, is bringing a 3,050-square-foot location to Leander per a Texas Department of Licensing and Regulation filing. Construction is slated from July to November 2026.",
+      "article_link": "https://whatnow.com/austin/retail/international-apparel-brand-manyavar-expanding-to-leander/",
+      "published_date": "2026-05-05 16:34:22"
+    },
+    {
+      "store_name": "Little Caesars (Dearborn Heights self-checkout)",
+      "location": "Dearborn Heights, MI (street address not specified)",
+      "event_type": "Opening",
+      "event_date": "Sunday, May 4, 2026 (ribbon cutting at 12 p.m.)",
+      "status": "opened on Sunday",
+      "short_description": "Little Caesars opened its second self-service restaurant in the US in Dearborn Heights, Michigan, featuring mobile app ordering, Hot-N-Ready stations, and self-checkout kiosks. The first self-service location of this type opened in October in Rockford, Illinois.",
+      "article_link": "https://www.the-sun.com/money/16317130/little-caesars-opens-second-self-checkout-location-michigan/",
+      "published_date": "2026-05-05 16:23:03"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.yorkpress.co.uk/news/26080544.m-s-denies-closure-rumours-scarborough-town-centre-store/",
+      "published_date": "2026-05-05 16:11:47"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.bizjournals.com/orlando/news/2026/05/05/cosa-nostra-italian-deli-winter-garden-plant-st.html",
+      "published_date": "2026-05-05 15:45:00"
+    },
+    {
+      "store_name": "Bed Bath & Beyond (inside The Container Store — Chicago)",
+      "location": "908 West North Ave., Chicago, IL",
+      "event_type": "Opening",
+      "event_date": "May 2026",
+      "status": "expected to transition beginning in May",
+      "short_description": "The Container Store is launching a \"store changing\" event to return Bed Bath & Beyond branding and products to 98 locations nationwide, including four in Illinois. Beginning in May, these locations will transition to a Container Store + Bed Bath & Beyond format combining organizing solutions with expanded home assortment.",
+      "article_link": "https://patch.com/illinois/northbrook/familiar-national-retail-name-makes-comeback-4-new-il-stores",
+      "published_date": "2026-05-05 15:09:31"
+    },
+    {
+      "store_name": "Bed Bath & Beyond (inside The Container Store — Northbrook)",
+      "location": "101 Skokie Blvd., Northbrook, IL",
+      "event_type": "Opening",
+      "event_date": "May 2026",
+      "status": "expected to transition beginning in May",
+      "short_description": "The Container Store is launching a \"store changing\" event to return Bed Bath & Beyond branding and products to 98 locations nationwide, including four in Illinois. Beginning in May, these locations will transition to a Container Store + Bed Bath & Beyond format.",
+      "article_link": "https://patch.com/illinois/northbrook/familiar-national-retail-name-makes-comeback-4-new-il-stores",
+      "published_date": "2026-05-05 15:09:31"
+    },
+    {
+      "store_name": "Bed Bath & Beyond (inside The Container Store — Oak Brook)",
+      "location": "610 Oakbrook Center, Oak Brook, IL",
+      "event_type": "Opening",
+      "event_date": "May 2026",
+      "status": "expected to transition beginning in May",
+      "short_description": "The Container Store is launching a \"store changing\" event to return Bed Bath & Beyond branding and products to 98 locations nationwide, including four in Illinois. Beginning in May, these locations will transition to a Container Store + Bed Bath & Beyond format.",
+      "article_link": "https://patch.com/illinois/northbrook/familiar-national-retail-name-makes-comeback-4-new-il-stores",
+      "published_date": "2026-05-05 15:09:31"
+    },
+    {
+      "store_name": "Bed Bath & Beyond (inside The Container Store — Schaumburg)",
+      "location": "1460 East Golf Road, Schaumburg, IL",
+      "event_type": "Opening",
+      "event_date": "May 2026",
+      "status": "expected to transition beginning in May",
+      "short_description": "The Container Store is launching a \"store changing\" event to return Bed Bath & Beyond branding and products to 98 locations nationwide, including four in Illinois. Beginning in May, these locations will transition to a Container Store + Bed Bath & Beyond format.",
+      "article_link": "https://patch.com/illinois/northbrook/familiar-national-retail-name-makes-comeback-4-new-il-stores",
+      "published_date": "2026-05-05 15:09:31"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "http://www.msn.com/en-us/foodanddrink/foodnews/beloved-west-babylon-waterfront-spot-south-swell-shutting-down-for-season/ar-AA220Uhc",
+      "published_date": "2026-05-05 14:58:41"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.msn.com/en-us/travel/tips/spirit-airlines-has-shut-down-what-now/ar-AA22pa4x",
+      "published_date": "2026-05-05 14:34:40"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.edp24.co.uk/news/26078990.a140-closed-resurfacing-hempnall-long-stratton/",
+      "published_date": "2026-05-05 14:28:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.boutiquehotelier.com/corsham-house-beckford-group-opening-news/",
+      "published_date": "2026-05-05 14:14:43"
+    },
+    {
+      "store_name": "Sweethaven",
+      "location": "CityPark development on Franklin Road, Brentwood, TN (next to Taziki's; street address not specified)",
+      "event_type": "Opening",
+      "event_date": "June 2026",
+      "status": "coming June 2026",
+      "short_description": "Sweethaven, a locally owned ice cream shop, will open its third location in the CityPark development on Franklin Road in Brentwood in June 2026. No exact opening date has been provided; the brand's first location opened in Franklin in 2020 and the second in 2022.",
+      "article_link": "https://williamsonsource.com/ice-cream-shop-sweethaven-to-open-in-brentwood/",
+      "published_date": "2026-05-05 14:00:02"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.cstoredive.com/news/3-retailers-expanding-their-car-wash-empires/817581/",
+      "published_date": "2026-05-05 13:46:32"
+    },
+    {
+      "store_name": "Dave & Buster's (Jack London Square)",
+      "location": "Jack London Square, Oakland, CA (street address not specified)",
+      "event_type": "Opening",
+      "event_date": "May 4, 2026",
+      "status": "opened on Monday",
+      "short_description": "Dave & Buster's opened its newest location at Jack London Square in Oakland on Monday, May 4, 2026, with a ribbon-cutting ceremony and free unlimited video game play for the first 100 guests. The new location hired 155 employees.",
+      "article_link": "https://abc7news.com/post/dave-busters-opens-newest-location-jack-london-square-bringing-jobs-new-life-oaklands-waterfront/19038173/",
+      "published_date": "2026-05-05 13:40:49"
+    },
+    {
+      "store_name": "Hettich HeX Store (Solapur)",
+      "location": "Mother Modular Kitchens and Interiors, Solapur, India (street address not specified)",
+      "event_type": "Opening",
+      "event_date": "Not specified (article published May 5, 2026)",
+      "status": "launched / new launch",
+      "short_description": "Hettich has opened a new Hettich Exclusive (HeX) store in Solapur, India, located at Mother Modular Kitchens and Interiors, as part of its broader expansion across India. The store offers immersive walkthroughs of furniture fittings, architectural door hardware, furniture lighting, built-in kitchen appliances, and free design services.",
+      "article_link": "https://www.indianretailer.com/news/hettich-expands-hex-store-network-new-launch-solapur",
+      "published_date": "2026-05-05 13:28:43"
+    },
+    {
+      "store_name": "Book RePort",
+      "location": "40 Main St., Port Washington, NY",
+      "event_type": "Opening",
+      "event_date": "May 15, 2026",
+      "status": "will open Friday, May 15",
+      "short_description": "Book RePort, an independent bookstore founded by Port Washington residents Mara Silverstein and Kathleen Schechter, will open on May 15, 2026 at 40 Main St. The 1,500-square-foot shop will offer curated books, a small café serving coffee and tea, games, stationery, gifts, and regular community programming.",
+      "article_link": "https://www.longislandpress.com/2026/05/05/port-book-report-opening/",
+      "published_date": "2026-05-05 13:20:43"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.msn.com/en-us/travel/news/rain-can-t-stop-the-fun-at-knoebels-100th-opening-day/ar-AA21IPtQ",
+      "published_date": "2026-05-05 12:54:06"
+    },
+    {
+      "store_name": "TruGolf Links Center (Farmingdale)",
+      "location": "1741 Broadhollow Road (Sherwood Plaza, corner of Broadhollow Road and Sherwood Avenue), Farmingdale, NY",
+      "event_type": "Opening",
+      "event_date": "Fall 2026",
+      "status": "plans to open this Fall",
+      "short_description": "TruGolf Links Regional Developer Gio Dinsay signed a lease for a 6,120 sq ft flagship facility at 1741 Broadhollow Road in Farmingdale, New York, formerly occupied by Suffolk County OTB, with plans to open in Fall 2026. The facility will include five premium golf simulators, a multi-sport arcade, and an upscale restaurant and full bar.",
+      "article_link": "https://markets.businessinsider.com/news/stocks/trugolf-links-regional-developer-signs-lease-for-second-location-1036106245",
+      "published_date": "2026-05-05 12:52:17"
+    },
+    {
+      "store_name": "Lidl",
+      "location": "land east of Zouche Way in Bushby",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "wins planning battle for ... store",
+      "short_description": "Lidl wins planning battle for controversial Leicestershire village store on green land off the A47 despite opposition. Will create 40 jobs and 120 parking spaces.",
+      "article_link": "https://www.leicestermercury.co.uk/news/local-news/itll-make-move-house-lidl-10950047",
+      "published_date": "2026-05-06 05:00:00"
+    },
+    {
+      "store_name": "TG Jones (Post Offices)",
+      "location": "up to 100 stores across UK",
+      "event_type": "Closing",
+      "event_date": "Not specified",
+      "status": "up to 100 ... to shut",
+      "short_description": "Up to 100 TG Jones stores (including Post Offices) to shut in restructure.",
+      "article_link": "https://www.express.co.uk/news/uk/2202206/up-100-high-street-post-offices-could-close-permanently-tg-jones-restructure",
+      "published_date": "2026-05-06 04:49:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.msn.com/en-us/news/us/north-jersey-animal-refuge-expands-opens-2nd-location/ar-AA220Sfk",
+      "published_date": "2026-05-06 04:33:19"
+    },
+    {
+      "store_name": "Levi’s",
+      "location": "Portal de l’Àngel 23, Barcelona",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "will open a new store",
+      "short_description": "Levi’s to open new store on Barcelona’s Portal de l’Àngel replacing Legit.",
+      "article_link": "https://www.modaes.com/global/companies/levis-heats-up-the-tk-maxx-effect-with-a-new-store-in-portal-de-langel",
+      "published_date": "2026-05-06 04:00:00"
+    },
+    {
+      "store_name": "Oh Baby",
+      "location": "new Bernard Avenue store in Kelowna",
+      "event_type": "Opening",
+      "event_date": "Not specified (has reopened)",
+      "status": "reopens at new ... location",
+      "short_description": "Oh Baby reopens at new Bernard Avenue store in Kelowna consolidating Ellis Street locations.",
+      "article_link": "https://www.castanet.net/news/Kelowna/612734/Oh-Baby-opens-new-Bernard-Avenue-store-in-Kelowna-consolidates-Ellis-Street-locations",
+      "published_date": "2026-05-06 02:00:00"
+    },
+    {
+      "store_name": "Kura Revolving Sushi Bar",
+      "location": "3400 N. Interstate 35, Suite 150, Rayzor Ranch Town Center, Denton",
+      "event_type": "Opening",
+      "event_date": "soft opening May 3, grand opening May 15",
+      "status": "soft opening Sunday, May 3 and grand opening Friday, May 15",
+      "short_description": "Kura sushi bar set to open in Denton with robot servers, conveyor belts and prizes.",
+      "article_link": "https://dentonrc.com/business/kura-sushi-bar-set-to-open-in-denton-with-robot-servers-conveyor-belts-and-prizes/article_22a72549-9445-4867-b06c-645deb53ee1d.html",
+      "published_date": "2026-05-06 00:22:50"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.oregonlive.com/retail/2026/05/discount-retailer-expanding-across-us-including-into-the-portland-area.html",
+      "published_date": "2026-05-05 22:34:00"
+    },
+    {
+      "store_name": "Reforming Pilates Townhouse",
+      "location": "109 W. 17th St., Flatiron, NYC",
+      "event_type": "Opening",
+      "event_date": "June 1",
+      "status": "scheduled to open on June 1",
+      "short_description": "World’s largest Pilates studio Reforming Pilates Townhouse to open in NYC June 1.",
+      "article_link": "https://www.aol.com/news/world-largest-pilates-studio-open-150000466.html",
+      "published_date": "2026-05-05 22:23:22"
+    },
+    {
+      "store_name": "Trader Joe’s",
+      "location": "3020 Matlock Road, Mansfield",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "to open new Mansfield store",
+      "short_description": "Trader Joe’s to open new Mansfield store adding third Tarrant County location.",
+      "article_link": "https://www.cbsnews.com/texas/video/trader-joes-to-open-new-mansfield-store-adding-third-tarrant-county-location/",
+      "published_date": "2026-05-05 22:19:00"
+    },
+    {
+      "store_name": "Sephora and Timberland",
+      "location": "Houston Premium Outlets",
+      "event_type": "Opening",
+      "event_date": "this month",
+      "status": "adding ... stores this month",
+      "short_description": "Houston Premium Outlets adding Sephora and Timberland stores this month.",
+      "article_link": "https://www.msn.com/en-us/money/companies/houston-premium-outlets-adding-sephora-timberland-stores-this-month/ar-AA22gqux",
+      "published_date": "2026-05-05 22:04:26"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "http://www.msn.com/en-us/foodanddrink/foodnews/new-tenant-of-le-monde-space-to-open-with-double-drive-through-late-night-hours/ar-AA1OGkYe",
+      "published_date": "2026-05-05 21:03:55"
+    },
+    {
+      "store_name": "Burlington",
+      "location": "St. Johns Town Center, Jacksonville",
+      "event_type": "Opening",
+      "event_date": "May 15",
+      "status": "opening May 15",
+      "short_description": "Burlington opening May 15 in St. Johns Town Center.",
+      "article_link": "https://www.jaxdailyrecord.com/news/2026/may/05/burlington-opening-may-15-in-st-johns-town-center/",
+      "published_date": "2026-05-05 20:48:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.abs-cbn.com/news/business/2026/5/5/digiplus-says-exploring-opportunities-to-expand-into-complementary-segments-1423",
+      "published_date": "2026-05-05 06:23:26"
+    },
+    {
+      "store_name": "Derby Bar and Grill",
+      "location": "Guckeen, MN (street address not specified)",
+      "event_type": "Opening",
+      "event_date": "Soft opening April 23, 2026",
+      "status": "recently opened",
+      "short_description": "New owner Scott Vaske purchased the former Derby Inn in February 2026 and reopened it as the Derby Bar and Grill after extensive renovations including repainting, new flooring, revamped bar, and new fixtures. The soft opening took place on April 23, 2026.",
+      "article_link": "https://www.fairmontsentinel.com/news/local-news/2026/05/05/the-all-new-derby-bar-and-grill-is-open/",
+      "published_date": "2026-05-05 06:02:00"
+    },
+    {
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.msn.com/en-us/travel/tripideas/stouts-signature-owner-eyes-fall-opening-for-king-william-sibling-concept/ar-AA21LGZY",
+      "published_date": "2026-05-05 05:04:49"
+    },
+    {
+      "store_name": "SM Seaside Cebu Arena",
+      "location": "South Coast City, Cebu Province, Philippines (street address not specified)",
+      "event_type": "Opening",
+      "event_date": "June 2026",
+      "status": "plans to open in June 2026",
+      "short_description": "SM Prime Holdings plans to open SM Seaside Cebu Arena in June 2026, described as the largest and first purpose-built multipurpose indoor arena in Cebu Province. The arena will host more than 25,000 guests and include multi-level spectator zones, corporate suites, VIP lounges, and food and beverage options.",
+      "article_link": "https://outoftownblog.com/sm-prime-to-open-sm-seaside-cebu-arena-in-june-2026/",
+      "published_date": "2026-05-05 05:00:29"
+    },
+    {
+      "store_name": "Boyes",
+      "location": "St Mary's Place, Market Harborough, Leicestershire, UK (former Wilko unit; street address not specified)",
+      "event_type": "Opening",
+      "event_date": "May 15, 2026",
+      "status": "will be opening on Friday, May 15",
+      "short_description": "Boyes is opening its third Leicestershire location at St Mary's Place in Market Harborough on May 15, 2026, in the former Wilko unit that closed in September 2023. The building underwent a substantial refurbishment including opening up the first floor for retail ahead of the opening at 9 a.m.",
+      "article_link": "https://www.leicestermercury.co.uk/whats-on/store-boyes-opening-new-location-10946089.amp",
+      "published_date": "2026-05-05 05:00:00"
     }
   ]
 }
