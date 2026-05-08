@@ -1,141 +1,119 @@
 {
-  "last_updated": "2026-05-07",
+  "last_updated": "2026-05-08",
   "data": [
     {
-      "store_name": "Dad's Doughs",
-      "location": "483 Storrs Road in Mansfield",
+      "store_name": "2nd Bridge Soccer Pub & Brewery",
+      "location": "642 Hilliard Street, Manchester",
+      "event_type": "Remodel",
+      "event_date": "Not specified",
+      "status": "has reopened its doors after a brief renovation",
+      "short_description": "2nd Bridge Brewing Co. has reopened after renovations at Hilliard Mills. It is now a soccer pub with OEC brews available and extensive drink list plus TVs for gamedays. A new Pub Faire menu is coming soon.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/manchester-scoop-2nd-bridge-soccer-pub-brewery-reopens-after-renovations"
+    },
+    {
+      "store_name": "Sahara Coffee Co.",
+      "location": "1454 Boston Post Road, Milford",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "coming soon",
+      "short_description": "Sahara Coffee Co. is coming to the former Subway space. The modern coffeehouse rooted in Yemeni culture will offer traditional drinks, specialty coffee, and cultural spotlights. Renovations are underway.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/milford-scoop-new-coffee-shop-coming-to-former-subway-space"
+    },
+    {
+      "store_name": "Juici Patties",
+      "location": "1700 Park Avenue, Bridgeport",
+      "event_type": "Opening",
+      "event_date": "later this year",
+      "status": "coming soon",
+      "short_description": "Juici Patties is bringing its first CT location to North Park Shopping Center. The Jamaican chain will serve various patties, coco bread, and sides in roughly 2,000 square feet.",
+      "article_link": "https://www.theconnecticutscoop.com/all-fairfield-county-posts/bridgeport-scoop-juici-patties-bring-first-ct-location-in-bridgeport"
+    },
+    {
+      "store_name": "Chick-Fil-A",
+      "location": "Holyoke Mall at Ingleside (center court, upper level), Holyoke",
+      "event_type": "Opening",
+      "event_date": "now through August 31st",
+      "status": "has opened a new pop-up eatery",
+      "short_description": "Chick-Fil-A opened a pop-up at Holyoke Mall. It features popular items like chicken sandwiches and mac & cheese until August 31st.",
+      "article_link": "https://www.theconnecticutscoop.com/all-mass-posts/holyoke-scoop-chick-fil-a-comes-to-holyoke-mall"
+    },
+    {
+      "store_name": "J7 Adventureland",
+      "location": "Patriot Place, Foxborough",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "coming soon",
+      "short_description": "J7 Adventureland indoor playground is coming to Patriot Place next to Wormtown Brewing. The 15,000 sq ft space will feature play structures, arcade, and themed days. This is the second location.",
+      "article_link": "https://www.theconnecticutscoop.com/all-mass-posts/foxborough-scoop-new-kids-entertainment-center-coming-to-patriot-place"
+    },
+    {
+      "store_name": "Dad’s Doughs",
+      "location": "483 Storrs Road, Mansfield",
       "event_type": "Closing",
       "event_date": "end of June",
-      "status": "closing is doors at the end of June",
-      "short_description": "Dad's Doughs will be closing its mini-doughnut shop in the former Town Garage building. The shop opened in November 2024 and sold fresh-made mini doughnuts, drip coffee, and beverages while supporting local brands. They invite customers to visit until the end of June.",
+      "status": "will be closing its doors at the end of June",
+      "short_description": "Dad’s Doughs mini-doughnut shop is closing at the end of June. The shop opened in November 2024 and sold fresh mini doughnuts and local beverages.",
       "article_link": "https://www.theconnecticutscoop.com/all-tolland-county-posts/mansfield-scoop-dads-doughs-closing-mansfield-doughnut-shop"
     },
     {
       "store_name": "Bliss Matcha & Beyond",
-      "location": "981 Farmington Avenue in West Hartford",
+      "location": "981 Farmington Avenue, West Hartford",
       "event_type": "Opening",
       "event_date": "Not specified",
       "status": "coming soon",
-      "short_description": "Bliss Matcha & Beyond is coming to the former Boost Bowls location. The menu features matcha lattes, matcha soft serve, matcha tiramisu, bubble tea, cheese cloud latte, desserts, and more. This will be their second location after New Haven.",
+      "short_description": "Bliss Matcha & Beyond is coming to the former Boost Bowls space in West Hartford Center. The shop will offer matcha items, bubble tea, soft serve, and desserts. This is their second location.",
       "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/west-hartford-scoop-new-matcha-dessert-shop-coming-to-weha"
     },
     {
       "store_name": "Blu Pointe Prime Steakhouse & Seafood",
-      "location": "The Shops at Stone Bridge, 1991 Highland Avenue in Cheshire",
+      "location": "The Shops at Stone Bridge, 1991 Highland Avenue, Cheshire",
       "event_type": "Opening",
       "event_date": "Not specified",
       "status": "coming soon",
-      "short_description": "Blu Pointe Prime Steakhouse & Seafood is coming to The Shops at Stone Bridge according to permit filings. It will offer Prime and Wagyu beef, fresh seafood, craft cocktails, and a patio with fireplace. It replaces the previously listed Market Place Kitchen.",
+      "short_description": "Blu Pointe Prime Steakhouse & Seafood is coming to The Shops at Stone Bridge. The upscale spot will feature prime beef, seafood, and a patio. It is owned by Market Hospitality Group.",
       "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-seafood-steakhosue-coming-to-the-shops-at-stone-bridge"
     },
     {
-      "store_name": "Ona's Gourmet (proposed sandwich shop)",
-      "location": "55 White Avenue in East Longmeadow",
+      "store_name": "Ona's Gourmet (sandwich shop)",
+      "location": "55 White Avenue, East Longmeadow",
       "event_type": "Opening",
       "event_date": "Not specified",
-      "status": "proposed",
-      "short_description": "A new sandwich shop is proposed for the former Stacy's Cleaners building at 55 White Avenue with interior seating for 30. Plans are subject to local approvals.",
+      "status": "being proposed",
+      "short_description": "A new sandwich shop (Ona's Gourmet) is proposed for the former Stacy's Cleaners at 55 White Avenue. Plans include seating for 30 and are subject to approvals.",
       "article_link": "https://www.theconnecticutscoop.com/all-mass-posts/east-longmeadow-scoop-two-new-restaurants-proposed-in-east-longmeadow"
     },
     {
       "store_name": "Tony Phở Restaurant",
-      "location": "51 Prospect Street in East Longmeadow",
+      "location": "51 Prospect Street, East Longmeadow",
       "event_type": "Opening",
       "event_date": "Not specified",
       "status": "proposed",
-      "short_description": "Tony Phở Restaurant is proposed at 51 Prospect Street specializing in pho, Bánh mì, rice dishes, egg rolls, and Vietnamese items with seating for 36. Plans are subject to local approvals.",
+      "short_description": "Tony Phở Restaurant is proposed for 51 Prospect Street. The Vietnamese spot will focus on pho along with other traditional dishes and has planned seating for 36. Plans subject to approvals.",
       "article_link": "https://www.theconnecticutscoop.com/all-mass-posts/east-longmeadow-scoop-two-new-restaurants-proposed-in-east-longmeadow"
     },
     {
       "store_name": "Ross Dress for Less",
-      "location": "3105 Berlin Turnpike in Newington",
+      "location": "3105 Berlin Turnpike, Newington",
       "event_type": "Opening",
       "event_date": "fall",
-      "status": "coming soon... A fall opening is planned",
-      "short_description": "Ross Dress for Less is coming to replace Joann Fabrics in the renamed Ross Plaza. It will occupy 24,890 square feet as their first Hartford County location.",
+      "status": "coming soon",
+      "short_description": "Ross Dress for Less is coming to the former Joann Fabrics space. The discount retailer will occupy 24,890 square feet in the newly named Ross Plaza with a fall opening planned.",
       "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/newington-scoop-ross-dress-for-less-officially-coming-to-newington-plaza-receives-new-name"
     },
     {
       "store_name": "Crunch & Flame",
-      "location": "162 Chase Avenue in Waterbury",
+      "location": "162 Chase Avenue, Waterbury",
       "event_type": "Opening",
       "event_date": "Not specified",
       "status": "coming soon",
-      "short_description": "Crunch & Flame is coming to the former Rooster's Chicken & Waffles space. The fast-casual concept will feature Caribbean flavors, Island Bowls, jerk chicken, fried fish, and American favorites. No timeline announced.",
+      "short_description": "Crunch & Flame is coming to the former Rooster's Chicken & Waffles space. The fast-casual spot will serve Caribbean and American items like island bowls and jerk chicken. No timeline announced.",
       "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/waterbury-scoop-new-restaurant-coming-soon-to-chase-avenue"
-    },
-    {
-      "store_name": "Pandora",
-      "location": "Connecticut Post Mall (second level), Milford",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "coming soon",
-      "short_description": "Pandora is coming soon to the second level next to Zumiez, occupying roughly 1,200 square feet.",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/milford-scoop-new-tenants-coming-soon-to-connecticut-post-mall"
-    },
-    {
-      "store_name": "JD Sports",
-      "location": "Connecticut Post Mall (second level), Milford",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "coming soon",
-      "short_description": "JD Sports is coming soon to the second level in the former Victoria's Secret space, replacing Finish Line.",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/milford-scoop-new-tenants-coming-soon-to-connecticut-post-mall"
-    },
-    {
-      "store_name": "The Bristol Bazaar",
-      "location": "Connecticut Post Mall (second level), Milford",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "will be opening a new location",
-      "short_description": "The Bristol Bazaar is opening a new artisan marketplace location on the second level in the former Abercrombie space with a campground theme.",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/milford-scoop-new-tenants-coming-soon-to-connecticut-post-mall"
-    },
-    {
-      "store_name": "Ortigia Ristorante",
-      "location": "184 Main Street in Historic Wethersfield",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "proposed",
-      "short_description": "Ortigia Ristorante is proposed for the historic Chester Buckley House at 184 Main Street. It would serve Sicilian cuisine and Southern-Italian favorites with lunch, dinner, patio, and events. Subject to local approvals.",
-      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/wethersfield-scoop-ortigia-ristorante-proposed-in-historic-wethersfield"
-    },
-    {
-      "store_name": "ConnectiCare",
-      "location": "1487 Pleasant Valley Road in Manchester",
-      "event_type": "Closing",
-      "event_date": "ahead of November 2026",
-      "status": "up for lease ahead of closure",
-      "short_description": "The ConnectiCare building is up for lease as the company winds down operations. They are anticipated to move out ahead of November 2026.",
-      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/manchester-scoop-connecticare-building-up-for-lease-ahead-of-closure"
-    },
-    {
-      "store_name": "The Portrait at North Crossing",
-      "location": "1143 Main Street in Downtown Hartford",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "is now leasing",
-      "short_description": "The Portrait at North Crossing apartment complex is now leasing with studio units starting at $1,750. It features resort-style amenities including pool, rooftop terrace, fitness spaces, and more.",
-      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/hartford-scoop-the-portrait-at-north-crossing-is-now-leasing"
-    },
-    {
-      "store_name": "Papa's Loca",
-      "location": "370 Whalley Avenue in New Haven",
-      "event_type": "Opening",
-      "event_date": "May 9th",
-      "status": "will officially open its doors on May 9th at 10am",
-      "short_description": "Papa's Loca will open on May 9th with free samples and music. It specializes in massive stuffed baked potatoes with 15 varieties plus empanadas, potato balls, and breakfast items.",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/new-haven-scoop-papas-loca-sets-opening-date-in-new-haven"
-    },
-    {
-      "store_name": "The Marquee on State Street (restaurant & speakeasy)",
-      "location": "312 State Street in New London",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "planning a new restaurant and speakeasy",
-      "short_description": "The Marquee on State Street is planning a restaurant and speakeasy at the former DEVS / Nico's space with seating, a stage, live entertainment, and amplified music (subject to permit).",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/new-london-scoop-new-speakeasy-restaurant-with-live-entertainment-planned-in-new-london"
     }
   ],
-  "non_working": []
+  "non_working": [
+    {
+      "identifier": "Article 12",
+      "reason": "text missing / failed to fetch full content"
+    }
+  ]
 }

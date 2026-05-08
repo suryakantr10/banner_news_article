@@ -9,6 +9,7 @@ from selenium.common.exceptions import SessionNotCreatedException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.service import Service
 import pandas as pd
 from datetime import datetime, date, timedelta
 import json
@@ -16,6 +17,12 @@ from selenium.webdriver.chrome.options import Options
 from pathlib import Path
 import os
 import shutil
+
+try:
+    from webdriver_manager.chrome import ChromeDriverManager
+    _HAS_WDM = True
+except ImportError:
+    _HAS_WDM = False
 
 
 class DateEncoder(json.JSONEncoder):
@@ -60,9 +67,9 @@ def _find_chrome_binary() -> str | None:
     return None
 
 
-def _make_driver() -> webdriver.Chrome:
+def _build_options(headless_new: bool = True) -> Options:
     options = Options()
-    options.add_argument("--headless=new")
+    options.add_argument("--headless=new" if headless_new else "--headless")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--disable-gpu")
@@ -72,37 +79,39 @@ def _make_driver() -> webdriver.Chrome:
     options.add_argument("--disable-sync")
     options.add_argument("--disable-translate")
     options.add_argument("--disable-features=VizDisplayCompositor")
+    return options
 
+
+def _make_driver() -> webdriver.Chrome:
     chrome_path = _find_chrome_binary()
     if chrome_path:
         print(f"Using Chrome/Chromium binary: {chrome_path}")
-        options.binary_location = chrome_path
     else:
         print("Warning: No Chrome/Chromium binary found; relying on system defaults.")
 
-    # Selenium Manager will download a matching ChromeDriver if one is not available.
-    try:
-        return webdriver.Chrome(options=options)
-    except SessionNotCreatedException as exc:
-        print("First attempt to start Chrome failed; retrying with legacy headless mode...")
-        print(str(exc))
+    # Use webdriver-manager to download the exact matching ChromeDriver version,
+    # bypassing any mismatched chromedriver already present in PATH.
+    if _HAS_WDM:
+        print("Using webdriver-manager to resolve ChromeDriver.")
+        driver_path = ChromeDriverManager().install()
+        service = Service(executable_path=driver_path)
+    else:
+        print("webdriver-manager not available; falling back to Selenium Manager.")
+        service = Service()
 
-        # Retry with the legacy headless flag (some environments/distro builds require it)
-        options = Options()
-        options.add_argument("--headless")
-        options.add_argument("--no-sandbox")
-        options.add_argument("--disable-dev-shm-usage")
-        options.add_argument("--disable-gpu")
-        options.add_argument("--disable-software-rasterizer")
-        options.add_argument("--disable-extensions")
-        options.add_argument("--disable-background-networking")
-        options.add_argument("--disable-sync")
-        options.add_argument("--disable-translate")
-        options.add_argument("--disable-features=VizDisplayCompositor")
+    options = _build_options(headless_new=True)
+    if chrome_path:
+        options.binary_location = chrome_path
+
+    try:
+        return webdriver.Chrome(service=service, options=options)
+    except SessionNotCreatedException as exc:
+        print("First attempt failed; retrying with legacy --headless flag...")
+        print(str(exc))
+        options = _build_options(headless_new=False)
         if chrome_path:
             options.binary_location = chrome_path
-
-        return webdriver.Chrome(options=options)
+        return webdriver.Chrome(service=service, options=options)
 
 
 def main():
