@@ -1,10 +1,15 @@
 {
-  "last_updated": "2026-05-07",
+  "last_updated": "2026-05-08",
   "data": [
     {
       "heading": "MANCHESTER SCOOP: 2nd Bridge Soccer Pub & Brewery reopens after renovations!",
       "date": "2026-05-07",
       "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/manchester-scoop-2nd-bridge-soccer-pub-brewery-reopens-after-renovations"
+    },
+    {
+      "heading": "EAST HAVEN SCOOP: La Placita Market eyeing former Rite Aid for new supermarket!",
+      "date": "2026-05-07",
+      "link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/east-haven-scoop-la-placita-market-eyeing-former-rite-aid-for-new-supermarket"
     },
     {
       "heading": "MILFORD SCOOP: New coffee shop coming to former Subway space",
@@ -15,6 +20,11 @@
       "heading": "BRIDGEPORT SCOOP: Juici Patties bring first CT location in Bridgeport",
       "date": "2026-05-07",
       "link": "https://www.theconnecticutscoop.com/all-fairfield-county-posts/bridgeport-scoop-juici-patties-bring-first-ct-location-in-bridgeport"
+    },
+    {
+      "heading": "GROTON SCOOP: TJ Maxx opens in new Groton location",
+      "date": "2026-05-07",
+      "link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/groton-scoop-tj-maxx-opens-in-new-groton-location"
     },
     {
       "heading": "HOLYOKE SCOOP:  Chick-Fil-A comes to Holyoke Mall!",
@@ -45,21 +55,6 @@
       "heading": "EAST LONGMEADOW SCOOP: Two new restaurants proposed in East Longmeadow!",
       "date": "2026-05-06",
       "link": "https://www.theconnecticutscoop.com/all-mass-posts/east-longmeadow-scoop-two-new-restaurants-proposed-in-east-longmeadow"
-    },
-    {
-      "heading": "NEWINGTON SCOOP: Ross Dress for Less officially coming to Newington, Plaza receives new name!",
-      "date": "2026-05-05",
-      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/newington-scoop-ross-dress-for-less-officially-coming-to-newington-plaza-receives-new-name"
-    },
-    {
-      "heading": "WATERBURY SCOOP: New restaurant coming soon to Chase Avenue",
-      "date": "2026-05-05",
-      "link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/waterbury-scoop-new-restaurant-coming-soon-to-chase-avenue"
-    },
-    {
-      "heading": "MILFORD SCOOP: New tenants coming soon to Connecticut Post Mall!",
-      "date": "2026-05-05",
-      "link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/milford-scoop-new-tenants-coming-soon-to-connecticut-post-mall"
     }
   ]
 }
