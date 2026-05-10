@@ -584,9 +584,9 @@
                                 <button onclick="clearMgmtDateFilter()" class="text-xs text-gray-500 hover:text-gray-300 transition-colors px-2 py-1 rounded border border-white/10">Clear</button>
                             </div>
                         </div>
-                        <div class="overflow-x-auto">
+                        <div class="overflow-x-auto overflow-y-auto" style="max-height:480px;">
                             <table class="w-full text-sm text-gray-300">
-                                <thead id="mgmtDailyHead" class="text-xs text-gray-500 uppercase"></thead>
+                                <thead id="mgmtDailyHead" class="text-xs text-gray-500 uppercase" style="position:sticky;top:0;z-index:10;"></thead>
                                 <tbody id="mgmtDailyBody"></tbody>
                             </table>
                         </div>
@@ -3238,14 +3238,14 @@
 
         // Header — sub-label shows "Done / Rcvd" for each analyst column
         document.getElementById('mgmtDailyHead').innerHTML = `
-            <tr class="border-b border-white/5">
-                <th class="px-4 py-3 text-left whitespace-nowrap">Date</th>
+            <tr class="border-b border-white/5" style="background:#0f172a;">
+                <th class="px-4 py-3 text-left whitespace-nowrap" style="background:#0f172a;">Date</th>
                 ${analysts.map(a => `
-                    <th class="px-4 py-3 text-center">
+                    <th class="px-4 py-3 text-center" style="background:#0f172a;">
                         ${a}
                         <div class="text-gray-600 font-normal normal-case text-xs mt-0.5">Done / Rcvd</div>
                     </th>`).join('')}
-                <th class="px-4 py-3 text-center text-gray-300">
+                <th class="px-4 py-3 text-center text-gray-300" style="background:#0f172a;">
                     Total
                     <div class="text-gray-600 font-normal normal-case text-xs mt-0.5">Done / Rcvd</div>
                 </th>
