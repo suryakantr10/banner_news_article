@@ -1,7 +1,25 @@
 {
-  "last_updated": "2026-05-10 20:10 UTC",
+  "last_updated": "2026-05-10 22:02 UTC",
   "total": 60,
   "data": [
+    {
+      "date": "May 10, 2026",
+      "url": "https://whatnow.com/memphis/restaurants/a-forkful-restaurant-and-catering-making-memphis-plans/",
+      "title": "A Forkful Restaurant and Catering Making Memphis Plans",
+      "address": "2650 Thousand Oaks Blvd, Memphis, TN 38118"
+    },
+    {
+      "date": "May 10, 2026",
+      "url": "https://whatnow.com/memphis/restaurants/mcalisters-deli-headed-to-jonesboro/",
+      "title": "McAlister’s Deli Headed to Jonesboro",
+      "address": "2024 Fair Park Blvd., Jonesboro, AR 72401"
+    },
+    {
+      "date": "May 10, 2026",
+      "url": "https://whatnow.com/memphis/restaurants/ginas-place-to-reopen-this-summer/",
+      "title": "Gina’s Place to Reopen this Summer",
+      "address": "2400 S Caraway Rd, Jonesboro, AR 72401"
+    },
     {
       "date": "May 09, 2026",
       "url": "https://whatnow.com/las-vegas/restaurants/bartholas-vegas-first-all-bottle-german-influenced-beer-bar/",
@@ -342,24 +360,6 @@
       "date": "May 08, 2026",
       "url": "https://whatnow.com/charleston/restaurants/cintli-to-debut-with-heirloom-corn-culinary-experiences-foundational-to-nourishment-community/",
       "title": "CINTLI to Debut With Heirloom Corn Culinary Experiences",
-      "address": ""
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/portland/restaurants/new-bar-looks-to-be-opening-in-pioneer-courthouse-square/",
-      "title": "New Bar Looks to Be Opening in Pioneer Courthouse Square",
-      "address": "701 SW 6th Ave, Portland, OR 97204"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/orlando/restaurants/willy-bucks-backyard-grill-looks-to-be-opening-brick-and-mortar-location/",
-      "title": "Willy Buck’s Backyard Grill Looks to Be Opening Brick-and-Mortar Location",
-      "address": "1317 S 14th St, Leesburg, FL 34748"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/jacksonville/restaurants/madi-rum-plans-6-acre-rum-distillery-and-restaurant/",
-      "title": "Madi Rum Plans 6-Acre Rum Distillery and Restaurant",
       "address": ""
     }
   ]
