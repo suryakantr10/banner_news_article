@@ -2,7 +2,7 @@ name: Daily Retail News Scraper
 
 on:
   schedule:
-    - cron: "0 21 * * *"    # 10:30 PM UTC = 2:30 AM IST
+    - cron: "35 21 * * *"    # 3:05 AM IST daily (staggered from Business Debut & Restaurant)
   workflow_dispatch:
 
 permissions:
@@ -123,6 +123,9 @@ jobs:
           else
             git commit -m "chore: daily news update $(date -u '+%Y-%m-%d %H:%M UTC')"
             # Merge remote changes; keep our freshly generated files on any conflict
-            git pull --no-rebase -X ours origin main
-            git push origin main
+            for i in 1 2 3 4 5; do
+              git pull --no-rebase -X ours origin main && git push origin main && break
+              echo "Push attempt $i failed, retrying in 15s..."
+              sleep 15
+            done
           fi

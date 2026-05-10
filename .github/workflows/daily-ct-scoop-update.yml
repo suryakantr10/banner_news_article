@@ -6,7 +6,7 @@ name: Daily CT Scoop Update
 
 on:
   schedule:
-    - cron: '35 23 * * *'  # 5:00 IST daily
+    - cron: '0 0 * * *'  # 5:30 AM IST daily (staggered 30 min after Banner News)
   workflow_dispatch:  # Allows manual triggering from GitHub Actions tab
 
 permissions:
@@ -74,5 +74,8 @@ jobs:
           git add data/ct_scoop/ || true
           git add master_file/ || true
           git diff --staged --quiet || git commit -m "Auto-update: Daily CT Scoop fetch $(date +'%Y-%m-%d')"
-          git pull --rebase origin main
-          git push origin main
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push origin main && break
+            echo "Push attempt $i failed, retrying in 15s..."
+            sleep 15
+          done
