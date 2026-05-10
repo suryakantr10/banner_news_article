@@ -79,6 +79,16 @@ def _build_options(headless_new: bool = True) -> Options:
     options.add_argument("--disable-sync")
     options.add_argument("--disable-translate")
     options.add_argument("--disable-features=VizDisplayCompositor")
+    options.add_argument("--window-size=1920,1080")
+    # Suppress the "Chrome is being controlled by automated software" banner
+    # and reduce headless fingerprint detectability.
+    options.add_argument("--disable-blink-features=AutomationControlled")
+    options.add_argument(
+        "user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36"
+    )
+    options.add_experimental_option("excludeSwitches", ["enable-automation"])
+    options.add_experimental_option("useAutomationExtension", False)
     return options
 
 
@@ -103,15 +113,25 @@ def _make_driver() -> webdriver.Chrome:
     if chrome_path:
         options.binary_location = chrome_path
 
+    def _patch_driver(d: webdriver.Chrome) -> webdriver.Chrome:
+        """Remove the navigator.webdriver property that bot-detectors look for."""
+        d.execute_cdp_cmd(
+            "Page.addScriptToEvaluateOnNewDocument",
+            {"source": "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"},
+        )
+        return d
+
     try:
-        return webdriver.Chrome(service=service, options=options)
+        driver = webdriver.Chrome(service=service, options=options)
+        return _patch_driver(driver)
     except SessionNotCreatedException as exc:
         print("First attempt failed; retrying with legacy --headless flag...")
         print(str(exc))
         options = _build_options(headless_new=False)
         if chrome_path:
             options.binary_location = chrome_path
-        return webdriver.Chrome(service=service, options=options)
+        driver = webdriver.Chrome(service=service, options=options)
+        return _patch_driver(driver)
 
 
 def main():
@@ -139,18 +159,26 @@ def main():
 
     # Create driver ONCE
     driver = _make_driver()
-    wait = WebDriverWait(driver, 15)
+    wait = WebDriverWait(driver, 30)
 
     try:
         for url in links:
             print(f"Scraping: {url}")
             driver.get(url)
 
-            wait.until(
-                EC.presence_of_all_elements_located(
-                    (By.CSS_SELECTOR, "div.waddons-blog-card")
+            try:
+                wait.until(
+                    EC.presence_of_all_elements_located(
+                        (By.CSS_SELECTOR, "div.waddons-blog-card")
+                    )
                 )
-            )
+            except Exception as te:
+                print(f"[WARN] Timeout waiting for blog cards on {url}: {te}")
+                src = driver.page_source or ""
+                print(f"[DEBUG] page_source snippet (first 2000 chars):\n{src[:2000]}")
+                print(f"[DEBUG] current URL after get: {driver.current_url}")
+                print("[INFO] Skipping this page and continuing.")
+                continue
 
             cards = driver.find_elements(By.CSS_SELECTOR, "div.waddons-blog-card")
             print(f"Found {len(cards)} card(s) on page: {url}")
