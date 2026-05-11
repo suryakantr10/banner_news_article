@@ -1,119 +1,181 @@
 {
-  "last_updated": "2026-05-08",
+  "last_updated": "2026-05-12",
   "data": [
     {
-      "store_name": "2nd Bridge Soccer Pub & Brewery",
-      "location": "642 Hilliard Street, Manchester",
-      "event_type": "Remodel",
-      "event_date": "Not specified",
-      "status": "has reopened its doors after a brief renovation",
-      "short_description": "2nd Bridge Brewing Co. has reopened after renovations at Hilliard Mills. It is now a soccer pub with OEC brews available and extensive drink list plus TVs for gamedays. A new Pub Faire menu is coming soon.",
-      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/manchester-scoop-2nd-bridge-soccer-pub-brewery-reopens-after-renovations"
-    },
-    {
-      "store_name": "Sahara Coffee Co.",
-      "location": "1454 Boston Post Road, Milford",
+      "store_name": "Monmouth Trading Cards",
+      "location": "Suites 109 and 110 at 9 Dog Lane in Storrs",
       "event_type": "Opening",
       "event_date": "Not specified",
       "status": "coming soon",
-      "short_description": "Sahara Coffee Co. is coming to the former Subway space. The modern coffeehouse rooted in Yemeni culture will offer traditional drinks, specialty coffee, and cultural spotlights. Renovations are underway.",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/milford-scoop-new-coffee-shop-coming-to-former-subway-space"
+      "short_description": "A new trading card store is coming to Storrs Center. Monmouth Cards will be located in Suites 109 and 110 at 9 Dog Lane in Storrs, next door to Jefferson Fry Company. No timeline has been announced for their opening.",
+      "article_link": "https://www.theconnecticutscoop.com/all-tolland-county-posts/storrs-scoop-monmouth-trading-cards-coming-soon-to-storrs-center",
+      "published_date": "5/11/2026"
     },
     {
-      "store_name": "Juici Patties",
-      "location": "1700 Park Avenue, Bridgeport",
+      "store_name": "Soft Serve Factory",
+      "location": "700 Watertown Avenue in Waterbury",
       "event_type": "Opening",
-      "event_date": "later this year",
-      "status": "coming soon",
-      "short_description": "Juici Patties is bringing its first CT location to North Park Shopping Center. The Jamaican chain will serve various patties, coco bread, and sides in roughly 2,000 square feet.",
-      "article_link": "https://www.theconnecticutscoop.com/all-fairfield-county-posts/bridgeport-scoop-juici-patties-bring-first-ct-location-in-bridgeport"
+      "event_date": "05/10",
+      "status": "NOW OPEN",
+      "short_description": "Soft Serve Factory is NOW OPEN at 700 Watertown Avenue in Waterbury, the former Carvel space. The ice cream shop opened yesterday, 05/10. It is a locally owned shop that previously operated under the Carvel brand for over 15 years.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/waterbury-scoop-soft-serve-factory-replaces-carvel-in-waterbury",
+      "published_date": "5/11/2026"
     },
     {
-      "store_name": "Chick-Fil-A",
-      "location": "Holyoke Mall at Ingleside (center court, upper level), Holyoke",
-      "event_type": "Opening",
-      "event_date": "now through August 31st",
-      "status": "has opened a new pop-up eatery",
-      "short_description": "Chick-Fil-A opened a pop-up at Holyoke Mall. It features popular items like chicken sandwiches and mac & cheese until August 31st.",
-      "article_link": "https://www.theconnecticutscoop.com/all-mass-posts/holyoke-scoop-chick-fil-a-comes-to-holyoke-mall"
-    },
-    {
-      "store_name": "J7 Adventureland",
-      "location": "Patriot Place, Foxborough",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "coming soon",
-      "short_description": "J7 Adventureland indoor playground is coming to Patriot Place next to Wormtown Brewing. The 15,000 sq ft space will feature play structures, arcade, and themed days. This is the second location.",
-      "article_link": "https://www.theconnecticutscoop.com/all-mass-posts/foxborough-scoop-new-kids-entertainment-center-coming-to-patriot-place"
-    },
-    {
-      "store_name": "Dad’s Doughs",
-      "location": "483 Storrs Road, Mansfield",
+      "store_name": "Carvel",
+      "location": "700 Watertown Avenue in Waterbury",
       "event_type": "Closing",
-      "event_date": "end of June",
-      "status": "will be closing its doors at the end of June",
-      "short_description": "Dad’s Doughs mini-doughnut shop is closing at the end of June. The shop opened in November 2024 and sold fresh mini doughnuts and local beverages.",
-      "article_link": "https://www.theconnecticutscoop.com/all-tolland-county-posts/mansfield-scoop-dads-doughs-closing-mansfield-doughnut-shop"
+      "event_date": "Not specified",
+      "status": "replaces Carvel",
+      "short_description": "Soft Serve Factory replaces Carvel in Waterbury in the same space. The shop had been serving the community for over 15 years previously under the Carvel brand.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/waterbury-scoop-soft-serve-factory-replaces-carvel-in-waterbury",
+      "published_date": "5/11/2026"
     },
     {
-      "store_name": "Bliss Matcha & Beyond",
-      "location": "981 Farmington Avenue, West Hartford",
+      "store_name": "No qualifying business found",
+      "location": "N/A",
+      "event_type": "N/A",
+      "event_date": "N/A",
+      "status": "N/A",
+      "short_description": "N/A",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/foxwoods-scoop-hells-kitchen-back-for-2-more-seasons",
+      "published_date": "5/11/2026"
+    },
+    {
+      "store_name": "Wick & Wander by The New England Couple",
+      "location": "112 Main Street Unit 13 in Putnam",
       "event_type": "Opening",
-      "event_date": "Not specified",
+      "event_date": "after mid June",
       "status": "coming soon",
-      "short_description": "Bliss Matcha & Beyond is coming to the former Boost Bowls space in West Hartford Center. The shop will offer matcha items, bubble tea, soft serve, and desserts. This is their second location.",
-      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/west-hartford-scoop-new-matcha-dessert-shop-coming-to-weha"
+      "short_description": "A new locally owned candle shop Wick & Wander by The New England Couple is coming soon to Downtown Putnam. It will be located at 112 Main Street Unit 13 in Putnam, the former home of Wolperdinger Bookends. The shop will sell signature organic soy candles and more and is expected to open after mid June.",
+      "article_link": "https://www.theconnecticutscoop.com/all-windham-county-posts/putnam-scoop-new-candle-shop-coming-soon-to-putnam",
+      "published_date": "5/10/2026"
     },
     {
-      "store_name": "Blu Pointe Prime Steakhouse & Seafood",
-      "location": "The Shops at Stone Bridge, 1991 Highland Avenue, Cheshire",
+      "store_name": "Nothing Bundt Cakes",
+      "location": "The Plaza at Buckland Hills on Pleasant Valley Road in Manchester",
       "event_type": "Opening",
       "event_date": "Not specified",
-      "status": "coming soon",
-      "short_description": "Blu Pointe Prime Steakhouse & Seafood is coming to The Shops at Stone Bridge. The upscale spot will feature prime beef, seafood, and a patio. It is owned by Market Hospitality Group.",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/cheshire-scoop-seafood-steakhosue-coming-to-the-shops-at-stone-bridge"
+      "status": "planning",
+      "short_description": "Nothing Bundt Cakes is planning a new location at The Plaza at Buckland Hills on Pleasant Valley Road in Manchester. Plans are currently being bid with area contractors. Stay tuned for more information on their opening.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/manchester-scoop-nothing-bundt-cakes-planning-manchester-location",
+      "published_date": "5/10/2026"
     },
     {
-      "store_name": "Ona's Gourmet (sandwich shop)",
-      "location": "55 White Avenue, East Longmeadow",
+      "store_name": "Frisbie's Dairy Barn",
+      "location": "38 Isham Road in West Hartford",
+      "event_type": "Opening",
+      "event_date": "Not specified (official opening today)",
+      "status": "officially opens",
+      "short_description": "Frisbie's Dairy Barn is officially open at Blue Back Square at 38 Isham Road in West Hartford, the former Kilwins space. They are celebrating their official opening today from 1pm to 10pm. The shop serves nearly 2 dozen different ice cream flavors.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/west-hartford-scoop-frisbies-dairy-barn-officially-opens-in-weha",
+      "published_date": "5/10/2026"
+    },
+    {
+      "store_name": "The Frosted Sheep Bake Shop",
+      "location": "220 Albany Turnpike in Canton",
+      "event_type": "Opening",
+      "event_date": "Not specified (grand opening last weekend)",
+      "status": "opens",
+      "short_description": "The Frosted Sheep Bake Shop opens in Canton at 220 Albany Turnpike, part of the Canton Village shopping center. They celebrated their grand opening last weekend. The bakery sells scratch-made cookies and cupcakes with various flavors.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/canton-scoop-the-frosted-sheep-bake-shop-opens-in-canton",
+      "published_date": "5/10/2026"
+    },
+    {
+      "store_name": "O'Reilly Auto Parts",
+      "location": "850 West Main Street in Branford",
       "event_type": "Opening",
       "event_date": "Not specified",
-      "status": "being proposed",
-      "short_description": "A new sandwich shop (Ona's Gourmet) is proposed for the former Stacy's Cleaners at 55 White Avenue. Plans include seating for 30 and are subject to approvals.",
-      "article_link": "https://www.theconnecticutscoop.com/all-mass-posts/east-longmeadow-scoop-two-new-restaurants-proposed-in-east-longmeadow"
+      "status": "eyeing",
+      "short_description": "O’Reilly Auto Parts is eyeing the former Local Craft Kitchen site at 850 West Main Street in Branford for a new location. The existing building would be demolished and a new building constructed. Plans are subject to local approvals.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/branford-scoop-oreilly-auto-parts-eyeing-branford-location",
+      "published_date": "5/10/2026"
     },
     {
-      "store_name": "Tony Phở Restaurant",
-      "location": "51 Prospect Street, East Longmeadow",
+      "store_name": "Local Craft Kitchen",
+      "location": "850 West Main Street in Branford",
+      "event_type": "Closing",
+      "event_date": "July 2024",
+      "status": "closed",
+      "short_description": "The existing building on the site has sat vacant since Local Craft Kitchen closed in July 2024.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/branford-scoop-oreilly-auto-parts-eyeing-branford-location",
+      "published_date": "5/10/2026"
+    },
+    {
+      "store_name": "Don Cola'o Panaderia",
+      "location": "43 East Main Street in Meriden",
       "event_type": "Opening",
       "event_date": "Not specified",
-      "status": "proposed",
-      "short_description": "Tony Phở Restaurant is proposed for 51 Prospect Street. The Vietnamese spot will focus on pho along with other traditional dishes and has planned seating for 36. Plans subject to approvals.",
-      "article_link": "https://www.theconnecticutscoop.com/all-mass-posts/east-longmeadow-scoop-two-new-restaurants-proposed-in-east-longmeadow"
+      "status": "NOW OPEN",
+      "short_description": "Don Cola'o Panaderia is NOW OPEN at 43 East Main Street in Meriden, on the first floor of the Wells Fargo building. The cafe features authentic pastries, coffee, sandwiches, and Latin-inspired items.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/meriden-scoop-don-colao-panaderia-opens-in-meriden",
+      "published_date": "5/10/2026"
     },
     {
-      "store_name": "Ross Dress for Less",
-      "location": "3105 Berlin Turnpike, Newington",
+      "store_name": "Mystic Market",
+      "location": "295 Flanders Road in East Lyme",
       "event_type": "Opening",
-      "event_date": "fall",
-      "status": "coming soon",
-      "short_description": "Ross Dress for Less is coming to the former Joann Fabrics space. The discount retailer will occupy 24,890 square feet in the newly named Ross Plaza with a fall opening planned.",
-      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/newington-scoop-ross-dress-for-less-officially-coming-to-newington-plaza-receives-new-name"
+      "event_date": "Tuesday 05/12",
+      "status": "will open this Tuesday",
+      "short_description": "Mystic Market will open this Tuesday at 295 Flanders Road in East Lyme, the former Daddy's Noodle Bar/Five Guys space. It is a gourmet market and eatery serving breakfast, grab & go meals, and more.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/east-lyme-scoop-mystic-market-sets-opening-date",
+      "published_date": "5/10/2026"
     },
     {
-      "store_name": "Crunch & Flame",
-      "location": "162 Chase Avenue, Waterbury",
+      "store_name": "The Toy Vault",
+      "location": "suite 290 at Tanger Outlets, Foxwoods",
+      "event_type": "Opening",
+      "event_date": "Not specified (anticipated sometime next week)",
+      "status": "nearing the opening",
+      "short_description": "Toy Vault is nearing the opening of their new store at suite 290 at Tanger Outlets, Foxwoods. They buy and sell new & vintage toys, gaming cards, video games, and pop-culture items.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/foxwoods-scoop-new-tenants-are-popping-up-at-tanger-outlets",
+      "published_date": "5/10/2026"
+    },
+    {
+      "store_name": "Enzo Mens Wear",
+      "location": "suite 310 at Tanger Outlets, Foxwoods",
       "event_type": "Opening",
       "event_date": "Not specified",
-      "status": "coming soon",
-      "short_description": "Crunch & Flame is coming to the former Rooster's Chicken & Waffles space. The fast-casual spot will serve Caribbean and American items like island bowls and jerk chicken. No timeline announced.",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/waterbury-scoop-new-restaurant-coming-soon-to-chase-avenue"
+      "status": "NOW OPEN",
+      "short_description": "Enzo Mens Wear is NOW OPEN in their new home at suite 310 at Tanger Outlets, Foxwoods. It is a men’s formal wear and clothing store previously located at the Crystal Mall.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/foxwoods-scoop-new-tenants-are-popping-up-at-tanger-outlets",
+      "published_date": "5/10/2026"
+    },
+    {
+      "store_name": "Vineyard Vines Outlet",
+      "location": "suite 330 at Tanger Outlets, Foxwoods",
+      "event_type": "Remodel",
+      "event_date": "May 13th",
+      "status": "will reopen in the new space on May 13th",
+      "short_description": "Vineyard Vines Outlet is moving to a new larger space in suite 330 at Tanger Outlets, Foxwoods. The store will be open until May 10th and reopen in the new space on May 13th.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/foxwoods-scoop-new-tenants-are-popping-up-at-tanger-outlets",
+      "published_date": "5/10/2026"
+    },
+    {
+      "store_name": "Clean Eats by The Dessert Board Company",
+      "location": "main concourse of Tanger Outlets, Foxwoods",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "NOW OPEN",
+      "short_description": "Clean Eats by The Dessert Board Company is NOW OPEN in the main concourse of Tanger Outlets, Foxwoods. They offer gluten-free, dairy-free, nut-free, and soy-free eats including healthy snacks and specialty cookies.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/foxwoods-scoop-new-tenants-are-popping-up-at-tanger-outlets",
+      "published_date": "5/10/2026"
+    },
+    {
+      "store_name": "Bobby’s Burgers",
+      "location": "Casino of the Earth at Mohegan Sun",
+      "event_type": "Remodel",
+      "event_date": "Not specified (reopened last Friday, grand reopening May 21st)",
+      "status": "reopened",
+      "short_description": "Bobby’s Burgers by Bobby Flay reopened after renovation and rebranding at Mohegan Sun, replacing the previous Bobby’s Burger Palace restaurant. A grand reopening event will be held on May 21st at 1:00pm.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/mohegan-sun-scoop-take-a-look-at-the-new-bobbys-burgers",
+      "published_date": "5/10/2026"
     }
   ],
   "non_working": [
     {
-      "identifier": "Article 12",
-      "reason": "text missing / failed to fetch full content"
+      "identifier": "Article 3",
+      "reason": "no business details (only TV show filming at existing restaurant)"
     }
   ]
 }
