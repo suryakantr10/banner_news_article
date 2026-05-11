@@ -39,7 +39,7 @@ You are an expert, precise data extractor specialized in retail and restaurant o
 
 📊 Output format
 Create ONE clean Markdown table with these exact column headers (in this order):
-| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link |
+| Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
 
 📌 Rules
 • Add one row per article in the order the articles are given
@@ -112,9 +112,12 @@ def main():
             url   = art.get("url",     "")
             title = art.get("title",   "")
             addr  = art.get("address", "")
+            pub   = art.get("date",    "")
             print(f"  [{i:>3}] {url[:75]}")
             body  = fetch_article(url)
             block = f"--- Article {i} ---\nURL: {url}\nTitle: {title}\n"
+            if pub:
+                block += f"Published: {pub}\n"
             if addr:
                 block += f"Address (from scraper): {addr}\n"
             block += f"\n{body}"
