@@ -1,366 +1,78 @@
 {
-  "last_updated": "2026-05-10 22:02 UTC",
-  "total": 60,
+  "last_updated": "2026-05-11 22:07 UTC",
+  "total": 12,
   "data": [
     {
-      "date": "May 10, 2026",
-      "url": "https://whatnow.com/memphis/restaurants/a-forkful-restaurant-and-catering-making-memphis-plans/",
-      "title": "A Forkful Restaurant and Catering Making Memphis Plans",
-      "address": "2650 Thousand Oaks Blvd, Memphis, TN 38118"
+      "date": "May 11, 2026",
+      "url": "https://whatnow.com/detroit/restaurants/daily-press-cafe-to-take-over-kung-fu-tea-in-downtown-west-dearborn/",
+      "title": "Daily Press Cafe to Take Over Kung Fu Tea in Downtown West Dearborn",
+      "address": "22001 Michigan Ave, Dearborn, MI 48124"
     },
     {
-      "date": "May 10, 2026",
-      "url": "https://whatnow.com/memphis/restaurants/mcalisters-deli-headed-to-jonesboro/",
-      "title": "McAlister’s Deli Headed to Jonesboro",
-      "address": "2024 Fair Park Blvd., Jonesboro, AR 72401"
+      "date": "May 11, 2026",
+      "url": "https://whatnow.com/philadelphia/restaurants/blank-street-brewing-up-second-philadelphia-location/",
+      "title": "Blank Street Brewing Up Second Philadelphia Location",
+      "address": "1801 Spruce St., Philadelphia, PA 19103"
     },
     {
-      "date": "May 10, 2026",
-      "url": "https://whatnow.com/memphis/restaurants/ginas-place-to-reopen-this-summer/",
-      "title": "Gina’s Place to Reopen this Summer",
-      "address": "2400 S Caraway Rd, Jonesboro, AR 72401"
+      "date": "May 11, 2026",
+      "url": "https://whatnow.com/philadelphia/restaurants/steel-city-brewing-to-open-in-coatesville-this-spring-under-restaurateur-philip-ferro/",
+      "title": "Steel City Brewing to Open in Coatesville This Spring",
+      "address": "132 Lincoln Hwy. E, Coatesville, PA 19320"
     },
     {
-      "date": "May 09, 2026",
-      "url": "https://whatnow.com/las-vegas/restaurants/bartholas-vegas-first-all-bottle-german-influenced-beer-bar/",
-      "title": "Bartho's Las Vegas' First All-bottle German Influenced Beer Bar To Open in Arts District",
-      "address": "1563 S Commerce St, Las Vegas, NV 89102"
+      "date": "May 11, 2026",
+      "url": "https://whatnow.com/philadelphia/restaurants/texas-de-brazil-to-open-at-lehigh-valley-mall-in-whitehall/",
+      "title": "Texas de Brazil to Open at Lehigh Valley Mall in Whitehall",
+      "address": "250 Lehigh Valley Mall, Whitehall Township, PA 18052"
     },
     {
-      "date": "May 09, 2026",
-      "url": "https://whatnow.com/houston/restaurants/no-diggity-new-cafe-concept-slated-to-open-on-bell-street/",
-      "title": "No Diggity, New Cafe Concept, Slated to Open on Bell Street",
-      "address": "2307 Bell St, Houston, TX 77003"
+      "date": "May 11, 2026",
+      "url": "https://whatnow.com/portland/restaurants/thai-staple-langbaan-moving-southeast-for-next-portland-location/",
+      "title": "Thai Staple Langbaan Moving Southeast for Next Portland Location",
+      "address": "215 SE 9th Ave, Portland, OR 97214"
     },
     {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/las-vegas/restaurants/cobra-clutch-cocktail-bar-to-debut-in-downtown-las-vegas/",
-      "title": "Cobra Clutch Cocktail Bar to Debut in Downtown Las Vegas",
-      "address": "1201 S Main St, Las Vegas, NV 89104"
+      "date": "May 11, 2026",
+      "url": "https://whatnow.com/miami/restaurants/new-11500-square-foot-beach-club-set-to-debut-in-miami-beachs-art-deco-district/",
+      "title": "New 11,500-Square-Foot Beach Club Set to Debut in Miami Beach’s Art Deco District",
+      "address": "1717 Collins Ave, Miami Beach, FL 33139, United States"
     },
     {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/sacramento/restaurants/bosphorus-bringing-traditional-turkish-fare-to-rocklin/",
-      "title": "Bosphorus Bringing Traditional Turkish Fare to Rocklin",
-      "address": "6835 Five Star Blvd, Rocklin, CA 95677"
+      "date": "May 11, 2026",
+      "url": "https://whatnow.com/new-orleans/restaurants/new-orleans-restaurant-known-for-german-inspired-menu-to-close-on-june-1/",
+      "title": "New Orleans Restaurant Known for German-Inspired Menu to Close on June 1",
+      "address": "617-B Piety, New Orleans, LA 70117"
     },
     {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/houston/restaurants/wingstop-to-open-in-within-the-highlands-shopping-center/",
-      "title": "Wingstop to Open in Within the Highlands Shopping Center",
-      "address": "300 N Main St, Highlands, TX 77562"
+      "date": "May 11, 2026",
+      "url": "https://whatnow.com/nashville/restaurants/new-7-brew-location-planned-for-tullahoma/",
+      "title": "New 7 Brew Location Planned For Tullahoma",
+      "address": "2102 N Jackson St, Tullahoma, TN 37388, USA"
     },
     {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/memphis/restaurants/lobster-king-seafood-to-team-up-with-a1-wings-things/",
-      "title": "Lobster King Seafood to Team up With A1 Wings & Things",
-      "address": "420 S Germantown Pkwy, Cordova, TN 38018"
+      "date": "May 11, 2026",
+      "url": "https://whatnow.com/chicago/restaurants/new-wasai-bbq-concept-to-serve-korean-barbecue-in-chinatown/",
+      "title": "New ‘Wasai BBQ’ Concept to Serve Korean Barbecue in Chinatown",
+      "address": "2237 S Wentworth Ave, Chicago, IL 60616"
     },
     {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/las-vegas/restaurants/salvage-city-supper-club-returns-to-edc-las-vegas/",
-      "title": "Salvage City Supper Club Returns to EDC Las Vegas",
-      "address": "7000 Las Vegas Blvd N, Las Vegas, NV 89115"
+      "date": "May 11, 2026",
+      "url": "https://whatnow.com/philadelphia/restaurants/victory-bar-grill-under-new-ownership-with-a-planned-refresh/",
+      "title": "Victory Bar & Grill Under New Ownership, Plans Refresh",
+      "address": "795 NJ-73 West Berlin, NJ 08091"
     },
     {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/dallas/restaurants/major-perk-coffee-to-pour-a-cup-for-fort-worth/",
-      "title": "Major Perk Coffee to Pour a Cup for Fort Worth",
-      "address": "1405 S Cherry Ln, Fort Worth, TX 76108"
+      "date": "May 11, 2026",
+      "url": "https://whatnow.com/chicago/restaurants/popular-joliet-mall-restaurant-shuts-down-following-tragic-incident/",
+      "title": "Popular Joliet Mall Restaurant Shuts Down Following Tragic Incident",
+      "address": "3151 Voyager Ln, Joliet, IL 60431"
     },
     {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/portland/restaurants/team-behind-thirsty-sasquatch-opening-lil-pig-lil-pig-in-vancouver/",
-      "title": "Team Behind Thirsty Sasquatch Opening Lil Pig Lil Pig in Vancouver",
-      "address": "2014 Main St, Vancouver, WA 98660"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/portland/restaurants/owner-of-dahui-hawaiian-bar-grill-plans-new-venue/",
-      "title": "Owner of Da’Hui Hawaiian Bar & Grill Plans New Venue",
-      "address": "8000 SE Foster Rd, Portland, OR 97206"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/washington-dc/restaurants/soko-butcher-bringing-one-of-the-regions-best-sandwiches-to-arlington/",
-      "title": "SOKO Butcher Bringing One of the Region’s Best Sandwiches to Arlington",
-      "address": "269 19th Ct S, Arlington, VA 22202"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/portland/restaurants/the-savvy-sipper-opening-in-battle-ground/",
-      "title": "The Savvy Sipper Opening in Battle Ground",
-      "address": "1113 SE Rasmussen Blvd, Battle Ground, WA 98604"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/portland/restaurants/couve-carts-opening-in-downtown-vancouver/",
-      "title": "Couve Carts Opening in Downtown Vancouver",
-      "address": "W Evergreen Blvd & Daniels St, Vancouver, WA 98660"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/houston/restaurants/koyo-to-open-a-second-location/",
-      "title": "Koyo to Open a Second Location",
-      "address": "1835 N Shepherd Dr, Houston, TX 77008"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/portland/restaurants/former-black-water-space-looks-to-be-getting-a-new-life/",
-      "title": "Former Black Water Space Looks to Be Getting a New Life",
-      "address": "835 NE Broadway, Portland, OR 97232"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/dallas/restaurants/nevermore-tavern-bringing-a-variety-of-spirits-to-dfw/",
-      "title": "Nevermore Tavern Bringing a Variety of Spirits to DFW",
-      "address": "170 W Main St, Lewisville, TX 75057"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/las-vegas/restaurants/jps-brasserie-sports-den-to-debut-in-shopping-center-on-sahara/",
-      "title": "JP's Brasserie & Sports Den to Debut in Shopping Center on Sahara",
-      "address": "5781 W Sahara Ave, Las Vegas, NV 89146"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/sacramento/restaurants/another-peets-coffee-location-could-be-brewing-in-greater-sacramento/",
-      "title": "Another Peet’s Coffee Location Could Be Brewing in Greater Sacramento",
-      "address": "2281 Del Paso Rd, Suite 150, Sacramento, CA 95835"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/sacramento/restaurants/new-restaurant-quietly-taking-shape-at-folsoms-broadstone-plaza/",
-      "title": "New Restaurant Quietly Taking Shape at Folsom's Broadstone Plaza",
-      "address": "2791 E Bidwell St, Suite 100, Folsom, CA 95630"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/orlando/restaurants/naya-comida-barrita-opening-in-maitland/",
-      "title": "Naya Comida + Barrita Opening in Maitland",
-      "address": ""
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/orlando/restaurants/stoners-pizza-joint-plans-8-new-locations-in-orlando-metro-area/",
-      "title": "Stoner’s Pizza Joint Plans 8 New Locations in Orlando Metro Area",
-      "address": ""
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/orlando/restaurants/viva-healthy-headed-to-winter-park/",
-      "title": "Viva Healthy Headed to Winter Park",
-      "address": "7612 University Blvd Unit 21, Winter Park, FL 32792"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/orlando/restaurants/salbio-coffee-and-bites-opening-in-oxford/",
-      "title": "Owner of Candelaria Eatery & Cafe Opening Salbio Coffee & Bites",
-      "address": "4060 Thomas St b01, Oxford, FL 34484"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/boston/restaurants/on-the-bun-bringing-vintage-diner-energy-and-smash-burgers-to-lowell/",
-      "title": "On the Bun Bringing Vintage Diner Energy and Smash Burgers to Lowell",
-      "address": "120 Merrimack St, Lowell, MA 01852"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/jacksonville/restaurants/new-japanese-restaurant-from-indigo-road-opening-in-the-vandeveer/",
-      "title": "New Japanese Restaurant from Indigo Road Opening in the Vandeveer",
-      "address": "515 N Pearl St, Jacksonville, FL 32202"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/jacksonville/restaurants/the-june-opening-in-downtown-jacksonville/",
-      "title": "The June Opening in Downtown Jacksonville",
-      "address": "424 N Hogan St, Jacksonville, FL 32202"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/san-francisco/restaurants/the-peasants-courtyard-closes-in-alamo-as-worth-group-rebrands-to-the-courtyard-restaurant/",
-      "title": "The Peasant’s Courtyard Closes in Alamo as Worth Group Rebrands to The Courtyard Restaurant",
-      "address": "3195 Danville Blvd, Alamo, CA 94507, United States"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/washington-dc/restaurants/exclusive-dallas-wine-club-headed-for-dc/",
-      "title": "Exclusive Dallas Wine Club Headed for DC",
-      "address": "1115 30th St NW, Washington, DC 20007"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/orange-county/restaurants/ugahs-bakery/",
-      "title": "Ugah’s Bakery may open its first spot in Newport Beach",
-      "address": "349 Old Newport Blvd, Newport Beach, CA 92663"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/tampa/restaurants/100-maracaibo-expanding-to-new-sarasota-location/",
-      "title": "100% Maracaibo Expanding to New Sarasota Location",
-      "address": "3915 N Lockwood Ridge Rd, Sarasota, FL 34234"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/phoenix/restaurants/press-coffee-planning-new-cafe-in-peoria/",
-      "title": "PRESS Coffee Planning New Cafe in Peoria",
-      "address": "10134 W Happy Valley Rd, Peoria, AZ 85383"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/tampa/restaurants/lolitas-kitchen-looks-to-be-opening-in-fort-meade/",
-      "title": "Lolita’s Kitchen Looks to Be Opening in Fort Meade",
-      "address": "400 S Charleston Ave, Fort Meade, FL 33841"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/boston/restaurants/daily-provisions-to-open-new-cafe-in-bostons-back-bay/",
-      "title": "Daily Provisions to Open New Café in Boston's Back Bay",
-      "address": "501 Boylston St, Boston, MA 02116"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/boston/restaurants/dairy-queen-set-to-return-to-lynn-after-decades-away/",
-      "title": "Dairy Queen Set to Return to Lynn After Decades Away",
-      "address": "414 Broadway, Lynn, MA 01904"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/new-orleans/restaurants/cafe-under-construction-in-the-treme-lafitte-area/",
-      "title": "Café Under Construction in the Treme-Lafitte Area",
-      "address": "200 N Galvez St, New Orleans, LA 70112"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/miami/restaurants/cowy-burgers-award-winning-smash-burgers-coming-to-doral/",
-      "title": "Cowy Burger's Award-Winning Smash Burgers Coming to Doral",
-      "address": ""
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/new-york/restaurants/cocktails-and-content-inside-the-bar-concept-coming-to-hells-kitchen/",
-      "title": "Cocktails and Content: Inside the Bar Concept Coming to Hell's Kitchen",
-      "address": "359 W 54th St, New York, NY 10019"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/miami/restaurants/kekes-breakfast-cafe-coming-to-pembroke-pines/",
-      "title": "Keke's Breakfast Cafe Coming to Pembroke Pines",
-      "address": "10800 Pines Blvd, Pembroke Pines, FL 33026"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/detroit/restaurants/owner-of-bay-citys-stock-pot-building-new-kitchen-with-crafted-cocktails/",
-      "title": "Owner of Bay City’s 'Stock Pot' Building New Kitchen with Crafted Cocktails",
-      "address": "8 State Park Dr, Bay City, MI 48706"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/chicago/restaurants/popular-chicago-neighborhood-pizza-spot-set-to-close-on-may-22/",
-      "title": "Popular Chicago Neighborhood Pizza Spot Set to Close on May 22",
-      "address": "1706 W Foster Ave, Chicago, IL 60640"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/denver/restaurants/popular-northern-colorado-tavern-to-shut-down-after-16-years-of-operation/",
-      "title": "Popular Northern Colorado Tavern to Shut Down After 16 Years of Operation",
-      "address": "2918 67th Ave, Greeley, CO 80634"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/sacramento/restaurants/local-sf-supermarket-owner-planning-massive-vietnamese-street-food-restaurant-in-south-sacramento/",
-      "title": "Local SF Supermarket Owner Planning Massive Vietnamese Street Food Restaurant in South Sacramento",
-      "address": "4582 Mack Rd, Sacramento, CA 95823"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/miami/restaurants/black-sheep-coffee-to-open-in-doral-miami-beach/",
-      "title": "Black Sheep Coffee To Open in Doral, Miami Beach",
-      "address": "10800 NW 41st St, Doral, FL 33172"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/austin/restaurants/local-handels-franchisees-expanding-to-second-austin-store/",
-      "title": "Local Handel’s Franchisees Expanding To Second Austin Store | What Now Austin",
-      "address": "19389 Ronald Reagan Blvd #150, Leander, TX 78641"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/san-francisco/restaurants/oakland-asian-fusion-restaurant-set-to-close-on-claremont-avenue/",
-      "title": "Oakland Asian Fusion Restaurant Set to Close on Claremont Avenue",
-      "address": "6200 Claremont Ave, Oakland, CA 94618"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/orange-county/restaurants/popular-california-seafood-chain-pacific-catch-opens-at-brea-mall/",
-      "title": "Popular California Seafood Chain Pacific Catch Opens at Brea Mall",
-      "address": "1430 Brea Mall, Brea, CA 92821, USA"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/los-angeles/restaurants/rising-costs-force-longtime-hollywood-burger-restaurant-to-close/",
-      "title": "Rising Costs Force Longtime Hollywood Burger Restaurant to Close",
-      "address": "7000 Hollywood Blvd, Los Angeles, CA 90028, United States"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/columbus/restaurants/bristol-republic-set-to-open-nashville-inspired-dublin-venue-at-bridge-park-next-month/",
-      "title": "Bristol Republic Set to Open Nashville-Inspired Dublin Venue at Bridge Park Next Month",
-      "address": "4495 Bridge Park Ave, Dublin, OH 43017, USA"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/los-angeles/restaurants/dragon-alley-coffee-planning-to-brew-magic-in-santa-monica/",
-      "title": "Dragon Alley Coffee Planning To ‘Brew Magic’ In Santa Monica | What Now Los Angeles",
-      "address": "312 Santa Monica Blvd, Santa Monica, CA 90401"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/houston/restaurants/new-300-seat-chef-driven-italian-dining-concept-set-to-open-in-katy/",
-      "title": "New 300-Seat Chef-Driven Italian Dining Concept Set to Open in Katy",
-      "address": "23501 Cinco Ranch Blvd, Katy, TX 77494"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/sacramento/restaurants/la-costa-chef-to-open-modern-mexican-restaurant-in-east-sacramento/",
-      "title": "La Costa Chef to Open Modern Mexican Restaurant in East Sacramento",
-      "address": "3675 J St, Sacramento, CA 95816"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/los-angeles/restaurants/skyduster-beer-opening-in-fashion-district-this-summer/",
-      "title": "Skyduster Beer Opening In Fashion District This Summer | What Now Los Angeles",
-      "address": "1124 San Julian St, Los Angeles, CA 90015"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/atlanta/restaurants/migration-coffee-co-planning-brick-and-mortar-location/",
-      "title": "Migration Coffee Co. Planning Brick-and-Mortar Location | What Now Atlanta",
-      "address": "115 Pacific Ave, Bremen, GA 30110"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/nashville/restaurants/the-jaguar-room-bringing-cocktail-focused-concept-to-knoxvilles-old-city/",
-      "title": "The Jaguar Room Bringing Cocktail-Focused Concept To Knoxville’s Old City",
-      "address": "224 N Central St, Knoxville, TN 37902, USA"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/chicago/restaurants/new-taco-works-concept-to-debut-near-cicero-in-early-summer/",
-      "title": "New 'Taco Works' Concept to Debut Near Cicero in Early Summer",
-      "address": "3800 S Cicero Ave, Cicero, IL 60804"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/sacramento/restaurants/savi-mexican-grill-to-bring-asian-influenced-burritos-and-bowls-to-elk-grove/",
-      "title": "SAVI Mexican Grill to Bring Asian-Influenced Burritos and Bowls to Elk Grove",
-      "address": "8234 Laguna Blvd, Suite 140, Elk Grove, CA 95758"
-    },
-    {
-      "date": "May 08, 2026",
-      "url": "https://whatnow.com/charleston/restaurants/cintli-to-debut-with-heirloom-corn-culinary-experiences-foundational-to-nourishment-community/",
-      "title": "CINTLI to Debut With Heirloom Corn Culinary Experiences",
-      "address": ""
+      "date": "May 11, 2026",
+      "url": "https://whatnow.com/philadelphia/restaurants/magerks-pub-grill-expands-greater-philadelphia-footprint-with-west-chester-location/",
+      "title": "MaGerk’s Pub & Grill to Expand to West Chester",
+      "address": "3 W Gay St. West Chester, PA 19380"
     }
   ]
 }
