@@ -183,21 +183,45 @@ def main():
             cards = driver.find_elements(By.CSS_SELECTOR, "div.waddons-blog-card")
             print(f"Found {len(cards)} card(s) on page: {url}")
 
+            # Dump innerHTML of the first card once per page so we can see the real structure
+            if cards:
+                print(f"[DEBUG] First card innerHTML:\n{cards[0].get_attribute('innerHTML')[:1500]}")
+
+            import re
+
+            # Date selectors to try in order — expand as we learn the real structure
+            DATE_SELECTORS = [
+                "div.waddons-blog-meta",
+                "span.waddons-blog-meta",
+                "div.waddons-blog-date",
+                "span.waddons-blog-date",
+                "time",
+                "div.waddons-blog-footer",
+                "span.waddons-blog-footer",
+            ]
+
             for card in cards:
 
                 # ---- Heading ----
                 heading_elements = card.find_elements(By.CSS_SELECTOR, "div.waddons-blog-header")
                 heading = heading_elements[0].text.strip() if heading_elements else ""
 
-                # ---- Date ----
-                meta_elements = card.find_elements(By.CSS_SELECTOR, "div.waddons-blog-meta")
+                # ---- Date — try multiple selectors, then fall back to full card text ----
                 article_date = None
+                meta_text = None
+                date_text = None
 
-                if meta_elements:
-                    meta_text = meta_elements[0].text.strip()
-                    # Extract MM/DD/YYYY from the meta text
-                    import re
+                for sel in DATE_SELECTORS:
+                    els = card.find_elements(By.CSS_SELECTOR, sel)
+                    if els:
+                        meta_text = els[0].text.strip()
+                        break
 
+                # If none of the targeted selectors found a date, scan the whole card text
+                if not meta_text:
+                    meta_text = card.text.strip()
+
+                if meta_text:
                     match = re.search(r"(\d{1,2}/\d{1,2}/\d{4})", meta_text)
                     if match:
                         date_text = match.group(1)
@@ -206,7 +230,19 @@ def main():
                         except Exception:
                             article_date = None
                     else:
-                        print("Warning: could not find a date in meta text:", repr(meta_text))
+                        # Also try "Month DD, YYYY" format (e.g. "May 9, 2026")
+                        match2 = re.search(
+                            r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{1,2},?\s+\d{4}",
+                            meta_text, re.IGNORECASE
+                        )
+                        if match2:
+                            date_text = match2.group(0)
+                            for fmt in ("%B %d, %Y", "%B %d %Y", "%b %d, %Y", "%b %d %Y"):
+                                try:
+                                    article_date = datetime.strptime(date_text, fmt).date()
+                                    break
+                                except Exception:
+                                    continue
 
                 # ---- Link ----
                 link_elements = card.find_elements(By.CSS_SELECTOR, "a.waddons-blog-card-link-full")
@@ -215,8 +251,8 @@ def main():
                 # DEBUG: show what we parsed for the card (helps in CI logs)
                 print("Card debug:", {
                     "heading": heading,
-                    "meta_text": meta_text if meta_elements else None,
-                    "date_text": locals().get("date_text"),
+                    "meta_text": meta_text,
+                    "date_text": date_text,
                     "article_date": article_date,
                     "link": link,
                 })

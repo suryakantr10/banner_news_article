@@ -44,6 +44,7 @@ COLUMN_MAP = {
     "short description":                     "short_description",
     "article link":                          "article_link",
     "article":                               "article_link",
+    "published date":                        "published_date",
 }
 
 
