@@ -1,14 +1,347 @@
 {
-  "last_updated": "2026-05-12",
+  "last_updated": "2026-05-13",
   "data": [
+    {
+      "store_name": "Baisel’s African Restaurant",
+      "location": "1400 10th St Unit D, West Palm Beach, FL 33401",
+      "event_type": "Opening",
+      "event_date": "late June",
+      "status": "targeting a late June opening",
+      "short_description": "Baisel's African Restaurant is opening to bring Ghanaian and West African food to West Palm Beach. The menu will include egusi, fufu, banku, okra soup, palm nut soup, pepper soup, peanut soup, jollof rice and grilled tilapia. It will start with about 14 seats focused on pickup with limited seating.",
+      "article_link": "https://www.businessdebut.com/baisels-african-restaurant-bringing-ghanaian-cuisine-to-west-palm-beach/"
+    },
+    {
+      "store_name": "Mikey’s Pizzeria",
+      "location": "2320 Bale St #114, Raleigh, NC 27608",
+      "event_type": "Opening",
+      "event_date": "about two months",
+      "status": "targeting an opening in about two months",
+      "short_description": "Mikey's Pizzeria is taking over the former Pizza and Pints location. The 2,700-square-foot space will have about 45 indoor seats and 20-30 outdoor seats with counter service, beer and wine, and arcade games. It will serve pizza by the slice, 18-inch pies, and build-your-own pizzas at night.",
+      "article_link": "https://www.businessdebut.com/mikeys-pizzeria-opening-on-bale-street-in-raleigh/"
+    },
+    {
+      "store_name": "Matilde Coastal Mexican Kitchen",
+      "location": "300 W. Tyler St., Suite A, Tampa, FL 33602",
+      "event_type": "Opening",
+      "event_date": "late January or early February 2027",
+      "status": "targeting a late January or early February 2027 opening",
+      "short_description": "Matilde Coastal Mexican Kitchen is coming to the AER Tampa building. The restaurant will seat about 330 guests with full-service dining, indoor and outdoor seating along the Riverwalk, and live music on weekends. The menu will focus on coastal Mexican cooking and steakhouse elements using live fire.",
+      "article_link": "https://www.businessdebut.com/matilde-bringing-coastal-mexican-steakhouse-concept-to-downtown-tampa/"
+    },
+    {
+      "store_name": "Botanico",
+      "location": "1106 Crescent Ave NE, Atlanta, GA 30309",
+      "event_type": "Opening",
+      "event_date": "August",
+      "status": "targeting an August opening",
+      "short_description": "Botanico is an upscale Latin concept returning to a new Midtown location in the former Lure space. It will have around 150 seats as an affordable luxury casual neighborhood restaurant. The menu will draw from Colombia, Venezuela, Mexico, Peru, Cuba and the Caribbean with seafood, steaks and tropical flavors.",
+      "article_link": "https://www.businessdebut.com/botanico-hospitality-group-bringing-two-new-concepts-to-atlanta/"
+    },
+    {
+      "store_name": "Incognito",
+      "location": "1025 Howell Mill Rd NW, Atlanta, GA 30318",
+      "event_type": "Opening",
+      "event_date": "early June",
+      "status": "targeting an early June opening",
+      "short_description": "Incognito is a modern chic dive bar with elevated mixology in West Midtown. It will offer food from El Santo Gallo taqueria truck along with pool tables, DJ, and screens. The cocktail program will be refined.",
+      "article_link": "https://www.businessdebut.com/botanico-hospitality-group-bringing-two-new-concepts-to-atlanta/"
+    },
+    {
+      "store_name": "Knuckies Sandwiches and Sips",
+      "location": "4108 Medley Blvd., Johns Creek, GA 30097",
+      "event_type": "Opening",
+      "event_date": "October 29th at 10 a.m.",
+      "status": "planned to open October 29th at 10 a.m.",
+      "short_description": "Knuckies Sandwiches and Sips will be the 10th location and an elevated version with chef-driven sandwiches and dirty sodas. The 1,100-square-foot spot at Medley will offer counter service for dine-in or takeout. The menu includes cheesesteaks, Italian, crab cake sandwich, lobster roll and Sparkraft dirty sodas.",
+      "article_link": "https://www.businessdebut.com/knuckies-sandwiches-and-sips-opening-at-medley-in-johns-creek/"
+    },
+    {
+      "store_name": "Trap Wingz",
+      "location": "4725 S Atlanta Rd SE, Atlanta, GA 30339",
+      "event_type": "Opening",
+      "event_date": "next 60-70 days",
+      "status": "expected to open in the next 60-70 days",
+      "short_description": "Trap Wingz is opening its third location in a former Bites space. The takeout-focused spot will serve crispy wings, burgers, fried fish, Philly cheesesteaks and fries.",
+      "article_link": "https://www.businessdebut.com/trap-wingz-planning-two-new-locations/"
+    },
+    {
+      "store_name": "Trap Wingz",
+      "location": "3755 Carmia Dr SW #430, Atlanta, GA 30331",
+      "event_type": "Opening",
+      "event_date": "next 60-90 days",
+      "status": "expected to open in the next 60-90 days",
+      "short_description": "Trap Wingz is opening its fourth location. The takeout-focused spot will serve crispy wings, burgers, fried fish, Philly cheesesteaks and fries.",
+      "article_link": "https://www.businessdebut.com/trap-wingz-planning-two-new-locations/"
+    },
+    {
+      "store_name": "Piesanos Stone Fired Pizza",
+      "location": "2259 Dr. Randy McDaniel Way, Middleton, FL 34762",
+      "event_type": "Opening",
+      "event_date": "late fall",
+      "status": "planning a late fall opening",
+      "short_description": "Piesanos Stone Fired Pizza is opening its 16th location and third in The Villages area. The new build will have about 150 seats with full-service dining, full bar, patio, and Express To-Go area. The menu centers on granite stone-fired pizzas, pastas and Italian dishes.",
+      "article_link": "https://www.businessdebut.com/piesanos-stone-fired-pizza-opening-in-middleton/"
+    },
+    {
+      "store_name": "Halftime Hangout Sports Bar",
+      "location": "2080 Club Pond Rd, Raeford, NC 28376",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "preparing to open",
+      "short_description": "Halftime Hangout Sports Bar is a neighborhood sports bar with pool table, dart boards, karaoke, trivia and possible live music. The menu will include smash burgers, salads, wings and Louisiana dishes like gumbo and po’boys. It plans family-and-friends event on the 15th with official opening to be announced.",
+      "article_link": "https://www.businessdebut.com/halftime-hangout-sports-bar-preparing-to-open-in-raeford/"
+    },
+    {
+      "store_name": "Churp",
+      "location": "3121 Edwards Mill Rd, Raleigh, NC 27612",
+      "event_type": "Opening",
+      "event_date": "late summer or early fall",
+      "status": "preparing to begin construction",
+      "short_description": "Churp is a simplified clean-eating bowl concept from the co-founder of Happy and Hale. The menu will feature healthy bowls with rice, chicken, vegetables, sauces and a kids menu. It will partner with influencers for special bowls.",
+      "article_link": "https://www.businessdebut.com/churp-bringing-simplified-clean-eating-bowl-concept-to-raleigh/"
+    },
+    {
+      "store_name": "Topsail Steamer",
+      "location": "8111 Creedmoor Rd Suite 29, Raleigh, NC 27613",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "coming to",
+      "short_description": "Topsail Steamer is a take-home seafood boil concept. Customers order buckets packed with fresh seafood and fixings to steam at home. It offers signature and custom buckets with clams, crab legs, shrimp and more.",
+      "article_link": "https://www.businessdebut.com/topsail-steamer-to-debut-in-raleigh/"
+    },
+    {
+      "store_name": "Crooked Can Brewing Company",
+      "location": "1600 Crooked Can Loop, Minneola, FL 34715",
+      "event_type": "Opening",
+      "event_date": "late June",
+      "status": "targeted late June opening",
+      "short_description": "Crooked Can Brewing Company is opening a large-scale destination brewery and venue. The 42,500-square-foot space will have brewing, expansive taproom, bars, beer garden and kids areas. It will feature 11 food vendors and core beers.",
+      "article_link": "https://www.businessdebut.com/crooked-can-brewing-company-opening-large-scale-brewery-in-minneola/"
+    },
+    {
+      "store_name": "The Abigaile",
+      "location": "117 East Lake Avenue, Auburndale, FL 33823",
+      "event_type": "Opening",
+      "event_date": "mid-June",
+      "status": "targeting a mid-June opening",
+      "short_description": "The Abigaile is a Modern American Cuisine restaurant from Chef Tina Calhoon going into the former Craven Copper space. It will have about 80 indoor and 80 outdoor seats with craft bar and live music. The menu is flexible with items like confit wings and chicken shawarma salad.",
+      "article_link": "https://www.businessdebut.com/the-abigaile-bringing-modern-american-cuisine-to-auburndale/"
+    },
+    {
+      "store_name": "Faraway Joes Family Friendly Subs & More",
+      "location": "320 East Tarpon Avenue, Tarpon Springs, FL 34689",
+      "event_type": "Opening",
+      "event_date": "about four weeks",
+      "status": "targeting an opening in about four weeks",
+      "short_description": "Faraway Joes Family Friendly Subs & More is opening inside Tarpon Springs Castle Winery. The quick-service shop will offer sandwiches, hot dogs, mini donuts, cotton candy and family activities.",
+      "article_link": "https://www.businessdebut.com/faraway-joes-bringing-family-friendly-sandwich-shop-to-tarpon-springs/"
+    },
+    {
+      "store_name": "Black Pizza Bankhead",
+      "location": "2079 Joseph E Boone Blvd NW Atlanta, GA 30314",
+      "event_type": "Opening",
+      "event_date": "end of May or early June",
+      "status": "slated to open by the end of May or early June",
+      "short_description": "Black Pizza Bankhead is a family-friendly New York-style pizzeria. It will offer slices, full pies, wings, fries and family specials with in-house sauce.",
+      "article_link": "https://www.businessdebut.com/black-pizza-bankhead-planning-to-open-soon-on-joseph-e-boone-blvd/"
+    },
+    {
+      "store_name": "Lenny's Grill & Subs",
+      "location": "96 E. Garden St., Pensacola, FL 32502",
+      "event_type": "Opening",
+      "event_date": "end of June or first week of July",
+      "status": "targeting an end of June or first week of July opening",
+      "short_description": "Lenny's Grill & Subs is returning to Pensacola as a franchise. The neighborhood sub shop will offer fresh-sliced meats, cheesesteaks, hot/cold subs, salads and wraps with multiple ordering options.",
+      "article_link": "https://www.businessdebut.com/lennys-grill-subs-opening-in-pensacola/"
+    },
+    {
+      "store_name": "Salty Neighbor Bar & Grill",
+      "location": "4187 S Tamiami Trl, Venice, FL 34293",
+      "event_type": "Opening",
+      "event_date": "Oct. 1",
+      "status": "targeting an Oct. 1 opening",
+      "short_description": "Salty Neighbor Bar & Grill is a veteran-owned sports bar in the former Rib City space. It will have 144 indoor seats and 20 outdoor with TVs and American bar food with Cuban influence.",
+      "article_link": "https://www.businessdebut.com/salty-neighbor-bar-grill-opening-in-venice-village-shops/"
+    },
+    {
+      "store_name": "Early Bird Cafe",
+      "location": "736 N Main St Fuquay-Varina, NC 27526",
+      "event_type": "Opening",
+      "event_date": "early June",
+      "status": "planning to open in early June",
+      "short_description": "Early Bird Cafe is a quick-service breakfast spot for commuters. The menu will include breakfast sandwiches, New York bagels, bowls, waffles and French toast sticks with curbside pickup.",
+      "article_link": "https://www.businessdebut.com/early-bird-cafe-bringing-local-breakfast-option-to-fuquay-varina/"
+    },
     {
       "store_name": "Burger Monger",
       "location": "1530 Pasadena Avenue South, South Pasadena, FL 33707",
       "event_type": "Opening",
-      "event_date": "Soft opening May 12, grand opening May 18",
+      "event_date": "May 12 (soft), May 18 (grand)",
       "status": "soft opening planned for May 12 and a grand opening scheduled for May 18",
-      "short_description": "Burger Monger is opening its first drive-through location in South Pasadena. It is a corporate-owned location with counter-service and staff bringing food to tables, seating about 90 guests plus outdoor seating. The brand has been in the Tampa Bay area since 2010.",
+      "short_description": "Burger Monger is opening its first drive-through location. The corporate spot will seat about 90 with counter service and build-your-own burgers, signature items, fries and shakes.",
       "article_link": "https://www.businessdebut.com/burger-monger-bringing-first-drive-through-concept-to-south-pasadena/"
+    },
+    {
+      "store_name": "Pour Intentions Wine Bar",
+      "location": "675 W Peachtree St NE, Atlanta, GA 30308",
+      "event_type": "Opening",
+      "event_date": "mid-May 2026",
+      "status": "Aiming for a mid-May 2026 debut",
+      "short_description": "Pour Intentions Wine Bar is a wine-focused lounge with charcuterie, small plates and desserts. It will feature a rotating by-the-glass wine list.",
+      "article_link": "https://www.businessdebut.com/3-coming-soon-fulton-county-restaurants-may-2-2026/"
+    },
+    {
+      "store_name": "V’s Coffee Collab",
+      "location": "34 Webb St Unit 1, Roswell, GA 30075",
+      "event_type": "Opening",
+      "event_date": "late May",
+      "status": "Targeting late May opening",
+      "short_description": "V’s Coffee Collab is a compact coffee shop with house-roasted coffee, pastries and retail bags. It will have limited seating and outdoor programming.",
+      "article_link": "https://www.businessdebut.com/3-coming-soon-fulton-county-restaurants-may-2-2026/"
+    },
+    {
+      "store_name": "Juice Time",
+      "location": "900 Mansell Rd Ste 8, Roswell, GA 30076",
+      "event_type": "Opening",
+      "event_date": "late May",
+      "status": "Aiming for late May",
+      "short_description": "Juice Time is a dessert and beverage spot with juices, smoothies, crepes and international desserts.",
+      "article_link": "https://www.businessdebut.com/3-coming-soon-fulton-county-restaurants-may-2-2026/"
+    },
+    {
+      "store_name": "360 Wine and Spirits",
+      "location": "30 Concord Commons Pl SW, Concord, NC 28027",
+      "event_type": "Opening",
+      "event_date": "second week of June",
+      "status": "targeting a second-week-of-June opening",
+      "short_description": "360 Wine and Spirits is a wine bar with spirits and neighborhood bar atmosphere.",
+      "article_link": "https://www.businessdebut.com/4-new-restaurants-opening-across-north-carolina-may-7-2026/"
+    },
+    {
+      "store_name": "Blush Room",
+      "location": "5044 Yadkin Rd, Fayetteville, NC 28303",
+      "event_type": "Opening",
+      "event_date": "June 13",
+      "status": "targeting a June 13 opening",
+      "short_description": "Blush Room is a new nightlife lounge concept.",
+      "article_link": "https://www.businessdebut.com/4-new-restaurants-opening-across-north-carolina-may-7-2026/"
+    },
+    {
+      "store_name": "Three Rabbits Brewing",
+      "location": "214 Commerce Pl, Greensboro, NC 27401",
+      "event_type": "Opening",
+      "event_date": "toward the end of the month",
+      "status": "targeting a soft opening toward the end of the month",
+      "short_description": "Three Rabbits Brewing is finishing its taproom and will begin brewing.",
+      "article_link": "https://www.businessdebut.com/4-new-restaurants-opening-across-north-carolina-may-7-2026/"
+    },
+    {
+      "store_name": "Sunset Restaurant",
+      "location": "498 Harrison Ave, Franklin, NC 28734",
+      "event_type": "Opening",
+      "event_date": "late May or early June",
+      "status": "planned reopening in late May or early June",
+      "short_description": "Sunset Restaurant is being revived as a longtime Franklin staple.",
+      "article_link": "https://www.businessdebut.com/4-new-restaurants-opening-across-north-carolina-may-7-2026/"
+    },
+    {
+      "store_name": "Sonrisa",
+      "location": "137 Brevard Court, Charlotte, NC 28202",
+      "event_type": "Opening",
+      "event_date": "next week",
+      "status": "targeting an opening next week",
+      "short_description": "Sonrisa is a Latin American restaurant and bar opening in Brevard Court. It will have about 70 indoor seats and 16-20 patio seats in a casual homey atmosphere. The menu draws from multiple Latin American cuisines with empanadas, ceviche, flank steak, chicken tinga, birria and regional cocktails.",
+      "article_link": "https://www.businessdebut.com/sonrisa-opening-in-uptown-charlottes-brevard-court/"
+    },
+    {
+      "store_name": "Dish's Bagels",
+      "location": "1410 Lake Hearn Dr NE, Atlanta, GA 30319",
+      "event_type": "Opening",
+      "event_date": "July or August",
+      "status": "planning a July or August opening",
+      "short_description": "Dish's Bagels is planning a new location with the space currently under construction. The menu will feature New York-style bagels, breakfast sandwiches, lox, and deli sandwiches.",
+      "article_link": "https://www.businessdebut.com/7-new-restaurants-opening-across-georgia-may-6-2026/"
+    },
+    {
+      "store_name": "American Deli",
+      "location": "5250 Windward Pkwy Suite 111, Alpharetta GA 30004",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "slated to open",
+      "short_description": "A new American Deli franchise location is in the works. They are getting permits and preparing to start remodeling.",
+      "article_link": "https://www.businessdebut.com/7-new-restaurants-opening-across-georgia-may-6-2026/"
+    },
+    {
+      "store_name": "Pollo Primo",
+      "location": "863 Ponce De Leon Ave NE, Atlanta, GA 30306",
+      "event_type": "Opening",
+      "event_date": "about a month to a month and a half",
+      "status": "targeting an opening in about a month to a month and a half",
+      "short_description": "Pollo Primo is planning a second location with buildout underway.",
+      "article_link": "https://www.businessdebut.com/7-new-restaurants-opening-across-georgia-may-6-2026/"
+    },
+    {
+      "store_name": "Blue Polar",
+      "location": "2131 Pleasant Hill Rd. Suite B-1, Duluth, GA 30096",
+      "event_type": "Opening",
+      "event_date": "June",
+      "status": "targeting a June opening",
+      "short_description": "Blue Polar is a dessert cafe serving gelato, coffee, smoothies, teas, lattes, cakes, cookies and small sandwiches.",
+      "article_link": "https://www.businessdebut.com/7-new-restaurants-opening-across-georgia-may-6-2026/"
+    },
+    {
+      "store_name": "Pizzeria Fiamma / MackinMikes Mac & Cheeze Bar",
+      "location": "Address not specified",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "opening",
+      "short_description": "Pizzeria Fiamma and MackinMikes Mac & Cheeze Bar are two food concepts opening inside Crooked Can Brewery.",
+      "article_link": "https://www.businessdebut.com/7-new-restaurants-opening-across-georgia-may-6-2026/"
+    },
+    {
+      "store_name": "The Nest Cafe",
+      "location": "11650 Johns Creek Pkwy, Johns Creek, GA 30097",
+      "event_type": "Opening",
+      "event_date": "October 29 at 10 a.m.",
+      "status": "grand opening is planned",
+      "short_description": "The Nest Cafe is opening its third metro Atlanta location in the Medley development. It will be the largest at 2,700 square feet with about 40 indoor and 20 outdoor seats. The menu includes breakfast, brunch, croissant sandwiches, paninis, salads and rotating seasonal specials.",
+      "article_link": "https://www.businessdebut.com/the-nest-cafe-opening-in-medley-johns-creek/"
+    },
+    {
+      "store_name": "The Reserve Key West",
+      "location": "510 Southard St, Key West, FL 33040",
+      "event_type": "Opening",
+      "event_date": "by the end of June",
+      "status": "planning to open by the end of June",
+      "short_description": "The Reserve Key West is a culinary collective with four restaurant concepts in a former bank building. Concepts include Spanish tapas, fresh seafood, Italian cuisine, and sushi/Thai. Guests can order from all menus via QR or directly with 125 seats and live music.",
+      "article_link": "https://www.businessdebut.com/the-reserve-key-west-opening-with-four-restaurant-concepts/"
+    },
+    {
+      "store_name": "Diadem Pickleball Complex",
+      "location": "10570 West Forest Hill Boulevard, Wellington, FL 33414",
+      "event_type": "Opening",
+      "event_date": "September 15th",
+      "status": "targeting a September 15th opening",
+      "short_description": "Diadem Pickleball Complex is an indoor facility with courts, pro shop, simulators and event space. It will include Cat 5 restaurant and bar.",
+      "article_link": "https://www.businessdebut.com/diadem-pickleball-complex-to-open-in-wellington/"
+    },
+    {
+      "store_name": "Cat 5",
+      "location": "10570 West Forest Hill Boulevard, Wellington, FL 33414",
+      "event_type": "Opening",
+      "event_date": "September 15th",
+      "status": "targeting a September 15th opening",
+      "short_description": "Cat 5 is a restaurant and bar inside Diadem Pickleball Complex serving pizza, salads, beer and wine with court service.",
+      "article_link": "https://www.businessdebut.com/diadem-pickleball-complex-to-open-in-wellington/"
+    },
+    {
+      "store_name": "Pilar Coffee Bar and Iced Treats",
+      "location": "7100 Fairway Drive, Unit 23, Palm Beach Gardens, FL 33418",
+      "event_type": "Opening",
+      "event_date": "late 2026",
+      "status": "planned for a late 2026 opening",
+      "short_description": "Pilar Coffee Bar and Iced Treats is a franchise location offering coffee, gelato, food and desserts in quick-service format. It will have around 40 indoor seats and an outside patio.",
+      "article_link": "https://www.businessdebut.com/pilar-coffee-bar-and-iced-treats-to-open-in-palm-beach-gardens/"
     },
     {
       "store_name": "Coconut Island Market",
@@ -16,466 +349,52 @@
       "event_type": "Opening",
       "event_date": "mid-May",
       "status": "targeting mid-May for the launch of hot food service",
-      "short_description": "Coconut Island Market is already open as a convenience-style market and is targeting mid-May for hot food service launch. It will continue as a convenience shop while adding quick-service food like tacos, hamburgers, burritos, fruit cups, and aguas frescas. Owner Gabriella Ortiz was interviewed on April 9th.",
+      "short_description": "Coconut Island Market is already open as a convenience market and is adding hot food service. Planned items include tacos, hamburgers, burritos, fruit cups and aguas frescas.",
       "article_link": "https://www.businessdebut.com/2-coming-soon-lee-county-restaurants/"
     },
     {
       "store_name": "Coffee Rush",
       "location": "1189 SW Pine Island Rd., Cape Coral, FL 33991",
       "event_type": "Opening",
-      "event_date": "Not specified",
+      "event_date": "late May or early June",
       "status": "targeting a late May or early June opening",
-      "short_description": "Coffee Rush is targeting a late May or early June opening for its Cape Coral drive-thru location. It will be the brand’s second Florida location after Fort Myers. Owner Tessa Yost was interviewed on March 12th.",
+      "short_description": "Coffee Rush is a drive-thru coffee concept opening its second Florida location.",
       "article_link": "https://www.businessdebut.com/2-coming-soon-lee-county-restaurants/"
     },
     {
-      "store_name": "Pour Intentions Wine Bar",
-      "location": "675 W Peachtree St NE, Atlanta, GA 30308",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "Aiming for a mid-May 2026 debut",
-      "short_description": "Pour Intentions Wine Bar is aiming for a mid-May 2026 debut near the Fox Theatre. It is a wine-focused lounge with charcuterie boards, small plates, desserts, and rotating wines. Owner Joseph Dennis is a Level 1 sommelier.",
-      "article_link": "https://www.businessdebut.com/3-coming-soon-fulton-county-restaurants-may-2-2026/"
-    },
-    {
-      "store_name": "V’s Coffee Collab",
-      "location": "34 Webb St Unit 1, Roswell, GA 30075",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "Targeting late May opening",
-      "short_description": "V’s Coffee Collab is targeting a late May opening in Roswell. It is a compact coffee shop with house-roasted coffee, pastries, and outdoor programming. Owner Harrison Bernard is transitioning to his first brick-and-mortar.",
-      "article_link": "https://www.businessdebut.com/3-coming-soon-fulton-county-restaurants-may-2-2026/"
-    },
-    {
-      "store_name": "Juice Time",
-      "location": "900 Mansell Rd Ste 8, Roswell, GA 30076",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "Aiming for late May",
-      "short_description": "Juice Time is aiming for late May in Roswell. It is a dessert and beverage spot with fresh juices, smoothies, crepes, and Middle Eastern desserts.",
-      "article_link": "https://www.businessdebut.com/3-coming-soon-fulton-county-restaurants-may-2-2026/"
-    },
-    {
-      "store_name": "360 Wine and Spirits",
-      "location": "30 Concord Commons Pl SW, Concord, NC 28027",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "targeting a second-week-of-June opening",
-      "short_description": "360 Wine and Spirits is targeting a second-week-of-June opening in Concord. It is a new wine bar focusing on wine, spirits and neighborhood bar atmosphere from owner Timothy Degree.",
-      "article_link": "https://www.businessdebut.com/4-new-restaurants-opening-across-north-carolina-may-7-2026/"
-    },
-    {
-      "store_name": "Blush Room",
-      "location": "5044 Yadkin Rd, Fayetteville, NC 28303",
-      "event_type": "Opening",
-      "event_date": "June 13",
-      "status": "targeting a June 13 opening",
-      "short_description": "Blush Room is targeting a June 13 opening in Fayetteville. It is an upscale nightlife concept with hookah, cocktails, themed events, and a dress code from owners Rodreaka Sales and Versace Granberry.",
-      "article_link": "https://www.businessdebut.com/4-new-restaurants-opening-across-north-carolina-may-7-2026/"
-    },
-    {
-      "store_name": "Three Rabbits Brewing",
-      "location": "214 Commerce Pl, Greensboro, NC 27401",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "targeting a soft opening toward the end of the month",
-      "short_description": "Three Rabbits Brewing is targeting a soft opening toward the end of the month at its taproom in Greensboro. It will focus on lagers and European-style beers from owner Christopher Myers.",
-      "article_link": "https://www.businessdebut.com/4-new-restaurants-opening-across-north-carolina-may-7-2026/"
-    },
-    {
-      "store_name": "Sunset Restaurant",
-      "location": "498 Harrison Ave, Franklin, NC 28734",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "planned reopening in late May or early June",
-      "short_description": "Sunset Restaurant is being revived with a planned reopening in late May or early June in Franklin by Jesse and Paige Green.",
-      "article_link": "https://www.businessdebut.com/4-new-restaurants-opening-across-north-carolina-may-7-2026/"
-    },
-    {
-      "store_name": "Tiny Kitchen",
-      "location": "524 Park St, Naples, FL 34102",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "targeting late May or the first week of June",
-      "short_description": "Tiny Kitchen is targeting late May or early June in Naples. It is a 680-square-foot Argentinian street food spot with empanadas, choripan, and salads from owner Alejandro Veiga and family.",
-      "article_link": "https://www.businessdebut.com/3-collier-county-restaurants-planning-to-open-soon/"
-    },
-    {
-      "store_name": "Casa Cotzelli",
-      "location": "12712 Tamiami Trail E, Naples, FL 34113",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "targeting an opening in about a month",
-      "short_description": "Casa Cotzelli is targeting an opening in about a month in Naples. It is a full-service Italian restaurant from owner Filippo Butelli.",
-      "article_link": "https://www.businessdebut.com/3-collier-county-restaurants-planning-to-open-soon/"
-    },
-    {
-      "store_name": "Cowy Burger",
-      "location": "8400 NW 53rd Street, Doral, FL 33166",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "targeting an opening at the end of the year or beginning of next year",
-      "short_description": "Cowy Burger is planning a second location in Doral targeting end of year or beginning of next year. It is a smash burger concept from Diego J. Machicao and team.",
-      "article_link": "https://www.businessdebut.com/big-whiskeys-expanding-to-coral-springs-2/"
-    },
-    {
-      "store_name": "Tiny Kitchen",
-      "location": "524 Park St, Naples, FL 34102",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "targeting a late May or early June opening",
-      "short_description": "Tiny Kitchen is targeting late May or early June in Naples. It serves Argentinian street food with empanadas and choripan under the Casa del Loro umbrella.",
-      "article_link": "https://www.businessdebut.com/tiny-kitchen-eyes-opening-in-naples/"
-    },
-    {
-      "store_name": "Sonrisa",
-      "location": "137 Brevard Court, Charlotte, NC 28202",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "targeting an opening next week",
-      "short_description": "Sonrisa is targeting an opening next week in Uptown Charlotte pending liquor license. It is a Latin American restaurant and bar with regional dishes and cocktails.",
-      "article_link": "https://www.businessdebut.com/sonrisa-opening-in-uptown-charlottes-brevard-court/"
-    },
-    {
-      "store_name": "Three J’s Ice Cream",
-      "location": "1600 Dundee Rd, Winter Haven, FL 33884",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "Targeting a mid-May opening",
-      "short_description": "Three J’s Ice Cream is targeting a mid-May opening in Winter Haven. It is a rolled ice cream shop expanding from a food trailer by owner Jaryaca Baker.",
-      "article_link": "https://www.businessdebut.com/2-polk-county-restaurants-planning-to-open-this-may/"
-    },
-    {
-      "store_name": "Gin Khao",
-      "location": "750 W. Main Street, Bartow, FL 33830",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "Targeting a May soft opening",
-      "short_description": "Gin Khao is targeting a May soft opening in Bartow. It is the first brick-and-mortar for the Thai food truck concept.",
-      "article_link": "https://www.businessdebut.com/2-polk-county-restaurants-planning-to-open-this-may/"
-    },
-    {
-      "store_name": "Dish's Bagels",
-      "location": "1410 Lake Hearn Dr NE, Atlanta, GA 30319",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "planning a July or August opening",
-      "short_description": "Dish's Bagels is planning a July or August opening in Brookhaven. It will feature New York-style bagels and deli sandwiches.",
-      "article_link": "https://www.businessdebut.com/7-new-restaurants-opening-across-georgia-may-6-2026/"
-    },
-    {
-      "store_name": "American Deli",
-      "location": "5250 Windward Pkwy Suite 111, Alpharetta GA 30004",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "estimates opening anywhere from 2-3 months",
-      "short_description": "American Deli is slated to open in Alpharetta with permits and remodeling underway.",
-      "article_link": "https://www.businessdebut.com/7-new-restaurants-opening-across-georgia-may-6-2026/"
-    },
-    {
-      "store_name": "Pollo Primo",
-      "location": "863 Ponce De Leon Ave NE, Atlanta, GA 30306",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "targeting an opening in about a month to a month and a half",
-      "short_description": "Pollo Primo is planning a second location targeting an opening in about a month to a month and a half.",
-      "article_link": "https://www.businessdebut.com/7-new-restaurants-opening-across-georgia-may-6-2026/"
-    },
-    {
-      "store_name": "Blue Polar",
-      "location": "2131 Pleasant Hill Rd. Suite B-1, Duluth, GA 30096",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "targeting a June opening",
-      "short_description": "Blue Polar is targeting a June opening in Duluth. It is a dessert cafe with gelato, coffee, and more.",
-      "article_link": "https://www.businessdebut.com/7-new-restaurants-opening-across-georgia-may-6-2026/"
-    },
-    {
-      "store_name": "Pizzeria Fiamma / MackinMikes Mac & Cheeze Bar",
-      "location": "2265 Wisteria Drive SW, Snellville, GA 30078",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "Pizzeria Fiamma opened April 11, MackinMikes expected to open in about two weeks",
-      "short_description": "Pizzeria Fiamma and MackinMikes Mac & Cheeze Bar are opening inside Crooked Can Brewery. Pizzeria Fiamma opened April 11 and MackinMikes in about two weeks.",
-      "article_link": "https://www.businessdebut.com/7-new-restaurants-opening-across-georgia-may-6-2026/"
-    },
-    {
-      "store_name": "The Nest Cafe",
-      "location": "11650 Johns Creek Pkwy, Johns Creek, GA 30097",
-      "event_type": "Opening",
-      "event_date": "October 29",
-      "status": "grand opening is planned across the entire development for October 29",
-      "short_description": "The Nest Cafe is planning to open its third location with Medley’s grand opening on October 29. It will offer breakfast, brunch, and cafe items.",
-      "article_link": "https://www.businessdebut.com/the-nest-cafe-opening-in-medley-johns-creek/"
-    },
-    {
-      "store_name": "Bro’s Hot Chicken",
-      "location": "10899 SW 4th Street, Suite 101, Sweetwater, FL 33174",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "targeting an opening within the next one to two months",
-      "short_description": "Bro’s Hot Chicken is preparing to open its third location in Sweetwater targeting one to two months. It is a Nashville hot chicken concept.",
-      "article_link": "https://www.businessdebut.com/bros-hot-chicken-bringing-nashville-hot-chicken-concept-to-sweetwater/"
-    },
-    {
-      "store_name": "Burger Factory",
-      "location": "911 Duluth Highway Suite E1, Lawrenceville, GA 30043",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "Targeting an end-of-summer opening",
-      "short_description": "Burger Factory is targeting an end-of-summer opening in Lawrenceville. It is a fast-casual burger concept making its Georgia debut.",
-      "article_link": "https://www.businessdebut.com/4-coming-soon-gwinnett-county-restaurants-may-5-2026/"
-    },
-    {
-      "store_name": "The Bep Teahouse",
-      "location": "6110 Oakbrook Pkwy Suite 102, Norcross, GA 30093",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "aiming for a late summer opening",
-      "short_description": "The Bep Teahouse is aiming for a late summer opening in Norcross. It is a Vietnamese boba tea shop with full kitchen.",
-      "article_link": "https://www.businessdebut.com/4-coming-soon-gwinnett-county-restaurants-may-5-2026/"
-    },
-    {
-      "store_name": "Taqueria & Mariscos Diaz",
-      "location": "4845 Jimmy Carter Blvd, Norcross, GA 30093",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "Opening in the coming weeks",
-      "short_description": "Taqueria & Mariscos Diaz is opening in the coming weeks inside a BP store in Norcross.",
-      "article_link": "https://www.businessdebut.com/4-coming-soon-gwinnett-county-restaurants-may-5-2026/"
-    },
-    {
-      "store_name": "Queen P’s Soulfood Kitchen",
-      "location": "706 Collins Hill Rd, Lawrenceville, GA 30046",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "Targeting",
-      "short_description": "Queen P’s Soulfood Kitchen is targeting an opening in Lawrenceville.",
-      "article_link": "https://www.businessdebut.com/4-coming-soon-gwinnett-county-restaurants-may-5-2026/"
-    },
-    {
-      "store_name": "Shawarma Queen",
-      "location": "5157 Jimmy Lee Smith Pkwy #101, Hiram, GA 30141",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "anticipates opening toward the end of May",
-      "short_description": "Shawarma Queen is transitioning from food truck to brick-and-mortar targeting end of May in Hiram.",
-      "article_link": "https://www.businessdebut.com/shawarma-queen-bringing-halal-street-food-concept-to-hiram/"
-    },
-    {
-      "store_name": "Dish's Bagels",
-      "location": "1410 Lake Hearn Dr NE, Atlanta, GA 30319",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "planning a July or August opening",
-      "short_description": "Dish's Bagels is planning a July or August opening in Brookhaven with New York-style bagels.",
-      "article_link": "https://www.businessdebut.com/dishs-bagels-opening-with-new-york-style-concept/"
-    },
-    {
-      "store_name": "American Deli",
-      "location": "5250 Windward Pkwy Suite 111, Alpharetta GA 30004",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "estimates opening anywhere from 2-3 months",
-      "short_description": "American Deli is in the works for Alpharetta with permits and remodeling underway.",
-      "article_link": "https://www.businessdebut.com/american-deli-opening-in-alpharetta/"
-    },
-    {
-      "store_name": "Pizzeria Fiamma",
-      "location": "2265 Wisteria Drive SW, Snellville, GA 30078",
-      "event_type": "Opening",
-      "event_date": "April 11",
-      "status": "opened April 11",
-      "short_description": "Pizzeria Fiamma opened April 11 inside Crooked Can Brewery.",
-      "article_link": "https://www.businessdebut.com/two-new-food-concepts-opening-inside-crooked-can-brewery-in-snellville/"
-    },
-    {
-      "store_name": "MackinMikes Mac & Cheeze Bar",
-      "location": "2265 Wisteria Drive SW, Snellville, GA 30078",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "expected to open in about two weeks",
-      "short_description": "MackinMikes Mac & Cheeze Bar is expected to open in about two weeks inside Crooked Can Brewery.",
-      "article_link": "https://www.businessdebut.com/two-new-food-concepts-opening-inside-crooked-can-brewery-in-snellville/"
-    },
-    {
-      "store_name": "Entre Campos",
-      "location": "11924 Forest Hill Blvd Suite 26, Wellington, FL 33414",
-      "event_type": "Opening",
-      "event_date": "May 18th or May 25th",
-      "status": "May 18th or May 25th",
-      "short_description": "Entre Campos is planning to open May 18th or 25th in Wellington. It is an Argentine-inspired coffee shop.",
-      "article_link": "https://www.businessdebut.com/3-south-florida-restaurants-planning-may-openings/"
-    },
-    {
-      "store_name": "Casa Vialetto",
-      "location": "276 Alhambra Circle, Coral Gables, FL 33134",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "Aiming for an end-of-May reopening",
-      "short_description": "Casa Vialetto is aiming for an end-of-May reopening in Coral Gables. It brings back Italian fine dining.",
-      "article_link": "https://www.businessdebut.com/3-south-florida-restaurants-planning-may-openings/"
-    },
-    {
-      "store_name": "Three Rabbits Brewing",
-      "location": "214 Commerce Pl, Greensboro, NC 27401",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "targeting a soft opening toward the end of the month",
-      "short_description": "Three Rabbits Brewing is targeting a soft opening toward the end of the month in Greensboro.",
-      "article_link": "https://www.businessdebut.com/three-rabbits-brewing-opening-in-greensboro/"
-    },
-    {
-      "store_name": "Blush Room",
-      "location": "5044 Yadkin Rd, Fayetteville, NC 28303",
-      "event_type": "Opening",
-      "event_date": "June 13",
-      "status": "targeting a June 13 opening",
-      "short_description": "Blush Room is targeting a June 13 opening in Fayetteville as an upscale nightlife concept.",
-      "article_link": "https://www.businessdebut.com/blush-room-to-open-in-fayetteville-june-13/"
-    },
-    {
-      "store_name": "360 Wine and Spirits",
-      "location": "30 Concord Commons Pl SW, Concord, NC 28027",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "targeting a second-week-of-June opening",
-      "short_description": "360 Wine and Spirits is a new wine bar from owner Timothy Degree targeting a second-week-of-June opening. The roughly 1,200-square-foot space will have tables, chairs, bar seating and several TVs for about 60 to 70 guests. The menu will focus on wine and spirits with light appetizers and small bites.",
-      "article_link": "https://www.businessdebut.com/360-wine-and-spirits-opening-in-concord/"
-    },
-    {
-      "store_name": "Sunset Restaurant",
-      "location": "498 Harrison Ave, Franklin, NC 28734",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "planned reopening in late May or early June",
-      "short_description": "Sunset Restaurant is being revived by Jesse and Paige Green with a planned reopening in late May or early June. The longtime Franklin staple originally opened in 1945 has undergone a full renovation with expanded dining room seating about 130 guests. The menu will continue its focus on Southern comfort food including fried chicken and homemade pies.",
-      "article_link": "https://www.businessdebut.com/sunset-restaurant-returning-to-franklin-under-new-ownership/"
-    },
-    {
-      "store_name": "Waterway Tavern",
-      "location": "1882 Goose Creek Road SW Unit 1, Ocean Isle Beach, NC 28469",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "Targeting an opening in the next couple of weeks",
-      "short_description": "Waterway Tavern is targeting an opening in the next couple of weeks on the second floor of the Brick Landing clubhouse. It will be a neighborhood tavern with views of the Intracoastal Waterway offering cocktails, beer, wine and small bar snacks. Owner Brittany Bowers is leading the tavern.",
-      "article_link": "https://www.businessdebut.com/7-restaurants-opening-this-may-across-north-carolina/"
-    },
-    {
-      "store_name": "Three Rabbits Brewing",
-      "location": "214 Commerce Pl, Greensboro, NC 27401",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "Targeting a soft opening toward the end of the month",
-      "short_description": "Three Rabbits Brewing is targeting a soft opening toward the end of the month with a grand opening expected later in July into August. The 3,400-square-foot brewery and taproom will focus on European-style and German-style lagers. The taproom will have a European pub feel tied to owner Christopher Myers’ German heritage.",
-      "article_link": "https://www.businessdebut.com/7-restaurants-opening-this-may-across-north-carolina/"
-    },
-    {
-      "store_name": "Three J’s Ice Cream",
-      "location": "1600 Dundee Rd, Winter Haven, FL 33884",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "targeting a mid-May debut",
-      "short_description": "Three J’s Ice Cream is preparing to open a new brick-and-mortar location targeting a mid-May debut pending final inspections. The shop will feature a visible cold plate station for rolled ice cream with more than 20 flavor options. Owner Jaryaca Baker named the business after her three sons.",
-      "article_link": "https://www.businessdebut.com/three-js-ice-cream-opening-brick-and-mortar-in-winter-haven/"
-    },
-    {
-      "store_name": "La Pinata",
-      "location": "850 S Tennessee Ave, Lakeland, FL 33801",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "targeting a mid-August opening",
-      "short_description": "La Pinata is targeting a mid-August opening led by Chef Jonathan Cisneros and Chef Alfredo Ortiz. The full-service restaurant with market-style experience will seat about 28 indoors and 60 outdoors. The menu focuses on authentic Mexican cuisine made in house including birria tacos.",
-      "article_link": "https://www.businessdebut.com/la-pinata-bringing-traditional-mexican-cuisine-to-lakeland/"
-    },
-    {
-      "store_name": "Big Whiskey’s American Restaurant & Bar",
-      "location": "3374 North University Drive, Coral Springs, FL 33065",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "targeting a September opening",
-      "short_description": "Big Whiskey’s American Restaurant & Bar is targeting a September opening with a possibility of August. The team includes Steve Swanson, Jacki Swanson and Suzanne Swanson.",
-      "article_link": "https://www.businessdebut.com/11-new-restaurants-opening-across-florida-may-5-2026/"
-    },
-    {
       "store_name": "Southern Smokehouse",
       "location": "12741 Yellow Bluff Rd., Suites 1 and 2, Jacksonville, FL 32226",
       "event_type": "Opening",
-      "event_date": "Not specified",
+      "event_date": "early to mid-August",
       "status": "targeting an early to mid-August opening",
-      "short_description": "Southern Smokehouse is targeting an early to mid-August opening as the first barbecue concept from South Atlantic Hospitality. The full-service restaurant will have 120 seats and a full-service liquor bar. Owner Louis Joseph also owns Southern Coast Seafood.",
-      "article_link": "https://www.businessdebut.com/11-new-restaurants-opening-across-florida-may-5-2026/"
-    },
-    {
-      "store_name": "Brooksville Bagels",
-      "location": "330 Ponce De Leon Blvd, Brooksville, FL 34601",
-      "event_type": "Opening",
-      "event_date": "August 1",
-      "status": "targeting an August 1 opening",
-      "short_description": "Brooksville Bagels is targeting an August 1 opening from co-owners Anastasia Alaimo and Michael Alaimo. The New York-inspired shop has been in development for over two years.",
-      "article_link": "https://www.businessdebut.com/11-new-restaurants-opening-across-florida-may-5-2026/"
-    },
-    {
-      "store_name": "Cuban Sabor Cafe",
-      "location": "9 South Main Avenue, Lake Placid, FL 33852",
-      "event_type": "Opening",
-      "event_date": "May 8",
-      "status": "targeting a May 8 opening",
-      "short_description": "Cuban Sabor Cafe is targeting a May 8 opening as a grab-and-go Cuban bakery. The menu includes pastelitos, Cuban sandwiches, croquettes, Cuban coffee and sugarcane juice. Owners are Jazmin Ley and Adoni Chao.",
-      "article_link": "https://www.businessdebut.com/11-new-restaurants-opening-across-florida-may-5-2026/"
-    },
-    {
-      "store_name": "Liam’s Avon Park Soda Shop",
-      "location": "23 E Main St, Avon Park, FL 33825",
-      "event_type": "Opening",
-      "event_date": "Friday, May 15th",
-      "status": "planning to open Friday, May 15th",
-      "short_description": "Liam’s Avon Park Soda Shop is planning to open Friday, May 15th with a grand opening around 5 p.m. or 5:30 p.m.",
-      "article_link": "https://www.businessdebut.com/11-new-restaurants-opening-across-florida-may-5-2026/"
-    },
-    {
-      "store_name": "Cuban Sabor Cafe",
-      "location": "9 South Main Avenue, Lake Placid, FL 33852",
-      "event_type": "Opening",
-      "event_date": "May 8",
-      "status": "targeting a May 8 opening",
-      "short_description": "Cuban Sabor Cafe owned by Jazmin Ley and Adoni Chao is targeting a May 8 opening. It is a grab-and-go Cuban bakery with pastelitos, sandwiches, croquettes and Cuban staples. The space will start with six seats.",
-      "article_link": "https://www.businessdebut.com/cuban-sabor-cafe-opening-on-main-avenue-in-lake-placid/"
-    },
-    {
-      "store_name": "Southern Smokehouse",
-      "location": "12741 Yellow Bluff Rd., Suites 1 and 2, Jacksonville, FL 32226",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "targeting an early to mid-August opening",
-      "short_description": "Southern Smokehouse is preparing to open at 12741 Yellow Bluff Rd. targeting an early to mid-August opening. It is the first barbecue concept from Louis Joseph and Baylee Joseph with 120 seats and a full-service liquor bar. The menu includes traditional barbecue with Southern spins.",
+      "short_description": "Southern Smokehouse is a full-service barbecue restaurant from South Atlantic Hospitality. It will have 120 seats and a full bar with traditional barbecue items, salads, and weekly specials.",
       "article_link": "https://www.businessdebut.com/southern-smokehouse-opening-on-yellow-bluff-road-in-jacksonville/"
     },
     {
       "store_name": "Blackberry Creamery & Cafe",
       "location": "5615 Normandy Blvd, Jacksonville, FL 32205",
       "event_type": "Opening",
-      "event_date": "Not specified",
+      "event_date": "June 15",
       "status": "Targeting June 15 opening",
-      "short_description": "Blackberry Creamery & Cafe is targeting a June 15 opening inside an outdoor food truck park. The ice cream-focused concept will offer flavors like butter pecan bourbon and blackberry bliss plus milkshakes and shaved ice. Owners are Raymond Paulk and Lynn Little.",
+      "short_description": "Blackberry Creamery & Cafe is an ice cream-focused concept in an outdoor food truck park. It will serve ice cream flavors, milkshakes, shaved ice and lemonades.",
       "article_link": "https://www.businessdebut.com/3-coming-soon-jacksonville-restaurants-april-25-2026/"
     },
     {
       "store_name": "Supra Revolving Sushi Bar",
       "location": "4521 Southside Boulevard, Jacksonville, FL 32216",
       "event_type": "Opening",
-      "event_date": "Not specified",
+      "event_date": "October–November",
       "status": "Targeting October–November opening",
-      "short_description": "Supra Revolving Sushi Bar is targeting an October–November opening as a full-service restaurant with conveyor belt sushi. The menu includes sushi, hibachi, ramen and alcoholic beverages. Owner is Ivan Lu.",
+      "short_description": "Supra Revolving Sushi Bar is a full-service restaurant with conveyor belt sushi, hibachi, ramen and appetizers.",
       "article_link": "https://www.businessdebut.com/3-coming-soon-jacksonville-restaurants-april-25-2026/"
     },
     {
       "store_name": "Lucky Goat Coffee",
       "location": "12553 Bartram Park Blvd., Suite 302, Jacksonville, FL 32258",
       "event_type": "Opening",
-      "event_date": "Not specified",
+      "event_date": "June 18",
       "status": "Targeting June 18 opening",
-      "short_description": "Lucky Goat Coffee is targeting a June 18 opening in Bartram Park. It is a fast-casual coffee shop with espresso drinks, cold brew and pastries. Owners are Daniel and Nicole Price.",
+      "short_description": "Lucky Goat Coffee is a fast-casual shop with espresso drinks, cold brew, seasonal lattes and pastries.",
       "article_link": "https://www.businessdebut.com/3-coming-soon-jacksonville-restaurants-april-25-2026/"
     },
     {
@@ -484,26 +403,17 @@
       "event_type": "Opening",
       "event_date": "June 6",
       "status": "targeting a June 6 opening",
-      "short_description": "Big Bone BBQ is targeting a June 6 opening bringing Texas-style barbecue centered on dino beef ribs. The self-serve concept is inside a historic 1918 home with six tables and a five-seat bar. Owners are Donna Deverman-Clay and Samuel Clay.",
+      "short_description": "Big Bone BBQ will serve Texas-style barbecue focused on dino beef ribs, brisket and smoked beef cheeks in a self-serve historic home setting.",
       "article_link": "https://www.businessdebut.com/big-bone-bbq-bringing-beef-ribs-to-pensacola/"
     },
     {
       "store_name": "Donatos Pizza",
       "location": "840 W 23rd St, Panama City, FL 32405",
       "event_type": "Opening",
-      "event_date": "Not specified",
+      "event_date": "around August 1st",
       "status": "targeting an opening around August 1st",
-      "short_description": "Donatos Pizza is targeting an opening around August 1st with George Schempf and Chris Doss. The fast-casual restaurant will focus on thin crust pizza with limited seating of nine seats.",
+      "short_description": "Donatos Pizza is opening with thin crust party-cut pizzas, subs, salads and wings in a fast-casual setup with limited seating.",
       "article_link": "https://www.businessdebut.com/donatos-pizza-set-to-open-in-panama-city/"
-    },
-    {
-      "store_name": "Maison Louis Cafe",
-      "location": "2401 N. Ponce de Leon Blvd., Unit B, St. Augustine, FL 32084",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "now in a soft-opening phase",
-      "short_description": "Maison Louis Cafe is now in a soft-opening phase at its location. The counter-service cafe with 18 indoor seats offers Lavazza coffee, viennoiserie and house-made sandwiches, quiches and salads. Owner Jerome Bensimon expects full opening within about two weeks.",
-      "article_link": "https://www.businessdebut.com/maison-louis-cafe-now-soft-open-in-st-augustine/"
     }
   ],
   "non_working": [
