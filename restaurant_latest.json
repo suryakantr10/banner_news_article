@@ -1,7 +1,13 @@
 {
-  "last_updated": "2026-05-13 22:24 UTC",
+  "last_updated": "2026-05-13 23:49 UTC",
   "total": 60,
   "data": [
+    {
+      "date": "May 13, 2026",
+      "url": "https://whatnow.com/phoenix/restaurants/tortillas-chiwas-owners-plan-expansion-beyond-phoenix-with-new-concept/",
+      "title": "Tortillas Chiwas Owners Plan Expansion Beyond Phoenix With New Concept",
+      "address": "914 N Grande Ave, Tucson, AZ 85745"
+    },
     {
       "date": "May 13, 2026",
       "url": "https://whatnow.com/houston/restaurants/lucky-village-chinese-buffet-undergoes-200000-renovations/",
@@ -355,12 +361,6 @@
       "url": "https://whatnow.com/memphis/restaurants/mcalisters-deli-headed-to-jonesboro/",
       "title": "McAlister’s Deli Headed to Jonesboro",
       "address": "2024 Fair Park Blvd., Jonesboro, AR 72401"
-    },
-    {
-      "date": "May 10, 2026",
-      "url": "https://whatnow.com/memphis/restaurants/ginas-place-to-reopen-this-summer/",
-      "title": "Gina’s Place to Reopen this Summer",
-      "address": "2400 S Caraway Rd, Jonesboro, AR 72401"
     }
   ]
 }
