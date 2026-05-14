@@ -1,25 +1,45 @@
 | Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Lidl | land east of Zouche Way in Bushby | Opening | Not specified | wins planning battle for ... store | Lidl wins planning battle for controversial Leicestershire village store on green land off the A47 despite opposition. Will create 40 jobs and 120 parking spaces. | https://www.leicestermercury.co.uk/news/local-news/itll-make-move-house-lidl-10950047 | 2026-05-06 05:00:00 |
-| TG Jones (Post Offices) | up to 100 stores across UK | Closing | Not specified | up to 100 ... to shut | Up to 100 TG Jones stores (including Post Offices) to shut in restructure. | https://www.express.co.uk/news/uk/2202206/up-100-high-street-post-offices-could-close-permanently-tg-jones-restructure | 2026-05-06 04:49:00 |
-| No qualifying business found | N/A | N/A | N/A | N/A | N/A | https://www.msn.com/en-us/news/us/north-jersey-animal-refuge-expands-opens-2nd-location/ar-AA220Sfk | 2026-05-06 04:33:19 |
-| Levi’s | Portal de l’Àngel 23, Barcelona | Opening | Not specified | will open a new store | Levi’s to open new store on Barcelona’s Portal de l’Àngel replacing Legit. | https://www.modaes.com/global/companies/levis-heats-up-the-tk-maxx-effect-with-a-new-store-in-portal-de-langel | 2026-05-06 04:00:00 |
-| Oh Baby | new Bernard Avenue store in Kelowna | Opening | Not specified (has reopened) | reopens at new ... location | Oh Baby reopens at new Bernard Avenue store in Kelowna consolidating Ellis Street locations. | https://www.castanet.net/news/Kelowna/612734/Oh-Baby-opens-new-Bernard-Avenue-store-in-Kelowna-consolidates-Ellis-Street-locations | 2026-05-06 02:00:00 |
-| Kura Revolving Sushi Bar | 3400 N. Interstate 35, Suite 150, Rayzor Ranch Town Center, Denton | Opening | soft opening May 3, grand opening May 15 | soft opening Sunday, May 3 and grand opening Friday, May 15 | Kura sushi bar set to open in Denton with robot servers, conveyor belts and prizes. | https://dentonrc.com/business/kura-sushi-bar-set-to-open-in-denton-with-robot-servers-conveyor-belts-and-prizes/article_22a72549-9445-4867-b06c-645deb53ee1d.html | 2026-05-06 00:22:50 |
-| No qualifying business found | N/A | N/A | N/A | N/A | N/A | https://www.oregonlive.com/retail/2026/05/discount-retailer-expanding-across-us-including-into-the-portland-area.html | 2026-05-05 22:34:00 |
-| Reforming Pilates Townhouse | 109 W. 17th St., Flatiron, NYC | Opening | June 1 | scheduled to open on June 1 | World’s largest Pilates studio Reforming Pilates Townhouse to open in NYC June 1. | https://www.aol.com/news/world-largest-pilates-studio-open-150000466.html | 2026-05-05 22:23:22 |
-| Trader Joe’s | 3020 Matlock Road, Mansfield | Opening | Not specified | to open new Mansfield store | Trader Joe’s to open new Mansfield store adding third Tarrant County location. | https://www.cbsnews.com/texas/video/trader-joes-to-open-new-mansfield-store-adding-third-tarrant-county-location/ | 2026-05-05 22:19:00 |
-| Sephora and Timberland | Houston Premium Outlets | Opening | this month | adding ... stores this month | Houston Premium Outlets adding Sephora and Timberland stores this month. | https://www.msn.com/en-us/money/companies/houston-premium-outlets-adding-sephora-timberland-stores-this-month/ar-AA22gqux | 2026-05-05 22:04:26 |
-| No qualifying business found | N/A | N/A | N/A | N/A | N/A | http://www.msn.com/en-us/foodanddrink/foodnews/new-tenant-of-le-monde-space-to-open-with-double-drive-through-late-night-hours/ar-AA1OGkYe | 2026-05-05 21:03:55 |
-| Burlington | St. Johns Town Center, Jacksonville | Opening | May 15 | opening May 15 | Burlington opening May 15 in St. Johns Town Center. | https://www.jaxdailyrecord.com/news/2026/may/05/burlington-opening-may-15-in-st-johns-town-center/ | 2026-05-05 20:48:00 |
+|---|---|---|---|---|---|---|---|
+| Genesis BBQ | MEGA Alma-Ata, Almaty, Kazakhstan (Address not specified) | Opening | April 29, 2026 | opened April 29 | Genesis BBQ opened its first Kazakhstan store on April 29 inside the MEGA Alma-Ata shopping center in Almaty, following a master franchise deal signed in December with Restopark KZLLP Group. The company plans to expand to 20 Almaty locations by end of June, enter Astana by end of September, and reach 100 Kazakhstan locations by year-end. | https://www.koreatimes.co.kr/amp/business/companies/20260511/genesis-bbq-enters-central-asia-with-1st-kazakhstan-store | 2026-05-11 06:07:00 |
+| No qualifying business found (MSN shell) | N/A | N/A | N/A | N/A | MSN page returned no article body — only the MSN shell/wrapper with no article content. | https://www.msn.com/en-us/health/healthtrending/popular-barbecue-chain-abruptly-closes-all-locations-nationwide/ar-AA226zkJ | 2026-05-11 05:32:48 |
+| No qualifying business found (fetch failed) | N/A | N/A | N/A | N/A | Article could not be fetched (429 Too Many Requests). | https://www.ithaca.com/news/ithaca/seneca-street-garage-to-close-permanently-downtown-businesses-say-they-are-already-hurting/article_53bce38d-d6c8-4494-a929-50d288396824.amp.html | 2026-05-11 05:06:28 |
+| No qualifying business found (fetch failed) | N/A | N/A | N/A | N/A | Article could not be fetched (403 Forbidden). | https://www.bizjournals.com/seattle/news/2026/05/10/badminton-bellevue-club-tukwila-southcenter.html | 2026-05-11 05:05:00 |
+| Wingstop | Hanley, Stoke-on-Trent (Address not specified) | Opening | Not specified | opening a brand-new Wingstop restaurant | Wingstop is opening its first-ever Stoke-on-Trent branch in Hanley, with a general manager currently being recruited at a salary of up to £46,500 per year. The exact location and opening date have not yet been disclosed. | https://www.stokesentinel.co.uk/news/stoke-on-trent-news/wingstop-opening-first-stoke-trent-10955512 | 2026-05-11 05:00:00 |
+| No qualifying business found (MSN shell) | N/A | N/A | N/A | N/A | MSN page returned no article body — only the MSN shell/wrapper with no article content. | https://www.msn.com/en-us/travel/tripideas/universal-orlando-permanently-closing-opening-day-islands-of-adventure-land-for-major-new-themed-area/ar-AA22Cuny | 2026-05-11 04:14:20 |
+| No qualifying business found (MSN shell) | N/A | N/A | N/A | N/A | MSN page returned no article body — only the MSN shell/wrapper with no article content. | https://www.msn.com/en-us/news/us/from-rescue-to-retail-exotic-animal-store-opens-in-rutland/ar-AA21fpG3 | 2026-05-11 03:20:07 |
+| No qualifying business found (fetch failed) | N/A | N/A | N/A | N/A | Article could not be fetched (403 Forbidden). | https://www.bizjournals.com/nashville/news/2026/05/10/upscale-restaurant-closes-hits-market-for-16-5m.html | 2026-05-11 03:10:00 |
+| No qualifying business found (MSN shell) | N/A | N/A | N/A | N/A | MSN page returned no article body — only the MSN shell/wrapper with no article content. | https://www.msn.com/en-us/travel/news/kendra-scott-oddfellows-ice-cream-among-13-brands-opening-expanding-at-fl-outdoor-mall/ar-AA21riIb | 2026-05-11 02:57:49 |
+| No qualifying business found | N/A | N/A | N/A | N/A | Article confirms Sarkis Cafe at 2628–2632 Gross Point Road is NOT closing and continues to operate; there is no opening or closure event to extract. | https://www.therecordnorthshore.org/2026/05/10/no-sarkis-is-not-closing-but-changes-may-be-coming/ | 2026-05-11 02:35:46 |
+| No qualifying business found (MSN shell) | N/A | N/A | N/A | N/A | MSN page returned no article body — only the MSN shell/wrapper with no article content. | https://www.msn.com/en-us/news/us/pittsburgh-post-gazette-avoids-closure-will-continue-to-publish-thanks-to-nonprofit-sale/ar-AA20SwA6 | 2026-05-11 02:34:42 |
+| No qualifying business found (MSN shell) | N/A | N/A | N/A | N/A | MSN page returned no article body — only the MSN shell/wrapper with no article content. | https://www.msn.com/en-us/travel/tripideas/salt-city-coffee-s-newest-onondaga-county-location-is-open/ar-AA22mBXU | 2026-05-11 02:32:06 |
+| No qualifying business found | N/A | N/A | N/A | N/A | Article covers speculative opening timelines for Disneyland Resort theme park rides and infrastructure; no retail or restaurant opening or closure is reported. | https://mickeyvisit.com/when-disneyland-new-rides-open-may-4-2026/ | 2026-05-11 02:20:41 |
+| No qualifying business found | N/A | N/A | N/A | N/A | Article covers nominations for the 2026 WA Youth Awards; no retail or restaurant opening or closure is reported. | https://www.miragenews.com/nominations-open-for-2026-wa-youth-awards-1670737/ | 2026-05-11 02:08:00 |
+| Genesis BBQ (Kazakhstan — 1st store) | MEGA Alma-Ata, Almaty, Kazakhstan (Address not specified) | Opening | Not specified (recently opened) | has opened its first store in Central Asia | Genesis BBQ opened its first Central Asian store at Mega Almaata in Almaty, Kazakhstan, as announced by Genesis BBQ Group on May 11. The company plans to open 20 stores in Almaty during the first half of the year and enter the capital Astana in Q3, targeting 100 Kazakhstan stores by year-end. | https://www.mk.co.kr/en/business/12043064 | 2026-05-11 02:03:45 |
+| No qualifying business found (MSN shell) | N/A | N/A | N/A | N/A | MSN page returned no article body — only the MSN shell/wrapper with no article content. | https://www.msn.com/en-us/travel/outdoor-activities/cabot-s-new-golf-course-in-canada-to-open-for-preview-play-this-fall/ar-AA22whHh | 2026-05-11 00:49:51 |
+| No qualifying business found (MSN shell) | N/A | N/A | N/A | N/A | MSN page returned no article body — only the MSN shell/wrapper with no article content. | https://www.msn.com/en-us/travel/tripideas/sabrina-s-cafe-plans-to-bring-its-brunches-to-a-new-location-in-queen-village/ar-AA22Cnb5 | 2026-05-11 00:44:05 |
+| No qualifying business found | N/A | N/A | N/A | N/A | Article page returned no body content — empty article. | https://local12.com/news/local/publix-sets-opening-date-for-second-store-in-greater-cincinnati-will-employ-140-workers-employment-jobs-careers-hiring-grocery-chain-cold-spring-kentucky-alexandria-pike-location-walton | 2026-05-10 22:59:47 |
+| Panera Bread | 219 East Middle Lane, Rockville Town Center, Rockville, MD (no zip code mentioned) | Closing | May 19, 2026 | last day of business is expected to be Tuesday, May 19 | The Panera Bread at 219 East Middle Lane in Rockville Town Center is expected to permanently close on May 19, 2026, with its space actively being marketed for lease. This is one of two Montgomery County Panera Bread locations nearing closure. | https://mocoshow.com/2026/05/10/panera-bread-set-to-close-permanently-on-may-19th/ | 2026-05-10 22:23:48 |
+| Panera Bread | 18141 Town Center, Olney, MD (no zip code mentioned) | Closing | Late May or early June 2026 | expected to permanently close in late May or early June | The Panera Bread at 18141 Town Center in Olney, MD is expected to permanently close in late May or early June 2026, based on employee statements, with its leasing space listed as "negotiating." Corporate representatives have not confirmed the closure. | https://mocoshow.com/2026/05/10/panera-bread-set-to-close-permanently-on-may-19th/ | 2026-05-10 22:23:48 |
+| No qualifying business found | N/A | N/A | N/A | N/A | Article page returned only navigation links with no article body content. | https://www.theconnecticutscoop.com/all-new-haven-county-posts/branford-scoop-oreilly-auto-parts-eyeing-branford-location | 2026-05-10 22:08:16 |
 
-**Non-working or unusable articles List:**
-- Article 361 — Could not fetch (403)
-- Article 363 — Could not fetch (403)
-- Article 365 — Could not fetch (403)
-- Article 366 — Limited text
-- Article 369 — Could not fetch (403)
-- Article 370 — Text missing
-- Article 375 — Road closure (not business)
-- Article 376 — Limited text
-- Article 380 — Could not fetch (403)
+---
+
+**Non-working or unusable articles list:**
+
+- Article 462 — MSN shell only; no article body content
+- Article 463 — 429 Too Many Requests; article body not retrievable
+- Article 464 — 403 Forbidden; article body not retrievable
+- Article 466 — MSN shell only; no article body content
+- Article 467 — MSN shell only; no article body content
+- Article 468 — 403 Forbidden; article body not retrievable
+- Article 469 — MSN shell only; no article body content
+- Article 470 — No qualifying business: article confirms the restaurant is NOT closing; no opening or closure event to extract
+- Article 471 — MSN shell only; no article body content
+- Article 472 — MSN shell only; no article body content
+- Article 473 — No qualifying business: article covers speculative theme park ride opening timelines, not retail or restaurant businesses
+- Article 474 — No qualifying business: article covers youth awards nominations, no retail or restaurant event
+- Article 475 — Duplicate content: same Genesis BBQ Kazakhstan opening as Articles 457 and 461; row included for completeness
+- Article 476 — MSN shell only; no article body content
+- Article 477 — MSN shell only; no article body content
+- Article 478 — Empty article body; no content returned
+- Article 480 — Navigation links only; no article body content

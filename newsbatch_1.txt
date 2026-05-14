@@ -1,205 +1,46 @@
-You are an expert, precise data extractor specialized in retail and restaurant openings and closures. I will provide multiple news articles (each usually starting with its source URL). For EVERY article, extract the following information strictly and only from the text provided — no assumptions, no external knowledge, no guessing zip codes, no inferring dates or statuses:
+The article body was cut off. I have the inline text from the original document for Article 19, which included Serrano's Mexican Food and started on Raffaele's Pizza. Let me work with what was provided in the document. Now I have enough to compile the full table.
 
-🔍 Extract these fields
-• Store/Shop/Restaurant Name
-• Location or Full Address with zip code (if no zip code is mentioned, write exactly the address given; if no address at all, write "Address not specified")
-• Event Type (write exactly "Opening" or "Closing" or "remodel" based only on the article content)
-• Event Date
-  - For openings → Opening Date
-  - For closures → Closing Date (write exact date or month/year if mentioned; otherwise write exactly "Not specified")
-• Status
-  - For openings → use phrasing like: "under construction", "opening soon", "set to open", "recently opened", "grand opening on…", "planned for", etc.
-  - For closures → use phrasing like: "closed", "permanently closed", "closing soon", "set to close", "shut down", "liquidation", etc.
-  👉 Use the exact phrasing or closest direct wording from the article — do NOT invent or normalize
-• Short Description (exactly 2–3 concise sentences summarizing ONLY what the article says — no opinions, no extra context)
+---
 
-📊 Output format
-Create ONE clean Markdown table with these exact column headers (in this order):
 | Store/Shop/Restaurant Name | Location or Full Address with zip code | Event Type | Event Date | Status | Short Description | Article Link | Published Date |
+|---|---|---|---|---|---|---|---|
+| No qualifying business found (fetch failed) | N/A | N/A | N/A | N/A | Article could not be fetched. | https://www.casino.org/news/rivers-casino-portsmouths-65-million-hotel-plans-open/ | 2026-05-11 18:37:26 |
+| No qualifying business found (MSN shell) | N/A | N/A | N/A | N/A | MSN page returned no article body — only the MSN shell/wrapper with no article content. | https://www.msn.com/en-us/money/companies/struggling-movie-theater-chain-files-chapter-11-may-close/ar-AA1X9hqQ | 2026-05-11 13:06:18 |
+| Residence Inn by Marriott Riverwalk | San Antonio, TX (Address not specified) | Opening | Summer 2026 | highly anticipated Summer 2026 Grand Opening | The Residence Inn by Marriott Riverwalk in San Antonio has appointed Corina Lathan as General Manager and Marcia Caballero as Director of Sales ahead of its Summer 2026 grand opening. No further property details were available as the article could not be fetched. | https://www.travelandtourworld.com/news/article/san-antonios-latest-luxury-destination-residence-inn-by-marriott-riverwalk-appoints-corina-lathan-as-general-manager-and-marcia-caballero-as-director-of-sales-ahead-of-its-highly-anticipated/ | 2026-05-12 18:00:37 |
+| Raising Cane's | Jonesboro (Address not specified) | Opening | Not specified | grand opening | Article title confirms grand opening of a Jonesboro Raising Cane's location; no body content was retrievable due to a 401 Unauthorized error. | https://jonesbororightnow.com/news/268862-raising-canes-celebrates-grand-opening-of-jonesboro-resturaunt/ | 2026-05-12 17:25:42 |
+| No qualifying business found (fetch failed) | N/A | N/A | N/A | N/A | Article could not be fetched (403 Forbidden). | https://www.mlive.com/business/2026/05/southern-convenience-store-chain-files-for-bankruptcy-future-of-20-locations-unclear.html | 2026-05-12 16:26:00 |
+| No qualifying business found (MSN shell) | N/A | N/A | N/A | N/A | MSN page returned no article body — only the MSN shell/wrapper with no article content. | https://www.msn.com/en-us/money/companies/eagles-investments-group-c-store-chain-files-for-chapter-11-bankruptcy/ar-AA22QPo4 | 2026-05-12 13:28:03 |
+| No qualifying business found (MSN shell) | N/A | N/A | N/A | N/A | MSN page returned no article body — only the MSN shell/wrapper with no article content. | https://www.msn.com/en-us/foodanddrink/foodnews/colorado-born-green-chili-restaurant-opening-new-location/ar-AA21yB7O | 2026-05-12 13:18:06 |
+| Ladies-Only Gym at Harrow Leisure Centre | Harrow Leisure Centre, Harrow (Address not specified) | Opening | Not specified | now open | A newly expanded ladies-only gym is now open at Harrow Leisure Centre following a £1.4 million investment, with the facility enlarged by 50 percent and featuring new equipment including a power mill and glute bridge. The expansion is part of a broader investment in Harrow's leisure facilities secured under a new 10-year contract with the council. | https://uk.news.yahoo.com/ladies-only-gym-harrow-leisure-110000682.html | 2026-05-12 11:00:00 |
+| No qualifying business found (fetch failed) | N/A | N/A | N/A | N/A | Article could not be fetched (403 Forbidden). | https://www.pennlive.com/news/2026/05/beloved-national-diner-chain-in-60-years-shutters-50-stores-updates-menu.html | 2026-05-12 09:00:00 |
+| Indian Hotels Company Limited (IHCL) — 60 new hotels (planned) | India (multiple locations, addresses not specified) | Opening | FY27 (2026–2027) | plans to open 60 new hotels | Mumbai-based IHCL plans to open 60 new hotels in FY27, following 36 property additions the prior year, as part of an entirely organic expansion strategy. The company expects revenue growth of 12–14% in FY27, supported by domestic travel demand, weddings, and newer businesses including homestays and airline catering. | https://www.cnbctv18.com/market/earnings/indian-hotels-q4-results-fy27-outlook-60-hotel-openings-expansion-growth-travel-demand-19903729.htm | 2026-05-12 06:14:31 |
+| No qualifying business found | N/A | N/A | N/A | N/A | Article body mentions Sapporo Grand Hotel renovation but provides no opening or closure event details; content is a single header line with no usable article text. | https://en.traicy.com/posts/2026051235424/ | 2026-05-12 04:03:42 |
+| No qualifying business found (MSN shell) | N/A | N/A | N/A | N/A | MSN page returned no article body — only the MSN shell/wrapper with no article content. | https://www.msn.com/en-us/money/companies/138-year-old-grocery-store-staple-files-for-bankruptcy/ar-AA1HQddu | 2026-05-12 02:54:54 |
+| Kindred Resort | River Run Village, Keystone, Colorado (Address not specified) | Opening | May 7, 2026 | opened to the public | Kindred Resort opened on May 7, 2026 as Keystone, Colorado's first luxury hotel and newest addition to the RockResorts collection, featuring 107 guest rooms, 95 luxury residences, and ski-in/ski-out access. The property is centered on a "Campfire Luxury" concept emphasizing community and mountain access, and opened with nearly 95 percent of residences already sold. | https://www.snowsportsnews.com/newsrepository/2026/may/first-luxury-hotel-in-keystone-now-open-introducing-campfire-luxury-to-colorado/ | 2026-05-11 23:03:59 |
+| No qualifying business found (fetch failed) | N/A | N/A | N/A | N/A | Article could not be fetched (403 Forbidden). | https://www.insauga.com/vegetarian-burger-and-shawarma-restaurant-now-open-in-brampton/ | 2026-05-11 19:58:41 |
+| Ramen Danbo — Main Street | 3982 Main St., Vancouver (no zip code mentioned) | Opening | Not specified | preparation for our new location is well underway | Ramen Danbo announced a new location opening on Main Street in Vancouver's Riley Park-Little Mountain neighbourhood, with preparation described as well underway. No opening date has been shared; the restaurant currently operates four other BC locations plus outposts in Seattle and New York. | https://dailyhive.com/vancouver/ramen-danbo-main-street-vancouver | 2026-05-11 19:51:00 |
+| No qualifying business found (fetch failed) | N/A | N/A | N/A | N/A | Article could not be fetched — only an ad/scroll prompt was returned with no article content. | https://kisspress.jp/en/articles/62484/img/ | 2026-05-11 19:10:23 |
+| Pet Supplies Plus | 8809 Lakeview Pkwy., Rowlett, Texas (no zip code mentioned) | Opening | May 16–17, 2026 | grand opening on May 16 and May 17 | Pet Supplies Plus is now open at 8809 Lakeview Pkwy. in Rowlett, Texas, owned by local entrepreneurs Todd McEvoy and Alan Mann, marking their second DFW-area location after opening their first in Euless in March 2026. A grand opening celebration is scheduled for May 16–17, featuring community events and plans to partner with local animal shelters and rescue organizations. | https://www.prnewswire.com/news-releases/local-restaurant-veterans-host-grand-opening-for-their-second-pet-supplies-plus-location-in-rowlett-may-16-and-may-17-302768592.html | 2026-05-11 19:03:00 |
+| No qualifying business found (fetch failed) | N/A | N/A | N/A | N/A | Article could not be fetched (403 Forbidden). | https://nottinghammd.com/2026/05/11/colombian-marina-restaurant-to-hold-grand-opening-in-middle-river/ | 2026-05-11 18:12:21 |
+| Serrano's Mexican Food | 1964 E. McKellips Road, Mesa (no zip code mentioned) | Closing | Not specified (closing this month — May 2026) | closing soon | Serrano's Mexican Food at McKellips Road in Mesa announced its closure after more than 34 years of operation, citing a steady decline in business, rising operating costs, and ongoing road construction impeding customer access. Owners posted a closing announcement on social media inviting guests for a final visit. | https://www.phoenixnewtimes.com/food-drink/phoenix-restaurants-closing-in-may-how-to-get-a-final-taste-40666308/ | 2026-05-11 17:42:35 |
+| Raffaele's Pizza | Address not specified (Valley/Phoenix area) | Closing | May 30, 2026 | set to close on May 30 | Raffaele's Pizza, which specializes in New York-style and Sicilian slices and pies, is set to close on May 30, 2026. It is one of five Valley restaurants cited as closing in May 2026. | https://www.phoenixnewtimes.com/food-drink/phoenix-restaurants-closing-in-may-how-to-get-a-final-taste-40666308/ | 2026-05-11 17:42:35 |
+| No qualifying business found (robots.txt blocked) | N/A | N/A | N/A | N/A | Article could not be fetched — disallowed by robots.txt. | https://www.msn.com/en-us/foodanddrink/foodnews/covington-pizza-restaurant-expanding-to-downtown-cincinnati/ar-AA22lK9r | 2026-05-11 17:12:34 |
 
-📌 Rules
-• Add one row per article in the order the articles are given
-• If an article contains multiple businesses, create a separate row for each
-• If an article includes both openings and closures, extract each separately
-• For Published Date → copy exactly the value from the "Published:" line in the article metadata
-• If an article has zero relevant business opening or closure information, still include a row with:
-  - Store Name: "No qualifying business found"
-  - Other columns: "N/A"
+---
 
-🚫 Strict constraints
-• ❌ No assumptions  • ❌ No external data  • ❌ No inferred addresses or dates  • ❌ No rewriting or normalizing status text
+**Non-working or unusable articles list:**
 
-📎 Final section (mandatory)
-At the very end of your response, add:
-Non-working or unusable articles List:
-• Article number — Reason (paywall / no business details / duplicate / text missing / etc.)
-If none, write: None
-
-✅ Articles below — extract now:
-
-
---- Article 1 ---
-URL: https://www.msn.com/en-us/money/companies/movie-theater-chain-with-locations-in-8-states-files-for-bankruptcy-again/ar-AA1HUYP4?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
-Title: Movie theater chain with locations in 8 states files for bankruptcy again
-Status hint: Closing | Industry: Movie Theatres
-Published: 2026-05-09 12:56:22
-
-MSN
-
---- Article 2 ---
-URL: https://fox5sandiego.com/san-diego-guide/food-drink/las-cuatro-milpas-reopens/
-Title: Beloved Barrio Logan restaurant, Las Cuatro Milpas, set to reopen at new location
-Status hint: Opening | Industry: Restaurants
-Published: 2026-05-10 21:34:13
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://fox5sandiego.com/san-diego-guide/food-drink/las-cuatro-milpas-reopens/]
-
---- Article 3 ---
-URL: https://www.aol.com/news/no-doubt-experience-now-open-234816503.html
-Title: ‘The No Doubt Experience’ now open at The Venetian Resort Las Vegas
-Status hint: Opening | Industry: Hospitality
-Published: 2026-05-10 21:04:03
-
-Jillian Lopez Wed, May 6, 2026 at 11:48 PM UTC 0 ‘The No Doubt Experience’ now open at The Venetian Resort Las Vegas Vibee is bringing No Doubt’s story to life in Las Vegas with a new immersive pop-up timed to their Sphere run that celebrates the band’s legacy and the 30th anniversary of Tragic Kingdom. “The No Doubt Experience” is free and open to the public with exclusive perks for Vibee VIP pass holders, including access to a hidden speakeasy-style bar — the “Don’t Speak Speakeasy” plus priority entry and a dedicated merch lane. Advertisement For more information and access to tickets through Vibee’s packages, visit nodoubt.vibee.com Copyright 2026 Nexstar Media, Inc. All rights reserved. This material may not be published, broadcast, rewritten, or redistributed. For the latest news, weather, sports, and streaming video, head to KLAS.
-
---- Article 4 ---
-URL: https://www.msn.com/en-us/money/companies/doylestown-jewelry-store-closing-as-owner-retires-after-20-years/ar-AA21F3nP?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
-Title: Doylestown jewelry store closing as owner retires after 20 years
-Status hint: Closing | Industry: Jewelry & Accessories
-Published: 2026-05-10 15:28:27
-
-MSN
-
---- Article 5 ---
-URL: https://www.travelandtourworld.com/news/article/us-keystone-mountain-welcomes-luxury-with-the-grand-opening-of-kindred-resorts-first-phase-a-game-changer-for-colorados-tourism-and-ski-industry/
-Title: US Keystone Mountain Welcomes Luxury with the Grand Opening of Kindred Resort’s First Phase: A Game-Changer for Colorado’s Tourism and Ski Industry
-Status hint: Opening | Industry: Hospitality
-Published: 2026-05-10 11:38:08
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.travelandtourworld.com/news/article/us-keystone-mountain-welcomes-luxury-with-the-grand-opening-of-kindred-resorts-first-phase-a-game-changer-for-colorados-tourism-and-ski-industry/]
-
---- Article 6 ---
-URL: https://www.ayrshire-today.co.uk/news/26093249.kilwinnings-new-premier-convenience-store-opens-public/
-Title: Kilwinning convenience store officially opens its doors with grand opening event
-Status hint: Opening | Industry: Convenience Stores / Distributors
-Published: 2026-05-10 10:14:55
-
-Kilwinning's New Premier convenience store opens to public Business Kilwinning By 
-            Claire Lindsay Reporter Share 0 Comments The grand opening event took place on Saturday, May 9 (Image: Premier KK Convenience Store) This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
-        and has been written by our American colleagues.
-        It does not necessarily reflect the view of The Herald. A NEW convenience store in Kilwinning has officially opened its doors following weeks of preparation. Premier KK Convenience Store welcomed customers to its new premises on Main Street over the weekend. The grand opening event took place on Saturday, May 9, with a range of activities held throughout the day. Visitors were treated to food tasters, live music from a DJ, and entertainment for children. A raffle was also held, while early customers received goody bags as part of the celebrations. A spokesperson said: "It’s been a busy few weeks here at Premier KK getting the new shop ready, but we’re excited to finally open the doors! "We’d like to thank everyone for the support, patience, and kind words while we’ve been working hard behind the scenes." The store is now fully operational and serving customers in the area. Business Kilwinning Share 0 Comments Get involved with the news Send your news & photos
-
---- Article 7 ---
-URL: https://www.msn.com/en-us/travel/tripideas/hershey-inn-suites-now-open-in-dauphin-county/ar-AA22c0Vc?ocid=weather-verthp-feeds&apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
-Title: Hershey Inn & Suites now open in Dauphin County
-Status hint: Opening | Industry: Hospitality
-Published: 2026-05-10 08:15:30
-
-MSN
-
---- Article 8 ---
-URL: https://www.msn.com/en-us/foodanddrink/foodnews/open-for-business-malay%C3%A0-transitions-from-filipino-food-truck-to-full-fledged-restaurant/ar-AA22wM4a
-Title: Open for business: Malayà transitions from Filipino food truck to full-fledged restaurant
-Status hint: Opening | Industry: Restaurants
-Published: 2026-05-09 16:14:04
-
-MSN
-
---- Article 9 ---
-URL: https://www.msn.com/en-us/money/companies/restaurant-chain-with-3-193-locations-shut-down-after-bankruptcy-filing/ss-AA1ZVfWR?ocid=iehpHLMEMh8
-Title: Restaurant chain with 3,193 locations shut down after bankruptcy filing
-Status hint: Closing | Industry: Restaurants
-Published: 2026-05-09 16:09:02
-
-MSN
-
---- Article 10 ---
-URL: https://www.travelandtourworld.com/news/article/kinder-louisiana-welcomes-coushatta-casino-resort-debuts-legacy-tower-in-grand-opening-event-may-15-as-a-radiant-awakening-of-elite-luxury-and-tribal-heritage-promises-a-majestic-sanctuary-for-the-mo/
-Title: Kinder, Louisiana Welcomes Coushatta Casino Resort Debuts Legacy Tower in Grand Opening Event May 15 as a Radiant Awakening of Elite Luxury and Tribal Heritage Promises a Majestic Sanctuary for the Modern Voyager
-Status hint: Opening | Industry: Hospitality
-Published: 2026-05-09 13:28:22
-
-[Could not fetch: 403 Client Error: Forbidden for url: https://www.travelandtourworld.com/news/article/kinder-louisiana-welcomes-coushatta-casino-resort-debuts-legacy-tower-in-grand-opening-event-may-15-as-a-radiant-awakening-of-elite-luxury-and-tribal-heritage-promises-a-majestic-sanctuary-for-the-mo/]
-
---- Article 11 ---
-URL: https://www.msn.com/en-us/money/companies/melt-bar-grilled-owner-plans-to-open-a-new-restaurant-in-cleveland/ar-AA22D0vW
-Title: Melt Bar & Grilled owner plans to open a new restaurant in Cleveland
-Status hint: Opening | Industry: Restaurants
-Published: 2026-05-09 08:00:34
-
-MSN
-
---- Article 12 ---
-URL: https://www.msn.com/en-us/money/companies/iconic-clothing-store-shutters-more-locations/ar-AA22xlmT?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
-Title: Iconic clothing store shutters more locations
-Status hint: Closing | Industry: Apparel
-Published: 2026-05-09 06:19:55
-
-MSN
-
---- Article 13 ---
-URL: https://www.sloughobserver.co.uk/news/26089789.zambrero-plans-open-10-restaurants-across-berkshire/
-Title: Mexican restaurant plans to open 10 new venues across Berkshire
-Status hint: Opening | Industry: Restaurants
-Published: 2026-05-09 04:00:00
-
-Zambrero plans to open 10 restaurants across Berkshire Zambrero Business Food and drink Leisure Berkshire By 
-            Sam Riley Reporter Share 0 Comments 2 Skip to next photo 1 / 1 Show caption 1 / 1 0 Comments This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,
-        and has been written by our American colleagues.
-        It does not necessarily reflect the view of The Herald. A modern Mexican restaurant is planning to open at least 10 restaurants in Berkshire by 2030. Zambrero, an international brand known for its "Feel Good Mex" menu, plans to create around 150 full and part-time jobs as part of its UK expansion. As part of a wider goal to open up to 30 outlets across Berkshire, Hampshire, and the Isle of Wight by 2030, the company will focus on high-footfall areas such as high streets, shopping centres, retail parks, and university campuses. Sumin Lohani, Zambrero’s newly appointed development agent for the three counties, said: "I am delighted to announce my appointment as a development agent for Zambrero. "Having worked with the brand as a franchise partner for many months, I believe it has great growth potential here in the UK. "This is a unique opportunity for both new and experienced franchise partners – whether that be single-site owners, multi-site owners or corporate partners – to join a fast-growing global brand. "For ambitious entrepreneurs ready for growth, there has never been a more exciting time to get involved." Target towns in Berkshire include Reading, Bracknell, Maidenhead, Windsor, Wokingham, Newbury, Thatcham, Sandhurst, Ascot, and Sunningdale. Mr Lohani currently owns and operates Zambrero’s only Berkshire location, in Reading, which opened in 2023. He brings significant experience to the role, including ownership of eight YO! Sushi franchise kiosks in Hampshire and the Isle of Wight, and ownership of a country pub and hotel in Hampshire. Zambrero’s UK expansion is part of a larger a
-
---- Article 14 ---
-URL: https://www.thesun.co.uk/video/1838611/heart-stopping-moment-ex-cop-is-run-off-the-road-and-sent-flying-down-verge-by-overtaking-driver/
-Title: Mel B and Stephen Belafonte attend Grand opening of new restaurant Serafina on Sunset Blvd.
-Status hint: Opening | Industry: Restaurants
-Published: 2026-05-09 03:58:40
-
-[Could not fetch: 404 Client Error: Not Found for url: https://www.thesun.co.uk/video/1838611/heart-stopping-moment-ex-cop-is-run-off-the-road-and-sent-flying-down-verge-by-overtaking-driver/]
-
---- Article 15 ---
-URL: http://www.msn.com/en-us/foodanddrink/foodnews/a-beloved-cambridge-diner-is-expanding-to-brookline/ar-AA1GnnNz?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1
-Title: A Beloved Cambridge Diner Is Expanding to Brookline
-Status hint: Opening | Industry: Restaurants
-Published: 2026-05-09 02:54:15
-
-MSN
-
---- Article 16 ---
-URL: https://www.lelezard.com/en/news-22221092.html
-Title: Coushatta Casino Resort Debuts Legacy Tower in Grand Opening Event May 15
-Status hint: Opening | Industry: Hospitality
-Published: 2026-05-09 00:46:41
-
-Coushatta Casino Resort Debuts Legacy Tower in Grand Opening Event May 15 Le Lézard Home Sections Business Environment Health Mining industry Oil industry Science and technology Sports and recreation Tourism and vacations Transportation News wire Français Classified in: Tourism and vacations , Business Subjects: CXP , FVT Coushatta Casino Resort Debuts Legacy Tower in Grand Opening Event May 15 Major expansion milestone event to feature tribal ceremony, ribbon cutting, and first-look tours of the new luxury hotel tower. KINDER, La. , May 8, 2026 /PRNewswire/ -- Coushatta Casino Resort , Louisiana's largest casino resort, will officially celebrate the grand opening of its new Legacy Tower with a ceremony on Friday, May 15 from 10:00 a.m. to 12:00 p.m., marking one of the most significant expansions in the resort's 30-year history. Coushatta Casino Resort, Louisiana's largest casino resort, celebrates the grand opening of Legacy Tower on May 15. Hosted by the Coushatta Tribe of Louisiana , the event will bring together Tribal leadership, casino executives, development partners and regional officials to commemorate the opening of the new Legacy Tower, which adds 204 guest rooms, including 100 luxury suites, and brings the resort's total inventory to more than 1,000 rooms. The ceremony will take place inside the newly constructed lobby and will incorporate elements that reflect the Tribe's culture, leadership and long-term vision for growth. "This grand opening is a defining moment for Coushatta," said Nate Tanner, General Manager of Coushatta Casino Resort. "Legacy Tower makes an immediate impression, from the scale of the tower itself to the unified lobby and arrival experience that brings the resort together in a new way. We are delivering a next-level experience for our guests while continuing to invest in our community, the Tribe and the future of this region." Grand Opening Ceremony Details The grand opening ceremony will take place from 10:00 a.m. to 12:00 p.m. a
-
---- Article 17 ---
-URL: https://www.aol.com/major-hotel-chain-files-insolvency-145428609.html
-Title: Major hotel chain files for insolvency as 125 locations at risk
-Status hint: Closing | Industry: Hospitality
-Published: 2026-05-10 22:35:01
-
-James Knuckey &  Charlie Bradley & Eleanor Tolbert Wed, April 15, 2026 at 3:10 PM UTC 0 The group manages hotels across 12 European countries -Credit:Revo Hospitality (Revo Hospitality) A leading European hotel operator has entered insolvency proceedings, raising questions about the future of its properties across the continent. Revo Hospitality Group, previously known as HR Group, was founded in 2008 and stands as Europe's largest white-label hotel operator - a third-party management firm that runs hotels for owners without displaying its own brand. The company manages over 260 hotels spanning 12 European nations and 146 cities. The portfolio encompasses numerous hotels operating under well-known franchise brands such as Hilton and ibis Styles, alongside its own brands, including Hyperion. Last week, it revealed plans for restructuring through self-administration by summer, while stating that hotels in two countries would continue operations. • Apple set to close stores in 3 states across the US - see the full list of axed locations • Macy's announces 14 locations across 12 states that will be closing soon - full list Why did Revo Hospitality Group file for insolvency? The company said: "Around 140 companies belonging to the Revo Hospitality Group have filed for insolvency under their own management at Charlottenburg District Court. The approximately 125 hotels in Germany and Austria will continue to operate with all 5,500 employees. The proceedings will be supervised by court-appointed administrators." Advertisement The company explained in a press release: "With the economic crisis, 140 companies, including the management and holding company, got into difficulties." "In particular, increased wage costs and the sharp rise in minimum wages , but also higher costs for rent, energy and food, are weighing on the business. Above all, the strong expansion of the Revo Hospitality Group in recent years led to duplicate structures and integration problems." Revo Hospitalit
-
---- Article 18 ---
-URL: https://www.aol.com/news/cancer-therapy-expanding-upmc-altoona-165010920.html
-Title: Cancer therapy expanding to UPMC Altoona for local patients
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-10 21:13:44
-
-Cortney Raynor Thu, May 7, 2026 at 4:50 PM UTC 0 Cancer therapy expanding to UPMC Altoona for local patients ALTOONA, Pa. (WTAJ) — Cancer patients in Central Pennsylvania now have greater access to an advanced prostate cancer treatment with the launch of Pluvicto at UPMC Altoona. Beginning in April, UPMC Altoona became the first satellite location within the UPMC Hillman Cancer Center network to offer the specialized radiopharmaceutical therapy for patients with metastatic prostate cancer. Previously, Pluvicto was typically available at major cancer centers, with many Blair County patients having to travel to Pittsburgh for the treatment. “Pluvicto has been a breakthrough therapy for prostate cancer and has shown a survival benefit for patients who have limited additional treatment options,” Ravi Patel, M.D., PhD, radiation oncologist and director of Radiopharmaceutical Therapy at UPMC Hillman Cancer Center, said. “Offering this therapy in Altoona allows patients to receive advanced, life-extending care closer to home, without the added burden of frequent, long-distance travel.” Pluvicto is designed for patients with castration-resistant metastatic prostate cancer, UPMC notes, and works by targeting specific cancer cells containing prostate-specific membrane antigens (PSMA). With the treatment now offered locally, the hospital network also hopes to help reduce the physical and emotional toll that cancer care can take. Advertisement “Our focus is not just on treating the cancer, but on supporting the whole patient,” Michael Corso, president, UPMC Altoona and UPMC Bedford, said. “By bringing this therapy to Altoona and offering virtual follow-ups, we’re making care more accessible while maintaining the highest standards of clinical excellence.” UPMC Altoona patients receiving Pluvicto are treated once every six weeks through IV infusion, with Dr. Patel traveling to Altoona regularly to treat patients and follow up through telemedicine visits. All to allow patients to 
-
---- Article 19 ---
-URL: https://www.aol.com/news/ollie-bargain-outlet-holds-grand-093000714.html
-Title: Ollie’s Bargain Outlet holds grand opening for two new stores
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-10 20:40:03
-
-Ashley Shook Thu, May 7, 2026 at 9:30 AM UTC 0 AGAWAM, Mass. (WWLP) – Ollie’s Bargain Outlet is holding a grand opening celebration for two locations in Hampden County. The bargain outlet announced on social media that the event will take place beginning at 9 a.m. at both locations. The store offers a wide range of products, including books, food, toys, electronics, home goods, clothing, furniture, flooring, seasonal items, cleaning supplies, hygiene products, hardware, and more, at up to 70% off the prices. Dean’s Beans named Massachusetts Rural Business of the Year Ollie’s was founded in 1982 and now operates more than 650 stores across the United States. Their merchandise often comes from closeouts, overstocks, packaging changes or manufacturer-refurbished items. They also acquire inventory through liquidation sales from businesses that are closing. Advertisement Ollie’s in Agawam (Photo sent to 22News from Ollie’s) Ollie’s opened both locations last month and is operating Mondays through Saturdays from 9 a.m. to 9 p.m. and Sundays from 10 a.m. to 7 p.m. Visit the Agawam locations at 890 Suffield Street in the Southgate Shopping Plaza, and in Springfield at 390 Cooley Street in the Five Town Plaza. Both locations opened last month. Local News Headlines Victim identified in Holyoke shooting on Suffolk Street Holyoke gas supply boosted by new infrastructure project Dulye Leadership Experience closes after 18 years of empowering Abandoned bear cub reunites with mother in Easthampton WWLP-22News, an NBC affiliate, began broadcasting in March 1953 to provide local news, network, syndicated, and local programming to western Massachusetts. Download the 22News Plus app on your TV to watch live-streaming newscasts and video on demand. Copyright 2026 Nexstar Media, Inc. All rights reserved. This material may not be published, broadcast, rewritten, or redistributed. For the latest news, weather, sports, and streaming video, head to WWLP.
-
---- Article 20 ---
-URL: https://www.aol.com/articles/mariachi-meatballs-hundreds-turn-grand-002024132.html
-Title: Mariachi and meatballs as hundreds turn out for grand opening of Culver City IKEA
-Status hint: Opening | Industry: Specialty / Other
-Published: 2026-05-10 20:32:59
-
-Nina Joudeh Sun, May 3, 2026 at 12:20 AM UTC 0 Hundreds are descending on Culver City as IKEA officially opened it’s first LA-area ‘city-center’ location at its long-awaited new Helms Design District location. Eager shoppers flooded the massive blue-and-yellow outpost on Saturday for opening-day deals, exploring home treasures, and joining in on family-friendly festivities. Hundreds are descending on Culver City today as IKEA officially rolls out the yellow carpet at its long-awaited new Helms Design District location. Shutterstock / Tooykrub Eager shoppers flooded the massive blue-and-yellow outpost for opening-day deals, exploring home treasures, and joining in on family-friendly festivities. Rafael Fontoura for CA Post Snapshots from the scene captured throngs of fans buzzing around, lining up outside the sprawling 38,000-square-foot space as the Swedish furniture giant welcomed its newest guests. The grand opening celebration kicked off with a block party, complete with giveaways, music, and plenty of IKEA’s signature staples — including its iconic meatball dish, which remains a major draw for loyal customers. The grand opening celebration kicked off with a block party, complete with giveaways, music, and plenty of IKEA’s signature staples — including its iconic meatball dish, which remains a major draw for loyal customers. Rafael Fontoura for CA Post Gustavo Tinajero has been been an employee with IKEA for 32 years and loves it.  Rafael Fontoura for CA Post The Post spoke to employee Gustavo Tinajero who’s been with IKEA for 32 years. “I love it. I’m so excited for the new store. if something is out of stock, we can have it in our store for customers the next day so the they don’t have to drive further out to pick up a product,” he said, with his daughter Nadia by his side. One of IKEA’s signature staples — it’s iconic meatball dish — remains a major draw for loyal customers. Christopher Sadowski Inside, shoppers got to explore thousands of urban-friendly produ
+- Article 1 — Fetch timed out (read timeout)
+- Article 2 — MSN shell only; no article body content
+- Article 3 — 403 Forbidden (note: title used to infer opening event/location for partial row)
+- Article 4 — 401 Unauthorized (note: title used to infer opening event for partial row)
+- Article 5 — 403 Forbidden; no content
+- Article 6 — MSN shell only; no article body content
+- Article 7 — MSN shell only; no article body content
+- Article 9 — 403 Forbidden; no content
+- Article 11 — Fetched but article body contained only a single unrelated header line (Sapporo Grand Hotel renovation); no opening/closing event details present
+- Article 12 — MSN shell only; no article body content
+- Article 14 — 403 Forbidden; no content
+- Article 16 — Only an ad/scroll prompt returned; no article content
+- Article 18 — 403 Forbidden; no content
+- Article 20 — Disallowed by robots.txt
