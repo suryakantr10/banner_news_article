@@ -1,366 +1,78 @@
 {
-  "last_updated": "2026-05-13 23:49 UTC",
-  "total": 60,
+  "last_updated": "2026-05-14 22:19 UTC",
+  "total": 12,
   "data": [
     {
-      "date": "May 13, 2026",
-      "url": "https://whatnow.com/phoenix/restaurants/tortillas-chiwas-owners-plan-expansion-beyond-phoenix-with-new-concept/",
-      "title": "Tortillas Chiwas Owners Plan Expansion Beyond Phoenix With New Concept",
-      "address": "914 N Grande Ave, Tucson, AZ 85745"
+      "date": "May 14, 2026",
+      "url": "https://whatnow.com/chicago/restaurants/honest-indian-vegetarian-restaurant-to-open-in-vernon-hills/",
+      "title": "Honest Indian Vegetarian Restaurant To Open In Vernon Hills",
+      "address": "145 W Townline Rd, Vernon Hills, IL 60061, USA"
     },
     {
-      "date": "May 13, 2026",
-      "url": "https://whatnow.com/houston/restaurants/lucky-village-chinese-buffet-undergoes-200000-renovations/",
-      "title": "Lucky Village Chinese Buffet Undergoes $200,000 Renovations",
-      "address": "10755 Westheimer Rd, Houston, TX 77042"
+      "date": "May 14, 2026",
+      "url": "https://whatnow.com/memphis/restaurants/7-brew-bringing-mid-summer-caffeine-boost-to-memphis/",
+      "title": "7 Brew Bringing Mid-Summer Caffeine Boost to Memphis",
+      "address": "2828 N Germantown Parkyway, Memphis, TN 38133"
     },
     {
-      "date": "May 13, 2026",
-      "url": "https://whatnow.com/las-vegas/restaurants/kueva-to-bring-an-exclusive-modern-dining-experience-to-the-valley/",
-      "title": "Kueva to Bring an \"Exclusive, Modern Dining Experience\" to the Valley",
-      "address": "6250 McLeod Dr, Las Vegas, NV 89120"
+      "date": "May 14, 2026",
+      "url": "https://whatnow.com/chicago/restaurants/jerk-yard-heading-south-to-debut-new-restaurant-in-park-forest/",
+      "title": "Jerk Yard Heading South to Debut New Restaurant in Park Forest",
+      "address": "Plaza West Shopping Center, 90 S Orchard Dr, Park Forest, IL 60466"
     },
     {
-      "date": "May 13, 2026",
-      "url": "https://whatnow.com/chicago/restaurants/kankakee-local-building-encanto-coffee-shop-to-serve-mexican-pastries/",
-      "title": "Kankakee Local Building ‘Encanto’ Coffee Shop to Serve Mexican Pastries",
-      "address": "869 W Jeffery St, Kankakee, IL 60901"
-    },
-    {
-      "date": "May 13, 2026",
-      "url": "https://whatnow.com/charlotte/restaurants/little-alley-steakhouse-revives-uptown-charlotte-plans-with-3-7m-permit-filing/",
-      "title": "Little Alley Steakhouse Revives Uptown Charlotte Plans With $3.7M Permit Filing",
-      "address": "Truist Center, 214 N Tryon St, Charlotte, NC 28202, USA"
-    },
-    {
-      "date": "May 13, 2026",
-      "url": "https://whatnow.com/houston/restaurants/himari-to-open-a-second-location-in-former-bank-of-america-in-uptown/",
-      "title": "Himari to Open a Second Location in Former Bank of America in Uptown",
-      "address": "6414 San Felipe St a, Houston, TX 77057"
-    },
-    {
-      "date": "May 13, 2026",
-      "url": "https://whatnow.com/san-antonio/restaurants/daves-hot-chicken-expanding-to-helotes-with-new-northwest-san-antonio-location/",
-      "title": "Dave’s Hot Chicken Expanding to Helotes With New Northwest San Antonio Location",
-      "address": "9257 N Loop 1604 W, Helotes, TX 78023, USA"
-    },
-    {
-      "date": "May 13, 2026",
-      "url": "https://whatnow.com/new-orleans/restaurants/georgian-bakery-cafe-and-natural-wine-bar-coming-to-the-east-village/",
-      "title": "Georgian Bakery Café and Natural Wine Bar Coming to the East Village",
-      "address": "501 E 6th St, New York, NY 10009"
-    },
-    {
-      "date": "May 13, 2026",
-      "url": "https://whatnow.com/boston/restaurants/pokeworks-plans-major-greater-boston-expansion/",
-      "title": "Pokeworks Plans Major Greater Boston Expansion",
+      "date": "May 14, 2026",
+      "url": "https://whatnow.com/seattle/restaurants/the-baillie-planned-for-capitol-hill-in-summer-2027/",
+      "title": "The Baillie Planned for Capitol Hill in Summer 2027",
       "address": ""
     },
     {
-      "date": "May 13, 2026",
-      "url": "https://whatnow.com/chicago/restaurants/jims-original-relocating-to-new-pilsen-storefront-adding-breakfast-menu/",
-      "title": "Jim’s Original Relocating to New Pilsen Storefront, Adding Breakfast Menu",
-      "address": "551 W 18th St, Chicago, IL 60616"
+      "date": "May 14, 2026",
+      "url": "https://whatnow.com/las-vegas/restaurants/mikaelas-taste-of-asia-to-come-to-container-park/",
+      "title": "Mikaelas Taste of Asia to Come to Container Park",
+      "address": "707 E Fremont St, Las Vegas, NV 89101"
     },
     {
-      "date": "May 13, 2026",
-      "url": "https://whatnow.com/atlanta/restaurants/westside-motor-lounge-team-bringing-pop-up-to-the-krog-district/",
-      "title": "Westside Motor Lounge Team Bringing Pop-Up To The Krog District | What Now Atlanta",
-      "address": "112 Krog St NE, Atlanta, GA 30307"
+      "date": "May 14, 2026",
+      "url": "https://whatnow.com/chicago/restaurants/tilly-bagel-owners-cooking-up-third-location-in-lakeview/",
+      "title": "Tilly Bagel Owners Cooking Up Third Location in Lakeview",
+      "address": "3162 N Broadway, Chicago, IL 60657"
     },
     {
-      "date": "May 13, 2026",
-      "url": "https://whatnow.com/san-diego/restaurants/pinsarella-market-to-debut-in-san-diego/",
-      "title": "Pinsarella Market To Debut in San Diego",
-      "address": "8131 La Mesa Blvd, La Mesa, CA 91942, USA"
+      "date": "May 14, 2026",
+      "url": "https://whatnow.com/seattle/restaurants/yoka-tea-eyes-ballard-expansion-following-madrona-success/",
+      "title": "Yoka Tea Eyes Ballard Expansion Following Madrona Success",
+      "address": "5335 Ballard Ave NW, Seattle, WA 98107"
     },
     {
-      "date": "May 13, 2026",
-      "url": "https://whatnow.com/charleston/restaurants/authentic-vietnamese-eatery-coming-to-downtown-savannah/",
-      "title": "Authentic Vietnamese Eatery Coming to Downtown Savannah",
-      "address": "114 E Broughton St., Savannah, GA 31401"
+      "date": "May 14, 2026",
+      "url": "https://whatnow.com/philadelphia/restaurants/ogyu-plans-premium-japanese-yakiniku-experience-on-the-main-line/",
+      "title": "Ogyu Plans Premium Japanese Yakiniku Experience in Ardmore",
+      "address": "60 Greenfield Ave., Ardmore, PA 19003"
     },
     {
-      "date": "May 13, 2026",
-      "url": "https://whatnow.com/tampa/restaurants/west-coast-coffee-chain-better-buzz-coffee-making-florida-debut-in-tampa-bay/",
-      "title": "West Coast Coffee Chain Better Buzz Coffee Making Florida Debut in Tampa Bay",
-      "address": "3290 Word Way, New Port Richey, FL 34655"
-    },
-    {
-      "date": "May 13, 2026",
-      "url": "https://whatnow.com/austin/restaurants/huddle-tavern-ramping-up-toward-construction/",
-      "title": "Huddle Tavern Ramping Up Toward Construction In Cedar Park | What Now Austin",
-      "address": "604 N Bell Blvd, Cedar Park, TX 78613"
-    },
-    {
-      "date": "May 13, 2026",
-      "url": "https://whatnow.com/new-york/restaurants/fine-dining-hamburg-restaurant-announces-closure-after-23-year-run/",
-      "title": "Fine Dining Hamburg Restaurant Announces Closure After 23-Year Run",
-      "address": "52 Main St, Hamburg, NY 14075"
-    },
-    {
-      "date": "May 13, 2026",
-      "url": "https://whatnow.com/columbus/restaurants/the-shapeshifter-bringing-themed-cocktail-bar-experience-to-franklinton-this-may/",
-      "title": "The Shapeshifter Bringing Themed Cocktail Bar Experience to Franklinton This May",
-      "address": "129 Mc Dowell St, Columbus, OH 43215, USA"
-    },
-    {
-      "date": "May 13, 2026",
-      "url": "https://whatnow.com/detroit/restaurants/assembly-restaurant-from-saddleback-bbq-owner-coming-to-mason/",
-      "title": "‘Assembly’ Restaurant From Saddleback BBQ Owner Coming to Mason",
-      "address": "402 S Jefferson St, Mason, MI 48854"
-    },
-    {
-      "date": "May 13, 2026",
-      "url": "https://whatnow.com/detroit/restaurants/late-night-smash-burger-concept-set-to-debut-in-berkley/",
-      "title": "Late-Night Smash Burger Concept Set to Debut in Berkley",
-      "address": "2375 Coolidge Hwy, Berkley, MI 48072"
-    },
-    {
-      "date": "May 13, 2026",
-      "url": "https://whatnow.com/charleston/restaurants/blueberrys-autograph-set-to-open-in-north-myrtle-beach-this-fall/",
-      "title": "Blueberrys Autograph Set to Open in North Myrtle Beach",
+      "date": "May 14, 2026",
+      "url": "https://whatnow.com/austin/restaurants/on-the-grind-bringing-coffee-kiosk-to-kyle/",
+      "title": "On The Grind Bringing Coffee Kiosk To Kyle | What Now Austin",
       "address": ""
     },
     {
-      "date": "May 13, 2026",
-      "url": "https://whatnow.com/atlanta/restaurants/new-concept-under-pressure-bringing-nontraditional-approach-to-wine-pairings-in-chastain/",
-      "title": "New Concept Under Pressure Bringing Nontraditional Approach To Wine Pairings In Chastain | What Now Atlanta",
-      "address": "4920 Roswell Rd, Atlanta, GA 30342"
+      "date": "May 14, 2026",
+      "url": "https://whatnow.com/detroit/restaurants/a-landmark-diner-and-bakery-plans-closure-after-years-of-operation/",
+      "title": "A Landmark Diner and Bakery Plans Closure After Years of Operation",
+      "address": "28030 Gratiot Ave, Roseville, MI 48066, United States"
     },
     {
-      "date": "May 13, 2026",
-      "url": "https://whatnow.com/charlotte/restaurants/first-of-its-kind-hand-roll-concept-opening-in-charlotte/",
-      "title": "First-of-Its-Kind Hand Roll Concept Opening in Charlotte",
-      "address": "420 E 22nd St, Charlotte, NC 28206"
+      "date": "May 14, 2026",
+      "url": "https://whatnow.com/los-angeles/restaurants/popular-seafood-restaurant-in-west-hollywood-set-to-close-doors-this-summer/",
+      "title": "Popular Seafood Restaurant in West Hollywood Set to Close Doors This Summer",
+      "address": "8171 Santa Monica Blvd, West Hollywood, CA 90046, United States"
     },
     {
-      "date": "May 13, 2026",
-      "url": "https://whatnow.com/detroit/restaurants/joe-vicari-restaurant-group-to-operate-hook-in-st-clair-shores-with-new-menu/",
-      "title": "Joe Vicari Restaurant Group to Operate Hook in St. Clair Shores with New Menu",
-      "address": "24214 Jefferson Ave, St Clair Shores, MI 48080"
-    },
-    {
-      "date": "May 13, 2026",
-      "url": "https://whatnow.com/los-angeles/restaurants/popular-fast-casual-mediterranean-chain-expands-with-new-westlake-village-location/",
-      "title": "Popular Fast-Casual Mediterranean Chain Expands with New Westlake Village Location",
-      "address": "968-12 S Westlake Blvd, Westlake Village, CA 91361"
-    },
-    {
-      "date": "May 13, 2026",
-      "url": "https://whatnow.com/new-york/restaurants/new-seafood-and-cocktail-bar-opening-in-williamsburg/",
-      "title": "New Seafood and Cocktail Bar Opening in Williamsburg",
-      "address": "6 River St, Brooklyn, NY 11249"
-    },
-    {
-      "date": "May 13, 2026",
-      "url": "https://whatnow.com/boston/restaurants/popular-american-chinese-restaurant-brand-opening-first-boston-area-location/",
-      "title": "Popular American Chinese Restaurant Brand Opening First Boston-Area Location",
-      "address": "5 District Ave, Dorchester"
-    },
-    {
-      "date": "May 13, 2026",
-      "url": "https://whatnow.com/san-diego/restaurants/the-stand-expanding-to-encinitas-with-new-restaurant/",
-      "title": "The Stand Expanding to Encinitas With New Restaurant",
-      "address": "267 N El Camino Real, Encinitas, CA 92024, USA"
-    },
-    {
-      "date": "May 12, 2026",
-      "url": "https://whatnow.com/las-vegas/restaurants/iris-galerie-to-brighten-up-the-shoppes-at-mandalay-place-with-an-opening/",
-      "title": "Iris Galerie to Brighten Up The Shoppes At Mandalay Place With an Opening",
-      "address": "3930 S Las Vegas Blvd, Las Vegas, NV 89119"
-    },
-    {
-      "date": "May 12, 2026",
-      "url": "https://whatnow.com/charleston/restaurants/frankies-fun-park-undergoing-renovations-ahead-of-new-debut-in-north-charleston/",
-      "title": "Frankie’s Fun Park in Charleston Prepares for Reopening",
-      "address": "5000 Ashley Phosphate Rd., North Charleston, SC 29418"
-    },
-    {
-      "date": "May 12, 2026",
-      "url": "https://whatnow.com/detroit/restaurants/7-brew-franchise-group-planning-new-adrian-location-near-meijer/",
-      "title": "7 Brew Franchise Group Planning New Adrian Location Near Meijer",
-      "address": ""
-    },
-    {
-      "date": "May 12, 2026",
-      "url": "https://whatnow.com/new-york/restaurants/a-beloved-taco-restaurant-has-closed-its-doors-in-floral-park/",
-      "title": "A Beloved Taco Restaurant Has Closed Its Doors in Floral Park",
-      "address": "155 Tulip Ave, Floral Park, NY 11001, United States"
-    },
-    {
-      "date": "May 12, 2026",
-      "url": "https://whatnow.com/chicago/restaurants/owners-of-le-bouchon-keeping-with-french-theme-for-new-chicken-takeout-spot/",
-      "title": "Owners of Le Bouchon Keeping with French Theme for New Chicken Takeout Spot",
-      "address": "2234 N Western Ave, Chicago, IL 60647"
-    },
-    {
-      "date": "May 12, 2026",
-      "url": "https://whatnow.com/austin/restaurants/a-longtime-austin-dessert-favorite-is-preparing-to-serve-its-final-orders/",
-      "title": "A Longtime Austin Dessert Favorite Is Preparing to Serve Its Final Orders",
-      "address": "7800 S 1st St, Austin, TX 78745"
-    },
-    {
-      "date": "May 12, 2026",
-      "url": "https://whatnow.com/detroit/restaurants/a-popular-butcher-style-restaurant-is-closing-one-of-its-original-locations/",
-      "title": "A Popular Butcher-Style Restaurant Is Closing One of Its Original Locations",
-      "address": "8044 Kercheval Ave, Detroit, MI 48214, United States"
-    },
-    {
-      "date": "May 12, 2026",
-      "url": "https://whatnow.com/las-vegas/restaurants/a-fast-growing-hawaiian-restaurant-chain-is-opening-another-las-vegas-location/",
-      "title": "A Fast-Growing Hawaiian Restaurant Chain Is Opening Another Las Vegas Location",
-      "address": "5485 Camino Al Norte, North Las Vegas, NV 89135"
-    },
-    {
-      "date": "May 12, 2026",
-      "url": "https://whatnow.com/nashville/restaurants/a-37-year-old-nashville-restaurant-is-reopening-for-full-dine-in-service/",
-      "title": "A 37-Year-Old Nashville Restaurant Is Reopening for Full Dine-In Service",
-      "address": "3307 Charlotte Ave, Nashville, TN 37209"
-    },
-    {
-      "date": "May 12, 2026",
-      "url": "https://whatnow.com/las-vegas/restaurants/the-alaskan-fish-spot-to-bring-fresh-seafood-to-the-valley/",
-      "title": "The Alaskan Fish Spot to Bring Fresh Seafood to the Valley",
-      "address": "2121 E Sahara Ave, Las Vegas, NV 89104"
-    },
-    {
-      "date": "May 12, 2026",
-      "url": "https://whatnow.com/houston/restaurants/carrabbas-italian-grill-building-2-75m-restaurant-in-tomball/",
-      "title": "Carrabba’s Italian Grill Building $2.75M Restaurant in Tomball",
-      "address": "13215 Grand Pkwy, Tomball, TX 77377"
-    },
-    {
-      "date": "May 11, 2026",
-      "url": "https://whatnow.com/detroit/restaurants/daily-press-cafe-to-take-over-kung-fu-tea-in-downtown-west-dearborn/",
-      "title": "Daily Press Cafe to Take Over Kung Fu Tea in Downtown West Dearborn",
-      "address": "22001 Michigan Ave, Dearborn, MI 48124"
-    },
-    {
-      "date": "May 11, 2026",
-      "url": "https://whatnow.com/philadelphia/restaurants/blank-street-brewing-up-second-philadelphia-location/",
-      "title": "Blank Street Brewing Up Second Philadelphia Location",
-      "address": "1801 Spruce St., Philadelphia, PA 19103"
-    },
-    {
-      "date": "May 11, 2026",
-      "url": "https://whatnow.com/philadelphia/restaurants/steel-city-brewing-to-open-in-coatesville-this-spring-under-restaurateur-philip-ferro/",
-      "title": "Steel City Brewing to Open in Coatesville This Spring",
-      "address": "132 Lincoln Hwy. E, Coatesville, PA 19320"
-    },
-    {
-      "date": "May 11, 2026",
-      "url": "https://whatnow.com/philadelphia/restaurants/texas-de-brazil-to-open-at-lehigh-valley-mall-in-whitehall/",
-      "title": "Texas de Brazil to Open at Lehigh Valley Mall in Whitehall",
-      "address": "250 Lehigh Valley Mall, Whitehall Township, PA 18052"
-    },
-    {
-      "date": "May 11, 2026",
-      "url": "https://whatnow.com/portland/restaurants/thai-staple-langbaan-moving-southeast-for-next-portland-location/",
-      "title": "Thai Staple Langbaan Moving Southeast for Next Portland Location",
-      "address": "215 SE 9th Ave, Portland, OR 97214"
-    },
-    {
-      "date": "May 11, 2026",
-      "url": "https://whatnow.com/miami/restaurants/new-11500-square-foot-beach-club-set-to-debut-in-miami-beachs-art-deco-district/",
-      "title": "New 11,500-Square-Foot Beach Club Set to Debut in Miami Beach’s Art Deco District",
-      "address": "1717 Collins Ave, Miami Beach, FL 33139, United States"
-    },
-    {
-      "date": "May 11, 2026",
-      "url": "https://whatnow.com/new-orleans/restaurants/new-orleans-restaurant-known-for-german-inspired-menu-to-close-on-june-1/",
-      "title": "New Orleans Restaurant Known for German-Inspired Menu to Close on June 1",
-      "address": "617-B Piety, New Orleans, LA 70117"
-    },
-    {
-      "date": "May 11, 2026",
-      "url": "https://whatnow.com/nashville/restaurants/new-7-brew-location-planned-for-tullahoma/",
-      "title": "New 7 Brew Location Planned For Tullahoma",
-      "address": "2102 N Jackson St, Tullahoma, TN 37388, USA"
-    },
-    {
-      "date": "May 11, 2026",
-      "url": "https://whatnow.com/chicago/restaurants/new-wasai-bbq-concept-to-serve-korean-barbecue-in-chinatown/",
-      "title": "New ‘Wasai BBQ’ Concept to Serve Korean Barbecue in Chinatown",
-      "address": "2237 S Wentworth Ave, Chicago, IL 60616"
-    },
-    {
-      "date": "May 11, 2026",
-      "url": "https://whatnow.com/philadelphia/restaurants/victory-bar-grill-under-new-ownership-with-a-planned-refresh/",
-      "title": "Victory Bar & Grill Under New Ownership, Plans Refresh",
-      "address": "795 NJ-73 West Berlin, NJ 08091"
-    },
-    {
-      "date": "May 11, 2026",
-      "url": "https://whatnow.com/chicago/restaurants/popular-joliet-mall-restaurant-shuts-down-following-tragic-incident/",
-      "title": "Popular Joliet Mall Restaurant Shuts Down Following Tragic Incident",
-      "address": "3151 Voyager Ln, Joliet, IL 60431"
-    },
-    {
-      "date": "May 11, 2026",
-      "url": "https://whatnow.com/philadelphia/restaurants/magerks-pub-grill-expands-greater-philadelphia-footprint-with-west-chester-location/",
-      "title": "MaGerk’s Pub & Grill to Expand to West Chester",
-      "address": "3 W Gay St. West Chester, PA 19380"
-    },
-    {
-      "date": "May 11, 2026",
-      "url": "https://whatnow.com/atlanta/restaurants/crumbl-and-4-more-atlanta-restaurant-openings-we-uncovered-last-week-may-4-8/",
-      "title": "Crumbl and 4 More Atlanta Restaurant Openings We Uncovered Last Week (May 4-8)",
-      "address": ""
-    },
-    {
-      "date": "May 11, 2026",
-      "url": "https://whatnow.com/las-vegas/restaurants/a-viral-burger-brand-is-expanding-with-its-first-permanent-las-vegas-restaurant/",
-      "title": "A Viral Burger Brand Is Expanding With Its First Permanent Las Vegas Restaurant",
-      "address": "124 S 6th St, Las Vegas, NV 89101"
-    },
-    {
-      "date": "May 11, 2026",
-      "url": "https://whatnow.com/new-orleans/restaurants/vietnamese-influenced-cafe-coming-to-lafayette-parish/",
-      "title": "Vietnamese-Influenced Café Coming to Lafayette Parish",
-      "address": "3204 E Milton Ave, Youngsville, LA 70592"
-    },
-    {
-      "date": "May 11, 2026",
-      "url": "https://whatnow.com/las-vegas/restaurants/ocean-drive-smash-burger-hotspot-opened-its-first-las-vegas-location/",
-      "title": "Ocean Drive Smash Burger Hotspot Opened Its First Las Vegas Location",
-      "address": "3377 Las Vegas Blvd S #2170, Las Vegas, NV 89109, United States"
-    },
-    {
-      "date": "May 10, 2026",
-      "url": "https://whatnow.com/washington-dc/restaurants/zaxbys-begins-work-on-new-maryland-location/",
-      "title": "Zaxbys Begins Work on New Maryland Location",
-      "address": ""
-    },
-    {
-      "date": "May 10, 2026",
-      "url": "https://whatnow.com/washington-dc/restaurants/food-hall-juggernaut-continues-dmv-expansion/",
-      "title": "Food Hall Juggernaut Continues DMV Expansion",
-      "address": "20936 Frederick Rd, Germantown, MD 20876"
-    },
-    {
-      "date": "May 10, 2026",
-      "url": "https://whatnow.com/dallas/restaurants/qdoba-to-feed-dfw-flyers/",
-      "title": "Qdoba to Feed DFW Flyers",
-      "address": "2625 North International Parkway, Dallas, TX 75261"
-    },
-    {
-      "date": "May 10, 2026",
-      "url": "https://whatnow.com/memphis/restaurants/west-memphis-prepares-to-greet-texas-favorite/",
-      "title": "West Memphis Prepares to Greet Texas-Favorite",
-      "address": ""
-    },
-    {
-      "date": "May 10, 2026",
-      "url": "https://whatnow.com/memphis/restaurants/a-forkful-restaurant-and-catering-making-memphis-plans/",
-      "title": "A Forkful Restaurant and Catering Making Memphis Plans",
-      "address": "2650 Thousand Oaks Blvd, Memphis, TN 38118"
-    },
-    {
-      "date": "May 10, 2026",
-      "url": "https://whatnow.com/memphis/restaurants/mcalisters-deli-headed-to-jonesboro/",
-      "title": "McAlister’s Deli Headed to Jonesboro",
-      "address": "2024 Fair Park Blvd., Jonesboro, AR 72401"
+      "date": "May 14, 2026",
+      "url": "https://whatnow.com/austin/restaurants/proud-mary-coffee-appears-to-have-second-austin-location-in-the-works/",
+      "title": "Proud Mary Coffee Appears To Have Second Austin Location In The Works | What Now Austin",
+      "address": "4301 Guadalupe St #100, Austin, TX 78751"
     }
   ]
 }
