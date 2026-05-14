@@ -158,7 +158,7 @@
     {
       "status": "Opening",
       "industry": "Convenience Stores / Distributors",
-      "region": "USA",
+      "region": "Canada",
       "title": "Sunoco and LaMa Convenience Store in Big Spring to Host Grand Opening This Thursday, May 14th",
       "source": "The Big Spring Herald",
       "published_date": "2026-05-12 21:27:00",
@@ -862,7 +862,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "Canada",
+      "region": "USA",
       "title": "Professional women’s hockey league expanding to Las Vegas, says source",
       "source": "FOX5 Vegas",
       "published_date": "2026-05-12 20:21:00",
@@ -917,7 +917,7 @@
     {
       "status": "Closing",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "A Randalls store in Houston is closing soon. Here's what to know.",
       "source": "MSN",
       "published_date": "2026-05-12 18:23:12",
@@ -939,7 +939,7 @@
     {
       "status": "Closing",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "An uptown Charlotte wine bar is closing soon. Here’s what’s taking its place",
       "source": "AOL.com",
       "published_date": "2026-05-12 18:08:01",
@@ -1137,7 +1137,7 @@
     {
       "status": "Opening",
       "industry": "Grocery",
-      "region": "USA",
+      "region": "Canada",
       "title": "Supermarket chain to open new Suffolk store in major expansion",
       "source": "Yahoo News UK",
       "published_date": "2026-05-12 11:00:00",
@@ -1148,7 +1148,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "Now Open: Dough Hands New Residency at All My Friends in Hackney",
       "source": "Hospitality & Catering News",
       "published_date": "2026-05-12 10:41:39",
@@ -1192,7 +1192,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "The Board Game Vault now open in New Braunfels",
       "source": "Community Impact | News",
       "published_date": "2026-05-12 05:00:00",
@@ -1203,7 +1203,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "Council confirms talks with Aldi over construction of controversial new store",
       "source": "Kent Online",
       "published_date": "2026-05-12 04:00:00",
@@ -1671,6 +1671,28 @@
       "published_date": "2026-05-13 14:56:58",
       "direct_link": "https://www.aol.com/news/quickchek-replacing-edisons-stelton-restaurant-125015146.html",
       "keyword": "coming soon",
+      "relevance_score": 4
+    },
+    {
+      "status": "Opening",
+      "industry": "Hospitality",
+      "region": "Canada",
+      "title": "Bayside hotel open for dining in Inverness",
+      "source": "Point Reyes Light",
+      "published_date": "2026-05-13 21:24:16",
+      "direct_link": "https://www.ptreyeslight.com/news/bayside-hotel-open-for-dining-in-inverness/",
+      "keyword": "soft opening",
+      "relevance_score": 4
+    },
+    {
+      "status": "Opening",
+      "industry": "Sporting Goods",
+      "region": "USA",
+      "title": "Sports retailer to close 175 stores, focus on key locations",
+      "source": "MSN",
+      "published_date": "2026-05-13 20:14:10",
+      "direct_link": "https://www.msn.com/en-gb/money/other/sports-retailer-announces-closure-of-175-underperforming-stores-in-us/ar-AA230LjJ",
+      "keyword": "new store",
       "relevance_score": 4
     },
     {
@@ -2512,18 +2534,7 @@
     {
       "status": "Opening",
       "industry": "Grocery",
-      "region": "USA",
-      "title": "Costa Coffee set to open new café inside busy Northampton supermarket",
-      "source": "Northampton Chronicle and Echo",
-      "published_date": "2026-05-12 16:03:00",
-      "direct_link": "https://www.northamptonchron.co.uk/news/people/costa-coffee-set-to-open-new-cafe-inside-busy-northampton-supermarket-rough-opening-date-revealed-8542258",
-      "keyword": "now open",
-      "relevance_score": 4
-    },
-    {
-      "status": "Opening",
-      "industry": "Grocery",
-      "region": "USA",
+      "region": "Canada",
       "title": "Grocery store could be developed in this retail center",
       "source": "The Business Journals",
       "published_date": "2026-05-12 16:03:00",
@@ -2611,7 +2622,7 @@
     {
       "status": "Opening",
       "industry": "Books / Toys / Gaming",
-      "region": "USA",
+      "region": "Canada",
       "title": "Fancy Leaf Plant Co and Secret Gardens Book Store",
       "source": "ABC7 WWSB",
       "published_date": "2026-05-12 14:23:00",
@@ -2677,7 +2688,7 @@
     {
       "status": "Opening",
       "industry": "Grocery",
-      "region": "USA",
+      "region": "Canada",
       "title": "Mercadona set to open first Faro supermarket in November",
       "source": "Portugal Resident",
       "published_date": "2026-05-12 13:39:13",
@@ -2776,7 +2787,7 @@
     {
       "status": "Opening",
       "industry": "Restaurants",
-      "region": "USA",
+      "region": "Canada",
       "title": "Sharigato, Charlotte’s first sushi hand roll restaurant, set to open next week",
       "source": "AOL.com",
       "published_date": "2026-05-12 10:00:00",
@@ -2809,7 +2820,7 @@
     {
       "status": "Opening",
       "industry": "Apparel",
-      "region": "USA",
+      "region": "Canada",
       "title": "Major fashion retailer to open first Devon branch in Exeter",
       "source": "Exeter Today",
       "published_date": "2026-05-12 09:11:00",
@@ -2843,6 +2854,17 @@
       "status": "Opening",
       "industry": "Grocery",
       "region": "USA",
+      "title": "Check out one of these six restaurants that opened in MetroWest",
+      "source": "AOL.com",
+      "published_date": "2026-05-12 08:52:56",
+      "direct_link": "https://www.aol.com/articles/check-one-six-restaurants-opened-084705000.html",
+      "keyword": "grand opening",
+      "relevance_score": 4
+    },
+    {
+      "status": "Opening",
+      "industry": "Grocery",
+      "region": "Canada",
       "title": "European grocery store giant ‘better than Walmart’ confirms US expansion as it inches closer to brand new locations",
       "source": "the-sun.com",
       "published_date": "2026-05-12 08:49:32",
@@ -2864,7 +2886,7 @@
     {
       "status": "Closing",
       "industry": "Restaurants",
-      "region": "Canada",
+      "region": "USA",
       "title": "‘With heavy hearts’: Italian restaurant chain closing Akron location",
       "source": "AOL.com",
       "published_date": "2026-05-12 08:12:07",
@@ -2919,7 +2941,7 @@
     {
       "status": "Closing",
       "industry": "Restaurants",
-      "region": "Canada",
+      "region": "USA",
       "title": "Beloved Restaurant Chain Quietly Closes 200 U.S. Locations",
       "source": "Men's Journal",
       "published_date": "2026-05-12 03:20:00",
@@ -3005,6 +3027,17 @@
       "relevance_score": 4
     },
     {
+      "status": "Closing",
+      "industry": "Restaurants",
+      "region": "Canada",
+      "title": "Glendale Acapulco to close after 57 years; restaurant to be demolished for 2-story car wash",
+      "source": "KTLA",
+      "published_date": "2026-05-12 00:16:06",
+      "direct_link": "https://ktla.com/news/local-news/glendale-acapulco-closes-after-57-years-restaurant-to-be-demolished-for-2-story-car-wash/",
+      "keyword": "last day",
+      "relevance_score": 4
+    },
+    {
       "status": "Opening",
       "industry": "Restaurants",
       "region": "Canada",
@@ -3023,7 +3056,7 @@
       "source": "WKRC",
       "published_date": "2026-05-12 00:10:35",
       "direct_link": "https://local12.com/news/local/new-gym-open-former-west-side-retail-space-bee-fit-health-club-gyms-workout-working-out-exercise-athlete-athletics-health-healthy-green-township-bridgetown-road-construction-open-opening-date-membership-cost-price",
-      "keyword": "plans to open",
+      "keyword": "coming soon",
       "relevance_score": 4
     },
     {
@@ -4525,7 +4558,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "Harveys stores in Jacksonville converting to Winn-Dixie",
       "source": "AOL.com",
       "published_date": "2026-05-12 19:15:31",
@@ -4547,7 +4580,7 @@
     {
       "status": "Closing",
       "industry": "Specialty / Other",
-      "region": "Canada",
+      "region": "USA",
       "title": "IPIC auction splits theater locations, intellectual property assets",
       "source": "The Business Journals",
       "published_date": "2026-05-12 19:03:00",
@@ -4652,6 +4685,17 @@
       "published_date": "2026-05-12 18:04:01",
       "direct_link": "https://terracestandard.com/2026/05/12/aw-opening-brings-excitement-and-traffic-jams-to-downtown-prince-rupert/",
       "keyword": "now open",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "Canada",
+      "title": "Alabama-Coushatta Tribe to open temporary casino",
+      "source": "Focus Gaming News",
+      "published_date": "2026-05-12 17:56:36",
+      "direct_link": "https://focusgn.com/alabama-coushatta-tribe-to-open-temporary-casino",
+      "keyword": "groundbreaking ceremony",
       "relevance_score": 2
     },
     {
@@ -4822,6 +4866,28 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
+      "region": "Canada",
+      "title": "Publix sets June opening for smaller Florida store. How it's different",
+      "source": "MSN",
+      "published_date": "2026-05-12 16:19:43",
+      "direct_link": "https://www.msn.com/en-us/money/companies/publix-sets-june-opening-for-smaller-florida-store-how-its-different/ar-AA22vXpF",
+      "keyword": "opening soon",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "Canada",
+      "title": "Dunkin' Donuts will return to Canada with hundreds of locations, but will Quebec be included?",
+      "source": "MTL Blog",
+      "published_date": "2026-05-12 16:16:56",
+      "direct_link": "https://www.mtlblog.com/dunkin-donuts-canada-locations-quebec",
+      "keyword": "plans to open",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
       "region": "USA",
       "title": "Publix sets June opening for smaller Florida store. How it's different",
       "source": "MSN",
@@ -4855,7 +4921,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "Wawa to Open First Tennessee Location Next Month",
       "source": "Convenience Store News",
       "published_date": "2026-05-12 16:11:48",
@@ -4866,7 +4932,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "Wawa is opening its first Tennessee location next month. Are more in the works?",
       "source": "AOL.com",
       "published_date": "2026-05-12 15:56:04",
@@ -4921,6 +4987,17 @@
     {
       "status": "Closing",
       "industry": "Specialty / Other",
+      "region": "Canada",
+      "title": "The Moppet Shoppe closing after 50 years in Shreveport",
+      "source": "AOL.com",
+      "published_date": "2026-05-12 15:20:10",
+      "direct_link": "https://www.aol.com/articles/moppet-shoppe-closing-50-years-152010861.html",
+      "keyword": "store closing",
+      "relevance_score": 2
+    },
+    {
+      "status": "Closing",
+      "industry": "Specialty / Other",
       "region": "USA",
       "title": "The Moppet Shoppe closing after 50 years in Shreveport",
       "source": "AOL.com",
@@ -4954,7 +5031,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "New traditional butcher's shop to open in town",
       "source": "Oxford Mail",
       "published_date": "2026-05-12 15:00:00",
@@ -5009,7 +5086,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "Greggs launch bid to open Aberdeenshire town's second bakery in former bank",
       "source": "Aberdeen Live",
       "published_date": "2026-05-12 14:28:48",
@@ -5130,7 +5207,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "Watford pub to host 'grand reopening' tomorrow after being saved from closure",
       "source": "Watford Observer",
       "published_date": "2026-05-12 12:20:00",
@@ -5285,6 +5362,17 @@
       "status": "Opening",
       "industry": "Specialty / Other",
       "region": "USA",
+      "title": "More Raising Cane’s locations opening this month: Here’s where",
+      "source": "WVNS",
+      "published_date": "2026-05-12 10:05:49",
+      "direct_link": "https://www.wvnstv.com/news/national-news/more-raising-canes-locations-opening-this-month-heres-where/amp/",
+      "keyword": "expanding to",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "Canada",
       "title": "Whiskey on the Water to open on S. Main Street in West Bend, Wi",
       "source": "Washington County Insider",
       "published_date": "2026-05-12 09:49:59",
@@ -5300,6 +5388,28 @@
       "source": "AOL.com",
       "published_date": "2026-05-12 09:47:50",
       "direct_link": "https://www.aol.com/news/burlington-open-store-upper-bucks-083939463.html",
+      "keyword": "plans to open",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "Canada",
+      "title": "Buc-ee’s is expanding to new states. Here’s where",
+      "source": "AOL.com",
+      "published_date": "2026-05-12 09:47:32",
+      "direct_link": "https://www.aol.com/articles/buc-ee-expanding-states-where-181208000.html",
+      "keyword": "grand opening",
+      "relevance_score": 2
+    },
+    {
+      "status": "Opening",
+      "industry": "Specialty / Other",
+      "region": "Canada",
+      "title": "Exclusive: Fintech giant Revolut to open first physical store in Barcelona",
+      "source": "MSN",
+      "published_date": "2026-05-12 09:40:53",
+      "direct_link": "https://www.msn.com/en-au/money/news/exclusive-fintech-giant-revolut-to-open-first-physical-store-in-barcelona/ar-AA21SJKi?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1",
       "keyword": "plans to open",
       "relevance_score": 2
     },
@@ -5362,11 +5472,11 @@
       "status": "Opening",
       "industry": "Specialty / Other",
       "region": "USA",
-      "title": "Shock and delight as famous Newcastle bar re-opens just months after closing down",
-      "source": "Chronicle Live",
-      "published_date": "2026-05-12 08:59:00",
-      "direct_link": "https://www.chroniclelive.co.uk/whats-on/food-drink-news/shock-delight-famous-newcastle-bar-33930203",
-      "keyword": "open for business",
+      "title": "Ollie's Bargain Outlet in Henrietta shut down by fire marshal over safety issues",
+      "source": "AOL.com",
+      "published_date": "2026-05-12 09:13:43",
+      "direct_link": "https://www.aol.com/news/ollies-bargain-outlet-henrietta-shut-083516797.html",
+      "keyword": "going out of business",
       "relevance_score": 2
     },
     {
@@ -5416,7 +5526,7 @@
     {
       "status": "Opening",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "Costa Coffee and Sainsbury’s open 50th in-store location",
       "source": "Mobility Plaza",
       "published_date": "2026-05-12 07:01:55",
@@ -5559,7 +5669,7 @@
     {
       "status": "Closing",
       "industry": "Specialty / Other",
-      "region": "USA",
+      "region": "Canada",
       "title": "7-Eleven to close hundreds of locations",
       "source": "MSN",
       "published_date": "2026-05-11 22:54:52",
