@@ -1,43 +1,183 @@
 {
-  "last_updated": "2026-05-14",
+  "last_updated": "2026-05-15",
   "data": [
     {
-      "store_name": "Morán Honduras Restaurant",
-      "location": "534 Middle Turnpike East, Manchester",
+      "store_name": "Chipotle Mexican Grill",
+      "location": "12 Royce Circle, Storrs Center, Storrs, CT",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "planned for",
+      "short_description": "Chipotle filed for building permits on May 11th to convert the current Gansett Wraps space at 12 Royce Circle into a new Chipotle restaurant. The permits call for a fit-out of the existing space in a 5-story mixed-use building, with exterior and interior alterations. No opening date has been announced.",
+      "article_link": "https://www.theconnecticutscoop.com/all-tolland-county-posts/storrs-scoop-chipotle-mexican-grill-planned-for-storrs-center",
+      "published_date": "5/14/2026"
+    },
+    {
+      "store_name": "Gansett Wraps",
+      "location": "33 Wilbur Cross Way (former Tang Karaoke Bar), Storrs Center, Storrs, CT",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "planned for",
+      "short_description": "Gansett Wraps is building out a new space at 33 Wilbur Cross Way inside Storrs Center, the former Tang Karaoke Bar location. The new space is described as slightly larger than their current location and with improved parking. No opening date has been announced.",
+      "article_link": "https://www.theconnecticutscoop.com/all-tolland-county-posts/storrs-scoop-chipotle-mexican-grill-planned-for-storrs-center",
+      "published_date": "5/14/2026"
+    },
+    {
+      "store_name": "Läderach Chocolatier Suisse",
+      "location": "Westfarms Mall (next to Lovisa, second floor), West Hartford, CT",
+      "event_type": "Opening",
+      "event_date": "Summer 2026 (stated as \"this summer\")",
+      "status": "Look for them to open this summer!",
+      "short_description": "Swiss chocolatier Läderach is coming soon to Westfarms mall next to Lovisa on the second floor. The brand produces over 100 varieties of chocolates including FrischSchoggi, pralines, truffles, and seasonal creations. No specific opening date was provided.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/west-hartford-scoop-more-changes-coming-to-westfarms-including-new-chocolate-shop",
+      "published_date": "5/14/2026"
+    },
+    {
+      "store_name": "The North Face",
+      "location": "Westfarms Mall (next to Alo), West Hartford, CT",
       "event_type": "Opening",
       "event_date": "Not specified",
       "status": "NOW OPEN",
-      "short_description": "Morán Honduras Restaurant has reopened under new ownership at 534 Middle Turnpike East in Manchester. The restaurant closed briefly to transfer to new owners and has now reopened. The menu features nachos, burritos, quesadillas, pupusas, tacos, Hispanic breakfast, and more.",
+      "short_description": "The North Face has relocated within Westfarms mall to a new space next to Alo, with a brand new look. No specific opening date was given in the article.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/west-hartford-scoop-more-changes-coming-to-westfarms-including-new-chocolate-shop",
+      "published_date": "5/14/2026"
+    },
+    {
+      "store_name": "Riviera French Cafe",
+      "location": "Westfarms Mall (center court, near Claire's), West Hartford, CT",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "NOW OPEN",
+      "short_description": "Riviera French Cafe is now open as a kiosk in the mall's center court serving coffee, espresso beverages, stuffed crepes, pastries, and French-inspired food. This is the second location for the Sarasota-based cafe.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/west-hartford-scoop-more-changes-coming-to-westfarms-including-new-chocolate-shop",
+      "published_date": "5/14/2026"
+    },
+    {
+      "store_name": "The Plourd Brewery",
+      "location": "1277 Main Street, East Hartford, CT",
+      "event_type": "Opening",
+      "event_date": "May 2, 2026",
+      "status": "recently opened",
+      "short_description": "The Plourd Brewery opened at 1277 Main Street in East Hartford, the former Paddle Creek Beer Company space, celebrating their opening on May 2nd. The brewery is owned by husband and wife Tyler and Melissa Plourd and focuses on contemporary hoppy beers and European-inspired lagers.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/east-hartford-scoop-the-plourd-brewery-opens-in-east-hartford",
+      "published_date": "5/14/2026"
+    },
+    {
+      "store_name": "Xtrait Perfumery",
+      "location": "968A Farmington Avenue, West Hartford, CT",
+      "event_type": "Opening",
+      "event_date": "Not specified (soft opened earlier in the week of the article)",
+      "status": "soft opened",
+      "short_description": "Xtrait Perfumery has opened at 968A Farmington Avenue in West Hartford, the former home of Center Framing & Art, with a soft open and more perfumes still to come. It is described as the first niche fragrance boutique in CT focused on independent brands not found in malls.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/west-hartford-scoop-xtrait-perfumery-brings-niche-fragrance-boutique-to-west-hartford-center",
+      "published_date": "5/14/2026"
+    },
+    {
+      "store_name": "Joey'z Shopping Spree",
+      "location": "348 Middle Turnpike West, Manchester Parkade, Manchester, CT",
+      "event_type": "Closing",
+      "event_date": "Not specified (\"in the coming weeks\")",
+      "status": "permanently closing",
+      "short_description": "Joey'z Shopping Spree will be permanently closing their Manchester location in the coming weeks. The store is currently liquidating with items between 10% and 70% off, with mark-downs expected to increase.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/manchester-scoop-joeyz-shopping-spree-closing-in-manchester",
+      "published_date": "5/14/2026"
+    },
+    {
+      "store_name": "Mezzie's Ice Cream & Coffee",
+      "location": "State House Square (food court), Hartford, CT",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "coming soon",
+      "short_description": "Mezzie's Ice Cream & Coffee is coming soon to the food court at State House Square in Downtown Hartford. The shop makes ice cream in an Italian gelato machine for a silky texture and will serve New Harvest Coffee. No opening date has been announced.",
+      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/hartford-scoop-new-ice-cream-coffee-shop-coming-to-state-house-square",
+      "published_date": "5/14/2026"
+    },
+    {
+      "store_name": "Home Restaurant",
+      "location": "114 Main Street, Branford, CT",
+      "event_type": "Closing",
+      "event_date": "May 31, 2026",
+      "status": "will close its doors on May 31st",
+      "short_description": "Home Restaurant has announced it will close its doors on May 31st after 14 years in operation, having originally opened in 2012. Owner Jared Schulefand stated the closure was a hard but necessary decision, noting patrons can visit the owner's other restaurant concepts.",
+      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/branford-scoop-home-restaurant-closing-in-branford-after-14-years",
+      "published_date": "5/14/2026"
+    },
+    {
+      "store_name": "Sally's Apizza",
+      "location": "100 North Water Street (The Sono Collection, restaurant level), Norwalk, CT",
+      "event_type": "Opening",
+      "event_date": "Sometime in 2026",
+      "status": "work progressing",
+      "short_description": "Construction on Sally's Apizza at The SoNo Collection is continuing with exterior walls removed and new glass storefront windows installed, despite an ongoing lawsuit from the landlord alleging over $1.5 million in back-rent and damages. New Haven-based Sally's Apizza originally signed a lease at the location in 2019 with the opening timeline updated multiple times.",
+      "article_link": "https://www.theconnecticutscoop.com/all-fairfield-county-posts/norwalk-scoop-work-progressing-on-sallys-apizza-despite-lawsuit",
+      "published_date": "5/14/2026"
+    },
+    {
+      "store_name": "Bagel City",
+      "location": "590 Main Street, Monroe, CT",
+      "event_type": "Opening",
+      "event_date": "May 12, 2026",
+      "status": "NOW OPEN",
+      "short_description": "Bagel City opened on May 12th at 590 Main Street in Monroe, the former Sip & Scoop ice cream shop location. The family-owned halal bagelry features fresh-made bagels, breakfast and lunch sandwiches, pastries, salads, coffees, and a wide variety of bagel and cream cheese flavors.",
+      "article_link": "https://www.theconnecticutscoop.com/all-fairfield-county-posts/monroe-scoop-bagel-city-celebrates-its-opening-in-monroe",
+      "published_date": "5/14/2026"
+    },
+    {
+      "store_name": "Norwalk Bagel Company",
+      "location": "133 Washington Street, Norwalk, CT",
+      "event_type": "Opening",
+      "event_date": "May 15, 2026",
+      "status": "now open",
+      "short_description": "Norwalk Bagel Company opened on May 15th at 133 Washington Street in Norwalk, the former Pokemoto space. The shop is owned by Chef Gary King and Pastry Chef Emily King, the same team behind award-winning Ridgefield Bagels & Bakes, and serves a variety of bagels, sandwiches, coffees, and espresso beverages.",
+      "article_link": "https://www.theconnecticutscoop.com/all-fairfield-county-posts/norwalk-scoop-new-bagel-shop-from-award-winning-team-opens-in-norwalk",
+      "published_date": "5/14/2026"
+    },
+    {
+      "store_name": "Yemerica Coffee",
+      "location": "1115 Riverdale Street (Riversale Center), West Springfield, MA",
+      "event_type": "Opening",
+      "event_date": "Late summer/early fall 2026",
+      "status": "coming soon",
+      "short_description": "Yemerica Coffee is coming soon to 1115 Riverdale Street in West Springfield, located between Table & Vine and Hot Table Panini at Riversale Center. The cafe blends traditional Yemeni and American coffee cultures and will be the fourth Yemerica Coffee location.",
+      "article_link": "https://www.theconnecticutscoop.com/all-mass-posts/west-springfield-scoop-yemerica-bringing-yemeni-coffee-to-west-springfield",
+      "published_date": "5/14/2026"
+    },
+    {
+      "store_name": "Morán Honduras Restaurant",
+      "location": "534 Middle Turnpike East, Manchester, CT",
+      "event_type": "Opening",
+      "event_date": "Not specified",
+      "status": "NOW OPEN",
+      "short_description": "Morán Honduras Restaurant reopened at 534 Middle Turnpike East in Manchester under new ownership after briefly closing to complete the ownership transfer. The menu features nachos, burritos, quesadillas, pupusas, tacos, burgers, salads, and Hispanic breakfast options.",
       "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/manchester-scoop-moran-restaurant-reopens-under-new-owners",
       "published_date": "5/13/2026"
     },
     {
       "store_name": "7 Brew Coffee",
-      "location": "117 Washington Avenue, North Haven (Washington Commons shopping center)",
+      "location": "117 Washington Avenue (Washington Commons shopping center), North Haven, CT",
       "event_type": "Opening",
       "event_date": "June 8, 2026",
-      "status": "will officially open on June 8th",
-      "short_description": "7 Brew Coffee has set its official opening date of June 8th for its new North Haven location at 117 Washington Avenue in the Washington Commons shopping center. The drive-thru coffee shop will host pre-opening community events including a \"Caffeine for a Cause\" fundraiser weekend and Friends & Family Weekend with free drinks. 7 Brew serves coffee, energy drinks, smoothies, milkshakes, teas, lemonades, and more.",
+      "status": "officially open on June 8th",
+      "short_description": "7 Brew Coffee has set June 8th as the official opening date for its new North Haven drive-thru location at 117 Washington Avenue. The opening festivities include a \"Pay What You Want\" charity weekend May 29–31 benefiting The Animal Haven and Friends & Family free-drink days June 5–7.",
       "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/north-haven-scoop-7-brew-sets-opening-date",
       "published_date": "5/13/2026"
     },
     {
       "store_name": "The Wok Chinese Kitchen",
-      "location": "440 Boston Post Road, Orange",
+      "location": "440 Boston Post Road, Orange, CT",
       "event_type": "Opening",
       "event_date": "Not specified",
       "status": "coming soon",
-      "short_description": "The Wok Chinese Kitchen is coming soon to the former Five Guys restaurant space at 440 Boston Post Road in Orange. The new fast-casual Chinese restaurant will serve dishes such as Orange Chicken, General Tso's Chicken, Mongolian Beef, and more. It is a growing chain with three locations in Pennsylvania and another coming soon in New Jersey.",
+      "short_description": "The Wok Chinese Kitchen is coming soon to the former Five Guys space at 440 Boston Post Road in Orange, serving Chinese cuisine in a fast-casual format. It is a growing chain with 3 existing Pennsylvania locations and additional openings planned in New Jersey.",
       "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/orange-scoop-the-wok-chinese-kitchen-coming-to-former-five-guys-space",
       "published_date": "5/13/2026"
     },
     {
       "store_name": "Five Guys",
-      "location": "440 Boston Post Road, Orange",
+      "location": "440 Boston Post Road, Orange, CT",
       "event_type": "Closing",
       "event_date": "Late 2025",
-      "status": "closed abruptly in late 2025",
-      "short_description": "Five Guys at 440 Boston Post Road in Orange closed abruptly in late 2025 after over two decades of business. The space is now being taken over by The Wok Chinese Kitchen. No further details on the closure are provided.",
+      "status": "closed abruptly",
+      "short_description": "Five Guys closed abruptly in late 2025 at 440 Boston Post Road in Orange after over two decades of business at that location. The space is now being taken over by The Wok Chinese Kitchen.",
       "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/orange-scoop-the-wok-chinese-kitchen-coming-to-former-five-guys-space",
       "published_date": "5/13/2026"
     },
@@ -45,125 +185,12 @@
       "store_name": "Two Trees Inn",
       "location": "240 Indiantown Road, Ledyard, CT",
       "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "officially reopened its doors",
-      "short_description": "Two Trees Inn has officially reopened following a ribbon cutting with the Mashantucket Pequot Tribal Nation and new operator Waterford Hotel Group. The hotel at 240 Indiantown Road in Ledyard features 280 guest rooms, an indoor pool, fitness center, walking trails, on-site breakfast, and a bar. The property is located next door to Foxwoods Resort Casino and Great Wolf Lodge.",
+      "event_date": "May 12, 2026 (ribbon cutting described as \"yesterday\" in the 5/13 article)",
+      "status": "officially reopened",
+      "short_description": "Two Trees Inn officially reopened with a ribbon cutting ceremony attended by members of the Mashantucket Pequot Tribal Nation and the new operator, Waterford Hotel Group. The 280-room hotel features an indoor pool, fitness center, walking trails, on-site breakfast, and a bar with light bites.",
       "article_link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/ledyard-scoop-two-trees-inn-reopens-near-foxwoods",
       "published_date": "5/13/2026"
-    },
-    {
-      "store_name": "Wen Ming Taste",
-      "location": "89 West Road, Ellington",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "No qualifying business opening or closure",
-      "short_description": "This article is a restaurant review of Wen Ming Taste's new AYCE (all-you-can-eat) menu option at an already-operating location. The Chinese & Japanese restaurant at 89 West Road in Ellington now offers AYCE sushi, appetizers, and Chinese entrees. No opening or closing event is described.",
-      "article_link": "https://www.theconnecticutscoop.com/all-tolland-county-posts/ellington-scoop-review-of-wen-ming-houses-new-ayce-menu",
-      "published_date": "5/12/2026"
-    },
-    {
-      "store_name": "Turning Times Pottery",
-      "location": "1735 Ellington Road, South Windsor (Town Center Shopping Center)",
-      "event_type": "Opening",
-      "event_date": "May 23, 2026 (anticipated)",
-      "status": "opening soon / anticipated to open on May 23rd",
-      "short_description": "Turning Times Pottery is a new pottery studio opening soon at 1735 Ellington Road in South Windsor's Town Center Shopping Center. The studio will offer walk-in painting, reservations, private parties, events, themed workshops, and take-home pottery kits. It is owned by Janelle Zahner, a self-taught potter who left a 19-year corporate career to pursue ceramics full-time.",
-      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/south-windsor-scoop-new-pottery-studio-opening-later-this-month",
-      "published_date": "5/12/2026"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article covers a proposed mixed-use development at 1170 Main Street in Newington (former Keeney Manufacturing site), including 244 apartments, retail, a performing arts theater, and amenity space. The proposal has not been approved; only a pre-application discussion is scheduled. No specific business opening or closure is reported.",
-      "article_link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/newington-scoop-large-scale-development-eyed-in-newington",
-      "published_date": "5/12/2026"
-    },
-    {
-      "store_name": "Furnish Cheap by Universal Hotel Furniture Liquidators",
-      "location": "470 Lewis Avenue, Meriden (Meriden Mall, former Dick's Sporting Goods location)",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "NOW OPEN",
-      "short_description": "Furnish Cheap by Universal Hotel Furniture Liquidators has opened at the Meriden Mall in the former Dick's Sporting Goods space at 470 Lewis Avenue. The store sells commercial-grade hotel furnishings including decor, appliances, beds, and couches at wholesale prices to the public. The business has been in operation for decades, previously located in West Haven.",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/meriden-scoop-furnish-cheap-by-universal-hotel-liquidators-opens-at-meriden-mall",
-      "published_date": "5/12/2026"
-    },
-    {
-      "store_name": "Paris Baguette",
-      "location": "Danbury Fair (first floor), Danbury",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "now under construction / coming soon",
-      "short_description": "Paris Baguette, a French-inspired Korean bakery chain, is coming soon to the first floor of Danbury Fair mall in the spaces previously occupied by Chipotle and Fiza Pakistani & Indian Cuisine. The bakery is currently under construction and will offer pastries, cakes, sandwiches, espresso beverages, and more. This will be the chain's second Connecticut location after opening in West Hartford in late 2025.",
-      "article_link": "https://www.theconnecticutscoop.com/all-fairfield-county-posts/danbury-scoop-paris-baguette-coming-soon-to-danbury-fair",
-      "published_date": "5/12/2026"
-    },
-    {
-      "store_name": "Wingstop",
-      "location": "34 Shunpike Road, Cromwell (Cross Roads Plaza, former Kuyi Sushi space)",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "coming soon",
-      "short_description": "Wingstop is coming soon to 34 Shunpike Road in Cromwell in the former Kuyi Sushi space within Cross Roads Plaza. The chicken wing-centric restaurant will occupy 3,060 square feet and no opening timeline has been announced. Wingstop is expanding across Connecticut with additional locations coming soon to East Hartford and Branford.",
-      "article_link": "https://www.theconnecticutscoop.com/all-middlesex-county-posts/cromwell-scoop-wingstop-coming-to-cromwell",
-      "published_date": "5/12/2026"
-    },
-    {
-      "store_name": "Monmouth Cards",
-      "location": "9 Dog Lane, Suites 109 and 110, Storrs (Storrs Center)",
-      "event_type": "Opening",
-      "event_date": "Not specified",
-      "status": "coming soon",
-      "short_description": "Monmouth Cards is coming soon to Suites 109 and 110 at 9 Dog Lane in Storrs Center, next door to Jefferson Fry Company. The store will buy, sell, and trade sports cards, Pokémon, TCG, and other trading cards, and will also host in-store events. No opening timeline has been announced; this will be the chain's third Connecticut location.",
-      "article_link": "https://www.theconnecticutscoop.com/all-tolland-county-posts/storrs-scoop-monmouth-trading-cards-coming-soon-to-storrs-center",
-      "published_date": "5/11/2026"
-    },
-    {
-      "store_name": "Soft Serve Factory",
-      "location": "700 Watertown Avenue, Waterbury (former Carvel space)",
-      "event_type": "Opening",
-      "event_date": "May 10, 2026",
-      "status": "NOW OPEN / opened yesterday, 05/10",
-      "short_description": "Soft Serve Factory is now open at 700 Watertown Avenue in Waterbury in the former Carvel space next to Frankie's, having opened on May 10, 2026. The locally owned shop has served the community for over 15 years, previously operating under the Carvel brand. They serve 18 flavors of hard serve ice cream, soft serve, non-dairy options, and frozen dessert formats including cones, sundaes, and milkshakes.",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/waterbury-scoop-soft-serve-factory-replaces-carvel-in-waterbury",
-      "published_date": "5/11/2026"
-    },
-    {
-      "store_name": "Carvel",
-      "location": "700 Watertown Avenue, Waterbury",
-      "event_type": "Closing",
-      "event_date": "Not specified",
-      "status": "closed / replaced",
-      "short_description": "The Carvel location at 700 Watertown Avenue in Waterbury has closed and been replaced by Soft Serve Factory. No specific closure date is mentioned in the article. The new operator previously ran the site under the Carvel brand for over 15 years.",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/waterbury-scoop-soft-serve-factory-replaces-carvel-in-waterbury",
-      "published_date": "5/11/2026"
-    },
-    {
-      "store_name": "No qualifying business found",
-      "location": "N/A",
-      "event_type": "N/A",
-      "event_date": "N/A",
-      "status": "N/A",
-      "short_description": "Article reports that the Hell's Kitchen TV show will return to film seasons 25 & 26 at Foxwoods Resort Casino on a sound stage. No business opening or closure is described; the article covers a TV production announcement.",
-      "article_link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/foxwoods-scoop-hells-kitchen-back-for-2-more-seasons",
-      "published_date": "5/11/2026"
     }
   ],
-  "non_working": [
-    {
-      "identifier": "Article 5",
-      "reason": "No opening or closing event; article is a menu review of an already-operating restaurant (Wen Ming Taste). Row included with relevant context but flagged here as non-qualifying for opening/closure extraction."
-    },
-    {
-      "identifier": "Article 7",
-      "reason": "No confirmed business opening or closure; article covers a pre-application development proposal that has not been approved. Row included as \"No qualifying business found.\""
-    },
-    {
-      "identifier": "Article 13",
-      "reason": "No business opening or closure; article is a TV production announcement (Hell's Kitchen filming at Foxwoods). Row included as \"No qualifying business found.\""
-    }
-  ]
+  "non_working": []
 }
