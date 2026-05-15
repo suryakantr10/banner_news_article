@@ -3327,5 +3327,380 @@
         window.location.replace('./login.html');
     }
     </script>
+
+<!-- ── AI Analyst Chat Widget ─────────────────────────────────────────── -->
+<!--
+  SETUP: Replace YOUR_GEMINI_API_KEY_HERE below with your free key from aistudio.google.com
+  This widget queries your Supabase tables directly — no backend server needed.
+-->
+<style>
+  @keyframes chatDot {
+    0%, 80%, 100% { transform: scale(0.55); opacity: 0.3; }
+    40%            { transform: scale(1);    opacity: 1;   }
+  }
+  #chatPanel { display: none; flex-direction: column; }
+  #chatPanel.open { display: flex; }
+  #chatMessages::-webkit-scrollbar { width: 4px; }
+  #chatMessages::-webkit-scrollbar-track { background: transparent; }
+  #chatMessages::-webkit-scrollbar-thumb { background: rgba(99,102,241,0.4); border-radius: 4px; }
+  #chatInput:focus { border-color: rgba(99,102,241,0.6) !important; box-shadow: 0 0 0 2px rgba(99,102,241,0.15); }
+  .chat-bubble-ai code {
+    background: rgba(255,255,255,0.1); padding: 1px 5px;
+    border-radius: 4px; font-size: 11px; font-family: monospace;
+  }
+</style>
+
+<div id="chatWidget" style="position:fixed;bottom:24px;right:24px;z-index:9999;font-family:'Inter',-apple-system,sans-serif;">
+
+  <!-- Floating toggle button -->
+  <button id="chatToggleBtn" onclick="chatToggle()" title="Analyst Assistant"
+    style="width:56px;height:56px;border-radius:50%;border:none;cursor:pointer;
+           background:linear-gradient(135deg,#3b82f6,#8b5cf6);
+           box-shadow:0 4px 20px rgba(59,130,246,0.45);
+           display:flex;align-items:center;justify-content:center;
+           transition:transform 0.2s,box-shadow 0.2s;"
+    onmouseover="this.style.transform='scale(1.08)';this.style.boxShadow='0 6px 28px rgba(59,130,246,0.6)'"
+    onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 20px rgba(59,130,246,0.45)'">
+    <svg id="chatIcoMsg" width="24" height="24" viewBox="0 0 24 24" fill="white">
+      <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+    </svg>
+    <svg id="chatIcoX" width="22" height="22" viewBox="0 0 24 24" fill="white" style="display:none">
+      <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+    </svg>
+  </button>
+
+  <!-- Chat panel -->
+  <div id="chatPanel"
+    style="position:absolute;bottom:68px;right:0;width:380px;height:520px;
+           background:#0d1426;border:1px solid rgba(99,102,241,0.35);
+           border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,0.55);overflow:hidden;">
+
+    <!-- Header -->
+    <div style="padding:14px 16px;background:linear-gradient(135deg,rgba(59,130,246,0.18),rgba(139,92,246,0.18));
+                border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;gap:10px;">
+      <div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#3b82f6,#8b5cf6);
+                  flex-shrink:0;display:flex;align-items:center;justify-content:center;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="white">
+          <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+        </svg>
+      </div>
+      <div style="flex:1">
+        <div style="color:#e2e8f0;font-weight:600;font-size:13px;letter-spacing:0.01em;">Analyst Assistant</div>
+        <div style="color:#64748b;font-size:11px;margin-top:1px;">Reads all 7 master CSVs · Gemini AI</div>
+      </div>
+      <button onclick="chatClear()" title="Clear conversation"
+        style="background:none;border:none;cursor:pointer;color:#475569;font-size:11px;padding:4px 8px;
+               border-radius:6px;transition:background 0.2s;"
+        onmouseover="this.style.background='rgba(255,255,255,0.07)'"
+        onmouseout="this.style.background='none'">Clear</button>
+    </div>
+
+    <!-- Messages -->
+    <div id="chatMessages" style="flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px;height:380px;">
+      <div style="display:flex;gap:8px;align-items:flex-start;">
+        <div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#3b82f6,#8b5cf6);
+                    flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:2px;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="white">
+            <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+          </svg>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.09);
+                    border-radius:12px;border-top-left-radius:3px;padding:10px 13px;
+                    color:#94a3b8;font-size:13px;line-height:1.55;max-width:292px;">
+          Hi! Ask me anything about your retail news data — store openings/closings, analyst coverage, restaurant chains, industry trends, and more.
+        </div>
+      </div>
+    </div>
+
+    <!-- Input area -->
+    <div style="padding:12px;border-top:1px solid rgba(255,255,255,0.08);background:rgba(0,0,0,0.25);
+                display:flex;gap:8px;align-items:flex-end;">
+      <textarea id="chatInput" rows="1" placeholder="Ask about store news, analysts, trends…"
+        onkeydown="chatKeyDown(event)"
+        oninput="this.style.height='auto';this.style.height=Math.min(this.scrollHeight,96)+'px'"
+        style="flex:1;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);
+               border-radius:10px;padding:9px 12px;color:#e2e8f0;font-size:13px;font-family:inherit;
+               resize:none;outline:none;line-height:1.45;min-height:38px;max-height:96px;
+               transition:border-color 0.2s,box-shadow 0.2s;"></textarea>
+      <button id="chatSendBtn" onclick="chatSend()" title="Send"
+        style="width:38px;height:38px;border-radius:9px;border:none;cursor:pointer;flex-shrink:0;
+               background:linear-gradient(135deg,#3b82f6,#8b5cf6);
+               display:flex;align-items:center;justify-content:center;transition:opacity 0.2s;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="white">
+          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  // ── CONFIGURATION ────────────────────────────────────────────────────────
+  // Get a free key at: https://aistudio.google.com → Get API Key
+  const GEMINI_KEY = 'AIzaSyAjSIKZ8iGDEAMCnRr1ZvvDHvgi_V26hvc';
+
+  // ── State ────────────────────────────────────────────────────────────────
+  let _open    = false;
+  let _history = [];   // [{role:'user'|'model', content:'...'}]
+  let _busy    = false;
+
+  // ── CSV data fetching (reads master_file/ directly — no Supabase needed) ──
+  const STOP = new Set([
+    'what','how','many','show','list','find','give','tell','much','which','from',
+    'that','this','with','have','been','were','they','there','their','about',
+    'most','more','also','some','does','where','when','recent','latest','news',
+    'article','articles','data','the','and','are','for','its','any','all','into',
+  ]);
+
+  // All 7 master files — including extraction files
+  const CSV_META = {
+    banner:               { file:'banner_news_master.csv',          search:['Store','Analyst','Industry','Type','Title','Summary'],                   fmt:r=>`• ${r.Store} | ${r.Analyst} | ${r.Type} | ${(r.Published||'').split('T')[0]} | ${r.Title}`,                                         label:'BANNER STORE NEWS',        desc:'Columns: Store, Analyst, Industry, Type, Title, Published, Summary' },
+    daily:                { file:'daily_news_master.csv',           search:['status','industry','region','title','source','keyword'],                  fmt:r=>`• [${r.status}] ${r.industry} | ${r.region} | Score:${r.relevance_score} | ${r.title}`,                                            label:'DAILY NEWS',               desc:'Columns: status, industry, region, title, source, published_date, relevance_score' },
+    restaurant:           { file:'restaurant_master.csv',           search:['title','address'],                                                        fmt:r=>`• ${r.date} | ${r.title} | ${r.address||''}`,                                                                                        label:'RESTAURANT NEWS',          desc:'Columns: date, title, address' },
+    restaurant_ext:       { file:'restaurant_master_extraction.csv',search:['store_name','location','event_type','short_description'],                 fmt:r=>`• ${r.store_name} | ${r.location} | ${r.event_type} | ${r.event_date} | ${r.short_description}`,                                   label:'RESTAURANT EXTRACTION',    desc:'Columns: store_name, location, event_type, event_date, status, short_description' },
+    ct_scoop:             { file:'ct_scoop_master.csv',             search:['heading'],                                                               fmt:r=>`• ${r.date} | ${r.heading}`,                                                                                                         label:'CT SCOOP',                 desc:'Columns: heading, date' },
+    daily_ext:            { file:'daily_news_master_extraction.csv',search:['store_name','location','event_type','short_description'],                 fmt:r=>`• ${r.store_name} | ${r.location} | ${r.event_type} | ${r.event_date} | ${r.short_description}`,                                   label:'DAILY NEWS EXTRACTION',    desc:'Columns: store_name, location, event_type, event_date, status, short_description' },
+    businessdebut:        { file:'businessdebut_master.csv',        search:['title'],                                                                  fmt:r=>`• ${r.date} | ${r.title}`,                                                                                                           label:'BUSINESS DEBUT',           desc:'Columns: title, date' },
+  };
+
+  // Session cache — each CSV is fetched once then kept in memory
+  const _cache = {};
+
+  function parseCSV(text) {
+    const out = []; let line = [], cell = '', inQ = false;
+    for (let i = 0; i < text.length; i++) {
+      const c = text[i], nx = text[i+1];
+      if (c==='"')                  { if(inQ&&nx==='"'){cell+='"';i++;}else inQ=!inQ; }
+      else if (c===','&&!inQ)       { line.push(cell); cell=''; }
+      else if ((c==='\n'||c==='\r')&&!inQ) {
+        if(c==='\r'&&nx==='\n') i++;
+        line.push(cell); cell='';
+        if(line.some(v=>v.trim())) out.push(line);
+        line=[];
+      } else { cell+=c; }
+    }
+    line.push(cell); if(line.some(v=>v.trim())) out.push(line);
+    if(out.length<2) return [];
+    const h = out[0].map(x=>x.trim());
+    return out.slice(1).map(r=>{ const o={}; h.forEach((k,i)=>{o[k]=(r[i]||'').trim();}); return o; });
+  }
+
+  async function loadCSV(key) {
+    if (_cache[key]) return _cache[key];
+    const res = await fetch(`master_file/${CSV_META[key].file}`);
+    if (!res.ok) throw new Error(`HTTP ${res.status} for ${CSV_META[key].file}`);
+    _cache[key] = parseCSV(await res.text());
+    return _cache[key];
+  }
+
+  function keywords(q) {
+    return q.toLowerCase().split(/\W+/).filter(w => w.length > 3 && !STOP.has(w));
+  }
+
+  function filterRows(rows, kws, cols, limit=70) {
+    if (!kws.length) return rows.slice(-limit);
+    const hits = rows.filter(r => kws.some(k => cols.some(c => (r[c]||'').toLowerCase().includes(k))));
+    return (hits.length ? hits : rows.slice(-limit)).slice(0, limit);
+  }
+
+  async function queryFile(key, kws) {
+    try {
+      const m   = CSV_META[key];
+      const all = await loadCSV(key);
+      const hit = filterRows(all, kws, m.search);
+      if (!hit.length) return '';
+      return `=== ${m.label} (${all.length} total, showing ${hit.length}) ===\n${m.desc}\n${hit.map(m.fmt).join('\n')}`;
+    } catch(e) { return `[Could not load ${CSV_META[key].file}: ${e.message}]`; }
+  }
+
+  async function gatherData(question) {
+    const q   = question.toLowerCase();
+    const kws = keywords(q);
+
+    const isRestaurant = /restaurant|food|dining|cafe|pizza|burger|chain|eatery/.test(q);
+    const isCT         = /\bct\b|scoop|connecticut/.test(q);
+    const isDaily      = /daily|industry|region|relevance|score/.test(q);
+    const isBusiness   = /business|debut/.test(q);
+    const isExtract    = /extract|location|address|where/.test(q);
+
+    const keys = new Set();
+    if (isRestaurant) { keys.add('restaurant'); keys.add('restaurant_ext'); }
+    if (isCT)           keys.add('ct_scoop');
+    if (isBusiness)     keys.add('businessdebut');
+    if (isExtract)    { keys.add('restaurant_ext'); keys.add('daily_ext'); }
+    if (isDaily)        keys.add('daily');
+    if (/store|banner|retail|opening|closing|analyst/.test(q)) keys.add('banner');
+    if (keys.size === 0) { keys.add('banner'); keys.add('daily'); }
+
+    const parts = await Promise.all([...keys].map(k => queryFile(k, kws)));
+    return parts.filter(Boolean).join('\n\n') || 'No matching records found in the master files.';
+  }
+
+  // ── Gemini API call ──────────────────────────────────────────────────────
+  async function callGemini(question, dataCtx) {
+    const historyText = _history.length
+      ? '\n\nPrevious conversation:\n' + _history.slice(-6).map(m =>
+          `${m.role === 'user' ? 'Analyst' : 'Assistant'}: ${m.content}`
+        ).join('\n')
+      : '';
+
+    const prompt =
+      `You are a retail news analyst assistant for an internal Store News Dashboard.\n` +
+      `You have access to the following live data from the Supabase database:\n\n` +
+      `${dataCtx}${historyText}\n\n` +
+      `Guidelines:\n` +
+      `- Answer concisely using only the data above.\n` +
+      `- Use bullet points when listing multiple records.\n` +
+      `- Highlight key facts: counts, dates, store names, analyst names.\n` +
+      `- If data is insufficient, say so and suggest a more specific question.\n` +
+      `- Do not fabricate data not present in the context.\n\n` +
+      `Analyst question: ${question}`;
+
+    const res = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_KEY}`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          contents: [{ parts: [{ text: prompt }] }],
+          generationConfig: { temperature: 0.3, maxOutputTokens: 1024 },
+        }),
+      }
+    );
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err?.error?.message || `Gemini error ${res.status}`);
+    }
+    const d = await res.json();
+    return d.candidates?.[0]?.content?.parts?.[0]?.text || 'No response received.';
+  }
+
+  // ── UI helpers ───────────────────────────────────────────────────────────
+  function md(text) {
+    return text
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.+?)\*/g, '<em>$1</em>')
+      .replace(/`([^`\n]+)`/g, '<code>$1</code>')
+      .replace(/^#{1,3} (.+)$/gm, '<strong style="display:block;margin-top:6px;color:#e2e8f0">$1</strong>')
+      .replace(/^[-•] (.+)$/gm, '<div style="display:flex;gap:6px;margin:2px 0"><span style="color:#818cf8;flex-shrink:0">•</span><span>$1</span></div>')
+      .replace(/\n\n+/g, '<br><br>')
+      .replace(/\n/g, '<br>');
+  }
+
+  function scrollBottom() {
+    const el = document.getElementById('chatMessages');
+    el.scrollTop = el.scrollHeight;
+  }
+
+  function appendBubble(role, html, id) {
+    const isUser = role === 'user';
+    const msgs   = document.getElementById('chatMessages');
+
+    const wrap = document.createElement('div');
+    wrap.style.cssText = 'display:flex;gap:8px;align-items:flex-start;' + (isUser ? 'flex-direction:row-reverse;' : '');
+
+    const avatar = document.createElement('div');
+    avatar.style.cssText = 'width:28px;height:28px;border-radius:50%;flex-shrink:0;' +
+      'display:flex;align-items:center;justify-content:center;margin-top:2px;' +
+      (isUser
+        ? 'background:rgba(99,102,241,0.25);color:#818cf8;font-size:11px;font-weight:700;'
+        : 'background:linear-gradient(135deg,#3b82f6,#8b5cf6);');
+    avatar.innerHTML = isUser
+      ? 'A'
+      : '<svg width="13" height="13" viewBox="0 0 24 24" fill="white"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>';
+
+    const bubble = document.createElement('div');
+    bubble.className = isUser ? '' : 'chat-bubble-ai';
+    bubble.style.cssText = 'border-radius:12px;padding:9px 13px;font-size:13px;line-height:1.55;max-width:290px;' +
+      (isUser
+        ? 'background:rgba(99,102,241,0.22);border:1px solid rgba(99,102,241,0.35);border-top-right-radius:3px;color:#e2e8f0;'
+        : 'background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.09);border-top-left-radius:3px;color:#94a3b8;');
+    bubble.innerHTML = html;
+    if (id) bubble.id = id;
+
+    wrap.appendChild(avatar);
+    wrap.appendChild(bubble);
+    msgs.appendChild(wrap);
+    scrollBottom();
+    return bubble;
+  }
+
+  // ── Public API (window.* — reachable from onclick attrs in HTML) ─────────
+  window.chatToggle = function () {
+    _open = !_open;
+    document.getElementById('chatPanel').classList.toggle('open', _open);
+    document.getElementById('chatIcoMsg').style.display = _open ? 'none' : 'block';
+    document.getElementById('chatIcoX').style.display   = _open ? 'block' : 'none';
+    if (_open) document.getElementById('chatInput').focus();
+  };
+
+  window.chatClear = function () {
+    _history = [];
+    document.getElementById('chatMessages').innerHTML = '';
+    appendBubble('model', 'Conversation cleared. Ask me a new question!', null);
+  };
+
+  window.chatKeyDown = function (e) {
+    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); chatSend(); }
+  };
+
+  window.chatSend = async function () {
+    if (_busy) return;
+    const input    = document.getElementById('chatInput');
+    const question = input.value.trim();
+    if (!question) return;
+
+    if (GEMINI_KEY === 'YOUR_GEMINI_API_KEY_HERE') {
+      appendBubble('model',
+        '<span style="color:#fbbf24">⚠ Please set your Gemini API key in index.html.<br>' +
+        'Get a free key at <strong>aistudio.google.com</strong> → Get API Key.</span>', null);
+      return;
+    }
+
+    input.value = '';
+    input.style.height = 'auto';
+    _busy = true;
+    document.getElementById('chatSendBtn').style.opacity = '0.45';
+
+    appendBubble('user', question.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'), null);
+    appendBubble('model',
+      '<div style="display:flex;gap:5px;align-items:center;padding:3px 0">' +
+      ['0s','0.18s','0.36s'].map(d =>
+        `<span style="width:7px;height:7px;background:#818cf8;border-radius:50%;` +
+        `display:inline-block;animation:chatDot 1.3s infinite ${d}"></span>`
+      ).join('') + '</div>',
+      'chatLoader'
+    );
+
+    try {
+      const dataCtx = await gatherData(question);
+      const answer  = await callGemini(question, dataCtx);
+
+      const loader = document.getElementById('chatLoader');
+      if (loader) { loader.innerHTML = md(answer); loader.removeAttribute('id'); }
+
+      _history.push({ role: 'user',  content: question });
+      _history.push({ role: 'model', content: answer  });
+      if (_history.length > 20) _history = _history.slice(-20);
+
+    } catch (err) {
+      const loader = document.getElementById('chatLoader');
+      if (loader) {
+        loader.innerHTML = `<span style="color:#f87171">Error: ${err.message}</span>`;
+        loader.removeAttribute('id');
+      }
+    }
+
+    _busy = false;
+    document.getElementById('chatSendBtn').style.opacity = '1';
+    scrollBottom();
+  };
+}());
+</script>
+<!-- ── End AI Analyst Chat Widget ──────────────────────────────────────── -->
 </body>
 </html>
