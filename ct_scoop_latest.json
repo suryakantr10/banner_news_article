@@ -1,10 +1,30 @@
 {
-  "last_updated": "2026-05-14",
+  "last_updated": "2026-05-15",
   "data": [
     {
       "heading": "STORRS SCOOP: Chipotle Mexican Grill planned for Storrs Center",
       "date": "2026-05-14",
       "link": "https://www.theconnecticutscoop.com/all-tolland-county-posts/storrs-scoop-chipotle-mexican-grill-planned-for-storrs-center"
+    },
+    {
+      "heading": "WEST HARTFORD SCOOP: More changes coming to Westfarms including new chocolate shop!",
+      "date": "2026-05-14",
+      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/west-hartford-scoop-more-changes-coming-to-westfarms-including-new-chocolate-shop"
+    },
+    {
+      "heading": "EAST HARTFORD SCOOP: The Plourd Brewery opens in East Hartford",
+      "date": "2026-05-14",
+      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/east-hartford-scoop-the-plourd-brewery-opens-in-east-hartford"
+    },
+    {
+      "heading": "WEST HARTFORD SCOOP: Xtrait Perfumery brings niche fragrance boutique to West Hartford Center",
+      "date": "2026-05-14",
+      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/west-hartford-scoop-xtrait-perfumery-brings-niche-fragrance-boutique-to-west-hartford-center"
+    },
+    {
+      "heading": "MANCHESTER SCOOP: Joey'z Shopping Spree closing in Manchester",
+      "date": "2026-05-14",
+      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/manchester-scoop-joeyz-shopping-spree-closing-in-manchester"
     },
     {
       "heading": "HARTFORD SCOOP: New Ice Cream & Coffee Shop coming to State House Square",
@@ -15,6 +35,21 @@
       "heading": "BRANFORD SCOOP: Home Restaurant closing in Branford after 14 years",
       "date": "2026-05-14",
       "link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/branford-scoop-home-restaurant-closing-in-branford-after-14-years"
+    },
+    {
+      "heading": "NORWALK SCOOP: Work progressing on Sally's Apizza despite lawsuit",
+      "date": "2026-05-14",
+      "link": "https://www.theconnecticutscoop.com/all-fairfield-county-posts/norwalk-scoop-work-progressing-on-sallys-apizza-despite-lawsuit"
+    },
+    {
+      "heading": "MONROE SCOOP: Bagel City celebrates its opening in Monroe",
+      "date": "2026-05-14",
+      "link": "https://www.theconnecticutscoop.com/all-fairfield-county-posts/monroe-scoop-bagel-city-celebrates-its-opening-in-monroe"
+    },
+    {
+      "heading": "NORWALK SCOOP: New bagel shop from award-winning team opens in Norwalk!",
+      "date": "2026-05-14",
+      "link": "https://www.theconnecticutscoop.com/all-fairfield-county-posts/norwalk-scoop-new-bagel-shop-from-award-winning-team-opens-in-norwalk"
     },
     {
       "heading": "WEST SPRINGFIELD SCOOP: Yemerica bringing Yemeni coffee to West Springfield!",
@@ -40,36 +75,6 @@
       "heading": "LEDYARD SCOOP: Two Trees Inn reopens near Foxwoods",
       "date": "2026-05-13",
       "link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/ledyard-scoop-two-trees-inn-reopens-near-foxwoods"
-    },
-    {
-      "heading": "ELLINGTON SCOOP: Review of Wen Ming House's new AYCE menu",
-      "date": "2026-05-12",
-      "link": "https://www.theconnecticutscoop.com/all-tolland-county-posts/ellington-scoop-review-of-wen-ming-houses-new-ayce-menu"
-    },
-    {
-      "heading": "SOUTH WINDSOR SCOOP: New pottery studio opening later this month!",
-      "date": "2026-05-12",
-      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/south-windsor-scoop-new-pottery-studio-opening-later-this-month"
-    },
-    {
-      "heading": "NEWINGTON SCOOP: Large-scale development eyed in Newington",
-      "date": "2026-05-12",
-      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/newington-scoop-large-scale-development-eyed-in-newington"
-    },
-    {
-      "heading": "MERIDEN SCOOP: Furnish Cheap by Universal Hotel Liquidators opens at Meriden Mall",
-      "date": "2026-05-12",
-      "link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/meriden-scoop-furnish-cheap-by-universal-hotel-liquidators-opens-at-meriden-mall"
-    },
-    {
-      "heading": "DANBURY SCOOP: Paris Baguette coming soon to Danbury Fair",
-      "date": "2026-05-12",
-      "link": "https://www.theconnecticutscoop.com/all-fairfield-county-posts/danbury-scoop-paris-baguette-coming-soon-to-danbury-fair"
-    },
-    {
-      "heading": "CROMWELL SCOOP: Wingstop coming to Cromwell",
-      "date": "2026-05-12",
-      "link": "https://www.theconnecticutscoop.com/all-middlesex-county-posts/cromwell-scoop-wingstop-coming-to-cromwell"
     }
   ]
 }
