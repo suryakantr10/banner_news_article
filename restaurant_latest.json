@@ -1,7 +1,43 @@
 {
-  "last_updated": "2026-05-14 22:19 UTC",
+  "last_updated": "2026-05-15 06:03 UTC",
   "total": 12,
   "data": [
+    {
+      "date": "May 14, 2026",
+      "url": "https://whatnow.com/chicago/restaurants/chicago-chef-perfects-the-gourmet-baked-potato/",
+      "title": "Chicago Chef Perfects the Gourmet Baked Potato",
+      "address": ""
+    },
+    {
+      "date": "May 14, 2026",
+      "url": "https://whatnow.com/miami/restaurants/c-r-chicks-is-opening-in-stuart/",
+      "title": "C.R. Chicks is Opening in Stuart",
+      "address": "3346 SE Federal Hwy, Stuart, FL 34997"
+    },
+    {
+      "date": "May 14, 2026",
+      "url": "https://whatnow.com/miami/restaurants/popstroke-to-open-at-miami-freedom-park/",
+      "title": "PopStroke to Open at Miami Freedom Park",
+      "address": "1802 NW 37th Ave, Miami, FL 33125"
+    },
+    {
+      "date": "May 14, 2026",
+      "url": "https://whatnow.com/phoenix/restaurants/paladinos-italian-eatery-to-debut-mesa-location/",
+      "title": "Paladino’s Italian Eatery to Debut Mesa Location",
+      "address": "2711 S Alma School Rd, Mesa, AZ 85210"
+    },
+    {
+      "date": "May 14, 2026",
+      "url": "https://whatnow.com/austin/restaurants/pinthouse-location-to-take-shape-in-leander/",
+      "title": "Pinthouse Location To Take Shape In Leander | What Now Austin",
+      "address": "1605 E New Hope Dr Building 1, Leander, TX 78641"
+    },
+    {
+      "date": "May 14, 2026",
+      "url": "https://whatnow.com/los-angeles/restaurants/paper-rice-bringing-fast-casual-vietnamese-cuisine-to-sawtelle/",
+      "title": "Paper Rice Bringing Fast-Casual Vietnamese Cuisine To Sawtelle | What Now Los Angeles",
+      "address": "2202 Sawtelle Blvd, Los Angeles, CA 90064"
+    },
     {
       "date": "May 14, 2026",
       "url": "https://whatnow.com/chicago/restaurants/honest-indian-vegetarian-restaurant-to-open-in-vernon-hills/",
@@ -37,42 +73,6 @@
       "url": "https://whatnow.com/chicago/restaurants/tilly-bagel-owners-cooking-up-third-location-in-lakeview/",
       "title": "Tilly Bagel Owners Cooking Up Third Location in Lakeview",
       "address": "3162 N Broadway, Chicago, IL 60657"
-    },
-    {
-      "date": "May 14, 2026",
-      "url": "https://whatnow.com/seattle/restaurants/yoka-tea-eyes-ballard-expansion-following-madrona-success/",
-      "title": "Yoka Tea Eyes Ballard Expansion Following Madrona Success",
-      "address": "5335 Ballard Ave NW, Seattle, WA 98107"
-    },
-    {
-      "date": "May 14, 2026",
-      "url": "https://whatnow.com/philadelphia/restaurants/ogyu-plans-premium-japanese-yakiniku-experience-on-the-main-line/",
-      "title": "Ogyu Plans Premium Japanese Yakiniku Experience in Ardmore",
-      "address": "60 Greenfield Ave., Ardmore, PA 19003"
-    },
-    {
-      "date": "May 14, 2026",
-      "url": "https://whatnow.com/austin/restaurants/on-the-grind-bringing-coffee-kiosk-to-kyle/",
-      "title": "On The Grind Bringing Coffee Kiosk To Kyle | What Now Austin",
-      "address": ""
-    },
-    {
-      "date": "May 14, 2026",
-      "url": "https://whatnow.com/detroit/restaurants/a-landmark-diner-and-bakery-plans-closure-after-years-of-operation/",
-      "title": "A Landmark Diner and Bakery Plans Closure After Years of Operation",
-      "address": "28030 Gratiot Ave, Roseville, MI 48066, United States"
-    },
-    {
-      "date": "May 14, 2026",
-      "url": "https://whatnow.com/los-angeles/restaurants/popular-seafood-restaurant-in-west-hollywood-set-to-close-doors-this-summer/",
-      "title": "Popular Seafood Restaurant in West Hollywood Set to Close Doors This Summer",
-      "address": "8171 Santa Monica Blvd, West Hollywood, CA 90046, United States"
-    },
-    {
-      "date": "May 14, 2026",
-      "url": "https://whatnow.com/austin/restaurants/proud-mary-coffee-appears-to-have-second-austin-location-in-the-works/",
-      "title": "Proud Mary Coffee Appears To Have Second Austin Location In The Works | What Now Austin",
-      "address": "4301 Guadalupe St #100, Austin, TX 78751"
     }
   ]
 }
