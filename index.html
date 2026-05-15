@@ -3386,7 +3386,7 @@
       </div>
       <div style="flex:1">
         <div style="color:#e2e8f0;font-weight:600;font-size:13px;letter-spacing:0.01em;">Analyst Assistant</div>
-        <div style="color:#64748b;font-size:11px;margin-top:1px;">Reads all 7 master CSVs · Gemini 2.0 Flash</div>
+        <div style="color:#64748b;font-size:11px;margin-top:1px;">Reads all 7 master CSVs · Llama 3.3 (Groq)</div>
       </div>
       <button onclick="chatClear()" title="Clear conversation"
         style="background:none;border:none;cursor:pointer;color:#475569;font-size:11px;padding:4px 8px;
@@ -3438,9 +3438,38 @@
 (function () {
   'use strict';
 
-  // ── CONFIGURATION ────────────────────────────────────────────────────────
-  // Get a free key at: https://aistudio.google.com → Get API Key
-  const GEMINI_KEY = 'AIzaSyDjI4XjNnvra9NK9CBaGKBXPTO28sFOKTo';
+  // ── API key — stored in localStorage, never in code ──────────────────────
+  // Each analyst enters their own free key from console.groq.com once.
+  const _KEY_STORE = '_analyst_groq_key';
+  function getGroqKey()   { return localStorage.getItem(_KEY_STORE) || ''; }
+  function saveGroqKey(k) { localStorage.setItem(_KEY_STORE, k.trim()); }
+  function clearGroqKey() { localStorage.removeItem(_KEY_STORE); }
+
+  function showKeySetup() {
+    if (document.getElementById('_groqSetup')) return;
+    const msgs = document.getElementById('chatMessages');
+    const card = document.createElement('div');
+    card.id = '_groqSetup';
+    card.style.cssText = 'background:rgba(99,102,241,0.1);border:1px solid rgba(99,102,241,0.35);border-radius:12px;padding:14px;margin:4px 0;';
+    card.innerHTML =
+      '<div style="color:#e2e8f0;font-weight:600;font-size:13px;margin-bottom:6px;">🔑 One-time setup</div>' +
+      '<div style="color:#94a3b8;font-size:12px;margin-bottom:10px;">Enter your free Groq API key.<br>' +
+      'Get one at <strong style="color:#a5b4fc">console.groq.com</strong> → API Keys → Create API Key</div>' +
+      '<input id="_groqKeyInput" type="password" placeholder="gsk_..." style="width:100%;box-sizing:border-box;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);border-radius:8px;padding:8px 10px;color:#e2e8f0;font-size:13px;outline:none;margin-bottom:8px;">' +
+      '<button onclick="window.saveGroqKeyUI()" style="width:100%;background:linear-gradient(135deg,#6366f1,#8b5cf6);border:none;border-radius:8px;padding:8px;color:white;font-size:13px;font-weight:600;cursor:pointer;">Save Key &amp; Start</button>';
+    msgs.appendChild(card);
+    scrollBottom();
+    document.getElementById('_groqKeyInput').focus();
+  }
+
+  window.saveGroqKeyUI = function () {
+    const input = document.getElementById('_groqKeyInput');
+    const key   = (input?.value || '').trim();
+    if (!key) { input.style.borderColor = '#f87171'; return; }
+    saveGroqKey(key);
+    document.getElementById('_groqSetup').remove();
+    appendBubble('model', '✓ Key saved. Ask me anything about your retail news data!', null);
+  };
 
   // ── State ────────────────────────────────────────────────────────────────
   let _open    = false;
@@ -3560,22 +3589,27 @@
       `Analyst question: ${question}`;
 
     const res = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_KEY}`,
+      'https://api.groq.com/openai/v1/chat/completions',
       {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${getGroqKey()}`,
+        },
         body: JSON.stringify({
-          contents: [{ parts: [{ text: prompt }] }],
-          generationConfig: { temperature: 0.3, maxOutputTokens: 1024 },
+          model: 'llama-3.3-70b-versatile',
+          messages: [{ role: 'user', content: prompt }],
+          temperature: 0.3,
+          max_tokens: 1024,
         }),
       }
     );
     if (!res.ok) {
       const err = await res.json().catch(() => ({}));
-      throw new Error(err?.error?.message || `Gemini error ${res.status}`);
+      throw new Error(err?.error?.message || `Groq error ${res.status}`);
     }
     const d = await res.json();
-    return d.candidates?.[0]?.content?.parts?.[0]?.text || 'No response received.';
+    return d.choices?.[0]?.message?.content || 'No response received.';
   }
 
   // ── UI helpers ───────────────────────────────────────────────────────────
@@ -3635,7 +3669,10 @@
     document.getElementById('chatPanel').classList.toggle('open', _open);
     document.getElementById('chatIcoMsg').style.display = _open ? 'none' : 'block';
     document.getElementById('chatIcoX').style.display   = _open ? 'block' : 'none';
-    if (_open) document.getElementById('chatInput').focus();
+    if (_open) {
+      if (!getGroqKey()) showKeySetup();
+      else document.getElementById('chatInput').focus();
+    }
   };
 
   window.chatClear = function () {
@@ -3654,12 +3691,7 @@
     const question = input.value.trim();
     if (!question) return;
 
-    if (GEMINI_KEY === 'YOUR_GEMINI_API_KEY_HERE') {
-      appendBubble('model',
-        '<span style="color:#fbbf24">⚠ Please set your Gemini API key in index.html.<br>' +
-        'Get a free key at <strong>aistudio.google.com</strong> → Get API Key.</span>', null);
-      return;
-    }
+    if (!getGroqKey()) { showKeySetup(); return; }
 
     input.value = '';
     input.style.height = 'auto';
