@@ -1,6 +1,12 @@
 {
-  "last_updated": "May 01, 2026 05:36 UTC",
+  "last_updated": "May 15, 2026 05:51 UTC",
   "data": [
+    {
+      "company": "ALDI",
+      "address": "1151 Ross Clark CIR Suite 100, Dothan, AL 36301",
+      "opening_date": "5/28/2026",
+      "link": "https://info.aldi.us/stores/l/al/dothan/1151-ross-clark-cir-suite-100/fp33"
+    },
     {
       "company": "ALDI",
       "address": "1571 Westgate Parkway, Dothan, 36303",
@@ -9,9 +15,9 @@
     },
     {
       "company": "ALDI",
-      "address": "208 West Clinton Street, Gray, 31032",
-      "opening_date": "4/30/2026",
-      "link": "https://info.aldi.us/stores/l/ga/gray/208-w-clinton-st/fs13"
+      "address": "1045 South Gilbert Road, Mesa, AZ 85204",
+      "opening_date": "5/21/2026",
+      "link": "https://info.aldi.us/stores/l/az/mesa/1045-south-gilbert-road/fo39"
     },
     {
       "company": "ALDI",
@@ -21,9 +27,15 @@
     },
     {
       "company": "ALDI",
-      "address": "1021 Lockwood Blvd Unit 8, Oviedo, 32765",
-      "opening_date": "4/30/2026",
-      "link": "https://info.aldi.us/stores/l/fl/oviedo/1021-lockwood-blvd-unit-8/fi05"
+      "address": "4478 Market Street, Marianna, 32446",
+      "opening_date": "5/21/2026",
+      "link": "https://info.aldi.us/stores/l/fl/marianna/4478-market-st/fp54"
+    },
+    {
+      "company": "ALDI",
+      "address": "181 Blackford Way, St. Augustine, 32086",
+      "opening_date": "5/21/2026",
+      "link": "https://info.aldi.us/stores/l/fl/st-augustine/181-blackford-way/ft02"
     },
     {
       "company": "ALDI",
@@ -147,18 +159,6 @@
     },
     {
       "company": "Burlington",
-      "address": "3835 North Mall Ave Ste 2, Arkansas",
-      "opening_date": "05/01",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "26583 Carl Boyer Drive, California",
-      "opening_date": "05/08",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
       "address": "3010 Ming Avenue, California",
       "opening_date": "05/15",
       "link": ""
@@ -189,6 +189,12 @@
     },
     {
       "company": "Burlington",
+      "address": "4234 E. Ontario Ranch Road, California",
+      "opening_date": "07/10",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
       "address": "10261 River Marsh Drive Ste 149, Florida",
       "opening_date": "05/15",
       "link": ""
@@ -197,18 +203,6 @@
       "company": "Burlington",
       "address": "13173 Cortez Boulevard, Florida",
       "opening_date": "06/26",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "1074 Bullsboro Dr Unit #6, Georgia",
-      "opening_date": "05/01",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "2550 Sycamore Rd, Illinois",
-      "opening_date": "05/01",
       "link": ""
     },
     {
@@ -237,32 +231,14 @@
     },
     {
       "company": "Burlington",
-      "address": "96 Providence Highway, Massachusetts",
-      "opening_date": "05/01",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "4715 24th Ave, Michigan",
+      "address": "4715 24th Ave, Suite 220, Michigan",
       "opening_date": "05/15",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "1271 Promenade Pl, Minnesota",
-      "opening_date": "05/01",
       "link": ""
     },
     {
       "company": "Burlington",
       "address": "3839 Marketplace Drive NW, Minnesota",
       "opening_date": "05/29",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "3875 North Gloster Street, Mississippi",
-      "opening_date": "05/01",
       "link": ""
     },
     {
@@ -303,18 +279,6 @@
     },
     {
       "company": "Burlington",
-      "address": "441 Boardman Poland Road, Ohio",
-      "opening_date": "05/01",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "4600 W Broad St, Ohio",
-      "opening_date": "05/08",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
       "address": "67800 Mall Ring Road Unit 100  015, Ohio",
       "opening_date": "05/29",
       "link": ""
@@ -339,8 +303,14 @@
     },
     {
       "company": "Burlington",
-      "address": "1215 N Main St Ste B, South Carolina",
-      "opening_date": "05/01",
+      "address": "2021 NW 185th Ave., Oregon",
+      "opening_date": "07/03",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "654 N West End Blvd, Pennsylvania",
+      "opening_date": "07/10",
       "link": ""
     },
     {
@@ -357,8 +327,8 @@
     },
     {
       "company": "Burlington",
-      "address": "10501 Gateway Blvd W Bld 9, Texas",
-      "opening_date": "05/01",
+      "address": "1933 Mineral Wells Ave, Tennessee",
+      "opening_date": "07/10",
       "link": ""
     },
     {
@@ -399,20 +369,26 @@
     },
     {
       "company": "Burlington",
+      "address": "10311 Highway 45 North, Texas",
+      "opening_date": "07/03",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "10515 N Mopac Expy Bldg 1, Texas",
+      "opening_date": "07/10",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
+      "address": "11610 E US HWY 80 Suite 130, Texas",
+      "opening_date": "07/10",
+      "link": ""
+    },
+    {
+      "company": "Burlington",
       "address": "720 W Telegraph Street, Utah",
       "opening_date": "06/26",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "26015 104th Ave SE Suite 101, Washington",
-      "opening_date": "05/08",
-      "link": ""
-    },
-    {
-      "company": "Burlington",
-      "address": "700 Ocean Beach Hwy Ste 100, Washington",
-      "opening_date": "05/08",
       "link": ""
     },
     {
@@ -429,63 +405,15 @@
     },
     {
       "company": "Five Below",
-      "address": "28201 Chardon Rd, Willoughby Hills, OH, 44092",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/oh/willoughby-hills/28201-chardon-rd/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "644 E Main St, Waynesboro, PA, 17268",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/pa/waynesboro/644-e-main-st/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "256 Black Gold Blvd, Hazard, KY, 41701",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/ky/hazard/256-black-gold-blvd/coming-soon"
-    },
-    {
-      "company": "Five Below",
       "address": "5537 Grove Blvd, Hoover, AL, 35226",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/al/hoover/5537-grove-blvd/coming-soon"
     },
     {
       "company": "Five Below",
-      "address": "1649 N Expwy, Griffin, GA, 30223",
+      "address": "2204 E Hillside Dr, Broken Arrow, OK, 74012",
       "opening_date": "",
-      "link": "https://locations.fivebelow.com/ga/griffin/1649-n-expwy/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "3706 E Shaw Ave, Clovis, CA, 93619",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/ca/clovis/3706-e-shaw-ave/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "4222 E Ontario Ranch Rd, Ontario, CA, 91762",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/ca/ontario/4222-e-ontario-ranch-rd/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "7285 Arroyo Crossing Pkwy, Las Vegas, NV, 89113",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/nv/las-vegas/7285-arroyo-crossing-pkwy/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "13710 W Bell Rd, Surprise, AZ, 85374",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/az/surprise/13710-w-bell-rd/coming-soon"
-    },
-    {
-      "company": "Five Below",
-      "address": "3201 N White Sands Blvd, Alamogordo, NM, 88310",
-      "opening_date": "",
-      "link": "https://locations.fivebelow.com/nm/alamogordo/3201-n-white-sands-blvd/coming-soon"
+      "link": "https://locations.fivebelow.com/ok/broken-arrow/2204-e-hillside-dr/coming-soon"
     },
     {
       "company": "Five Below",
@@ -495,14 +423,134 @@
     },
     {
       "company": "Five Below",
+      "address": "380 E 525 N, Harrisville, UT, 84404",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/ut/harrisville/380-e-525-n/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "11610 E Hwy 80, Forney, TX, 75126",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/tx/forney/11610-e-hwy-80/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "2100 SWS Young Dr, 6000C, Killeen, TX, 76543",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/tx/killeen/2100-sws-young-dr-6000c/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "14 Litchfield Plz, Litchfield, IL, 62056",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/il/litchfield/14-litchfield-plz/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "2897 Oak Valley Dr, Ann Arbor, MI, 48103",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/mi/ann-arbor/2897-oak-valley-dr/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "1809 E Sherman Blvd, Muskegon, MI, 49444",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/mi/muskegon/1809-e-sherman-blvd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "644 E Main St, Waynesboro, PA, 17268",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/pa/waynesboro/644-e-main-st/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "2500 S Center Street, Marshalltown, IA, 50158",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/ia/marshalltown/2500-s-center-street/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "4222 E Ontario Ranch Rd, Ontario, CA, 91762",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/ca/ontario/4222-e-ontario-ranch-rd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "2415 Tuscany St, Corona, CA, 92881",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/ca/corona/2415-tuscany-st/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "3060 Baldwin Park Blvd, Baldwin Park, CA, 91706",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/ca/baldwin-park/3060-baldwin-park-blvd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "61275 Southgate Rd, Cambridge, OH, 43725",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/oh/cambridge/61275-southgate-rd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "13710 W Bell Rd, Surprise, AZ, 85374",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/az/surprise/13710-w-bell-rd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "1939 Mineral Wells Ave, Paris, TN, 38242",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/tn/paris/1939-mineral-wells-ave/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "1649 N Expwy, Griffin, GA, 30223",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/ga/griffin/1649-n-expwy/coming-soon"
+    },
+    {
+      "company": "Five Below",
       "address": "1038 Crossroads Dr, Statesville, NC, 28625",
       "opening_date": "",
       "link": "https://locations.fivebelow.com/nc/statesville/1038-crossroads-dr/coming-soon"
     },
     {
+      "company": "Five Below",
+      "address": "25 Smithfield Rd, N Providence, RI, 02904",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/ri/n-providence/25-smithfield-rd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "256 Black Gold Blvd, Hazard, KY, 41701",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/ky/hazard/256-black-gold-blvd/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "1155 Buck Creek Road, Simpsonville, KY, 40067",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/ky/simpsonville/1155-buck-creek-road/coming-soon"
+    },
+    {
+      "company": "Five Below",
+      "address": "251 N Broadway, Pennsville, NJ, 08070",
+      "opening_date": "",
+      "link": "https://locations.fivebelow.com/nj/pennsville/251-n-broadway/coming-soon"
+    },
+    {
+      "company": "HomeGoods",
+      "address": "Verrado Marketplace, 1405 North Verrado Way, Buckeye, AZ 85396, Arizona",
+      "opening_date": "New store opening on May 21, 2026 from 8am to 10pm!",
+      "link": "https://www.homegoods.com/store-details/Buckeye-AZ-85396/1219"
+    },
+    {
       "company": "HomeGoods",
       "address": "Coastal Centre, 1218 Cottage Lane, Conway, SC 29526, South Carolina",
-      "opening_date": "New store opening on April 30, 2026 from 8am to 10pm!",
+      "opening_date": "Now Open!",
       "link": "https://www.homegoods.com/store-details/Conway-SC-29526/1222"
     },
     {
@@ -513,21 +561,9 @@
     },
     {
       "company": "HomeGoods",
-      "address": "Killeen Mall, 2100 SWS Young Drive, Killeen, TX 76543, Texas",
-      "opening_date": "Now Open!",
-      "link": "https://www.homegoods.com/store-details/Killeen-TX-76543/1159"
-    },
-    {
-      "company": "HomeGoods",
       "address": "Mountain Farms, 337 Russell Street, Hadley, MA 01035, Massachusetts",
-      "opening_date": "Now Open!",
+      "opening_date": "",
       "link": "https://www.homegoods.com/store-details/Hadley-MA-01035/98"
-    },
-    {
-      "company": "HomeGoods",
-      "address": "Blackmore Marketplace, 520 Newport Rd., Casper, WY 82609, Wyoming",
-      "opening_date": "Now Open!",
-      "link": "https://www.homegoods.com/store-details/Casper-WY-82609/1218"
     },
     {
       "company": "HomeGoods",
@@ -543,6 +579,12 @@
     },
     {
       "company": "Homesense",
+      "address": "Pinnacle Hills Promenade, 210 S Promenade Boulevard, Rogers, AR 72758, Rogers, AR",
+      "opening_date": "May 28, 2026",
+      "link": "https://www.google.com/maps?saddr&daddr=210 S Promenade Boulevard+Rogers,AR+72758"
+    },
+    {
+      "company": "Homesense",
       "address": "Lake Nona West Retail Center, 6023 Lake Nona Blvd, Lake Nona, FL 32827, Lake Nona, FL",
       "opening_date": "May 14, 2026",
       "link": "https://www.google.com/maps?saddr&daddr=6023 Lake Nona Blvd+Lake Nona,FL+32827"
@@ -550,8 +592,14 @@
     {
       "company": "Homesense",
       "address": "Marketplace at Mill Creek, 1705 Mall of Georgia Blvd Suite 400, Buford, GA 30519, Buford, GA",
-      "opening_date": "April 30, 2026",
+      "opening_date": "",
       "link": "https://www.google.com/maps?saddr&daddr=1705 Mall of Georgia Blvd Suite 400+Buford,GA+30519"
+    },
+    {
+      "company": "Jersey Mike's",
+      "address": "4845 Moores Mill Road, Huntsville, AL 35811",
+      "opening_date": "In Development",
+      "link": "https://www.jerseymikes.com/locations/coming-soon/US-AL"
     },
     {
       "company": "Jersey Mike's",
@@ -633,12 +681,6 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "3530 W Century Boulevard, Inglewood, CA 90303-1234",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-CA"
-    },
-    {
-      "company": "Jersey Mike's",
       "address": "TBD @ NEC Ferrari Ranch Road & Lincoln Boulevard, Lincoln, CA 95648",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-CA"
@@ -699,7 +741,7 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "1100 US Highway 287, Broomfield, CO 80020-7079",
+      "address": "1170 US Highway 287, Broomfield, CO 80020-7079",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-CO"
     },
@@ -712,6 +754,12 @@
     {
       "company": "Jersey Mike's",
       "address": "7507 East 36th Avenue, Denver, CO 80238-3443",
+      "opening_date": "In Development",
+      "link": "https://www.jerseymikes.com/locations/coming-soon/US-CO"
+    },
+    {
+      "company": "Jersey Mike's",
+      "address": "7735-04 West Long Drive, Littleton, CO 80123-1262",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-CO"
     },
@@ -783,6 +831,12 @@
     },
     {
       "company": "Jersey Mike's",
+      "address": "27615 US Highway 27, Leesburg, FL 34748-9396",
+      "opening_date": "In Development",
+      "link": "https://www.jerseymikes.com/locations/coming-soon/US-FL"
+    },
+    {
+      "company": "Jersey Mike's",
       "address": "1319 Saxon Drive, New Smyrna Beach, FL 32169-3160",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-FL"
@@ -790,12 +844,6 @@
     {
       "company": "Jersey Mike's",
       "address": "32801 Eiland Boulevard, Wesley Chapel, FL 33545-5268",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-FL"
-    },
-    {
-      "company": "Jersey Mike's",
-      "address": "10130 Northlake Blvd., West Palm Beach, FL 33412-1105",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-FL"
     },
@@ -861,6 +909,12 @@
     },
     {
       "company": "Jersey Mike's",
+      "address": "1150 W Maple Avenue, Mundelein, IL 60060-1409",
+      "opening_date": "In Development",
+      "link": "https://www.jerseymikes.com/locations/coming-soon/US-IL"
+    },
+    {
+      "company": "Jersey Mike's",
       "address": "1839 N Main Street, Princeton, IL 61356-9785",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-IL"
@@ -894,6 +948,12 @@
       "address": "5001 Sergeant Road, Sioux City, IA 51106-4774",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-IA"
+    },
+    {
+      "company": "Jersey Mike's",
+      "address": "1565 Hustonville Road, Danville, KY 40422-2425",
+      "opening_date": "In Development",
+      "link": "https://www.jerseymikes.com/locations/coming-soon/US-KY"
     },
     {
       "company": "Jersey Mike's",
@@ -963,13 +1023,13 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "3195 Wright St., Marquette, MI 49855-9620",
+      "address": "28 W Adams Street, Detroit, MI 48226-1609",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-MI"
     },
     {
       "company": "Jersey Mike's",
-      "address": "1473 N Rochester Road, Rochester Hills, MI 48307-1122",
+      "address": "3195 Wright St., Marquette, MI 49855-9620",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-MI"
     },
@@ -999,12 +1059,6 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "618 1st Street S, Willmar, MN 56201-6004",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-MN"
-    },
-    {
-      "company": "Jersey Mike's",
       "address": "6 Parkway Lane, Petal, MS 39465-3035",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-MS"
@@ -1020,12 +1074,6 @@
       "address": "1525 S Jefferson Avenue, Lebanon, MO 65536-3762",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-MO"
-    },
-    {
-      "company": "Jersey Mike's",
-      "address": "103 Cornerstone Plaza Suite B, Butte, MT 59701-6810",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-MT"
     },
     {
       "company": "Jersey Mike's",
@@ -1233,12 +1281,6 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "1402 W 1st street, Springfield, OH 45504",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-OH"
-    },
-    {
-      "company": "Jersey Mike's",
       "address": "Ohio Valley Mall, St. Clairsville, OH 43950",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-OH"
@@ -1264,18 +1306,6 @@
     {
       "company": "Jersey Mike's",
       "address": "40 Highlands Mall Drive, Natrona Heights (Township name Harrison), PA 15065-1972",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-PA"
-    },
-    {
-      "company": "Jersey Mike's",
-      "address": "306 Nova Way, Parkesburg, PA 19365-1854",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-PA"
-    },
-    {
-      "company": "Jersey Mike's",
-      "address": "4611 Perkiomen Ave., Reading, PA 19606-3217",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-PA"
     },
@@ -1323,6 +1353,12 @@
     },
     {
       "company": "Jersey Mike's",
+      "address": "601 Church Street, Nashville, TN 37219-2314",
+      "opening_date": "In Development",
+      "link": "https://www.jerseymikes.com/locations/coming-soon/US-TN"
+    },
+    {
+      "company": "Jersey Mike's",
       "address": "9451 Dayton Pike, Soddy Daisy, TN 37379",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-TN"
@@ -1347,7 +1383,7 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "655 West Illinois Ave, Dallas, TX 75224",
+      "address": "655 W Illinois Ave, Dallas, TX 75224-1880",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-TX"
     },
@@ -1377,6 +1413,12 @@
     },
     {
       "company": "Jersey Mike's",
+      "address": "24818 Morton Ranch Road, Katy, TX 77493-8188",
+      "opening_date": "In Development",
+      "link": "https://www.jerseymikes.com/locations/coming-soon/US-TX"
+    },
+    {
+      "company": "Jersey Mike's",
       "address": "SEC FM 720 & US 380, LIttle Elm, TX 75088",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-TX"
@@ -1395,19 +1437,13 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "18476 IH 35 North, Schertz, TX 78154-1686",
-      "opening_date": "In Development",
-      "link": "https://www.jerseymikes.com/locations/coming-soon/US-TX"
-    },
-    {
-      "company": "Jersey Mike's",
       "address": "1508 South Main Street, Nephi, UT 84648-2516",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-UT"
     },
     {
       "company": "Jersey Mike's",
-      "address": "358 E 2600 Street N, North Ogden, UT 84414",
+      "address": "355 E 2600 N, North Ogden, UT 84414",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-UT"
     },
@@ -1419,7 +1455,7 @@
     },
     {
       "company": "Jersey Mike's",
-      "address": "1500 S Main St., Richfield, UT 84701",
+      "address": "178 West 1500 S Main St., Richfield, UT 84701",
       "opening_date": "In Development",
       "link": "https://www.jerseymikes.com/locations/coming-soon/US-UT"
     },
@@ -1467,6 +1503,66 @@
     },
     {
       "company": "Chick-fil-A",
+      "address": "815 St",
+      "opening_date": "May 21, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-east-village"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "5600 George Washington Memorial Hwy",
+      "opening_date": "May 21, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-grafton"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "10890 NW 41 St",
+      "opening_date": "May 21, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-west-doral"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "3820 City Gate Drive",
+      "opening_date": "May 21, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-city-gate"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "41902 Jackson St",
+      "opening_date": "May 21, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-i-10-and-jackson-street"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "2885 Allison-Bonnett Memorial Drive",
+      "opening_date": "May 21, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-hueytown"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "7495 S Gartrell Road",
+      "opening_date": "May 14, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-gartrell-rd-hwy-470"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "10890 NW 41 St",
+      "opening_date": "May 14, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-happy-valley-and-83rd"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "5340 US Hwy 90 W",
+      "opening_date": "May 14, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-tillmans-corner"
+    },
+    {
+      "company": "Chick-fil-A",
+      "address": "579 Troy Schenectady Rd",
+      "opening_date": "May 21, 2026",
+      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-latham-farms"
+    },
+    {
+      "company": "Chick-fil-A",
       "address": "2977 Market Drive",
       "opening_date": "May 7, 2026",
       "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-east-cartmill"
@@ -1491,8 +1587,8 @@
     },
     {
       "company": "Chick-fil-A",
-      "address": "",
-      "opening_date": "April 20, 2026",
+      "address": "10890 NW 41 St",
+      "opening_date": "May 21, 2026",
       "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-mill-creek-and-cordata-parkway"
     },
     {
@@ -1504,7 +1600,7 @@
     {
       "company": "Chick-fil-A",
       "address": "14266 E Colonial Dr",
-      "opening_date": "April 16, 2026",
+      "opening_date": "May 21, 2026",
       "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-avalon-park"
     },
     {
@@ -1533,7 +1629,7 @@
     },
     {
       "company": "Chick-fil-A",
-      "address": "",
+      "address": "10890 NW 41 St",
       "opening_date": "April 9, 2026",
       "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-centre-city"
     },
@@ -1552,68 +1648,8 @@
     {
       "company": "Chick-fil-A",
       "address": "2060 Southfield Rd",
-      "opening_date": "March 30, 2026",
+      "opening_date": "May 21, 2026",
       "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-lincoln-park"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "3965 E Broad St",
-      "opening_date": "April 2, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-whitehall"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "1000 Delaware Ave",
-      "opening_date": "March 26, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-marysville"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "9081 Snowden River Pkwy",
-      "opening_date": "April 2, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-snowden-river-pkwy"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "400 Premium Outlets Drive",
-      "opening_date": "April 2, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-gloucester-outlets"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "1780 E Hwy 44",
-      "opening_date": "March 26, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-edgewood-lane"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "1837 Kapiolani Blvd",
-      "opening_date": "March 26, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-kapiolani-and-kalakaua"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "901 Fairhope Ave",
-      "opening_date": "March 27, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-fairhope"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "30955 Woodward Ave",
-      "opening_date": "March 26, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-royal-oak"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "2625 10 th Ave",
-      "opening_date": "March 26, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-10th-ave-n-and-i-95"
-    },
-    {
-      "company": "Chick-fil-A",
-      "address": "2430 N Morton St",
-      "opening_date": "March 19, 2026",
-      "link": "https://www.chick-fil-a.com/press-room/announcing-chick-fil-a-franklin-indiana"
     },
     {
       "company": "Wawa",
@@ -1815,7 +1851,7 @@
     },
     {
       "company": "Teso Life",
-      "address": "Coming Soon Aug 2026 - 7780 W Arrowhead Towne Center Glendale, AZ 85308, Arizona",
+      "address": "Coming Soon - 7780 W Arrowhead Towne Center Glendale, AZ 85308, Arizona",
       "opening_date": "Coming Soon",
       "link": "https://www.tesolife.com#"
     },
@@ -1827,7 +1863,7 @@
     },
     {
       "company": "Teso Life",
-      "address": "Coming Soon - 1150 S Ironton St Aurora, CO 80012, Colorado",
+      "address": "Coming Soon - Q3 2026 - 1150 S Ironton St Aurora, CO 80012, Colorado",
       "opening_date": "Coming Soon",
       "link": "https://www.tesolife.com#"
     },
@@ -1839,43 +1875,43 @@
     },
     {
       "company": "Teso Life",
-      "address": "Coming Soon June 2026 - 9278 Arlington Expy Jacksonville, FL 32225, Florida",
+      "address": "Coming Soon - Q2 2026 - 9278 Arlington Expy Jacksonville, FL 32225, Florida",
       "opening_date": "Coming Soon",
       "link": "https://www.tesolife.com#"
     },
     {
       "company": "Teso Life",
-      "address": "Coming Soon - 8851 SW 107th Ave #40 Miami, FL 33176, Florida",
+      "address": "Coming Soon - 10550 SW 88th St Miami, FL 33176, Florida",
       "opening_date": "Coming Soon",
       "link": "https://www.tesolife.com#"
     },
     {
       "company": "Teso Life",
-      "address": "Coming Soon Jun 2026 - 1555 N Aurora Rd #113 Naperville, IL 60563, Illinois",
+      "address": "Coming Soon - Q3 2026 - 1555 N Aurora Rd #113 Naperville, IL 60563, Illinois",
       "opening_date": "Coming Soon",
       "link": "https://www.tesolife.com#"
     },
     {
       "company": "Teso Life",
-      "address": "Coming Soon - 1476 Golf Rd Rolling Meadows, IL 60008, Illinois",
+      "address": "Coming Soon - Q3 2026 - 1476 Golf Rd Rolling Meadows, IL 60008, Illinois",
       "opening_date": "Coming Soon",
       "link": "https://www.tesolife.com#"
     },
     {
       "company": "Teso Life",
-      "address": "Coming Soon Aug 2026 - 11940 Metcalf Ave Overland Park, KS 66213, Kansas",
+      "address": "Coming Soon - Q3 2026 - 11940 Metcalf Ave Overland Park, KS 66213, Kansas",
       "opening_date": "Coming Soon",
       "link": "https://www.tesolife.com#"
     },
     {
       "company": "Teso Life",
-      "address": "Coming Soon Spring 2026 - 459 Washington St Boston, MA 02111, Massachusetts",
+      "address": "Coming Soon - Q3 2026 - 459 Washington St Boston, MA 02111, Massachusetts",
       "opening_date": "Coming Soon",
       "link": "https://www.tesolife.com#"
     },
     {
       "company": "Teso Life",
-      "address": "Coming Soon Jul 2026 - 42688 Grand River Ave #100 Novi, MI 48375, Michigan",
+      "address": "Coming Soon - Q2 2026 - 42688 Grand River Ave #100 Novi, MI 48375, Michigan",
       "opening_date": "Coming Soon",
       "link": "https://www.tesolife.com#"
     },
@@ -1887,13 +1923,13 @@
     },
     {
       "company": "Teso Life",
-      "address": "Coming Soon May - 196 Canal St, New York, NY 10013, New York",
+      "address": "Coming Soon - Q2 2026 - 196 Canal St, New York, NY 10013, New York",
       "opening_date": "Coming Soon",
       "link": "https://www.tesolife.com#"
     },
     {
       "company": "Teso Life",
-      "address": "Coming Soon - 4600 Durham-Chapel Hill Blvd Durham, NC 27707, North Carolina",
+      "address": "Coming Soon - Q3 2026 - 4600 Durham-Chapel Hill Blvd Durham, NC 27707, North Carolina",
       "opening_date": "Coming Soon",
       "link": "https://www.tesolife.com#"
     },
@@ -1911,13 +1947,7 @@
     },
     {
       "company": "Teso Life",
-      "address": "Coming Soon May 2026 - 4005 SW 117th Ave Beaverton, OR 97005, Oregon",
-      "opening_date": "Coming Soon",
-      "link": "https://www.tesolife.com#"
-    },
-    {
-      "company": "Teso Life",
-      "address": "Coming Soon Aug 2026 - 7529 Broadway St #101 Pearland TX 77581, Other",
+      "address": "Coming Soon - Q4 2026 - 7529 Broadway St #101 Pearland TX 77581, Other",
       "opening_date": "Coming Soon",
       "link": "https://www.tesolife.com#"
     },
@@ -1929,13 +1959,7 @@
     },
     {
       "company": "Teso Life",
-      "address": "Coming Soon May 2026 - 1104 W Arbrook Blvd Arlington, TX 76015, Texas",
-      "opening_date": "Coming Soon",
-      "link": "https://www.tesolife.com#"
-    },
-    {
-      "company": "Teso Life",
-      "address": "Coming Soon - 1659 Texas Ave S, College Station, TX 77840, Texas",
+      "address": "Coming Soon - Q2 2026 - 1104 W Arbrook Blvd Arlington, TX 76015, Texas",
       "opening_date": "Coming Soon",
       "link": "https://www.tesolife.com#"
     },
@@ -1953,7 +1977,19 @@
     },
     {
       "company": "Teso Life",
-      "address": "Coming Soon - 3142 SE Military Dr San Antonio, TX 78235, Texas",
+      "address": "Coming Soon - 1659 Texas Ave S, College Station, TX 77840, Texas",
+      "opening_date": "Coming Soon",
+      "link": "https://www.tesolife.com#"
+    },
+    {
+      "company": "Teso Life",
+      "address": "Coming Soon - Q3 2026 - 3142 SE Military Dr San Antonio, TX 78235, Texas",
+      "opening_date": "Coming Soon",
+      "link": "https://www.tesolife.com#"
+    },
+    {
+      "company": "Teso Life",
+      "address": "Coming Soon - 5473 Blair Rd # 100 Dallas, TX 75231, Texas",
       "opening_date": "Coming Soon",
       "link": "https://www.tesolife.com#"
     },
@@ -1965,13 +2001,13 @@
     },
     {
       "company": "Teso Life",
-      "address": "Coming Soon May 2026 - 3930 NE Loop 820 #200 Haltom City, TX 76137, Texas",
+      "address": "Coming Soon - 6406 N Interstate 35 Frontage Rd #2700, Austin, TX 78752, Texas",
       "opening_date": "Coming Soon",
       "link": "https://www.tesolife.com#"
     },
     {
       "company": "Teso Life",
-      "address": "Coming Soon - 17776 Tomball Pkwy Houston, TX 77064, Texas",
+      "address": "Coming Soon - Q3 2026 - 8226 Agora Pkwy Selma, TX 78154, Texas",
       "opening_date": "Coming Soon",
       "link": "https://www.tesolife.com#"
     },
@@ -1983,19 +2019,13 @@
     },
     {
       "company": "Teso Life",
-      "address": "Coming Soon - 8320 Agora Pkwy Selma, TX 78154, Texas",
+      "address": "Coming Soon - 17776 Tomball Pkwy Houston, TX 77064, Texas",
       "opening_date": "Coming Soon",
       "link": "https://www.tesolife.com#"
     },
     {
       "company": "Teso Life",
-      "address": "Coming Soon - 6406 N Interstate 35 Frontage Rd #2700, Austin, TX 78752, Texas",
-      "opening_date": "Coming Soon",
-      "link": "https://www.tesolife.com#"
-    },
-    {
-      "company": "Teso Life",
-      "address": "Coming Soon - 5473 Blair Rd # 100 Dallas, TX 75231, Texas",
+      "address": "Coming Soon - Q3 2026 - 3930 NE Loop 820 #200 Haltom City, TX 76137, Texas",
       "opening_date": "Coming Soon",
       "link": "https://www.tesolife.com#"
     },
@@ -2031,7 +2061,7 @@
     },
     {
       "company": "Teso Life",
-      "address": "Coming Soon Jul 2026 - 300 Andover Park W Tukwila, WA 98188, Washington",
+      "address": "Coming Soon - Q4 2026 - 300 Andover Park W Tukwila, WA 98188, Washington",
       "opening_date": "Coming Soon",
       "link": "https://www.tesolife.com#"
     },
@@ -2295,12 +2325,6 @@
     },
     {
       "company": "Marshalls",
-      "address": "5435 Alexandria Pike, Cold Spring, Kentucky",
-      "opening_date": "Now Open!",
-      "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=1637&ref=grandOpenings"
-    },
-    {
-      "company": "Marshalls",
       "address": "1379 Nashville Rd, Franklin, Kentucky",
       "opening_date": "May 21, 2026",
       "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=1655&ref=grandOpenings"
@@ -2314,7 +2338,7 @@
     {
       "company": "Marshalls",
       "address": "1610 Church St, Conway, South Carolina",
-      "opening_date": "April 30, 2026",
+      "opening_date": "Now Open!",
       "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=1661&ref=grandOpenings"
     },
     {
@@ -2334,12 +2358,6 @@
       "address": "1310 Oklahoma Ave, Woodward, Oklahoma",
       "opening_date": "April 23, 2026",
       "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=1656&ref=grandOpenings"
-    },
-    {
-      "company": "Marshalls",
-      "address": "4610 Williams Dr, Georgetown, Texas",
-      "opening_date": "Now Open!",
-      "link": "https://www.marshalls.com/us/store/stores/directions.jsp?sid=1657&ref=grandOpenings"
     },
     {
       "company": "Marshalls",
@@ -2379,6 +2397,12 @@
     },
     {
       "company": "TJ Maxx",
+      "address": "1935 Mineral Wells Ave, Paris",
+      "opening_date": "May 28, 2026",
+      "link": "https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1695&ref=grandOpenings"
+    },
+    {
+      "company": "TJ Maxx",
       "address": "2607 Decherd Blvd, Winchester",
       "opening_date": "May 28, 2026",
       "link": "https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1687&ref=grandOpenings"
@@ -2397,27 +2421,15 @@
     },
     {
       "company": "TJ Maxx",
-      "address": "670 Long Hill Road, Groton",
-      "opening_date": "May 7, 2026",
+      "address": "955 Poquonnock Rd, Groton",
+      "opening_date": "Now Open!",
       "link": "https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=434&ref=grandOpenings"
     },
     {
       "company": "TJ Maxx",
       "address": "1233 Teakwood Ave, Coos Bay",
-      "opening_date": "May 7, 2026",
+      "opening_date": "Now open!",
       "link": "https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1681&ref=grandOpenings"
-    },
-    {
-      "company": "TJ Maxx",
-      "address": "5326 US Hwy 231, Wetumpka",
-      "opening_date": "Now open!",
-      "link": "https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1677&ref=grandOpenings"
-    },
-    {
-      "company": "TJ Maxx",
-      "address": "2100 SW S Young Dr 6000B, Killeen",
-      "opening_date": "Now open!",
-      "link": "https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1646&ref=grandOpenings"
     },
     {
       "company": "TJ Maxx",
@@ -2426,82 +2438,16 @@
       "link": "https://tjmaxx.tjx.com/store/stores/directions.jsp?sid=1457&ref=grandOpenings"
     },
     {
-      "company": "Kirkland's",
-      "address": "Ann Arbor, MI Maple Village 341 N. Maple Road Ann Arbor, MI 48103",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Kirkland's",
-      "address": "West Long Branch, NJ Consumer Center 310 State Route 36 West Long Branch, NJ 07764",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Kirkland's",
-      "address": "Deerfield Beach, FL Deerfield Mall 3888 West Hillsboro Blvd Deerfield, FL 33442",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Kirkland's",
-      "address": "Wayne, PA Gateway Shopping Center 221 Swedesford Road, Space 183 Wayne, PA 19087",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Kirkland's",
-      "address": "Washington, PA Tanger Outlet 2200 Tanger Boulevard Washington, PA 15301",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Kirkland's",
-      "address": "Freehold, NJ Freehold Raceway Mall 3710 Route 9 South Freehold, NJ 07728",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Kirkland's",
-      "address": "Valley Stream, NY Green Acres Commons 2034 Sunrise Highway Valley Stream, NY 11581",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Kirkland's",
-      "address": "Anderson, SC Anderson Station 166 Station Drive Anderson, SC 29621",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Kirkland's",
-      "address": "Nashville, TN One Bellevue Place 8167 Sawyer Brown Road Nashville, TN 37221",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Kirkland's",
-      "address": "Durham, NC Renaissance Village 8200 Renaissance Parkway Durham, NC 27713",
-      "opening_date": "Coming Soon",
-      "link": "https://www.kirklands.com/content.jsp?pageName=openingstores&icid=storelocator_new"
-    },
-    {
-      "company": "Natural Grocers",
-      "address": "Rock Springs, WY",
-      "opening_date": "4/29/2026",
-      "link": "https://www.naturalgrocers.com/store/rock-springs"
-    },
-    {
       "company": "Natural Grocers",
       "address": "Walla Walla, WA",
-      "opening_date": "Spring 2026",
+      "opening_date": "5/20/2026",
       "link": "https://www.naturalgrocers.com/store/walla-walla"
     },
     {
       "company": "Natural Grocers",
       "address": "Lake Geneva, WI",
       "opening_date": "Summer 2026",
-      "link": "https://www.naturalgrocers.com/new-store-announcements"
+      "link": "https://www.naturalgrocers.com/store/lake-geneva"
     },
     {
       "company": "Natural Grocers",
@@ -2520,6 +2466,18 @@
       "address": "Abilene, TX",
       "opening_date": "4/09/26",
       "link": "https://www.naturalgrocers.com/store/abilene"
+    },
+    {
+      "company": "Natural Grocers",
+      "address": "Rock Springs, WY",
+      "opening_date": "4/29/2026",
+      "link": "https://www.naturalgrocers.com/store/rock-springs"
+    },
+    {
+      "company": "Capital Grille",
+      "address": "Livonia17117 Laurel Park Drive NorthLivonia, MI 48152-3940(734) 293-0576",
+      "opening_date": "Opens June 12",
+      "link": "https://www.thecapitalgrille.com/locations/new-locations"
     },
     {
       "company": "Capital Grille",
