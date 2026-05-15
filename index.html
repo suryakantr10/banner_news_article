@@ -3386,7 +3386,7 @@
       </div>
       <div style="flex:1">
         <div style="color:#e2e8f0;font-weight:600;font-size:13px;letter-spacing:0.01em;">Analyst Assistant</div>
-        <div style="color:#64748b;font-size:11px;margin-top:1px;">Reads all 7 master CSVs · Gemini AI</div>
+        <div style="color:#64748b;font-size:11px;margin-top:1px;">Reads all 7 master CSVs · Gemini 2.0 Flash</div>
       </div>
       <button onclick="chatClear()" title="Clear conversation"
         style="background:none;border:none;cursor:pointer;color:#475569;font-size:11px;padding:4px 8px;
@@ -3560,7 +3560,7 @@
       `Analyst question: ${question}`;
 
     const res = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_KEY}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_KEY}`,
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
