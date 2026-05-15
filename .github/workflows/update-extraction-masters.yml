@@ -1,0 +1,49 @@
+name: Update Extraction Master CSVs
+
+on:
+  push:
+    paths:
+      - 'batches/**_output.md'
+      - 'newsbatch_*_output.md'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-masters:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Build extraction master CSVs
+        run: python build_extraction_masters.py --append
+
+      - name: Commit and push updated master CSVs
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add master_file/restaurant_master_extraction.csv
+          git add master_file/businessdebut_master_extraction.csv
+          git add master_file/ct_scoop_master_extraction.csv
+          git add master_file/daily_news_master_extraction.csv
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "extraction: update master extraction CSVs $(date -u '+%Y-%m-%d')"
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin main && git push origin main && break
+              echo "Push attempt $i failed, retrying in 15s..."
+              sleep 15
+            done
+          fi
