@@ -1,10 +1,115 @@
 {
-  "last_updated": "2026-05-15",
+  "last_updated": "2026-05-16",
   "data": [
     {
-      "heading": "STORRS SCOOP: Chipotle Mexican Grill planned for Storrs Center",
+      "heading": "ELLINGTON SCOOP: New dog groomer opens in Ellington!",
+      "date": "2026-05-15",
+      "link": "https://www.theconnecticutscoop.com/all-tolland-county-posts/ellington-scoop-new-dog-groomers-opens-in-ellington"
+    },
+    {
+      "heading": "MILFORD SCOOP: Exotic Snack Guys coming soon to Connecticut Post Mall!",
+      "date": "2026-05-15",
+      "link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/milford-scoop-exotic-snack-guys-coming-soon-to-connecticut-post-mall"
+    },
+    {
+      "heading": "SPRINGFIELD SCOOP: Nothing Bundt Cakes planning bakery at Springfield Crossing!",
+      "date": "2026-05-15",
+      "link": "https://www.theconnecticutscoop.com/all-mass-posts/springfield-scoop-nothing-bundt-cakes-planning-bakery-at-springfield-crossing"
+    },
+    {
+      "heading": "CROMWELL SCOOP: 6 new restaurants coming to Cromwell!",
+      "date": "2026-05-15",
+      "link": "https://www.theconnecticutscoop.com/all-middlesex-county-posts/cromwell-scoop-6-new-restaurants-coming-to-cromwell"
+    },
+    {
+      "heading": "OLD SAYBROOK SCOOP: New life plans for Historic James Pharmacy!",
+      "date": "2026-05-15",
+      "link": "https://www.theconnecticutscoop.com/all-middlesex-county-posts/old-saybrook-scoop-new-life-plans-for-historic-james-pharmacy"
+    },
+    {
+      "heading": "IVORYTON SCOOP: Brickside Pizza moving to new location!",
+      "date": "2026-05-15",
+      "link": "https://www.theconnecticutscoop.com/all-middlesex-county-posts/ivoryton-scoop-brickside-pizza-moving-to-new-location"
+    },
+    {
+      "heading": "NORWICH SCOOP: New independent book store & gift shop opens in Norwich!",
+      "date": "2026-05-15",
+      "link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/norwich-scoop-new-independent-book-store-gift-shop-opens-in-norwich"
+    },
+    {
+      "heading": "MYSTIC SCOOP: Work now underway to combine 2 historic buildings in Downtown Mystic",
+      "date": "2026-05-15",
+      "link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/mystic-scoop-work-now-underway-to-combine-2-historic-buildings-in-downtown-mystic"
+    },
+    {
+      "heading": "MYSTIC SCOOP: Young Buns Doughnuts coming back as limited-time pop-up!",
+      "date": "2026-05-15",
+      "link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/mystic-scoop-young-buns-doughnuts-coming-back-as-limited-time-pop-up"
+    },
+    {
+      "heading": "FOXWOODS SCOOP: New tenants opens at Tanger Outlets Foxwoods",
+      "date": "2026-05-15",
+      "link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/foxwoods-scoop-new-tenants-opens-at-tanger-outlets-foxwoods"
+    },
+    {
+      "heading": "MYSTIC SCOOP: Faherty opens new location in Downtown Mystic!",
+      "date": "2026-05-15",
+      "link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/mystic-scoop-faherty-opens-new-location-in-downtown-mystic"
+    },
+    {
+      "heading": "NORTH BRANFORD SCOOP: Lobster Wars are heating up with Supreme Seafood introducing large lobster roll!",
+      "date": "2026-05-15",
+      "link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/north-branford-scoop-lobster-wars-are-heating-up-with-supreme-seafood-introducing-large-lobster-roll"
+    },
+    {
+      "heading": "NEW HAVEN SCOOP: Estelle starts residential leasing in New Haven!",
+      "date": "2026-05-15",
+      "link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/new-haven-scoop-estelle-starts-residential-leasing-in-new-haven"
+    },
+    {
+      "heading": "NEWINGTON SCOOP: GF Fitness sets opening date for Newington gym!",
+      "date": "2026-05-15",
+      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/newington-scoop-gf-fitness-sets-opening-date-for-newington-gym"
+    },
+    {
+      "heading": "WINDSOR SCOOP: The Alley Scoop opens in Windsor!",
+      "date": "2026-05-15",
+      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/windsor-scoop-the-alley-scoop-opens-in-windsor"
+    },
+    {
+      "heading": "WINDSOR LOCKS SCOOP: Chick-Fil-A coming to Bradley International Airport this fall!",
+      "date": "2026-05-15",
+      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/windsor-locks-scoop-chick-fil-a-coming-to-bradley-international-airport-this-fall"
+    },
+    {
+      "heading": "GLASTONBURY SCOOP: Birdcode set to replace Hot Table Panini!",
+      "date": "2026-05-15",
+      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/glastonbury-scoop-birdcode-set-to-replace-hot-table-panini"
+    },
+    {
+      "heading": "PLAINVILLE SCOOP: New escape room opens in Plainville!",
+      "date": "2026-05-15",
+      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/plainville-scoop-new-escape-room-opens-in-plainville"
+    },
+    {
+      "heading": "HARTFORD SCOOP: New Ice Cream & Coffee Shop coming to State House Square",
       "date": "2026-05-14",
-      "link": "https://www.theconnecticutscoop.com/all-tolland-county-posts/storrs-scoop-chipotle-mexican-grill-planned-for-storrs-center"
+      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/hartford-scoop-new-ice-cream-coffee-shop-coming-to-state-house-square"
+    },
+    {
+      "heading": "MANCHESTER SCOOP: Joey'z Shopping Spree closing in Manchester",
+      "date": "2026-05-14",
+      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/manchester-scoop-joeyz-shopping-spree-closing-in-manchester"
+    },
+    {
+      "heading": "OLD SAYBROOK SCOOP: New gelato shop & cafe coming to Old Saybrook this summer!",
+      "date": "2026-05-14",
+      "link": "https://www.theconnecticutscoop.com/all-middlesex-county-posts/old-saybrook-scoop-new-gelato-shop-cafe-coming-to-old-saybrook-this-summer"
+    },
+    {
+      "heading": "GRANBY SCOOP: New matcha shop coming to Granby",
+      "date": "2026-05-14",
+      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/granby-scoop-new-matcha-shop-coming-to-granby"
     },
     {
       "heading": "WEST HARTFORD SCOOP: More changes coming to Westfarms including new chocolate shop!",
@@ -22,24 +127,9 @@
       "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/west-hartford-scoop-xtrait-perfumery-brings-niche-fragrance-boutique-to-west-hartford-center"
     },
     {
-      "heading": "MANCHESTER SCOOP: Joey'z Shopping Spree closing in Manchester",
+      "heading": "NORWALK SCOOP: New bagel shop from award-winning team opens in Norwalk!",
       "date": "2026-05-14",
-      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/manchester-scoop-joeyz-shopping-spree-closing-in-manchester"
-    },
-    {
-      "heading": "HARTFORD SCOOP: New Ice Cream & Coffee Shop coming to State House Square",
-      "date": "2026-05-14",
-      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/hartford-scoop-new-ice-cream-coffee-shop-coming-to-state-house-square"
-    },
-    {
-      "heading": "BRANFORD SCOOP: Home Restaurant closing in Branford after 14 years",
-      "date": "2026-05-14",
-      "link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/branford-scoop-home-restaurant-closing-in-branford-after-14-years"
-    },
-    {
-      "heading": "NORWALK SCOOP: Work progressing on Sally's Apizza despite lawsuit",
-      "date": "2026-05-14",
-      "link": "https://www.theconnecticutscoop.com/all-fairfield-county-posts/norwalk-scoop-work-progressing-on-sallys-apizza-despite-lawsuit"
+      "link": "https://www.theconnecticutscoop.com/all-fairfield-county-posts/norwalk-scoop-new-bagel-shop-from-award-winning-team-opens-in-norwalk"
     },
     {
       "heading": "MONROE SCOOP: Bagel City celebrates its opening in Monroe",
@@ -47,34 +137,24 @@
       "link": "https://www.theconnecticutscoop.com/all-fairfield-county-posts/monroe-scoop-bagel-city-celebrates-its-opening-in-monroe"
     },
     {
-      "heading": "NORWALK SCOOP: New bagel shop from award-winning team opens in Norwalk!",
+      "heading": "NORWALK SCOOP: Work progressing on Sally's Apizza despite lawsuit",
       "date": "2026-05-14",
-      "link": "https://www.theconnecticutscoop.com/all-fairfield-county-posts/norwalk-scoop-new-bagel-shop-from-award-winning-team-opens-in-norwalk"
+      "link": "https://www.theconnecticutscoop.com/all-fairfield-county-posts/norwalk-scoop-work-progressing-on-sallys-apizza-despite-lawsuit"
+    },
+    {
+      "heading": "BRANFORD SCOOP: Home Restaurant closing in Branford after 14 years",
+      "date": "2026-05-14",
+      "link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/branford-scoop-home-restaurant-closing-in-branford-after-14-years"
+    },
+    {
+      "heading": "STORRS SCOOP: Chipotle Mexican Grill planned for Storrs Center",
+      "date": "2026-05-14",
+      "link": "https://www.theconnecticutscoop.com/all-tolland-county-posts/storrs-scoop-chipotle-mexican-grill-planned-for-storrs-center"
     },
     {
       "heading": "WEST SPRINGFIELD SCOOP: Yemerica bringing Yemeni coffee to West Springfield!",
       "date": "2026-05-14",
       "link": "https://www.theconnecticutscoop.com/all-mass-posts/west-springfield-scoop-yemerica-bringing-yemeni-coffee-to-west-springfield"
-    },
-    {
-      "heading": "MANCHESTER SCOOP: Moran Restaurant reopens under new owners",
-      "date": "2026-05-13",
-      "link": "https://www.theconnecticutscoop.com/all-hartford-county-posts/manchester-scoop-moran-restaurant-reopens-under-new-owners"
-    },
-    {
-      "heading": "NORTH HAVEN SCOOP: 7 Brew sets opening date!",
-      "date": "2026-05-13",
-      "link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/north-haven-scoop-7-brew-sets-opening-date"
-    },
-    {
-      "heading": "ORANGE SCOOP: The Wok Chinese Kitchen coming to former Five Guys space",
-      "date": "2026-05-13",
-      "link": "https://www.theconnecticutscoop.com/all-new-haven-county-posts/orange-scoop-the-wok-chinese-kitchen-coming-to-former-five-guys-space"
-    },
-    {
-      "heading": "LEDYARD SCOOP: Two Trees Inn reopens near Foxwoods",
-      "date": "2026-05-13",
-      "link": "https://www.theconnecticutscoop.com/all-new-london-county-posts/ledyard-scoop-two-trees-inn-reopens-near-foxwoods"
     }
   ]
 }
