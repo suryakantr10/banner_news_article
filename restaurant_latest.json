@@ -1,7 +1,55 @@
 {
-  "last_updated": "2026-05-15 22:11 UTC",
+  "last_updated": "2026-05-16 22:04 UTC",
   "total": 60,
   "data": [
+    {
+      "date": "May 15, 2026",
+      "url": "https://whatnow.com/boston/restaurants/taiwanese-tea-house-chicha-san-chen-expanding-to-cambridges-harvard-square/",
+      "title": "Taiwanese Tea House CHICHA San Chen Expanding to Cambridge's Harvard Square",
+      "address": "1 Brattle Square, Cambridge, MA 02138"
+    },
+    {
+      "date": "May 15, 2026",
+      "url": "https://whatnow.com/memphis/restaurants/the-artist-table-plans-next-chapter/",
+      "title": "The Artist Table Plans Next Chapter",
+      "address": ""
+    },
+    {
+      "date": "May 15, 2026",
+      "url": "https://whatnow.com/washington-dc/restaurants/andys-pizza-headed-to-union-station/",
+      "title": "Andy’s Pizza Headed to Union Station",
+      "address": "50 Massachusetts Ave NE, Washington, DC 20002"
+    },
+    {
+      "date": "May 15, 2026",
+      "url": "https://whatnow.com/san-francisco/restaurants/meson-to-take-over-three-one-four-pizzeria-location-in-berkley/",
+      "title": "Mesón to take over Three One Four Pizzeria location in Berkley",
+      "address": "1329 Gilman St, Berkeley, CA 94706"
+    },
+    {
+      "date": "May 15, 2026",
+      "url": "https://whatnow.com/san-francisco/restaurants/fanoos-grills-planning-possible-bay-area-expansion-after-san-francisco-opening/",
+      "title": "Fanoos Grills Planning Possible Bay Area Expansion After San Francisco Opening",
+      "address": "411 Columbus Ave, San Francisco, CA 94133,"
+    },
+    {
+      "date": "May 15, 2026",
+      "url": "https://whatnow.com/sacramento/restaurants/aviators-restaurant-is-expected-to-reopen-in-2027/",
+      "title": "Aviator’s Restaurant is Expected to Reopen in 2027",
+      "address": "6151 Freeport Blvd, Sacramento, CA 95822"
+    },
+    {
+      "date": "May 15, 2026",
+      "url": "https://whatnow.com/miami/restaurants/haagen-dazs-to-open-wynwood-ice-cream-shop/",
+      "title": "Häagen-Dazs to Open Wynwood Ice Cream Shop",
+      "address": "50 NW 24th St, Miami, FL 33127"
+    },
+    {
+      "date": "May 15, 2026",
+      "url": "https://whatnow.com/dallas/restaurants/black-bear-diner-to-open-in-grand-prairie/",
+      "title": "Black Bear Diner to Open in Grand Prairie",
+      "address": "3715 S State Hwy 161, Grand Prairie, TX 75052"
+    },
     {
       "date": "May 15, 2026",
       "url": "https://whatnow.com/washington-dc/restaurants/chef-mike-corderos-newest-venture-capellinis-classic-italian-headed-to-ashburn/",
@@ -310,57 +358,9 @@
     },
     {
       "date": "May 15, 2026",
-      "url": "https://whatnow.com/uncategorized/restaurants/asian-box-coming-to-corte-madera-this-fall/",
+      "url": "https://whatnow.com/san-francisco/restaurants/asian-box-coming-to-corte-madera-this-fall/",
       "title": "Asian Box Coming to Corte Madera This Fall",
       "address": "100 Corte Madera Town Center, Corte Madera, CA 94925"
-    },
-    {
-      "date": "May 15, 2026",
-      "url": "https://whatnow.com/san-francisco/restaurants/a-22-year-old-italian-restaurant-in-san-francisco-is-nearing-its-final-service/",
-      "title": "A 22-Year-Old Italian Restaurant in San Francisco Is Nearing Its Final Service",
-      "address": "2300 Chestnut St, San Francisco, CA 94123"
-    },
-    {
-      "date": "May 15, 2026",
-      "url": "https://whatnow.com/new-york/restaurants/michelin-pedigreed-omakase-spot-coming-to-chelsea/",
-      "title": "Michelin-Pedigreed Omakase Spot Coming to Chelsea",
-      "address": "211 7th Ave, New York, NY 10011"
-    },
-    {
-      "date": "May 15, 2026",
-      "url": "https://whatnow.com/new-york/restaurants/prolific-gastropub-team-planning-another-concept-in-chelsea/",
-      "title": "Prolific Gastropub Team Planning Another Concept in Chelsea",
-      "address": "201 8th Ave, New York, NY 10011"
-    },
-    {
-      "date": "May 15, 2026",
-      "url": "https://whatnow.com/houston/restaurants/mack-allens-to-debut-in-early-summer-as-a-new-river-oaks-area-luxury-dining-destination/",
-      "title": "Mack Allen’s to Debut in Early Summer as a New River Oaks-Area Luxury Dining Destination | What Now Houston",
-      "address": "4400 Post Oak Park Dr, Houston, TX 77027"
-    },
-    {
-      "date": "May 15, 2026",
-      "url": "https://whatnow.com/chicago/restaurants/lou-malnatis-completes-south-loop-restaurant-expansion/",
-      "title": "Lou Malnati’s Completes South Loop Restaurant Expansion | What Now Chicago",
-      "address": "805 S State St, Chicago, IL 60605"
-    },
-    {
-      "date": "May 15, 2026",
-      "url": "https://whatnow.com/atlanta/restaurants/a-high-energy-fusion-restaurant-is-taking-over-space-inside-campus-244/",
-      "title": "A High-Energy Fusion Restaurant Is Taking Over Space Inside Campus 244",
-      "address": "110 Campus Wy, Dunwoody, GA 30346, United States"
-    },
-    {
-      "date": "May 15, 2026",
-      "url": "https://whatnow.com/charlotte/restaurants/churp-to-bring-healthy-bowl-concept-to-raleigh/",
-      "title": "Churp To Bring Healthy Bowl Concept To Raleigh",
-      "address": "3231 Edwards Mill Rd, Raleigh, NC 27612, USA"
-    },
-    {
-      "date": "May 14, 2026",
-      "url": "https://whatnow.com/chicago/restaurants/chicago-chef-perfects-the-gourmet-baked-potato/",
-      "title": "Chicago Chef Perfects the Gourmet Baked Potato",
-      "address": ""
     }
   ]
 }
