@@ -3486,15 +3486,15 @@
 
   // All 9 master files — including extraction files
   const CSV_META = {
-    banner:               { file:'banner_news_master.csv',             search:['Store','Analyst','Industry','Type','Title','Summary'],              fmt:r=>`• ${r.Store} | ${r.Analyst} | ${r.Type} | ${(r.Published||'').split('T')[0]} | ${r.Title} | ${r.Link}`,                                label:'BANNER STORE NEWS',        desc:'Columns: Store, Analyst, Industry, Type, Title, Published, Summary, Link' },
+    banner:               { file:'banner_news_master.csv',             search:['Store','Analyst','Industry','Type','Title','Summary'],              fmt:r=>`• ${r.Store} | ${r.Analyst} | ${r.Type} | ${(r.Published||'').split('T')[0]} | ${r.Title} | ${trunc(r.Summary)} | ${r.Link}`,      label:'BANNER STORE NEWS',        desc:'Columns: Store, Analyst, Industry, Type, Title, Published, Summary, Link' },
     daily:                { file:'daily_news_master.csv',              search:['status','industry','region','title','source','keyword'],            fmt:r=>`• [${r.status}] ${r.industry} | ${r.region} | Score:${r.relevance_score} | ${r.title} | ${r.direct_link}`,                             label:'DAILY NEWS',               desc:'Columns: status, industry, region, title, source, published_date, relevance_score, direct_link' },
     restaurant:           { file:'restaurant_master.csv',              search:['title','address'],                                                  fmt:r=>`• ${r.date} | ${r.title} | ${r.address||''} | ${r.url}`,                                                                              label:'RESTAURANT NEWS',          desc:'Columns: date, title, address, url' },
-    restaurant_ext:       { file:'restaurant_master_extraction.csv',   search:['store_name','location','event_type','short_description'],          fmt:r=>`• ${r.store_name} | ${r.location} | ${r.event_type} | ${r.event_date} | ${r.short_description} | ${r.article_link}`,                 label:'RESTAURANT EXTRACTION',    desc:'Columns: store_name, location, event_type, event_date, status, short_description, article_link' },
+    restaurant_ext:       { file:'restaurant_master_extraction.csv',   search:['store_name','location','event_type','short_description'],          fmt:r=>`• ${r.store_name} | ${r.location} | ${r.event_type} | ${r.event_date} | ${trunc(r.short_description)} | ${r.article_link}`,          label:'RESTAURANT EXTRACTION',    desc:'Columns: store_name, location, event_type, event_date, status, short_description, article_link' },
     ct_scoop:             { file:'ct_scoop_master.csv',                search:['heading'],                                                         fmt:r=>`• ${r.date} | ${r.heading} | ${r.link}`,                                                                                              label:'CT SCOOP',                 desc:'Columns: heading, date, link' },
-    ct_scoop_ext:         { file:'ct_scoop_master_extraction.csv',     search:['store_name','location','event_type','short_description'],          fmt:r=>`• ${r.store_name} | ${r.location} | ${r.event_type} | ${r.event_date} | ${r.short_description} | ${r.article_link}`,                 label:'CT SCOOP EXTRACTION',      desc:'Columns: store_name, location, event_type, event_date, status, short_description, article_link' },
-    daily_ext:            { file:'daily_news_master_extraction.csv',   search:['store_name','location','event_type','short_description'],          fmt:r=>`• ${r.store_name} | ${r.location} | ${r.event_type} | ${r.event_date} | ${r.short_description} | ${r.article_link}`,                 label:'DAILY NEWS EXTRACTION',    desc:'Columns: store_name, location, event_type, event_date, status, short_description, article_link' },
+    ct_scoop_ext:         { file:'ct_scoop_master_extraction.csv',     search:['store_name','location','event_type','short_description'],          fmt:r=>`• ${r.store_name} | ${r.location} | ${r.event_type} | ${r.event_date} | ${trunc(r.short_description)} | ${r.article_link}`,          label:'CT SCOOP EXTRACTION',      desc:'Columns: store_name, location, event_type, event_date, status, short_description, article_link' },
+    daily_ext:            { file:'daily_news_master_extraction.csv',   search:['store_name','location','event_type','short_description'],          fmt:r=>`• ${r.store_name} | ${r.location} | ${r.event_type} | ${r.event_date} | ${trunc(r.short_description)} | ${r.article_link}`,          label:'DAILY NEWS EXTRACTION',    desc:'Columns: store_name, location, event_type, event_date, status, short_description, article_link' },
     businessdebut:        { file:'businessdebut_master.csv',           search:['title'],                                                           fmt:r=>`• ${r.date} | ${r.title} | ${r.link}`,                                                                                               label:'BUSINESS DEBUT',           desc:'Columns: title, date, link' },
-    businessdebut_ext:    { file:'businessdebut_master_extraction.csv',search:['store_name','location','event_type','short_description'],          fmt:r=>`• ${r.store_name} | ${r.location} | ${r.event_type} | ${r.event_date} | ${r.short_description} | ${r.article_link}`,                 label:'BUSINESS DEBUT EXTRACTION',desc:'Columns: store_name, location, event_type, event_date, status, short_description, article_link' },
+    businessdebut_ext:    { file:'businessdebut_master_extraction.csv',search:['store_name','location','event_type','short_description'],          fmt:r=>`• ${r.store_name} | ${r.location} | ${r.event_type} | ${r.event_date} | ${trunc(r.short_description)} | ${r.article_link}`,          label:'BUSINESS DEBUT EXTRACTION',desc:'Columns: store_name, location, event_type, event_date, status, short_description, article_link' },
   };
 
   // Session cache — each CSV is fetched once then kept in memory
@@ -3531,7 +3531,13 @@
     return q.toLowerCase().split(/\W+/).filter(w => w.length > 3 && !STOP.has(w));
   }
 
-  function filterRows(rows, kws, cols, limit=70) {
+  // Truncate long text to keep token count low
+  function trunc(str, max=120) {
+    if (!str) return '';
+    return str.length > max ? str.slice(0, max) + '…' : str;
+  }
+
+  function filterRows(rows, kws, cols, limit=25) {
     if (!kws.length) return rows.slice(-limit);
     const hits = rows.filter(r => kws.some(k => cols.some(c => (r[c]||'').toLowerCase().includes(k))));
     return (hits.length ? hits : rows.slice(-limit)).slice(0, limit);
@@ -3567,7 +3573,9 @@
     if (keys.size === 0) { keys.add('banner'); keys.add('daily'); }
 
     const parts = await Promise.all([...keys].map(k => queryFile(k, kws)));
-    return parts.filter(Boolean).join('\n\n') || 'No matching records found in the master files.';
+    const ctx = parts.filter(Boolean).join('\n\n') || 'No matching records found in the master files.';
+    // Hard cap at ~28,000 chars (~7,000 tokens) to stay within Groq free tier limits
+    return ctx.length > 28000 ? ctx.slice(0, 28000) + '\n[…data truncated to fit token limit]' : ctx;
   }
 
   // ── Gemini API call ──────────────────────────────────────────────────────
