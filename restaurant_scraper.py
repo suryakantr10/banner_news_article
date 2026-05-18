@@ -77,7 +77,7 @@ def get_driver():
 
 # ── Config ────────────────────────────────────────────────────────────────────
 URL       = "https://whatnow.com/category/restaurants/"
-MAX_PAGES = 5
+MAX_PAGES = 7
 
 HEADERS = {
     "User-Agent": (
