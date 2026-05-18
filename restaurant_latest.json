@@ -1,7 +1,19 @@
 {
-  "last_updated": "2026-05-17 22:07 UTC",
+  "last_updated": "2026-05-18 03:21 UTC",
   "total": 60,
   "data": [
+    {
+      "date": "May 17, 2026",
+      "url": "https://whatnow.com/memphis/restaurants/popular-jonesboro-chain-plans-new-location/",
+      "title": "Popular Jonesboro Chain Plans New Location",
+      "address": "5307 E Highland Dr, Jonesboro, AR 72401"
+    },
+    {
+      "date": "May 17, 2026",
+      "url": "https://whatnow.com/washington-dc/restaurants/ovoka-farm-invites-virginians-to-indulge-in-wagyu-and-wine/",
+      "title": "Ovoka Farm Invites Virginians to Indulge in Wagyu and Wine",
+      "address": "750 Gap Run Rd, Paris, VA 20130"
+    },
     {
       "date": "May 15, 2026",
       "url": "https://whatnow.com/boston/restaurants/taiwanese-tea-house-chicha-san-chen-expanding-to-cambridges-harvard-square/",
@@ -349,18 +361,6 @@
       "url": "https://whatnow.com/columbus/restaurants/women-owned-esther-rum-expands-across-columbus-with-bold-new-approach-to-premium-rum/",
       "title": "Women-Owned Esther Rum Expands Across Columbus With Bold New Approach to Premium Rum",
       "address": ""
-    },
-    {
-      "date": "May 15, 2026",
-      "url": "https://whatnow.com/phoenix/restaurants/a-1920s-era-restaurant-chain-is-expanding-with-a-new-phoenix-area-location/",
-      "title": "A 1920s-Era Restaurant Chain Is Expanding with a New Phoenix-Area Location",
-      "address": "2700 E Germann Rd, Chandler, AZ 85286, United States"
-    },
-    {
-      "date": "May 15, 2026",
-      "url": "https://whatnow.com/san-francisco/restaurants/asian-box-coming-to-corte-madera-this-fall/",
-      "title": "Asian Box Coming to Corte Madera This Fall",
-      "address": "100 Corte Madera Town Center, Corte Madera, CA 94925"
     }
   ]
 }
